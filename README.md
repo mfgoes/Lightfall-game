@@ -1,7 +1,7 @@
 # Untitled-Platformer
-Untitled action platformer game made in GMS2 
+Lightfall is a tactical action platformer game made in GMS2. The game is currently under production. 
 
 ## Links
-Trello: https://trello.com/b/BHdhPl33/wallex <br>
-Design Document: https://docs.google.com/document/d/1UoRuSm5QGMfBz_KaEqz2Se_oxPdh7uEg0JWpU759aaQ/edit?usp=sharing <br>
-Discord: <br>
+Trello: https://trello.com/b/BHdhPl33/lightfall-to-do <br>
+Twitter: https://twitter.com/Kami_Tou <br>
+Our Discord: https://discord.gg/zRbjaws<br>
