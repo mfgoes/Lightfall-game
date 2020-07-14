@@ -31,14 +31,6 @@
     },
     "resources": [
         {
-            "Key": "007d4bc6-79dd-4488-a3f1-56e74bca0ebb",
-            "Value": {
-                "id": "3c9b9cfa-9a8b-4dcb-95b8-5447bbfcb7c6",
-                "resourcePath": "extensions\/Developers_Essential_Audio_Megapack\/Developers_Essential_Audio_Megapack.yy",
-                "resourceType": "GMExtension"
-            }
-        },
-        {
             "Key": "01cc923f-8b7c-4656-b3cd-b8e103b88053",
             "Value": {
                 "id": "d119955c-4cc4-472c-9a04-e7410e804d06",

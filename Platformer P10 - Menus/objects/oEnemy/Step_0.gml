@@ -2,6 +2,12 @@
 
 vsp = vsp + grv; 
 
+//Don't walk off edges
+if (grounded) && (afraid_of_heights) && (!place_meeting(x + hsp, y + 1,oWall)) 
+{
+	hsp = -hsp;
+}
+
 //Horizontal collision
 if (place_meeting(x+hsp,y, oWall))
 {
@@ -30,12 +36,14 @@ y = y + vsp;
 //Animation
 if (!place_meeting(x,y+1,oWall)) 
 {
+	grounded = false;
 	sprite_index = sEnemyJump;
 	image_speed = 0;
 	if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 }
 else 
 {
+	grounded = true;
 	image_speed = 0.8
 	if (hsp == 0)
 	{
