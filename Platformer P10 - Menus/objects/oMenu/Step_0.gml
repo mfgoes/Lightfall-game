@@ -19,7 +19,8 @@ if (menu_control)
 	{
 		menu_x_target = gui_width+200;
 		menu_committed = menu_cursor;
-		audio_play_sound(snDeath,5,0);
+		audio_sound_get_gain(0.2);
+		audio_play_sound(snLanding,5,0);
 		ScreenShake(4,30);
 		menu_control = false;	
 	}
