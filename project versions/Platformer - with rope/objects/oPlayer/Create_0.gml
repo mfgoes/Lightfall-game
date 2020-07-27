@@ -8,7 +8,7 @@ controller = 0;
 hascontrol = true;
 canjump = 10; //for coyote jump
 onground = 0;
-
+debugmode = true;
 
 //rope stuff
 state = 0;	//use this for swinging1
@@ -19,6 +19,8 @@ ropeY = y;
 ropeAngleVelocity = 0; //decide to carry momentum with this later
 ropeAngle = point_direction(grappleX,grappleY, x,y);
 ropeLength = point_distance(grappleX,grappleY,x,y);
+canrope = 0; //allows rope controls
+//canshoot = 0; //turns to 0 when shooting hook or out of ammo	(ADD LATER)
 
 enum pState
 {

@@ -23,20 +23,41 @@ else
 firingdelay = firingdelay - 1;
 recoil = max(0,recoil-1);
 
-if (mouse_check_button(mb_left)) && (firingdelay < 0) || (gamepad_button_check(0,gp_shoulderrb)) && (firingdelay < 0)
-{
-	firingdelay = 5;
-	recoil = 4;
-	audio_sound_pitch(snShoot,choose(0.8,0.8,0.9));
-	audio_play_sound(snShoot,5,0);
-	ScreenShake(1,10);
-	with (instance_create_layer(x,y,"Bullets",oBullet)) {
-		speed = 24;
-		direction = other.image_angle+random_range(-1,1);
-		image_angle = direction;
+if oPlayer.canrope = 0 {
+	if (mouse_check_button(mb_left)) && (firingdelay < 0) || (gamepad_button_check(0,gp_shoulderrb)) && (firingdelay < 0)
+	{
+		firingdelay = 5;
+		recoil = 4;
+		audio_sound_pitch(snShoot,choose(0.5,0.6,0.7));
+		audio_sound_gain(snShoot,0.3,0);
+		audio_play_sound(snShoot,5,0);
+		ScreenShake(1,10);
+		with (instance_create_layer(x,y,"Bullets",oBullet)) {
+			spd = 25;
+			direction = other.image_angle+random_range(-1,1);
+			image_angle = direction;
 		
-		x = x - lengthdir_x(4,other.image_angle);
-		y = y - lengthdir_y(4,other.image_angle);
+			x = x - lengthdir_x(4,other.image_angle);
+			y = y - lengthdir_y(4,other.image_angle);
+		}
+	}
+	
+	if (mouse_check_button(mb_right)) && (firingdelay < 0) || (gamepad_button_check(0,gp_shoulderr)) && (firingdelay < 0)
+	{
+		firingdelay = 15;
+		recoil = 4;
+		audio_sound_pitch(snShoot,choose(0.9,0.95,1.0));
+		audio_sound_gain(snShoot,0.25,0);
+		audio_play_sound(snShoot,5,0);
+		ScreenShake(1,5);
+		with (instance_create_layer(x,y,"Bullets",oArrow)) {
+			spd = 9;
+			direction = other.image_angle+random_range(-1,1);
+			image_angle = direction;
+		
+			x = x - lengthdir_x(-5,other.image_angle);
+			y = y - lengthdir_y(-5,other.image_angle);
+		}
 	}
 }
 

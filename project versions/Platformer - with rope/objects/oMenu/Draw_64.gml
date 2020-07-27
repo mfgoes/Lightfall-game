@@ -29,3 +29,5 @@ for (var i = 0; i < menu_items; i++)
 	draw_text(xx,yy,txt);
 	
 }
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);

@@ -1,6 +1,21 @@
 /// @description Insert description here
 
+#region //Debug Mode
+if (debugmode) {	//check if in debug mode
+	key_db_canrope = keyboard_check_pressed(ord("P")) //|| keyboard_check(
+	
+	if (key_db_canrope) 
+	{
+		canrope = !canrope;	//toggle rope
+		audio_sound_gain(snClick,0.3,0);
+		audio_play_sound(snClick,5,0);
+	}
+}
+#endregion
+
 #region //Get Player Input
+
+
 
 
 if (hascontrol)
@@ -10,6 +25,7 @@ if (hascontrol)
 	key_jump = keyboard_check_pressed(vk_space) //|| keyboard_check(ord("W"))
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 	key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
+	
 
 	if (key_left) || (key_right) || (key_jump)
 	{
@@ -25,7 +41,7 @@ if (hascontrol)
 
 	if (gamepad_button_check_pressed(0,gp_face1))
 	{
-		key_jump = 1;
+		key_jump = 1;                          
 		controller = 1;
 	}
 }
@@ -47,28 +63,30 @@ switch (state)
 		var move = key_right - key_left;
 		hsp = move * walkspd;
 		vsp = vsp + grv; 
-
-		//Jumping
-		if canjump > 0 canjump -=1;
+  		if canjump > 0 canjump -=1;
 		if (canjump > 0) && (key_jump)
 		{
 			vsp = -7;
 			canjump = 0;
 		}
 	
-	if (mouse_check_button_pressed(mb_left))
-	{
-		grappleX = mouse_x;
-		grappleY = mouse_y;
-		ropeX = x;
-		ropeY = y;
-		ropeAngleVelocity = 0; //decide to carry momentum with this later
-		ropeAngle = point_direction(grappleX,grappleY, x,y);
-		ropeLength = point_distance(grappleX,grappleY,x,y);
-		state = pState.swing;
+	#region //grappling hook
+	if canrope = 1 {
+			if (mouse_check_button_pressed(mb_left))
+			{
+				grappleX = mouse_x;
+				grappleY = mouse_y;
+				ropeX = x;
+				ropeY = y;
+				ropeAngleVelocity = 0; //decide to carry momentum with this later
+				ropeAngle = point_direction(grappleX,grappleY, x,y);
+				ropeLength = point_distance(grappleX,grappleY,x,y);
+				state = pState.swing;
 		
 		
-	}
+			}
+		}
+	#endregion
 	} break;
 	
 	case pState.swing:
@@ -156,6 +174,14 @@ switch (state)
 			audio_sound_pitch(snLanding,choose(0.8,1.0,1.2));
 			audio_sound_gain(snLanding,0.2,0);
 			audio_play_sound(snLanding,4,false);
+			
+			repeat(5)		//create dust effect
+			{
+				with(instance_create_layer(x,bbox_bottom,"Bullets",oDust))
+				{
+					vsp = 0;
+				}
+			}
 		}
 		
 		image_speed = 1;

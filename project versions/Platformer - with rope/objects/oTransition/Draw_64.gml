@@ -7,4 +7,3 @@ if (mode != TRANS_MODE.OFF)
 	draw_rectangle(0,h,w,h-(percent*h_half),0);
 }
 
-//draw_text(50,50,string(percent));
