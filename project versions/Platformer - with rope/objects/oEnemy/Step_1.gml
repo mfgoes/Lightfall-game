@@ -12,5 +12,6 @@ if (hp <= 0)
 		image_yscale = other.size;
 	}
 	
+	with (mygun) instance_destroy();
 	instance_destroy();
 }

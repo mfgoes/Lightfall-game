@@ -8,8 +8,8 @@ done = 0;
 image_index = 0;
 image_speed = 0;
 
-ScreenShake(3,60);
+ScreenShake(3,50);
 audio_play_sound(snDeath,10,false);
-game_set_speed(30,gamespeed_fps);
+game_set_speed(40,gamespeed_fps);
 
 with(oCamera) follow = other.id;

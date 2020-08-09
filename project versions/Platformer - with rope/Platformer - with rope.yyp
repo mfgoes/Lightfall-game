@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "04dd8e23-7299-4120-8a46-40cec1cba95e",
+            "Value": {
+                "id": "d19614d1-e3f8-4b42-a1bd-16c77106e996",
+                "resourcePath": "objects\/oEgun\/oEgun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "05a78478-b8c9-4710-865c-c246f23220af",
             "Value": {
                 "id": "ebc4f699-54ab-498d-b260-2112e89fcfac",
@@ -487,6 +495,14 @@
             }
         },
         {
+            "Key": "95a96b18-2e31-4bfd-aca2-26aa915d79f5",
+            "Value": {
+                "id": "974c38bb-9838-4d23-ad97-65a9d335f1d2",
+                "resourcePath": "objects\/oEbullet\/oEbullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "95eeef27-bdf8-497e-8bae-f5c4fdc34e39",
             "Value": {
                 "id": "9b12dc63-c80c-4de6-9e94-b6873ae884ee",
@@ -508,6 +524,14 @@
                 "id": "2eb4e2e2-aff2-42dc-9a38-90ea27b6c939",
                 "resourcePath": "fonts\/fMenu\/fMenu.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "9c4c970a-26af-449c-855b-8fe5ac37fac8",
+            "Value": {
+                "id": "b1be6484-de41-4300-961b-ca7b011c36c0",
+                "resourcePath": "scripts\/KillPlayer\/KillPlayer.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -802,7 +826,8 @@
     "script_order": [
         "4127f88e-1b5a-4303-b095-a88fdc1b0ee2",
         "5e06315f-415f-42f1-bf4c-482c46dee894",
-        "6b5f3687-cec5-408b-a893-6fd2cad6a139"
+        "6b5f3687-cec5-408b-a893-6fd2cad6a139",
+        "9c4c970a-26af-449c-855b-8fe5ac37fac8"
     ],
     "tutorial": ""
 }
