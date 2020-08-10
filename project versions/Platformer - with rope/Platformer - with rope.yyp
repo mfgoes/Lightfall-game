@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "99a09bba-0692-4ede-b80d-28a10e2505ff",
+            "Value": {
+                "id": "c7540759-36e1-4eff-b5a4-aee97f1939b5",
+                "resourcePath": "objects\/oGame\/oGame.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9c4c970a-26af-449c-855b-8fe5ac37fac8",
             "Value": {
                 "id": "b1be6484-de41-4300-961b-ca7b011c36c0",
@@ -611,6 +619,14 @@
             "Value": {
                 "id": "2bbc14c0-d257-4494-873e-292b215d8687",
                 "resourcePath": "views\/c3ebb7c7-4163-4fe6-92eb-9ee4e46a4f8e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c481c790-4ae1-466b-b0fc-b6dab710d815",
+            "Value": {
+                "id": "90e1c3b0-ce66-4d91-b25b-ee89d38b79a8",
+                "resourcePath": "views\/c481c790-4ae1-466b-b0fc-b6dab710d815.yy",
                 "resourceType": "GMFolder"
             }
         },
