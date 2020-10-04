@@ -1,7 +1,8 @@
 /// @description Insert description here
-x = oPlayer.x;
-y = oPlayer.y+1;
+//facing_direction = 180 or 0
 
+x = oPlayer.x+(4*oPlayer.image_xscale);
+y = oPlayer.y+2;
 if (oPlayer.controller == 0)
 {
 	image_angle = point_direction(x,y,mouse_x,mouse_y);		
@@ -33,11 +34,11 @@ if oPlayer.canrope = 0 {
 		audio_play_sound(snShoot,5,0);
 		ScreenShake(1,10);
 		with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			spd = 25;
+			spd = 6;
 			direction = other.image_angle+random_range(-1,1);
 			image_angle = direction;
-			x = x - lengthdir_x(24,other.image_angle);
-			y = y - lengthdir_y(24,other.image_angle);
+			x = x - lengthdir_x(2,other.image_angle);
+			y = y - lengthdir_y(2,other.image_angle);
 		}
 		
 	with (oPlayer) 

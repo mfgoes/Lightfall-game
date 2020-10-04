@@ -22,5 +22,5 @@ draw_text(39,31,"HP: " + string(hp));
 
 //Roll test
 draw_set_color(c_white);
-draw_text(39,61,"facing_direction: " + string(facing_direction));
+draw_text(39,61,"image_index: " + string(round(image_index)));
 draw_text(230,61,"state " + string(state));

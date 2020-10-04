@@ -56,11 +56,13 @@ if canrope = 1 {
 			}
 		if (hsp == 0)
 		{
-			sprite_index = spriteIdle; image_speed = 0.8;
+			if sprite_index != spriteIdle image_index = 0; //reset index. 
+			sprite_index = spriteIdle; image_speed = 0.5;
 		}
 		else
 		{
-			sprite_index = spriteWalk; image_speed = 1;
+			if sprite_index != spriteWalk image_index = 0; //reset index. 
+			sprite_index = spriteWalk; image_speed = 1;			
 		}
 	
 	}
@@ -71,6 +73,11 @@ if global.hasgun = true {
 }
 else
 if (hsp != 0) image_xscale = sign(hsp);
+
+if sprite_index = spriteWalk && image_index = round(image_number-1) { //check if last sprite
+					repeat(random_range(2,4)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust))
+					{vsp = random_range(-0.1,0.1)}
+			} //
 
 }
 
