@@ -5,9 +5,15 @@ grv = 0.4;
 walkspd = 4;
 
 //roll
-speedRoll = 5.0;
-distanceRoll = 120;
+speedRoll = 6.0;
+distanceRoll = 90;
 facing_direction = 0; //the last walked in direction
+
+//cooldowns
+roll_cooldown = 60; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
+//hook_cooldown = 60;
+gun_cooldown = 10; //aka firing delay
+
 
 controller = 0;
 hascontrol = true;
@@ -24,7 +30,6 @@ spriteIdle = sPlayerIdle;
 spriteWalk = sPlayerWalk;
 spriteJump = sPlayerJump;
 spriteDie = sPlayerDie; 
-
 
 //Health
 hp_max = 4;

@@ -1,3 +1,3 @@
 /// @description init projectile variables
 
-g = 0.05; //gravity
+g = 0.025; //gravity

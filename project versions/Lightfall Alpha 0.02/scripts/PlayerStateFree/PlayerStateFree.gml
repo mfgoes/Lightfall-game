@@ -20,13 +20,12 @@ if canrope = 1 {
 		{
 			grappleX = mouse_x;
 			grappleY = mouse_y;
-			ropeX = x;
+			ropeX = x;           
 			ropeY = y;
 			ropeAngleVelocity = 0; //decide to carry momentum with this later
 			ropeAngle = point_direction(grappleX,grappleY, x,y);
 			ropeLength = point_distance(grappleX,grappleY,x,y);
 			state = PlayerStateSwing;
-		
 		
 		}
 	}
