@@ -1,35 +1,44 @@
-/// @description Update camera
-var view_w = camera_get_view_width(cam);
-var view_h = camera_get_view_height(cam); 
+//Upate camera destination
+if (instance_exists(follow)) 
+{
+	xTo = follow.x;
+	yTo = follow.y;
+	
+	if ((follow).object_index == oPlayerDead)
+	{
+		x = xTo;
+		y = yTo;
+	}
+}
+x= clamp(x,view_w_half+buff,room_width-view_w_half-buff); //maintain room boundaries
+y= clamp(y,view_h_half+buff,room_height-view_h_half-buff);
 
-camera_set_view_target(cam,follow);
+x += (xTo - x) / 10;
+y += (yTo - y) / 10;
 
-
-//Zoom
+//Zoom + recenter camera
 zoom = clamp(zoom+(mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.6); 
+var view_w = lerp(camera_get_view_width(cam),iw*zoom,0.2); //lerp from old view width to display width
+var view_h = lerp(camera_get_view_height(cam),ih*zoom,0.2); //lerp from old view height to display height
 
-var view_w = lerp(view_w,iw*zoom,0.2);
-var view_h = lerp(view_h,ih*zoom,0.2);
+//Screenshake
+x += random_range(-shake_remain,shake_remain);
+y += random_range(-shake_remain,shake_remain);
+shake_remain = max(0,(shake_remain)-((1/shake_length)*shake_magnitude)); //shake magnitude increases when zooming out for consistency
 
 camera_set_view_size(cam,view_w,view_h);
 surface_resize(application_surface,iw,ih);
+camera_set_view_pos(cam,x-view_w/2,y-view_h/2); //set new position to include screenshake and zoom position
 
-//Set view pos
-camera_set_view_pos(cam,follow.x-view_w/2,follow.y-view_h/2); 
-
-
-//Apply camera position
-camera_set_view_pos(cam,
-clamp(camera_get_view_x(cam),0,room_width-view_w),
-clamp(camera_get_view_y(cam),0,room_height-view_h));
-
-#region //parallax (basics)
+#region //parallax scrolling background
 if (room != rMenu)
 	{
 	if (layer_exists("bgr_mountains"))
+	
 	{
 		layer_x("bgr_mountains",x/2);	
 	}
+	
 	if (layer_exists("bgr_forests"))
 	{
 		layer_x("bgr_forests",x/4);	

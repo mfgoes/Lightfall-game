@@ -29,14 +29,11 @@ window_set_position(display_width/2 - window_width/2, display_height/2 - window_
 //"ideal width" -> Remove this later
 iw = display_width;
 ih = display_height;
-zoom = 0.05;
+zoom = 0.2;
 
 //Mouse previous
 mouse_x_previous = device_mouse_x_to_gui(0);
 mouse_y_previous = device_mouse_y_to_gui(0);
-
-
-
 
 //reincluded code
 follow = oPlayer;
@@ -53,15 +50,9 @@ camFocused = false; //zoom is far away
 camW = camera_get_view_width(cam);
 camH = camera_get_view_height(cam); 
 
-shake_length = 60;
-shake_magnitude = 6;
-shake_remain = 6;
 
-/*
 /// @description Set up Camera
-//Enable views
 cam = view_camera[0];
-
 follow = oPlayer;
 view_w_half = camera_get_view_width(cam)*0.5;
 view_h_half = camera_get_view_height(cam)*0.5;
@@ -73,4 +64,4 @@ shake_length = 60;
 shake_magnitude = 6;
 shake_remain = 6;
 buff = 32;
-*/
+

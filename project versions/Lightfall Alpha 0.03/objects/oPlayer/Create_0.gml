@@ -15,12 +15,12 @@ gun_cooldown = 25; //aka firing delay
 hook_cooldown = 60;
 current_weapon = 0; //0 = bow, 1 = regular
 
-controller = 0;
+gamepad_on = 0; //gamepad
 hascontrol = true;
 canjump = 10; //for coyote jump
 //jump_anticipation = 2; //2/60frames	jump_cooldown_begin = false;
 
-gunkickx = 0;
+gunkickx = 2;
 gunkicky = 0;
 //onground = 0;
 debugmode = true;

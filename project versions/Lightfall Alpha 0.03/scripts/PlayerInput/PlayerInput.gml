@@ -12,20 +12,20 @@ function PlayerInput(){
 
 		if (key_left) || (key_right) || (key_jump)
 		{
-			controller = 0;	
+			gamepad_on = 0;	
 		}
 
 		if (abs(gamepad_axis_value(0,gp_axislh)) > 0.2)
 		{
 			key_left = abs(min(gamepad_axis_value(0,gp_axislh),0));	
 			key_right = max(gamepad_axis_value(0,gp_axislh),0);
-			controller = 1;
+			gamepad_on = 1;
 		}
 
 		if (gamepad_button_check_pressed(0,gp_face1))
 		{
 			key_jump = 1;                          
-			controller = 1;
+			gamepad_on = 1;
 		}
 	
 		if (key_roll) //enter roll state

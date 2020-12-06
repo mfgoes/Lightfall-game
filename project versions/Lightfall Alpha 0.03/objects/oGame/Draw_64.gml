@@ -29,8 +29,8 @@ if (room != rMenu) && (instance_exists(oPlayer))
 
 	draw_set_color(c_white);
 	DrawSetText(c_white,fUI,fa_left, fa_top);
-	draw_text(24,cooldown_posy+25,"HP: " + string(hp));
-	draw_text(84,cooldown_posy+25,"current weapon: " + string(oPlayer.current_weapon));
+	draw_text(24,y+55,"zoom: " + string(oCamera.zoom));
+	draw_text(84,cooldown_posy+25,"shake_magnitude: " + string(oCamera.shake_magnitude));
 	draw_text(8,25,"Lightfall Demo ");
 	DrawSetText(c_white,fUI,fa_right, fa_top);
 	draw_text_transformed(RES_W-8,RES_H-20," Press 'P' to switch character",killtextscale,killtextscale,0);

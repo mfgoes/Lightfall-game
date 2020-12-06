@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayerIdle",
-    "path": "sprites/sPlayerIdle/sPlayerIdle.yy",
+    "name": "sArcherIdle",
+    "path": "sprites/sArcherIdle/sArcherIdle.yy",
   },
   "solid": false,
   "visible": true,
