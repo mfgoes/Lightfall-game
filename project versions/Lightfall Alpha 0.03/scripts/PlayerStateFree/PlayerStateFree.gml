@@ -71,13 +71,9 @@ if canrope = 1 {
 
 //swap animation xscale
 
-if global.hasgun = true && mouse_check_button(mb_left){
-	//exit;
+if global.hasgun = true{
 	image_xscale = oGun.image_yscale;
 }
-else
-if (hsp != 0) image_xscale = sign(hsp);
-//image_xscale = facing_direction;
 
 
 //footstep sounds + dust

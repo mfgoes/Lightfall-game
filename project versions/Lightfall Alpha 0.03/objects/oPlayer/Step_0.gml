@@ -1,5 +1,8 @@
 /// @description Insert description here
 #region //Debug Mode
+//gm live 
+if (live_call()) return live_result; 
+
 if (debugmode) &&  keyboard_check_pressed(ord("P")) {	//check if in debug mode
 	if current_character = 1 current_character = 0;
 	else 

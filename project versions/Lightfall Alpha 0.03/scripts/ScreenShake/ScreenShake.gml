@@ -7,8 +7,8 @@ function ScreenShake(argument0, argument1) {
 	{
 		if (argument0) > shake_remain
 		{
-			shake_magnitude = argument0+zoom*1.5;
-			shake_remain = argument0+zoom*1.5;
+			shake_magnitude = argument0+zoom*1.2;
+			shake_remain = argument0+zoom*1.2;
 			shake_length = argument1;
 		}
 	}

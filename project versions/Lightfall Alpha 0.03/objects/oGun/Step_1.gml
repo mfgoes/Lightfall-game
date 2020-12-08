@@ -1,6 +1,9 @@
 /// @description Insert description here
 //facing_direction = 180 or 0
 
+//gm live 
+if (live_call()) return live_result; 
+
 x = oPlayer.x+(4*oPlayer.image_xscale);
 y = oPlayer.y+2;
 
@@ -27,11 +30,11 @@ y = oPlayer.y+2;
 		image_angle = clamp(mouse_angle,280,360);
 	if mouse_angle > 90 && mouse_angle < 270 
 		image_angle = clamp(mouse_angle,110,260);
-	
+		
 	if (mouse_angle < 90 or mouse_angle > 270)
-		image_yscale = -1;	//face left
+		image_yscale = 1;	//face left
 	else
-		image_yscale = 1; //face right
+		image_yscale = -1; //face right
 #endregion
 
 //set current_weapon here. 0 = bow, 1 = SMG, 2 = grappling hook
@@ -47,19 +50,19 @@ recoil = max(0,recoil-1);
 		{
 			oPlayer.gun_cooldown = gun_cooldown_full;
 			recoil = 4;
-			ScreenShake(2,20);
+			//ScreenShake(1,15);
 			if (oPlayer.current_weapon = 0) {
 				with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-					spd = 8;
+					spd = 10;
 					direction = other.image_angle+random_range(-0.5,0.5);
 					image_angle = direction;
 					x = x - lengthdir_x(2,other.image_angle);
 					y = y - lengthdir_y(2,other.image_angle);
 				}
-				//var audio_choose = choose(snDartGun1,snDartGun2,snDartGun3);
-				/*var audio_choose = snDartGun1;
-				audio_sound_gain(audio_choose,0.2,0);
-				audio_play_sound(audio_choose,1,0);*/
+				var audio_choose = choose(snDartGun3,snDartGun2,snDartGun3);
+				//var audio_choose = snDartGun1;
+				audio_sound_gain(audio_choose,0.02,0);
+				audio_play_sound(audio_choose,1,0);
 			}
 			else if (oPlayer.current_weapon = 1) {
 				with (instance_create_layer(x,y,"Bullets",oBullet_Parent)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
