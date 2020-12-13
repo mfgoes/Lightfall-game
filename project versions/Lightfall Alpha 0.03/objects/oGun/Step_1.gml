@@ -2,7 +2,7 @@
 //facing_direction = 180 or 0
 
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 x = oPlayer.x+(4*oPlayer.image_xscale);
 y = oPlayer.y+2;

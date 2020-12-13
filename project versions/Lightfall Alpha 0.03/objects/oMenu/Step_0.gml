@@ -1,12 +1,19 @@
 /// @description Control Menu
-
-///Item ease in
-menu_x +=(menu_x_target - menu_x) / menu_speed;
-
+//gm live 
+if (live_call()) return live_result; 
 
 //Keyboard Controls
 if (menu_control) 
 {
+	//restart game
+	if keyboard_check_released(ord("R"))
+	SlideTransition(TRANS_MODE.RESTART);
+	
+	/*go to next room 
+	if keyboard_check(vk_enter) && menu_cursor = 2 { //check if correct menu item here
+		room_goto_next();
+	}*/
+
 	if (keyboard_check_pressed(vk_up))
 		menu_cursor ++;
 		if (menu_cursor >= menu_items) menu_cursor = 0;
@@ -17,7 +24,7 @@ if (menu_control)
 		
 	if (keyboard_check_pressed(vk_enter))
 	{
-		menu_x_target = gui_width+200;
+		menu_x_target = gui_width+20;
 		menu_committed = menu_cursor;
 		audio_sound_gain(snLanding,0.2,0);
 		audio_play_sound(snLanding,4,false);
@@ -25,15 +32,16 @@ if (menu_control)
 		menu_control = false;	
 	}
 	
+
 	var mouse_y_gui = device_mouse_y_to_gui(0);	//0 = for if there's multiple mice implemented
-	//var mouse_x_gui = device_mouse_x_to_gui(0);	
-	if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) 
+
+if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) 
 	{
 		menu_cursor = (menu_y - mouse_y_gui) div (menu_item_height * 1.5); 	
 		
 		if (mouse_check_button_pressed(mb_left)) 
 		{
-		menu_x_target = gui_width+200;
+		menu_x_target = gui_width+20;
 		menu_committed = menu_cursor;
 		audio_sound_gain(snLanding,0.2,0);
 		audio_play_sound(snLanding,5,0);
@@ -41,10 +49,10 @@ if (menu_control)
 		menu_control = false;		
 		}
 	}
-	
 }
 
-if (menu_x > gui_width+150) && (menu_committed != -1)
+//menu_committed = menu_cursor;
+if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 {
 	switch (menu_committed)
 	{
@@ -70,3 +78,6 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 		
 	}
 }
+
+///GUI items ease in
+menu_x +=(menu_x_target - menu_x) / menu_speed;

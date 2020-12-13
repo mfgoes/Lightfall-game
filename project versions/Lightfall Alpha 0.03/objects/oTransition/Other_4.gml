@@ -12,5 +12,8 @@ enum TRANS_MODE
 }
 mode = TRANS_MODE.INTRO;
 percent = 1;
-percent_target = 1.2;
+percent_target = 1;
 target = room;
+
+//remove if duplicate
+ if instance_number(object_index) > 1 { instance_destroy() }

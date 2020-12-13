@@ -1,9 +1,9 @@
 /// @description Set up Camera
 
 //set up resolution macros
-#macro RES_W 960
-#macro RES_H 560
-#macro RES_SCALE 2
+#macro RES_W 480	
+#macro RES_H 270
+#macro RES_SCALE 2 //how much to scale the pixel art
 #macro RES_RATIO RES_H/RES_W
 #macro CAM_SMOOTH 0.1
 
@@ -36,7 +36,8 @@ mouse_x_previous = device_mouse_x_to_gui(0);
 mouse_y_previous = device_mouse_y_to_gui(0);
 
 //reincluded code
-follow = oPlayer;
+if instance_exists(oPlayer) follow = oPlayer;
+else follow = self;
 camera_set_view_target(cam,follow);
 
 xTo = xstart;
@@ -53,13 +54,10 @@ camH = camera_get_view_height(cam);
 
 /// @description Set up Camera
 cam = view_camera[0];
-follow = oPlayer;
 view_w_half = camera_get_view_width(cam)*0.5;
 view_h_half = camera_get_view_height(cam)*0.5;
 
-xTo = xstart;
-yTo = ystart;
-
+//screenshake
 shake_length = 60;
 shake_magnitude = 6;
 shake_remain = 6;

@@ -10,7 +10,7 @@ distanceRoll = 100;
 facing_direction = 0; //the last walked in direction
 
 //cooldowns
-roll_cooldown = 70; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
+roll_cooldown = 30; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
 gun_cooldown = 25; //aka firing delay
 hook_cooldown = 60;
 current_weapon = 0; //0 = bow, 1 = regular

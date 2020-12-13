@@ -1,4 +1,9 @@
 /// @description Draw Menu
+//gm live 
+if (live_call()) return live_result; 
+
+
+
 
 draw_set_font(menu_font);
 draw_set_halign(fa_right);
@@ -29,9 +34,12 @@ for (var i = 0; i < menu_items; i++)
 	draw_text(xx,yy,txt);
 	
 }
+draw_set_color(c_white);
+draw_text(20,40,string(menu_cursor));
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 draw_set_color(c_black);
-draw_rectangle(gui_width,gui_height-200,gui_width+900,gui_height,false);
+draw_rectangle(gui_width,gui_height-20,gui_width+30,gui_height,false);
 
