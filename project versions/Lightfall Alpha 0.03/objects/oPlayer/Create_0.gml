@@ -11,7 +11,7 @@ facing_direction = 0; //the last walked in direction
 
 //cooldowns
 roll_cooldown = 30; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
-gun_cooldown = 25; //aka firing delay
+gun_cooldown = 15; //aka firing delay
 hook_cooldown = 60;
 current_weapon = 0; //0 = bow, 1 = regular
 
@@ -26,7 +26,7 @@ gunkicky = 0;
 debugmode = true;
 
 //character sprite data goes here
-current_character = 1;
+current_character = 0; //green protag
 Load_CharacterData(current_character);
 
 //Sprites
@@ -35,11 +35,12 @@ spriteWalk =	current_character_sprites[1]
 spriteRoll =	current_character_sprites[2]
 spriteJump =	current_character_sprites[3]
 spriteDie  =	current_character_sprites[4]
-mask_index =	current_character_sprites[5]; //be more specific later; 
+mask_index =	current_character_sprites[5] //be more specific later; 
+spriteAim  =	current_character_sprites[6]; 
 
 
 //Health
-hp_max = 4;
+hp_max = 1;
 hp = hp_max;
 flash = 0; 
 

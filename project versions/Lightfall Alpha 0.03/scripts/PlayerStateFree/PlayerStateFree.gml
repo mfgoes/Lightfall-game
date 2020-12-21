@@ -1,7 +1,17 @@
 // Player IDLE, WALK, JUMP
 function PlayerStateFree(){
+	
+//Slow down while aiming weapon
+var slowwalk = 0.5; 
+if current_weapon = 0 && mouse_check_button(mb_left) = true {
+slowwalk = 0.5;
+} 
+else
+slowwalk = 1; //1 = no slow walk
+
+
 var move = key_right - key_left;
-hsp = (move * walkspd) + round(gunkickx);
+hsp = (move * walkspd * slowwalk) + round(gunkickx);
 vsp = (vsp + grv) + gunkicky; 
 gunkickx = 0; 
 gunkicky = 0;
@@ -34,7 +44,7 @@ if canrope = 1 {
 #endregion
 
 ///ANIMATION
-	//jump sprite
+	//is jumping
 	if (!place_meeting(x,y+1,oWall))	//CHECK IF ON GROUND
 	{
 		sprite_index = spriteJump;
@@ -42,7 +52,7 @@ if canrope = 1 {
 		if (sign(vsp) > 0) image_index = 2; else image_index = 1;
 	}
 	else 
-	//walk or idle or 'getting ready to jump'
+	//is walk or idle or 'start jumping'
 	{
 		canjump = 10;
 		if sprite_index == spriteJump && image_index = 2 {
@@ -60,32 +70,40 @@ if canrope = 1 {
 			if sprite_index != spriteIdle image_index = 0; //reset index. 
 			sprite_index = spriteIdle; image_speed = 0.6;
 		}
-		else
+		else //walk animation
 		{
 			if sprite_index != spriteWalk image_index = 0; //reset index. 
-			sprite_index = spriteWalk; image_speed = 1;			
+			sprite_index = spriteWalk; image_speed = 1*slowwalk;			
 		}
 		//if jump_cooldown_begin = 1 {image_index = 0; sprite_index = spriteJump;}
 	
 	}
 
-//swap animation xscale
-
+//animation xscale
 if global.hasgun = true{
-	image_xscale = oGun.image_yscale;
+	if mouse_check_button(mb_left) = true {
+		//image_xscale = oGun.image_yscale;
+		//facing_direction = cos(oGun.image_yscale)//change -1 and 1 to 180 and 0 -> 180 
+		facing_direction = arccos(oGun.image_yscale);
+		image_xscale = oGun.image_yscale;
+	}
+	else {
+		if facing_direction = 0 image_xscale = 1 else image_xscale = -1;
+		}
 }
 
-
-//footstep sounds + dust
-if sprite_index = spriteWalk && (image_index = round(image_number-1) or image_index = round(image_number/2-1)) { 
-	repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust))
-		{vsp = random_range(-0.1,0.1) image_alpha = 0.3;}
+//footsteps
+//ADD LATER: set trigger step for when to make particles dependant on selected character
+if sprite_index = spriteWalk && (image_index = 1 or image_index = 3){ 
+	repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
+	{vsp = random_range(-0.2,0.2) image_alpha = random_range(0.1,0.27);}
 	
 	//play footstep sound
 	var footstepsound = choose(snFootstep2,snFootstep3,snFootstep4); //,snFootstep2,snFootstep3,snFootstep4
 	audio_sound_gain(footstepsound,0.1,0);
 	if !audio_is_playing(footstepsound) audio_play_sound(footstepsound,10,0);
 	}
+
 
 }
 

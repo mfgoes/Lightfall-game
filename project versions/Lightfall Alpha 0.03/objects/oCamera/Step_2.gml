@@ -17,7 +17,7 @@ x += (xTo - x) / 10;
 y += (yTo - y) / 10;
 
 //Zoom + recenter camera
-zoom = clamp(zoom+(mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.6); 
+zoom = clamp(zoom+(mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.4); 
 var view_w = lerp(camera_get_view_width(cam),iw*zoom,0.2); //lerp from old view width to display width
 var view_h = lerp(camera_get_view_height(cam),ih*zoom,0.2); //lerp from old view height to display height
 
@@ -39,9 +39,9 @@ if (room != rMenu)
 		layer_x("bgr_mountains",x/2);	
 	}
 	
-	if (layer_exists("bgr_forests"))
+	if (layer_exists("Background"))
 	{
-		layer_x("bgr_forests",x/4);	
+		layer_x("Background",x+300);	
 	}
 }
 #endregion

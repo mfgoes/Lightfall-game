@@ -3,7 +3,7 @@ x+= lengthdir_x(spd,direction);
 y+= lengthdir_y(spd,direction);
 
 if g < 120 {
-	g += 0.03;
+	g += 0.05;
 }
 y+= g;
 image_angle = point_direction(xprevious,yprevious,x,y);

@@ -1,11 +1,11 @@
 /// @description Draw Score
 
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //	put in script: DRAW PLAYER GUI*****
 
-if (room != rMenu) // && (instance_exists(oPlayer))
+if (room != rMenu) && (instance_exists(oPlayer))
 {
 	//draw crosshair
 	cursor_sprite = sCrosshairs; //make differnet cursor when in menus later
@@ -36,7 +36,8 @@ if (room != rMenu) // && (instance_exists(oPlayer))
 	//extra texts
 	DrawSetText(c_white,fUI,fa_left, fa_top);
 	draw_text(4,4,"Lightfall Demo ");
-	draw_text(40,20,"cam follow" + string(oCamera.follow));
+	draw_text(4,20,"image_index " + string(oPlayer.image_index));
+	draw_text(4,36,"bow charge " + string(oGun.weapon_charge));
 	
 		
 	//only display if you've had kills

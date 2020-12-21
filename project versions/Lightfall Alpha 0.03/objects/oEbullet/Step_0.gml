@@ -17,7 +17,7 @@ if (place_meeting(x,y,oWall)) && (image_index !=0)
 
 
 //hit player
-if (place_meeting(x,y,oPlayer))
+if (place_meeting(x,y,oPlayer)) 
 {
 	with(instance_place(x,y,oPlayer))
 	{

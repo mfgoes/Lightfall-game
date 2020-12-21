@@ -22,6 +22,6 @@ if (place_meeting(x,y,oWall)) && (image_index !=0)
 	}
 	spd = 0;
 	instance_change(oHitSpark,true);
-	layer_add_instance("Tiles_1",id);
+	//layer_add_instance("Tiles_1",id);
 	depth+=1;
 }
