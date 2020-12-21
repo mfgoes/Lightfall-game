@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"859ff6dc-9a9a-4bdd-8ea7-8ce843c09733","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Characters/Misc.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBullet",

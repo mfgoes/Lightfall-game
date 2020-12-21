@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"82c57972-2250-4be0-8880-39d632000cd1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Characters/Misc.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGrapplingArrow",

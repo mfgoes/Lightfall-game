@@ -28,8 +28,7 @@ y = oPlayer.y+2;
 	if mouse_angle > 270
 		image_angle = clamp(mouse_angle,280,360);
 	if mouse_angle > 90 && mouse_angle < 270 
-		image_angle = clamp(mouse_angle,110,260);
-		
+		image_angle = clamp(mouse_angle,110,260);	
 	if (mouse_angle < 90 or mouse_angle > 270)
 		image_yscale = 1;	//face left
 	else
@@ -46,18 +45,23 @@ weapon_recoil = max(0,weapon_recoil-1);
 	//charge bow
 	if (mouse_check_button(mb_left)) = true && weapon_charge < weapon_charge_max {
 		weapon_charge+=0.5;
+		//Set graphic
+		image_alpha = 1;
+		
 	}
 	
 	if (mouse_check_button_released(mb_left)) && (gun_cooldown < 1) || (gamepad_button_check(0,gp_shoulderrb)) && (gun_cooldown < 1)
 	{
-	oPlayer.gun_cooldown = gun_cooldown_full;
-	weapon_recoil = 4;
-	ScreenShake(1,9);
+		oPlayer.gun_cooldown = gun_cooldown_full;
+		weapon_recoil = 4;
+		ScreenShake(1,9);
 	
+		//Set graphic
+		image_alpha = oPlayer.character_weapons[1];
 			
-	//0 = bow, 1 = SMG, 2 = grappling hook
-	if (oPlayer.current_weapon = 0) { 
-		with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+		//0 = bow, 1 = SMG, 2 = grappling hook
+		if (oPlayer.current_weapon = 0) { 
+			with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			spd = 1+other.weapon_charge;
 			direction = other.image_angle+random_range(-0.5,0.5);
 			g = 0.2;
@@ -71,7 +75,8 @@ weapon_recoil = max(0,weapon_recoil-1);
 		audio_play_sound(audio_choose,1,0);
 		weapon_charge = 0; //reset bow charge
 		}
-		else if (oPlayer.current_weapon = 1) {
+		else if (oPlayer.current_weapon = 1) 
+			{
 			with (instance_create_layer(x,y,"Bullets",oBullet_Parent)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 				spd = 12;
 				direction = other.image_angle+random_range(-1,1);
@@ -84,7 +89,7 @@ weapon_recoil = max(0,weapon_recoil-1);
 				gunkickx = lengthdir_x(1.5,other.image_angle-180);
 				gunkicky = lengthdir_y(1, other.image_angle-180);
 			}
-		}
+			}
 		}
 	x = x - lengthdir_x(weapon_recoil,image_angle);
 	y = y - lengthdir_y(weapon_recoil,image_angle);

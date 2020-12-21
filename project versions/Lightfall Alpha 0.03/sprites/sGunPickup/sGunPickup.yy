@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f5ab429a-ddef-45b1-af1a-9b2d45e948e0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Characters/Misc.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGunPickup",

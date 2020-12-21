@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1fe77239-4588-4b4b-926a-ef0ac1439f43","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Characters/Misc.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGun",

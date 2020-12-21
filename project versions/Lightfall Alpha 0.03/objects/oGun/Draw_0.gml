@@ -2,7 +2,6 @@
 
 //Load weapon data from player
 sprite_index = oPlayer.character_weapons[0];
-image_alpha = oPlayer.character_weapons[1];
 
 //don't draw sprite when rolling
 if oPlayer.state != PlayerStateRoll draw_self(); else exit;

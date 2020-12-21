@@ -5,7 +5,7 @@ function Load_CharacterData(argument0){
 	switch (argument0) {
 		case 0: 
 			current_character_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sArcherJump, sArcherDie,sArcherMask, sProtagAim];
-			character_weapons = [sGun,0] //main gun, and wether to always display
+			character_weapons = [sWeaponBow_Placeholder,0] //main gun, and wether to always display
 			break;
 		case 1:
 			current_character_sprites = [sArcherIdle, sArcherWalk, sArcherRoll, sArcherJump, sArcherDie, sArcherMask, sArcherIdle];
