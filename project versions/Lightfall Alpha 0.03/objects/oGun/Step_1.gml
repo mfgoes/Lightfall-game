@@ -41,24 +41,19 @@ weapon_recoil = max(0,weapon_recoil-1);
 #region //Shoot ammunition 
 	if oPlayer.state != PlayerStateRoll //if oPlayer.canrope = 0 
 	{
-		
 	//charge bow
-	if (mouse_check_button(mb_left)) = true && weapon_charge < weapon_charge_max {
+	if weapon_charge < weapon_charge_max && oPlayer.current_weapon = 0 && (mouse_check_button(mb_left)) = true {
 		weapon_charge+=0.5;
-		//Set graphic
-		image_alpha = 1;
-		
+		weapon_active = 1; 
 	}
+
 	
 	if (mouse_check_button_released(mb_left)) && (gun_cooldown < 1) || (gamepad_button_check(0,gp_shoulderrb)) && (gun_cooldown < 1)
 	{
 		oPlayer.gun_cooldown = gun_cooldown_full;
-		weapon_recoil = 4;
-		ScreenShake(1,9);
+		weapon_recoil = 2;
+		ScreenShake(1,4);
 	
-		//Set graphic
-		image_alpha = oPlayer.character_weapons[1];
-			
 		//0 = bow, 1 = SMG, 2 = grappling hook
 		if (oPlayer.current_weapon = 0) { 
 			with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
@@ -66,8 +61,8 @@ weapon_recoil = max(0,weapon_recoil-1);
 			direction = other.image_angle+random_range(-0.5,0.5);
 			g = 0.2;
 			image_angle = direction;
-			x = x - lengthdir_x(2,other.image_angle);
-			y = y - lengthdir_y(2,other.image_angle);
+			x = x - lengthdir_x(0,other.image_angle);
+			y = y - lengthdir_y(0,other.image_angle);
 		}
 		var audio_choose = choose(snDartGun3,snDartGun2,snDartGun3);
 		//var audio_choose = snDartGun1;
@@ -90,10 +85,15 @@ weapon_recoil = max(0,weapon_recoil-1);
 				gunkicky = lengthdir_y(1, other.image_angle-180);
 			}
 			}
+			
+		//bow is released
+		weapon_active = 0; 
+		timer_set("weapon_display",room_speed*1); //1 second	
 		}
 	x = x - lengthdir_x(weapon_recoil,image_angle);
 	y = y - lengthdir_y(weapon_recoil,image_angle);
 	}
+	else weapon_active = 0; //if rolling, don't show weapon
 #endregion
 
 #region //swap weapons by scrolling
@@ -105,3 +105,5 @@ weapon_recoil = max(0,weapon_recoil-1);
 		audio_play_sound(snSwapWeapon,1,0);
 	}
 #endregion
+
+//WEAPON ANIMATIONS -> Done in Draw event

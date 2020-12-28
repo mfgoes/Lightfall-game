@@ -81,7 +81,7 @@ if canrope = 1 {
 
 //animation xscale
 if global.hasgun = true{
-	if mouse_check_button(mb_left) = true {
+	if oGun.image_alpha > 0 { //was mouse_check_button(mb_left) = true
 		//image_xscale = oGun.image_yscale;
 		//facing_direction = cos(oGun.image_yscale)//change -1 and 1 to 180 and 0 -> 180 
 		facing_direction = arccos(oGun.image_yscale);

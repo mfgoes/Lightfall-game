@@ -16,4 +16,5 @@
 	sprite_index = oPlayer.character_weapons[0];
 	image_alpha = oPlayer.character_weapons[1];
 	image_speed = 0;
+	weapon_active = 0; 
 #endregion

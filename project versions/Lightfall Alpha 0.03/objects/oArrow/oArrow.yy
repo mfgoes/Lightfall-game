@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBullet",
-    "path": "sprites/sBullet/sBullet.yy",
+    "name": "sGrapplingArrow",
+    "path": "sprites/sGrapplingArrow/sGrapplingArrow.yy",
   },
   "solid": false,
   "visible": true,
