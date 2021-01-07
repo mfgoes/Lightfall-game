@@ -47,6 +47,7 @@
     {"id":{"name":"snFootstep3","path":"sounds/snFootstep3/snFootstep3.yy",},"order":2,},
     {"id":{"name":"sBgrPlaceholder","path":"sprites/sBgrPlaceholder/sBgrPlaceholder.yy",},"order":5,},
     {"id":{"name":"oSkipMenu","path":"objects/oSkipMenu/oSkipMenu.yy",},"order":6,},
+    {"id":{"name":"Sequence1","path":"sequences/Sequence1/Sequence1.yy",},"order":5,},
     {"id":{"name":"snFootstep4","path":"sounds/snFootstep4/snFootstep4.yy",},"order":3,},
     {"id":{"name":"snDeath","path":"sounds/snDeath/snDeath.yy",},"order":4,},
     {"id":{"name":"snLanding","path":"sounds/snLanding/snLanding.yy",},"order":5,},

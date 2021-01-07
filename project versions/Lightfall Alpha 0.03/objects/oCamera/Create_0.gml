@@ -30,6 +30,7 @@ window_set_position(display_width/2 - window_width/2, display_height/2 - window_
 iw = display_width;
 ih = display_height;
 zoom = 0.2;
+weapon_zoom = 0; //try to remove this variable later
 
 //Mouse previous
 mouse_x_previous = device_mouse_x_to_gui(0);

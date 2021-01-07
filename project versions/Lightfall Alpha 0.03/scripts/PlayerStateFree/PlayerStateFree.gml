@@ -79,22 +79,7 @@ if canrope = 1 {
 	
 	}
 
-//animation xscale
-if global.hasgun = true{
-	if oGun.image_alpha > 0 { //was mouse_check_button(mb_left) = true
-		//image_xscale = oGun.image_yscale;
-		//facing_direction = cos(oGun.image_yscale)//change -1 and 1 to 180 and 0 -> 180 
-		facing_direction = arccos(oGun.image_yscale);
-		image_xscale = oGun.image_yscale;
-		if hsp = 0 {
-			sprite_index = spriteAim; 
-			image_speed = 0;
-		}
-	}
-	else {
-		if facing_direction = 0 image_xscale = 1 else image_xscale = -1;
-		}
-}
+
 
 //footsteps
 //ADD LATER: set trigger step for when to make particles dependant on selected character

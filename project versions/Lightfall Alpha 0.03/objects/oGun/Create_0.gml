@@ -17,4 +17,8 @@
 	image_alpha = oPlayer.character_weapons[1];
 	image_speed = 0;
 	weapon_active = 0; 
+	flip_weapon = 0;
 #endregion
+
+///Added zoom
+weapon_zoom = 0; //clamp between 0.05 and 0.2);

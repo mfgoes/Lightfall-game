@@ -1,7 +1,7 @@
 /// @description Draw Score
 
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
 //	put in script: DRAW PLAYER GUI*****
 
@@ -9,7 +9,6 @@ if (room != rMenu) && (instance_exists(oPlayer))
 {
 	//draw crosshair
 	cursor_sprite = sCrosshairs; //make differnet cursor when in menus later
-	
 	//draw cooldowns for player	
 	var cooldown_posx = RES_W-96;
 	var cooldown_posy =  RES_H -35;
@@ -36,8 +35,8 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	//extra texts
 	DrawSetText(c_white,fUI,fa_left, fa_top);
 	draw_text(4,4,"Lightfall Demo ");
-	draw_text(4,20,"image_index " + string(oPlayer.image_index));
-	draw_text(4,36,"bow charge " + string(oGun.weapon_charge));
+	draw_text(4,20,"Update: Weapon Focus Mode");
+	draw_text(4,36,"gun angle " + string(oGun.image_angle));
 	
 		
 	//only display if you've had kills
