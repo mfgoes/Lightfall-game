@@ -1,7 +1,7 @@
 /// @description character animations
 
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 draw_set_color(c_white);
 if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);

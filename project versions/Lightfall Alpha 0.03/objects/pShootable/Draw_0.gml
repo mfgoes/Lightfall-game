@@ -1,6 +1,5 @@
 /// @description Insert description here
 draw_self();
-
 if (flash > 0) 
 {
 	flash --;

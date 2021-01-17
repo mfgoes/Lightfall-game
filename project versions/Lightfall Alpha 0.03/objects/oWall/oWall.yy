@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "name": "Environment+Objects",
+    "path": "folders/Objects/Environment+Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWall",

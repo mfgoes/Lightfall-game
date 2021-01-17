@@ -1,6 +1,4 @@
 /// @description
-//gm live 
-if (live_call()) return live_result; 
 timer_init("smokeline");
 timer_init("arrow_fade");
 timer_init("arrow_wiggle");

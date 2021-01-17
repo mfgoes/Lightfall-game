@@ -13,4 +13,5 @@ function KillPlayer() {
 	if (sign(hsp) !=0) image_xscale = sign(hsp);
 
 	global.kills -= global.killsthisroom;
+	global.exp_points -= global.exp_points_thisroom;
 }

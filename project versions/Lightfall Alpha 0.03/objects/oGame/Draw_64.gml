@@ -23,8 +23,9 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	
 	//draw HP	
 	var hp = oPlayer.hp; var hp_max = oPlayer.hp_max;
-	var healthUI = hp * 30;
-	var healthUImax = hp_max * 30;
+	var healthUImax = 100; 
+	var healthUI = (hp/hp_max) * healthUImax;
+	
 	draw_set_halign(fa_left);
 	draw_text(4,cooldown_posy-8,"hp: " + string(hp));
 	draw_set_color(make_colour_rgb(23, 23, 43)); //hp bgr
@@ -35,14 +36,15 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	//extra texts
 	DrawSetText(c_white,fUI,fa_left, fa_top);
 	draw_text(4,4,"Lightfall Demo ");
-	draw_text(4,20,"Update: Weapon Focus Mode");
-	draw_text(4,36,"gun angle " + string(oGun.image_angle));
-	
+	draw_text(4,20,"Update: Zoom Entry");
+	draw_text(4,36,"x y" + string(oPlayer.y));
+	//draw exp
+	draw_text_transformed(RES_W-100,19,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
 		
 	//only display if you've had kills
 	if  (global.kills > 0) {
 		killtextscale = max(killtextscale * 0.85, 1); 	
 		DrawSetText(c_white,fUI,fa_right, fa_top);
-		draw_text_transformed(RES_W-4,19,string(global.kills) + " Kills",killtextscale,killtextscale,0);
+		draw_text_transformed(RES_W-5,19,string(global.kills) + " Kills",killtextscale,killtextscale,0);
 	}
 }

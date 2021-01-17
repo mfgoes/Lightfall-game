@@ -1,6 +1,4 @@
 /// @description GUI/VARS/Menu Setup
-//gm live 
-if (live_call()) return live_result; 
 
 #macro SAVEFILE "Save.sav"
 #macro RES_W 480	

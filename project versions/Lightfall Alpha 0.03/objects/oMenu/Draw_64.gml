@@ -1,9 +1,4 @@
 /// @description Draw Menu
-//gm live 
-if (live_call()) return live_result; 
-
-
-
 
 draw_set_font(menu_font);
 draw_set_halign(fa_right);

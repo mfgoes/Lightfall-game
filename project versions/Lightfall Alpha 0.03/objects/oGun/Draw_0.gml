@@ -1,7 +1,10 @@
 /// @desc weapon & charge animations
 #region //setup
-	if (live_call()) return live_result; 
+	//if (live_call()) return live_result; 
+	
+	Load_CharacterData(oPlayer.current_weapon)	
 	sprite_index = oPlayer.character_weapons[0];
+	
 	flip_weapon = 1; 
 	if !(image_angle <= 90 or image_angle >= 270)
 	flip_weapon = -1;	//face left			
@@ -11,24 +14,14 @@
 
 #endregion
 
-
-
-
-//timers
-#region //timers
-
-#endregion
-
 //weapon animation
 #region //weapon animation
-	
 	if timer_get("weapon_display") = -1 { // show/hide weapon
 	image_alpha = weapon_active; //0 or 1	
 	}
 	
 	if oPlayer.current_weapon = 0 {
 		{
-		
 		//release bow
 		if weapon_active = 1 {
 			image_speed = 0;
@@ -47,11 +40,16 @@
 		if image_index = image_number-1 {image_speed = 0 image_index = image_number-1;}
 		}
 	}
+	else {
+		image_alpha = 1;
+		image_index = 0; 
+		sprite_index = sGun;
+	}
 #endregion
 
 /*
 //debug info
-draw_text(x-30,y-30,weapon_active);
+
 
 draw_text(x-30,y-40,"follow mouse " + string(weapon_zoom));
 draw_text(x-30,y-100,"weapon_zoom " + string(oCamera.weapon_zoom));

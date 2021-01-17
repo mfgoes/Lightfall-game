@@ -1,5 +1,7 @@
 /// @description Insert description here
-// You can write your code in this editor
+vsp = 0;
+grv = 0.3;
+
 mywall = instance_create_layer(x,y,layer,oWall);
 with (mywall)
 {

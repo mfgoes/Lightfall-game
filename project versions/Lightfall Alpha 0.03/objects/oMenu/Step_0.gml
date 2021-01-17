@@ -1,7 +1,4 @@
 /// @description Control Menu
-//gm live 
-if (live_call()) return live_result; 
-
 //Keyboard Controls
 if (menu_control) 
 {
@@ -69,6 +66,7 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 				var target = file_text_read_real(file);
 				global.kills = file_text_read_real(file);
 				global.hasgun = file_text_read_real(file);
+				global.exp_points = file_text_read_real(file);
 				file_text_close(file);
 				SlideTransition(TRANS_MODE.GOTO,target);
 			}

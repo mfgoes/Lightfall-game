@@ -3,13 +3,24 @@
 function PlayerInput(){
 	if (hascontrol)
 	{
-		key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-		key_jump = keyboard_check_pressed(vk_space) //|| keyboard_check(ord("W"))
-		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
-		key_roll =  keyboard_check_pressed(ord("F")) || keyboard_check_pressed(vk_shift); 
+		key_left = keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0,gp_padl);
+		key_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0,gp_padr);
+		key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check(0,gp_face2);
+		key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0,gp_padd);
+		key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0,gp_padu);
 
+		//General
+		key_equip = keyboard_check(ord("E")) || gamepad_button_check(0,gp_face4);
+		key_pausegame = keyboard_check(vk_escape) || gamepad_button_check(0,gp_start);
+		
+		//Abilities
+		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1);
+		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr);
+		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3); 
+		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);
+		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);
+		
+		//Gamepad sepecific controls
 		if (key_left) || (key_right) || (key_jump)
 		{
 			gamepad_on = 0;	
@@ -22,12 +33,13 @@ function PlayerInput(){
 			gamepad_on = 1;
 		}
 
-		if (gamepad_button_check_pressed(0,gp_face1))
+		/*if (gamepad_button_check_pressed(0,gp_face1))
 		{
 			key_jump = 1;                          
 			gamepad_on = 1;
-		}
-	
+		}*/
+		
+		//roll ability 	
 		if (key_roll) //enter roll state
 			{
 				if state = PlayerStateFree && roll_cooldown = 0{
@@ -37,8 +49,6 @@ function PlayerInput(){
 				}
 				moveDistanceRemaining = distanceRoll
 			}
-
-		
 	}
 	else
 	{
@@ -46,8 +56,6 @@ function PlayerInput(){
 		key_left = 0;
 		key_jump = 0;
 	}
-	
-	
 	//COOLDOWNS
 	if roll_cooldown > 0 roll_cooldown -=1;
 	if gun_cooldown > 0 gun_cooldown -=1;

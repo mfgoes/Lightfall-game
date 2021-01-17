@@ -11,8 +11,9 @@ slowwalk = 1; //1 = no slow walk
 
 
 var move = key_right - key_left;
-hsp = (move * walkspd * slowwalk) + round(gunkickx);
+hsp = (move * walkspd * slowwalk) + (gunkickx);
 vsp = (vsp + grv) + gunkicky; 
+
 gunkickx = 0; 
 gunkicky = 0;
 
@@ -28,7 +29,7 @@ if (canjump > 0) && (key_jump) {
 
 #region //allow grappling
 if canrope = 1 {
-		if (mouse_check_button_pressed(mb_middle))
+		if key_grapple = true
 		{
 			grappleX = mouse_x;
 			grappleY = mouse_y;
