@@ -18,8 +18,10 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	draw_sprite_ext(sCooldowns_Archer,1,cooldown_posx+35,cooldown_posy,UIscale,UIscale,0,c_gray,1);
 	draw_sprite_ext(sCooldowns_Archer,2,cooldown_posx+65,cooldown_posy,UIscale,UIscale,0,c_gray,1);
 	draw_set_halign(fa_center);
-	draw_text(cooldown_posx+47,cooldown_posy+4,oPlayer.roll_cooldown); 
-	draw_text(cooldown_posx+17,cooldown_posy+4,oPlayer.gun_cooldown); 
+	draw_text(cooldown_posx+17,cooldown_posy+4,oPlayer.primary_cooldown); 
+	draw_text(cooldown_posx+47,cooldown_posy+4,oPlayer.secondary_cooldown); 
+	draw_text(cooldown_posx+77,cooldown_posy+4,oPlayer.roll_cooldown); 
+	
 	
 	//draw HP	
 	var hp = oPlayer.hp; var hp_max = oPlayer.hp_max;

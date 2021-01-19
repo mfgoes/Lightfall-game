@@ -1,16 +1,37 @@
 /// @description Weapon changes
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
 #region init timers
 	timer_init("weapon_zoomed_in");	//stay zoomed in when aiming for a while
 	timer_init("recover_from_recoil");
 	timer_init("weapon_display");	
 	timer_init("weapon_putaway");
+	timer_init("secondary_cooldown");
+#endregion
+
+#region load weapon data from oPlayer
+	//keybinds
+	var key_attack_pressed = oPlayer.key_primary;
+	var key_attack_released =  oPlayer.key_attack_released;
+	var key_secondary = oPlayer.key_secondary;
+	var key_switch_weapon =	keyboard_check_pressed(ord("E"))
+	
+	var weapon_speed_max =  oPlayer.character_weapons[2];
+	var weapon_speed_min =  oPlayer.character_weapons[3]; //for charging weapons. ie bow
+	var weapon_accuracy  =	oPlayer.character_weapons[4];
+	var weapon_bullet	 =	oPlayer.character_weapons[5]; 
+
+	var can_shoot = false; //if not rolling
+	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 && primary_cooldown < 1 {
+		can_shoot = true;
+	}
+	
+	primary_cooldown = oPlayer.primary_cooldown;
 #endregion
 
 #region zoom when holding LMB
-	if ((mouse_check_button(mb_left)) = true && weapon_charge > weapon_charge_max*0.55) {
+	if ((key_attack_pressed) && weapon_charge > weapon_charge_max*0.55) {
 		weapon_zoom = -0.003;
 		}
 	else {
@@ -21,6 +42,7 @@
 	}
 	else exit;
 #endregion
+
 
 #region set weapon position + angle			//add recoil here again later
 	x = oPlayer.x+(0*oPlayer.image_xscale);
@@ -71,32 +93,15 @@
 	
 #endregion
 
-#region load weapon data from oPlayer
-	//keybinds
-	var key_attack_pressed = (mouse_check_button(mb_left)) || (gamepad_button_check(0,gp_shoulderrb));
-	var key_attack_released =  (mouse_check_button_released(mb_left)) || (gamepad_button_check_released(0,gp_shoulderrb));
-	var key_switch_weapon =	keyboard_check_pressed(ord("E"))
-	
-	var weapon_speed_max =  oPlayer.character_weapons[2];
-	var weapon_speed_min =  oPlayer.character_weapons[3]; //for charging weapons. ie bow
-	var weapon_accuracy  =	oPlayer.character_weapons[4];
-	var weapon_bullet	 =	oPlayer.character_weapons[5]; 
 
-	var can_shoot = false; 
-	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 && gun_cooldown < 1 {
-		can_shoot = true;
-	}
-#endregion
-
-#region gun recoil effects
-gun_cooldown = oPlayer.gun_cooldown;
+#region gun recoil effects (set this for all abilities)
 //recover from gun recoil
 if timer_get("recover_from_recoil") = -1 {
 	weapon_recoil = max(0,weapon_recoil-1);
 }
 #endregion
 
-#region //Shoot ammunition 
+#region //Primary weapon
 	if can_shoot = true
 	{
 	//for chargable weapons
@@ -105,9 +110,9 @@ if timer_get("recover_from_recoil") = -1 {
 		weapon_active = 1; 
 	}
 	
-	if (key_attack_released && (gun_cooldown < 1))
+	if (key_attack_released && (primary_cooldown < 1))
 	{
-		oPlayer.gun_cooldown = gun_cooldown_full;
+		oPlayer.primary_cooldown = primary_cooldown_full;
 		//weapon_recoil = 0; //use recoil for gun weapons
 		timer_set("recover_from_recoil",10);
 		
@@ -151,7 +156,16 @@ if timer_get("recover_from_recoil") = -1 {
 	else weapon_active = 0; //if rolling, don't show weapon
 #endregion
 
-#region swap weapons
+#region //Secondary weapon (melee)
+	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
+		audio_play_sound(audio_choose,2,0);
+		oPlayer.secondary_cooldown = secondary_cooldown_full;
+		//reset cooldown
+		 timer_set("secondary_cooldown",secondary_cooldown_full);
+	}
+#endregion
+
+#region swap character weapon
 	if (key_switch_weapon)
 	{
 		oPlayer.current_weapon+=1;

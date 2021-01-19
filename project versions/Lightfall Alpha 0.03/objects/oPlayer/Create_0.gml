@@ -14,7 +14,8 @@ if (live_call()) return live_result;
 	
 	//cooldowns
 	roll_cooldown = 30; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
-	gun_cooldown = 15; //aka firing delay
+	primary_cooldown = 15; //aka firing delay
+	secondary_cooldown = 15;
 	hook_cooldown = 60;
 	current_weapon = 0; //0 = bow, 1 = regular
 

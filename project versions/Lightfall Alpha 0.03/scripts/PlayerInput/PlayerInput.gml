@@ -20,6 +20,9 @@ function PlayerInput(){
 		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);
 		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);
 		
+		//Special
+		key_attack_released =  (mouse_check_button_released(mb_left)) || (gamepad_button_check_released(0,gp_shoulderrb));
+		
 		//Gamepad sepecific controls
 		if (key_left) || (key_right) || (key_jump)
 		{
@@ -33,11 +36,10 @@ function PlayerInput(){
 			gamepad_on = 1;
 		}
 
-		/*if (gamepad_button_check_pressed(0,gp_face1))
-		{
-			key_jump = 1;                          
-			gamepad_on = 1;
-		}*/
+		//secondary ability 
+		if (key_secondary) {
+		//	
+		}
 		
 		//roll ability 	
 		if (key_roll) //enter roll state
@@ -58,5 +60,6 @@ function PlayerInput(){
 	}
 	//COOLDOWNS
 	if roll_cooldown > 0 roll_cooldown -=1;
-	if gun_cooldown > 0 gun_cooldown -=1;
+	if primary_cooldown > 0 primary_cooldown -=1;
+	if secondary_cooldown > 0 secondary_cooldown -=1;
 }
