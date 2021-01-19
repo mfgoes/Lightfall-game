@@ -1,6 +1,6 @@
 /// @description 
 function KillPlayer() {
-	with (oGun) instance_destroy();
+	with (oWeaponPlayer) instance_destroy();
 	dd = instance_change(oPlayerDead,true);
 	/*with (dd) {
 		Load_CharacterData(0); //was: oPlayer.current_character

@@ -47,11 +47,13 @@
 	}
 #endregion
 
+//draw_text(x-30,y-40,"follow mouse " + string(weapon_zoom));
+
+
 /*
 //debug info
 
 
-draw_text(x-30,y-40,"follow mouse " + string(weapon_zoom));
 draw_text(x-30,y-100,"weapon_zoom " + string(oCamera.weapon_zoom));
 
 //draw frames

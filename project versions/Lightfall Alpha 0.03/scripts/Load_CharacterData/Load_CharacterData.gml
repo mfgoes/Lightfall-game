@@ -9,21 +9,23 @@ function Load_CharacterData(argument0){
 	2 = weapon_speed_max;
 	3 = weapon_speed_min; (use this for bows and charging weapons)
 	4 = weapon_accuracy (randomizes direction)
-	5 = weapon_bullet; //ie oArrow;
+	5 = primary_projectile; //object for first ability. ex: Bow. 
+	6 = secondary_projectile; //object for second ability
+	7 = special_ability; 
 	*/
 
 	switch (argument0) {
 		case 0: //archer character (main)
 			current_character_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sArcherJump, sArcherDie,sArcherMask, sProtagAim];
-			character_weapons = [sWeaponBow_Placeholder,0,10,3,2,oArrow] 
+			character_weapons = [sWeaponBow_Placeholder,0,10,3,2,oArrow, oBullet_BowBash, oBullet_BowBash] 
 			break;
 		case 1:
 			current_character_sprites = [sArcherIdle, sArcherWalk, sArcherRoll, sArcherJump, sArcherDie, sArcherMask, sArcherIdle];
-			character_weapons = [sGun,1,10,3,2,oBullet_Parent]
+			character_weapons = [sGun,1,10,3,2,oBullet_Parent, oBullet_Parent, oBullet_Parent]
 			break;
 		case 2: //placeholder player
 			current_character_sprites = [sPlayerIdle, sPlayerWalk, sPlayerRoll, sPlayerJump, sPlayerDie,sPlayerMask, sPlayerIdle];
-			character_weapons = [sGun,1,10,3,2,oBullet_Parent]
+			character_weapons = [sGun,1,10,3,2,oBullet_Parent, oBullet_Parent, oBullet_Parent]
 			break;
 	}
 }

@@ -1,9 +1,9 @@
 /// @desc weapon init
 #region //basic setup
-	primary_cooldown_full = oPlayer.primary_cooldown;
-	primary_cooldown = primary_cooldown_full;
+	primary_cooldown_full = oPlayer.primary_cooldown; //when cooldowns are full 
+	secondary_cooldown_full = oPlayer.secondary_cooldown;
+	third_cooldown_full = oPlayer.third_cooldown;
 	
-	secondary_cooldown_full = oPlayer.primary_cooldown;
 	controllerangle = 0;
 	if (global.hasgun == false) instance_destroy();
 #endregion

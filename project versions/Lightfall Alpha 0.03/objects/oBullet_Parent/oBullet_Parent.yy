@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Projectiles_Player",
+    "path": "folders/Objects/Projectiles_Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBullet_Parent",

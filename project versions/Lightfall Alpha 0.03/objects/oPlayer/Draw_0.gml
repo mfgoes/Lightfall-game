@@ -9,9 +9,9 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 #region draw character sprite
 	var flip_image = 1;
 	if global.hasgun = true  {
-	if oGun.image_alpha > 0 && mouse_check_button(mb_left) = true {
-		flip_image = oGun.flip_weapon;
-		facing_direction = radtodeg(arccos(oGun.flip_weapon));	
+	if oWeaponPlayer.image_alpha > 0 && mouse_check_button(mb_left) = true {
+		flip_image = oWeaponPlayer.flip_weapon;
+		facing_direction = radtodeg(arccos(oWeaponPlayer.flip_weapon));	
 		
 		if hsp = 0 {
 				sprite_index = spriteAim; 
@@ -32,10 +32,10 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 	/*
 	//animation xscale
 	if global.hasgun = true{
-		if oGun.image_alpha > 0 { //was: mouse_check_button(mb_left) = true
-			//facing_direction = arccos(oGun.image_yscale);
-			//image_xscale = oGun.image_yscale;
-			if oGun.flip_weapon < 0 {
+		if oWeaponPlayer.image_alpha > 0 { //was: mouse_check_button(mb_left) = true
+			//facing_direction = arccos(oWeaponPlayer.image_yscale);
+			//image_xscale = oWeaponPlayer.image_yscale;
+			if oWeaponPlayer.flip_weapon < 0 {
 				facing_direction = 180
 			}
 			else 

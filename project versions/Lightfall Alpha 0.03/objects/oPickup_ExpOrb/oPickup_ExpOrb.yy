@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Environment+Objects",
+    "path": "folders/Objects/Environment+Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPickup_ExpOrb",
