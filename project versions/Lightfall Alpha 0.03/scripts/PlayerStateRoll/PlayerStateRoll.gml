@@ -16,7 +16,6 @@ function PlayerStateRoll(){
 	{
 		state = PlayerStateFree;
 	}	
-		
 	///include animation change too
 }
 

@@ -61,5 +61,7 @@ function PlayerInput(){
 	//COOLDOWNS
 	if roll_cooldown > 0 roll_cooldown -=1;
 	if primary_cooldown > 0 primary_cooldown -=1;
-	if secondary_cooldown > 0 secondary_cooldown -=1;
+	if secondary_cooldown > 0 {secondary_cooldown -=1;}
+		
+	//if any cooldown is not 0 (except bow) don't allow movement.
 }

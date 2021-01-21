@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sGrapplingArrow",
-    "path": "sprites/sGrapplingArrow/sGrapplingArrow.yy",
+    "name": "sHitbox_Generic",
+    "path": "sprites/sHitbox_Generic/sHitbox_Generic.yy",
   },
   "solid": false,
   "visible": true,

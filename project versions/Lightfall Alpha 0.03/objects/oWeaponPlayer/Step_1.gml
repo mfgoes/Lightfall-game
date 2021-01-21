@@ -7,6 +7,7 @@ if (live_call()) return live_result;
 	timer_init("primary_cooldown");	
 	timer_init("secondary_cooldown"); 
 	timer_init("special_cooldown");
+	timer_init("attack_recover"); //Animation duration while attacking. Players can't walk while attack recovers. 
 	
 	//other
 	timer_init("weapon_zoomed_in");	//stay zoomed in when aiming for a while
@@ -73,15 +74,23 @@ if (live_call()) return live_result;
 	
 #endregion
 
-
-
-#region gun recoil effects (set this for all abilities)
+#region gun recoil
 //recover from gun recoil
 if timer_get("recover_from_recoil") = -1 {
 	weapon_recoil = max(0,weapon_recoil-1);
 }
 #endregion
 
+#region weapon recovery: player can after animation pause. Some attacks don't have recovery. 
+if timer_get("attack_recover") > 0 {
+	oPlayer.hascontrol = 0;
+}
+else {
+	oPlayer.hascontrol = 1;	
+}
+
+
+#endregion
 ///COOLDOWNS
 #region //Cooldown abilities
 	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {
@@ -124,6 +133,8 @@ if timer_get("recover_from_recoil") = -1 {
 	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
 		oPlayer.secondary_cooldown = secondary_cooldown_full;
 		timer_set("secondary_cooldown",secondary_cooldown_full);
+		timer_set("attack_recover",20);
+		
 		audio_play_sound(snDartGun3,2,0);		
 		audio_sound_gain(snDartGun3,0.15,0);
 		//gun kickback
@@ -131,13 +142,10 @@ if timer_get("recover_from_recoil") = -1 {
 		gunkicky = lengthdir_y(1, other.image_angle-180);
 		
 		//create melee attack
-			with (instance_create_layer(x,y,"Bullets",primary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-				direction = other.image_angle+random_range(weapon_accuracy,weapon_accuracy);
-				spd = weapon_speed_min+oWeaponPlayer.weapon_charge;
-				g = 0.2;
-				image_angle = direction;
-				x = x - lengthdir_x(0,other.image_angle);
-				y = y - lengthdir_y(0,other.image_angle);
+			with (instance_create_layer(x,y,"Bullets",secondary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+				direction = oPlayer.facing_direction;
+				image_angle = direction; follow = oPlayer;
+				x_shift = other.flip_weapon * 10;
 			}
 	}
 	#endregion
