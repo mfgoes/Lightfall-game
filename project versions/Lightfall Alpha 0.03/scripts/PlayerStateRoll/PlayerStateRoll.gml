@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerStateRoll(){
 	vsp = vsp + grv; 
-	hsp = lengthdir_x(speedRoll, 90-image_xscale*90); //changed from roll in facing_direction
+	hsp = lengthdir_x(speedRoll, facing_direction); //changed from roll in facing_direction
 		
 	moveDistanceRemaining = max(0, moveDistanceRemaining - speedRoll);
 	

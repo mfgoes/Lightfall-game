@@ -2,11 +2,20 @@
 //gm live 
 if (live_call()) return live_result; 
 #region init vars
+	
+	//Load universal data
 	hsp = 0;
 	vsp = 0;
 	grv = 0.5;
-	walkspd = 3;
 	
+	//character sprite data goes here
+	current_character = 0; //green protag
+	
+	Load_PlayerStartData(current_character);
+	walkspd = PLayerStartData[current_character][0];
+	hp_max = PLayerStartData[current_character][1]; 
+	hp = hp_max;
+		
 	//roll
 	speedRoll = 5.0;
 	distanceRoll = 100;
@@ -28,9 +37,7 @@ if (live_call()) return live_result;
 	gunkicky = 0;
 	debugmode = true;
 	
-	//Health
-	hp_max = 10;
-	hp = hp_max;
+
 	flash = 0; 
 	
 	//rope stuff
@@ -44,20 +51,17 @@ if (live_call()) return live_result;
 	canrope = 0; //allows rope controls
 #endregion
 
-//character sprite data goes here
-current_character = 0; //green protag
-Load_CharacterData(current_character);
-
 //define player controls at start
 PlayerInput();
 state = PlayerStateFree;
 
-#region set image data
+#region set sprites
+	Load_CharacterData(current_character);
 	spriteIdle =	current_character_sprites[0];
 	spriteWalk =	current_character_sprites[1];
 	spriteRoll =	current_character_sprites[2];
 	spriteJump =	current_character_sprites[3];
 	spriteDie  =	current_character_sprites[4];
 	spriteAim  =	current_character_sprites[6];
-	mask_index =	current_character_sprites[5]; //be more specific later; 
+	mask_index =	current_character_sprites[5]; 
 #endregion

@@ -29,32 +29,6 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 	//draw_text(x-24,y-24,"facing_direction: " + string(facing_direction));
 	draw_sprite_ext(sprite_index,image_index,x,y,flip_image,1,image_angle,c_white,1);
 	
-	/*
-	//animation xscale
-	if global.hasgun = true{
-		if oWeaponPlayer.image_alpha > 0 { //was: mouse_check_button(mb_left) = true
-			//facing_direction = arccos(oWeaponPlayer.image_yscale);
-			//image_xscale = oWeaponPlayer.image_yscale;
-			if oWeaponPlayer.flip_weapon < 0 {
-				facing_direction = 180
-			}
-			else 
-			{
-				facing_direction = 0;
-				//image_xscale = 1;
-			}
-		
-			if hsp = 0 {
-				sprite_index = spriteAim; 
-				image_speed = 0;
-			}
-		}
-		else {
-			if facing_direction = 0 image_xscale = 1 else image_xscale = -1;
-			}
-	}
-	*/
-
 #endregion
 
 

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/DataSets(Arrays).yy",
   },
   "resourceVersion": "1.0",
-  "name": "Load_CharacterData",
+  "name": "Load_AbilityData",
   "tags": [],
   "resourceType": "GMScript",
 }

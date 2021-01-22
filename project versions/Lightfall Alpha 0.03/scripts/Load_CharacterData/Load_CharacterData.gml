@@ -1,9 +1,7 @@
 ///@description Load_CharacterData(character);
 ///@param character = argument0;
 function Load_CharacterData(argument0){
-	
-	/*Weapon data info: oPlayer.character_weapons[0];
-	INDEX:
+	/*INDEX:
 	0 = sprite_index; 
 	1 = display_on; (if it should always be visible)
 	2 = weapon_speed_max;
@@ -13,7 +11,6 @@ function Load_CharacterData(argument0){
 	6 = secondary_projectile; //object for second ability
 	7 = special_ability; 
 	*/
-
 	switch (argument0) {
 		case 0: //archer character (main)
 			current_character_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sArcherJump, sArcherDie,sArcherMask, sProtagAim];
@@ -29,3 +26,20 @@ function Load_CharacterData(argument0){
 			break;
 	}
 }
+
+///@description Load_PlayerStartData(character);
+///@param character = argument0;
+function Load_PlayerStartData(argument0){
+	/*INDEX:
+	0 = walkSpeed; 
+	1 = hp; 
+	2 = armor;
+	3 = coins;*/
+	
+	PLayerStartData = [
+	[3,8,0,5], //archer
+	[4,8,0,5], //char 2
+	[5,6,5,5], //char 3
+	];
+}
+	

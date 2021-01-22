@@ -123,8 +123,9 @@ else {
 			weapon_active = 0; 
 			timer_set("weapon_display",room_speed*1); //hide weapon after a second. 
 			//gun kickback
-			gunkickx = lengthdir_x(1.5,other.image_angle-180);
+			gunkickx = lengthdir_x(1,other.image_angle-180);
 			gunkicky = lengthdir_y(1, other.image_angle-180);
+			oPlayer.gunkickx = gunkickx; oPlayer.gunkicky = gunkicky; 
 			}
 		}	
 	#endregion
@@ -138,8 +139,9 @@ else {
 		audio_play_sound(snDartGun3,2,0);		
 		audio_sound_gain(snDartGun3,0.15,0);
 		//gun kickback
-		gunkickx = lengthdir_x(1.5,other.image_angle-180);
-		gunkicky = lengthdir_y(1, other.image_angle-180);
+		gunkickx = lengthdir_x(-3,other.image_angle-180);
+		gunkicky = lengthdir_y(-3, other.image_angle-180);
+		oPlayer.gunkickx = gunkickx; oPlayer.gunkicky = gunkicky; 
 		
 		//create melee attack
 			with (instance_create_layer(x,y,"Bullets",secondary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {

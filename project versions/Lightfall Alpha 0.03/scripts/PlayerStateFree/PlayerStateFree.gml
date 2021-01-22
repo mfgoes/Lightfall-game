@@ -93,7 +93,5 @@ if sprite_index = spriteWalk && (image_index = 1 or image_index = 3){
 	audio_sound_gain(footstepsound,0.1,0);
 	if !audio_is_playing(footstepsound) audio_play_sound(footstepsound,10,0);
 	}
-
-
 }
 
