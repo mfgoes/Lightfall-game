@@ -49,7 +49,6 @@
 
 draw_text(x-30,y-40,"follow mouse " + string(oPlayer.facing_direction));
 
-
 /*
 //debug info
 

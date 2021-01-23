@@ -1,46 +1,18 @@
 /// @description Insert description here
 //gm live 
 if (live_call()) return live_result; 
-#region init vars
-	
-	//Load universal data
+
+#region Load basic character data
 	hsp = 0;
 	vsp = 0;
 	grv = 0.5;
-	
-	//character sprite data goes here
-	current_character = 0; //green protag
-	
-	Load_PlayerStartData(current_character);
-	walkspd = PLayerStartData[current_character][0];
-	hp_max = PLayerStartData[current_character][1]; 
-	hp = hp_max;
-		
-	//roll
+	hascontrol = true;
+	canjump = 10; //for coyote jump
 	speedRoll = 5.0;
 	distanceRoll = 100;
 	facing_direction = 0; //the last walked in direction
-	
-	//cooldowns
-	roll_cooldown = 30; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
-	primary_cooldown = 15; //aka firing delay
-	secondary_cooldown = 35;
-	third_cooldown = 60;
-	current_weapon = 0; //0 = bow, 1 = regular
-
-	gamepad_on = 0; //gamepad
-	hascontrol = true;
-	canjump = 10; //for coyote jump
-	//jump_anticipation = 2; //2/60frames	jump_cooldown_begin = false;
-
-	gunkickx = 2;
-	gunkicky = 0;
-	debugmode = true;
-	
-
-	flash = 0; 
-	
-	//rope stuff
+		
+	//grappling hook
 	grappleX = 0;
 	grappleY = 0;
 	ropeX = x;
@@ -49,19 +21,45 @@ if (live_call()) return live_result;
 	ropeAngle = point_direction(grappleX,grappleY, x,y);
 	ropeLength = point_distance(grappleX,grappleY,x,y);
 	canrope = 0; //allows rope controls
+		
+	//weapon stuff
+	current_weapon = 0; //0 = bow, 1 = regular
+	gunkickx = 2;
+	gunkicky = 0;
+	flash = 0; 
+		
+	//misc
+	debugmode = true;
+	gamepad_on = false; //gamepad
 #endregion
 
-//define player controls at start
+#region Load unique player data
+current_character = 0; //archer character
+Load_PlayerStartData(current_character);
+
+walkspd = PLayerStartData[current_character][0];
+hp_max  = PLayerStartData[current_character][1]; 
+hp = hp_max;
+	
+//cooldowns
+Load_AbilityData(current_character);
+primary_cooldown	= CooldownData[current_character][1];	//15; 
+secondary_cooldown  = CooldownData[current_character][2];	//35;
+third_cooldown		= CooldownData[current_character][3];	//60;		
+roll_cooldown		= CooldownData[current_character][4];	//30; 
+roll_cooldown_start = roll_cooldown; 
+#endregion
+	
 PlayerInput();
 state = PlayerStateFree;
 
-#region set sprites
+#region load sprites
 	Load_CharacterData(current_character);
-	spriteIdle =	current_character_sprites[0];
-	spriteWalk =	current_character_sprites[1];
-	spriteRoll =	current_character_sprites[2];
-	spriteJump =	current_character_sprites[3];
-	spriteDie  =	current_character_sprites[4];
-	spriteAim  =	current_character_sprites[6];
-	mask_index =	current_character_sprites[5]; 
+	spriteIdle =	char_sprites[0];
+	spriteWalk =	char_sprites[1];
+	spriteRoll =	char_sprites[2];
+	spriteJump =	char_sprites[3];
+	spriteDie  =	char_sprites[4];
+	spriteAim  =	char_sprites[6];
+	mask_index =	char_sprites[5]; 
 #endregion

@@ -1,7 +1,8 @@
 ///@description Load_AbilityData(character);
 ///@param character = argument0;
 function Load_AbilityData(argument0){
-	/*INDEX:
+	/*
+	--------- cooldown times
 	0 = primary_weapon_image
 	1 = time_primary_cooldown; 
 	2 = time_secondary_cooldown; 
@@ -31,7 +32,7 @@ function Load_AbilityData(argument0){
 	
 	CooldownData = [
 	//Archer character
-	[sWeaponBow_Placeholder,15, 35, 60, 30, 
+	[sWeaponBow_Placeholder,15, 35, 60, 30, //cooldown times
 	oArrow, oBullet_BowBash, oBullet_BowBash, oBullet_BowBash,  //each cooldown has a unique projectile
 	0, 3, 10, 2],
 	

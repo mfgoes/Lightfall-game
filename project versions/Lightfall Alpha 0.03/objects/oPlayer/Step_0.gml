@@ -11,13 +11,13 @@ if (debugmode) &&  keyboard_check_pressed(ord("P")) {	//check if in debug mode
 
 	Load_CharacterData(current_character)
 	//Sprites
-	spriteIdle =	current_character_sprites[0] 
-	spriteWalk =	current_character_sprites[1]
-	spriteRoll =	current_character_sprites[2]
-	spriteJump =	current_character_sprites[3]
-	spriteDie  =	current_character_sprites[4]
-	spriteAim  =	current_character_sprites[6]
-	mask_index =	current_character_sprites[5]; //be more specific later; 
+	spriteIdle =	char_sprites[0] 
+	spriteWalk =	char_sprites[1]
+	spriteRoll =	char_sprites[2]
+	spriteJump =	char_sprites[3]
+	spriteDie  =	char_sprites[4]
+	spriteAim  =	char_sprites[6]
+	mask_index =	char_sprites[5]; //be more specific later; 
 
 canrope = !canrope;	//toggle rope
 audio_sound_gain(snClick,0.3,0);
