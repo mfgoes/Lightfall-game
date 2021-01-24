@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5f4fc228-d311-4daf-918d-ef9fecc39ba0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Enemy Stuff",
-    "path": "folders/Sprites/Enemy Stuff.yy",
+    "name": "placeholder melee",
+    "path": "folders/Sprites/Enemy Characters/placeholder melee.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyJump",

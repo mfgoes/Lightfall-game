@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5200ed09-7f0d-4e85-bb23-50b74d669235","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Enemy Stuff",
-    "path": "folders/Sprites/Enemy Stuff.yy",
+    "name": "placeholder melee",
+    "path": "folders/Sprites/Enemy Characters/placeholder melee.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyDie",

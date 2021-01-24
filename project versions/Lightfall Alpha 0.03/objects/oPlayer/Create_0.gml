@@ -23,6 +23,7 @@ if (live_call()) return live_result;
 	canrope = 0; //allows rope controls
 		
 	//weapon stuff
+	using_ability = 0;
 	current_weapon = 0; //0 = bow, 1 = regular
 	gunkickx = 2;
 	gunkicky = 0;
@@ -34,22 +35,32 @@ if (live_call()) return live_result;
 #endregion
 
 #region Load unique player data
-current_character = 0; //archer character
-Load_PlayerStartData(current_character);
+	current_character = 0; //archer character
+	Load_PlayerStartData(current_character);
 
-walkspd = PLayerStartData[current_character][0];
-hp_max  = PLayerStartData[current_character][1]; 
-hp = hp_max;
-	
-//cooldowns
-Load_AbilityData(current_character);
-primary_cooldown	= CooldownData[current_character][1];	//15; 
-secondary_cooldown  = CooldownData[current_character][2];	//35;
-third_cooldown		= CooldownData[current_character][3];	//60;		
-roll_cooldown		= CooldownData[current_character][4];	//30; 
-roll_cooldown_start = roll_cooldown; 
+	walkspd = PLayerStartData[current_character][0];
+	hp_max  = PLayerStartData[current_character][1]; 
+	hp = hp_max;
 #endregion
 	
+#region load cooldowns / abilities
+	Load_AbilityData(current_character);
+	primary_cooldown	= CooldownData[current_character][1];	//15; 
+	secondary_cooldown  = CooldownData[current_character][2];	//35;
+	third_cooldown		= CooldownData[current_character][3];	//60;		
+	roll_cooldown		= CooldownData[current_character][4];	//30; 
+
+	primary_projectile	  = CooldownData[current_character][5];	//oArrow; 
+	secondary_projectile  = CooldownData[current_character][6];	//oBullet_BowBash; 
+	//special_projectile  = CooldownData[current_character][7];
+	//passive_projectile  = CooldownData[current_character][8];
+
+	roll_cooldown_full = roll_cooldown; //when cooldowns are full 
+	primary_cooldown_full = primary_cooldown; 
+	secondary_cooldown_full = secondary_cooldown;
+	third_cooldown_full = third_cooldown;
+#endregion
+
 PlayerInput();
 state = PlayerStateFree;
 
@@ -61,5 +72,6 @@ state = PlayerStateFree;
 	spriteJump =	char_sprites[3];
 	spriteDie  =	char_sprites[4];
 	spriteAim  =	char_sprites[6];
-	mask_index =	char_sprites[5]; 
+	spriteMelee  =	char_sprites[7];
+	mask_index =	char_sprites[5]; 	
 #endregion

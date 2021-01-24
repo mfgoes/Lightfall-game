@@ -23,7 +23,7 @@ function Load_AbilityData(argument0){
 	character_weapons = [sWeaponBow_Placeholder,0,10,3,2,oArrow, oBullet_BowBash, oBullet_BowBash] 
 	
 	//cooldowns
-	roll_cooldown = 30; roll_cooldown_start = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
+	roll_cooldown = 30; roll_cooldown_full = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
 	primary_cooldown = 15; //aka firing delay
 	secondary_cooldown = 35;
 	third_cooldown = 60;

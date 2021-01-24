@@ -66,7 +66,7 @@ if canrope = 1 {
 				{vsp = 0; image_alpha = 0.5;}
 			}
 			}
-		if (hsp == 0) && !(key_left or key_right) //if not using walk sprite, swith
+		if (hsp == 0) && !(key_left or key_right) && using_ability = 0 //Idle animation
 		{
 			if sprite_index != spriteIdle image_index = 0; //reset index. 
 			sprite_index = spriteIdle; image_speed = 0.6;
@@ -77,7 +77,6 @@ if canrope = 1 {
 			sprite_index = spriteWalk; image_speed = 1*slowwalk;			
 		}
 		//if jump_cooldown_begin = 1 {image_index = 0; sprite_index = spriteJump;}
-	
 	}
 
 

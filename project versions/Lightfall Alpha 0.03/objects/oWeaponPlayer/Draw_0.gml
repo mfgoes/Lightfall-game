@@ -47,7 +47,7 @@
 	}
 #endregion
 
-draw_text(x-30,y-40,"follow mouse " + string(oPlayer.facing_direction));
+//draw_text(x-30,y-40,"img speed " + string(oPlayer.image_speed));
 
 /*
 //debug info

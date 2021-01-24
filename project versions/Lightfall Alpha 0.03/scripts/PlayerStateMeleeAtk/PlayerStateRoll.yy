@@ -6,7 +6,7 @@
     "path": "folders/Scripts/player states.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerInput",
+  "name": "PlayerStateRoll",
   "tags": [],
   "resourceType": "GMScript",
 }

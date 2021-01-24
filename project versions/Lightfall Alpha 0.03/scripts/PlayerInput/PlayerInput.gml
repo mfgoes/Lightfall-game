@@ -38,16 +38,26 @@ function PlayerInput(){
 
 		//secondary ability 
 		if (key_secondary) {
-		//	
+			if secondary_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
+				audio_play_sound(snDartGun2,2,0);		
+				audio_sound_gain(snDartGun2,0.1,0);
+				image_index = 0;
+				state = PlayerStateMeleeAtk;
+				audio_play_sound(snLanding,4,false);
+				
+				secondary_cooldown = secondary_cooldown_full;
+				oPlayer.gunkickx = gunkickx;
+				}
 		}
 		
 		//roll ability 	
 		if (key_roll) //enter roll state
 			{
-				if state = PlayerStateFree && roll_cooldown = 0{
+				if state = PlayerStateFree && roll_cooldown = 0 {
 					state = PlayerStateRoll;
 					audio_play_sound(snLanding,4,false);
-					roll_cooldown = roll_cooldown_start;	/// if cooldown = 0 you can roll, else no roll. 
+					audio_sound_gain(snLanding,0.1,0);
+					roll_cooldown = roll_cooldown_full;	/// if cooldown = 0 you can roll, else no roll. 
 				}
 				moveDistanceRemaining = distanceRoll
 			}

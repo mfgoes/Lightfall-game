@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cc323b52-e8b3-47f5-b6ed-a01cdd17ad97","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Enemy Stuff",
-    "path": "folders/Sprites/Enemy Stuff.yy",
+    "name": "placeholder melee",
+    "path": "folders/Sprites/Enemy Characters/placeholder melee.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyWalk",

@@ -129,26 +129,10 @@ else {
 			}
 		}	
 	#endregion
-	
 	#region //secondary
 	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
-		oPlayer.secondary_cooldown = secondary_cooldown_full;
 		timer_set("secondary_cooldown",secondary_cooldown_full);
-		timer_set("attack_recover",20);
-		
-		audio_play_sound(snDartGun3,2,0);		
-		audio_sound_gain(snDartGun3,0.15,0);
-		//gun kickback
-		gunkickx = lengthdir_x(-3,other.image_angle-180);
-		gunkicky = lengthdir_y(-3, other.image_angle-180);
-		oPlayer.gunkickx = gunkickx; oPlayer.gunkicky = gunkicky; 
-		
-		//create melee attack
-			with (instance_create_layer(x,y,"Bullets",secondary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-				direction = oPlayer.facing_direction;
-				image_angle = direction; follow = oPlayer;
-				x_shift = other.flip_weapon * 10;
-			}
+		gunkickx = lengthdir_x(-12,other.image_angle-180);
 	}
 	#endregion
 	

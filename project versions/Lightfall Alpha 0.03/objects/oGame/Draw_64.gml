@@ -38,8 +38,8 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	//extra texts
 	DrawSetText(c_white,fUI,fa_left, fa_top);
 	draw_text(4,4,"Lightfall Demo ");
-	draw_text(4,20,"gunkickx " + string(oPlayer.gunkickx));
-	draw_text(4,36,"x y" + string(oPlayer.y));
+	draw_text(4,20,"state " + string(oPlayer.state));
+	draw_text(4,36,"using_ability" + string(oPlayer.using_ability));
 	//draw exp
 	draw_text_transformed(RES_W-100,19,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
 		

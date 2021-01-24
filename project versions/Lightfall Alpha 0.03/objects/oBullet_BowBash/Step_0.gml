@@ -1,11 +1,11 @@
 /// @description
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 #region disappear after attack
 	//init timers
 	timer_init("attack_length");
-	if timer_get("attack_length") = -1 timer_set("attack_length",20);
+	if timer_get("attack_length") = -1 timer_set("attack_length",sprite_get_number(oPlayer.sprite_index)+2); //duration of attack = animation length
 	if timer_get("attack_length") = 0 instance_destroy(); 
 #endregion
 
@@ -18,7 +18,7 @@ if (live_call()) return live_result;
 			flash = 3;
 			hitfrom = other.direction;
 		}
-		instance_destroy();
+		//instance_destroy(); let projectile hit multiple objects
 	}
 	
 #endregion
