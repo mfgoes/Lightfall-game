@@ -1,6 +1,6 @@
 /// @description Weapon changes
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 #region init timers
 	//cooldown abilities
@@ -133,6 +133,7 @@ else {
 	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
 		timer_set("secondary_cooldown",secondary_cooldown_full);
 		gunkickx = lengthdir_x(-12,other.image_angle-180);
+		oPlayer.gunkickx = gunkickx;
 	}
 	#endregion
 	

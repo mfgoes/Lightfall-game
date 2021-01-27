@@ -3,7 +3,7 @@
 //gm live 
 //if (live_call()) return live_result; 
 
-if (debugmode) &&  keyboard_check_pressed(ord("P")) {	//check if in debug mode
+if (global.debugmode) &&  keyboard_check_pressed(ord("P")) {	//check if in debug mode
 	if current_character = 2 current_character = 0;
 	else 
 	current_character +=1;

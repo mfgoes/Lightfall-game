@@ -30,7 +30,6 @@ if (live_call()) return live_result;
 	flash = 0; 
 		
 	//misc
-	debugmode = true;
 	gamepad_on = false; //gamepad
 #endregion
 

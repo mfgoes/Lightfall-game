@@ -7,7 +7,6 @@ timer_init("arrow_wiggle");
 	x+= lengthdir_x(spd,direction);
 	y+= lengthdir_y(spd,direction);
 
-
 	if g < 120 {
 		g += 0.1; 
 	}
@@ -37,13 +36,14 @@ if timer_get("arrow_wiggle") > 0 {
 #endregion
 
 #region collision
-	if (place_meeting(x,y,pShootable))
+	if (place_meeting(x,y,pShootable)) && active = true
 	{
 		with(instance_place(x,y,pShootable))
 		{
 			hp--;
 			flash = 3;
 			hitfrom = other.direction;
+			ScreenShake(2,10);
 		}
 		instance_destroy();
 	}
@@ -52,6 +52,7 @@ if timer_get("arrow_wiggle") > 0 {
 	if (place_meeting(x,y,oWall)) && (image_index !=0)
 	{
 		spd = 0; g = 0; layer_add_instance("Tiles_1",id); depth+=1;
+		active = false; 
 		if  timer_get("arrow_fade") = -1 {
 			timer_set("arrow_fade",60);
 			timer_set("arrow_wiggle",6);

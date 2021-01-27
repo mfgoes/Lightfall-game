@@ -43,10 +43,8 @@ function PlayerInput(){
 				audio_sound_gain(snDartGun2,0.1,0);
 				image_index = 0;
 				state = PlayerStateMeleeAtk;
-				audio_play_sound(snLanding,4,false);
-				
 				secondary_cooldown = secondary_cooldown_full;
-				oPlayer.gunkickx = gunkickx;
+				
 				}
 		}
 		
