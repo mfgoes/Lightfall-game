@@ -9,7 +9,7 @@ dir = 0;
 out_of_range = false; 
 sight_range = 50; //when to detect player
 wander_range = 50; 
-
+damage = 1;
 
 //create target on circumference 
 targetx = x + lengthdir_x(sight_range,dir);

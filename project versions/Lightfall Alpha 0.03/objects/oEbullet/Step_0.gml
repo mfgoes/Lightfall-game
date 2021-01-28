@@ -24,7 +24,8 @@ if (place_meeting(x,y,oPlayer))
 		hp-=other.damage;
 		flash = 3;
 		hitfrom = other.direction;
-		ScreenShake(2,20);
+		gunkickx = cos(degtorad(other.direction))*6;
+		ScreenShake(3,20);
 		
 		if hp < 1 KillPlayer();
 	}

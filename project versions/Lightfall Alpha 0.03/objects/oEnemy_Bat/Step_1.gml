@@ -16,6 +16,7 @@ if (hp <= 0)
 		{hsp = random_range(-3,3)}
 	}
 	ScreenShake(3,25);
+	audio_sound_gain(snDeath,0.3,0);
 	audio_play_sound(snDeath,10,false);
 	instance_destroy();
 	

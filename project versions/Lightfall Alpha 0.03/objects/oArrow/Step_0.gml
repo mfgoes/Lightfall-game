@@ -44,6 +44,9 @@ if timer_get("arrow_wiggle") > 0 {
 			flash = 3;
 			hitfrom = other.direction;
 			ScreenShake(2,10);
+			//play sound
+			audio_sound_gain(snFootstep3,0.4,0);
+			if !audio_is_playing(snFootstep3) audio_play_sound(snFootstep3,5,0);
 		}
 		instance_destroy();
 	}

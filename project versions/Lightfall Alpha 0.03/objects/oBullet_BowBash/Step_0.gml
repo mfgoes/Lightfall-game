@@ -14,9 +14,12 @@
 	{
 		with(instance_place(x,y,pShootable))
 		{
-			hp--;
+			hp-=1; //does 1 damage
 			flash = 3;
 			hitfrom = other.direction;
+			//play sound
+			audio_sound_gain(snFootstep3,0.25,0);
+			if !audio_is_playing(snFootstep3) audio_play_sound(snFootstep3,5,0);
 		}
 		//instance_destroy(); let projectile hit multiple objects
 	}
