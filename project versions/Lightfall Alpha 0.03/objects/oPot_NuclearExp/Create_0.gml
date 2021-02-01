@@ -15,5 +15,6 @@ with (mywall)
 {
 	sprite_index = other.sprite_index;
 	mask_index = other.mask_index;
-	image_alpha = 0;
+	image_speed = 0; 
+	image_alpha = 0.8;
 }

@@ -18,16 +18,11 @@ xprev = x;
 yprev = y;
 
 //state enums for simple enemies
-enum enemy_states { 
-  idle,
-  patrol,
-  approach,
-  attack
-}
 current_state = enemy_states.idle;
 
 //extras
 hp = 2;
+is_hit = 0; //allows projectiles to hit multiple objects at once
 position_random = random_range(-3,3);
 recoil = 0; 
 patrol_range = 10; //follow distance

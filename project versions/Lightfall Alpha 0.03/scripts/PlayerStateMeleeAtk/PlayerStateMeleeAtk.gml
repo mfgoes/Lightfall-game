@@ -7,15 +7,17 @@ function PlayerStateMeleeAtk(){
 	vsp = (vsp + grv);
 	using_ability = 1;
 	//create projectile
-	if image_index = 1 {
-		with (instance_create_layer(x,y,"Bullets",secondary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+	if image_index = 1
+	{
+		with (instance_create_layer(x+lengthdir_x(4,facing_direction),y,"Bullets",secondary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			direction = oPlayer.facing_direction;
+			x_shift = 4;
 			image_angle = direction; follow = oPlayer;
-			x_shift = oWeaponPlayer.flip_weapon * 10;
+			//x_shift = oWeaponPlayer.flip_weapon * 10;
 		}
 	if timer_get("generate attack") = -1 {
-		gunkickx = lengthdir_x(-12,oWeaponPlayer.image_angle-180);
-		timer_set("generate attack",10);
+		gunkickx = lengthdir_x(-2,oWeaponPlayer.image_angle-180);
+		timer_set("generate attack",5);
 		}
 	}
 	else gunkickx = 0;

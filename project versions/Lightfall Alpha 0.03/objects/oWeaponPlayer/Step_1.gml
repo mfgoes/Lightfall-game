@@ -31,7 +31,6 @@
 	var secondary_projectile  = oPlayer.character_weapons[6];
 	var special_projectile  = oPlayer.character_weapons[7];
 	
-	
 	//swap character weapon
 	if (key_switch_weapon)
 	{
@@ -113,7 +112,7 @@ else {
 			with (instance_create_layer(x,y,"Bullets",primary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 				direction = other.image_angle+random_range(weapon_accuracy,weapon_accuracy);
 				spd = weapon_speed_min+oWeaponPlayer.weapon_charge;
-				g = 0.2;
+				if spd >=weapon_speed_max g = -0.1; else g = 0.2;
 				image_angle = direction;
 				x = x - lengthdir_x(0,other.image_angle);
 				y = y - lengthdir_y(0,other.image_angle);
@@ -132,11 +131,10 @@ else {
 	#region //secondary
 	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
 		timer_set("secondary_cooldown",secondary_cooldown_full);
-		gunkickx = lengthdir_x(-12,other.image_angle-180);
+		gunkickx = lengthdir_x(-5,other.image_angle-180);
 		oPlayer.gunkickx = gunkickx;
 	}
 	#endregion
-	
 	} 
 	//if rolling, don't show weapon
 	else weapon_active = 0;

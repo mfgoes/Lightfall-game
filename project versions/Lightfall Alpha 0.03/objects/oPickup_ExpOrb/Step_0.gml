@@ -12,6 +12,9 @@ if timer_get("move_to_player") = -1 && speed = 0 {
 	timer_set("move_to_player",20);
 }
 
+if !instance_exists(oPlayer) instance_destroy(); 
+else
+{
 if timer_get("move_to_player") = 0 {
 	speed = 3+round(random(2));
 }
@@ -32,4 +35,5 @@ if place_meeting(x,y,oPlayer) {
 		}
 		instance_destroy();
 		global.exp_points +=1; //shared exp for now. Switch later if needed.
+}
 }

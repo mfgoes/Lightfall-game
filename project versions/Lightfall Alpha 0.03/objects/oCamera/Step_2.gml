@@ -38,7 +38,7 @@ var view_h = lerp(camera_get_view_height(cam),ih*newzoom,zoom_speed); //lerp fro
 //Screenshake
 x += random_range(-shake_remain,shake_remain);
 y += random_range(-shake_remain,shake_remain);
-shake_remain = max(0,(shake_remain)-((1/shake_length)*shake_magnitude)); //shake magnitude increases when zooming out for consistency
+shake_remain = max(0,(shake_remain)-((1/shake_length))); //*shake_magnitude // shake magnitude increases when zooming out for consistency
 
 camera_set_view_size(cam,view_w,view_h);
 surface_resize(application_surface,iw,ih);

@@ -39,8 +39,9 @@ switch (current_state)
 			else {
 			//reset point on circle: 
 			if distance_to_point(targetx,targety) < 1 {
+			var dist_extra = 100;
 			var randomizer = random(360); 
-			targetx = xstart + lengthdir_x(wander_range,randomizer); //+ random_range(-dist_extra,dist_extra); //set new target point
+			targetx = xstart + lengthdir_x(wander_range,randomizer + random_range(-dist_extra,dist_extra)); //set new target point
 			targety = ystart + lengthdir_y(wander_range,randomizer);
 			dir = round(point_direction(x,y,targetx,targety));
 			}
@@ -50,10 +51,8 @@ switch (current_state)
 			var dy =-sin(degtorad(dir))*(motion_speed);
 			x+=dx;
 			y+=dy;
-			}
-			
+			}		
 	} break;
-	
 	case enemy_states.approach: {
 		if instance_exists(oPlayer) {
 			if place_meeting(x,y,oPlayer) && timer_get("attack_player") <=0 {
@@ -90,3 +89,4 @@ switch (current_state)
 	} break;
 }
 
+//animation

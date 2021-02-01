@@ -1,6 +1,6 @@
 /// @description Insert description here
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 #region Load basic character data
 	hsp = 0;

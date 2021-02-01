@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 vsp = vsp + grv; 
 
@@ -18,12 +18,17 @@ if (place_meeting(x,y+vsp, oWall))
 y = y + vsp;
 
 if !instance_exists(mywall) && screen_shake = 0 {
+	audio_sound_gain(snFootstep1,0.5,0);
+	audio_play_sound(snFootstep1,10,false);
+
 	with(mywall) instance_destroy();
 	flash = 4;
 	image_speed = 0.6;
 	screen_shake = 1;
 	ScreenShake(3,10);
-	
+
+
+
 	repeat(ceil(random_range(2,3)))		//create dust effect
 	{
 		//dust particles

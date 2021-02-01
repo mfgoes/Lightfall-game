@@ -1,7 +1,7 @@
 /// @description Draw Score
 
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //	put in script: DRAW PLAYER GUI*****
 
