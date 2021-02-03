@@ -11,17 +11,35 @@ if instance_exists(oPlayer) target = oPlayer; else {
 }
 #endregion
 
-//General walking code (add bounce here)
-if current_state!= enemy_states.idle && stunned = 0 {
-	if abs(round(target.x - x)) < atk_range && (!place_meeting(x + hsp, y,oWall)) {
-		x-=hsp;
-		}
-	else	
-	if abs(round(target.x - x)) > atk_range && (!place_meeting(x + hsp, y,oWall)){
-		x+=hsp;
+
+//if player on left, and enemy on left -1 + -1 = -2;
+//if player on right and enemy on left  1 + -1 = 0; -> move forward
+//if player on right and enemy on right 1 + 1 = 2;
+//if player on left and enemy on right -1 + 1 = 0; -> move forward
+
+//find placements
+var dd = instance_nth_nearest(x,y,oEnemyMelee,2); //find nearest object
+var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
+var _pos_target = sign(target.x - x);   //determine direction to walk in
+
+//check if colliding
+var _colliding = abs(sign(_pos_nearest_enemy + _pos_target)); //returns 0 or 1
+if distance_to_object(dd) > 5 _colliding = 0; //if closest enemy is far away, ignore
+
+//walking code 
+if current_state!= enemy_states.idle && stunned = 0 {  
+	if (!place_meeting(x + hsp, y,oWall)) && distance_to_object(target) < sight_range && distance_to_object(target) > atk_range {
+       //move left
+	   if _pos_target < 0 {
+		  x+=hsp //- _diff_x;
+		  if (_colliding) x-=hsp;
+	   }
+	   if _pos_target > 0 {
+		  x+=hsp //- _diff_x;
+		  if (_colliding) x-=hsp;
+	   }
 	}
 }
-
 
 //enemy stun code.	only recoil after a short pause (for emphasis)
 if stunned > 0 {

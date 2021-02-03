@@ -5,7 +5,7 @@ vsp = -2;
 grv = 0.3;
 done = 0;
 image_speed = 0;
-ScreenShake(3,25);
+ScreenShake(2,5);
 audio_sound_gain(snDeath,0.5,0);
 audio_play_sound(snDeath,10,false);
 

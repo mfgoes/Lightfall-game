@@ -25,7 +25,7 @@ if !instance_exists(mywall) && screen_shake = 0 {
 	flash = 4;
 	image_speed = 0.6;
 	screen_shake = 1;
-	ScreenShake(3,10);
+	ScreenShake(1,5);
 
 
 

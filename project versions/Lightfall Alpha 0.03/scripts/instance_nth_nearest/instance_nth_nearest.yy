@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Misc.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scrFreezeScreen",
+  "name": "instance_nth_nearest",
   "tags": [],
   "resourceType": "GMScript",
 }
