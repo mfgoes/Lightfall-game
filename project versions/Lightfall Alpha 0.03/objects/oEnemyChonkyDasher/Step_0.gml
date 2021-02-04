@@ -126,8 +126,6 @@ else
 	if (!place_meeting(x,y+1,oWall)) 
 	{
 		grounded = false;
-		sprite_index = spriteJump;
-		image_speed = 0;
 		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 	}
 	else 
@@ -144,6 +142,6 @@ else
 		}
 	}
 
-	if (hsp != 0) image_xscale = sign(hsp) * size;
+	if (hsp != 0) image_xscale = -sign(hsp) * size;
 	image_yscale = size; 
 #endregion

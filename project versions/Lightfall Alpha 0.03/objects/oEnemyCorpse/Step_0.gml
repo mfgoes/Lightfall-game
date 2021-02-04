@@ -22,7 +22,8 @@ if (done = 0)
 		
 		if (vsp > 0) 
 		{
-			image_index = 1;
+			if image_number = 2 //if a 2 image death animation, change to last frame
+				image_index = 1;
 			hsp = 0;
 		}
 		while (!place_meeting(x,y+sign(vsp),oWall))
