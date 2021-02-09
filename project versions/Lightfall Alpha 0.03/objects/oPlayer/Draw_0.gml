@@ -5,7 +5,6 @@
 
 draw_set_color(c_white);
 if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
-
 #region draw character sprite
 	var flip_image = 1;
 	if global.hasgun = true  { //if oWeaponPlayer.image_alpha > 0 && mouse_check_button(mb_left) = true 
@@ -16,7 +15,7 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 		if hsp = 0 && mouse_check_button(mb_left) = true {
 				sprite_index = spriteAim; 
 				image_speed = 0;
-			}
+		}
 	}
 	//else flip_image = dcos(facing_direction);
 	}
@@ -24,7 +23,6 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 	{
 		flip_image = dcos(facing_direction);
 	}
-	
 	
 	//draw_text(x-24,y-24,"facing_direction: " + string(facing_direction));
 	draw_sprite_ext(sprite_index,image_index,x,y,flip_image,1,image_angle,c_white,1);

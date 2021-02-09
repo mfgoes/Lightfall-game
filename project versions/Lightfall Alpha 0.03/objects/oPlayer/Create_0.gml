@@ -50,8 +50,8 @@
 	roll_cooldown		= CooldownData[current_character][4];	//30; 
 
 	primary_projectile	  = CooldownData[current_character][5];	//oArrow; 
-	secondary_projectile  = CooldownData[current_character][6];	//oBullet_BowBash; 
-	//special_projectile  = CooldownData[current_character][7];
+	secondary_projectile  = CooldownData[current_character][6];	//oAtk_Melee; 
+	special_projectile    = CooldownData[current_character][7]; //oAtk_Special;
 	//passive_projectile  = CooldownData[current_character][8];
 
 	roll_cooldown_full = roll_cooldown; //when cooldowns are full 
@@ -72,5 +72,6 @@ state = PlayerStateFree;
 	spriteDie  =	char_sprites[4];
 	spriteAim  =	char_sprites[6];
 	spriteMelee  =	char_sprites[7];
+	spriteSpecial =	char_sprites[7]; //reuse melee attack in prototype
 	mask_index =	char_sprites[5]; 	
 #endregion

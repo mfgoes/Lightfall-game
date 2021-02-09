@@ -5,14 +5,14 @@ if (live_call()) return live_result;
 event_inherited(); //inherits gravity code
 //determine target
 if instance_exists(oPlayer) target = oPlayer; else {
-	target = 0; 
+	target = self; 
 }
 #endregion
 
 //find placements
 if instance_exists(oEnemyParent) {
 var dd = instance_nth_nearest(x,y,oEnemyParent,2);} //find nearest object
-else dd = 0; 
+else dd = self; 
 var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
 var _pos_target = sign(target.x - x);   //determine direction to walk in
 //check if colliding
@@ -97,13 +97,11 @@ switch (current_state)
 			gunkickx = sign(other.x - x)*10; //from pos enemy to pos player
 			y-=10;
 			audio_sound_gain(snHitEnemy,0.1,0);
-			//if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+			if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
 			ScreenShake(1,2);
-			/*
 			hp-=other.damage;
-				
 			if hp < 1 KillPlayer();
-			*/
+			
 			}
 		}
 		

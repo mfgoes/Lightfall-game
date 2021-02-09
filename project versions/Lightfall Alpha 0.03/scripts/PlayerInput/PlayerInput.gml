@@ -8,17 +8,15 @@ function PlayerInput(){
 		key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check(0,gp_face2);
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0,gp_padd);
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0,gp_padu);
-
-		//General
 		key_equip = keyboard_check(ord("E")) || gamepad_button_check(0,gp_face4);
 		key_pausegame = keyboard_check(vk_escape) || gamepad_button_check(0,gp_start);
 		
-		//Abilities
-		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1);
-		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr);
-		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3); 
-		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);
-		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);
+		//Abilities - These are dependant on the selected character
+		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1);		//Ranged attack
+		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr);	//Melee attack
+		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3);		//AOE attack
+		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);		//Evade
+		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);	//Grappling hook (unlock later)
 		
 		//Special
 		key_attack_released =  (mouse_check_button_released(mb_left)) || (gamepad_button_check_released(0,gp_shoulderrb));

@@ -18,6 +18,7 @@ if (global.debugmode) &&  keyboard_check_pressed(ord("P")) {	//check if in debug
 	spriteDie  =	char_sprites[4]
 	spriteAim  =	char_sprites[6]
 	spriteMelee  =	char_sprites[7]; //rename this to secondary ability later
+	spriteSpecial =	char_sprites[7]; //reuse melee attack in prototype
 	mask_index =	char_sprites[5]; //be more specific later; 
 
 canrope = !canrope;	//toggle rope

@@ -4,6 +4,9 @@ function PlayerStateMeleeAtk(){
 	sprite_index = spriteMelee; 
 	image_speed = 1;
 	//hsp = 0;
+	var slowwalk = 0.5; 
+	var move = key_right - key_left;
+	hsp = (move * slowwalk) + gunkickx;
 	vsp = (vsp + grv);
 	using_ability = 1;
 	//create projectile
@@ -17,10 +20,9 @@ function PlayerStateMeleeAtk(){
 		}
 	if timer_get("generate attack") = -1 {
 		gunkickx = lengthdir_x(-2,oWeaponPlayer.image_angle-180);
-		timer_set("generate attack",5);
+		timer_set("generate attack",3);
 		}
 	}
 	else gunkickx = 0;
-	hsp = gunkickx; 	
 }
 

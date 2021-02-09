@@ -22,8 +22,6 @@ direction = point_direction(x,y,oPlayer.x,oPlayer.y);
 speed+=0.01;
 
 if place_meeting(x,y,oPlayer) {
-	audio_sound_gain(snEquip,0.2,0);
-	audio_play_sound(snEquip,0,0);
 	repeat(random_range(1,3)) 
 		with (instance_create_layer(x+lengthdir_x(5,direction)-5+random(10),y+lengthdir_y(5,direction)+random(10),"Bullets",oDust))
 		 {
@@ -34,6 +32,16 @@ if place_meeting(x,y,oPlayer) {
 			vsp = 0;
 		}
 		instance_destroy();
-		global.exp_points +=1; //shared exp for now. Switch later if needed.
+		if start_color = c_white {
+			audio_sound_gain(snHeal,0.1,0);
+			audio_sound_pitch(snHeal,random_range(0.8,1));
+			audio_play_sound(snHeal,0,0);
+			if oPlayer.hp < oPlayer.hp_max oPlayer.hp++;
+		} else {
+			audio_sound_gain(snEquip,0.1,0);
+			audio_play_sound(snEquip,0,0);
+			global.exp_points +=1; 
+			}
+		
 }
 }

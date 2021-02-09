@@ -2,7 +2,7 @@
 if (hp <= 0) 
 {
 	
-	ScreenShake(3,25);
+	ScreenShake(3,5);
 	audio_sound_gain(snFootstep3,0.5,0);
 	audio_play_sound(snFootstep3,10,false);
 

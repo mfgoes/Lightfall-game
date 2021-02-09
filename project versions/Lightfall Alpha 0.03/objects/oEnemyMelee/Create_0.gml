@@ -29,7 +29,7 @@ text_pos = choose(20,30,40,50);
 current_state = enemy_states.idle;
 
 //extras
-hp = 2;
+hp = 1;
 position_random = random_range(-3,3);
 stunned = 5; //prevents enemy from walking 
 

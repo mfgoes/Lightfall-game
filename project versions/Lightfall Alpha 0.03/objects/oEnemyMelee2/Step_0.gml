@@ -5,22 +5,23 @@
 event_inherited(); //inherits gravity code
 timer_init("attack_player"); 
 timer_init("attack_anim");
+
 //determine target
 if instance_exists(oPlayer) target = oPlayer; else {
-	hsp = 0;
-	target = 0; 
+	target = self; 
 }
 #endregion
 
-//find placements
+#region avoid collisions with other enemies
 if instance_exists(oEnemyParent) {
-var dd = instance_nth_nearest(x,y,oEnemyParent,2);} //find nearest object
-else dd = 0; 
-var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
-var _pos_target = sign(target.x - x);   //determine direction to walk in
-//check if colliding
-var _colliding = abs(sign(_pos_nearest_enemy + _pos_target)); //returns 0 or 1
-if distance_to_object(dd) > 0 _colliding = 0; //if closest enemy is far away, ignore
+	var dd = instance_nth_nearest(x,y,oEnemyParent,2); } 
+	else dd = self; 
+	var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
+	var _pos_target = sign(target.x - x);   //determine direction to walk in
+	//check if colliding
+	var _colliding = abs(sign(_pos_nearest_enemy + _pos_target)); //returns 0 or 1
+	if distance_to_object(dd) > 0 _colliding = 0; //if closest enemy is far away, ignore
+#endregion
 
 //walking code 
 if current_state!= enemy_states.idle && stunned = 0 {  
@@ -41,23 +42,18 @@ if current_state!= enemy_states.idle && stunned = 0 {
 //enemy stun code.	only recoil after a short pause (for emphasis)
 if stunned > 0 {
 	stunned--; //starts at 20
+	var stunrecoil = (sign(target.x - x)*4);
+	if stunned = 15 x+=lengthdir_x(5,sign(target.x - x));
 	if stunned > 10 && stunned < 13 && !place_meeting(x,y-vsp,oWall) vsp = -1;
-	var stunrecoil = sign(target.x - x)*4; 
-	if stunned > 10 && stunned < 13 && !place_meeting(x-stunrecoil,y,oWall) x-=stunrecoil;
-
-var dir = sign(target.x - x); 
-if stunned = 15 x+=lengthdir_x(5,dir)
-
-}
-
-			
+	if stunned > 10 && stunned < 13 && !place_meeting(x-stunrecoil,y,oWall) 
+		x-=stunrecoil;
+}	
 else
-//States
 #region states
 switch (current_state)
 {
+	// patrol
 	case enemy_states.idle: {
-		// patrol
 		
 		if ((grounded) && (afraid_of_heights) && (!place_meeting(x + hsp, y + 1,oWall))) or (place_meeting(x+hsp,y, oWall))
 		{
@@ -66,7 +62,6 @@ switch (current_state)
 		x += hsp;
 		if instance_exists(oPlayer) && distance_to_object(target) < sight_range
 		current_state = enemy_states.approach; 
-		
 	} break;
 	
 	case enemy_states.approach: {
@@ -76,11 +71,6 @@ switch (current_state)
 		hsp = dir*walkspd*2;
 	else
 		hsp = 0;
-	
-	//if (!place_meeting(x+hsp,y,oWall))
-	//x += hsp;
-	
-
 	//revert to idle state
 	if distance_to_object(target) >= sight_range {
 		var dir = sign(target.x - x); 
@@ -120,16 +110,11 @@ switch (current_state)
 				gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
 				audio_sound_gain(snHitEnemy,0.3,0);
 				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
-				/*
 				hp-=other.damage;
-				
-				ScreenShake(3,20);
-				if hp < 1 KillPlayer();
-				
-				*/
+				ScreenShake(5,5);
+				if hp < 1 KillPlayer();				
 			}
 		}
-		
 		}
 		if distance_to_object(oPlayer) > atk_range {
 			current_state = enemy_states.approach;
@@ -141,17 +126,10 @@ switch (current_state)
 #endregion
 
 #region animations
-	
-	/*if current_state = enemy_states.attack {
-		if timer_get("attack_anim") <= 0 {
-		
-		}
-	}
-	*/
 	if current_state != enemy_states.attack
 	{
 		grounded = true;
-		image_speed = 0.8
+		image_speed = 0.8;
 		if (hsp == 0)
 		{
 			sprite_index = spriteIdle;
@@ -163,14 +141,6 @@ switch (current_state)
 			image_speed = 0.5;
 		}
 	}
-	
-	//jump animation
-	/*if (!place_meeting(x,y+1,oWall)) 
-	{
-		grounded = false;
-		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
-	}*/
-
 	//mirror sprite
 	if (hsp != 0) image_xscale = -sign(hsp) * size;
 	image_yscale = size; 

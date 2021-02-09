@@ -14,7 +14,7 @@ function Load_CharacterData(argument0){
 	switch (argument0) {
 		case 0: //archer character (main)
 			char_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sProtagJump, sArcherDie,sArcherMask, sProtagAim, sProtagMelee];
-			character_weapons = [sWeaponBow_Placeholder,0,12,5,2,oArrow, oBullet_BowBash, oBullet_BowBash] 
+			character_weapons = [sWeaponBow_Placeholder,0,12,5,2,oArrow, oAtk_Melee, oAtk_Melee] 
 			break;
 		case 1:
 			char_sprites = [sArcherIdle, sArcherWalk, sArcherRoll, sArcherJump, sArcherDie, sArcherMask, sArcherIdle, sArcherIdle];

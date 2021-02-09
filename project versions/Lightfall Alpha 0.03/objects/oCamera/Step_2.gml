@@ -10,9 +10,9 @@ if start_zoom < 0 && alarm[0] = -1 {start_zoom+=0.001;} //start_zoom = -0.1; ler
 if (instance_exists(follow)) 
 {
 	//while aiming, follow mouse position slightly
-	var pan_distance_weapon = 10;
+	var pan_distance_weapon = 20; if zoom <= 0.10 pan_distance_weapon = 7;
 	if (weapon_zoom !=0 && follow = oPlayer) {
-		var pan_distance_weapon = clamp(point_distance(follow.x,follow.y,mouse_x,mouse_y),12,25); //max camera shift when focusing weapon
+		var pan_distance_weapon = clamp(point_distance(follow.x,follow.y,mouse_x,mouse_y),12,35); //max camera shift when focusing weapon
 	}
 	xTo = follow.x+lengthdir_x(pan_distance_weapon,point_direction(follow.x,follow.y,mouse_x,mouse_y)); //Follow point from A (followX) to B (mouseX). Lenghtdir should be a fraction of distance of mouse to follow.x
 	yTo = follow.y+lengthdir_y(pan_distance_weapon,point_direction(follow.x,follow.y,mouse_x,mouse_y));

@@ -8,7 +8,7 @@ dir_start = 90 //random(360);
 dir = 0; 
 out_of_range = false; 
 sight_range = 50; //when to detect player
-wander_range = 50; 
+wander_range = 90; 
 damage = 1;
 
 //create target on circumference 
@@ -21,8 +21,9 @@ yprev = y;
 current_state = enemy_states.idle;
 
 //extras
-hp = 2;
+hp = 1;
 is_hit = 0; //allows projectiles to hit multiple objects at once
 position_random = random_range(-3,3);
 recoil = 0; 
 patrol_range = 10; //follow distance
+image_speed = 1;

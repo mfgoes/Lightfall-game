@@ -21,7 +21,7 @@
 	var key_attack_released		= oPlayer.key_attack_released;
 	var key_secondary			= oPlayer.key_secondary;
 	var key_special				= oPlayer.key_special;
-	var key_switch_weapon		= keyboard_check_pressed(ord("E"))
+	//var key_switch_weapon		= keyboard_check_pressed(ord("E"))
 	
 	var weapon_speed_max =  oPlayer.character_weapons[2];	//these should be defined within projectile info, not player related.
 	var weapon_speed_min =  oPlayer.character_weapons[3];
@@ -31,14 +31,14 @@
 	var secondary_projectile  = oPlayer.character_weapons[6];
 	var special_projectile  = oPlayer.character_weapons[7];
 	
-	//swap character weapon
-	if (key_switch_weapon)
+	//swap character
+	/*if (key_switch_weapon)
 	{
 		oPlayer.current_weapon+=1;
 		if oPlayer.current_weapon > 1 oPlayer.current_weapon = 0;
 		audio_sound_gain(snSwapWeapon,1,0);
 		audio_play_sound(snSwapWeapon,1,0);
-	}
+	}*/
 #endregion
 
 #region zoom when holding LMB

@@ -1,5 +1,4 @@
-/// @description Insert description here
-
+/// @description change animation
 if (hp <= 0) 
 {
 	with (instance_create_layer(x,y,"Enemies",oEnemyCorpse))
@@ -12,6 +11,5 @@ if (hp <= 0)
 		image_xscale = sign(hsp) *other.size;
 		image_yscale = other.size;
 	}
-	
 	instance_destroy();
 }
