@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sEnemyBlob_Idle",
-    "path": "sprites/sEnemyBlob_Idle/sEnemyBlob_Idle.yy",
+    "name": "sEnemyIdle",
+    "path": "sprites/sEnemyIdle/sEnemyIdle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
+    "name": "pShootable",
+    "path": "objects/pShootable/pShootable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,11 +24,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
@@ -55,7 +53,7 @@
         "GMObject",
         "GMRoom",
       ],"resourceVersion":"1.0","name":"grv","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":0,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
+    {"varType":0,"value":"2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -146,7 +144,7 @@
     "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemyChonkyDasher",
+  "name": "oEnemyParent",
   "tags": [],
   "resourceType": "GMObject",
 }

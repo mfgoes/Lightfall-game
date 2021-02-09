@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEnemyBlob_Idle",
-    "path": "sprites/sEnemyBlob_Idle/sEnemyBlob_Idle.yy",
+    "name": "sEnemyIdle",
+    "path": "sprites/sEnemyIdle/sEnemyIdle.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,11 +24,10 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oEnemyChonkyDasher","path":"objects/oEnemyChonkyDasher/oEnemyChonkyDasher.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyMelee","path":"objects/oEnemyMelee/oEnemyMelee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEnemyMelee","path":"objects/oEnemyMelee/oEnemyMelee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oEnemyMelee","path":"objects/oEnemyMelee/oEnemyMelee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oEnemyMelee","path":"objects/oEnemyMelee/oEnemyMelee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
@@ -146,7 +145,7 @@
     "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemyChonkyDasher",
+  "name": "oEnemyMelee",
   "tags": [],
   "resourceType": "GMObject",
 }

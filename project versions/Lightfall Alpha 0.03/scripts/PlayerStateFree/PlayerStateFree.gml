@@ -58,7 +58,7 @@ if canrope = 1 {
 		canjump = 10;
 		if sprite_index == spriteJump && image_index = 2 {
 			audio_sound_pitch(snLanding,choose(0.8,1.0,1.2));
-			audio_sound_gain(snLanding,0.2,0);
+			audio_sound_gain(snLanding,0.02,0);
 			audio_play_sound(snLanding,4,false);
 			repeat(3)		//create dust effect
 			{

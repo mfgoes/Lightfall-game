@@ -11,7 +11,7 @@ function PlayerStateMeleeAtk(){
 	{
 		with (instance_create_layer(x+lengthdir_x(4,facing_direction),y,"Bullets",secondary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			direction = oPlayer.facing_direction;
-			x_shift = 4;
+			x_shift = 10;
 			image_angle = direction; follow = oPlayer;
 			//x_shift = oWeaponPlayer.flip_weapon * 10;
 		}

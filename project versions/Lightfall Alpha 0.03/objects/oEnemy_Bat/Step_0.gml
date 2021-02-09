@@ -1,7 +1,7 @@
  /// @desc states
 
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 if distance_to_point(xstart,ystart) > 50 out_of_range = true else out_of_range = false;
 
 timer_init("attack_player"); 

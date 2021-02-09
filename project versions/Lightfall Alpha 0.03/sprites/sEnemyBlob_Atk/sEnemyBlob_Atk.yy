@@ -44,7 +44,7 @@
     "spriteId": {"name":"sEnemyBlob_Atk","path":"sprites/sEnemyBlob_Atk/sEnemyBlob_Atk.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

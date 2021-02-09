@@ -53,8 +53,8 @@ function PlayerInput(){
 			{
 				if state = PlayerStateFree && roll_cooldown = 0 {
 					state = PlayerStateRoll;
+					audio_sound_gain(snLanding,0.2,0);
 					audio_play_sound(snLanding,4,false);
-					audio_sound_gain(snLanding,0.1,0);
 					roll_cooldown = roll_cooldown_full;	/// if cooldown = 0 you can roll, else no roll. 
 				}
 				moveDistanceRemaining = distanceRoll

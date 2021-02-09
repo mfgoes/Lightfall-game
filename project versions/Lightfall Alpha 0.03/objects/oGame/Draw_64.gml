@@ -28,7 +28,7 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	
 	//draw stats
 	draw_set_halign(fa_left);
-	draw_text(10,4,"Lightfall Demo");
+	draw_text(10,4,"Lightfall Demo - Enemy Mechanics");
 	var hp = oPlayer.hp; var hp_max = oPlayer.hp_max;
 	var healthUImax = 100; 
 	var healthUI = (hp/hp_max) * healthUImax;
@@ -48,7 +48,6 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	#region debug stats
 	if global.debugmode = true {
 		DrawSetText(c_white,fSign,fa_left, fa_top);
-		//draw_text(10,4,"Lightfall Demo");
 		draw_text(10,14,"fps: " + string(fps_reader));
 				
 		/*

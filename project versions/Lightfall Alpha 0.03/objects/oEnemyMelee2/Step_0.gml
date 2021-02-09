@@ -4,6 +4,7 @@
 #region basics
 event_inherited(); //inherits gravity code
 timer_init("attack_player"); 
+timer_init("attack_anim");
 //determine target
 if instance_exists(oPlayer) target = oPlayer; else {
 	hsp = 0;
@@ -11,9 +12,10 @@ if instance_exists(oPlayer) target = oPlayer; else {
 }
 #endregion
 
-
 //find placements
-var dd = instance_nth_nearest(x,y,oEnemyMelee,2); //find nearest object
+if instance_exists(oEnemyParent) {
+var dd = instance_nth_nearest(x,y,oEnemyParent,2);} //find nearest object
+else dd = 0; 
 var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
 var _pos_target = sign(target.x - x);   //determine direction to walk in
 //check if colliding
@@ -36,7 +38,6 @@ if current_state!= enemy_states.idle && stunned = 0 {
 	x = lerp(x,round(x),0.2);
 }
 
-
 //enemy stun code.	only recoil after a short pause (for emphasis)
 if stunned > 0 {
 	stunned--; //starts at 20
@@ -53,8 +54,8 @@ if stunned = 15 x+=lengthdir_x(5,dir)
 else
 //States
 #region states
-		switch (current_state)
-	{
+switch (current_state)
+{
 	case enemy_states.idle: {
 		// patrol
 		
@@ -75,6 +76,7 @@ else
 		hsp = dir*walkspd*2;
 	else
 		hsp = 0;
+	
 	//if (!place_meeting(x+hsp,y,oWall))
 	//x += hsp;
 	
@@ -94,61 +96,82 @@ else
 	case enemy_states.attack: {
 	//keep small distance from player
 	if abs(target.x - x) <= atk_range {
-		hsp = sign(target.x - x); //revert direction
-		//if (!place_meeting(x-sign(hsp)*walkspd,y,oWall))
-		//x -= hsp*1; 
+		hsp = sign(target.x - x); 
 	}
-	
-	//set attack timer
-	
-	if timer_get("attack_player") <=0 && instance_exists(oPlayer) {
-		timer_set("attack_player",65+random(10)); 
-		with(oPlayer) {
-			//hp-=other.damage;
-			flash = 3;
-			gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
-			ScreenShake(3,2);
-			if hp < 1 KillPlayer();
-			//play sound
-			audio_sound_gain(snHitEnemy,0.3,0);
-			if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+	if attack_anim_end = 0 {
+		if sprite_index != spriteAttack {
+			image_index = 0;			
+			image_speed = 0.5;
+			sprite_index = spriteAttack;
 		}
 	}
-	
-	//revert to approach (after animation or if out of range)
-	if timer_get("attack_player") = 0 or distance_to_object(oPlayer) > atk_range {
-		current_state = enemy_states.approach;
-	}	
-	
-	} break;
+	else {
+		if sprite_index = spriteAttack {sprite_index = spriteIdle; image_index = 0;}
 	}
+	
+	if timer_get("attack_player") <=0 && instance_exists(oPlayer) {
+		attack_anim_end = 0;
+		if sprite_index = spriteAttack && image_index > 2 {
+			//set timer for attacks (put combo sequences here)
+			timer_set("attack_player",60); 
+			//do damage
+			with(oPlayer) {
+				flash = 3;
+				gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
+				audio_sound_gain(snHitEnemy,0.3,0);
+				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+				/*
+				hp-=other.damage;
+				
+				ScreenShake(3,20);
+				if hp < 1 KillPlayer();
+				
+				*/
+			}
+		}
+		
+		}
+		if distance_to_object(oPlayer) > atk_range {
+			current_state = enemy_states.approach;
+			attack_anim_end = 0;
+		}	
+	} break;
+	
+}
 #endregion
 
-#region animation
-	if current_state = enemy_states.attack && timer_get("attack_player") > 0 {
-	//attack animation	
+#region animations
+	
+	/*if current_state = enemy_states.attack {
+		if timer_get("attack_anim") <= 0 {
+		
+		}
 	}
-	if (!place_meeting(x,y+1,oWall)) 
-	{
-		grounded = false;
-		sprite_index = spriteJump;
-		image_speed = 0;
-		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
-	}
-	else 
+	*/
+	if current_state != enemy_states.attack
 	{
 		grounded = true;
 		image_speed = 0.8
 		if (hsp == 0)
 		{
 			sprite_index = spriteIdle;
+			image_speed = 0.3;
 		}
 		else
 		{
 			sprite_index = spriteWalk;
+			image_speed = 0.5;
 		}
 	}
+	
+	//jump animation
+	/*if (!place_meeting(x,y+1,oWall)) 
+	{
+		grounded = false;
+		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
+	}*/
 
-	if (hsp != 0) image_xscale = sign(hsp) * size;
+	//mirror sprite
+	if (hsp != 0) image_xscale = -sign(hsp) * size;
 	image_yscale = size; 
 #endregion
