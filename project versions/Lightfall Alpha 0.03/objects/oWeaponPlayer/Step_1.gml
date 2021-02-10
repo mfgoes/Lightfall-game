@@ -104,8 +104,9 @@ else {
 		{
 			oPlayer.primary_cooldown = primary_cooldown_full;
 			timer_set("primary_cooldown",primary_cooldown_full);
-			audio_play_sound(snDartGun2,2,0);
-			audio_sound_gain(snDartGun2,0.2,0);
+			audio_sound_gain(snDartGun1,0.3,0);
+			audio_sound_pitch(snDartGun1,choose(0.8,0.9,0.9,1));
+			audio_play_sound(snDartGun1,2,0);
 			//ScreenShake(1,5);
 		
 			//create the bullet
