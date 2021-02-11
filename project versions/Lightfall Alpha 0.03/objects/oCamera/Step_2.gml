@@ -1,4 +1,9 @@
-//gm live 
+//gm live
+if global.game_paused
+{
+	exit;
+}
+
 if (live_call()) return live_result; 
 
 //timers start camera position

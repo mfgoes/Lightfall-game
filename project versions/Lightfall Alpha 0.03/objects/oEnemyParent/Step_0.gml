@@ -1,4 +1,9 @@
 //general gravity
+if global.game_paused
+{
+	exit;
+}
+
 vsp = vsp + grv; 
 if (place_meeting(x,y+vsp, oWall))
 {

@@ -1,5 +1,10 @@
 /// @description
-//gm live 
+//gm live
+if global.game_paused
+{
+	exit;
+}
+
 if (live_call()) return live_result; 
 timer_init("attack_length");
 if timer_get("attack_length") = -1 timer_set("attack_length",sprite_get_number(oPlayer.sprite_index)+10); //duration of attack = animation length

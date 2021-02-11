@@ -1,4 +1,9 @@
 /// @desc destroy self (inherit this code from parent enemy)
+if global.game_paused
+{
+	exit;
+}
+
 if (hp <= 0) 
 {
 	

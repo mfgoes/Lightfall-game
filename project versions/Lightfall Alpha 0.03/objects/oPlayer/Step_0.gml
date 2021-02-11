@@ -1,4 +1,9 @@
  /// @description Insert description here
+if global.game_paused
+{
+	exit;
+}
+
 #region //Debug Mode
 //gm live 
 //if (live_call()) return live_result; 

@@ -1,4 +1,9 @@
 /// @description
+if global.game_paused
+{
+	exit;
+}
+
 timer_init("smokeline");
 timer_init("arrow_fade");
 timer_init("arrow_wiggle");

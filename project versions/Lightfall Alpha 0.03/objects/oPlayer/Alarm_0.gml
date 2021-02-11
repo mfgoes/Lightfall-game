@@ -1,0 +1,1 @@
+/// @description Stop player input right after leaving a menu

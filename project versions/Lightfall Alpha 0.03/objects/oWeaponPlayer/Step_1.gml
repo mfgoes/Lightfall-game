@@ -1,6 +1,10 @@
 /// @description Weapon changes
 //gm live 
 //if (live_call()) return live_result; 
+if global.game_paused
+{
+	exit;
+}
 
 #region init timers
 	//cooldown abilities

@@ -1,4 +1,9 @@
 /// @description destroy self
+if global.game_paused
+{
+	exit;
+}
+
 if (hp <= 0) 
 {
 	repeat(3)	//create dust effect

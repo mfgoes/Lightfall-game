@@ -1,4 +1,9 @@
 /// @description Insert description here
+if global.game_paused
+{
+	exit;
+}
+
 x+= lengthdir_x(spd,direction);
 y+= lengthdir_y(spd,direction);
 

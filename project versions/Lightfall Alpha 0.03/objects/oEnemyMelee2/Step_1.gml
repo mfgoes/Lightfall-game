@@ -1,4 +1,9 @@
 /// @description change animation
+if global.game_paused
+{
+	exit;
+}
+
 if (hp <= 0) 
 {
 	with (instance_create_layer(x,y,"Enemies",oEnemyCorpse))

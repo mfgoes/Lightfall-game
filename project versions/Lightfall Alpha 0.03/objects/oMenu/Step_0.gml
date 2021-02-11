@@ -12,39 +12,33 @@ if (menu_control)
 	}*/
 
 	if (keyboard_check_pressed(vk_up))
+	{
 		menu_cursor ++;
 		if (menu_cursor >= menu_items) menu_cursor = 0;
+	}
 		
 	if (keyboard_check_pressed(vk_down))
+	{
 		menu_cursor --;
 		if (menu_cursor <0) menu_cursor = menu_items-1;
-		
-	if (keyboard_check_pressed(vk_enter))
-	{
-		menu_x_target = gui_width+20;
-		menu_committed = menu_cursor;
-		audio_sound_gain(snLanding,0.2,0);
-		audio_play_sound(snLanding,4,false);
-		ScreenShake(4,30);
-		menu_control = false;	
 	}
 	
 
 	var mouse_y_gui = device_mouse_y_to_gui(0);	//0 = for if there's multiple mice implemented
 
-if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) 
+	if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) 
 	{
 		menu_cursor = (menu_y - mouse_y_gui) div (menu_item_height * 1.5); 	
-		
-		if (mouse_check_button_pressed(mb_left)) 
-		{
+	}
+	
+	if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
+	{
 		menu_x_target = gui_width+20;
 		menu_committed = menu_cursor;
 		audio_sound_gain(snLanding,0.2,0);
 		audio_play_sound(snLanding,5,0);
-		ScreenShake(4,10);
+		//ScreenShake(4,10);
 		menu_control = false;		
-		}
 	}
 }
 

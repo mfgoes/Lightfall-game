@@ -1,4 +1,8 @@
 /// @description Insert description here
+if global.game_paused
+{
+	exit;
+}
 
 if (hp <= 0) 
 {

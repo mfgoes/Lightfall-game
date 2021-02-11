@@ -1,4 +1,10 @@
 /// @desc follow enemy
+
+if global.game_paused
+{
+	exit;
+}
+
 x = owner.x;
 y = owner.y;
 

@@ -1,5 +1,9 @@
 //gm live 
-//if (live_call()) return live_result; 
+//if (live_call()) return live_result;
+if global.game_paused
+{
+	exit;
+}
 
 #region basics
 event_inherited(); //inherits gravity code

@@ -1,4 +1,9 @@
 /// @description Insert description here
+if global.game_paused
+{
+	exit;
+}
+
 if (done = 0) 
 {
 	vsp = vsp + grv; 
