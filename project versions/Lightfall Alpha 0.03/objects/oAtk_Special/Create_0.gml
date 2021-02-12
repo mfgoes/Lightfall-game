@@ -1,8 +1,12 @@
 /// @description init projectile variables
-follow = oPlayer;
-x_shift = 10; //-10 = left
-spd = 10;
+if (live_call()) return live_result; 
 
-image_xscale = 0.6; //total = 32
-image_yscale = 0.7;
-image_alpha = 0.3;
+wiggle = 1;
+active = true;
+ScreenShake(1,5);
+image_angle = direction;
+image_speed = 0;
+spd = 8;
+g = 0.25; //gravity
+explode = false
+

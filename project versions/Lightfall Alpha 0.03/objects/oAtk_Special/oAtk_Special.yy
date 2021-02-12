@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sHitbox_Generic",
-    "path": "sprites/sHitbox_Generic/sHitbox_Generic.yy",
+    "name": "sMissleBullet",
+    "path": "sprites/sMissleBullet/sMissleBullet.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,7 +27,7 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oAtk_Special","path":"objects/oAtk_Special/oAtk_Special.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oAtk_Special","path":"objects/oAtk_Special/oAtk_Special.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oAtk_Special","path":"objects/oAtk_Special/oAtk_Special.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"parent":{"name":"oAtk_Special","path":"objects/oAtk_Special/oAtk_Special.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oAtk_Special","path":"objects/oAtk_Special/oAtk_Special.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

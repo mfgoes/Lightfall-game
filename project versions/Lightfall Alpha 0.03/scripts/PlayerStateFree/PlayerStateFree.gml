@@ -39,7 +39,6 @@ if canrope = 1 {
 			ropeAngle = point_direction(grappleX,grappleY, x,y);
 			ropeLength = point_distance(grappleX,grappleY,x,y);
 			state = PlayerStateSwing;
-		
 		}
 	}
 #endregion

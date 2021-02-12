@@ -51,7 +51,7 @@
 
 	primary_projectile	  = CooldownData[current_character][5];	//oArrow; 
 	secondary_projectile  = CooldownData[current_character][6];	//oAtk_Melee; 
-	special_projectile    = CooldownData[current_character][7]; //oAtk_Special;
+	third_projectile    = CooldownData[current_character][7]; //oAtk_Special;
 	//passive_projectile  = CooldownData[current_character][8];
 
 	roll_cooldown_full = roll_cooldown; //when cooldowns are full 

@@ -140,6 +140,19 @@ else {
 		oPlayer.gunkickx = gunkickx;
 	}
 	#endregion
+	
+	#region special attack
+	
+		if key_special && oPlayer.third_cooldown = 0 {
+			//reset weapon
+			weapon_charge = 0; 
+			weapon_active = 0; 
+			timer_set("weapon_display",room_speed*1); //hide weapon after a second. 
+			//gun kickback
+			gunkickx = lengthdir_x(5,other.image_angle-180);
+			gunkicky = lengthdir_y(5, other.image_angle-180);
+		}
+	#endregion
 	} 
 	//if rolling, don't show weapon
 	else weapon_active = 0;

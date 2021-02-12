@@ -43,7 +43,20 @@ function PlayerInput(){
 				state = PlayerStateMeleeAtk;
 				secondary_cooldown = secondary_cooldown_full;
 				
-				}
+				} 
+		}
+		
+		//third ability -> exploding missile 
+		if (key_special) { 
+			if third_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
+			
+				third_cooldown = third_cooldown_full;
+				//create the bullet
+				with (instance_create_layer(oWeaponPlayer.x,oWeaponPlayer.y,"Bullets",third_projectile)) {
+					direction = oWeaponPlayer.image_angle;
+					//oPlayer.gunkickx = 10;
+				}				
+			}
 		}
 		
 		//roll ability 	
@@ -68,6 +81,7 @@ function PlayerInput(){
 	if roll_cooldown > 0 roll_cooldown -=1;
 	if primary_cooldown > 0 primary_cooldown -=1;
 	if secondary_cooldown > 0 {secondary_cooldown -=1;}
+	if third_cooldown > 0 {third_cooldown -=1;}
 		
 	//if any cooldown is not 0 (except bow) don't allow movement.
 }

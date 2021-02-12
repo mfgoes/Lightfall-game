@@ -1,11 +1,10 @@
  /// @desc states
 //gm live 
+if (live_call()) return live_result; 
 if global.game_paused
 {
 	exit;
 }
-
-if (live_call()) return live_result; 
 if distance_to_point(xstart,ystart) > 50 out_of_range = true else out_of_range = false;
 
 timer_init("attack_player"); 
@@ -57,7 +56,7 @@ switch (current_state)
 		if instance_exists(oPlayer) {
 			if place_meeting(x,y,oPlayer) && timer_get("attack_player") <= 0 {
 				with(instance_place(x,y,oPlayer)) {
-					hp-=other.damage;
+					//hp-=other.damage;
 					flash = 3;
 					gunkickx += sign(other.x - x)*5; //from pos enemy to pos player
 					ScreenShake(3,2);
@@ -79,6 +78,7 @@ switch (current_state)
 				var dy =-sin(degtorad(dir))*(motion_speed);
 				x+=dx;
 				y+=dy;
+				dir+=random_range(90,270);
 			} else current_state = enemy_states.idle;
 		
 			//revert to idle state
@@ -91,3 +91,4 @@ switch (current_state)
 }
 
 //animation
+image_speed = 1;

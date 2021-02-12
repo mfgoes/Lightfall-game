@@ -130,6 +130,7 @@ switch (current_state)
 		//effects
 		if random(1) < 0.5 with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
 			vsp = -0.1; image_alpha = 0.3+random(0.3);
+			image_speed = 0.6;
 			hsp = random_range(-1,1)
 			image_xscale = choose (1,-1);
 			image_yscale = choose (1,-1);
@@ -192,6 +193,9 @@ switch (current_state)
 			sprite_index = spriteWalk;
 			image_speed = 0.8;
 		}
+	}
+	else {
+		image_speed = 0.5;	
 	}
 	
 	//jump animation
