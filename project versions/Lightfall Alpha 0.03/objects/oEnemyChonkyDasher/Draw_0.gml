@@ -1,6 +1,6 @@
 /// @description Insert description here
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 image_blend = c_orange;
 draw_self();

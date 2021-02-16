@@ -32,7 +32,7 @@ function Load_AbilityData(argument0){
 	
 	CooldownData = [
 	//Archer character
-	[sWeaponBow_Placeholder,15, 30, 20, 30, //cooldown times
+	[sWeaponBow_Placeholder,15, 60, 120, 30, //cooldown times
 	oArrow, oAtk_Melee, oAtk_Special, oAtk_Melee,  //each cooldown has a unique projectile
 	0, 3, 10, 2],
 	

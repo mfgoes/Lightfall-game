@@ -1,7 +1,17 @@
 /// @description character animations
 
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
+
+/*laser line (make this blocked by walls later
+	gpu_set_blendmode(bm_add);
+	draw_set_alpha(0.2);
+	var mouse_angle = round(point_direction(x,y,mouse_x,mouse_y));
+	draw_line_width_color(x,y,x+lengthdir_x(120,mouse_angle),y+lengthdir_y(150,mouse_angle),1,c_red,c_black);
+	gpu_set_blendmode(bm_normal);
+	draw_set_alpha(1);
+*/	
+
 
 draw_set_color(c_white);
 if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);

@@ -1,20 +1,28 @@
 ///@description Load_CharacterData(character);
 ///@param character = argument0;
 function Load_CharacterData(argument0){
-	/*INDEX:
-	0 = sprite_index; 
-	1 = display_on; (if it should always be visible)
-	2 = weapon_speed_max;
-	3 = weapon_speed_min; (use this for bows and charging weapons)
-	4 = weapon_accuracy (randomizes direction)
-	5 = primary_projectile; //object for first ability. ex: Bow. 
-	6 = secondary_projectile; //object for second ability
-	7 = special_ability; 
+	/*INDEX:	-> Change these into enums later
+	Character sprites: 
+	0 = Idle
+	1 = Walk
+	2 = Roll
+	3 = Jump
+	4 = Die
+	5 = Mask
+	6 = Aim (remove this)
+	7 = Melee (remove this)
+	
+	Character weapons:
+	0 = Primary weapon sprite
+	1 = Secondary weapon sprite (if applicable)
+	2-9 = ???
+	6-8 = projectiles
 	*/
+	
 	switch (argument0) {
 		case 0: //archer character (main)
 			char_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sProtagJump, sArcherDie,sArcherMask, sProtagAim, sProtagMelee];
-			character_weapons = [sWeaponBow_Placeholder,0,12,5,2,oArrow, oAtk_Melee, oAtk_Melee] 
+			character_weapons = [sWeaponBow_Placeholder,sGun, 0,12,5,2,oArrow, oAtk_Melee, oAtk_Special] 
 			break;
 		case 1:
 			char_sprites = [sArcherIdle, sArcherWalk, sArcherRoll, sArcherJump, sArcherDie, sArcherMask, sArcherIdle, sArcherIdle];

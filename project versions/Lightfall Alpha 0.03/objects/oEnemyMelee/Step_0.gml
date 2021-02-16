@@ -11,7 +11,7 @@ timer_init("attack_player");
 //determine target
 if instance_exists(oPlayer) target = oPlayer; else {
 	hsp = 0;
-	target = 0; 
+	target = self; 
 }
 #endregion
 
@@ -108,7 +108,7 @@ else
 	if timer_get("attack_player") <=0 && instance_exists(oPlayer) {
 		timer_set("attack_player",65+random(10)); 
 		with(oPlayer) {
-			//hp-=other.damage;
+			hp-=other.damage;
 			flash = 3;
 			gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
 			ScreenShake(3,2);

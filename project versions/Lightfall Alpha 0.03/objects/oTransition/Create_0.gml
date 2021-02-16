@@ -1,2 +1,2 @@
 /// @description ?
-draw_alpha = 0.7;
+draw_alpha = 1;

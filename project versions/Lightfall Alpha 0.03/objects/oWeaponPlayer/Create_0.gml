@@ -13,7 +13,8 @@
 	weapon_charge = 0; 
 	weapon_charge_max = 8;
 	weapon_recoil = 0;
-	
+	gunkickx = 0;
+	gunkicky = 0;
 	//visuals
 	image_speed = 0;
 	image_alpha = 0;

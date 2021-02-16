@@ -1,6 +1,6 @@
  /// @desc states
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 if global.game_paused
 {
 	exit;
@@ -56,7 +56,7 @@ switch (current_state)
 		if instance_exists(oPlayer) {
 			if place_meeting(x,y,oPlayer) && timer_get("attack_player") <= 0 {
 				with(instance_place(x,y,oPlayer)) {
-					//hp-=other.damage;
+					hp-=other.damage;
 					flash = 3;
 					gunkickx += sign(other.x - x)*5; //from pos enemy to pos player
 					ScreenShake(3,2);

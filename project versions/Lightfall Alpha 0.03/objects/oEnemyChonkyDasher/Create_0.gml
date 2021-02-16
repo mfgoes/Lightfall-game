@@ -1,6 +1,6 @@
 /// @desc create enemy weapon
 //gm live 
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 //enemy stats
 hp = 2;

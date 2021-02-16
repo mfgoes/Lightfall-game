@@ -1,11 +1,14 @@
 /// @description progress transition
 
-if draw_alpha > 0 draw_alpha -= 0.02;
+if (live_call()) return live_result;
+
+//if draw_alpha > 0 draw_alpha -= 0.02;
+
 if(mode !=TRANS_MODE.OFF)
 {
 	if (mode ==TRANS_MODE.INTRO)
 	{
-		percent = max(0,percent - max((percent/30),0.005));
+		percent = max(0,percent - max((percent/30),0.05));
 	}
 	else
 	{

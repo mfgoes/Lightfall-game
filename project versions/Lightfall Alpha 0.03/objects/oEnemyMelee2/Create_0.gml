@@ -2,8 +2,8 @@
 //if (live_call()) return live_result;
 
 //enemy stats
-hp = 2;
-damage = 1; //how much damage it can do
+hp = 3;
+damage = 2; //how much damage it can do
 walkspd = 1+ random(0.4);
 motion_speed = 1;
 out_of_range = false; 

@@ -1,11 +1,11 @@
-//general gravity
+ //general gravity
 if global.game_paused
 {
 	exit;
 }
 
 vsp = vsp + grv; 
-if (place_meeting(x,y+vsp, oWall))
+if (place_meeting(x,y+vsp, oWall)) or (place_meeting(x,y+vsp, oWallEnemies))
 {
 	while (!place_meeting(x,y+sign(vsp),oWall))
 	{

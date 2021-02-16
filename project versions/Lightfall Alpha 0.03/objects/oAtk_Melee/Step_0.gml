@@ -7,15 +7,22 @@ if global.game_paused
 
 if (live_call()) return live_result; 
 timer_init("attack_length");
-if timer_get("attack_length") = -1 timer_set("attack_length",sprite_get_number(oPlayer.sprite_index)+10); //duration of attack = animation length
-if timer_get("attack_length") = 0 or !(instance_exists(oPlayer)){
+timer_init("animation_length"); 
+
+if timer_get("animation_length") = -1 {
+	timer_set("animation_length",30); //length of animation
+	timer_set("attack_length",3);
+}
+
+//destroy instance
+if timer_get("animation_length") = 0 or !(instance_exists(oPlayer)){
 	instance_destroy();  
 }
 	
 image_angle = direction;
 
 // collision code new
-if (place_meeting(x,y,pShootable)) //Make sure at least 1 object is colliding
+if (place_meeting(x,y,pShootable)) && timer_get("attack_length") > 0  //Make sure at least 1 object is colliding
 {
 	var _list = ds_list_create();
 	var _num = collision_rectangle_list(bbox_left,bbox_top, bbox_right,bbox_bottom, pShootable, false, true, _list, false);
@@ -38,7 +45,7 @@ if (place_meeting(x,y,pShootable)) //Make sure at least 1 object is colliding
 		if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,5,0); }
 	
 	//freeze frame
-	scrFreezeScreen(100); 
+	scrFreezeScreen(10); 
 	
 	//generate particles
 	repeat(3) {
@@ -51,11 +58,15 @@ if (place_meeting(x,y,pShootable)) //Make sure at least 1 object is colliding
 	}
 		
 	ds_list_destroy(_list);	
-	instance_destroy();
-	//play enemy sound
+
+	//set position
+	x = follow.x+lengthdir_x(x_shift,direction);
+	y = follow.y+3;
 }	
-
 		
-
+// animation
+if img_index < 4 {
+	img_index+=0.5; //image speed
+}
 	
 

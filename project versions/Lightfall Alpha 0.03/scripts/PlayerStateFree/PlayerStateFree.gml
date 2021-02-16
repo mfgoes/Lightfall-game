@@ -9,7 +9,6 @@ slowwalk = 0.5;
 else
 slowwalk = 1; //1 = no slow walk
 
-
 var move = key_right - key_left;
 hsp = (move * walkspd * slowwalk) + (gunkickx);
 vsp = (vsp + grv) + gunkicky; 
@@ -42,6 +41,13 @@ if canrope = 1 {
 		}
 	}
 #endregion
+
+#region jumping pads
+	if (place_meeting(x,y+1,oTrampoline)) {
+		vsp -=8; 	
+	}
+#endregion
+
 
 ///ANIMATION
 	//is jumping

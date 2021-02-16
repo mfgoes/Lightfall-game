@@ -9,7 +9,7 @@
 	hascontrol = true;
 	canjump = 10; //for coyote jump
 	speedRoll = 5.0;
-	distanceRoll = 100;
+	distanceRoll = 170;
 	facing_direction = 0; //the last walked in direction
 		
 	//grappling hook
@@ -49,10 +49,9 @@
 	third_cooldown		= CooldownData[current_character][3];	//60;		
 	roll_cooldown		= CooldownData[current_character][4];	//30; 
 
-	primary_projectile	  = CooldownData[current_character][5];	//oArrow; 
-	secondary_projectile  = CooldownData[current_character][6];	//oAtk_Melee; 
-	third_projectile    = CooldownData[current_character][7]; //oAtk_Special;
-	//passive_projectile  = CooldownData[current_character][8];
+	primary_projectile	  = CooldownData[current_character][6];	//oArrow; 
+	secondary_projectile  = CooldownData[current_character][7];	//oAtk_Melee; 
+	third_projectile      = CooldownData[current_character][8]; //oAtk_Special;
 
 	roll_cooldown_full = roll_cooldown; //when cooldowns are full 
 	primary_cooldown_full = primary_cooldown; 

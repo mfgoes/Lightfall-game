@@ -13,10 +13,10 @@ timer_init("detonate");
 
 
 
-if timer_get("detonate") = -1 timer_set("detonate",30);
+if timer_get("detonate") = -1 timer_set("detonate",50);
 if timer_get("detonate") = 0 && (explode = false) {
 	image_speed = 1;
-	ScreenShake(5,5);
+	ScreenShake(2,5);
 	explode = true
 } 
 
