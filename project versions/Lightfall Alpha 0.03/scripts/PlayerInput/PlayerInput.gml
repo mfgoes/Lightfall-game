@@ -37,8 +37,9 @@ function PlayerInput(){
 		//secondary ability 
 		if (key_secondary) {
 			if secondary_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
-				image_index = 0; image_speed = 0;
-				state = PlayerStateMeleeAtk; 
+				image_index = 0; 
+				//image_speed = 0;
+				state = call_ability[cooldown_ability.secondary]; //state = PlayerStateMeleeAtk;
 				secondary_cooldown = secondary_cooldown_full;
 				} 
 		}
@@ -46,13 +47,9 @@ function PlayerInput(){
 		//third ability -> exploding missile 
 		if (key_special) { 
 			if third_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
-			
+				image_index = 0;
 				third_cooldown = third_cooldown_full;
-				//create the bullet
-				with (instance_create_layer(oWeaponPlayer.x,oWeaponPlayer.y,"Bullets",oAtk_Special)) {
-					direction = oWeaponPlayer.image_angle;
-					//oPlayer.gunkickx = 10;
-				}				
+				state = PlayerStateSpecialAtk; 			
 			}
 		}
 		

@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "sWall32x32",
-    "path": "sprites/sWall32x32/sWall32x32.yy",
+    "name": "sWall64x64",
+    "path": "sprites/sWall64x64/sWall64x64.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oWall",
+    "path": "objects/oWall/oWall.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,7 +31,7 @@
     "path": "folders/Objects/Environment+Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "oWallTile64x64",
   "tags": [],
   "resourceType": "GMObject",
 }

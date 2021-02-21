@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sWall32x32",
-    "path": "sprites/sWall32x32/sWall32x32.yy",
+    "name": "sWall",
+    "path": "sprites/sWall/sWall.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment+Objects",
-    "path": "folders/Objects/Environment+Objects.yy",
+    "name": "Environment",
+    "path": "folders/Objects/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWall",

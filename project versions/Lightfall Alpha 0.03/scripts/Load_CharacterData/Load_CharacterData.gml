@@ -22,15 +22,30 @@ function Load_CharacterData(argument0){
 	switch (argument0) {
 		case 0: //archer character (main)
 			char_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sProtagJump, sArcherDie,sArcherMask, sProtagAim, sProtagMelee];
-			character_weapons = [sWeaponBow_Placeholder,sGun, 0,12,5,2,oArrow, oAtk_Melee, oAtk_Special] 
+			character_weapons = [sWeaponBow_Placeholder,sGun, 0,12,5,2,oArrow, oAtk_Laser, oAtk_Special] 
+			call_ability = [PlayerStateFree,			//None
+							PlayerStateFree,			//Bow
+							PlayerStateMeleeAtk,		//Laser 2
+							PlayerStateSpecialAtk		//Explosion
+							];
 			break;
 		case 1:
 			char_sprites = [sArcherIdle, sArcherWalk, sArcherRoll, sArcherJump, sArcherDie, sArcherMask, sArcherIdle, sArcherIdle];
-			character_weapons = [sGun,1,10,5,2,oBullet_Parent, oBullet_Parent, oBullet_Parent]
+			character_weapons = [sGun,1,10,5,2,oBullet_Parent, oBullet_Parent, oBullet_Parent];
+			call_ability = [PlayerStateFree,			//None
+							PlayerStateFree,			//Bow
+							PlayerStateMeleeAtk,		//Laser
+							PlayerStateSpecialAtk		//Explosion
+							];
 			break;
 		case 2: //placeholder player
 			char_sprites = [sPlayerIdle, sPlayerWalk, sPlayerRoll, sPlayerJump, sPlayerDie,sPlayerMask, sPlayerIdle, sPlayerIdle];
-			character_weapons = [sGun,1,10,3,2,oBullet_Parent, oBullet_Parent, oBullet_Parent]
+			character_weapons = [sGun,1,10,3,2,oBullet_Parent, oBullet_Parent, oBullet_Parent];
+			call_ability = [PlayerStateFree,			//None
+							PlayerStateFree,			//Bow
+							PlayerStateMeleeAtk,		//Laser
+							PlayerStateSpecialAtk		//Explosion
+							];
 			break;
 	}
 }
@@ -45,9 +60,9 @@ function Load_PlayerStartData(argument0){
 	3 = coins;*/
 	
 	PLayerStartData = [
-	[3,8,0,5], //archer
-	[4,8,0,5], //char 2
-	[5,6,5,5], //char 3
+	[3,8,0,5], //archer 0
+	[4,8,0,5], //char 1
+	[5,6,5,5], //char 2
 	];
 }
 	

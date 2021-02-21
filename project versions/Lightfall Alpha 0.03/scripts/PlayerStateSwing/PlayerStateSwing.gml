@@ -25,7 +25,7 @@ function PlayerStateSwing(){
 			{
 				state = PlayerStateFree;
 				vsp = -7;
-				canjump = 0;
+				coyote_time = 0;
 			}
-			//if canjump = 10 {state = pState.normal;}			//leave swing state when touching ground
+			//if coyote_time = 10 {state = pState.normal;}			//leave swing state when touching ground
 }

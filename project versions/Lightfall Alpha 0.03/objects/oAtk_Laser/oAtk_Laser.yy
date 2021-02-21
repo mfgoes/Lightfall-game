@@ -24,9 +24,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oAtk_Melee","path":"objects/oAtk_Melee/oAtk_Melee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oAtk_Melee","path":"objects/oAtk_Melee/oAtk_Melee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oAtk_Melee","path":"objects/oAtk_Melee/oAtk_Melee.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oAtk_Laser","path":"objects/oAtk_Laser/oAtk_Laser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oAtk_Laser","path":"objects/oAtk_Laser/oAtk_Laser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oAtk_Laser","path":"objects/oAtk_Laser/oAtk_Laser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -35,7 +35,7 @@
     "path": "folders/Objects/Projectiles_Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oAtk_Melee",
+  "name": "oAtk_Laser",
   "tags": [],
   "resourceType": "GMObject",
 }

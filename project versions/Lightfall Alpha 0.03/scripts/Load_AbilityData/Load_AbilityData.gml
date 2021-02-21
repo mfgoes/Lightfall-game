@@ -20,7 +20,7 @@ function Load_AbilityData(argument0){
 	12 = weapon_accuracy;
 	
 	this script replaces "character_weapons" + migrates cooldown code from create event. 
-	character_weapons = [sWeaponBow_Placeholder,0,10,3,2,oArrow, oAtk_Melee, oAtk_Melee] 
+	character_weapons = [sWeaponBow_Placeholder,0,10,3,2,oArrow, oAtk_Laser, oAtk_Laser] 
 	
 	//cooldowns
 	roll_cooldown = 30; roll_cooldown_full = roll_cooldown; //1second. Replace with deltatime later. Replace with 'cooldown_ability1, etc. 
@@ -33,17 +33,17 @@ function Load_AbilityData(argument0){
 	CooldownData = [
 	//Archer character
 	[sWeaponBow_Placeholder,15, 60, 120, 30, //cooldown times
-	oArrow, oAtk_Melee, oAtk_Special, oAtk_Melee,  //each cooldown has a unique projectile
+	oArrow, oAtk_Laser, oAtk_Special, oAtk_Laser,  //each cooldown has a unique projectile
 	0, 3, 10, 2],
 	
 	//Char 2
 	[sGun,15, 35, 60, 30, 
-	oBullet_Parent, oAtk_Melee, oAtk_Melee, oAtk_Melee, 
+	oBullet_Parent, oAtk_Laser, oAtk_Laser, oAtk_Laser, 
 	0, 3, 10, 2],
 	
 	//Char 3
 	[sGun,15, 35, 60, 30, 
-	oBullet_Parent, oAtk_Melee, oAtk_Melee, oAtk_Melee, 
+	oBullet_Parent, oAtk_Laser, oAtk_Laser, oAtk_Laser, 
 	0, 3, 10, 2]	
 	];
 }
