@@ -4,7 +4,7 @@ if global.game_paused
 {
 	exit;
 }
-
+if (live_call()) return live_result;
 #region basics
 
 event_inherited();
@@ -102,8 +102,8 @@ switch (current_state)
 	{
 		//Use algorithm to follow player (placeholder code)
 		var dir = sign(target.x - x); 
-		if !place_meeting(x + dir*walkspd*2, y,oWall)
-			hsp = dir*walkspd;
+		if !place_meeting(x + dir*walkspd*3, y,oWall)
+			hsp = dir*walkspd*2;
 		else
 			hsp = 0; 
 		//revert state
@@ -127,7 +127,7 @@ switch (current_state)
 	case enemy_states.attack: {
 	//keep small distance from player
 	if abs(target.x - x) <= atk_range {
-		hsp = sign(target.x - x); 
+		hsp = sign(target.x - x)*0.5; 
 	}
 	if attack_anim_end = 0 {
 		if sprite_index != spriteAttack {

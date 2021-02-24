@@ -4,7 +4,7 @@ if global.game_paused
 	exit;
 }
 
-if (live_call()) return live_result;
+
 
 #region basics + timers
 	event_inherited(); //inherits gravity code

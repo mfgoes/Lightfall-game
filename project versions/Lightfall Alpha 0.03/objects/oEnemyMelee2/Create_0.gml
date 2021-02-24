@@ -4,7 +4,7 @@
 //enemy stats
 hp = 2;
 damage = 2; //how much damage it can do
-walkspd = 1;
+walkspd = 0.5;
 motion_speed = 1;
 out_of_range = false; 
 alerted = 0; //if player has already been sighted by this unit.

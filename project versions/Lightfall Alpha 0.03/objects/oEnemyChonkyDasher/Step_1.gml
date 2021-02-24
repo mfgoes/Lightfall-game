@@ -32,6 +32,5 @@ if (hp <= 0)
 		{hsp = random_range(-3,3)}
 	}
 	
-	with(alert) instance_destroy(); 
-	instance_destroy();
+	instance_destroy();	
 }
