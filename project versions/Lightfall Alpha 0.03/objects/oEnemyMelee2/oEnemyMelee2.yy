@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sBlobMask",
+    "path": "sprites/sBlobMask/sBlobMask.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oEnemyParent",
@@ -140,7 +143,9 @@
         "GMRoom",
       ],"resourceVersion":"1.0","name":"has_weapon","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"afraid_of_heights","path":"objects/oEnemyParent/oEnemyParent.yy",},"objectId":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Enemies",
     "path": "folders/Objects/Enemies.yy",

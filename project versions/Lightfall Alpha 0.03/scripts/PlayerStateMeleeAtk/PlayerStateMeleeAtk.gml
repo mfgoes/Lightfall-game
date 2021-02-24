@@ -12,6 +12,11 @@ function PlayerStateMeleeAtk(){
 	//create projectile
 	if image_index = 1
 	{
+		audio_sound_gain(snDartGun2,0.1,0);
+			audio_sound_pitch(snDartGun2,choose(0.95,1));
+			audio_play_sound(snDartGun2,2,0);
+			
+			
 		with (instance_create_layer(x,y,"Bullets",oAtk_Laser)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			direction = oWeaponPlayer.image_angle; //oPlayer.facing_direction;
 			x_shift = 5;

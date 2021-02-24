@@ -11,7 +11,6 @@ if (place_meeting(x,y+vsp, oWall)) or (place_meeting(x,y+vsp, oWallEnemies))
 	{
 		y = y + sign(vsp); 
 	}
-	vsp = 0;
-	
+	vsp = 0;	
 }
-y = y + vsp;	
+y = round(y + vsp);

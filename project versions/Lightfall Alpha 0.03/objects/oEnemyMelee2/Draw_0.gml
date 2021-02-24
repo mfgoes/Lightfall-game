@@ -9,4 +9,11 @@ if (flash > 0)
 	shader_set(shWhite);
 	draw_self();
 	shader_reset();
-} 
+}
+
+if global.debugmode = true {
+	draw_text(x,y-text_pos-30,hsp);
+	draw_text(x,y-text_pos-20,"target " + string((sign(target.x - x))) + "hsp " + string( sign(hsp)) );
+	draw_text(x,y-text_pos-40,"state " + string(current_state));
+	draw_circle(x,y,sight_range,1);
+}

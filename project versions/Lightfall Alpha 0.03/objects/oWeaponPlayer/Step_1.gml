@@ -139,9 +139,6 @@ else {
 			}
 			timer_set("weapon_display",35); 
 			timer_set("secondary_cooldown",secondary_cooldown_full);
-			audio_sound_gain(snDartGun2,0.1,0);
-			audio_sound_pitch(snDartGun2,choose(0.95,1));
-			audio_play_sound(snDartGun2,2,0);
 			weapon_recoil = -2;
 			
 			//generate attack + anim

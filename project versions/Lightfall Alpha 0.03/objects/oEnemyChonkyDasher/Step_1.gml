@@ -8,6 +8,7 @@ if (hp <= 0)
 {
 	with (instance_create_layer(x,y,"Enemies",oEnemyCorpse))
 	{
+		start_color = c_orange;
 		direction = other.hitfrom;	
 		hsp = lengthdir_x(1,direction);
 		//vsp = lengthdir_y(3,direction)-2;
@@ -31,5 +32,6 @@ if (hp <= 0)
 		{hsp = random_range(-3,3)}
 	}
 	
+	with(alert) instance_destroy(); 
 	instance_destroy();
 }

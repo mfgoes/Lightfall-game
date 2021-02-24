@@ -6,30 +6,36 @@ if global.game_paused
 }
 
 #region basics
-event_inherited(); //inherits gravity code
-timer_init("attack_player"); 
-timer_init("attack_anim");
 
-//determine target
-if instance_exists(oPlayer) target = oPlayer; else {
-	target = self; 
-}
+event_inherited();
+	//determine target
+	if instance_exists(oPlayer) target = oPlayer; else {
+		target = self; 
+	}
+	event_inherited(); //inherits gravity code
+	timer_init("attack_player"); 
+	timer_init("attack_anim");
+	timer_init("notice_player"); //when to notice player
+	timer_init("ignore_player"); //when to ignore player
+
 #endregion
 
 #region avoid collisions with other enemies
-if instance_exists(oEnemyParent) {
-	var dd = instance_nth_nearest(x,y,oEnemyParent,2); } 
+	if instance_exists(oEnemyParent) {
+		var dd = instance_nth_nearest(x,y,oEnemyParent,2); }  
 	else dd = self; 
 	var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
 	var _pos_target = sign(target.x - x);   //determine direction to walk in
-	//check if colliding
+	
+	
+//check if colliding
 	var _colliding = abs(sign(_pos_nearest_enemy + _pos_target)); //returns 0 or 1
 	if distance_to_object(dd) > 0 _colliding = 0; //if closest enemy is far away, ignore
 #endregion
 
-//walking code 
-if current_state!= enemy_states.idle && stunned = 0 {  
-	if (!place_meeting(x + hsp, y,oWall)) && distance_to_object(target) < sight_range && distance_to_object(target) > 1 {
+//walking code for NON idle movement
+if current_state != enemy_states.idle && stunned = 0 {  
+	if (!place_meeting(x + hsp, y,oWall)) { // && distance_to_object(target) < sight_range && distance_to_object(target) > 1
        //move left
 	   if _pos_target < 0 {
 		  x+=hsp //- _diff_x;
@@ -42,6 +48,7 @@ if current_state!= enemy_states.idle && stunned = 0 {
 	}
 	x = lerp(x,round(x),0.2);
 }
+
 
 //enemy stun code.	only recoil after a short pause (for emphasis)
 if stunned > 0 {
@@ -58,33 +65,63 @@ switch (current_state)
 {
 	// patrol
 	case enemy_states.idle: {
-		
-		if ((grounded) && (afraid_of_heights) && (!place_meeting(x + hsp, y + 1,oWall))) or (place_meeting(x+hsp,y, oWall))
-		{
+		var check_ahead = 25*sign(hsp)
+		if (!place_meeting(x+check_ahead,y+1,oWall) && (afraid_of_heights)) or place_meeting(x+hsp,y-1,oWall) {
 			hsp = -hsp;
 		}
 		x += hsp;
-		if instance_exists(oPlayer) && distance_to_object(target) < sight_range
-		current_state = enemy_states.approach; 
+		
+		var target_in_sight = 0;
+		if distance_to_object(target) < sight_range && (sign(target.x - x)) = sign(hsp) target_in_sight = 1; //(target.x < x && hsp < 0) or (target.x > x && hsp > 0)
+		
+		//change to approach state
+		if instance_exists(oPlayer) && target_in_sight { //only switch if player exists
+			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0) && timer_get("notice_player") <= 0 {
+				current_state = enemy_states.approach; 
+				timer_set("notice_player",40); //small pause before approaching player
+				//visual alert that you found the player
+				alert = (instance_create_layer(x,bbox_top,layer,oAlertEnemy));
+				alert.owner = self; 	
+				
+				if alerted = 0 {
+					audio_sound_gain(snAlertEnemy,0.2,0);
+					audio_play_sound(snAlertEnemy,10,0);
+					alerted = 1;
+				}
+			}
+		}
 	} break;
 	
 	case enemy_states.approach: {
-	//Use algorithm to follow player (placeholder code)
-	var dir = sign(target.x - x); 
-	if !place_meeting(x + dir*walkspd*2, y,oWall)
-		hsp = dir*walkspd*2;
+	//pause before attack
+	if timer_get("notice_player") > 0 or !place_meeting(x,y+1,oWall) { //this might cause problems later
+		hsp = 0; 
+		image_speed = 0
+	}
 	else
-		hsp = 0;
-	//revert to idle state
-	if distance_to_object(target) >= sight_range {
+	{
+		//Use algorithm to follow player (placeholder code)
 		var dir = sign(target.x - x); 
-		hsp = dir*walkspd;
-		current_state = enemy_states.idle;
+		if !place_meeting(x + dir*walkspd*2, y,oWall)
+			hsp = dir*walkspd;
+		else
+			hsp = 0; 
+		//revert state
+		if timer_get("ignore_player") <= 0 {
+			if !(target.bbox_bottom + 20 >= bbox_bottom) {
+				var dir = sign(target.x - x); 
+				hsp = dir*walkspd;
+				current_state = enemy_states.idle;
+			} 
+			else
+				timer_set("ignore_player",80);
 		}	
-	//change to attack state
-	if distance_to_object(target) < atk_range {
-		current_state = enemy_states.attack;
+		//change to attack state
+		if distance_to_object(target) < atk_range && timer_get("notice_player") <= 0 {
+			current_state = enemy_states.attack;
+			timer_set("ignore_player",80);
 		}
+	}
 	} break;
 	
 	case enemy_states.attack: {
@@ -114,16 +151,26 @@ switch (current_state)
 				gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
 				audio_sound_gain(snHitEnemy,0.3,0);
 				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
-				hp-=other.damage;
+				//hp-=other.damage;
 				ScreenShake(5,5);
 				if hp < 1 KillPlayer();				
 			}
 		}
 		}
-		if distance_to_object(oPlayer) > atk_range {
-			current_state = enemy_states.approach;
-			attack_anim_end = 0;
-		}	
+	//revert state
+	if timer_get("ignore_player") <= 0 {
+		if !(target.bbox_bottom + 20 >= bbox_bottom) {
+			var dir = sign(target.x - x); 
+			hsp = dir*walkspd;
+			current_state = enemy_states.idle;
+		} 
+		else
+			timer_set("ignore_player",80);
+	}
+	if distance_to_object(oPlayer) > atk_range {
+		current_state = enemy_states.approach;
+		attack_anim_end = 0;
+	}	
 	} break;
 	
 }

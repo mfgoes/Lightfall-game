@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sBlobMask",
+    "path": "sprites/sBlobMask/sBlobMask.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oEnemyParent",

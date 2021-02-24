@@ -4,17 +4,16 @@
 
 //enemy stats
 hp = 2;
-charge_timer = 20; //attack cooldown
 motion_speed = 1;
 dir = 0; 
 out_of_range = false; 
 sight_range = 120 //randomize later
-atk_range = 80; //when to start attack
+atk_range = 100; //when to start attack
 wander_range = 50; 
 damage = 1;
-walkspd = 1+random(0.4);
+walkspd = 1;
 bullrush_dir = 0; 
-
+alerted = 0; //if player has already been sighted by this unit.
 //create target on circumference 
 target = 0;
 text_pos = choose(20,30,40,50); //debug text

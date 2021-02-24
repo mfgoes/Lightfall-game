@@ -47,7 +47,7 @@ function PlayerInput(){
 		//third ability -> exploding missile 
 		if (key_special) { 
 			if third_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
-				image_index = 0;
+				image_index = 0; image_speed = 0; 
 				third_cooldown = third_cooldown_full;
 				state = PlayerStateSpecialAtk; 			
 			}

@@ -67,8 +67,11 @@ else
 			hsp = -hsp;
 		}
 		x += hsp;
-		if instance_exists(oPlayer) && distance_to_object(target) < sight_range
-		current_state = enemy_states.approach; 
+		
+		if instance_exists(oPlayer) && distance_to_object(target) < sight_range { //only switch if player exists
+			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0)
+				current_state = enemy_states.approach; 
+		}
 		
 	} break;
 	
