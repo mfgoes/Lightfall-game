@@ -3,6 +3,8 @@
 //gm live 
 //if (live_call()) return live_result;
 
+event_inherited();
+
 motion_speed = 1;
 dir_start = 90 //random(360); 
 dir = 0; 

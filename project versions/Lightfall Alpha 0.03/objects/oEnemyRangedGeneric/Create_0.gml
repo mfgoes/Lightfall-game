@@ -1,5 +1,7 @@
 /// @desc create enemy weapon
 //define sprites (load as arrays and enums in the future (phase 3)
+event_inherited();
+
 spriteIdle =	sEnemyIdle;
 spriteWalk =	sEnemyWalk;
 spriteJump =	sEnemyJump;

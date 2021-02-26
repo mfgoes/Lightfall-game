@@ -8,16 +8,18 @@ x+= lengthdir_x(spd,direction);
 y+= lengthdir_y(spd,direction);
 
 
-	
-if (place_meeting(x,y,oWall)) && (image_index !=0) 
+if collision_wall
 {
-	while (place_meeting(x,y,oWall)) 
+	if (place_meeting(x,y,oWall)) && (image_index !=0) 
 	{
-		x-= lengthdir_x(1,direction);	//move back in direction
-		y-= lengthdir_y(1,direction);
+		while (place_meeting(x,y,oWall)) 
+		{
+			x-= lengthdir_x(1,direction);	//move back in direction
+			y-= lengthdir_y(1,direction);
+		}
+		spd = 0;
+		instance_change(oHitSpark,true);
 	}
-	spd = 0;
-	instance_change(oHitSpark,true);
 }
 
 
@@ -36,4 +38,8 @@ if (place_meeting(x,y,oPlayer))
 	}
 	instance_destroy();
 }
-	
+
+if destroy_self
+{
+	instance_destroy();
+}

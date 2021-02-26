@@ -3,6 +3,7 @@
 //if (live_call()) return live_result;
 
 //enemy stats
+event_inherited();
 hp = 2;
 motion_speed = 1;
 dir = 0; 
