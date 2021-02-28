@@ -2,6 +2,8 @@
 //gm live 
 //if (live_call()) return live_result;
 
+event_inherited();
+
 motion_speed = 1;
 dir = 0; 
 out_of_range = false; 

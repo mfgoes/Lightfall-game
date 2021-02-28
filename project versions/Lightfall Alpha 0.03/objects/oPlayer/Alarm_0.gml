@@ -1,1 +1,3 @@
-/// @description Stop player input right after leaving a menu
+/// @description kill player
+KillPlayer(); //set a short timer first
+SlideTransition(TRANS_MODE.RESTART);

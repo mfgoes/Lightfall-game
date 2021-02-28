@@ -1,7 +1,7 @@
 /// @description Draw Score
 
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //	put in script: DRAW PLAYER GUI*****
 
@@ -17,8 +17,8 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	var UIscale = 0.75; //set this to customizable variable later
 	draw_set_alpha(1);
 	draw_set_font(fSign);
-	draw_sprite_ext(sCooldowns_Archer,3,cooldown_posx-25,cooldown_posy,UIscale,UIscale,0,c_gray,1);
-	draw_sprite_ext(sCooldowns_Archer,0,cooldown_posx+5,cooldown_posy,UIscale,UIscale,0,c_gray,1);
+	draw_sprite_ext(sCooldowns_Archer,0,cooldown_posx-25,cooldown_posy,UIscale,UIscale,0,c_gray,1);
+	draw_sprite_ext(sCooldowns_Archer,3,cooldown_posx+5,cooldown_posy,UIscale,UIscale,0,c_gray,1);
 	draw_sprite_ext(sCooldowns_Archer,1,cooldown_posx+35,cooldown_posy,UIscale,UIscale,0,c_gray,1);
 	draw_sprite_ext(sCooldowns_Archer,2,cooldown_posx+65,cooldown_posy,UIscale,UIscale,0,c_gray,1);
 	draw_set_halign(fa_center);
@@ -26,6 +26,13 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	draw_text(cooldown_posx+17,cooldown_posy+4,oPlayer.secondary_cooldown); 
 	draw_text(cooldown_posx+47,cooldown_posy+4,oPlayer.third_cooldown); 
 	draw_text(cooldown_posx+77,cooldown_posy+4,oPlayer.roll_cooldown); 
+	
+	//draw controls (link this to keys later)
+	draw_text(cooldown_posx-13,cooldown_posy+14,"LMB"); 
+	draw_text(cooldown_posx+17,cooldown_posy+14,"RMB"); 
+	draw_text(cooldown_posx+47,cooldown_posy+14,"Q"); 
+	draw_text(cooldown_posx+77,cooldown_posy+14,"F"); 
+	
 	#endregion 
 	
 	//draw stats
@@ -50,8 +57,8 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	#region debug stats
 	if global.debugmode = true {
 		DrawSetText(c_white,fSign,fa_left, fa_top);
-		draw_text(10,14,"fps: " + string(fps_reader));
-		draw_text(10,24,"zoom: " + string(oCamera.zoom));
+		draw_text(10,14,"fps: " + string(oPlayer.coyote_time));
+		draw_text(10,24,"zoom: " + string(oPlayer.jumps));
 				
 		/*
 		draw_set_color(c_white);

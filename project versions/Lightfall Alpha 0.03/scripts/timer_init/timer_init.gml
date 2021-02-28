@@ -52,3 +52,12 @@ function timer_get() {
 	    return -1;
 	}	
 }
+
+function timer_end(timer_string)
+{
+	if (timer_get(timer_string) > 0 && timer_get(timer_string) - 1 <= 0)
+	{
+		return true;
+	}
+	return false;
+}

@@ -7,6 +7,7 @@ if global.game_paused
 x+= lengthdir_x(spd,direction);
 y+= lengthdir_y(spd,direction);
 
+var _hsp = lengthdir_x(spd,direction);
 if (place_meeting(x,y,pShootable))
 {
 	with(instance_place(x,y,pShootable))
@@ -17,7 +18,7 @@ if (place_meeting(x,y,pShootable))
 	}
 	instance_destroy();
 }
-	
+
 if (place_meeting(x,y,oWall)) && (image_index !=0) 
 {
 	while (place_meeting(x,y,oWall)) 

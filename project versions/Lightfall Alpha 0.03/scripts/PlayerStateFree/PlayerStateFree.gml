@@ -9,7 +9,6 @@ slowwalk = 0.5;
 else
 slowwalk = 1; //1 = no slow walk
 
-
 var move = key_right - key_left;
 hsp = (move * walkspd * slowwalk) + (gunkickx);
 vsp = (vsp + grv) + gunkicky; 
@@ -17,14 +16,27 @@ vsp = (vsp + grv) + gunkicky;
 gunkickx = 0; 
 gunkicky = 0;
 
-if hsp < 0 facing_direction = 180 else if hsp > 0 facing_direction = 0;
-if canjump > 0 canjump -=1; 
 
-
-if (canjump > 0) && (key_jump) {
-	vsp = -7;
-	canjump = 0;
+//jumping code
+if (place_meeting(x,y+1,oWall)) {
+	coyote_time = 15; //coyote. rename this later. 
+	jumps = jumps_max;	
 }
+
+if (key_jump) && (jumps > 0) {
+	vsp = -jump_speed;
+	jumps -=1;
+}
+
+if !place_meeting(x,y+1,oWall) && coyote_time = 0 {
+	if jumps = jumps_max jumps -=1; 	
+}
+
+if coyote_time > 0 coyote_time -=1; //this variable is for coyote jump
+
+
+
+if hsp < 0 facing_direction = 180 else if hsp > 0 facing_direction = 0;
 
 
 #region //allow grappling
@@ -43,6 +55,13 @@ if canrope = 1 {
 	}
 #endregion
 
+#region jumping pads
+	if (place_meeting(x,y+1,oTrampoline)) {
+		vsp -=8; 	
+	}
+#endregion
+
+
 ///ANIMATION
 	//is jumping
 	if (!place_meeting(x,y+1,oWall))	//CHECK IF ON GROUND
@@ -54,7 +73,6 @@ if canrope = 1 {
 	else 
 	//is walk or idle or 'start jumping'
 	{
-		canjump = 10;
 		if sprite_index == spriteJump && image_index = 2 {
 			audio_sound_pitch(snLanding,choose(0.8,1.0,1.2));
 			audio_sound_gain(snLanding,0.02,0);

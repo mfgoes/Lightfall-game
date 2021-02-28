@@ -11,7 +11,7 @@ timer_init("attack_player");
 //determine target
 if instance_exists(oPlayer) target = oPlayer; else {
 	hsp = 0;
-	target = 0; 
+	target = self; 
 }
 #endregion
 
@@ -67,8 +67,11 @@ else
 			hsp = -hsp;
 		}
 		x += hsp;
-		if instance_exists(oPlayer) && distance_to_object(target) < sight_range
-		current_state = enemy_states.approach; 
+		
+		if instance_exists(oPlayer) && distance_to_object(target) < sight_range { //only switch if player exists
+			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0)
+				current_state = enemy_states.approach; 
+		}
 		
 	} break;
 	
@@ -108,7 +111,7 @@ else
 	if timer_get("attack_player") <=0 && instance_exists(oPlayer) {
 		timer_set("attack_player",65+random(10)); 
 		with(oPlayer) {
-			//hp-=other.damage;
+			hp-=other.damage;
 			flash = 3;
 			gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
 			ScreenShake(3,2);

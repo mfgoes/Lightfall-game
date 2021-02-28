@@ -1,7 +1,9 @@
 /// @desc 
 
 //gm live 
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
+
+event_inherited();
 
 motion_speed = 1;
 dir_start = 90 //random(360); 
@@ -21,7 +23,7 @@ yprev = y;
 current_state = enemy_states.idle;
 
 //extras
-hp = 1;
+hp = 3;
 is_hit = 0; //allows projectiles to hit multiple objects at once
 position_random = random_range(-3,3);
 recoil = 0; 

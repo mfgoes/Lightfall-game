@@ -1,15 +1,19 @@
 /// @description Insert description here
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
 #region Load basic character data
 	hsp = 0;
 	vsp = 0;
 	grv = 0.5;
 	hascontrol = true;
-	canjump = 10; //for coyote jump
+	coyote_time = 10; //for coyote jump
+	jump_speed = 7;
+	jumps = 0; //double jumps
+	jumps_max = 2;
+	
 	speedRoll = 5.0;
-	distanceRoll = 100;
+	distanceRoll = 170;
 	facing_direction = 0; //the last walked in direction
 		
 	//grappling hook
@@ -34,9 +38,14 @@
 #endregion
 
 #region Load unique player data
-	current_character = 0; //archer character
+	enum character {
+	archer,
+	mage,
+	warrior		
+	}
+	current_character = character.archer; //archer character
 	Load_PlayerStartData(current_character);
-
+	
 	walkspd = PLayerStartData[current_character][0];
 	hp_max  = PLayerStartData[current_character][1]; 
 	hp = hp_max;
@@ -44,20 +53,32 @@
 	
 #region load cooldowns / abilities
 	Load_AbilityData(current_character);
-	primary_cooldown	= CooldownData[current_character][1];	//15; 
-	secondary_cooldown  = CooldownData[current_character][2];	//35;
-	third_cooldown		= CooldownData[current_character][3];	//60;		
-	roll_cooldown		= CooldownData[current_character][4];	//30; 
-
-	primary_projectile	  = CooldownData[current_character][5];	//oArrow; 
-	secondary_projectile  = CooldownData[current_character][6];	//oAtk_Melee; 
-	third_projectile    = CooldownData[current_character][7]; //oAtk_Special;
-	//passive_projectile  = CooldownData[current_character][8];
-
-	roll_cooldown_full = roll_cooldown; //when cooldowns are full 
-	primary_cooldown_full = primary_cooldown; 
-	secondary_cooldown_full = secondary_cooldown;
-	third_cooldown_full = third_cooldown;
+	
+	//simplify cooldown script calling
+	enum cooldown_ability { 
+	  none = 0,
+	  primary = 1,	 //arrow
+	  secondary = 2, //laser
+	  third = 3,	 //roll
+	  special = 4	 //explosions
+	}
+	
+	//timers
+	primary_projectile	  = CooldownData[current_character][6];	//oArrow; 
+	secondary_projectile  = CooldownData[current_character][7];	//oAtk_Melee; 
+	third_projectile      = CooldownData[current_character][8]; //oAtk_Special;
+	fourth_projectile	  = 0; //add to arrays later
+	
+	primary_cooldown_full	= CooldownData[current_character][1];	//15; 
+	secondary_cooldown_full = CooldownData[current_character][2];	//35;
+	third_cooldown_full		= CooldownData[current_character][3];	//60;		
+	roll_cooldown_full		= CooldownData[current_character][4];	//30; 
+	
+	primary_cooldown	= 0;
+	secondary_cooldown  = 0;
+	third_cooldown		= 0;
+	roll_cooldown		= 0;
+	
 #endregion
 
 PlayerInput();

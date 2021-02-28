@@ -40,14 +40,29 @@ if timer_get("arrow_wiggle") > 0 {
 	
 #endregion
 
+var _hsp = lengthdir_x(spd,direction);
 #region collision 
 	if (place_meeting(x,y,pShootable)) && active = true
 	{
 		with(instance_place(x,y,pShootable))
 		{
-			hp--;
-			flash = 3;
-			hitfrom = other.direction;
+			var collision = true;
+			if object_index == oEnemyShield
+			{
+				collision = false;
+				var _dir = image_xscale == 1 ? -1 : 1;
+				if sign(_hsp) != _dir
+				{
+					collision = true;
+				}
+			}
+			
+			if collision
+			{
+				hp--;
+				flash = 3;
+				hitfrom = other.direction;
+			}
 		}
 		instance_destroy();
 	}
