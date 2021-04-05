@@ -45,4 +45,4 @@ draw_set_valign(fa_top);
 
 draw_set_color(c_black);
 draw_rectangle(gui_width,gui_height-20,gui_width+30,gui_height,false);
-
+draw_set_color(c_white);

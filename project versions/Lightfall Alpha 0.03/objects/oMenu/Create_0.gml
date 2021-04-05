@@ -1,11 +1,11 @@
 /// @description GUI/VARS/Menu Setup
 
-#macro SAVEFILE "Save.sav"
-#macro RES_W 480	
-#macro RES_H 270
-#macro RES_SCALE 2 //how much to scale the pixel art
-#macro RES_RATIO RES_H/RES_W
-#macro CAM_SMOOTH 0.1
+//#macro SAVEFILE "Save.sav"
+//#macro RES_W 480	
+//#macro RES_H 270
+//#macro RES_SCALE 2 //how much to scale the pixel art
+//#macro RES_RATIO RES_H/RES_W
+//#macro CAM_SMOOTH 0.1
 
 //Resize window & applicatiom surface
 window_set_size(RES_W * RES_SCALE, RES_H * RES_SCALE); 

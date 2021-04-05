@@ -52,12 +52,12 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150)
 	{
 		case 6:
 		instance_destroy();
-		with all
+		/*with all
 		{
 			image_speed = image_speed_previous;
-		}
+		}*/
 		global.game_paused = false;
-		with oPlayer alarm[0] = 30;
+		//with oPlayer alarm[0] = 30; //kills player
 		display_set_gui_size(RES_W, RES_H);
 		break
 		case 5:

@@ -1,5 +1,6 @@
 /// @description Set up Camera
 #region set up resolution macros
+	#macro SAVEFILE "Save.sav"
 	#macro RES_W 480	
 	#macro RES_H 270
 	#macro RES_SCALE 2 //how much to scale the pixel art

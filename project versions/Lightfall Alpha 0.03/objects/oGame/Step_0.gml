@@ -19,31 +19,31 @@ if keyboard_check_released(key_pause_menu)
 	if !(global.game_paused)
 	{
 		pause_menu = instance_create_layer(0, 0, "Player", oPauseMenu);
-		with all
+		/*with all
 		{
 			image_speed_previous = image_speed;
 			image_speed = 0;
-		}
+		}*/
 		global.game_paused = true;
 	}
 	else
 	{
-		with all
+		/*with all
 		{
 			image_speed = image_speed_previous;
 		}
 		display_set_gui_size(RES_W, RES_H);
-		global.game_paused = false;
+		global.game_paused = false;*/
 		instance_destroy(pause_menu);
 	}
 }
 
 if global.game_paused
 {
-	with all
+	/*with all
 	{
 		image_speed_previous = image_speed;
 		image_speed = 0;
-	}
+	}*/
 }
 

@@ -57,7 +57,7 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	#region debug stats
 	if global.debugmode = true {
 		DrawSetText(c_white,fSign,fa_left, fa_top);
-		draw_text(10,14,"fps: " + string(oPlayer.coyote_time));
+		draw_text(10,14,"fps: " + string(fps_reader));
 		draw_text(10,24,"zoom: " + string(oPlayer.jumps));
 				
 		/*

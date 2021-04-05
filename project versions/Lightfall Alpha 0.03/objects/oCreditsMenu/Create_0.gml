@@ -1,26 +1,17 @@
 /// @description GUI/VARS/Menu Setup
 
-//#macro SAVEFILE "Save.sav"
-#macro RES_W 480	
-#macro RES_H 270
-text_res_scale = 1; //how much to scale the pixel art
-title_res_scale = .7;
-#macro RES_RATIO RES_H/RES_W
-#macro CAM_SMOOTH 0.1
-
-//Resize window & applicatiom surface
-//window_set_size(RES_W * RES_SCALE, RES_H * RES_SCALE); 
-//surface_resize(application_surface, RES_W * RES_SCALE, RES_H * RES_SCALE);
-
 //set size of text + GUI. Higher = smaller
 display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
 
 //center window
-//var display_width  = display_get_width();
-//var display_height = display_get_height();
-//var window_width = RES_W * text_res_scale;
-//var window_height = RES_H * text_res_scale;
-//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
+text_res_scale = 1; //how much to scale the pixel art
+title_res_scale = .7;
+
+var display_width  = display_get_width();
+var display_height = display_get_height();
+var window_width = RES_W * text_res_scale;
+var window_height = RES_H * text_res_scale;
+window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
  
 gui_width = display_get_gui_width();
