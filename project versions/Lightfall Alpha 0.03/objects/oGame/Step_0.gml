@@ -31,9 +31,9 @@ if keyboard_check_released(key_pause_menu)
 		/*with all
 		{
 			image_speed = image_speed_previous;
-		}
+		}*/
 		display_set_gui_size(RES_W, RES_H);
-		global.game_paused = false;*/
+		global.game_paused = false;
 		instance_destroy(pause_menu);
 	}
 }
