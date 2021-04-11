@@ -115,8 +115,9 @@ else {
 				//create projectile
 				with (instance_create_layer(x,y,"Bullets",primary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 					direction = other.image_angle+random_range(weapon_accuracy,weapon_accuracy);
-					spd = weapon_speed_min+oWeaponPlayer.weapon_charge;
-					if spd >=weapon_speed_max g = -0.1; else g = 0.2;
+					spd = weapon_speed_max //weapon_speed_min+oWeaponPlayer.weapon_charge;
+					//if spd >=weapon_speed_max g = -0.1; else g = 0.2;
+					
 					image_angle = direction;
 					x = x - lengthdir_x(0,other.image_angle);
 					y = y - lengthdir_y(0,other.image_angle);

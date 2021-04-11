@@ -58,7 +58,7 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	if global.debugmode = true {
 		DrawSetText(c_white,fSign,fa_left, fa_top);
 		draw_text(10,14,"fps: " + string(fps_reader));
-		draw_text(10,24,"zoom: " + string(oPlayer.jumps));
+		draw_text(10,24,"zoom: " + string(oCamera.zoom));
 				
 		/*
 		draw_set_color(c_white);

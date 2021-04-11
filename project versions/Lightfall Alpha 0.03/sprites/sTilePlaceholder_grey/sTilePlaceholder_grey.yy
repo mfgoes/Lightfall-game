@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"29a6f8a2-91f0-4b21-b97b-0e0975e4ce55","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "Tiles and backgrounds",
+    "path": "folders/Sprites/Tiles and backgrounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTilePlaceholder_grey",

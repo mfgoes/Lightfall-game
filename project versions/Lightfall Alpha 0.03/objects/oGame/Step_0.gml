@@ -1,5 +1,5 @@
 /// @description controls
-/// @desc Switch to Fullscreen	CRASHES GAME*
+
 var key_debug		= ord("1");
 var key_restart		= ord("R")
 var key_fullscreen  = ord("F");

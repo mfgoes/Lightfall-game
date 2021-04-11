@@ -24,4 +24,12 @@ if !instance_exists(oCamera) {
 if !instance_exists(oTransition) {
 	instance_create_depth(0,0,depth,oTransition);
 }
+
+//draw parallax
+if !instance_exists(oParallaxBgr) {
+	instance_create_depth(0,0,depth,oParallaxBgr);
+}
+
+
+
 pause_menu = noone;

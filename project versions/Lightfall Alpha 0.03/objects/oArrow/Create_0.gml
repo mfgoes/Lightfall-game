@@ -1,5 +1,5 @@
 /// @description init projectile variables
 
-g = 0.25; //gravity
+g = 0.02; //gravity
 wiggle = 1;
 active = true;

@@ -34,7 +34,7 @@ function Load_AbilityData(argument0){
 	//Archer character
 	[sWeaponBow_Placeholder,15, 60, 120, 30, //cooldown times
 	oArrow, oAtk_Laser, oAtk_Special, oAtk_Laser,  //each cooldown has a unique projectile
-	0, 3, 10, 2],
+	0, 10, 15, 2],
 	
 	//Char 2
 	[sGun,15, 35, 60, 30, 

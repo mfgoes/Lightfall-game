@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "Tiles and backgrounds",
+    "path": "folders/Sprites/Tiles and backgrounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTileGrassTemp",

@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0467a125-8ce6-4778-b9ab-01a0ed71e499","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "Tiles and backgrounds",
+    "path": "folders/Sprites/Tiles and backgrounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTrees",

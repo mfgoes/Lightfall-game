@@ -1,21 +1,21 @@
-//gm live
 if global.game_paused
 {
 	exit;
 }
 
-if (live_call()) return live_result; 
+//GMLive
+//if (live_call()) return live_result; 
 
 //timers start camera position
 timer_init("zoom_out");
 if timer_get("zoom_out") =-1 {timer_set("zoom_out",10)}
-if start_zoom < 0 && alarm[0] = -1 {start_zoom+=0.001;} //start_zoom = -0.1; lerp this later (for smooth zoom out)
+if start_zoom > 0 && alarm[0] = -1 {start_zoom-=0.001;} //start_zoom = -0.1; lerp this later (for smooth zoom out)
 
 //Upate camera destination
 if (instance_exists(follow)) 
 {
 	//while aiming, follow mouse position slightly
-	var pan_distance_weapon = 20; if zoom <= 0.10 pan_distance_weapon = 7;
+	var pan_distance_weapon = 10; if zoom <= 0.10 pan_distance_weapon = 4;
 	if (weapon_zoom !=0 && follow = oPlayer) {
 		var pan_distance_weapon = clamp(point_distance(follow.x,follow.y,mouse_x,mouse_y),12,35); //max camera shift when focusing weapon
 	}
@@ -49,15 +49,23 @@ camera_set_view_size(cam,view_w,view_h);
 surface_resize(application_surface,iw,ih);
 camera_set_view_pos(cam,x-view_w/2,y-view_h/2); //set new position to include screenshake and zoom position
 
-#region //parallax scrolling background
+#region //parallax scrolling background ඞ
+
 if (room != rMenu)
 	{
-	if (layer_exists("bgr_mountains")) {
-		layer_x("bgr_mountains",x/2);	
+	if (layer_exists("background1")) {		//close background
+		layer_x("background1",x*0.98);	
+		//layer_y("background1",camera_get_view_y(cam)*0.9); //change this dependant on zoom level
+	}
+	if (layer_exists("background2")) {
+		layer_x("background2",x*1);	
+		//layer_y("background2",camera_get_view_y(cam)*0.95);
+	}
+	if (layer_exists("background3")) {		//far background
+		layer_x("background3",x*1);	
+		//layer_y("background3",camera_get_view_y(cam)*0.95-40);
 	}
 	
-	if (layer_exists("Background")) {
-		layer_x("Background",x+300);	
-	}
+	
 }
 #endregion

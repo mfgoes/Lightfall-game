@@ -1,4 +1,8 @@
 /// @description Set up Camera
+//GMLive
+//if (live_call()) return live_result; 
+
+
 #region set up resolution macros
 	#macro SAVEFILE "Save.sav"
 	#macro RES_W 480	
@@ -47,9 +51,9 @@ if (instance_exists(follow)) {
 alarm[0] = 30; //replace with timer later
 
 //cam_speed = 5;
-zoom_speed = 0.5;
-start_zoom = -0.05; //zoom level at start of level
-zoom = 0.2; //zoom level adjusted through scroll
+zoom_speed = 0.8;
+start_zoom = 0.05; //zoom level at start of level
+zoom = 0.15; //zoom level adjusted through scroll
 weapon_zoom = 0; //zoom level affected by weapon
 
 
