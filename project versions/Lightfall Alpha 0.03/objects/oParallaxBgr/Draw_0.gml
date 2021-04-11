@@ -1,28 +1,29 @@
-//draw_sprite(sBgr_Sand2,0,0,20);
+/// @desc draw parallax
 
-{
 //GMLive
 //if (live_call()) return live_result; 
 
-//draw_text(camera_get_view_x(oCamera.cam)+20,camera_get_view_y(oCamera.cam)+100,xscale); 
+//bgrs
+var background1 = sBgr_Sand1;
+var background2 = sBgr_Sand2;
+var background3 = sBgr_Sand3;
 
-//it seems the camera position is shifting when zooming. try to bypass this to maintain consistency in position. 
-
-//GMLive
-if (live_call()) return live_result; 
+//init vars
 var xscale = camera_get_view_width(view_camera[0])/display_get_width();
 var yscale = camera_get_view_height(view_camera[0])/display_get_height();
-var background1 = sBgr_Sand1;
-var xshift = 0;
-var yshift = 0;
-var bgrsize = 1;
+var bgrsize = 5.5;
 var vx = camera_get_view_x(oCamera.cam)// + camera_get_view_width/2;
 var vy = camera_get_view_y(oCamera.cam) //+ camera_get_view_height/2;
 
-draw_sprite_ext(background1,0, camera_get_view_x(view_camera[0])+xshift,camera_get_view_y(view_camera[0])+yshift,xscale*bgrsize,yscale*bgrsize,0,c_white,1);
+var xshiftcam = xscale*oCamera.x;
+var yshiftcam = yscale*oCamera.y + (yscale*-400);
 
+var xshift = camera_get_view_x(view_camera[0]) + (xscale*800); //sprite_get_width(background1)*0.4;
+var yshift = camera_get_view_y(view_camera[0])
 
+//draw
+draw_sprite_tiled_ext(background3,0, xshift+xshiftcam*0,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);
 
-//draw_sprite_ext(background1,0,vx,vy,xscale,yscale,0,c_white,1);
+draw_sprite_tiled_ext(background2,0, xshift+xshiftcam*-0.05,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);
 
-}
+draw_sprite_tiled_ext(background1,0, xshift+xshiftcam*-0.1,yshift+yshiftcam*-0.1,xscale*bgrsize,yscale*bgrsize,c_white,1);

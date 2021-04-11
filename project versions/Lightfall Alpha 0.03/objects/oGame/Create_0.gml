@@ -27,7 +27,7 @@ if !instance_exists(oTransition) {
 
 //draw parallax
 if !instance_exists(oParallaxBgr) {
-	instance_create_depth(0,0,depth,oParallaxBgr);
+	instance_create_depth(0,0,40,oParallaxBgr);
 }
 
 

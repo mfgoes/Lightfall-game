@@ -29,7 +29,7 @@
 	var display_height = display_get_height();
 	var window_width = RES_W * RES_SCALE;
 	var window_height = RES_H * RES_SCALE;
-	window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
+	//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2); //BRING THIS BACK LATER
 
 	//"ideal width" -> Remove this later
 	iw = display_width;
@@ -50,7 +50,7 @@ if (instance_exists(follow)) {
 }
 alarm[0] = 30; //replace with timer later
 
-//cam_speed = 5;
+//cam_speed = 5; (set in end step event)
 zoom_speed = 0.8;
 start_zoom = 0.05; //zoom level at start of level
 zoom = 0.15; //zoom level adjusted through scroll
@@ -79,5 +79,5 @@ weapon_zoom = 0; //zoom level affected by weapon
 	shake_length = 0;
 	shake_magnitude = 6;
 	shake_remain = 2;
-	buff = 32; //??? remove this if possible
+	buff = 0; //??? room clipping / boundaries for camera
 #endregion
