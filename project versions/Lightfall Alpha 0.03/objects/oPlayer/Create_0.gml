@@ -5,10 +5,10 @@ if (live_call()) return live_result;
 #region Load basic character data
 	hsp = 0;
 	vsp = 0;
-	grv = 0.5;
+	grv = 0.32; //gravity
 	hascontrol = true;
 	coyote_time = 10; //for coyote jump
-	jump_speed = 7;
+	jump_speed = 5.5;
 	jumps = 0; //double jumps
 	jumps_max = 2;
 	
@@ -46,6 +46,7 @@ if (live_call()) return live_result;
 	current_character = character.archer; //archer character
 	Load_PlayerStartData(current_character);
 	
+	current_walkspd = 0;
 	walkspd = PLayerStartData[current_character][0];
 	hp_max  = PLayerStartData[current_character][1]; 
 	hp = hp_max;

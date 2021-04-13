@@ -1,45 +1,57 @@
 // Player IDLE, WALK, JUMP
 function PlayerStateFree(){
 	
-//Slow down while aiming weapon
-var slowwalk = 0.5; 
-if current_weapon = 0 && mouse_check_button(mb_left) = true {
-slowwalk = 0.5;
-} 
-else
-slowwalk = 1; //1 = no slow walk
+#region walking
+	//Slow down while aiming weapon
+	var slowwalk = 0.5; 
+	if current_weapon = 0 && mouse_check_button(mb_left) = true {
+	slowwalk = 0.5;
+	} 
+	else
+	slowwalk = 1; //1 = no slow walk
 
-var move = key_right - key_left;
-hsp = (move * walkspd * slowwalk) + (gunkickx);
-vsp = (vsp + grv) + gunkicky; 
+	//accelerate
+	var move = key_right - key_left;
+	var decelerate = 0; 
+	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.2 decelerate = 0; } 
+	
+	//decelerate
+	if move = 0 {
+		if current_walkspd > 0 current_walkspd -=0.4; else {current_walkspd = 0; decelerate = 0;}
+		decelerate = current_walkspd * sign(hsp);
+	} else decelerate = 0; 
+	
+	
+	hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
 
-gunkickx = 0; 
-gunkicky = 0;
+#endregion
 
+#region gravity + jumping
+	if vsp < 12 vsp = (vsp + grv) + gunkicky else vsp = round(vsp); //limit fall speed. 
 
-//jumping code
-if (place_meeting(x,y+1,oWall)) {
-	coyote_time = 15; //coyote. rename this later. 
-	jumps = jumps_max;	
-}
+	gunkickx = 0; 
+	gunkicky = 0;
+	//jumping code
+	if (place_meeting(x,y+1,oWall)) {
+		coyote_time = 15; //coyote. rename this later. 
+		jumps = jumps_max;	
+	}
 
-if (key_jump) && (jumps > 0) {
-	vsp = -jump_speed;
-	jumps -=1;
-}
+	if (key_jump) && (jumps > 0) {
+		vsp = -jump_speed;
+		jumps -=1;
+	}
 
-if !place_meeting(x,y+1,oWall) && coyote_time = 0 {
-	if jumps = jumps_max jumps -=1; 	
-}
+	if !place_meeting(x,y+1,oWall) && coyote_time = 0 {
+		if jumps = jumps_max jumps -=1; 	
+	}
 
-if coyote_time > 0 coyote_time -=1; //this variable is for coyote jump
+	if coyote_time > 0 coyote_time -=1; //this variable is for coyote jump
 
+	if hsp < 0 facing_direction = 180 else if hsp > 0 facing_direction = 0;
+#endregion 
 
-
-if hsp < 0 facing_direction = 180 else if hsp > 0 facing_direction = 0;
-
-
-#region //allow grappling
+#region grappling hook
 if canrope = 1 {
 		if key_grapple = true
 		{
@@ -55,14 +67,13 @@ if canrope = 1 {
 	}
 #endregion
 
-#region jumping pads
+#region jumping pads (needs refinement)
 	if (place_meeting(x,y+1,oTrampoline)) {
-		vsp -=8; 	
-	}
+		vsp -=2; 	
+	}	
 #endregion
 
-
-///ANIMATION
+#region animations
 	//is jumping
 	if (!place_meeting(x,y+1,oWall))	//CHECK IF ON GROUND
 	{
@@ -96,18 +107,19 @@ if canrope = 1 {
 		//if jump_cooldown_begin = 1 {image_index = 0; sprite_index = spriteJump;}
 	}
 
+#endregion
 
-
-//footsteps
-//ADD LATER: set trigger step for when to make particles dependant on selected character
-if sprite_index = spriteWalk && (image_index = 1 or image_index = 3){ 
-	repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
-	{vsp = random_range(-0.2,0.2) image_alpha = random_range(0.1,0.27);}
+#region sound effects (move this somewhere else later)
+	//footsteps
+	//ADD LATER: set trigger step for when to make particles dependant on selected character
+	if sprite_index = spriteWalk && (image_index = 1 or image_index = 3){ 
+		repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
+		{vsp = random_range(-0.2,0.2) image_alpha = random_range(0.1,0.27);}
 	
-	//play footstep sound
-	var footstepsound = choose(snFootstep2,snFootstep3,snFootstep4); //,snFootstep2,snFootstep3,snFootstep4
-	audio_sound_gain(footstepsound,0.1,0);
-	if !audio_is_playing(footstepsound) audio_play_sound(footstepsound,10,0);
-	}
+		//play footstep sound
+		var footstepsound = choose(snFootstep2,snFootstep3,snFootstep4); //,snFootstep2,snFootstep3,snFootstep4
+		audio_sound_gain(footstepsound,0.1,0);
+		if !audio_is_playing(footstepsound) audio_play_sound(footstepsound,10,0);
+		}	
+#endregion
 }
-

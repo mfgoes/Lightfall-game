@@ -1,7 +1,7 @@
 /// @description Draw Score
 
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
 //	put in script: DRAW PLAYER GUI*****
 
@@ -37,7 +37,7 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	
 	//draw stats
 	draw_set_halign(fa_left);
-	draw_text(10,4,"Lightfall Demo - Press R to restart");
+	//draw_text(10,4,"Lightfall Demo - Press R to restart");
 	var hp = oPlayer.hp; var hp_max = oPlayer.hp_max;
 	var healthUImax = 100; 
 	var healthUI = (hp/hp_max) * healthUImax;
@@ -48,7 +48,7 @@ if (room != rMenu) && (instance_exists(oPlayer))
 	}
 	draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
 	draw_set_halign(fa_left);
-	draw_text(10,cooldown_posy-8,"hp: " + string(hp));
+	draw_text(10,cooldown_posy-100,"curr walkspd: " + string(oPlayer.hsp));
 	draw_set_color(make_colour_rgb(23, 23, 43)); //hp bgr
 	draw_rectangle(10,cooldown_posy+10,healthUImax,cooldown_posy+20,0);
 	draw_set_color(make_colour_rgb(166, 252, 219)); //hp fgr

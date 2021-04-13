@@ -26,4 +26,4 @@ draw_sprite_tiled_ext(background3,0, xshift+xshiftcam*0,yshift,xscale*bgrsize,ys
 
 draw_sprite_tiled_ext(background2,0, xshift+xshiftcam*-0.05,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);
 
-draw_sprite_tiled_ext(background1,0, xshift+xshiftcam*-0.1,yshift+yshiftcam*-0.1,xscale*bgrsize,yscale*bgrsize,c_white,1);
+draw_sprite_tiled_ext(background1,0, xshift+xshiftcam*-0.2,yshift+yshiftcam*-0.1,xscale*bgrsize,yscale*bgrsize,c_white,1);
