@@ -6,4 +6,5 @@ hsp = random_range(-2,2);
 vsp = random_range(-2,2);
 image_xscale = choose (1,-1);
 image_yscale = choose (1,-1);
-
+life = 60; //1 second
+col_start = c_white;

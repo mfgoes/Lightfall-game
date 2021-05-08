@@ -11,7 +11,7 @@
 #region //Weapon data ------ Set primary weapon as bow
 	current_weapon  = 0; //this is the archer weapon. Put into player data script later
 	weapon_charge = 0; 
-	weapon_charge_max = 8;
+	weapon_charge_max = 5;
 	weapon_recoil = 0;
 	gunkickx = 0;
 	gunkicky = 0;
@@ -20,6 +20,9 @@
 	image_alpha = 0;
 	weapon_active = 0; 
 	flip_weapon = 0;
+	
+	shots_total = 0; //for triple shot
+	sound_shot = lux_shot_03; 
 #endregion
 
 ///Added zoom

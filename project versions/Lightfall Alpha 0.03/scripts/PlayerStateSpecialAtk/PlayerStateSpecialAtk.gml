@@ -10,7 +10,7 @@ function PlayerStateSpecialAtk(){
 	vsp = (vsp + grv);
 	using_ability = 1;
 	//create projectile
-	if image_index = 1
+	/*if image_index = 1
 	{
 		with (instance_create_layer(oWeaponPlayer.x,oWeaponPlayer.y,"Bullets",oAtk_Special)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			direction = oWeaponPlayer.image_angle;
@@ -23,5 +23,5 @@ function PlayerStateSpecialAtk(){
 		timer_set("generate attack",3);
 		}
 	}
-	else gunkickx = 0;
+	else gunkickx = 0;*/
 }

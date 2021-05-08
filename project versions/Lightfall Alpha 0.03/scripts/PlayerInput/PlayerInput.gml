@@ -12,7 +12,8 @@ function PlayerInput(){
 		key_pausegame = keyboard_check(vk_escape) || gamepad_button_check(0,gp_start);
 		
 		//Abilities - These are dependant on the selected character
-		if alarm[0] == -1 key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1);		//Ranged attack
+		if alarm[0] == -1 
+		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1);		//Ranged attack
 		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr);	//Melee attack
 		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3);		//AOE attack
 		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);		//Evade
@@ -35,6 +36,7 @@ function PlayerInput(){
 		}
 
 		//secondary ability 
+		/*
 		if (key_secondary) {
 			if secondary_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
 				image_index = 0; 
@@ -42,7 +44,7 @@ function PlayerInput(){
 				state = call_ability[cooldown_ability.secondary]; //state = PlayerStateMeleeAtk;
 				secondary_cooldown = secondary_cooldown_full;
 				} 
-		}
+		}*/
 		
 		//third ability -> exploding missile 
 		if (key_special) { 

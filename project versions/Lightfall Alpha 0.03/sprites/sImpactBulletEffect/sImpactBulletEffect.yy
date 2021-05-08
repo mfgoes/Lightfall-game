@@ -75,9 +75,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"417a6c6f-43ad-43eb-ab47-79cd404e7c94","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Sprites/Weapons.yy",
+    "name": "Effects",
+    "path": "folders/Sprites/Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "sImpactBulletEffect",

@@ -6,20 +6,24 @@ if global.game_paused
 	exit;
 }
 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
-
+			
+				
+				
 #region init timers
 	//cooldown abilities
 	timer_init("primary_cooldown");	
 	timer_init("secondary_cooldown"); 
 	timer_init("special_cooldown");
 	timer_init("attack_recover"); //Animation duration while attacking. Players can't walk while attack recovers. 
+	timer_init("triple_shot");
 	
 	//other
 	timer_init("weapon_zoomed_in");	//stay zoomed in when aiming for a while
 	timer_init("recover_from_recoil");
 	timer_init("weapon_display");	
+	timer_init("poof_trail");
 #endregion
 
 #region load weapon data from oPlayer -> PRIMARY, SECONDARY, SPECIAL
@@ -38,7 +42,7 @@ if global.game_paused
 #endregion
 
 #region zoom when holding LMB
-	if ((key_attack_pressed) && weapon_charge > weapon_charge_max*0.55) {
+	/*if ((key_attack_pressed) && weapon_charge > weapon_charge_max*0.55) {
 		weapon_zoom = -0.003;
 		}
 	else {
@@ -48,6 +52,7 @@ if global.game_paused
 		oCamera.weapon_zoom = weapon_zoom;
 	}
 	else exit;
+	*/
 #endregion
 
 #region set weapon pos + visibility
@@ -101,22 +106,29 @@ else {
 				}
 				timer_set("weapon_display",120); 
 				if (weapon_charge < weapon_charge_max) 
-					weapon_charge+=0.5;
+					weapon_charge+=0.25;
+				else if timer_get("poof_trail") <= 1 {
+					dd = instance_create_depth(x+lengthdir_x(10,image_angle)+random_range(-2,2),y+lengthdir_y(10,image_angle)+random_range(-3,3),depth-1,oDust); 
+					dd.hsp = 0; dd.vsp = 0; if random(1)<0.4 dd.col_start = c_orange; dd.image_alpha = 0.8;
+					timer_set("poof_trail",10);
+				}
+	
 			}
 			
 			if (key_attack_released) //for bow weapons
 			{
-				oPlayer.primary_cooldown = primary_cooldown_full;
-				timer_set("primary_cooldown",primary_cooldown_full);
-				audio_sound_gain(snDartGun1,0.3,0);
-				audio_sound_pitch(snDartGun1,choose(0.8,0.9,0.9,1));
-				audio_play_sound(snDartGun1,2,0);
+				//oPlayer.primary_cooldown = primary_cooldown_full; //(reuse more complex DS afterwards)
+				timer_set("primary_cooldown",25);
+				audio_sound_gain(HLD_shot_01,0.1,0);
+				audio_sound_pitch(HLD_shot_01,choose(0.9,0.95,1));
+				audio_play_sound(HLD_shot_01,2,0);
 				
 				//create projectile
 				with (instance_create_layer(x,y,"Bullets",primary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 					direction = other.image_angle+random_range(weapon_accuracy,weapon_accuracy);
-					spd = weapon_speed_max //weapon_speed_min+oWeaponPlayer.weapon_charge;
-					//if spd >=weapon_speed_max g = -0.1; else g = 0.2;
+					
+					if  oWeaponPlayer.weapon_charge >= oWeaponPlayer.weapon_charge_max {spd = 7; super_arrow = true;}
+					else {spd = 8; super_arrow = false}
 					
 					image_angle = direction;
 					x = x - lengthdir_x(0,other.image_angle);
@@ -134,19 +146,20 @@ else {
 	
 	#region //secondary attack
 		if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
-			//display animation
-			if timer_get("weapon_display") <= 0 or sprite_index != oPlayer.character_weapons[1] { 
-				sprite_index = oPlayer.character_weapons[1];
-			}
-			timer_set("weapon_display",35); 
-			timer_set("secondary_cooldown",secondary_cooldown_full);
-			weapon_recoil = -2;
+			timer_set("secondary_cooldown",35);
 			
-			//generate attack + anim
-			state = PlayerStateMeleeAtk; //for animation		
+			shots_total = 3; //shoot 3 bullets after each other. This should be pretty satisfying to hear.
+			//do sounds later
+			
+			//gun kickback
+			gunkickx = lengthdir_x(-2,other.image_angle-180);
+			gunkicky = lengthdir_y(-2,other.image_angle-180);
+			weapon_recoil = 3;
+			timer_set("weapon_display",120); 
 		}
 	#endregion
 	
+	/*
 	#region special attack
 		if key_special && oPlayer.third_cooldown = 0 {
 			//reset weapon
@@ -155,9 +168,28 @@ else {
 				//sprite_index = oPlayer.character_weapons[1];
 			}
 		}
-	#endregion
+	#endregion*/
 	} 
 	//if rolling, don't show weapon
 	else weapon_active = 0;
 #endregion
 
+//execute triple shot
+if shots_total > 0 && timer_get("triple_shot") <=0 {
+	timer_set("triple_shot",6);
+	with (instance_create_layer(x,y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+	direction = other.image_angle; 
+	spd = 7;
+					
+	image_angle = direction;
+	x = x - lengthdir_x(0,other.image_angle);
+	y = y - lengthdir_y(0,other.image_angle);
+	
+	//sound
+	sound_shot = lux_shot_05; 
+	
+	audio_sound_gain(sound_shot,0.1,0); 
+	audio_play_sound(sound_shot,2,0);
+	}
+	shots_total --;
+}

@@ -3,9 +3,9 @@ function PlayerStateFree(){
 	
 #region walking
 	//Slow down while aiming weapon
-	var slowwalk = 0.5; 
+	var slowwalk = 0.9; 
 	if current_weapon = 0 && mouse_check_button(mb_left) = true {
-	slowwalk = 0.5;
+	slowwalk = 0.9;
 	} 
 	else
 	slowwalk = 1; //1 = no slow walk
@@ -13,11 +13,12 @@ function PlayerStateFree(){
 	//accelerate
 	var move = key_right - key_left;
 	var decelerate = 0; 
-	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.2 decelerate = 0; } 
+	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.4 decelerate = 0; } 
 	
 	//decelerate
-	if move = 0 {
-		if current_walkspd > 0 current_walkspd -=0.4; else {current_walkspd = 0; decelerate = 0;}
+	if move = 0 { //create fall momentum by decreasing decelleration.
+		if current_walkspd > 0.4 {if place_meeting(x,y+1,oWall) current_walkspd -=0.4; else current_walkspd -=0.05;} 
+		else {current_walkspd = 0; decelerate = 0;}
 		decelerate = current_walkspd * sign(hsp);
 	} else decelerate = 0; 
 	

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sGun",
-    "path": "sprites/sGun/sGun.yy",
+    "name": "sWeaponBow_Placeholder",
+    "path": "sprites/sWeaponBow_Placeholder/sWeaponBow_Placeholder.yy",
   },
   "solid": false,
   "visible": true,

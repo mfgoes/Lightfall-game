@@ -16,19 +16,6 @@ killtextscale = 1;
 fps_reader = 0;
 alarm[0] = 20; //read fps every few steps, not every step. 
 
-//create important objects
-if !instance_exists(oCamera) {
-	dd = instance_create_depth(0,0,depth,oCamera);
-	dd.follow = oPlayer;
-}
-if !instance_exists(oTransition) {
-	instance_create_depth(0,0,depth,oTransition);
-}
-
-//draw parallax
-if !instance_exists(oParallaxBgr) {
-	instance_create_depth(0,0,40,oParallaxBgr);
-}
 
 
 

@@ -42,4 +42,4 @@
 		
 //debug
 //draw_text(x,y,timer_get("weapon_display"));
-//draw_text(x,y-20,weapon_recoil);
+draw_text(x,y-20,weapon_charge);

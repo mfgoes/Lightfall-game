@@ -1,12 +1,13 @@
 /// @desc draw parallax
 
 //GMLive
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
 //bgrs
 var background1 = sBgr_Sand1;
 var background2 = sBgr_Sand2;
 var background3 = sBgr_Sand3;
+var backgroundsky = sBgr_SandMoon;
 
 //init vars
 var xscale = camera_get_view_width(view_camera[0])/display_get_width();
@@ -22,7 +23,9 @@ var xshift = camera_get_view_x(view_camera[0]) + (xscale*800); //sprite_get_widt
 var yshift = camera_get_view_y(view_camera[0])
 
 //draw
-draw_sprite_tiled_ext(background3,0, xshift+xshiftcam*0,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);
+draw_sprite_ext(backgroundsky,0, xshift+xshiftcam*0,yshift,xscale*bgrsize,yscale*bgrsize,0,c_white,1); //moon / sky
+
+draw_sprite_tiled_ext(background3,0, xshift+xshiftcam*0.02,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);
 
 draw_sprite_tiled_ext(background2,0, xshift+xshiftcam*-0.05,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);
 

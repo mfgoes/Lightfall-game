@@ -22,7 +22,7 @@ function Load_CharacterData(argument0){
 	switch (argument0) {
 		case 0: //archer character (main)
 			char_sprites = [sProtagIdle, sProtagWalk, sArcherRoll, sProtagJump, sArcherDie,sArcherMask, sProtagAim, sProtagMelee];
-			character_weapons = [sWeaponBow_Placeholder,sGun, 0,12,5,2,oArrow, oAtk_Laser, oAtk_Special] 
+			character_weapons = [sWeaponBow_Placeholder,sGun, 0,12,5,2,oArrow, oAtk_Laser, oArrow_Triple] 
 			call_ability = [PlayerStateFree,			//None
 							PlayerStateFree,			//Bow
 							PlayerStateMeleeAtk,		//Laser 2
