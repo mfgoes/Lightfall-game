@@ -80,7 +80,7 @@ if canrope = 1 {
 	{
 		sprite_index = spriteJump;
 		image_speed = 0;
-		if (sign(vsp) > 0) image_index = 2; else image_index = 1;
+		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 	}
 	else 
 	//is walk or idle or 'start jumping'

@@ -8,3 +8,4 @@ grv = 0.03; // was 0.02 gravity
 vsp = 0;
 explode = false
 angle_randomize = 0;
+damage = 1;
