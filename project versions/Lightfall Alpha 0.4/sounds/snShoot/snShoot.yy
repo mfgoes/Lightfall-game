@@ -13,8 +13,8 @@
   "soundFile": "snShoot.wav",
   "duration": 0.461304,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Player sounds",
+    "path": "folders/Sounds/Player sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "snShoot",

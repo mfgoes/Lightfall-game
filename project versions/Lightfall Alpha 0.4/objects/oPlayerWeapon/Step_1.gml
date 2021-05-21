@@ -112,7 +112,6 @@ else {
 					dd.hsp = 0; dd.vsp = 0; if random(1)<0.4 dd.col_start = c_orange; dd.image_alpha = 0.8;
 					timer_set("poof_trail",10);
 				}
-	
 			}
 			
 			if (key_attack_released) //for bow weapons

@@ -40,7 +40,22 @@ function PlayerStateFree(){
 
 	if (key_jump) && (jumps > 0) {
 		vsp = -jump_speed;
+		if jumps <=1 { //double jump sound
+			var jumpsound = choose(snJump1,snJump2,snJump3);
+			audio_sound_gain(jumpsound,0.15,0);
+			audio_play_sound(jumpsound,0,0); 
+		}
 		jumps -=1;
+		repeat(3) {
+				with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
+					vsp = -0.1; 
+					hsp = random_range(-2,2)
+					image_xscale = choose (1,-1);
+					image_yscale = choose (1,-1);
+				}	
+		}
+		
+		
 	}
 
 	if !place_meeting(x,y+1,oWall) && coyote_time = 0 {
@@ -85,15 +100,17 @@ if canrope = 1 {
 	else 
 	//is walk or idle or 'start jumping'
 	{
-		if sprite_index == spriteJump && image_index = 2 {
-			audio_sound_pitch(snLanding,choose(0.8,1.0,1.2));
-			audio_sound_gain(snLanding,0.02,0);
-			audio_play_sound(snLanding,4,false);
-			repeat(3)		//create dust effect
-			{
-				with(instance_create_layer(x,bbox_bottom,"Bullets",oDust))
-				{vsp = 0; image_alpha = 0.5;}
-			}
+		if sprite_index == spriteJump && image_index = 1 {
+			audio_sound_pitch(snJump1,choose(0.8,1.0,1.2));
+			audio_sound_gain(snJump1,0.1,0);
+			audio_play_sound(snJump1,4,false);
+			repeat(3) {
+				with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
+					vsp = 0.1; image_alpha = 0.5;
+					hsp = random_range(-1,1); 
+					image_xscale = choose (1,-1);
+					image_yscale = choose (1,-1);
+				}}	
 			}
 		if (hsp == 0) && !(key_left or key_right) && using_ability = 0 //Idle animation
 		{
@@ -102,25 +119,26 @@ if canrope = 1 {
 		}
 		else //walk animation
 		{
-			if sprite_index != spriteWalk image_index = 0; //reset index. 
+			if sprite_index != spriteWalk {
+				image_index = 0; //reset index. 
+			}
 			sprite_index = spriteWalk; image_speed = 1*slowwalk;			
 		}
-		//if jump_cooldown_begin = 1 {image_index = 0; sprite_index = spriteJump;}
 	}
 
 #endregion
 
 #region sound effects (move this somewhere else later)
 	//footsteps
-	//ADD LATER: set trigger step for when to make particles dependant on selected character
-	if sprite_index = spriteWalk && (image_index = 1 or image_index = 3){ 
+	/*
+	if sprite_index = spriteWalk && (image_index = 1 or image_index = 4){ 
 		repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
 		{vsp = random_range(-0.2,0.2) image_alpha = random_range(0.1,0.27);}
 	
 		//play footstep sound
 		var footstepsound = choose(snFootstep2,snFootstep3,snFootstep4); //,snFootstep2,snFootstep3,snFootstep4
-		audio_sound_gain(footstepsound,0.1,0);
+		audio_sound_gain(footstepsound,0.5,0);
 		if !audio_is_playing(footstepsound) audio_play_sound(footstepsound,10,0);
-		}	
+		}	*/
 #endregion
 }

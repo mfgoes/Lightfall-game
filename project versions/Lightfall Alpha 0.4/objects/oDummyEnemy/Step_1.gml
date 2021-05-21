@@ -31,5 +31,6 @@ if (hp <= 0)
 		{hsp = random_range(-3,3)}
 	}
 	
+	audio_play_sound(statue_stomp_02,2,0);
 	instance_destroy();
 }

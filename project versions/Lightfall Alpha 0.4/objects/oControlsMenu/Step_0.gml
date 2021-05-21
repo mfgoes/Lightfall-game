@@ -34,8 +34,8 @@ if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
 	{
 		menu_x_target = gui_width+20;
 		menu_committed = menu_cursor;
-		audio_sound_gain(snLanding,0.2,0);
-		audio_play_sound(snLanding,5,0);
+		audio_sound_gain(snJump1,0.2,0);
+		audio_play_sound(snJump1,5,0);
 		//ScreenShake(4,10);
 		menu_control = false;		
 	}

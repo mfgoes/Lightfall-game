@@ -25,6 +25,10 @@ if (place_meeting(x,y,oWall)) && (image_index !=0) && active = true
 var _hsp = lengthdir_x(spd,direction);
 if (place_meeting(x,y,pShootable)) && active = true
 {
+	audio_sound_gain(snd_bulletHit,0.2,0);
+	audio_sound_pitch(snd_bulletHit,choose(1,1.1,1.18));
+	audio_play_sound(snd_bulletHit,3,0);
+	
 	with(instance_place(x,y,pShootable))
 	{
 		instance_create_depth(x,y,depth,oBulletImpactEffect);

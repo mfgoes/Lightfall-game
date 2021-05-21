@@ -4,5 +4,7 @@
 if (live_call()) return live_result; 
 
 draw_self();
-
-//if super_arrow = true {draw_set_color(c_red) draw_text(x,y,"super weaponnn"); }
+if gun_flare > 0 {
+	draw_sprite(sBlueArrows,0,xstart+lengthdir_x(5,direction),ystart+lengthdir_y(5,direction));
+	gun_flare-=1;
+}

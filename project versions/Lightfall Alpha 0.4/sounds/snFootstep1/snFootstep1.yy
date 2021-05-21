@@ -13,8 +13,8 @@
   "soundFile": "snFootstep1",
   "duration": 0.08627,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Player sounds",
+    "path": "folders/Sounds/Player sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "snFootstep1",

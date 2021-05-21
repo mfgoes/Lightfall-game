@@ -13,8 +13,8 @@
   "soundFile": "snEquip",
   "duration": 0.222098,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Player sounds",
+    "path": "folders/Sounds/Player sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "snEquip",
