@@ -27,12 +27,7 @@ if spd > 0 {
 }
 else image_angle = angle_prev+angle_randomize;
 
-
-timer_init("arrow_fade");
-
-if timer_get("arrow_fade") = 0 {
-	if image_alpha > 0 {image_alpha-=0.1; timer_set("arrow_fade",5);} else
-	{
-	instance_destroy(); //instance_change(oHitSpark,1);
-	}
+if (place_meeting(x,y,pShootable)) && active = true
+{
+	ScreenShake(1,2);	
 }

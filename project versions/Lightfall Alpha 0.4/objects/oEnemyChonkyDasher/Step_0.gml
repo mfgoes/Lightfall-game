@@ -131,7 +131,7 @@ switch (current_state)
 			audio_sound_gain(snHitEnemy,0.1,0);
 			if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
 			ScreenShake(1,2);
-			//hp-=other.damage;
+			hp-=other.damage;
 			if hp < 1 KillPlayer();
 			
 			}

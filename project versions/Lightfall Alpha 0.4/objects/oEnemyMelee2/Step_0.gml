@@ -151,7 +151,7 @@ switch (current_state)
 				gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
 				audio_sound_gain(snHitEnemy,0.3,0);
 				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
-				//hp-=other.damage;
+				hp-=other.damage;
 				ScreenShake(5,5);
 				if hp < 1 KillPlayer();				
 			}

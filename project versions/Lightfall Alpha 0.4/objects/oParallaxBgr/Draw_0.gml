@@ -1,7 +1,7 @@
 /// @desc draw parallax
 
 //GMLive
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //bgrs
 var background1 = sBgr_Sand1;

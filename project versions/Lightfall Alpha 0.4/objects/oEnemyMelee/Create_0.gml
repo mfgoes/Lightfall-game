@@ -38,6 +38,6 @@ stunned = 5; //prevents enemy from walking
 spriteIdle =	sEnemyExploder;
 spriteWalk =	sEnemyExploder;
 spriteJump =	sEnemyExploder;
-spriteDie  =	sEnemyExploder;
+spriteDie  =	sDummyDie;
 spriteAttack  =	sEnemyExploder;
 spriteMelee  =	sEnemyExploder;

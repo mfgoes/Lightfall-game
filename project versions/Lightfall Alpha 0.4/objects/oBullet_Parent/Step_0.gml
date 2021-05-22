@@ -6,11 +6,20 @@ if global.game_paused
 
 timer_init("poof_trail");
 timer_init("poof_trail_close");
+timer_init("arrow_fade");
+
+//fade arrows/bullets
+if timer_get("arrow_fade") = 0 {
+	if image_alpha > 0 {image_alpha-=0.1; timer_set("arrow_fade",5);} else
+	{
+	instance_destroy(); //instance_change(oHitSpark,1);
+	}
+}
 
 //collision wall
 if (place_meeting(x,y,oWall)) && (image_index !=0) && active = true
 	{
-		if timer_get("arrow_fade") <0 {timer_set("arrow_fade",120);}
+		if timer_get("arrow_fade") <0 {timer_set("arrow_fade",180);}
 		spd = 0; layer_add_instance("Tiles_1",id); depth+=1;
 		sprite_index = sArrowInWall;
 		//mask_index = sArrowInWall;
@@ -28,6 +37,8 @@ if (place_meeting(x,y,pShootable)) && active = true
 	audio_sound_gain(snd_bulletHit,0.2,0);
 	audio_sound_pitch(snd_bulletHit,choose(1,1.1,1.18));
 	audio_play_sound(snd_bulletHit,3,0);
+	//freeze frame
+	scrFreezeScreen(50); 
 	
 	with(instance_place(x,y,pShootable))
 	{

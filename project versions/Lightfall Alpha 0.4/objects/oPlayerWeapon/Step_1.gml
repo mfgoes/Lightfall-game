@@ -104,6 +104,12 @@ else {
 				if timer_get("weapon_display") <= 0 or sprite_index != oPlayer.character_weapons[0] { 
 					sprite_index = oPlayer.character_weapons[0];
 				}
+				
+				//charging sound
+				if weapon_charge = 0 {
+					audio_sound_pitch(snPrepareBow,choose(1,1.1,1.2)); audio_sound_gain(snPrepareBow,0.3,0);
+					audio_play_sound(snPrepareBow,0,0);}
+				
 				timer_set("weapon_display",120); 
 				if (weapon_charge < weapon_charge_max) 
 					weapon_charge+=0.25;
@@ -118,9 +124,9 @@ else {
 			{
 				//oPlayer.primary_cooldown = primary_cooldown_full; //(reuse more complex DS afterwards)
 				timer_set("primary_cooldown",25);
-				audio_sound_gain(HLD_shot_01,0.1,0);
-				audio_sound_pitch(HLD_shot_01,choose(0.9,0.95,1));
-				audio_play_sound(HLD_shot_01,2,0);
+				audio_sound_gain(snDartGun2,0.1,0);
+				audio_sound_pitch(snDartGun2,choose(0.9,0.95,1));
+				audio_play_sound(snDartGun2,2,0);
 				
 				//create projectile
 				with (instance_create_layer(x,y,"Bullets",primary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
