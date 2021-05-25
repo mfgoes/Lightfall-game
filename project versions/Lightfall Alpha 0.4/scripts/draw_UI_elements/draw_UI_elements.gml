@@ -64,8 +64,7 @@ function draw_debug_info(){
 	
 	if global.debugmode = true {
 		//draw_text(10,4,"Lightfall Demo - Press R to restart");
-		DrawSetText(c_white,fSign,fa_left, fa_top);
-		draw_text(10,14,"fps: " + string(fps_reader));
+		show_debug_overlay(true);
 		draw_text(10,24,"zoom: " + string(oCamera.zoom));
 		draw_text(10,margin_bottom-100,"curr walkspd: " + string(oPlayer.hsp));
 	}

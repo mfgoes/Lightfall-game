@@ -92,6 +92,14 @@ else {
 
 #endregion
 
+//MOVE THIS LATER
+	//air shot	//oPlayer.grounded = true
+	
+
+				
+
+
+
 ///COOLDOWNS
 #region //Cooldown abilities
 	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {
@@ -100,10 +108,8 @@ else {
 		{
 			if (key_attack_pressed) {
 				
-				//display animation
-				if timer_get("weapon_display") <= 0 or sprite_index != oPlayer.character_weapons[0] { 
-					sprite_index = oPlayer.character_weapons[0];
-				}
+				if (!place_meeting(x,y+1,oWall)) oPlayer.air_shot = true;
+
 				
 				//charging sound
 				if weapon_charge = 0 {
@@ -118,6 +124,9 @@ else {
 					dd.hsp = 0; dd.vsp = 0; if random(1)<0.4 dd.col_start = c_orange; dd.image_alpha = 0.8;
 					timer_set("poof_trail",10);
 				}
+			}
+			else {	//cancel special shot
+				oPlayer.air_shot = false;
 			}
 			
 			if (key_attack_released) //for bow weapons

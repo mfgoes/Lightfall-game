@@ -28,7 +28,10 @@ function PlayerStateFree(){
 #endregion
 
 #region gravity + jumping
-	if vsp < 12 vsp = (vsp + grv) + gunkicky else vsp = round(vsp); //limit fall speed. 
+	if air_shot = true {vsp = 0 sprite_index = spriteJump && image_index = 1}
+	else {
+		if vsp < 12 vsp = (vsp + grv) + gunkicky else vsp = round(vsp); 
+	} 
 
 	gunkickx = 0; 
 	gunkicky = 0;
@@ -95,6 +98,7 @@ if canrope = 1 {
 	{
 		sprite_index = spriteJump;
 		image_speed = 0;
+		grounded = true;
 		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 	}
 	else 

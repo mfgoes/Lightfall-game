@@ -6,11 +6,13 @@
 	hsp = 0;
 	vsp = 0;
 	grv = 0.32; //gravity
+	grounded = false; //check if on ground fast 
 	hascontrol = true;
 	coyote_time = 10; //for coyote jump
 	jump_speed = 5.5;
 	jumps = 0; //double jumps
 	jumps_max = 2;
+	air_shot = false; //allows char to temporarily hover in the air
 	
 	speedRoll = 5.0;
 	distanceRoll = 170;
