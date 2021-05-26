@@ -13,6 +13,7 @@
 	jumps = 0; //double jumps
 	jumps_max = 2;
 	air_shot = false; //allows char to temporarily hover in the air
+	slowmotion = 0.4; //delete later. 
 	
 	speedRoll = 5.0;
 	distanceRoll = 170;

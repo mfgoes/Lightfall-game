@@ -132,7 +132,8 @@ else {
 			if (key_attack_released) //for bow weapons
 			{
 				//oPlayer.primary_cooldown = primary_cooldown_full; //(reuse more complex DS afterwards)
-				timer_set("primary_cooldown",25);
+				timer_set("primary_cooldown",10);
+				oPlayer.primary_cooldown  = 10; //for UI
 				audio_sound_gain(snDartGun2,0.1,0);
 				audio_sound_pitch(snDartGun2,choose(0.9,0.95,1));
 				audio_play_sound(snDartGun2,2,0);
@@ -160,8 +161,8 @@ else {
 	
 	#region //secondary attack
 		if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
-			timer_set("secondary_cooldown",35);
-			
+			timer_set("secondary_cooldown",35); 
+			oPlayer.secondary_cooldown  = 35; //for UI
 			shots_total = 3; //shoot 3 bullets after each other. This should be pretty satisfying to hear.
 			//do sounds later
 			
@@ -170,6 +171,7 @@ else {
 			gunkicky = lengthdir_y(-2,other.image_angle-180);
 			weapon_recoil = 3;
 			timer_set("weapon_display",120); 
+			
 		}
 	#endregion
 	

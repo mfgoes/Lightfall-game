@@ -4,8 +4,8 @@ function PlayerStateFree(){
 #region walking
 	//Slow down while aiming weapon
 	var slowwalk = 0.9; 
-	if current_weapon = 0 && mouse_check_button(mb_left) = true {
-	slowwalk = 0.3;
+	if current_weapon = 0 && mouse_check_button(mb_left) = true  {
+	if !place_meeting(x,y+1,oWall) slowwalk = 0.7; else slowwalk = 0.4;
 	} 
 	else
 	slowwalk = 1; //1 = no slow walk
@@ -17,7 +17,7 @@ function PlayerStateFree(){
 	
 	//decelerate
 	if move = 0 { //create fall momentum by decreasing decelleration.
-		if current_walkspd > 0.4 {if place_meeting(x,y+1,oWall) current_walkspd -=0.4; else current_walkspd -=0.2;} 
+		if current_walkspd > 0.4 {if place_meeting(x,y+1,oWall) current_walkspd -=0.3; else current_walkspd -=0.15;} 
 		else {current_walkspd = 0; decelerate = 0;}
 		decelerate = current_walkspd * sign(hsp);
 	} else decelerate = 0; 
@@ -28,10 +28,15 @@ function PlayerStateFree(){
 #endregion
 
 #region gravity + jumping
-	if air_shot = true {vsp = 0 sprite_index = spriteJump && image_index = 1}
+
+	if air_shot = true && vsp > 1 { //slow down the shotvsp = 0 sprite_index = spriteJump && image_index = 1
+		if vsp < 12 vsp = (vsp + grv*slowmotion) + gunkicky else vsp = round(vsp);  //only slow-mo on the way down
+		//slow down hspeed to avoid crazy leap jumps. 
+	}
 	else {
 		if vsp < 12 vsp = (vsp + grv) + gunkicky else vsp = round(vsp); 
-	} 
+	}
+	
 
 	gunkickx = 0; 
 	gunkicky = 0;

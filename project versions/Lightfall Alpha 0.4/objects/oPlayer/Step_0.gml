@@ -7,6 +7,11 @@ if global.game_paused
 #region //Debug Mode
 //gm live 
 //if (live_call()) return live_result; 
+//temp set slowmotion variable
+if keyboard_check_pressed(vk_pagedown) slowmotion-=0.1; 
+if keyboard_check_pressed(vk_pageup) slowmotion+=0.1;
+
+
 
 if (global.debugmode) &&  keyboard_check_pressed(ord("P")) {	//check if in debug mode
 	if current_character = 2 current_character = 0;
