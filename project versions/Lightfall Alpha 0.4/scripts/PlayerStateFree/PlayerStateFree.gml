@@ -1,11 +1,15 @@
 // Player IDLE, WALK, JUMP
 function PlayerStateFree(){
 	
+//define solid ground
+if !place_meeting(x,y+1,oWall) && !place_meeting(x,y+1,oParPlatform) {grounded = false;} 
+else {grounded = true;}
+
 #region walking
 	//Slow down while aiming weapon
 	var slowwalk = 0.9; 
 	if current_weapon = 0 && mouse_check_button(mb_left) = true  {
-	if !place_meeting(x,y+1,oWall) slowwalk = 0.7; else slowwalk = 0.4;
+	if (grounded = 1) slowwalk = 0.7; else slowwalk = 0.4;
 	} 
 	else
 	slowwalk = 1; //1 = no slow walk
@@ -27,6 +31,12 @@ function PlayerStateFree(){
 
 #endregion
 
+#region platforms
+if (place_meeting(x,y+1,oParPlatform) && key_down) {
+    y++;
+}
+#endregion
+
 #region gravity + jumping
 
 	if air_shot = true && vsp > 1 { //slow down the shotvsp = 0 sprite_index = spriteJump && image_index = 1
@@ -41,8 +51,8 @@ function PlayerStateFree(){
 	gunkickx = 0; 
 	gunkicky = 0;
 	//jumping code
-	if (place_meeting(x,y+1,oWall)) {
-		coyote_time = 15; //coyote. rename this later. 
+	if (grounded = 1) { 
+		coyote_time = 8; 
 		jumps = jumps_max;	
 	}
 
@@ -103,11 +113,10 @@ if canrope = 1 {
 
 #region animations
 	//is jumping
-	if (!place_meeting(x,y+1,oWall))	//CHECK IF ON GROUND
+	if (!grounded) //CHECK IF ON SURFACE
 	{
 		sprite_index = spriteJump;
 		image_speed = 0;
-		grounded = true;
 		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 	}
 	else 

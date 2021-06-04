@@ -7,10 +7,7 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oWall",
-    "path": "objects/oWall/oWall.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -35,7 +32,7 @@
     "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlatformGoThrough",
+  "name": "oParPlatform",
   "tags": [],
   "resourceType": "GMObject",
 }

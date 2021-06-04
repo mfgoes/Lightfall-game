@@ -31,5 +31,17 @@ function PlayerCollision(){
 			ropeAngleVelocity = 0; 
 		}
 	}
+	
+	if instance_exists(oParPlatform) {
+		var nearestPlatform = instance_nearest(x,y+1,oParPlatform);
+		if(nearestPlatform.bbox_top > bbox_bottom && vsp>=0){
+		    if (place_meeting(x,y+vsp,oParPlatform)){
+		        while(!place_meeting(x,y+sign(vsp),oParPlatform)){
+		            y+=sign(vsp);
+		        }
+		        vsp = 0;
+		}}
+	}
 	y = y + vsp;
+	
 }

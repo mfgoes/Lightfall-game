@@ -10,16 +10,7 @@ if global.game_paused
 vsp = vsp + grv; 
 
 //Vertical collision
-if (place_meeting(x,y+vsp, oWall))
-{
-	while (!place_meeting(x,y+sign(vsp),oWall))
-	{
-		y = y + sign(vsp); 
-	}
-	vsp = 0;
-	
-}
-y = y + vsp;
+VerticalCollision();
 
 if !instance_exists(mywall) && screen_shake = 0 {
 	audio_sound_gain(snFootstep1,0.5,0);

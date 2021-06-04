@@ -36,7 +36,7 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 		flip_image = dcos(facing_direction);
 	}
 	
-	//draw_text(x-24,y-24,"facing_direction: " + string(facing_direction));
+	//draw_text(x-24,y-24,"grounded: " + string(grounded));
 	draw_sprite_ext(sprite_index,image_index,x,y,flip_image,1,image_angle,c_white,1);
 	
 #endregion

@@ -3,6 +3,7 @@ if global.game_paused
 	exit;
 }
 
+
 if instance_exists(oPlayer) {
 	if (point_in_circle(oPlayer.x,oPlayer.y,x,y,32)) && (!instance_exists(oText))
 	{
