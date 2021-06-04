@@ -51,7 +51,7 @@ if (place_meeting(x,y,pShootable)) && active = true
 	#endregion
 	
 	//freeze frame
-	scrFreezeScreen(50); 
+	scrFreezeScreen(40); 
 	
 	with(instance_place(x,y,pShootable))
 	{
@@ -72,6 +72,11 @@ if (place_meeting(x,y,pShootable)) && active = true
 			hp-=other.damage;
 			flash = 3;
 			hitfrom = other.direction;
+			
+			gunkickx = lengthdir_x(3,other.image_angle);
+			gunkicky = lengthdir_y(3,other.image_angle);
+			if !place_meeting(x+gunkickx,y,oWall) x+=gunkickx; gunkickx = 0;
+			if !place_meeting(x,y+gunkicky,oWall) y+=gunkicky; gunkicky = 0;
 		}
 		
 	}

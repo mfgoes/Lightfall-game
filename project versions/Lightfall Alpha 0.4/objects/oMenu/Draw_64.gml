@@ -1,6 +1,6 @@
 /// @description Draw Menu
 
-draw_set_font(menu_font);
+draw_set_font(fUI);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
 

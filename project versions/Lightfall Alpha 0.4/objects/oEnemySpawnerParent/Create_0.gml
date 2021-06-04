@@ -1,6 +1,6 @@
 /// @description dynamic enemy spawner object
 spawn_type = oDummyEnemy;
-spawn_time = 40; 
+spawn_time = 55; 
 alarm[0] = spawn_time;
 
 

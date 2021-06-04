@@ -92,8 +92,12 @@ if canrope = 1 {
 #endregion
 
 #region jumping pads (needs refinement)
-	if (place_meeting(x,y+1,oTrampoline)) {
-		vsp -=2; 	
+	if (place_meeting(x,y+1,oJumpPad)) {
+		var dd = (instance_nearest(x,y,oJumpPad));
+		if dd.active = true {
+			vsp = -11; dd.active = false; jumps = jumps_max; dd.alarm[0] = 40;  //reset jump pad1
+			audio_play_sound(snDartImpact,0,0);
+		} 	
 	}	
 #endregion
 

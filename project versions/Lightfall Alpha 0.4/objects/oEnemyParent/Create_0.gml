@@ -28,3 +28,4 @@ size = 1;
 afraid_of_heights = true;
 grounded = false;
 has_weapon = false;
+gunkickx = 0;

@@ -9,7 +9,7 @@
 	grounded = false; //check if on ground fast 
 	hascontrol = true;
 	coyote_time = 10; //for coyote jump
-	jump_speed = 5.5;
+	jump_speed = 6.5;
 	jumps = 0; //double jumps
 	jumps_max = 2;
 	air_shot = false; //allows char to temporarily hover in the air

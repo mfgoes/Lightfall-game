@@ -60,7 +60,7 @@ function Load_PlayerStartData(argument0){
 	3 = coins;*/
 	
 	PLayerStartData = [
-	[4,8,0,5], //archer 0
+	[3,8,0,5], //archer 0
 	[5,8,0,5], //char 1
 	[5,6,5,5], //char 2
 	];

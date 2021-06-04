@@ -8,9 +8,6 @@ if global.game_paused
 
 if (live_call()) return live_result; 
 
-			
-				
-				
 #region init timers
 	//cooldown abilities
 	timer_init("primary_cooldown");	
@@ -121,7 +118,7 @@ else {
 					weapon_charge+=0.25;
 				else if timer_get("poof_trail") <= 1 {
 					dd = instance_create_depth(x+lengthdir_x(10,image_angle)+random_range(-2,2),y+lengthdir_y(10,image_angle)+random_range(-3,3),depth-1,oDust); 
-					dd.hsp = 0; dd.vsp = 0; if random(1)<0.4 dd.col_start = c_orange; dd.image_alpha = 0.8;
+					dd.hsp = 0; dd.vsp = 0; if random(1)<0.4 dd.col_start = c_orange; dd.image_alpha = 0.8; 
 					timer_set("poof_trail",10);
 				}
 			}
@@ -134,20 +131,23 @@ else {
 				//oPlayer.primary_cooldown = primary_cooldown_full; //(reuse more complex DS afterwards)
 				timer_set("primary_cooldown",10);
 				oPlayer.primary_cooldown  = 10; //for UI
-				audio_sound_gain(snDartGun2,0.1,0);
-				audio_sound_pitch(snDartGun2,choose(0.9,0.95,1));
-				audio_play_sound(snDartGun2,2,0);
+				audio_sound_gain(snDartGun2,0.15,0);
+				audio_sound_pitch(snDartGun2,choose(0.88,0.93,1));
+				
 				
 				//create projectile
 				with (instance_create_layer(x,y,"Bullets",primary_projectile)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 					direction = other.image_angle+random_range(weapon_accuracy,weapon_accuracy);
 					
-					if  oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max {spd = 7; super_arrow = true;}
-					else {spd = 8; super_arrow = false}
+					//variable damage
+					if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.8 {damage = 4; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
+					else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.45 {damage = 3;}
+					else damage = 2;
 					
 					image_angle = direction;
 					x = x - lengthdir_x(0,other.image_angle);
 					y = y - lengthdir_y(0,other.image_angle);
+					audio_play_sound(snDartGun2,2,0);
 				}			
 				//reset weapon
 				weapon_charge = 0; 
@@ -194,7 +194,7 @@ else {
 if shots_total > 0 && timer_get("triple_shot") <=0 {
 	timer_set("triple_shot",6);
 	with (instance_create_layer(x,y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-	direction = other.image_angle; 
+	direction = other.image_angle+random_range(-2,2); 
 	spd = 7;
 					
 	image_angle = direction;

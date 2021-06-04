@@ -5,7 +5,9 @@ vsp = 0;
 wiggle = 1;
 active = true;
 gun_flare = 2;
-damage = 2;
+damage = 1;
+spd = 8; 
+
 image_speed = 1;
 angle_prev = 0;
 angle_randomize = choose(-7,-3,0,3,7);

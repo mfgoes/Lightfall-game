@@ -47,7 +47,7 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 {
 	switch (menu_committed)
 	{
-		case 2: SlideTransition(TRANS_MODE.NEXT); break;	//new game
+		case 2: SlideTransition(TRANS_MODE.GOTO,r_1_TrailedCanal); break;	//new game
 		case 1: 
 		{
 			if (!file_exists(SAVEFILE))

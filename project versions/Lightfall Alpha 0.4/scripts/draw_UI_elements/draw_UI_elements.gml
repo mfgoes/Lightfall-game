@@ -20,19 +20,19 @@ function draw_UI_elements(){
 		draw_set_font(fSign);
 		draw_sprite_ext(sCooldowns_Archer,0,margin_right-25,margin_bottom,UIscale,UIscale,0,c_gray,1);
 		draw_sprite_ext(sCooldowns_Archer,3,margin_right+5,margin_bottom,UIscale,UIscale,0,c_gray,1);
-		draw_sprite_ext(sCooldowns_Archer,1,margin_right+35,margin_bottom,UIscale,UIscale,0,c_gray,1);
-		draw_sprite_ext(sCooldowns_Archer,2,margin_right+65,margin_bottom,UIscale,UIscale,0,c_gray,1);
+		draw_sprite_ext(sCooldowns_Archer,2,margin_right+35,margin_bottom,UIscale,UIscale,0,c_gray,1);
+		//draw_sprite_ext(sCooldowns_Archer,1,margin_right+65,margin_bottom,UIscale,UIscale,0,c_gray,1);
 		draw_set_halign(fa_center);
 		draw_text(margin_right-13,margin_bottom+4,oPlayer.primary_cooldown); 
 		draw_text(margin_right+17,margin_bottom+4,oPlayer.secondary_cooldown); 
-		draw_text(margin_right+47,margin_bottom+4,oPlayer.third_cooldown); 
-		draw_text(margin_right+77,margin_bottom+4,oPlayer.roll_cooldown); 
+		draw_text(margin_right+47,margin_bottom+4,oPlayer.roll_cooldown); 
+		//draw_text(margin_right+77,margin_bottom+4,oPlayer.roll_cooldown); 
 	
 		//draw tooltips (labels)
 		draw_text(margin_right-13,margin_bottom+14,"LMB"); 
 		draw_text(margin_right+17,margin_bottom+14,"RMB"); 
-		draw_text(margin_right+47,margin_bottom+14,"Q"); 
-		draw_text(margin_right+77,margin_bottom+14,"F"); 
+		draw_text(margin_right+47,margin_bottom+14,"F"); 
+		//draw_text(margin_right+77,margin_bottom+14,"F"); 
 		draw_set_halign(fa_left);
 	
 		//draw EXP + Kill counter
@@ -66,6 +66,6 @@ function draw_debug_info(){
 		//draw_text(10,4,"Lightfall Demo - Press R to restart");
 		show_debug_overlay(true);
 		draw_text(10,24,"zoom: " + string(oCamera.zoom));
-		draw_text(10,margin_bottom-100,"curr walkspd: " + string(oPlayer.hsp));
+		draw_text(10,40,"fps_reader: " + string(fps_reader));
 	}
 }
