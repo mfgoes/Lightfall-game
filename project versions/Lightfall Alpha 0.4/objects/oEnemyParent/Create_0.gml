@@ -17,15 +17,23 @@ spriteAttack  =	sEnemyExploder
 spriteMelee  =	sEnemyExploder
 mask_index =	sprite_index;
 
-hp = 1;
+hp = 4; hp_max = hp;
 flash = 0;
 vsp = 0;
-grv = 0.3;
+//grv = 0.3;
 walkspd = 2;
 hsp = walkspd;
 hitfrom = 0;
 size = 1;
 afraid_of_heights = true;
 grounded = false;
-has_weapon = false;
+if instance_exists(oPlayer) target = oPlayer; else target = self; 
+
+
+//attacking variables
+sight_range = 80 + round(random_range(5,10)); //when to detect player
 gunkickx = 0;
+atk_range = 35; //closest distance for attacks
+wander_range = 50; 
+damage = 1;
+alerted = 0; //if player has already been sighted by this unit.

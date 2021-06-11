@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sDummyIdle",
-    "path": "sprites/sDummyIdle/sDummyIdle.yy",
+    "name": "sCrowMage_Idle",
+    "path": "sprites/sCrowMage_Idle/sCrowMage_Idle.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,12 +27,13 @@
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Unfinished Enemies",
-    "path": "folders/Objects/Enemies/Unfinished Enemies.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemyRangedGeneric",

@@ -6,7 +6,7 @@ if global.game_paused
 
 if (hp <= 0) 
 {
-	with (instance_create_layer(x,y,"Enemies",oEnemyCorpse))
+	/*with (instance_create_layer(x,y,"Enemies",oEnemyCorpse))
 	{
 		direction = other.hitfrom;	
 		hsp = lengthdir_x(3,direction);
@@ -14,8 +14,7 @@ if (hp <= 0)
 		if (sign(hsp) !=0)
 		image_xscale = sign(hsp) *other.size;
 		image_yscale = other.size;
-	}
-	
+	}*/
 	repeat(3)	//create dust effect
 	{
 		//dust particles
@@ -30,7 +29,7 @@ if (hp <= 0)
 		{hsp = random_range(-3,3)}
 	}
 	
-	with (mygun) instance_destroy();
+	//with (mygun) instance_destroy();
 	if (instance_exists(oPlayer)) {
 	global.kills++;	
 	global.killsthisroom++;

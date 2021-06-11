@@ -3,17 +3,15 @@
 //It's a lot simpler than player collisions (keep it seperate). 
 function VerticalCollision(){
 	 
-if (place_meeting(x,y+vsp, oWall)) || (place_meeting(x,y+vsp, oParPlatform))
+var grv = 0.3;
+vsp = vsp + grv;
+if (place_meeting(x,y+vsp, oWall)) or (place_meeting(x,y+vsp, oWallEnemies)) or (place_meeting(x,y+vsp,oParPlatform))
 {
-	while (!place_meeting(x,y+sign(vsp),oWall))
-	{
-		y = y + sign(vsp); 
-	}
-	vsp = 0;
-	
+	vsp = 0;	
 }
 y = round(y + vsp);
+if vsp > 12 vsp = 12;
 }
-
-
 //reusable vertical collisions (for enemies)
+
+//limig g to 12 later 

@@ -2,21 +2,37 @@
 //define sprites (load as arrays and enums in the future (phase 3)
 event_inherited();
 
-spriteIdle =	sEnemyIdle;
-spriteWalk =	sEnemyWalk;
-spriteJump =	sEnemyJump;
-spriteDie  =	sEnemyDie;
-spriteAttack  =	sEnemyIdle
-spriteMelee  =	sEnemyIdle
+spriteIdle =	sCrowMage_Idle;
+spriteWalk =	sCrowMage_Walk;
+spriteAttack  =	sCrowMage_Attack
 mask_index =	sprite_index;
+hp = 6; hp_max = hp;
+afraid_of_heights = true;
+current_state = enemy_states.patrol;
 
-if (has_weapon)
-{
-	mygun = instance_create_layer(x,y,"Gun",oEgun);	
-	with (mygun)
-	{
-		owner = other.id; 
-		shoot_range = 200;
-	}
-}
-else mygun = noone;
+
+motion_speed = 1;
+dir = 0; 
+out_of_range = false; 
+sight_range = 80 + round(random_range(5,10)); //when to detect player
+atk_range = 35; //closest distance for attacks
+wander_range = 50; 
+damage = 1;
+afraid_of_heights = true;
+alerted = 0; //if player has already been sighted by this unit.
+
+xprev = x;
+yprev = y;
+walkspd = .5;
+hsp = walkspd;
+
+/*enum enemy_states { 
+  idle,
+  patrol,
+  approach,
+  attack
+}*/
+current_state = enemy_states.patrol;
+
+position_random = random_range(-3,3);
+stunned = 5; //prevents enemy from walking

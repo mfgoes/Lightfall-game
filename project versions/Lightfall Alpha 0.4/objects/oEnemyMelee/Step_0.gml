@@ -7,6 +7,7 @@ if global.game_paused
 
 #region basics
 event_inherited(); //inherits gravity code
+
 timer_init("attack_player"); 
 //determine target
 if instance_exists(oPlayer) target = oPlayer; else {

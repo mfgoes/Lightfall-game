@@ -3,12 +3,13 @@ if global.game_paused
 	exit;
 }
 
+VerticalCollision();
+
+
 timer_init("notice_player"); //when to notice player
 timer_init("ignore_player"); //when to ignore player
 timer_init("turn_around");
 timer_init("attack_player");
-
-grounded = place_meeting(x, y + 1, oWall);
 
 switch (current_state)
 {
@@ -145,6 +146,3 @@ switch (current_state)
 		}
 	} break;
 }
-
-//gravity
-event_inherited();

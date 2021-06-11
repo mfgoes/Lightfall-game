@@ -2,8 +2,7 @@
 function PlayerStateFree(){
 	
 //define solid ground
-if !place_meeting(x,y+1,oWall) && !place_meeting(x,y+1,oParPlatform) {grounded = false;} 
-else {grounded = true;}
+grounded =(place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
 
 #region walking
 	//Slow down while aiming weapon
