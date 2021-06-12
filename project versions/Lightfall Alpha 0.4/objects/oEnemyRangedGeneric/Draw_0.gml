@@ -2,6 +2,8 @@
 // You can write your code in this editor
 event_inherited();
 
+if (live_call()) return live_result;
+
 if hp<hp_max { 
 	//draw healthbar
 	var percentagehp = (hp / hp_max)*20; // 0/0 = -5 1/2 = 5;  2/2 = 10; (multiplied by 10?)
@@ -17,9 +19,10 @@ if hp<hp_max {
 }
 
 if (global.debugmode) { //show assisting info
-draw_set_color(c_olive);
-draw_circle(x,y,wander_range,1);
+draw_set_color(c_orange);
 draw_circle(x,y,sight_range,1);
-draw_circle(x,y,atk_range,1);
+draw_set_color(c_yellow);
+draw_circle(x,y,atk_range+20,1);
+draw_text(x,y-30,sprite_index); 
 draw_set_color(c_white);
 }

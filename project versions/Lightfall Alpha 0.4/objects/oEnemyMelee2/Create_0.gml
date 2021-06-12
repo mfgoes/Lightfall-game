@@ -30,4 +30,4 @@ spriteWalk =	sEnemyBlob_Move;
 spriteHurt =	sEnemyBlob_Hurt;
 spriteDie  =	sEnemyBlob_Die;
 spriteAttack  =	sEnemyBlob_Atk;
-attack_anim_end = 0; 
+attack_anim_end = 0; //figure out a better system for this later
