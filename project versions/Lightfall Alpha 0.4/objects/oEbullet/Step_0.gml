@@ -7,22 +7,6 @@ if global.game_paused
 x+= lengthdir_x(spd,direction);
 y+= lengthdir_y(spd,direction);
 
-
-if collision_wall
-{
-	if (place_meeting(x,y,oWall)) && (image_index !=0) 
-	{
-		while (place_meeting(x,y,oWall)) 
-		{
-			x-= lengthdir_x(1,direction);	//move back in direction
-			y-= lengthdir_y(1,direction);
-		}
-		spd = 0;
-		instance_change(oHitSpark,true);
-	}
-}
-
-
 //hit player
 if (place_meeting(x,y,oPlayer)) 
 {
@@ -36,10 +20,42 @@ if (place_meeting(x,y,oPlayer))
 		
 		if hp < 1 KillPlayer();
 	}
-	instance_destroy();
+	repeat(3)
+	{
+		//dust particles
+		with(instance_create_layer(x,y,"Bullets",oDust)) {
+			vsp = -0.1; image_alpha = 0.5+random(0.3);
+			hsp = random_range(-1,1);
+			image_xscale = choose (2,-2);
+			image_yscale = choose (2,-2);
+		}
+	}
+	instance_destroy(); 
 }
 
-if destroy_self
+
+if collision_wall
 {
-	instance_destroy();
+	if (place_meeting(x,y,oWall)) && (image_index !=0) 
+	{
+		while (place_meeting(x,y,oWall)) 
+		{
+			x-= lengthdir_x(1,direction);	//move back in direction
+			y-= lengthdir_y(1,direction);
+		}
+		repeat(3)
+		{
+			//dust particles
+			with(instance_create_layer(x,y,"Bullets",oDust)) {
+				vsp = -0.1; image_alpha = 0.5+random(0.3);
+				hsp = random_range(-1,1);
+				image_xscale = choose (2,-2);
+				image_yscale = choose (2,-2);
+			}
+		}
+instance_destroy(); 		
+		
+	}
 }
+
+

@@ -1,8 +1,9 @@
 /// @description dynamic enemy spawner object
-spawn_type = oDummyEnemy;
-spawn_time = 55; 
-alarm[0] = spawn_time;
-
+spawn_type = oEnemyRangedGeneric;
+spawn_amount = 7;
+spawn_timer = room_speed*2; //every two seconds
+alarm[0] = spawn_timer;
+//grid_size = 32; 
 
 /*You can use this with timed enemy waves. The below are default but can be changed
 FUTURE UPDATES: Allow spawning enemy variations with special attributes. 

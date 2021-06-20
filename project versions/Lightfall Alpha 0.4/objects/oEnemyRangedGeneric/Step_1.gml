@@ -19,7 +19,7 @@ if (hp <= 0)
 	{
 		//dust particles
 		with(instance_create_layer(x,bbox_bottom,"Bullets",oDust)) {
-			vsp = -0.1; image_alpha = 0.3+random(0.3);
+			vsp = -0.1; image_alpha = 1;
 			hsp = random_range(-1,1)
 			image_xscale = choose (2,-2);
 			image_yscale = choose (2,-2);

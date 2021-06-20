@@ -1,14 +1,40 @@
-/// @description spawn enemmy
-instance_create_depth(x,y,depth,spawn_type);
-audio_sound_gain(snSpawnGeneric,0.3,0);
-audio_play_sound(snSpawnGeneric,0,0);
+/// @description spawn enemy
+if spawn_amount > 0 {
+	randomize();
+	var xpos = random_range(-120,120); //variation for where to spawn enemies
+	var xpos = (round(xpos/32) * 32); 
+	var closest_wall = collision_line_first(x+xpos,0,x+xpos,room_height,oParPlatform,0,0) //improve this later to create objects in closer proximity
+	if closest_wall !=noone {
+		dd = instance_create_depth(x+xpos,closest_wall.bbox_top,depth,oSpawnAnimation);
+		dd.spawn_type = spawn_type;
+	}
+	else { //if no platforms nearby, check for normal walls 
+		var closest_wall = collision_line_first(x+xpos,0,x+xpos,room_height,oWall,0,0) //improve this later to create objects in closer proximity
+		if closest_wall !=noone {
+			dd = instance_create_depth(x+xpos,closest_wall.bbox_top,depth,oSpawnAnimation);
+			dd.spawn_type = spawn_type;
+		}	
+		else instance_create_depth(x,y,depth,oSpawnAnimation);
+	}
+	
+	alarm[0] = spawn_timer;
+	spawn_amount -=1;
+}
 
-repeat(4) {
-	with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
-		vsp = random_range(-2,2)
-		hsp = random_range(-2,2)
-		image_xscale = choose (1,-1);
-		image_yscale = choose (1,-1);
-	}	
-}		
-instance_destroy();
+/*old code
+/// @description spawn enemy
+if spawn_amount > 0 {
+	randomize();
+	var xpos = random_range(-120,120); //variation for where to spawn enemies
+	var xpos = (round(xpos/32) * 32); 
+	var closest_wall = collision_line_first(x+xpos,0,x+xpos,room_height,oWall,0,0) //improve this later to create objects in closer proximity
+	if closest_wall !=noone {
+		dd = instance_create_depth(x+xpos,closest_wall.bbox_top,depth,oSpawnAnimation);
+		dd.spawn_type = oEnemyRangedGeneric;
+	}
+	else instance_create_depth(x,y,depth,oSpawnAnimation);
+	//transfer over other attributes later. 
+	alarm[0] = spawn_timer;
+	spawn_amount -=1;
+}
+*/
