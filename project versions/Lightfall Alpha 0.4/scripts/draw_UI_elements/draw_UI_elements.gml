@@ -37,7 +37,7 @@ function draw_UI_elements(){
 	
 		//draw EXP + Kill counter
 		if  (global.kills > 0) {
-			killtextscale = max(killtextscale * 0.85, 1); 	
+			killtextscale = max(killtextscale * 0.55, 1); 	
 			draw_text_transformed(RES_W-10,15,string(global.kills) + " kills",killtextscale,killtextscale,0);
 		}
 		draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);

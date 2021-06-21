@@ -3,7 +3,7 @@
 event_inherited();
 
 
-hp = 6; hp_max = hp;
+hp = 4; hp_max = hp;
 afraid_of_heights = true;
 current_state = enemy_states.patrol;
 

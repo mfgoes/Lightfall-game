@@ -16,6 +16,7 @@ spriteDie  =	sPlayerDie;
 spriteAttack  =	sEnemyExploder
 spriteMelee  =	sEnemyExploder
 mask_index =	sprite_index;
+image_alpha = 0.1; //fade in
 
 hp = 4; hp_max = hp;
 flash = 0;

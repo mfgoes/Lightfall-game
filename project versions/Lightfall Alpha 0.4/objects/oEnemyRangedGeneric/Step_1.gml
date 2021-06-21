@@ -33,6 +33,7 @@ if (hp <= 0)
 	if (instance_exists(oPlayer)) {
 	global.kills++;	
 	global.killsthisroom++;
+	global.killsthiswave++;
 	with(oGame) killtextscale = 2;
 	}
 	instance_destroy();

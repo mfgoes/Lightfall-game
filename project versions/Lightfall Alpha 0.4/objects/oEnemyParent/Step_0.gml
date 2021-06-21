@@ -14,3 +14,8 @@ if (place_meeting(x,y+vsp, oWall)) or (place_meeting(x,y+vsp, oWallEnemies)) or 
 y = round(y + vsp);
 
 grounded = (place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
+
+//destroy if outside room + fallen
+if y > room_height {
+	hp = 0;
+}

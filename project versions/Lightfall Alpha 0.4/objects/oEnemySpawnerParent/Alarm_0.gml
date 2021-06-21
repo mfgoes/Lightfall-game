@@ -1,4 +1,9 @@
 /// @description spawn enemy
+if global.game_paused
+{
+	exit;
+}
+
 if spawn_amount > 0 {
 	randomize();
 	var xpos = random_range(-120,120); //variation for where to spawn enemies

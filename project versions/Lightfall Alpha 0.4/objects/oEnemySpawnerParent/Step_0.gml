@@ -4,3 +4,7 @@ if instance_exists(oPlayer) {
 	y = oPlayer.y - 70;
 }
 else {x = xstart; y = ystart;}
+
+if !(alarm[0]) {
+	if spawn_amount > 0	alarm[0] = spawn_timer*0.5; //check if alarm has fired or not been set yet
+}
