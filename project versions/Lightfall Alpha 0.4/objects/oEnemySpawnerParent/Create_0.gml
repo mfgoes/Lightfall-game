@@ -1,10 +1,12 @@
 /// @description dynamic enemy spawner object
 spawn_type = oEnemyRangedGeneric;
-spawn_amount = 7; 
+spawn_amount = 0; 
 global.wavetotal = spawn_amount;
-
-spawn_timer = room_speed*2; //every two seconds
+killtextscale = 1;
+spawn_timer = 50; //every two seconds
 alarm[0] = spawn_timer;
+title_alpha = 0;
+
 //grid_size = 32; 
 
 /*You can use this with timed enemy waves. The below are default but can be changed

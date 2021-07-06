@@ -37,7 +37,7 @@ if (instance_exists(follow)) {
 }
 alarm[0] = 30; //replace with timer later
 
-//cam_speed = 5; (set in end step event)
+cam_speed = 4; //higher is slower
 zoom_speed = 0.8;
 start_zoom = 0.05; //zoom level at start of level
 zoom = 0.15; //zoom level adjusted through scroll
@@ -71,5 +71,5 @@ weapon_zoom = 0; //zoom level affected by weapon
 
 //draw parallax
 if !instance_exists(oParallaxBgr) {
-	instance_create_depth(0,0,40,oParallaxBgr);
+	instance_create_depth(0,0,400,oParallaxBgr);
 }

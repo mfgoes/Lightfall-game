@@ -22,7 +22,7 @@ if spawn_amount > 0 {
 		else instance_create_depth(x,y,depth,oSpawnAnimation);
 	}
 	
-	alarm[0] = spawn_timer;
+	alarm[0] = round(spawn_timer+random(40));
 	spawn_amount -=1;
 }
 

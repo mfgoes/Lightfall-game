@@ -14,11 +14,13 @@ global.sound_volume = 1;
 
 audio_master_gain(global.sound_volume);
 
+//create particle system
+global.partSystem = part_system_create();
+part_system_depth(global.partSystem, -100);
+
+
 killtextscale = 1;            
 fps_reader = 0;
 alarm[0] = 20; //read fps every few steps, not every step. 
 image_alpha = 0;
-
-
-
 pause_menu = noone;

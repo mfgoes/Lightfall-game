@@ -1,7 +1,7 @@
 /// @description Insert description here
 //if (live_call()) return live_result; 
 //image_blend = make_colour_hsv(155, 225, 249);
-draw_self();
+event_inherited(); 
 
 if (flash > 0) 
 {

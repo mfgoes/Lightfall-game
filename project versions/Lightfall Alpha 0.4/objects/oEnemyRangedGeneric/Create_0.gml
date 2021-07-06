@@ -39,5 +39,6 @@ stunned = 5; //prevents enemy from walking
 spriteIdle		=	sCrowMage_Idle;
 spriteWalk		=	sCrowMage_Walk;
 spriteAttack	=	sCrowMage_Attack;
+spriteDie		=	0; //0 means don't create a corpse
 attack_anim_end =	0; //figure out a better system for this later
 mask_index		=	sprite_index;

@@ -13,7 +13,7 @@ draw_set_color(c_white);
 if (live_call()) return live_result;
 
 
-if instance_exists(oEnemySpawnerParent) { //how should I check this?
+if instance_exists(oEnemySpawnerParent) && global.wavetotal - global.killsthiswave > 0 { //how should I check this?
 	draw_set_font(fUI);
 	draw_set_halign(fa_center);
 	draw_set_color(c_black);

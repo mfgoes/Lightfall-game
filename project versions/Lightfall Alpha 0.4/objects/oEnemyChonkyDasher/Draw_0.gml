@@ -1,7 +1,5 @@
 /// @description Insert description here
-//gm live 
-if (live_call()) return live_result; 
-
+event_inherited(); 
 //change color if attacking (placeholder)
 image_blend = c_orange;
 if timer_get("charge_timer") > 0 image_blend = c_red;
@@ -16,13 +14,6 @@ if (flash > 0)
 
 if global.debugmode = true {
 //check nearest other enemy
-/*var dd = instance_nth_nearest(x,y,oEnemyMelee,2); //also check if player is (almost) on ground before deciding to mvoe
-var _pos_nearest_enemy = sign(dd.x - x); //negative = left, positive = right
-var _pos_target = sign(target.x - x);
-var _colliding = sign(_pos_nearest_enemy + _pos_target); //returns either 1 or 0. 
-if distance_to_object(dd) > 14 _colliding = 0; //if closest enemy is far away, ignore
-*/
-
 draw_set_halign(fa_left);
 //draw_text(x,y-text_pos,charge_timer);
 draw_text(x,y-text_pos-30,"state " + string(current_state));
