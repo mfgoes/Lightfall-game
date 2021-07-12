@@ -9,6 +9,12 @@ if !instance_exists(oCamera) {
 	dd = instance_create_depth(0,0,depth,oCamera);
 	dd.follow = oPlayer;
 }
+
+if !instance_exists(oParticleSnow) {
+	instance_create_depth(0,0,depth,oParticleSnow);
+}
+
+
 if !instance_exists(oTransition) {
 	instance_create_depth(0,0,depth,oTransition);
 }

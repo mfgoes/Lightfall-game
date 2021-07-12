@@ -2,8 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ParticlesPortal(){ //rename this to a specific part type (ie ParticlesPortal
 	#region Particle Types
-	//gm live 
-	if (live_call()) return live_result; 
 	
 	//Basic particle
 	var _p = part_type_create();
@@ -18,6 +16,16 @@ function ParticlesPortal(){ //rename this to a specific part type (ie ParticlesP
 	part_type_speed(_p, 0.25, 1, 0, 0);
 	part_type_direction(_p,85,95,0,0);
 	global.ptBasic = _p;  
+	
+	#endregion
+}
+
+function ParticlesSnow(){ //rename this to a specific part type (ie ParticlesPortal
+	#region Particle Types
+
+	//Basic particle
+	var particle_Snow = part_type_create();
+	var particle_SnowCloud = part_type_create();
 	
 	#endregion
 }
