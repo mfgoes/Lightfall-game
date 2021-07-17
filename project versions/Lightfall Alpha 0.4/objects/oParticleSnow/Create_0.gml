@@ -15,13 +15,14 @@ CameraHeight = camera_get_view_height(view_camera[0]);
 particle_Snow = part_type_create();
 var col1 = make_color_rgb(255,236,243);
 var col2 = make_color_rgb(157,100,83);
+wind_dir = 40; //
 
 part_type_sprite(particle_Snow,sParticleSnow, 0, 0, 1); 
-part_type_size(particle_Snow, 0.5, 1.5, 0, 0);
-part_type_life(particle_Snow, 300, 500);
+part_type_size(particle_Snow, 0.3, 1.3, 0, 0);
+part_type_life(particle_Snow, 200, 600);
 part_type_color2(particle_Snow, c_white,c_white);
-part_type_speed(particle_Snow, 0.4, 0.6, 0, 0.1); 
-part_type_direction(particle_Snow, 270, 290, 0, 0);
+part_type_speed(particle_Snow, 0.3, 1.2, 0, 0.1); 
+part_type_direction(particle_Snow, wind_dir, wind_dir+40, 0, 1);
 part_type_alpha2(particle_Snow, 1, 0); 
 //part_type_size(particle_Snow, 0.03, 0.12,-0.0003,0.001);
 part_type_blend(particle_Snow,false);

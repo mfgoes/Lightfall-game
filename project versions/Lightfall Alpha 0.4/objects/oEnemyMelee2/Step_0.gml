@@ -84,8 +84,8 @@ switch (current_state)
 				alert.owner = self; 	
 				
 				if alerted = 0 {
-					audio_sound_gain(snAlertEnemy,0.2,0);
-					audio_play_sound(snAlertEnemy,10,0);
+					//audio_sound_gain(snAlertEnemy,0.2,0);
+					//audio_play_sound(snAlertEnemy,10,0);
 					alerted = 1;
 				}
 			}

@@ -10,12 +10,20 @@ if !instance_exists(oCamera) {
 	dd.follow = oPlayer;
 }
 
-if !instance_exists(oParticleSnow) {
-	instance_create_depth(0,0,depth,oParticleSnow);
-}
-
-
 if !instance_exists(oTransition) {
 	instance_create_depth(0,0,depth,oTransition);
 }
+
+//Create particles 
+/*This should depend on: biome + global setting*/
+if global.effects = true && room != rMenu {		//check biome here later
+	if !instance_exists(oParticleFog) {
+		instance_create_depth(0,0,depth,oParticleFog);
+	}
+	if !instance_exists(oParticleSnow) {
+		instance_create_depth(0,0,depth,oParticleSnow);
+	}
+}
+
+
 

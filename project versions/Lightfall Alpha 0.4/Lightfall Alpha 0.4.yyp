@@ -100,6 +100,7 @@
     {"id":{"name":"snClick","path":"sounds/snClick/snClick.yy",},"order":0,},
     {"id":{"name":"SlideTransition","path":"scripts/SlideTransition/SlideTransition.yy",},"order":0,},
     {"id":{"name":"oDummyEnemy","path":"objects/oDummyEnemy/oDummyEnemy.yy",},"order":1,},
+    {"id":{"name":"oParticleFog","path":"objects/oParticleFog/oParticleFog.yy",},"order":7,},
     {"id":{"name":"ParticleScripts","path":"scripts/ParticleScripts/ParticleScripts.yy",},"order":3,},
     {"id":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},"order":2,},
     {"id":{"name":"checkFor_object_xy","path":"scripts/checkFor_object_xy/checkFor_object_xy.yy",},"order":1,},

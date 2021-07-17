@@ -11,6 +11,7 @@ global.debugmode = false;
 global.game_paused = false;
 global.pause_bg = noone;
 global.sound_volume = 1;
+global.effects = true; //toggle for performance
 
 audio_master_gain(global.sound_volume);
 
