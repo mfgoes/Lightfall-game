@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snAlertEnemy.wav",
-  "duration": 2.508111,
+  "duration": 2.503111,
   "parent": {
     "name": "Enemy Sounds",
     "path": "folders/Sounds/Enemy Sounds.yy",

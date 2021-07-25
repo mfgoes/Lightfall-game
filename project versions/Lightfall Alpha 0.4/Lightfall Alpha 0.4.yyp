@@ -383,7 +383,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"gmlive-server.n","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.2.560",
+    "IDEVersion": "2.3.3.570",
   },
   "resourceVersion": "1.4",
   "name": "Lightfall Alpha 0.4",
