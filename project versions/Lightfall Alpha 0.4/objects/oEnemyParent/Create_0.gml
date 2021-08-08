@@ -7,7 +7,7 @@ enum enemy_states {
   attack
 }
 current_state = enemy_states.idle;
-								
+				
 //define sprites (load flazas arrays and enums in the future (phase 3)
 spriteIdle =	sEnemyExploder;
 spriteWalk =	sEnemyExploder;
@@ -15,6 +15,7 @@ spriteJump =	sEnemyExploder;
 spriteDie  =	sPlayerDie;
 spriteAttack  =	sEnemyExploder
 spriteMelee  =	sEnemyExploder
+attack_anim_end = 0;
 mask_index =	sprite_index;
 image_alpha = 0.1; //fade in
 

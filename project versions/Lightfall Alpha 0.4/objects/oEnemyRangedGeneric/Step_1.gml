@@ -1,4 +1,5 @@
-/// @description Insert description here
+/// @description overwrite this with parent code later
+
 if global.game_paused
 {
 	exit;

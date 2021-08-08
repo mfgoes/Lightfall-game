@@ -1,8 +1,6 @@
-/// @desc create enemy weapon
-//if (live_call()) return live_result;
-
-//enemy stats
+/// @desc enemy stats
 event_inherited();
+
 hp = 2;
 damage = 2; //how much damage it can do
 walkspd = 0.5;

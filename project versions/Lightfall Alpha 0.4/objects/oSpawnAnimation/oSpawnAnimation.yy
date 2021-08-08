@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Setup",
+    "path": "folders/Objects/Setup.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSpawnAnimation",

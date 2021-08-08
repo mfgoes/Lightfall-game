@@ -15,9 +15,6 @@ if (hp <= 0)
 		image_yscale = other.size;
 	}
 	
-	//SPAWN ANOHTER ENEMY 
-	instance_create_depth(xstart+random_range(-15,15),ystart,depth,oEnemySpawnerParent);
-	
 	repeat(3)	//create dust effect
 	{
 		//dust particles

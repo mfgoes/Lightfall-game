@@ -1,4 +1,4 @@
-//gm live 
+/// @desc specific enemy code
 //if (live_call()) return live_result;
 if global.game_paused
 {
