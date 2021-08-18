@@ -39,12 +39,12 @@ draw_text(xx - x_offset*2.5 + 20,yy,description);
 yy = menu_y - menu_item_height;
 
 draw_set_color(gray);
-if menu_cursor == 0 draw_set_color(blue);
+if menu_move == 0 draw_set_color(blue);
 draw_set_halign(fa_center);
 draw_text(xx,yy,menu[0]);
 	
 draw_set_color(c_white);
-draw_text(20,40,string(menu_cursor));
+draw_text(20,40,string(menu_move));
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

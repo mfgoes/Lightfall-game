@@ -7,22 +7,22 @@ if (menu_control)
 	SlideTransition(TRANS_MODE.RESTART);
 	
 	/*go to next room 
-	if keyboard_check(vk_enter) && menu_cursor = 2 { //check if correct menu item here
+	if keyboard_check(vk_enter) && menu_move = 2 { //check if correct menu item here
 		room_goto_next();
 	}*/
 
 	if (keyboard_check_pressed(vk_up))
 	{
-		menu_cursor++;
-		if menu_cursor == 3 menu_cursor++;
-		if (menu_cursor >= menu_items) menu_cursor = 0;
+		menu_move++;
+		if menu_move == 3 menu_move++;
+		if (menu_move >= menu_index) menu_move = 0;
 	}
 		
 	if (keyboard_check_pressed(vk_down))
 	{
-		menu_cursor--;
-		if menu_cursor == 3 menu_cursor--;
-		if (menu_cursor <0) menu_cursor = menu_items-1;
+		menu_move--;
+		if menu_move == 3 menu_move--;
+		if (menu_move <0) menu_move = menu_index-1;
 	}
 	
 
@@ -30,14 +30,14 @@ if (menu_control)
 
 	if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) 
 	{
-		menu_cursor = (menu_y - mouse_y_gui) div (menu_item_height * gui_mult);
+		menu_move = (menu_y - mouse_y_gui) div (menu_item_height * gui_mult);
 	}
 
 
 if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
 	{
 		menu_x_target = gui_width+20;
-		menu_committed = menu_cursor;
+		menu_committed = menu_move;
 		audio_sound_gain(snJump1,0.2,0);
 		audio_play_sound(snJump1,5,0);
 		//ScreenShake(4,10);
@@ -45,7 +45,7 @@ if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
 	}
 }
 
-//menu_committed = menu_cursor;
+//menu_committed = menu_move;
 if (menu_committed != -1) //&& (menu_x > gui_width+150) 
 {
 	switch (menu_committed)

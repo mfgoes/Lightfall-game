@@ -20,7 +20,7 @@ if (hp <= 0)
 	global.kills++;	
 	global.killsthisroom++;
 	global.killsthiswave++;
-	with(oGame) killtextscale = 2;
+	with(oGame) killtextscale = 1.2;
 	}
 	instance_destroy();
 }

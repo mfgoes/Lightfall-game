@@ -18,10 +18,10 @@ draw_text(_menu_x, _menu_y, "Menu");
 
 display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
 
-for (var i = 0; i < menu_items; i++) 
+for (var i = 0; i < menu_index; i++) 
 {
 	var txt = menu[i];
-	if (menu_cursor == i) 
+	if (menu_move == i) 
 	{
 		//txt = string_insert("> ",txt, 0);
 		var col = make_color_rgb(115, 209, 204);
@@ -38,7 +38,7 @@ for (var i = 0; i < menu_items; i++)
 	
 }
 draw_set_color(c_white);
-draw_text(20,40,string(menu_cursor));
+draw_text(20,40,string(menu_move));
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

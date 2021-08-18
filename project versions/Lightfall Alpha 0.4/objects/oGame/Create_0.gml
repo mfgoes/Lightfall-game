@@ -12,7 +12,6 @@ global.game_paused = false;
 global.pause_bg = noone;
 global.sound_volume = 1;
 global.effects = true; //toggle for performance
-
 audio_master_gain(global.sound_volume);
 
 //create particle system
@@ -25,7 +24,9 @@ fps_reader = 0;
 alarm[0] = 20; //read fps every few steps, not every step. 
 image_alpha = 0;
 pause_menu = noone;
-enemy_level = true; //this means it's not a 'story' level
+no_more_enemies = false; //use this to trigger "level has ended" actions 
+
+
 
 //generate objects / randomizer codes
 instance_create_layer(x,y,"Enemies",oEnemySpawner);

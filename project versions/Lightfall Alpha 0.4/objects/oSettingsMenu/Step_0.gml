@@ -1,6 +1,6 @@
 /// @description Control Menu
 //Keyboard Controls
-var i = menu_cursor;
+var i = menu_move;
 with oButton
 {
 	color = make_color_rgb(115, 120, 119);
@@ -13,20 +13,20 @@ if (menu_control)
 	SlideTransition(TRANS_MODE.RESTART);
 	
 	/*go to next room 
-	if keyboard_check(vk_enter) && menu_cursor = 2 { //check if correct menu item here
+	if keyboard_check(vk_enter) && menu_move = 2 { //check if correct menu item here
 		room_goto_next();
 	}*/
 
 	if (keyboard_check_pressed(vk_up))
 	{
-		menu_cursor++;
-		if (menu_cursor >= menu_items) menu_cursor = 0;
+		menu_move++;
+		if (menu_move >= menu_index) menu_move = 0;
 	}
 		
 	if (keyboard_check_pressed(vk_down))
 	{
-		menu_cursor--;
-		if (menu_cursor <0) menu_cursor = menu_items-1;
+		menu_move--;
+		if (menu_move <0) menu_move = menu_index-1;
 	}
 	
 	var mouse_y_gui = device_mouse_y_to_gui(0);	//0 = for if there's multiple mice implemented
@@ -37,15 +37,15 @@ if (menu_control)
 		var instance = instance_position(mouse_x_gui, mouse_y_gui, oButton);
 		if instance
 		{
-			menu_cursor = instance.index;
+			menu_move = instance.index;
 			with instance color = make_color_rgb(115, 209, 204);
 		}
-		else menu_cursor = (menu_y - mouse_y_gui) div (menu_item_height * gui_mult);
+		else menu_move = (menu_y - mouse_y_gui) div (menu_item_height * gui_mult);
 	}
 	if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
 	{
 		menu_x_target = gui_width+20;
-		menu_committed = menu_cursor;
+		menu_committed = menu_move;
 		audio_sound_gain(snJump1,0.2,0);
 		audio_play_sound(snJump1,5,0);
 		//ScreenShake(4,10);
@@ -53,7 +53,7 @@ if (menu_control)
 	}
 }
 
-//menu_committed = menu_cursor;
+//menu_committed = menu_move;
 if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 {
 	switch (menu_committed)

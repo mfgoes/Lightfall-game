@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sn_EquipMagical.wav",
-  "duration": 1.729444,
+  "duration": 1.724444,
   "parent": {
     "name": "scifi-weapons",
     "path": "folders/Sounds/weapons/scifi-weapons.yy",

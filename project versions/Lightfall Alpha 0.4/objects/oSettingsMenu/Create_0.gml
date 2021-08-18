@@ -1,12 +1,7 @@
 /// @description GUI/VARS/Menu Setup
-
-//#macro SAVEFILE "Save.sav"
-//#macro RES_W 480	
-//#macro RES_H 270
 text_res_scale = 1; //how much to scale the pixel art
 title_res_scale = .7;
-//#macro RES_RATIO RES_H/RES_W
-//#macro CAM_SMOOTH 0.1
+
 
 //Resize window & applicatiom surface
 window_set_size(RES_W * RES_SCALE, RES_H * RES_SCALE); 
@@ -51,8 +46,8 @@ button.text = menu[1];
 button.index = 1;
 with button color = make_color_rgb(115, 120, 119);
 
-menu_items = array_length_1d(menu);
+menu_index = array_length_1d(menu);
 
 menu_top = menu_y - ((menu_item_height * 1.5) * 6);
-menu_cursor = menu_items - 1;
+menu_move = menu_index - 1;
 cursor_sprite = sCrosshairs;

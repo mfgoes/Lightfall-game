@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snEquip",
-  "duration": 0.222098,
+  "duration": 0.217098,
   "parent": {
     "name": "Player sounds",
     "path": "folders/Sounds/Player sounds.yy",

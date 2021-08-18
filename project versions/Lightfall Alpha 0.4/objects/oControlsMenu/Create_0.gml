@@ -33,8 +33,8 @@ gui_mult = 1.5;
 
 menu[0] = "Back";
 
-menu_items = array_length_1d(menu);
+menu_index = array_length_1d(menu);
 
 menu_top = menu_y - ((menu_item_height * 1.5) * 7);
-menu_cursor = menu_items - 1;
+menu_move = menu_index - 1;
 cursor_sprite = sCrosshairs;

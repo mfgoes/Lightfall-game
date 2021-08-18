@@ -82,7 +82,7 @@ for (var i = 1; i < 7; i++)
 }
 
 var txt = menu[0];
-if (menu_cursor == 0) 
+if (menu_move == 0) 
 {
 	//txt = string_insert("> ",txt, 0);
 	var col = make_color_rgb(115, 209, 204);
@@ -99,7 +99,7 @@ draw_set_halign(fa_center);
 draw_text(xx,yy,txt);
 	
 draw_set_color(c_white);
-draw_text(20,40,string(menu_cursor));
+draw_text(20,40,string(menu_move));
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

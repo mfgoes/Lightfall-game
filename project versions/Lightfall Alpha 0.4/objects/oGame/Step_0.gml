@@ -46,3 +46,14 @@ if global.game_paused
 		image_speed = 0;
 	}*/
 }
+
+#region level cleared (move to function later)
+if global.wavetotal - global.killsthiswave = 0 {
+	if !instance_exists(oEnemyParent) && no_more_enemies = false {
+		no_more_enemies = true;
+		audio_play_sound(snLevelClear_Special_Click_05,0,0);
+		//generate arrow object (points at portal)
+		instance_create_depth(x,y,depth,oPortalArrow);
+	}
+}
+#endregion
