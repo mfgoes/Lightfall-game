@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Utility",
-    "path": "folders/Objects/Setup/Level Editor/Utility.yy",
+    "path": "folders/Objects/Essentials/Level Editor/Utility.yy",
   },
   "resourceVersion": "1.0",
   "name": "cell_checker",

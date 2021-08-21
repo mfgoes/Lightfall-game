@@ -2,6 +2,10 @@
 global.has_control = false; //replace menu pauses with a global one
 cursor_sprite = sCrosshairs;
 
+//init transition object (required for changing rooms)
+instance_create_depth(0,0,depth,oTransition);
+
+
 //init UI colors
 col_regular = make_color_rgb(50,43,40); //dark
 col_active = make_color_rgb(235,242,226);

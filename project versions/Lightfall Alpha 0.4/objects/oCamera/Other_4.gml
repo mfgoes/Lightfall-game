@@ -28,7 +28,10 @@
 
 //reincluded code
 if instance_exists(oPlayer) follow = oPlayer;
-//else follow = self;
+else if instance_exists(oMenu) follow = oMenu;
+else follow = self;
+
+
 camera_set_view_target(cam,follow);
 
 //Starting camera position (room start)

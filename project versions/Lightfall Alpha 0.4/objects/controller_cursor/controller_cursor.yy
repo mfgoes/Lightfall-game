@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Controller",
-    "path": "folders/Objects/Setup/Level Editor/Controller.yy",
+    "path": "folders/Objects/Essentials/Level Editor/Controller.yy",
   },
   "resourceVersion": "1.0",
   "name": "controller_cursor",

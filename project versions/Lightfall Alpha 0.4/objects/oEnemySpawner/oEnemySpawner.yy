@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Setup",
-    "path": "folders/Objects/Setup.yy",
+    "name": "Essentials",
+    "path": "folders/Objects/Essentials.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemySpawner",

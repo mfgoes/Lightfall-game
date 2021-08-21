@@ -47,7 +47,9 @@ if global.game_paused
 	}*/
 }
 
+
 #region level cleared (move to function later)
+if room != rMenu {
 if global.wavetotal - global.killsthiswave = 0 {
 	if !instance_exists(oEnemyParent) && no_more_enemies = false {
 		no_more_enemies = true;
@@ -55,5 +57,6 @@ if global.wavetotal - global.killsthiswave = 0 {
 		//generate arrow object (points at portal)
 		instance_create_depth(x,y,depth,oPortalArrow);
 	}
+}
 }
 #endregion

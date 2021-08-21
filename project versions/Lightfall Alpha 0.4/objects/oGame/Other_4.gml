@@ -1,29 +1,19 @@
+//@desc move this to generator code later
 global.killsthisroom = 0;
 global.exp_points_thisroom = 0;
 
-
-//remove if duplicate
-if instance_number(object_index) > 1 { instance_destroy() }
-//create important objects
-if !instance_exists(oCamera) {
-	dd = instance_create_depth(0,0,depth,oCamera);
-	dd.follow = oPlayer;
-}
-
-if !instance_exists(oTransition) {
-	instance_create_depth(0,0,depth,oTransition);
-}
-
-//Create particles 
-/*This should depend on: biome + global setting*/
-if global.effects = true && room != rMenu {		//check biome here later
-	if !instance_exists(oParticleFog) {
-		instance_create_depth(0,0,depth,oParticleFog);
-	}
-	if !instance_exists(oParticleSnow) {
-		instance_create_depth(0,0,depth,oParticleSnow);
+//generate objects / randomizer codes. Move this to a single script later
+if room != rMenu {
+	//Biome generator
+	instance_create_depth(x,y,depth,oLevelGenerator);	
+	//UI
+	instance_create_depth(x,y,depth,oUIElements);
+	//camera
+	if !instance_exists(oCamera) {
+			dd = instance_create_depth(0,0,depth,oCamera);
+			dd.follow = oPlayer;
+		}
+	if !instance_exists(oTransition) {
+		instance_create_depth(0,0,depth,oTransition);
 	}
 }
-
-
-

@@ -2,7 +2,6 @@
 //GMLive
 //if (live_call()) return live_result; 
 
-
 #region set up resolution macros MOVE THIS TO FUNCTION LATER
 	#macro SAVEFILE "Save.sav"
 	#macro RES_W 480	
