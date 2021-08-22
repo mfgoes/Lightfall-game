@@ -1,9 +1,6 @@
 /// @description Parent + custom code
 event_inherited();
 
-//gm live 
-if (live_call()) return live_result; 
-
 if spd > 0 { //check if in wall
 	//gravity + movement
 	if vsp < 20 vsp+=grv;

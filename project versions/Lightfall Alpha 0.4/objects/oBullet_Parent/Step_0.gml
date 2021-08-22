@@ -1,8 +1,8 @@
 /// @description Insert description here
-if global.game_paused
+/*if global.game_paused
 {
 	exit;
-}
+}*/
 
 timer_init("poof_trail");
 timer_init("poof_trail_close");

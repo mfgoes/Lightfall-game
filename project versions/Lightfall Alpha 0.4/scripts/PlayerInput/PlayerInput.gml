@@ -25,46 +25,25 @@ function PlayerInput(){
 		//Gamepad sepecific controls
 		if (key_left) || (key_right) || (key_jump)
 		{
-			gamepad_on = 0;	
+			global.gamepad_on = 0;	
 		}
 
 		if (abs(gamepad_axis_value(0,gp_axislh)) > 0.2)
 		{
 			key_left = abs(min(gamepad_axis_value(0,gp_axislh),0));	
 			key_right = max(gamepad_axis_value(0,gp_axislh),0);
-			gamepad_on = 1;
-		}
-
-		//secondary ability 
-		/*
-		if (key_secondary) {
-			if secondary_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
-				image_index = 0; 
-				//image_speed = 0;
-				state = call_ability[cooldown_ability.secondary]; //state = PlayerStateMeleeAtk;
-				secondary_cooldown = secondary_cooldown_full;
-				} 
-		}*/
-		
-		//third ability -> exploding missile 
-		if (key_special) { 
-			/*
-			if third_cooldown = 0 && roll_cooldown < 10 { //almost done rolling
-				image_index = 0; image_speed = 0; 
-				third_cooldown = third_cooldown_full;
-				state = PlayerStateSpecialAtk; 			
-			}
-			*/
+			global.gamepad_on = 1;
 		}
 		
 		//roll ability 	
-		if (key_roll) //enter roll state
+		if (key_roll)  //enter roll state
 			{
 				if state = PlayerStateFree && roll_cooldown = 0 {
 					state = PlayerStateRoll;
 					audio_sound_gain(snJump1,0.2,0);
 					audio_play_sound(snJump1,4,false);
 					roll_cooldown = roll_cooldown_full;	/// if cooldown = 0 you can roll, else no roll. 
+					oUIElements.roll_cooldown = 0;
 				}
 				moveDistanceRemaining = distanceRoll
 			}
@@ -77,9 +56,4 @@ function PlayerInput(){
 	}
 	//COOLDOWNS
 	if roll_cooldown > 0 roll_cooldown -=1;
-	if primary_cooldown > 0 primary_cooldown -=1;
-	if secondary_cooldown > 0 {secondary_cooldown -=1;}
-	if third_cooldown > 0 {third_cooldown -=1;}
-		
-	//if any cooldown is not 0 (except bow) don't allow movement.
 }

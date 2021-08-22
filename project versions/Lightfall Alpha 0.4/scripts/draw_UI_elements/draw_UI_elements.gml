@@ -23,10 +23,11 @@ function draw_UI_elements(){
 		draw_sprite_ext(sCooldowns_Archer,2,margin_right+35,margin_bottom,UIscale,UIscale,0,c_gray,1);
 		//draw_sprite_ext(sCooldowns_Archer,1,margin_right+65,margin_bottom,UIscale,UIscale,0,c_gray,1);
 		draw_set_halign(fa_center);
-		draw_text(margin_right-13,margin_bottom+4,oPlayer.primary_cooldown); 
-		draw_text(margin_right+17,margin_bottom+4,oPlayer.secondary_cooldown); 
-		draw_text(margin_right+47,margin_bottom+4,oPlayer.roll_cooldown); 
-		//draw_text(margin_right+77,margin_bottom+4,oPlayer.roll_cooldown); 
+		
+		draw_text(margin_right-13,margin_bottom+4,primary_cooldown); 
+		draw_text(margin_right+17,margin_bottom+4,secondary_cooldown); 
+		draw_text(margin_right+47,margin_bottom+4,roll_cooldown); 
+		//draw_text(margin_right+77,margin_bottom+4,roll_cooldown); 
 	
 		//draw tooltips (labels)
 		draw_text(margin_right-13,margin_bottom+14,"LMB"); 

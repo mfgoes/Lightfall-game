@@ -12,7 +12,7 @@ global.game_paused = false;
 global.pause_bg = noone;
 global.sound_volume = 1;
 global.effects = true; //toggle for performance
-
+global.gamepad_on = false; //gamepad
 audio_master_gain(global.sound_volume);
 
 //create particle system
@@ -21,6 +21,7 @@ part_system_depth(global.partSystem, -100);
 
 image_alpha = 0;
 pause_menu = noone;
+
 no_more_enemies = false; //use this to trigger "level has ended" actions 
 
 
