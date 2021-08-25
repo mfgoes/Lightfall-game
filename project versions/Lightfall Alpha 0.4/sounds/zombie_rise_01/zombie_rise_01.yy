@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.99,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "lux_shot_03.wav",
-  "duration": 0.604444,
+  "soundFile": "zombie_rise_01.wav",
+  "duration": 1.644444,
   "parent": {
-    "name": "scifi-weapons",
-    "path": "folders/Sounds/weapons/scifi-weapons.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "lux_shot_03",
+  "name": "zombie_rise_01",
   "tags": [],
   "resourceType": "GMSound",
 }

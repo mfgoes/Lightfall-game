@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snDartGun1.ogg",
-  "duration": 0.528764,
+  "duration": 0.523764,
   "parent": {
     "name": "weapons",
     "path": "folders/Sounds/weapons.yy",

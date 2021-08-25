@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "MULT_m1_snipe_chargeUp_01.ogg",
-  "duration": 0.936927,
+  "duration": 0.931927,
   "parent": {
     "name": "weapons",
     "path": "folders/Sounds/weapons.yy",

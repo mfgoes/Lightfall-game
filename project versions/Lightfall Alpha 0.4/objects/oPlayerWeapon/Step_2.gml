@@ -37,6 +37,7 @@ else {
 	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {		
 		//primary attack
 		Ability_Primary_Archer(); 	
+		//Ability_SMG();
 		
 		//secondary attack
 		Ability_Secondary_Archer(); 

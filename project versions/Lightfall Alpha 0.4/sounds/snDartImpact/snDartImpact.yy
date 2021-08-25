@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snDartImpact.wav",
-  "duration": 0.433444,
+  "duration": 0.428444,
   "parent": {
     "name": "weapons",
     "path": "folders/Sounds/weapons.yy",

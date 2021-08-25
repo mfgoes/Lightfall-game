@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_bulletHit.wav",
-  "duration": 0.188855,
+  "duration": 0.183855,
   "parent": {
     "name": "weapons",
     "path": "folders/Sounds/weapons.yy",

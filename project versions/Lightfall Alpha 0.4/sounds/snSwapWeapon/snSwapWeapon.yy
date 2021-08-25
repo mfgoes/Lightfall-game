@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snSwapWeapon.wav",
-  "duration": 0.036882,
+  "duration": 0.031882,
   "parent": {
     "name": "weapons",
     "path": "folders/Sounds/weapons.yy",

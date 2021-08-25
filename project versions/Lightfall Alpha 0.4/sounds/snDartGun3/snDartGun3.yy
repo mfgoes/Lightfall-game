@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snDartGun3.wav",
-  "duration": 0.557889,
+  "duration": 0.552889,
   "parent": {
     "name": "weapons",
     "path": "folders/Sounds/weapons.yy",

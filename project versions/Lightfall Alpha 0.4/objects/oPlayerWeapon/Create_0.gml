@@ -11,3 +11,6 @@
 
 LoadWeapon_Archer();
  
+ //set ammo count
+ ammo_primary = 10;
+ ammo_secondary = 20; 
