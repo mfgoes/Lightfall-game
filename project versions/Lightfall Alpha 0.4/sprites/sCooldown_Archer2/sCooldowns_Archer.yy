@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UI",
-    "path": "folders/Graphics and Sprites/UI.yy",
+    "name": "Player",
+    "path": "folders/Graphics and Sprites/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCooldowns_Archer",

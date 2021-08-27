@@ -1,6 +1,6 @@
 /// @description dynamic enemy spawner object
 spawn_type = oEnemyRangedGeneric;
-spawn_amount = 3; 
+spawn_amount = 0; 
 global.wavetotal = spawn_amount;
 alarm[2] = 5; //count existing enemies in room and add to total
 
