@@ -4,7 +4,7 @@
     "path": "sprites/spr_controller_cursor/spr_controller_cursor.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

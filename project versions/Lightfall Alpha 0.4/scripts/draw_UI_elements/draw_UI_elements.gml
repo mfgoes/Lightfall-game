@@ -1,7 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function draw_UI_elements(){
-	
 	//gm live 
 	if (live_call()) return live_result; 
 
@@ -70,48 +69,30 @@ function draw_UI_elements(){
 		draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
 		*/
 		
+		//draw_text_transformed(RES_W/2,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
+		//draw_set_color(c_white);
+	
 	}
 	#region draw cursor
-		var cursor_scale = 1;
+		var cursor_scale = 0.75;
 		var current_weapon = 1;
 		var mx = (window_mouse_get_x()/window_get_width()) * display_get_gui_width();
 		var my = (window_mouse_get_y()/window_get_height()) * display_get_gui_height();
-	
 		if instance_exists(oPlayer) current_weapon = oPlayer.current_weapon; //select image_index
-		if instance_exists(oPlayerWeapon) {
-			if oPlayerWeapon.weapon_charge = oPlayerWeapon.weapon_charge_max cursor_scale = 1.2;
-		}
 		draw_sprite_ext(sCrosshairs,current_weapon,mx,my,cursor_scale,cursor_scale,0,c_white,1);
-	#endregion
-
-
-	#region draw level instructions (ie enemies left)
-		var color_text = make_color_rgb(254,231,97);
-		var col_bgr = make_color_rgb(36,19,33);
-		if (global.wavetotal - global.killsthiswave = 0) { 
-			draw_sprite(sTexts_levelclear,0,RES_W/2,17); 
-		}
-		if (global.wavetotal - global.killsthiswave !=0) { 
-
-			//outline (improve later)
-			draw_set_font(font_UI);
-			draw_set_halign(fa_center);
-			draw_set_color(col_bgr);
-			draw_set_alpha(1);
-
-			draw_text_transformed(RES_W/2,16,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-			draw_text_transformed(RES_W/2,18,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-			draw_text_transformed(RES_W/2-1,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-			draw_text_transformed(RES_W/2+1,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-	
-			draw_set_color(color_text);
-			draw_text_transformed(RES_W/2,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-			draw_set_color(c_white);
-		}
 	#endregion
 
 }
 
+function draw_cursor_custom(){
+		var cursor_scale = 0.75;
+		var current_weapon = 1;
+		var mx = (window_mouse_get_x()/window_get_width()) * display_get_gui_width();
+		var my = (window_mouse_get_y()/window_get_height()) * display_get_gui_height();
+		if instance_exists(oPlayer) current_weapon = oPlayer.current_weapon; //select image_index
+		draw_sprite_ext(sCrosshairs,current_weapon,mx,my,cursor_scale,cursor_scale,0,c_white,1);
+}
+	
 function draw_debug_info(){
 	var margin_right = RES_W-96;
 	var margin_bottom =  RES_H -35;
@@ -123,4 +104,60 @@ function draw_debug_info(){
 		draw_text(10,24,"zoom: " + string(oCamera.zoom));
 		draw_text(10,40,"fps_reader: " + string(fps_reader));
 	}
+}
+	
+function show_region_title(){
+		//gm live 
+		//if (live_call()) return live_result; 
+		
+		var text_bgr = make_colour_rgb(22, 25, 27);
+		var text_res_scale = 1.5;
+		display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
+		draw_set_halign(fa_center);
+		draw_set_font(fMenu);
+		timer_init("fade_in");	
+		timer_init("fade_out");
+		
+		if timer_get("fade_in") <= 0 {
+			timer_set("fade_in",170); //fade in first
+		}
+		if timer_get("fade_in") = 1 {
+			timer_set("fade_out",200); //if this timer is on, start fading out. 
+		}
+		
+		if timer_get("fade_out") <= 0 && levelname_opacity < 1 levelname_opacity+=0.01; //if not fading out
+		if timer_get("fade_out") > 0 && levelname_opacity > 0 levelname_opacity-=0.01; //fade out again
+		draw_set_alpha(levelname_opacity);
+		draw_set_color(text_bgr);
+		draw_text(RES_W/2*text_res_scale,RES_H*text_res_scale*0.1,level_name);
+		draw_set_alpha(1);
+		//reset 
+		display_set_gui_size(RES_W, RES_H);	
+}
+
+function draw_objective_UI(){
+	//gm live 
+	if (live_call()) return live_result; 
+	//reset 
+	display_set_gui_size(RES_W, RES_H);	
+	var text_bgr = make_colour_rgb(22, 25, 27);
+	var text_res_scale = 1;
+	display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
+	draw_set_halign(fa_right);
+	draw_set_font(fSign);
+	draw_set_color(text_bgr);
+	
+	
+	var text = "Find the Portal" 
+	if oLevelEnd.boss_defeated = true { text = "Enter the Portal" }  
+	else if oLevelEnd.boss_summon = true {text = "Defeat the Guardian";}
+	else {text = "Find the Portal";}
+	
+	
+		
+	draw_text(RES_W*text_res_scale-10,5,text);
+}
+
+function draw_boss_UI(){
+	
 }

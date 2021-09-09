@@ -1,6 +1,5 @@
 /// @description GUI/VARS/Menu Setup
 global.has_control = false; //replace menu pauses with a global one
-cursor_sprite = sCrosshairs;
 
 //init transition object (required for changing rooms)
 instance_create_depth(0,0,depth,oTransition);

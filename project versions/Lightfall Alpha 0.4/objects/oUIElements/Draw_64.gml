@@ -1,10 +1,16 @@
-/// @description Draw UI elements
+/// @desc draw UI
 
-//gm live 
-if (live_call()) return live_result; 
+//draw objective (move to function later)
+draw_objective_UI(); 
 
-//DRAW UI
-draw_UI_elements(); //player UI elements
+//draw boss UI
+draw_boss_UI(); 
+
+//health, cooldowns, etc
+draw_UI_elements(); 
+
+//debug only
 draw_debug_info();
 
-
+//level details
+show_region_title();

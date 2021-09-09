@@ -4,7 +4,7 @@ if global.game_paused
 	exit;
 }
 
-if spawn_amount > 0 {
+if spawn_amount > 0 && oLevelEnd.boss_defeated = false { //only spawn new guys if enemy is still alive. 
 	randomize();
 	var xpos = random_range(-120,120); //variation for where to spawn enemies
 	var xpos = (round(xpos/32) * 32); 

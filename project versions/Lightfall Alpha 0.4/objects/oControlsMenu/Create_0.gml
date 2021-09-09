@@ -37,4 +37,4 @@ menu_index = array_length_1d(menu);
 
 menu_top = menu_y - ((menu_item_height * 1.5) * 7);
 menu_move = menu_index - 1;
-cursor_sprite = sCrosshairs;
+//cursor_sprite = sCrosshairs;
