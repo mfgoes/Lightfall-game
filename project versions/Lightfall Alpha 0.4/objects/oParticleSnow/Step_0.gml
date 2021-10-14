@@ -12,7 +12,7 @@ var cam_y = camera_get_view_y(view_camera[0]);
 //zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.4); 
 
 
-var amount = 0; if random(oCamera.zoom) >= 0.045 && random(1) < 0.1 amount = -5;
+var amount = 0; if random(oCamera.zoom) >= 0.015 && random(1) < 0.1 amount =4;
 
-part_emitter_region(global.partSystem,emitterSnow,cam_x-30, cam_x + cam_width+30, cam_y + cam_height, cam_y + cam_height - 20, ps_shape_rectangle, ps_distr_linear);
+part_emitter_region(global.partSystem,emitterSnow,cam_x-100, cam_x + cam_width+100, cam_y + cam_height, cam_y + cam_height - 20, ps_shape_rectangle, ps_distr_linear);
 part_emitter_stream(global.partSystem, emitterSnow, particle_Snow, amount);  

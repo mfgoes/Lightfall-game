@@ -1,8 +1,9 @@
 /// @desc draw UI
 
 //draw objective (move to function later)
-draw_objective_UI(); 
-
+if room != rMenu {
+	draw_objective_UI(); 
+}
 //draw boss UI
 draw_boss_UI(); 
 

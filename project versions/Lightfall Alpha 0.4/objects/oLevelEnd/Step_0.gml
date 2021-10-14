@@ -24,12 +24,12 @@ if place_meeting(x,y-1,oPlayer)
 	//summon boss
 	else if boss_summon = false {
 		boss_summon = true;
-		summon = instance_create_depth(x,y-1,depth,oSpawnAnimation);
+		summon = instance_create_depth(x,y-1,depth-60,oSpawnAnimation);
 		summon.spawn_type = oBoss1; 
 		summon.boss_enemy = true;
 		summon.ScreenShake(2,6);
 	}
-	if !instance_exists(oCamFollow) instance_create_depth(x,y-sprite_height*0.9,depth,oCamFollow);
+	if !instance_exists(oCamFollow) dd = instance_create_depth(x,y-sprite_height*0.9,depth,oCamFollow);
 }
 else 
 if instance_exists(oCamFollow) with(oCamFollow) instance_destroy(); 

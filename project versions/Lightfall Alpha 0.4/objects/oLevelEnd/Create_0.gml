@@ -6,3 +6,4 @@ ParticlesPortal();
 
 boss_defeated = false; //save level completion to save file later
 boss_summon = false;
+depth = 400;

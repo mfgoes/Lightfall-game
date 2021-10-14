@@ -136,26 +136,23 @@ function show_region_title(){
 }
 
 function draw_objective_UI(){
-	//gm live 
-	if (live_call()) return live_result; 
-	//reset 
+	if instance_exists(oLevelEnd) {
+
 	display_set_gui_size(RES_W, RES_H);	
-	var text_bgr = make_colour_rgb(22, 25, 27);
-	var text_res_scale = 1;
-	display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
-	draw_set_halign(fa_right);
-	draw_set_font(fSign);
-	draw_set_color(text_bgr);
+		var text_bgr = make_colour_rgb(22, 25, 27);
+		var text_res_scale = 1;
+		display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
+		draw_set_halign(fa_right);
+		draw_set_font(fSign);
+		draw_set_color(text_bgr);
 	
-	
-	var text = "Find the Portal" 
-	if oLevelEnd.boss_defeated = true { text = "Enter the Portal" }  
-	else if oLevelEnd.boss_summon = true {text = "Defeat the Guardian";}
-	else {text = "Find the Portal";}
-	
-	
-		
-	draw_text(RES_W*text_res_scale-10,5,text);
+		var text = "Find the Portal" 
+		if oLevelEnd.boss_defeated = true { text = "Enter the Portal" }  
+		else if oLevelEnd.boss_summon = true {text = "Defeat the Guardian";}
+		else {text = "Find the Portal";}
+		draw_text(RES_W*text_res_scale-10,5,text);
+	}
+
 }
 
 function draw_boss_UI(){
