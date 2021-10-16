@@ -15,7 +15,5 @@ if room != rMenu {
 		}
 	if !instance_exists(oTransition) {
 		instance_create_depth(0,0,depth,oTransition);
-	}
-	
-	
+	}	
 }

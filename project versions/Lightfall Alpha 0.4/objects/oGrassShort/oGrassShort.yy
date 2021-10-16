@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_controller_cursor",
-    "path": "sprites/spr_controller_cursor/spr_controller_cursor.yy",
+    "name": "sGrass_Brown_Random",
+    "path": "sprites/sGrass_Brown_Random/sGrass_Brown_Random.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oGrassTall",
+    "path": "objects/oGrassTall/oGrassTall.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -27,11 +30,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Essentials",
-    "path": "folders/Objects/Essentials.yy",
+    "name": "Interactive Objects",
+    "path": "folders/Objects/Interactive Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oLevelGenerator",
+  "name": "oGrassShort",
   "tags": [],
   "resourceType": "GMObject",
 }
