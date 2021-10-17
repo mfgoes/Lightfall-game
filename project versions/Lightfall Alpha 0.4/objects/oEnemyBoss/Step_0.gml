@@ -72,7 +72,7 @@ switch (current_state)
 				{
 					if place_meeting(x + dir*walkspd*2, y,oWall)
 					{
-						vsp -= jump_spd;
+						vsp -= jump_speed;
 					}
 				}
 				

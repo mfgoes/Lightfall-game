@@ -10,7 +10,7 @@ afraid_of_heights = true;
 alerted = 0; //if player has already been sighted by this unit.
 walkspd = .5;
 hsp = walkspd;
-jump_spd = 5;
+jump_speed = 5;
 
 xprev = x;
 yprev = y;

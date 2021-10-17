@@ -14,6 +14,7 @@ function LoadCharacter_Basics(){
 	speedRoll = 5.0;
 	distanceRoll = 170;
 	facing_direction = 0; //the last walked in direction
+	jump_pad_jump = false;
 		
 	//grappling hook
 	grappleX = 0;

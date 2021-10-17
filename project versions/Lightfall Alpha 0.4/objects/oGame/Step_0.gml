@@ -50,10 +50,10 @@ if global.game_paused
 
 #region level cleared (move to function later)
 if room != rMenu {
-if global.wavetotal - global.killsthiswave = 0 {
+if global.wavetotal - global.killsthiswave = 0 && global.wavetotal > 0 {
 	if !instance_exists(oEnemyParent) && no_more_enemies = false {
 		no_more_enemies = true;
-		audio_play_sound(snLevelClear_Special_Click_05,0,0);
+		audio_play_sound(snLevelClear_Special_Click_05,0,0); //only play if there are waves to begin with
 		//generate arrow object (points at portal)
 		instance_create_depth(x,y,depth,oPortalArrow);
 	}

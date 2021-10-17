@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "archer_blink.ogg",
-  "duration": 0.47534,
+  "duration": 0.47034,
   "parent": {
     "name": "Player sounds",
     "path": "folders/Sounds/Player sounds.yy",

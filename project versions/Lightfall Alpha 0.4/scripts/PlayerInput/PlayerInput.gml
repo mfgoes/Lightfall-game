@@ -5,7 +5,8 @@ function PlayerInput(){
 	{
 		key_left = keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0,gp_padl);
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0,gp_padr);
-		key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check(0,gp_face2);
+		key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face2);
+		key_jump_held = keyboard_check(vk_space) || gamepad_button_check(0,gp_face2);
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0,gp_padd);
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0,gp_padu);
 		key_equip = keyboard_check(ord("E")) || gamepad_button_check(0,gp_face4);

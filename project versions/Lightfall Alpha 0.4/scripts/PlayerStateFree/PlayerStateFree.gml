@@ -16,15 +16,14 @@ grounded =(place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
 	//accelerate
 	var move = key_right - key_left;
 	var decelerate = 0; 
-	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.4 decelerate = 0; } 
+	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.15 decelerate = 0; } 
 	
 	//decelerate
 	if move = 0 { //create fall momentum by decreasing decelleration.
-		if current_walkspd > 0.4 {if place_meeting(x,y+1,oWall) current_walkspd -=0.3; else current_walkspd -=0.15;} 
-		else {current_walkspd = 0; decelerate = 0;}
+		if current_walkspd > 0 {current_walkspd -=0.15;} else current_walkspd = 0; 
+		//else {current_walkspd = 0; decelerate = 0;}
 		decelerate = current_walkspd * sign(hsp);
 	} else decelerate = 0; 
-	
 	
 	hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
 
@@ -53,6 +52,7 @@ if (place_meeting(x,y+1,oParPlatform) && key_down) {
 	if (grounded = 1) { 
 		coyote_time = 8; 
 		jumps = jumps_max;	
+		jump_pad_jump = false;
 	}
 
 	if (key_jump) && (jumps > 0) {
@@ -70,9 +70,11 @@ if (place_meeting(x,y+1,oParPlatform) && key_down) {
 					image_xscale = choose (1,-1);
 					image_yscale = choose (1,-1);
 				}	
-		}
-		
-		
+		}			
+	}
+	//variable jump (also check if jumping from trampoline)
+	if (vsp < 0) && (!key_jump_held) && jump_pad_jump = false {
+		vsp = max(vsp, -jump_speed/4);	
 	}
 
 	if !place_meeting(x,y+1,oWall) && coyote_time = 0 {
@@ -106,7 +108,8 @@ if canrope = 1 {
 		if dd.active = true {
 			vsp = -11; dd.active = false; jumps = jumps_max; dd.alarm[0] = 40;  //reset jump pad1
 			audio_play_sound(snDartImpact,0,0);
-		} 	
+		}
+		jump_pad_jump = true; 
 	}	
 #endregion
 
