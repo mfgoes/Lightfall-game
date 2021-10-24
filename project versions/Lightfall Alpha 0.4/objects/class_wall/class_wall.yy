@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Classes",
-    "path": "folders/Objects/Essentials/Level Editor/Classes.yy",
+    "path": "folders/Objects/Essentials/Level Misc/Classes.yy",
   },
   "resourceVersion": "1.0",
   "name": "class_wall",

@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Essentials",
-    "path": "folders/Objects/Essentials.yy",
+    "name": "Level Misc",
+    "path": "folders/Objects/Essentials/Level Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTransition",

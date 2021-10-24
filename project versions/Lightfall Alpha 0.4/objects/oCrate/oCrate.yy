@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactive Objects",
-    "path": "folders/Objects/Interactive Objects.yy",
+    "name": "Aesthetic",
+    "path": "folders/Objects/Interactive Objects/Aesthetic.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCrate",

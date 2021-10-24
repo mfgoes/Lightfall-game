@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Interactive Objects",
+    "path": "folders/Objects/Interactive Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oLevelEnd",

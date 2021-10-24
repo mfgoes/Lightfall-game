@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Interactive Objects",
+    "path": "folders/Objects/Interactive Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oJumpPad",
