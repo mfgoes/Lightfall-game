@@ -1,5 +1,6 @@
 /// @description init
 gate_active = false; //activate when player enters the arena
+touched_gate = false; 
 
 //search for nearest object
 xx = x;
