@@ -68,9 +68,9 @@ function draw_UI_elements(){
 		}
 		draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
 		*/
-		
-		//draw_text_transformed(RES_W/2,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-		//draw_set_color(c_white);
+		draw_set_halign(fa_left);
+		draw_text_transformed(RES_W/2,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
+		draw_set_color(c_white);
 	
 	}
 	#region draw cursor

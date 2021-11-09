@@ -8,7 +8,7 @@
 */
 
 //spawner
-instance_create_layer(x,y,"Enemies",oEnemySpawner);
+//instance_create_layer(x,y,"Enemies",oEnemySpawner);
 
 //particles
 if !instance_exists(oParticleFog) { //make global setting for particles later
