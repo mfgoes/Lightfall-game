@@ -23,6 +23,3 @@ image_alpha = 0;
 pause_menu = noone;
 
 no_more_enemies = false; //use this to trigger "level has ended" actions 
-
-
-

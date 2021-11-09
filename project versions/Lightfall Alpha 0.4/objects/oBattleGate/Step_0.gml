@@ -27,15 +27,15 @@ if instance_exists(oPlayer) {
 	}
 	else {
 		var i = -sprite_height; 
-		var stack = 0;
+		var stack = 0; 
 		oPlayer.has_control = true;	
-		if touched_gate = true && stack_height > 0 { //remove stack var later
-			repeat(stack_height) {
+		if touched_gate = true  > 0 { //remove stack var later
+			repeat(stack_num) {
 			{
 			 if !instance_place(x,y+stack,oBattleGateWall) 
 				instance_create_depth(x,y+stack,depth,oBattleGateWall);
 			stack += i; 
-			stack_height = 0
+			stack_num = 0
 			}
 		}
 	}
@@ -49,5 +49,5 @@ if keyboard_check_released(vk_down) gate_active = false;
 if (global.wavetotal - global.killsthiswave = 0) && gate_active = true { //replace with 'wavetotal' later
 	
 	with(oBattleGateWall) instance_destroy();
-	gate_active = false; 
+	//gate_active = false; 
 }

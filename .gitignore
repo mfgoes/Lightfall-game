@@ -86,3 +86,4 @@ tags
 */**/.DS_Store
 /.vs
 /CMakeLists.txt.bak
+project versions/Lightfall Alpha 0.4/objects/oCamera/Create_0.gml

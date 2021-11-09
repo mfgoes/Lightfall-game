@@ -8,4 +8,4 @@ x -= 10000;
 other_gate = instance_nearest(xx, y, object_index);
 x += 10000;
 
-stack_height = 4; 
+stack_num = 4; 
