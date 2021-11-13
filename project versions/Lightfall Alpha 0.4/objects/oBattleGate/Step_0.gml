@@ -2,16 +2,22 @@
 if instance_exists(oPlayer) {
 			
 	if place_meeting(x,y,oPlayer) {
-		oPlayer.has_control = false;
-		var dir = sign(other_gate.x - x)* oPlayer.walkspd;	
-		if !place_meeting(oPlayer.x+dir,y,oWall)
-			oPlayer.x += dir; else oPlayer.x -= sprite_width; //otherwise move player completely
-		touched_gate = true; //only activate this if gate is active
-		other_gate.touched_gate = true;
 		
+		//push player inside gate at start
+		if (global.wavetotal - global.killsthiswave > 0) {
+			oPlayer.has_control = false;
+			var dir = sign(other_gate.x - x)* 4;
+			if !place_meeting(oPlayer.x+dir,y,oWall)
+				oPlayer.x += dir; else oPlayer.x -= sprite_width; //otherwise move player completely
+			touched_gate = true; //only activate this if gate is active
+			other_gate.touched_gate = true;
+		}
+		
+		//generate enemy spawner
 		if gate_active = false {
 			gate_active = true; 
-			other_gate.gate_active = true; //change this to global variable later
+			other_gate.gate_active = true;
+			
 			//generate enemy spawner between two gates
 			var spawn_x = (x + other_gate.x)/2;
 			var bufferzone = sprite_width; 
@@ -25,29 +31,22 @@ if instance_exists(oPlayer) {
 			
 		}
 	}
-	else {
+	//generate stack of walls
+	else if touched_gate = true { 
 		var i = -sprite_height; 
 		var stack = 0; 
 		oPlayer.has_control = true;	
-		if touched_gate = true  > 0 { //remove stack var later
-			repeat(stack_num) {
-			{
-			 if !instance_place(x,y+stack,oBattleGateWall) 
-				instance_create_depth(x,y+stack,depth,oBattleGateWall);
+		repeat(stack_num) {
+			if !instance_place(x,y+stack,oBattleGateWall) 
+			dd = instance_create_depth(x,y+stack,depth,oBattleGateWall);
+			dd.dir = sign(other_gate.x - x)* 4;
 			stack += i; 
 			stack_num = 0
-			}
 		}
 	}
+}
 
-	}
-} 
-
-if keyboard_check_released(vk_down) gate_active = false;
-//while touching player, set Control to false and walk player forward. 
-
-if (global.wavetotal - global.killsthiswave = 0) && gate_active = true { //replace with 'wavetotal' later
-	
+//open back gate + delete stack of walls
+if (global.wavetotal - global.killsthiswave = 0) && gate_active = true { //replace with 'wavetotal' later	
 	with(oBattleGateWall) instance_destroy();
-	//gate_active = false; 
 }
