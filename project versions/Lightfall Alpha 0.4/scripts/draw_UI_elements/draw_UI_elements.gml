@@ -68,9 +68,6 @@ function draw_UI_elements(){
 		}
 		draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
 		*/
-		draw_set_halign(fa_left);
-		draw_text_transformed(RES_W/2,17,string(global.wavetotal - global.killsthiswave) + " enemies left",killtextscale,killtextscale,0);
-		draw_set_color(c_white);
 	
 	}
 	#region draw cursor
@@ -136,6 +133,8 @@ function show_region_title(){
 }
 
 function draw_objective_UI(){
+	
+	//portal objectives
 	if instance_exists(oLevelEnd) {
 
 	display_set_gui_size(RES_W, RES_H);	
@@ -151,6 +150,13 @@ function draw_objective_UI(){
 		else if oLevelEnd.boss_summon = true {text = "Defeat the Guardian";}
 		else {text = "Find the Portal";}
 		draw_text(RES_W*text_res_scale-10,5,text);
+	}
+	
+	//battle gates objectives
+	if instance_exists(oBattleGate) && global.wavetotal - global.killsthiswave > 0 {
+		draw_set_halign(fa_center);
+		draw_set_color(text_bgr);
+		draw_text(RES_W/2,20,"Enemies left: " + string(global.wavetotal - global.killsthiswave > 0));
 	}
 
 }
