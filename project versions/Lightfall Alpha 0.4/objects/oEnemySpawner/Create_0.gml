@@ -4,10 +4,12 @@ x_pos2 = 0;
 
 x = (x_pos1 + x_pos2) / 2;
 
-spawn_type = oEnemyRangedGeneric;
+spawn_type = oEnemyRangedGeneric; //diversify this later
 spawn_amount = 0; 
 global.wavetotal = spawn_amount;
 
-killtextscale = 1;
-spawn_timer = 50; //every two seconds
-alarm[0] = spawn_timer;
+
+//start spawning enemies, only when 'activated'
+start_spawning = false; //activate through gates object or other means
+spawn_timer = 50; 
+//alarm[0] = spawn_timer;

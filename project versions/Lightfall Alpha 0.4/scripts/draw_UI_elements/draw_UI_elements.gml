@@ -101,6 +101,9 @@ function draw_debug_info(){
 		draw_text(10,24,"zoom: " + string(oCamera.zoom));
 		draw_text(10,40,"fps_reader: " + string(fps_reader));
 	}
+	//draw_set_halign(fa_left);
+	//draw_set_font(fSign);
+	//draw_text(10,20,string(instance_number(oEnemySpawnerNew)) + " spawners in room");
 }
 	
 function show_region_title(){

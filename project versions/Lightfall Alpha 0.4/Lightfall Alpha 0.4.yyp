@@ -225,6 +225,7 @@
     {"id":{"name":"sBgr_Sand3","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"order":0,},
     {"id":{"name":"oParPlatform","path":"objects/oParPlatform/oParPlatform.yy",},"order":5,},
     {"id":{"name":"sArcherRoll","path":"sprites/sArcherRoll/sArcherRoll.yy",},"order":2,},
+    {"id":{"name":"oEnemySpawnerNew","path":"objects/oEnemySpawnerNew/oEnemySpawnerNew.yy",},"order":6,},
     {"id":{"name":"oPlayerWeapon","path":"objects/oPlayerWeapon/oPlayerWeapon.yy",},"order":3,},
     {"id":{"name":"scrFreezeScreen","path":"scripts/scrFreezeScreen/scrFreezeScreen.yy",},"order":1,},
     {"id":{"name":"oAlertEnemy","path":"objects/oAlertEnemy/oAlertEnemy.yy",},"order":7,},

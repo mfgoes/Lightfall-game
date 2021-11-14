@@ -17,6 +17,7 @@ draw_debug_info();
 show_region_title();
 
 /*
+
 if instance_exists(oLevelGenerator) {
 	// You can write your code in this editor
 	draw_set_halign(fa_left);

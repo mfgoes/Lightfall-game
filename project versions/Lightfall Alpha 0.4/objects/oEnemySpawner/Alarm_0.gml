@@ -34,6 +34,6 @@ if spawn_amount > 0 && oLevelEnd.boss_defeated = false { //only spawn new guys i
 		else instance_create_depth(x,y,depth,oSpawnAnimation);
 	}
 	
-	alarm[0] = round(spawn_timer+random(40));
+	alarm[0] = round(spawn_timer+random(20));
 	spawn_amount -=1;
 }
