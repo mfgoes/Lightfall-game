@@ -98,8 +98,10 @@ function draw_debug_info(){
 	if global.debugmode = true {
 		//draw_text(10,4,"Lightfall Demo - Press R to restart");
 		show_debug_overlay(true);
-		draw_text(10,24,"zoom: " + string(oCamera.zoom));
-		draw_text(10,40,"fps_reader: " + string(fps_reader));
+		draw_set_halign(fa_right);
+		draw_set_color(c_black);
+		draw_text(RES_W-10,24,"enemies remaining: " + string(global.wavetotal - global.killsthiswave) + "/" + string(global.wavetotal));
+		draw_text(RES_W-12,40,"fps: " + string(fps_reader));
 	}
 	//draw_set_halign(fa_left);
 	//draw_set_font(fSign);
@@ -157,9 +159,9 @@ function draw_objective_UI(){
 	
 	//battle gates objectives
 	if instance_exists(oBattleGate) && global.wavetotal - global.killsthiswave > 0 {
-		draw_set_halign(fa_center);
-		draw_set_color(text_bgr);
-		draw_text(RES_W/2,20,"Enemies left: " + string(global.wavetotal - global.killsthiswave > 0));
+		//draw_set_halign(fa_center);
+		//draw_set_color(text_bgr);
+		//draw_text(RES_W/2,20,"Enemies left: " + string(global.wavetotal - global.killsthiswave > 0));
 	}
 
 }
