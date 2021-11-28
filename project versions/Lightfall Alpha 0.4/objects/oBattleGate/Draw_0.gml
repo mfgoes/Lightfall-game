@@ -2,12 +2,12 @@
 draw_self();
 
 draw_set_font(fSign);
-draw_set_color(c_blue);
+draw_set_color(c_red);
 if touched_gate = true {
-	draw_text(x,y-40,"active");}
+	draw_text(x,y-40,"touched");}
 else draw_text(x,y-40,"false");
 
-draw_text(x,y-60,spawner); //should be same as neighbour. 
+//draw_text(x,y-60,spawner); //should be same as neighbour. 
 
 /*
 draw_set_font(fSign);

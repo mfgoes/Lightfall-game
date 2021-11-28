@@ -1,11 +1,11 @@
 /// @desc init
 
 //spawn enemy code
-spawn_type = oEnemyRangedGeneric; //diversify this later
-spawn_amount = 1; 
-spawn_timer = 10;
+spawn_type = oEnemyRangedGeneric; //diversify this later //oEnemyRangedGeneric
+spawn_amount = 3; 
+spawn_timer = 1;
 touched_gate = false;
-alarm[2] = 20; //spawn an enemy
+gate_active = false; //on/off
 
 //gate code
 alarm[0] = 5; //gate checker

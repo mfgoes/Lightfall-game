@@ -11,6 +11,6 @@ if global.debugmode = true {
 
 draw_set_font(fSign);
 draw_set_color(c_yellow);
-if touched_gate = true {
+if gate_active = true {
 	draw_text(x,y-40,"active");}
 else draw_text(x,y-40,"false");
