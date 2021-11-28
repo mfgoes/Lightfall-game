@@ -2,7 +2,7 @@
 event_inherited();
 
 //gm live 
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 if hp<hp_max { 
 	//draw healthbar

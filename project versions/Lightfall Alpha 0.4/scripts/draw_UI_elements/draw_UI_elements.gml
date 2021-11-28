@@ -97,11 +97,14 @@ function draw_debug_info(){
 	
 	if global.debugmode = true {
 		//draw_text(10,4,"Lightfall Demo - Press R to restart");
-		show_debug_overlay(true);
+		//show_debug_overlay(true);
 		draw_set_halign(fa_right);
 		draw_set_color(c_black);
 		draw_text(RES_W-10,24,"enemies remaining: " + string(global.wavetotal - global.killsthiswave) + "/" + string(global.wavetotal));
 		draw_text(RES_W-12,40,"fps: " + string(fps_reader));
+	}
+	else {
+		//show_debug_overlay(true);
 	}
 	//draw_set_halign(fa_left);
 	//draw_set_font(fSign);

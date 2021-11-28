@@ -4,6 +4,7 @@
 spawn_type = oEnemyRangedGeneric; //diversify this later
 spawn_amount = 1; 
 spawn_timer = 10;
+touched_gate = false;
 alarm[2] = 20; //spawn an enemy
 
 //gate code

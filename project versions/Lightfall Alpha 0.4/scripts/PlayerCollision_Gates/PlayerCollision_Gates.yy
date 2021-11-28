@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player Datasets August 2021",
-    "path": "folders/Scripts/Player Datasets August 2021.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "LoadCharacter_Basics",
+  "name": "PlayerCollision_Gates",
   "tags": [],
   "resourceType": "GMScript",
 }

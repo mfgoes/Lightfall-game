@@ -17,6 +17,3 @@ if !place_meeting(x_avg,y_avg,oEnemySpawnerNew) {
 }
 
 
-//search for nearest object
-
-

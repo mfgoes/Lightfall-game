@@ -8,3 +8,9 @@ if global.debugmode = true {
 	}
 	draw_set_color(c_white); draw_set_alpha(1);
 }
+
+draw_set_font(fSign);
+draw_set_color(c_yellow);
+if touched_gate = true {
+	draw_text(x,y-40,"active");}
+else draw_text(x,y-40,"false");

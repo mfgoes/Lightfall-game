@@ -12,6 +12,7 @@ script_execute(state);
 
 //Collisions. Make more compact later
 PlayerCollision();
+PlayerCollision_Gates();
 
 timer_init("produce_afterimages");
 //Create after images

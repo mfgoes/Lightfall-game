@@ -13,12 +13,9 @@ if global.game_paused
 
 
 if spawn_amount > 0 { //only spawn new guys if enemy is still alive. 
-	
-	
 	var ypos = collision_line_first(xpos,0,xpos,room_height,oWall,0,0) //spawn on top of the ground
-
 	dd = instance_create_depth(xpos,ypos.bbox_top,depth,oSpawnAnimation);
-	dd.spawn_type = spawn_type;
+	dd.spawn_type = oDummyEnemy; //oEnemyRangedGeneric
 	
 	//make more enemies
 	alarm[0] = round(spawn_timer+random(20));
