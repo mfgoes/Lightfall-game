@@ -2,7 +2,7 @@
 
 //spawn enemy code
 spawn_type = oEnemyRangedGeneric; //diversify this later //oEnemyRangedGeneric
-spawn_amount = 3; 
+spawn_amount = 1; 
 spawn_timer = 1;
 touched_gate = false;
 gate_active = false; //on/off

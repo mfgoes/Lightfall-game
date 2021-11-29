@@ -6,7 +6,9 @@ if global.game_paused
 
 //generate in gate zone 
 {
-	var xpos = random_range(x_pos1,x_pos2);	
+	
+	var padding = 16; //cut from spawn region
+	var xpos = random_range(x_pos1+padding,x_pos2-padding);	
 	var xpos = (round(xpos/16) * 16); 
 	//randomize();
 }
