@@ -2,7 +2,7 @@
 event_inherited();
 
 hp = 2;
-damage = 2; //how much damage it can do
+damage = 0.1; //how much damage it can do
 walkspd = 0.5;
 motion_speed = 1;
 out_of_range = false; 

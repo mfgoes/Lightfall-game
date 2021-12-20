@@ -29,13 +29,12 @@ switch (current_state)
 			current_state = enemy_states.approach;
 			dir = sign(target.x - x);
 			timer_set("notice_player",30); //small pause before approaching player				
-			/*if alerted == 0 {
-				//audio_sound_gain(snAlertEnemy,0.2,0); 
-				//audio_play_sound(snAlertEnemy,10,0);
-				alerted = 1;
-				alert = (instance_create_layer(x,bbox_top,layer,oAlertEnemy));
-				alert.owner = self;}
-			*/
+			//visual alert (updated)
+			var unique_id = id; 
+			alert_box = instance_create_layer(x,bbox_top,layer,oAlertEnemy) 
+			with(alert_box) {
+				owner = unique_id;
+			}
 		}
 	} break;
 	case enemy_states.approach: {

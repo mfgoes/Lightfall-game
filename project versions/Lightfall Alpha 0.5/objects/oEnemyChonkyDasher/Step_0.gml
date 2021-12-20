@@ -75,9 +75,12 @@ switch (current_state)
 			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0) && timer_get("notice_player") <= 0 {
 				current_state = enemy_states.approach; 
 				timer_set("notice_player",40); //small pause before approaching player
-				//visual alert that you found the player
-				alert = (instance_create_layer(x,bbox_top,layer,oAlertEnemy));
-				alert.owner = self; 	
+				//visual alert (updated)
+				var unique_id = id; 
+				alert_box = instance_create_layer(x,bbox_top,layer,oAlertEnemy) 
+				with(alert_box) {
+					owner = unique_id;
+				}	
 				
 				if alerted = 0 {
 					audio_sound_gain(snAlertEnemy,0.2,0);

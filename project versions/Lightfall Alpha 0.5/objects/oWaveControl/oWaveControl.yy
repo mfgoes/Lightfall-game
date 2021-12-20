@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_controller_game",
-    "path": "sprites/spr_controller_game/spr_controller_game.yy",
+    "name": "spr_debug_spawn",
+    "path": "sprites/spr_debug_spawn/spr_debug_spawn.yy",
   },
   "solid": false,
   "visible": true,

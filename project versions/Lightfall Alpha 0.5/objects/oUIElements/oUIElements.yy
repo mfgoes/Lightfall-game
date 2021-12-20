@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_controller_cursor",
-    "path": "sprites/spr_controller_cursor/spr_controller_cursor.yy",
+    "name": "spr_debug_cursor",
+    "path": "sprites/spr_debug_cursor/spr_debug_cursor.yy",
   },
   "solid": false,
   "visible": true,

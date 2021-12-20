@@ -31,9 +31,12 @@ switch (current_state)
 					current_state = enemy_states.approach;
 					dir = sign(target.x - x);
 					timer_set("notice_player",40); //small pause before approaching player
-					//visual alert that you found the player
-					alert = (instance_create_layer(x,bbox_top,layer,oAlertEnemy));
-					alert.owner = self; 	
+					//visual alert (updated)
+					var unique_id = id; 
+					alert_box = instance_create_layer(x,bbox_top,layer,oAlertEnemy) 
+					with(alert_box) {
+						owner = unique_id;
+					}	
 				
 					if alerted == 0 {
 						audio_sound_gain(snAlertEnemy,0.2,0);

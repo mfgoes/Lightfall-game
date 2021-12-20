@@ -12,7 +12,7 @@ function PlayerCollision_Gates(){
 		}
 		gate.touched_gate = true;
 		
-		with(oEnemySpawnerNew) { //check all spawners when this happens
+		with(oEnemyGateControl ) { //check all spawners when this happens
 			if gate_left.touched_gate = true or gate_right.touched_gate = true {
 				touched_gate = true;
 				gate_left.touched_gate = true;

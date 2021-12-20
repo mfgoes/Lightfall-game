@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_cell_checker",
-    "path": "sprites/spr_cell_checker/spr_cell_checker.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -17,9 +17,9 @@ if (hp <= 0)
 	}
 	
 	if (instance_exists(oPlayer)) {
-	global.kills++;	//do we still need these? 
-	global.killsthisroom++;
-	global.killsthiswave++;
+		global.kills++;	//do we still need these? 
+		global.killsthisroom++;
+		global.killsthiswave++;
 	//global.wavetotal--;
 	with(oGame) killtextscale = 1.2;
 	}

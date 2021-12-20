@@ -11,6 +11,7 @@ if (CheckInCamera())
 	//debug
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
-	draw_text(x,y-30,string(grid_x) + " selected!");
+	draw_text(x,y-30,string(spawn) + "");
+	if wave_active = true draw_text(x,y-50,string(grid_y) + "y");
 	
 }
