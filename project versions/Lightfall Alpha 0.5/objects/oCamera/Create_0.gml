@@ -9,4 +9,5 @@
 	#macro RES_SCALE 2 //how much to scale the pixel art
 	#macro RES_RATIO RES_H/RES_W
 	#macro CAM_SMOOTH 0.1
+	#macro TILE_SIZE 16; 
 #endregion
