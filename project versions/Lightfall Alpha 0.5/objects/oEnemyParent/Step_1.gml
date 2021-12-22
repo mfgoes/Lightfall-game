@@ -1,5 +1,4 @@
 /// @description destroy self
-
 if (hp <= 0) 
 {
 	repeat(3)	//create dust effect

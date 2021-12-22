@@ -17,3 +17,5 @@ spriteJump =	sDummyIdle;
 spriteDie  =	sDummyDie;
 spriteAttack  =	sDummyIdle;
 spriteMelee  =	sDummyIdle;
+
+sprite_offset_cleanup();

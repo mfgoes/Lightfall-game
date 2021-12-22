@@ -11,3 +11,4 @@ state = PlayerStateFree;
 
 //create player weapon
 if !instance_exists(oPlayerWeapon) instance_create_depth(x,y,depth-10,oPlayerWeapon);
+

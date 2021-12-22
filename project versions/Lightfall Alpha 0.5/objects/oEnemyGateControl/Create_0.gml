@@ -21,13 +21,14 @@
 	grid_wave[# 1, 1] = oEnemy_Bat
 	grid_wave[# 1, 2] = oEnemyMelee
 
-	grid_wave[# 2, 0] = oEnemyMelee2
-	grid_wave[# 2, 1] = oEnemyMelee2;
+	grid_wave[# 2, 0] = oEnemyMelee
+	grid_wave[# 2, 1] = oEnemyMelee;
 	grid_wave[# 2, 2] = 0;
 #endregion
 
 touched_gate = false;
 gate_active = false; //on/off
+image_speed = 0;
 
 //gate code
 alarm[0] = 5; //gate checker

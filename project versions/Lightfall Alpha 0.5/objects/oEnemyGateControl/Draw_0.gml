@@ -1,4 +1,5 @@
 /// @description draw areas
+//draw_self();
 
 if global.debugmode = true {
 	if gate_left != 0 && gate_right != 0 {

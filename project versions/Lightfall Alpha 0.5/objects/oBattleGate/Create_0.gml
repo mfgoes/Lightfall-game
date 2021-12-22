@@ -10,7 +10,7 @@ other_gate = instance_nearest_notme(x,y,oBattleGate); //old code. may detect inc
 //connect proper gate in GateControl object. 
 
 x_avg = round((x + other_gate.x) / 2)+sprite_width/2;
-y_avg = round((y + other_gate.y) / 2);
+y_avg = round((y + other_gate.y) / 2)-TILE_SIZE*4; //play with this later
 
 //re-edit this later? 
 if !place_meeting(x_avg,y_avg,oEnemyGateControl ) {

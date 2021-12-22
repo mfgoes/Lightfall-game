@@ -14,4 +14,12 @@ if vsp > 12 vsp = 12;
 }
 //reusable vertical collisions (for enemies)
 
-//limig g to 12 later 
+//clean up enemy offsets (it's currentlly pretty messy)
+function sprite_offset_cleanup(){
+sprite_set_offset(spriteIdle,sprite_width/2,sprite_height);
+sprite_set_offset(spriteWalk,sprite_width/2,sprite_height);
+sprite_set_offset(spriteJump,sprite_width/2,sprite_height);
+sprite_set_offset(spriteDie,sprite_width/2,sprite_height);
+sprite_set_offset(spriteAttack,sprite_width/2,sprite_height);
+sprite_set_offset(spriteMelee,sprite_width/2,sprite_height);
+}

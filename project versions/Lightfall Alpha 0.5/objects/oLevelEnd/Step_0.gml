@@ -1,6 +1,6 @@
 /// @description Insert description here
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //activated
 if random(1) < 0.05

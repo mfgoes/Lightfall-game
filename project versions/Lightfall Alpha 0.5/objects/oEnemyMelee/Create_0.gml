@@ -41,3 +41,5 @@ spriteJump =	sEnemyExploder;
 spriteDie  =	sDummyDie;
 spriteAttack  =	sEnemyExploder;
 spriteMelee  =	sEnemyExploder;
+
+sprite_offset_cleanup();

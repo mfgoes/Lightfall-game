@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player Datasets August 2021",
-    "path": "folders/Scripts/Player Datasets August 2021.yy",
+    "name": "Misc",
+    "path": "folders/Scripts/Misc.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SwitchCharacters",
+  "name": "MacrosAndGlobals",
   "tags": [],
   "resourceType": "GMScript",
 }

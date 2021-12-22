@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Unfinished Enemies",
+    "path": "folders/Objects/Enemies/Unfinished Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDummyEnemy",

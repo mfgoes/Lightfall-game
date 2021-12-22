@@ -27,3 +27,5 @@ stunned = 5; //prevents enemy from walking
 
 image_speed = 0;
 image_index = 0;
+
+sprite_offset_cleanup();
