@@ -1,0 +1,1 @@
+if (point_distance(x, y, xstart, ystart) >= 50) instance_destroy();

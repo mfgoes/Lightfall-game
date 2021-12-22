@@ -4,7 +4,7 @@ if (live_call()) return live_result;
 
 //activated
 if random(1) < 0.05
-part_particles_create(global.partSystem, x+random_range(-12,12), y-5, global.ptBasic, 1);	
+part_particles_create(global.partSystem, x+random_range(-12,12), y-5, global.ptBasic, 0.2);	
 
 
 //touch player
@@ -30,7 +30,7 @@ if place_meeting(x,y-1,oPlayer)
 		summon.ScreenShake(2,6);
 	}
 	if instance_exists(oBattleGate) {
-		if oBattleGate.touched_gate != 1 { //chagne to global variable later
+		if (global.wavetotal - global.killsthiswave = 0) { //change to global variable later
 		if !instance_exists(oCamFollow) dd = instance_create_depth(x,y-sprite_height*0.9,depth,oCamFollow);}
 	}
 }

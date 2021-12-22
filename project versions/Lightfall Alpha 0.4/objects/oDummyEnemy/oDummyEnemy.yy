@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sDummyIdle",
-    "path": "sprites/sDummyIdle/sDummyIdle.yy",
+    "name": "sCrowMage_Idle",
+    "path": "sprites/sCrowMage_Idle/sCrowMage_Idle.yy",
   },
   "solid": false,
   "visible": true,
