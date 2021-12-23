@@ -32,7 +32,9 @@ current_state = enemy_states.idle;
 	size = 1;
 	afraid_of_heights = true;
 	grounded = false;
-	if instance_exists(oPlayer) target = oPlayer; else target = self; 
+	stunned = 5; //prevents enemy from walking (start with 5 to create a tiny break) 
+
+	if instance_exists(oPlayer) target = oPlayer; else target = id; 
 
 	//attacking variables
 	sight_range = 80 + round(random_range(5,10)); //when to detect player

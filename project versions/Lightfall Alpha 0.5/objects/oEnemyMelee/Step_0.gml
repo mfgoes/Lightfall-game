@@ -1,31 +1,77 @@
+/// @description state changes (Dec 2021)
 //gm live 
-//if (live_call()) return live_result;
-if global.game_paused
-{
-	exit;
-}
+if (live_call()) return live_result; 
 
-#region basics
-event_inherited(); //inherits gravity code
-
-timer_init("attack_player"); 
-//determine target
-if instance_exists(oPlayer) target = oPlayer; else {
-	hsp = 0;
-	target = self; 
-}
+#region gravity + basic + timers
+	event_inherited(); //inherits gravity code and pause code
+	timer_init("attack_player"); 
 #endregion
 
+#region state changing
+	//state changing (can be a function) 
+	if distance_to_object(target) < sight_range {
+		current_state = enemy_states.approach;	
+	}
+	if distance_to_object(target) < atk_range {
+		current_state = enemy_states.attack;	
+	} else
+	if distance_to_object(target) > sight_range {
+		current_state = enemy_states.idle;	
+	}
+#endregion
 
-//find placements
+#region animation
+	if current_state = enemy_states.attack && timer_get("attack_player") > 0 {
+	//attack animation	
+	}
+	if current_state = enemy_states.approach {
+	image_xscale = sign(x - target.x);	
+	}
+	if current_state = enemy_states.idle {
+	image_xscale = -sign(hsp);	
+	}
+#endregion
+
+hsp = walkspd * patrol_dir;
+
+#region patrolling
+	if current_state = enemy_states.idle {
+		var dist_start = round(distance_to_point(xstart,ystart));
+		if  dist_start > wander_range {
+			patrol_dir*=-1; //this currently glitches sometimes
+			x+=patrol_dir*4;
+		}
+		if !collision_point(x + patrol_dir * TILE_SIZE ,y+TILE_SIZE*2, oWall,0,0) { //check if 2 tiles down is free
+			//y-=5; //this is just a visual queue
+			patrol_dir*= -1;
+			x+=patrol_dir*4;
+		}
+		else if place_meeting(x + hsp, y, oWall)  {
+			//check if you can jump up a tile first
+			if !collision_point(x + patrol_dir * TILE_SIZE ,y-TILE_SIZE*2-1, oWall,0,0) {  //check if 2 tiles up is free
+				y-=TILE_SIZE; //"Jump" up (improve later)
+			}
+			else //else flip direction 
+			patrol_dir*= -1;
+			x+=patrol_dir*4;
+		}
+		
+		x+= hsp;
+	}
+#endregion
+
+//old code
+/*
 var dd = instance_nth_nearest(x,y,oEnemyMelee,2); //find nearest object
 var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
 var _pos_target = sign(target.x - x);   //determine direction to walk in
 //check if colliding
 var _colliding = abs(sign(_pos_nearest_enemy + _pos_target)); //returns 0 or 1
 if distance_to_object(dd) > 0 _colliding = 0; //if closest enemy is far away, ignore
+*/
 
 //walking code 
+/*
 if current_state!= enemy_states.idle && stunned = 0 {  
 	if (!place_meeting(x + hsp, y,oWall)) && distance_to_object(target) < sight_range && distance_to_object(target) > 1 {
        //move left
@@ -40,9 +86,11 @@ if current_state!= enemy_states.idle && stunned = 0 {
 	}
 	x = lerp(x,round(x),0.2);
 }
+*/
 
 
 //enemy stun code.	only recoil after a short pause (for emphasis)
+/*
 if stunned > 0 {
 	stunned--; //starts at 20
 	if stunned > 10 && stunned < 13 && !place_meeting(x,y-vsp,oWall) vsp = -1;
@@ -51,12 +99,13 @@ if stunned > 0 {
 
 var dir = sign(target.x - x); 
 if stunned = 15 x+=lengthdir_x(5,dir)
-
 }
-
 			
 else
+*/
+
 //States
+/*
 #region states
 		switch (current_state)
 	{
@@ -131,32 +180,5 @@ else
 	} break;
 	}
 #endregion
+*/
 
-#region animation
-	if current_state = enemy_states.attack && timer_get("attack_player") > 0 {
-	//attack animation	
-	}
-	if (!place_meeting(x,y+1,oWall)) 
-	{
-		grounded = false;
-		sprite_index = spriteJump;
-		image_speed = 0;
-		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
-	}
-	else 
-	{
-		grounded = true;
-		image_speed = 0.8
-		if (hsp == 0)
-		{
-			sprite_index = spriteIdle;
-		}
-		else
-		{
-			sprite_index = spriteWalk;
-		}
-	}
-
-	if (hsp != 0) image_xscale = sign(hsp) * size;
-	image_yscale = size; 
-#endregion
