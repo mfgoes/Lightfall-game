@@ -16,6 +16,7 @@ if vsp > 12 vsp = 12;
 
 //clean up enemy offsets (it's currentlly pretty messy)
 function sprite_offset_cleanup(){
+sprite_index = spriteIdle; 
 sprite_set_offset(spriteIdle,sprite_width/2,sprite_height);
 sprite_set_offset(spriteWalk,sprite_width/2,sprite_height);
 sprite_set_offset(spriteJump,sprite_width/2,sprite_height);

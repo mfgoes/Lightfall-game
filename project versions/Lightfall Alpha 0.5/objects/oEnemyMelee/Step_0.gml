@@ -2,9 +2,17 @@
 //gm live 
 if (live_call()) return live_result; 
 
+if global.game_paused
+{
+	exit;
+}
+
 #region gravity + basic + timers
 	event_inherited(); //inherits gravity code and pause code
-	timer_init("attack_player"); 
+	timer_init("attack_reload"); 
+	timer_init("anim_prep"); 
+	timer_init("anim_retract"); 
+	
 #endregion
 
 #region state changing
@@ -20,28 +28,43 @@ if (live_call()) return live_result;
 	}
 #endregion
 
-#region animation
-	if current_state = enemy_states.attack && timer_get("attack_player") > 0 {
-	//attack animation	
+#region animation specifics (melee enemies)
+	if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {
+		//attack animation	
 	}
 	if current_state = enemy_states.approach {
-	image_xscale = sign(x - target.x);	
+		image_xscale = sign(x - target.x);	
 	}
 	if current_state = enemy_states.idle {
-	image_xscale = -sign(hsp);	
+		image_xscale = -sign(hsp);	
 	}
+	
+	//attack animation code
+	if current_state != enemy_states.attack {
+		 atk_anim_x = lerp(atk_anim_x,0,0.2);} 
+	else {
+		if timer_get("anim_prep") >= 0 {
+		if atk_anim_x > 0 atk_anim_x = lerp(atk_anim_x,0,0.3);
+		}
+		if timer_get("anim_retract") >= 0 {
+			if atk_anim_x < 8 atk_anim_x = lerp(atk_anim_x,8,0.8);
+		}
+		
+		if timer_get("anim_prep") <= 0 && timer_get("anim_retract") <= 0 {
+			timer_set("anim_retract",10);
+		}
+	}
+
 #endregion
 
-hsp = walkspd * patrol_dir;
-
-#region patrolling
+#region patrolling (idle)
 	if current_state = enemy_states.idle {
-		var dist_start = round(distance_to_point(xstart,ystart));
+		var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
 		if  dist_start > wander_range {
 			patrol_dir*=-1; //this currently glitches sometimes
 			x+=patrol_dir*4;
 		}
-		if !collision_point(x + patrol_dir * TILE_SIZE ,y+TILE_SIZE*2, oWall,0,0) { //check if 2 tiles down is free
+		if !collision_point(x + patrol_dir * TILE_SIZE ,y+TILE_SIZE, oWall,0,0) { //check if 2 tiles down is free
 			//y-=5; //this is just a visual queue
 			patrol_dir*= -1;
 			x+=patrol_dir*4;
@@ -58,127 +81,50 @@ hsp = walkspd * patrol_dir;
 		
 		x+= hsp;
 	}
+	hsp = walk_spd * patrol_dir;
 #endregion
 
-//old code
-/*
-var dd = instance_nth_nearest(x,y,oEnemyMelee,2); //find nearest object
-var _pos_nearest_enemy = sign(dd.x - x); //determine direction nearest object
-var _pos_target = sign(target.x - x);   //determine direction to walk in
-//check if colliding
-var _colliding = abs(sign(_pos_nearest_enemy + _pos_target)); //returns 0 or 1
-if distance_to_object(dd) > 0 _colliding = 0; //if closest enemy is far away, ignore
-*/
-
-//walking code 
-/*
-if current_state!= enemy_states.idle && stunned = 0 {  
-	if (!place_meeting(x + hsp, y,oWall)) && distance_to_object(target) < sight_range && distance_to_object(target) > 1 {
-       //move left
-	   if _pos_target < 0 {
-		  x+=hsp //- _diff_x;
-		  if (_colliding) x-=hsp;
-	   }
-	   if _pos_target > 0 {
-		  x+=hsp //- _diff_x;
-		  if (_colliding) x-=hsp;
-	   }
-	}
-	x = lerp(x,round(x),0.2);
-}
-*/
-
-
-//enemy stun code.	only recoil after a short pause (for emphasis)
-/*
-if stunned > 0 {
-	stunned--; //starts at 20
-	if stunned > 10 && stunned < 13 && !place_meeting(x,y-vsp,oWall) vsp = -1;
-	var stunrecoil = sign(target.x - x)*4; 
-	if stunned > 10 && stunned < 13 && !place_meeting(x-stunrecoil,y,oWall) x-=stunrecoil;
-
-var dir = sign(target.x - x); 
-if stunned = 15 x+=lengthdir_x(5,dir)
-}
-			
-else
-*/
-
-//States
-/*
-#region states
-		switch (current_state)
-	{
-	case enemy_states.idle: {
-		// patrol
-		
-		if ((grounded) && (afraid_of_heights) && (!place_meeting(x + hsp, y + 1,oWall))) or (place_meeting(x+hsp,y, oWall))
-		{
-			hsp = -hsp;
-		}
-		x += hsp;
-		
-		if instance_exists(oPlayer) && distance_to_object(target) < sight_range { //only switch if player exists
-			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0)
-				current_state = enemy_states.approach; 
-		}
-		
-	} break;
-	
-	case enemy_states.approach: {
-	//Use algorithm to follow player (placeholder code)
-	var dir = sign(target.x - x); 
-	if !place_meeting(x + dir*walkspd*2, y,oWall)
-		hsp = dir*walkspd*2;
-	else
-		hsp = 0;
-	//if (!place_meeting(x+hsp,y,oWall))
-	//x += hsp;
-	
-
-	//revert to idle state
-	if distance_to_object(target) >= sight_range {
+#region approach
+	if current_state = enemy_states.approach {
 		var dir = sign(target.x - x); 
-		hsp = dir*walkspd;
-		current_state = enemy_states.idle;
-		}	
-	//change to attack state
-	if distance_to_object(target) < atk_range {
-		current_state = enemy_states.attack;
+		if !place_meeting(x + dir*approach_spd, y,oWall) {
+			hsp = dir*approach_spd; }
+		else {
+			hsp = 0; }
+		
+		if (grounded) {
+			x += hsp; //grounded check prevents clipping
+			//reset patrol position
+			patrol_xstart = x; 
+			patrol_ystart = y;  
 		}
-	} break;
-	
-	case enemy_states.attack: {
-	//keep small distance from player
-	if abs(target.x - x) <= atk_range {
-		hsp = sign(target.x - x); //revert direction
-		//if (!place_meeting(x-sign(hsp)*walkspd,y,oWall))
-		//x -= hsp*1; 
+		
 	}
-	
-	//set attack timer
-	
-	if timer_get("attack_player") <=0 && instance_exists(oPlayer) {
-		timer_set("attack_player",65+random(10)); 
-		with(oPlayer) {
-			hp-=other.damage;
-			flash = 3;
-			gunkickx -= sign(other.x - x)*5; //from pos enemy to pos player
-			ScreenShake(3,2);
-			if hp < 1 KillPlayer();
-			//play sound
-			audio_sound_gain(snHitEnemy,0.3,0);
-			if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+
+#endregion
+
+#region attacking
+	if current_state = enemy_states.attack {
+		#region execute attack after animation
+		if timer_get("attack_reload") <=0 && flash = 0 { //set attack timer	// && timer_get("attack_prepare") = 1
+			var 
+			timer_set("attack_reload",reload_spd);
+			timer_set("anim_prep",reload_spd-5);
+			reload_spd = reload_spd_start + irandom(15); 
+			atk_anim_x = 5; //start animated
+			timer_set("anim_retract",0); //reset retract animation
+			
+			with(oPlayer) {
+				hp-=other.damage;
+				flash = 3;
+				gunkickx -= sign(other.x - x)*2; //from pos enemy to pos player
+				ScreenShake(3,2);
+				if hp < 1 KillPlayer();
+				//play sound
+				audio_sound_gain(snHitEnemy,0.2,0);
+				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+			}
 		}
-	}
-	
-	//revert to approach (after animation or if out of range)
-	if timer_get("attack_player") = 0 or distance_to_object(oPlayer) > atk_range {
-		current_state = enemy_states.approach;
-	}	
-	
-	} break;
+		#endregion
 	}
 #endregion
-*/
-

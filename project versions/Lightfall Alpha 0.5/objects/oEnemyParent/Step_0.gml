@@ -4,13 +4,17 @@ if global.game_paused
 	exit;
 }
 
+//parent timers
+//timer_init("attack_reload"); 
+
 //set target
 if instance_exists(oPlayer) target = oPlayer; else {
 		hsp = 0;
 		target = id; 
 }
 
-VerticalCollision(); //gravity
+//gravity
+VerticalCollision(); 
 grounded = (place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
 
 //destroy if outside room + fallen
@@ -18,12 +22,16 @@ if y > room_height {
 	hp = 0;
 }
 
-/*
-var grv = 0.3;
-vsp = vsp + grv;
-if (place_meeting(x,y+vsp, oWall)) or (place_meeting(x,y+vsp, oWallEnemies)) or (place_meeting(x,y+vsp,oParPlatform))
-{
-	vsp = 0;	
+//animation flags (default)
+if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {
+	sprite_index = spriteAttack;
 }
-y = round(y + vsp);
-*/
+if current_state = enemy_states.approach {
+	sprite_index = spriteWalk;
+	image_speed = 1;
+}
+if current_state = enemy_states.idle {
+	if hsp = 0 sprite_index = spriteIdle;
+	else sprite_index = spriteWalk;
+	image_speed = 1;
+}
