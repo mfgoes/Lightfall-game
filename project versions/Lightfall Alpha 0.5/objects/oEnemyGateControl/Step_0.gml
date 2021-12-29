@@ -12,6 +12,12 @@ if global.wavetotal != 0 && gate_left.gate_active = true {
 		gate_right.gate_active = false;
 		global.wavetotal = 0;
 		global.killsthiswave = 0;
+		
+		//audio queue
+		if !audio_is_playing(snLevelClear_Special_Click_05) {
+			audio_sound_gain(snLevelClear_Special_Click_05,0.5,0);
+			audio_play_sound(snLevelClear_Special_Click_05,0,0);
+		}
 	}
 }
 

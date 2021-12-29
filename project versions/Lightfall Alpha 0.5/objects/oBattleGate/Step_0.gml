@@ -11,4 +11,5 @@ if touched_gate = true && gate_active = false { //if you defeat the enemies
 	with(collision_line(x,y,x,y+sprite_height-200,oBattleGateWall,0,0)) {
 		instance_destroy();
 	}
+	
 }

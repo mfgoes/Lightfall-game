@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (live_call()) return live_result; 
-
 //set target
 if instance_exists(oPlayer) target = oPlayer; else {
 	target = id; 
@@ -19,21 +17,18 @@ if global.debugmode = 1 {
 	draw_set_color(c_orange);
 	draw_circle(x,y,sight_range,1);
 	draw_circle(x,y,atk_range,1);
-	draw_text(x,y-sprite_height,"current_state: " + string(current_state));
-	draw_text(x,y-sprite_height-20,"t: " + string(atk_anim_x));
 	
-	var dist_start = abs(abs(x) - abs(xstart));
-	draw_text(x,y-sprite_height-30,"prep " + string( timer_get("anim_prep")));
-	draw_text(x,y-sprite_height-50,"anim " + string(atk_anim_x));
+	var free_tile = false;
+	var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWall,0,0)); //check 2 tiles down
+	var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWall,0,0)); //check existing tile
 	
-	//draw collision mask and origin
-	draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1);
+	if (check_tile1) or (check_tile2) free_tile = true;
 	
-	var xoff = sprite_get_xoffset(sprite_index);
-	var yoff = sprite_get_yoffset(sprite_index)/2;
-	draw_set_color(c_lime);
-	draw_rectangle(x-xoff/2,y-0.5,x+xoff/2,y+0.5,0);
-	draw_rectangle(x-0.5,y-yoff,x,y+yoff,0);
+	draw_rectangle(x+(TILE_SIZE*2)*patrol_dir,y,x,y+TILE_SIZE*2,1);
+	
+	draw_text(x,y-sprite_height,"free_tile: " + string(free_tile));
+	draw_text(x,y-sprite_height-20,"patrol_dir: " + string(patrol_dir));
+	
 }
 
 draw_set_alpha(1);

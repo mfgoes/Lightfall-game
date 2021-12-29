@@ -7,7 +7,7 @@ wave_active = false; //trigger with vk_up
 	grid_wave = ds_grid_create(3,3);
 	grid_x = 0;
 	grid_y = 0; //spawn 0, 1, 2, etc (use max_height for now. change to be more dynamic later)
-	grid_y_max = 4; //check this dynamically later*
+	grid_y_max = 3; //check this dynamically later*
 
 	grid_x = irandom(2); 
 	spawn = grid_wave[# grid_x, grid_y];
@@ -28,5 +28,5 @@ wave_active = false; //trigger with vk_up
 	grid_wave[# 2, 0] = oEnemyMelee2
 	grid_wave[# 2, 1] = oEnemyMelee2;
 	grid_wave[# 2, 2] = oEnemy_Bat;
-	grid_wave[# 2, 2] = oEnemyRangedGeneric;
+	grid_wave[# 2, 3] = oEnemyRangedGeneric;
 #endregion

@@ -1,11 +1,10 @@
 /// @description state changes (Dec 2021)
-//gm live 
-if (live_call()) return live_result; 
 
 if global.game_paused
 {
 	exit;
 }
+//if (live_call()) return live_result; 
 
 #region gravity + basic + timers
 	event_inherited(); //inherits gravity code and pause code
@@ -64,21 +63,24 @@ if global.game_paused
 			patrol_dir*=-1; //this currently glitches sometimes
 			x+=patrol_dir*4;
 		}
-		if !collision_point(x + patrol_dir * TILE_SIZE ,y+TILE_SIZE, oWall,0,0) { //check if 2 tiles down is free
-			//y-=5; //this is just a visual queue
-			patrol_dir*= -1;
-			x+=patrol_dir*4;
-		}
-		else if place_meeting(x + hsp, y, oWall)  {
-			//check if you can jump up a tile first
-			if !collision_point(x + patrol_dir * TILE_SIZE ,y-TILE_SIZE*2-1, oWall,0,0) {  //check if 2 tiles up is free
-				y-=TILE_SIZE; //"Jump" up (improve later)
-			}
-			else //else flip direction 
-			patrol_dir*= -1;
-			x+=patrol_dir*4;
-		}
 		
+		//check tiles down
+		var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWall,0,0)); //check 2 tiles down
+		var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWall,0,0)); //check existing tile
+		if !((check_tile1) or (check_tile2)) {
+			patrol_dir*= -1;
+		}
+		if place_meeting(x + hsp, y, oWall)  {
+			//check if you can jump up a tile first
+			if !collision_point(x + patrol_dir,y-TILE_SIZE-1, oWall,0,0) {  //check tiles up
+				y-=TILE_SIZE; //"Jump" up (improve later)
+				hsp = walkspd*patrol_dir;
+			}
+			if collision_point(x + patrol_dir,y+TILE_SIZE, oWall,0,0) {  //check tiles down
+				hsp = walkspd*patrol_dir;
+			}
+			x+=patrol_dir*4;
+		}
 		x+= hsp;
 	}
 	hsp = walk_spd * patrol_dir;
@@ -90,7 +92,15 @@ if global.game_paused
 		if !place_meeting(x + dir*approach_spd, y,oWall) {
 			hsp = dir*approach_spd; }
 		else {
-			hsp = 0; }
+			hsp = 0;}
+		
+		if place_meeting(x + dir*approach_spd, y, oWall)  {
+			if !collision_point(x + dir,y-TILE_SIZE-1, oWall,0,0) {  //check if 2 tiles up is free
+				y-=TILE_SIZE; //"Jump" up (improve later)
+				hsp = dir*approach_spd;
+				//x+=hsp;
+			}		
+		}
 		
 		if (grounded) {
 			x += hsp; //grounded check prevents clipping
