@@ -63,7 +63,6 @@ if global.game_paused
 			patrol_dir*=-1; //this currently glitches sometimes
 			x+=patrol_dir*4;
 		}
-		
 		//check tiles down
 		var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWall,0,0)); //check 2 tiles down
 		var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWall,0,0)); //check existing tile
@@ -74,10 +73,10 @@ if global.game_paused
 			//check if you can jump up a tile first
 			if !collision_point(x + patrol_dir,y-TILE_SIZE-1, oWall,0,0) {  //check tiles up
 				y-=TILE_SIZE; //"Jump" up (improve later)
-				hsp = walkspd*patrol_dir;
+				hsp = walk_spd*patrol_dir;
 			}
 			if collision_point(x + patrol_dir,y+TILE_SIZE, oWall,0,0) {  //check tiles down
-				hsp = walkspd*patrol_dir;
+				hsp = walk_spd*patrol_dir;
 			}
 			x+=patrol_dir*4;
 		}
@@ -100,8 +99,7 @@ if global.game_paused
 				hsp = dir*approach_spd;
 				//x+=hsp;
 			}		
-		}
-		
+		}		
 		if (grounded) {
 			x += hsp; //grounded check prevents clipping
 			//reset patrol position
@@ -110,10 +108,9 @@ if global.game_paused
 		}
 		
 	}
-
 #endregion
 
-#region attacking
+#region attacking (do physical damage) 
 	if current_state = enemy_states.attack {
 		#region execute attack after animation
 		if timer_get("attack_reload") <=0 && flash = 0 { //set attack timer	// && timer_get("attack_prepare") = 1

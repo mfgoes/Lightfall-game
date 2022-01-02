@@ -1,155 +1,138 @@
+/// @description state changes (Dec 2021)
+
 if global.game_paused
 {
 	exit;
 }
+//if (live_call()) return live_result; 
 
-var timer_active = (timer_get("ignore_player") > 0);
+#region gravity + basic + timers
+	event_inherited(); //inherits gravity code and pause code
+	timer_init("attack_reload"); 
+	timer_init("anim_prep"); 
+	timer_init("anim_retract"); 
+	
+#endregion
 
-timer_init("notice_player"); //when to notice player
-timer_init("ignore_player"); //when to ignore player
-timer_init("turn_around");
-timer_init("attack_player");
+#region state changing
+	//state changing (can be a function) 
+	if distance_to_object(target) < sight_range {
+		current_state = enemy_states.approach;	
+	}
+	if distance_to_object(target) < atk_range {
+		current_state = enemy_states.attack;	
+	} else
+	if distance_to_object(target) > sight_range {
+		current_state = enemy_states.idle;	
+	}
+#endregion
 
-grounded = place_meeting(x, y + 1, oWall);
-
-switch (current_state)
-{
-	case enemy_states.patrol: {
-		// patrol
-		if ((grounded) && ( ((!place_meeting(x + hsp, y + 1,oWall) && afraid_of_heights))
-								or place_meeting(x+hsp,y, oWall) ))
-		{
-			hsp = -hsp;
+#region animation specifics (melee enemies)
+	if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {
+		//attack animation	
+	}
+	if current_state = enemy_states.approach {
+		image_xscale = sign(x - target.x);	
+	}
+	if current_state = enemy_states.idle {
+		image_xscale = -sign(hsp);	
+	}
+	
+	//attack animation code
+	if current_state != enemy_states.attack {
+		 atk_anim_x = lerp(atk_anim_x,0,0.2);} 
+	else {
+		if timer_get("anim_prep") >= 0 {
+		if atk_anim_x > 0 atk_anim_x = lerp(atk_anim_x,0,0.3);
 		}
-		x += hsp;
-		if hsp != 0 image_xscale = sign(hsp)
+		if timer_get("anim_retract") >= 0 {
+			if atk_anim_x < 8 atk_anim_x = lerp(atk_anim_x,8,0.8);
+		}
 		
-		if instance_exists(target)
-		{
-			//change to approach state
-			if (distance_to_object(target) < sight_range && (sign(target.x - x)) == sign(hsp)) { //only switch if player exists
-				if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0) && timer_get("notice_player") <= 0 {
-					current_state = enemy_states.approach;
-					dir = sign(target.x - x);
-					timer_set("notice_player",40); //small pause before approaching player
-					//visual alert that you found the player
-					alert = (instance_create_layer(x,bbox_top,layer,oAlertEnemy));
-					alert.owner = self; 	
-				
-					if alerted == 0 {
-						audio_sound_gain(snAlertEnemy,0.2,0);
-						audio_play_sound(snAlertEnemy,10,0);
-						alerted = 1;
-					}
-				}
-			}
+		if timer_get("anim_prep") <= 0 && timer_get("anim_retract") <= 0 {
+			timer_set("anim_retract",10);
 		}
-	} break;
-	case enemy_states.approach: {
-		//Use algorithm to follow player (placeholder code)
-		if timer_get("notice_player") <= 0
-		{
-			if !instance_exists(target) current_state = enemy_states.patrol;
-			else
-			{
-				var _dir = sign(target.x - x);
-				
-				if dir != _dir timer_set("turn_around", 20);
-				dir = _dir;
-				
-				if timer_get("turn_around") > 0
-				{
-					hsp = 0;
-				}
-				else
-				{
-					if !place_meeting(x + dir*walkspd*2, y,oWall) hsp = dir*walkspd*2;
-					else hsp = 0;
-					image_xscale = dir;
-				}
-				
-				if grounded
-				{
-					if place_meeting(x + dir*walkspd*2, y,oWall)
-					{
-						vsp -= jump_speed;
-					}
-				}
-				
-				x += hsp;
+	}
 
-				//revert to idle state
-				if distance_to_object(target) >= sight_range {
-					timer_set("ignore_player",80);
-				}
-				
-				//revert state
-				if timer_get("ignore_player") <= 0 {
-					if timer_active {
-						var _dir = sign(target.x - x); 
-						hsp = _dir*walkspd;
-						current_state = enemy_states.patrol;
-					}
-				}	
-				
-				//change to attack state
-				if distance_to_object(target) < atk_range {
-					current_state = enemy_states.attack;
-					if timer_get("attack_player") <= 0 timer_set("attack_player",30);
-					hsp = 0;
-				}
-			}
-		}
-		else
-		{
-			hsp = 0;
-		}
-	} break;
-	case enemy_states.attack: {
-	//keep small distance from player
-		if !instance_exists(target)
-		{
-			current_state = enemy_states.patrol;
-		}
-		else
-		{
-			var _dir = sign(target.x - x);
-				
-			if dir != _dir timer_set("turn_around", 20);
-			dir = _dir;
-			
-			if timer_get("turn_around") > 0
-			{
-				timer_set("attack_player",60);
-			}
-			else
-			{
-				image_xscale = dir;
-			}
-			
-			if timer_get("attack_player") <=0 {
-					timer_set("attack_player",60); 
-					//Create bullet
-					var bullet = instance_create_layer(x + sprite_width/2, y + sprite_height/4, "bullets", oEbullet);
-					bullet.sprite_index = sEnemyBossSword;
-					bullet.image_xscale = image_xscale;
-					bullet.direction = bullet.image_xscale == 1 ? 0 : 180;
-					bullet.spd = 0;
-					bullet.collision_wall = false;
-					bullet.destroy_self = true;
-				}
-			//revert state
-			//if timer_get("ignore_player") <= 0 {
-			//	var _dir = sign(target.x - x);
-			//	hsp = _dir*walkspd;
-			//	current_state = enemy_states.patrol;
-			//}
-			if distance_to_object(oPlayer) > atk_range {
-				current_state = enemy_states.approach;
-			}	
-		}
-	} break;
-}
+#endregion
 
-//gravity
-event_inherited();
+#region patrolling (idle)
+	if current_state = enemy_states.idle {
+		var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
+		if  dist_start > wander_range {
+			patrol_dir*=-1; //this currently glitches sometimes
+			x+=patrol_dir*4;
+		}
+		//check tiles down
+		var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWall,0,0)); //check 2 tiles down
+		var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWall,0,0)); //check existing tile
+		if !((check_tile1) or (check_tile2)) {
+			patrol_dir*= -1;
+		}
+		if place_meeting(x + hsp, y, oWall)  {
+			//check if you can jump up a tile first
+			if !collision_point(x + patrol_dir,y-TILE_SIZE-1, oWall,0,0) {  //check tiles up
+				y-=TILE_SIZE; //"Jump" up (improve later)
+				hsp = walk_spd*patrol_dir;
+			}
+			if collision_point(x + patrol_dir,y+TILE_SIZE, oWall,0,0) {  //check tiles down
+				hsp = walk_spd*patrol_dir;
+			}
+			x+=patrol_dir*4;
+		}
+		x+= hsp;
+		hsp = walk_spd * patrol_dir;
+	}
+	
+#endregion
+
+#region approach
+	if current_state = enemy_states.approach {
+		var dir = sign(target.x - x); 
+		if !place_meeting(x + dir*approach_spd, y,oWall) {
+			hsp = dir*approach_spd; }
+		else {
+			hsp = 0;}
+		
+		if place_meeting(x + dir*approach_spd, y, oWall)  {
+			if !collision_point(x + dir,y-TILE_SIZE-1, oWall,0,0) {  //check if 2 tiles up is free
+				y-=TILE_SIZE; //"Jump" up (improve later)
+				hsp = dir*approach_spd;
+				//x+=hsp;
+			}		
+		}		
+		if (grounded) {
+			x += hsp; //grounded check prevents clipping
+			//reset patrol position
+			patrol_xstart = x; 
+			patrol_ystart = y;  
+		}
+		
+	}
+#endregion
+
+#region attacking (do physical damage) 
+	if current_state = enemy_states.attack {
+		#region execute attack after animation
+		if timer_get("attack_reload") <=0 && flash = 0 { //set attack timer	// && timer_get("attack_prepare") = 1
+			var 
+			timer_set("attack_reload",reload_spd);
+			timer_set("anim_prep",reload_spd-5);
+			reload_spd = reload_spd_start + irandom(15); 
+			atk_anim_x = 5; //start animated
+			timer_set("anim_retract",0); //reset retract animation
+			
+			with(oPlayer) {
+				hp-=other.damage;
+				flash = 3;
+				gunkickx -= sign(other.x - x)*2; //from pos enemy to pos player
+				ScreenShake(3,2);
+				if hp < 1 KillPlayer();
+				//play sound
+				audio_sound_gain(snHitEnemy,0.2,0);
+				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+			}
+		}
+		#endregion
+	}
+#endregion

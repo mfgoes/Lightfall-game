@@ -11,7 +11,6 @@ walk_spd = 1;
 approach_spd = 1.2;
 wander_range = 80; //maximum patrol area
 reload_spd = 55; reload_spd_start = reload_spd;
-patrol_dir = choose(1,-1); //which direction to walk into
 patrol_xstart = xstart; patrol_ystart = ystart;
 
 atk_anim_x = 0 //; //lerp between two points

@@ -5,11 +5,10 @@
 if instance_exists(oPlayer) target = oPlayer; else {
 	target = id; 
 }
-var anim_x_new = -sign(x - target.x)*atk_anim_x;
+var anim_x_new = -sign(x - target.x);
 
 
 draw_sprite_ext(sprite_index,image_index,x+anim_x_new,y,image_xscale,image_yscale,0,c_white,1);
-
 
 
 if global.debugmode = 1 {
@@ -27,9 +26,5 @@ if global.debugmode = 1 {
 	draw_rectangle(x+(TILE_SIZE*2)*patrol_dir,y,x,y+TILE_SIZE*2,1);
 	
 	draw_text(x,y-sprite_height,"free_tile: " + string(free_tile));
-	draw_text(x,y-sprite_height-20,"patrol_dir: " + string(patrol_dir));	
+	draw_text(x,y-sprite_height-20,"state: " + string(current_state));	
 }
-
-draw_set_alpha(1);
-
-

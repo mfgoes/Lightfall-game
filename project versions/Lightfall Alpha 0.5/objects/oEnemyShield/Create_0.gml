@@ -14,18 +14,23 @@ yprev = y;
 walkspd = .5;
 hsp = walkspd;
 
-/*enum enemy_states { 
-  idle,
-  patrol,
-  approach,
-  attack
-}*/
 current_state = enemy_states.patrol;
 
 position_random = random_range(-3,3);
 stunned = 5; //prevents enemy from walking
 
 image_speed = 0;
-image_index = 0;
 
+#region animation 
+	//define sprites (load flazas arrays and enums in the future (phase 3)
+	spriteIdle =	sEnemyShield;
+	spriteWalk =	sEnemyShield;
+	spriteJump =	sEnemyShield;
+	spriteDie  =	sEnemyShield;
+	spriteAttack  =	sEnemyShield
+	spriteMelee  =	sEnemyShield
+	attack_anim_end = 0;
+	mask_index =	sprite_index;
+	image_alpha = 0.1; //fade in
+#endregion
 sprite_offset_cleanup();
