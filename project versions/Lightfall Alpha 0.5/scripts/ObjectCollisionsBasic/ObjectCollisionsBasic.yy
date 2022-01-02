@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "objects and enemies",
-    "path": "folders/Scripts/objects and enemies.yy",
+    "name": "Reusable enemy scripts",
+    "path": "folders/Scripts/Reusable enemy scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectCollisionsBasic",

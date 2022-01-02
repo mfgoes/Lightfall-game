@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "player states",
-    "path": "folders/Scripts/player states.yy",
+    "name": "Player related",
+    "path": "folders/Scripts/Player related.yy",
   },
   "resourceVersion": "1.0",
   "name": "PlayerStateSpecialAtk",

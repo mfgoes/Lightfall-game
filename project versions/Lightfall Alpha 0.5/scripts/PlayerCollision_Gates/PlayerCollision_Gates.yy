@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Player related",
+    "path": "folders/Scripts/Player related.yy",
   },
   "resourceVersion": "1.0",
   "name": "PlayerCollision_Gates",
