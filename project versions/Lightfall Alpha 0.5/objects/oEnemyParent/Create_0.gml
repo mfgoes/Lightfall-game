@@ -35,6 +35,7 @@ current_state = enemy_states.idle;
 	size = 1;
 	afraid_of_heights = true;
 	patrol_dir = choose(1,-1); //which direction to walk into
+	patrol_xstart = xstart; patrol_ystart = ystart;
 	grounded = false;
 	stunned = 5; //prevents enemy from walking (start with 5 to create a tiny break) 
 

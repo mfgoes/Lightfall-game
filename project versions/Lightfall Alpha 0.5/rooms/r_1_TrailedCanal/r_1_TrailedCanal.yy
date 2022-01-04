@@ -60,7 +60,7 @@
           ],"visible":true,"depth":-150,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
         {"instances":[
             {"properties":[],"isDnd":false,"objectId":{"name":"oBoss1","path":"objects/oBoss1/oBoss1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":512.0,"resourceVersion":"1.0","name":"inst_DED67F7","tags":[],"resourceType":"GMRInstance",},
-            {"properties":[],"isDnd":false,"objectId":{"name":"oEnemyBoss","path":"objects/oEnemyBoss/oEnemyBoss.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1120.0,"y":320.0,"resourceVersion":"1.0","name":"inst_380B0EAB","tags":[],"resourceType":"GMRInstance",},
+            {"properties":[],"isDnd":false,"objectId":{"name":"oEnemyMelee","path":"objects/oEnemyMelee/oEnemyMelee.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":352.0,"resourceVersion":"1.0","name":"inst_6829FCC2","tags":[],"resourceType":"GMRInstance",},
           ],"visible":true,"depth":-50,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
         {"instances":[
             {"properties":[],"isDnd":false,"objectId":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":823.0,"y":192.0,"resourceVersion":"1.0","name":"inst_29D88C46","tags":[],"resourceType":"GMRInstance",},
@@ -685,7 +685,7 @@
     {"name":"inst_3F2FC6FA","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"inst_2C7360C5","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"inst_DED67F7","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
-    {"name":"inst_380B0EAB","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
+    {"name":"inst_6829FCC2","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
