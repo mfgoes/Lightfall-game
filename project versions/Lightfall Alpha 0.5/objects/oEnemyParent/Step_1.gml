@@ -1,7 +1,7 @@
 /// @description destroy self
 if (hp <= 0) 
 {
-	repeat(3)	//create dust effect
+	repeat(3)	//create dust effect #poof
 	{
 		//dust particles
 		with(instance_create_layer(x,bbox_bottom,"Bullets",oDust)) {

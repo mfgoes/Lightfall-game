@@ -27,9 +27,10 @@ current_state = enemy_states.idle;
 	vsp = 0;
 	//grv = 0.3;
 	walk_spd = 1;
+	can_blink = true; //can blink if required. 
 	approach_spd = 1.2;
 	wander_range = 80; //maximum patrol area
-	reload_spd = 55; reload_spd_start = reload_spd;
+	reload_spd = 55;
 	hsp = walk_spd;
 	hitfrom = 0;
 	size = 1;

@@ -3,6 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 1,
   "pointRounding": 2,
+  "applyKerning": 0,
   "fontName": "CircularXX MediumTrial",
   "styleName": "Medium",
   "size": 12.0,
@@ -131,7 +132,7 @@
     "path": "folders/Graphics and Sprites/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "f_Circular_Small",
+  "name": "f_compact_sans",
   "tags": [],
   "resourceType": "GMFont",
 }

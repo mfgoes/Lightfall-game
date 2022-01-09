@@ -39,6 +39,7 @@ function scr_state_approach(){
 		if !collision_point(x + dir,y-TILE_SIZE-1, oWall,0,0) {  //check if 2 tiles up is free
 			y-=TILE_SIZE; //"Jump" up (improve later)
 			hsp = dir*approach_spd;
+			
 			//x+=hsp;
 		}		
 	}		
@@ -52,13 +53,12 @@ function scr_state_approach(){
 	
 //Attack the player (close ranged) 
 function scr_state_atk_melee(){
-if timer_get("attack_reload") <=0 && flash = 0 { 
-	//set attack timer	// && timer_get("attack_prepare") = 1
-	timer_set("attack_reload",reload_spd);
+if timer_get("attack_reload") <=0 { 
+	var reload_spd_r = reload_spd + irandom(15); 
+	timer_set("attack_reload",reload_spd_r);
 	timer_set("anim_prep",reload_spd-5);
-	reload_spd = reload_spd_start + irandom(15); 
-	atk_anim_x = 5; //start animated
 	timer_set("anim_retract",0); //reset retract animation
+	atk_anim_x = 5; //start animated
 			
 	with(oPlayer) {
 		hp-=other.damage;
@@ -71,4 +71,76 @@ if timer_get("attack_reload") <=0 && flash = 0 {
 		if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
 	}
 }
+}
+
+//Attack the player (close ranged) 
+function scr_state_atk_shoot(){
+	
+		//shooting
+	if timer_get("attack_reload") <=0 { 
+		var dir = sign(target.x - x); 
+		var reload_spd_r = reload_spd + irandom(15); 
+		timer_set("attack_reload",reload_spd_r);
+	
+		//create bullet
+		var bullet = instance_create_layer(x+lengthdir_x(10,radtodeg(arccos(dir))), y-12, "bullets", oEbulletFollow)
+		bullet.direction = point_direction(x,y-20,target.x,target.y)+choose(-2,0,2);
+		bullet.image_angle = bullet.direction;
+		bullet.sprite_index = sEBullet_Mage;
+		bullet.spd = 4; 
+		bullet.damage = 0;
+	}
+	
+	//also allow movement
+	if distance_to_object(target) > preferred_range {
+		var dir = sign(target.x - x); 
+		if !place_meeting(x + dir*approach_spd, y,oWall) {
+			hsp = dir*approach_spd; }
+		else {
+			hsp = 0;}
+		
+		if place_meeting(x + dir*approach_spd, y, oWall)  {
+			if !collision_point(x + dir,y-TILE_SIZE-1, oWall,0,0) {  //check if 2 tiles up is free
+				y-=TILE_SIZE; //"Jump" up (improve later)
+				hsp = dir*approach_spd;
+			
+				//x+=hsp;
+			}		
+		}		
+		if (grounded) {
+			x += hsp; //grounded check prevents clipping
+			//reset patrol position
+			patrol_xstart = x; 
+			patrol_ystart = y;  
+		}
+	} else hsp = 0;
+		
+}
+
+function scr_enemy_blink() {
+	//detect free space
+	if timer_get("blink_timer") <= 0 {
+		var dir = sign(target.x - x); 
+		var x_new = target.x-preferred_range*dir;
+		var y_new = target.y-10;
+		var dist_old = point_distance(x,y,target.x,target.y);
+		var dist_new = point_distance(x_new,y_new,target.x,target.y); //distance from new point to "target" enemy. 
+	
+		//check if it's worth blinking
+		if (dist_new < dist_old) { // !place_meeting(x_new,y_new,oWall) &&
+			x = x_new;
+			y = y_new;
+			timer_set("blink_timer",40);
+		
+			//feedback
+			audio_sound_gain(Futuristic_Sounds__23_,0.3,0);
+			audio_play_sound(Futuristic_Sounds__23_,5,0);
+			repeat(3) with(instance_create_layer(x,bbox_bottom,"Bullets",oDust)) { //dust particles
+				vsp = -0.1; image_alpha = 0.3+random(0.3);
+				hsp = random_range(-1,1);
+				image_xscale = choose (2,-2);
+				image_yscale = choose (2,-2);
+			}	
+		}
+	}
 }

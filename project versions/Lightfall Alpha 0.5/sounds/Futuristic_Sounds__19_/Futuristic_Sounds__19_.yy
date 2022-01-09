@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snHitSplashy.wav",
-  "duration": 0.53195,
+  "soundFile": "Futuristic_Sounds__19_.wav",
+  "duration": 0.703855,
   "parent": {
     "name": "Enemy Sounds",
     "path": "folders/Sounds/Enemy Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snHitSplashy",
+  "name": "Futuristic_Sounds__19_",
   "tags": [],
   "resourceType": "GMSound",
 }
