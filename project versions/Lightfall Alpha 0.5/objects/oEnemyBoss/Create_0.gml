@@ -7,7 +7,7 @@ atk_range = TILE_SIZE*10; //closest distance for attacks
 wander_range = 50; 
 damage = 0.1;
 reload_spd = 100; 
-preferred_range = 60; 
+preferred_range = 100; 
 
 afraid_of_heights = true;
 alerted = false; //if player has already been sighted by this unit.

@@ -1,4 +1,9 @@
 /// @desc spawn enemies 
+/// @desc spawn enemies
+if global.game_paused
+{
+	exit;
+}
 
 //set x position
 var padding = 16; //cut from spawn region
@@ -22,4 +27,3 @@ if spawn != 0 && grid_y < grid_y_max { //only spawn new guys if enemy is still a
 	alarm[2] = 20;
 }
 else exit;
-

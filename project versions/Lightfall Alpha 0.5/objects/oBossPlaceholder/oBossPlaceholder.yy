@@ -36,7 +36,7 @@
     "path": "folders/Objects/Enemies/Bosses.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBoss1",
+  "name": "oBossPlaceholder",
   "tags": [],
   "resourceType": "GMObject",
 }

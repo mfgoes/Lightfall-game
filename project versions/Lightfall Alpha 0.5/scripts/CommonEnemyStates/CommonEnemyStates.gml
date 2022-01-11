@@ -118,19 +118,22 @@ function scr_state_atk_shoot(){
 }
 
 function scr_enemy_blink() {
-	//detect free space
+
 	if timer_get("blink_timer") <= 0 {
 		var dir = sign(target.x - x); 
+		//determine new position
 		var x_new = target.x-preferred_range*dir;
 		var y_new = target.y-10;
 		var dist_old = point_distance(x,y,target.x,target.y);
 		var dist_new = point_distance(x_new,y_new,target.x,target.y); //distance from new point to "target" enemy. 
-	
-		//check if it's worth blinking
-		if (dist_new < dist_old) { // !place_meeting(x_new,y_new,oWall) &&
+		//check new position area
+		var bbox_width_half = sprite_get_width(mask_index)/2;
+		var bbox_height = sprite_get_height(mask_index);
+		
+		if (dist_new < dist_old) && !collision_rectangle(x_new-bbox_width_half,y_new-bbox_height,x_new+bbox_width_half,y_new,oWall,0,0) { // !place_meeting(x_new,y_new,oWall) &&
 			x = x_new;
 			y = y_new;
-			timer_set("blink_timer",40);
+			timer_set("blink_timer",60);
 		
 			//feedback
 			audio_sound_gain(Futuristic_Sounds__23_,0.3,0);

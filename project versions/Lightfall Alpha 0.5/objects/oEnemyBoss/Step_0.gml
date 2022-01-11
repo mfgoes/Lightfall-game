@@ -32,7 +32,7 @@
 	//blink
 	{
 		//blink if out of bounds (teleport close to player)
-		if distance_to_object(target) > preferred_range {
+		if distance_to_object(target) > atk_range {
 			scr_enemy_blink(); //maybe set arguments about blink speed and position later //jan 2022	
 		}
 	}

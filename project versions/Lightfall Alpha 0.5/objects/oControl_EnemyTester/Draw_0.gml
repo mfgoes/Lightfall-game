@@ -1,6 +1,6 @@
 /// @description draw grid content
 //check viewport (for performance) 
-if (CheckInCamera())
+if (CheckInCamera()) //&& global.debugmode = true
 {
 	//draw floating icon
 	direction+=0.03;
@@ -9,6 +9,7 @@ if (CheckInCamera())
 
 	//debug
 	draw_set_color(c_white);
+	draw_set_font(f_compact_sans);
 	//draw_set_halign(fa_center);
 	//var str = object_get_name(ds_grid_get(grid,0,0)); 
 	//draw_text(x,y-30,string(str));
@@ -18,5 +19,5 @@ if (CheckInCamera())
 		var name = object_get_name(ds_grid_get(grid_wave,grid_x,0));
 	
 	draw_text(x,y-50,"< " + string(name) + " >");
-	draw_text(x,y-70,grid_x);
+	//draw_text(x,y-70,grid_x);
 }

@@ -1,4 +1,3 @@
-/// @desc init
 
 #region create DS grid
 	//this is the grid for the first biome/levels. 
@@ -34,13 +33,12 @@ gate_active = false; //on/off
 image_speed = 0;
 
 //gate code
-alarm[0] = 5; //gate checker
 gate_left = 0; gate_right = 0;//gate IDs
 x_pos1 = 0; x_pos2 = 0; //gate positions
 n_pos1 = 0; n_pos2 = 0; //neighbour gates
 shared_gate = false; 
 shared_left = false; shared_right = false; //gate flags
-
+alarm[0] = 5; //gate checker
 //check_pos = 0; //???
 //check_pos_gate = 0;
 

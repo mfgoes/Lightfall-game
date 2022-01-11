@@ -24,8 +24,8 @@ if place_meeting(x,y-1,oPlayer)
 	//summon boss
 	else if boss_summon = false {
 		boss_summon = true;
-		summon = instance_create_depth(x+70,y-1,depth-60,oSpawnAnimation); //spawn close to portal but not on portal
-		summon.spawn_type = oBoss1; 
+		summon = instance_create_depth(x,y-1,depth-10,oSpawnAnimation); //spawn close to portal but not on portal
+		summon.spawn_type = spawn_type; 
 		summon.boss_enemy = true;
 		summon.ScreenShake(2,6);
 	}

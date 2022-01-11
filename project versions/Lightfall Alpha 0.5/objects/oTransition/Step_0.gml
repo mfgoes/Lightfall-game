@@ -1,9 +1,5 @@
 /// @description progress transition
 
-if (live_call()) return live_result;
-
-//if draw_alpha > 0 draw_alpha -= 0.02;
-
 if(mode !=TRANS_MODE.OFF)
 {
 	if (mode ==TRANS_MODE.INTRO)

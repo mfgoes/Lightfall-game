@@ -50,6 +50,8 @@ if global.game_paused
 
 #region level cleared (move to function later)
 if room != rMenu {
+	
+//check if there are enemies left
 if global.wavetotal - global.killsthiswave = 0 && global.wavetotal > 0 {
 	if !instance_exists(oEnemyParent) && no_more_enemies = false {
 		no_more_enemies = true;
