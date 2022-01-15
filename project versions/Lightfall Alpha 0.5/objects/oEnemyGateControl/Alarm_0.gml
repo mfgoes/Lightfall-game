@@ -10,4 +10,11 @@ if place_meeting(x,y,oWall) {
 	if !place_meeting(x,y-32,oWall) y-=32;
 }
 
-alarm[1] = 10;
+
+if instance_number(object_index) > 1 {
+	var target = instance_nearest_notme(x,y,object_index);
+
+	if target != 0 {
+		alarm[1] = 10;
+	}
+}
