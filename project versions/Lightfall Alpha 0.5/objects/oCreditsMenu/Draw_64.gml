@@ -1,5 +1,5 @@
 /// @description Draw Menu
-var x_offset = display_get_gui_width()/4;
+var x_offset = display_get_gui_width()/6;
 var y_offset = display_get_gui_height()/6;
 draw_set_color(c_black);
 draw_rectangle(x_offset, y_offset, display_get_gui_width() - x_offset, display_get_gui_height() -y_offset, false);
@@ -15,8 +15,8 @@ display_set_gui_size(RES_W*title_res_scale, RES_H*title_res_scale);
 var _menu_x = display_get_gui_width()/2;
 var _menu_y = y_offset + 2;
 
-var title_text = "Controls";
-draw_text(_menu_x, _menu_y, title_text);
+var title_text = "Credits";
+draw_text(_menu_x, _menu_y+15, title_text);
 
 display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
 
@@ -33,44 +33,44 @@ for (var i = 1; i < 7; i++)
 	switch i
 	{
 		case 6:
-		description = "Design Lead:";
+		description = "Created by:";
 		break;
 		case 5:
-		description = "Concept Lead:";
+		description = "Lead developer:";
 		break;
 		case 4:
-		description = "Concept Art:";
+		description = "Special thanks:";
 		break;
 		case 3:
-		description = "Special thanks";
+		description = "Pixel art";
 		break;
 		case 2:
-		description = "Coding / Bug fixes:";
+		description = "Coding, boss design:";
 		break;
 		case 1:
-		description = "Feedback / Design:";
+		description = "Story design, consulting:";
 		break;
 	}
 	var name = "";
 	switch i
 	{
 		case 6:
-		name = "Name";
+		name = "Mischa";
 		break;
 		case 5:
-		name = "Name";
+		name = "Mischa";
 		break;
 		case 4:
-		name = "Name";
-		break;
-		case 3:
 		name = "";
 		break;
+		case 3:
+		name = "Jeimansutrisman";
+		break;
 		case 2:
-		name = "Name";
+		name = "TheRedPixel";
 		break;
 		case 1:
-		name = "Name";
+		name = "<Alex>#8758";
 		break;
 	}
 	var x_offset = 100;
