@@ -3,7 +3,6 @@
   "glyphOperations": 0,
   "interpreter": 1,
   "pointRounding": 2,
-  "applyKerning": 0,
   "fontName": "CircularXX MediumTrial",
   "styleName": "Medium",
   "size": 20.0,
@@ -129,7 +128,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "path": "folders/Graphics and Sprites/Fonts.yy",
   },
   "resourceVersion": "1.0",
   "name": "fMenu",

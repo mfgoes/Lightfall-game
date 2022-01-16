@@ -30,7 +30,7 @@
     "path": "folders/Objects/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMenu",
+  "name": "oStartMenu",
   "tags": [],
   "resourceType": "GMObject",
 }

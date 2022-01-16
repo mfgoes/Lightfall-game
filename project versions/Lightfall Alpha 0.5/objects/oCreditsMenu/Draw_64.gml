@@ -1,6 +1,7 @@
 /// @description Draw Menu
 var x_offset = display_get_gui_width()/6;
 var y_offset = display_get_gui_height()/6;
+
 draw_set_color(c_black);
 draw_rectangle(x_offset, y_offset, display_get_gui_width() - x_offset, display_get_gui_height() -y_offset, false);
 

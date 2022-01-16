@@ -1,50 +1,74 @@
 /// @description Draw Menu
-var x_offset = display_get_gui_width()/4;
-var y_offset = display_get_gui_height()/6;
-draw_set_color(c_black);
-draw_rectangle(x_offset, y_offset, display_get_gui_width() - x_offset, display_get_gui_height() -y_offset, false);
+if (live_call()) return live_result; 
 
-draw_set_font(menu_font);
-draw_set_halign(fa_center);
-draw_set_valign(fa_bottom);
 
-draw_set_color(make_color_rgb(157, 166, 165));
-
-display_set_gui_size(RES_W*title_res_scale, RES_H*title_res_scale);
-
-var _menu_x = display_get_gui_width()/2;
-var _menu_y = y_offset + 2;
-draw_text(_menu_x, _menu_y, "Menu");
-
-display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
-
-for (var i = 0; i < menu_index; i++) 
-{
-	var txt = menu[i];
-	if (menu_move == i) 
-	{
-		//txt = string_insert("> ",txt, 0);
-		var col = make_color_rgb(115, 209, 204);
-	}
-	else
-	{
-		var col = make_color_rgb(115, 120, 119);
-	}
-	var xx = menu_x;
-	var yy = menu_y - (menu_item_height * (i*gui_mult));
+#region define variables
+	//window 
+	display_set_gui_size(RES_W*resolution, RES_H*resolution); //text is twice the resolution
 	
-	draw_set_color(col);
-	draw_text(xx,yy,txt);
+	var x_offset = display_get_gui_width()/4;
+	var y_offset = display_get_gui_height()/5; 
+	var x_mid = display_get_gui_width()/2;	
+#endregion
+
+#region draw window
+	var margin_win =  display_get_gui_width()/4;
+	var margin_y_win = display_get_gui_height()/6.5; 
+	draw_set_color(col_bgr); draw_set_alpha(0.8);
+	draw_rectangle(margin_win, margin_y_win, display_get_gui_width() - margin_win, display_get_gui_height() - margin_y_win, false);
+	draw_set_alpha(1);
+#endregion
+
+#region draw text
 	
+	//draw title
+	draw_set_color(col_font);
+	draw_set_font(f_title_sans);
+	draw_set_halign(fa_center);
+	draw_text(x_mid, margin_y_win+45, "- Menu -");
+
+	//draw links
+	draw_set_font(fMenu);
+	for (var i = 0; i < menu_index; i++) 
+	{
+		var txt = menu[i];
+		if (menu_move == i) 
+		{
+			txt = string_insert(" ",txt, 0);
+			var col = col_hover;
+		}
+		else
+		{
+			var col = col_font;
+		}
+		
+		var xx = x_mid;
+		var yy = menu_y_top * resolution + (line_height * i); //define this elsewhere;
+	
+		draw_set_halign(fa_center);
+		draw_set_color(col);
+		draw_text(xx,yy,txt);	
+		draw_text(20,40,string(menu_move)); //debugging
+
+
+	}
+#endregion
+
+#region draw margins and debug
+if global.debugmode = true {
+	display_set_gui_size(RES_W, RES_H);
+	draw_set_color(c_aqua); draw_set_alpha(0.3);
+	draw_rectangle(0,0,RES_W,menu_y_top,0);
+	draw_rectangle(0,RES_H,RES_W,menu_y_bot,0);
 }
-draw_set_color(c_white);
-draw_text(20,40,string(menu_move));
+#endregion
 
+//draw cursor 
+display_set_gui_size(RES_W, RES_H); //text is twice the resolution
+draw_cursor_custom(); 
+
+
+//reset draw variables
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-
-draw_set_color(c_black);
-draw_rectangle(gui_width,gui_height-20,gui_width+30,gui_height,false);
 draw_set_color(c_white);
-
-draw_cursor_custom(); 

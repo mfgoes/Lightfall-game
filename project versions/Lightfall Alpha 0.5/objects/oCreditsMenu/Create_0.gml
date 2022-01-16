@@ -1,7 +1,5 @@
 /// @description GUI/VARS/Menu Setup
-
-//set size of text + GUI. Higher = smaller
-//display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
+//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
 //center window
 text_res_scale = 1; //how much to scale the pixel art
@@ -11,7 +9,6 @@ var display_width  = display_get_width();
 var display_height = display_get_height();
 var window_width = RES_W * text_res_scale;
 var window_height = RES_H * text_res_scale;
-//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
  
 gui_width = display_get_gui_width();

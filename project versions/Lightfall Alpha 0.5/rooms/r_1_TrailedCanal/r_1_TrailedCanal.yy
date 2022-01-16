@@ -57,6 +57,7 @@
             {"properties":[],"isDnd":false,"objectId":{"name":"oGame","path":"objects/oGame/oGame.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":770.0,"y":320.0,"resourceVersion":"1.0","name":"inst_45D245C3","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1072.0,"y":320.0,"resourceVersion":"1.0","name":"inst_717D8DB1","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"oControl_EnemyTester","path":"objects/oControl_EnemyTester/oControl_EnemyTester.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1024.0,"y":320.0,"resourceVersion":"1.0","name":"inst_4BA6AC55","tags":[],"resourceType":"GMRInstance",},
+            {"properties":[],"isDnd":false,"objectId":{"name":"obj_gmlive","path":"objects/obj_gmlive/obj_gmlive.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":736.0,"y":304.0,"resourceVersion":"1.0","name":"inst_37CDB66A","tags":[],"resourceType":"GMRInstance",},
           ],"visible":true,"depth":-250,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
         {"instances":[],"visible":true,"depth":-150,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
         {"instances":[
@@ -750,6 +751,7 @@
     {"name":"inst_66B5F24E","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"inst_6F674847","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"inst_64E00DEE","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
+    {"name":"inst_37CDB66A","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

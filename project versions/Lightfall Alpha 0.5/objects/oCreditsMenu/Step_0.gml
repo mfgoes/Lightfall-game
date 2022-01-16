@@ -4,13 +4,8 @@ if (menu_control)
 {
 	//restart game
 	if keyboard_check_released(ord("R"))
-	SlideTransition(TRANS_MODE.RESTART);
+		SlideTransition(TRANS_MODE.RESTART);
 	
-	/*go to next room 
-	if keyboard_check(vk_enter) && menu_move = 2 { //check if correct menu item here
-		room_goto_next();
-	}*/
-
 	if (keyboard_check_pressed(vk_up))
 		menu_move++;
 		if (menu_move >= menu_index) menu_move = 0;
@@ -51,6 +46,3 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 		
 	}
 }
-
-///GUI items ease in
-//menu_x +=(menu_x_target - menu_x) / menu_speed;

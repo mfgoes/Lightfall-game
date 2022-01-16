@@ -1,6 +1,7 @@
 /// @description draw grid content
 //check viewport (for performance) 
-if (CheckInCamera()) //&& global.debugmode = true
+
+if (CheckInCamera()) && global.debugmode = true //&& global.debugmode = true
 {
 	//draw floating icon
 	direction+=0.03;
