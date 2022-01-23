@@ -27,8 +27,7 @@ if (menu_control)
 	{
 		menu_x_target = gui_width+20;
 		menu_committed = menu_move;
-		audio_sound_gain(snJump1,0.2,0);
-		audio_play_sound(snJump1,5,0);
+		audio_ui_click(); 
 		//ScreenShake(4,10);
 		menu_control = false;		
 	}

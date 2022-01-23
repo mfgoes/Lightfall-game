@@ -1,8 +1,6 @@
 /// @description Control Menu
 if (live_call()) return live_result; 
 
-y = oPlayer.y;
-
 //Keyboard Controls
 if (menu_control) 
 {
@@ -29,34 +27,14 @@ if (menu_control)
 		if (mouse_y_gui < menu_y_bot) && (mouse_y_gui > menu_y_top) { //can also use clamp function
 			menu_move = (mouse_y_gui - menu_y_top) div (line_height/resolution);	
 		} else exit;
-	
 		
-		//determine top and bottom limits
-		//if menu_move >= menu_index {menu_move = 0;}
-		//if menu_move < 0 {menu_move = menu_index-1;}
-		
-		
-		//set new menu_move position 
-		
-		/*
-		//gg = RES_H + 120 - (line_height * i);
-		//menu_y =  (RES_H + 120) *2; 
-		var mouse_y_gui = (device_mouse_y(0)) * 2 //80 = 120 - line_height
-		if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) 
-		{
-		menu_move =  (menu_y - mouse_y_gui) div (menu_item_height * gui_mult);
-		//	menu_move = (menu_y - mouse_y_gui) div (menu_item_height * gui_mult);
-		}*/
-
 	#endregion
 if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
 	{
 		menu_x_target = gui_width+20;
 		menu_committed = menu_move;
-		audio_sound_gain(snJump1,0.2,0);
-		audio_play_sound(snJump1,5,0);
-		//ScreenShake(4,10);
-		menu_control = false;		
+		audio_ui_click(); 
+		//menu_control = false;		
 	}
 }
 

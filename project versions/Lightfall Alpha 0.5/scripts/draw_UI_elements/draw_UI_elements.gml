@@ -172,3 +172,11 @@ function draw_objective_UI(){
 function draw_boss_UI(){
 	
 }
+
+
+
+//UI SOUNDS 2022.1
+function audio_ui_click() {
+	audio_sound_gain(snd_button1,global.sound_volume,0);
+	audio_play_sound(snd_button1,1,0);	
+}
