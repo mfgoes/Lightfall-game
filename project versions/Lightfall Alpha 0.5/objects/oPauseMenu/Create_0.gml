@@ -23,7 +23,7 @@ menu_font = fSign;
 menu_committed = -1;
 menu_control = true; //can control menu
 
-menu_title = "- Menu -";
+menu_title = "Menu";
 menu[0] ="Continue";
 menu[1] = "Sound Settings";
 menu[2] = "Controls";

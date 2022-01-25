@@ -11,7 +11,7 @@
 #region draw window
 	var margin_win =  display_get_gui_width()/4;
 	var margin_y_win = display_get_gui_height()/6.5; 
-	draw_set_color(col_bgr); draw_set_alpha(0.5);
+	draw_set_color(col_bgr); draw_set_alpha(0.8);
 	draw_rectangle(margin_win, margin_y_win, display_get_gui_width() - margin_win, display_get_gui_height() - margin_y_win, false);
 	draw_set_alpha(1);
 #endregion

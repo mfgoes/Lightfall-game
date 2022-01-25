@@ -17,6 +17,8 @@ menu[0] = "Volume: " + string(round(global.sound_volume*100)); //easy lerp this
 
 //move around buttons
 var xx = display_get_gui_width()/2 * resolution; 
+var key_left = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")) || gamepad_button_check(0,gp_padl);
+var	key_right = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")) || gamepad_button_check(0,gp_padr);
 BL.y = menu_y_top * resolution + (line_height*0);
 BL.x = (xx - m);
 BR.x = (xx + m);
@@ -49,6 +51,19 @@ if (menu_control)
 			if (mouse_y_gui < menu_y_bot) && (mouse_y_gui > menu_y_top) { //can also use clamp function
 				menu_move = (mouse_y_gui - menu_y_top) div (line_height/resolution);	
 			} else exit;
+			
+			//hardcoded control for now:
+			if (key_left) {
+				global.sound_volume = max(0, global.sound_volume - 0.1);
+				audio_master_gain(global.sound_volume);
+				audio_ui_click(); 
+			}
+			if (key_right) {
+				global.sound_volume = min(1, global.sound_volume + 0.1);
+				audio_master_gain(global.sound_volume);
+				audio_ui_click(); 
+			}
+			
 		#endregion
 	
 }
@@ -66,6 +81,7 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 			}
 			if BR_hover && mouse_check_button_pressed(mb_left) {
 				global.sound_volume = min(1, global.sound_volume + 0.1);
+				audio_master_gain(global.sound_volume);
 				audio_ui_click(); 
 			}
 			
