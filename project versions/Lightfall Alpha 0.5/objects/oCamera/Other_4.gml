@@ -75,6 +75,6 @@ weapon_zoom = 0; //zoom level affected by weapon
 //draw parallax
 //set variable for this in settings
 if !instance_exists(oParallaxBgr) {
-	instance_create_depth(0,0,400,oParallaxBgr);
+	instance_create_layer(0,0,"parallax_bgr",oParallaxBgr);
 }
 

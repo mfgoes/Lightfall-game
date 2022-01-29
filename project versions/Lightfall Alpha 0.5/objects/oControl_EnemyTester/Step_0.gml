@@ -9,6 +9,7 @@ if (live_call()) return live_result;
 spawn = grid_wave[# grid_x, grid_y];
 var grid_x_max = ds_grid_width(grid_wave);
 
+
 if keyboard_check_pressed(vk_anykey) {
 switch (keyboard_key) {
     

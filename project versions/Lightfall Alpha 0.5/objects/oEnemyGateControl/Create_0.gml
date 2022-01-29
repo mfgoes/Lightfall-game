@@ -12,8 +12,8 @@
 	//Fill
 	ds_grid_clear(grid_wave,0);
 	//Write
-	grid_wave[# 0, 0] = oEnemyRangedGeneric; //"mage1";
-	grid_wave[# 0, 1] = oEnemyRangedGeneric; //"mage2";
+	grid_wave[# 0, 0] = oEnemy_Mage; //"mage1";
+	grid_wave[# 0, 1] = oEnemy_Mage; //"mage2";
 	grid_wave[# 0, 2] = oEnemyExploder; //"mage3 SUPER";
 	grid_wave[# 0, 3] = oEnemy_Bat; //"mage3 SUPER";
 
@@ -24,8 +24,8 @@
 
 	grid_wave[# 2, 0] = oEnemyMelee
 	grid_wave[# 2, 1] = oEnemyMelee;
-	grid_wave[# 2, 2] = oEnemyRangedGeneric;
-	grid_wave[# 2, 3] = oEnemyRangedGeneric;
+	grid_wave[# 2, 2] = oEnemy_Mage;
+	grid_wave[# 2, 3] = oEnemy_Mage;
 #endregion
 
 touched_gate = false;

@@ -20,5 +20,5 @@ if (CheckInCamera()) && global.debugmode = true //&& global.debugmode = true
 		var name = object_get_name(ds_grid_get(grid_wave,grid_x,0));
 	
 	draw_text(x,y-50,"< " + string(name) + " >");
-	//draw_text(x,y-70,grid_x);
+	draw_text(x,y-70,grid_x);
 }

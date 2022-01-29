@@ -1,12 +1,13 @@
 // Create event for every character. These are the default values. 
 function LoadCharacter_Basics(){
-	grv = 0.32; //gravity
+	walkspd = 2; current_walkspd = 0;
+	grv = 0.33; //gravity
 	hsp = 0;
 	vsp = 0;
 	grounded = false; //check if on ground fast 
 	hascontrol = true;
 	coyote_time = 10; //for coyote jump
-	jump_speed = 6.5;
+	jump_speed = 5;
 	jumps = 0; //double jumps
 	jumps_max = 2;
 	air_shot = false; //allows char to temporarily hover in the air

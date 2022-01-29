@@ -4,8 +4,7 @@
 function LoadCharacter_Archer(){
 
 //basics
-current_walkspd = 0;
-walkspd = 3;
+//walkspd = 2; current_walkspd = 0; //use default values
 hp_max  = 5;
 hp = hp_max;
 roll_cooldown = 0; 
