@@ -2,7 +2,6 @@
 //define sprites (load as arrays and enums in the future (phase 3)
 event_inherited();
 
-
 hp = 4; hp_max = hp;
 afraid_of_heights = true;
 current_state = enemy_states.patrol;

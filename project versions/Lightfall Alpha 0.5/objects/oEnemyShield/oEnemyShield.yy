@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Unfinished Enemies",
-    "path": "folders/Objects/Enemies/Unfinished Enemies.yy",
+    "name": "Basic",
+    "path": "folders/Objects/Enemies/Basic.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemyShield",

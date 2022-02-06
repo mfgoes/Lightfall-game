@@ -1,5 +1,7 @@
 /// @description Initialize Variables
 
+event_inherited();
+
 //Meta Variable, do not change!
 myId = id;
 image_speed = 0;

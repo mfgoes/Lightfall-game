@@ -64,7 +64,7 @@ if (place_meeting(x,y+1,oParPlatform) && key_down) {
 		}
 		jumps -=1;
 		repeat(3) {
-				with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
+				with(instance_create_depth(x,bbox_bottom,depth,oDust)) {
 					vsp = -0.1; 
 					hsp = random_range(-2,2)
 					image_xscale = choose (1,-1);
