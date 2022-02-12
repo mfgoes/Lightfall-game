@@ -4,3 +4,6 @@ damage = 1; //does 1 damage
 //splash = false; 
 alarm[0] = 140; //destroy
 collision_wall = true;
+
+dir = 0; 
+spd = 0;

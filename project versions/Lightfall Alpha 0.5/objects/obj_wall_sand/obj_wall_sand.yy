@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sWall32x32_extended",
+    "path": "sprites/sWall32x32_extended/sWall32x32_extended.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "class_wall",

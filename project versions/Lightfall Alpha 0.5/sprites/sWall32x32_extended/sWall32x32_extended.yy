@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -8,7 +8,7 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 31,
+  "bbox_right": 32,
   "bbox_top": 0,
   "bbox_bottom": 31,
   "HTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","path":"sprites/sWall32x32/sWall32x32.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","path":"sprites/sWall32x32/sWall32x32.yy",},"LayerId":{"name":"2fa9fc0f-8b16-406a-b52e-fd6bb2ce1251","path":"sprites/sWall32x32/sWall32x32.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWall32x32","path":"sprites/sWall32x32/sWall32x32.yy",},"resourceVersion":"1.0","name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},"LayerId":{"name":"2fa9fc0f-8b16-406a-b52e-fd6bb2ce1251","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWall32x32_extended","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},"resourceVersion":"1.0","name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sWall32x32","path":"sprites/sWall32x32/sWall32x32.yy",},
+    "spriteId": {"name":"sWall32x32_extended","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1a217859-8615-4f01-ae15-99ef79704eee","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","path":"sprites/sWall32x32/sWall32x32.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1a217859-8615-4f01-ae15-99ef79704eee","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5f95e55-ebe4-4154-ab3f-f644ebf5a281","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sWall32x32","path":"sprites/sWall32x32/sWall32x32.yy",},
+    "parent": {"name":"sWall32x32_extended","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},
     "resourceVersion": "1.3",
-    "name": "sWall32x32",
+    "name": "sWall32x32_extended",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Graphics and Sprites/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sWall32x32",
+  "name": "sWall32x32_extended",
   "tags": [],
   "resourceType": "GMSprite",
 }

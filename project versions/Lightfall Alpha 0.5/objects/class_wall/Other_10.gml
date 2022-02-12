@@ -1,4 +1,4 @@
-/// @description Adjacent Wall Check
+/// @description auto tile
 
 //The next two variables are also initialized in the create event.
 //I get an error if I dont put them here.

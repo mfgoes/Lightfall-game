@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCrowMage_Idle",
-    "path": "sprites/sCrowMage_Idle/sCrowMage_Idle.yy",
+    "name": "sEnemyExploder",
+    "path": "sprites/sEnemyExploder/sEnemyExploder.yy",
   },
   "solid": false,
   "visible": true,

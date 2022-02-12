@@ -12,3 +12,5 @@ objSize = 32;
 
 //Run Wall Adjust
 event_user(0);
+
+//alarm[0] = 10; //this is used to fix lighting (for now)

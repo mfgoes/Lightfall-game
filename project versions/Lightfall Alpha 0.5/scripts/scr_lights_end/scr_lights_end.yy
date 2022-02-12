@@ -6,7 +6,7 @@
     "path": "folders/Objects/Lighting system.yy",
   },
   "resourceVersion": "1.0",
-  "name": "lights_end",
+  "name": "scr_lights_end",
   "tags": [],
   "resourceType": "GMScript",
 }

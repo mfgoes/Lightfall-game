@@ -6,7 +6,7 @@
     "path": "folders/Objects/Lighting system.yy",
   },
   "resourceVersion": "1.0",
-  "name": "lights_begin",
+  "name": "scr_lights_begin",
   "tags": [],
   "resourceType": "GMScript",
 }

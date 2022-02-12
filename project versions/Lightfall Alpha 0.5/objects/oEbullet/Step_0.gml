@@ -4,8 +4,8 @@ if global.game_paused
 	exit;
 }
 
-x+= lengthdir_x(spd,direction);
-y+= lengthdir_y(spd,direction);
+//x+= lengthdir_x(spd,dir);
+//y+= lengthdir_y(spd,dir);
 
 //hit player
 if (place_meeting(x,y,oPlayer)) 

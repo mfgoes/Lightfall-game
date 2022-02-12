@@ -81,7 +81,7 @@ switch (current_state)
 			if timer_get("attack_player") <=0 {
 					attack_anim_end = 0;
 					if sprite_index = spriteAttack && image_index > 3 { //create bullet on correct animation frame
-						timer_set("attack_player",50+choose(10,30,50)); 
+						timer_set("attack_player",90+choose(10,30,50)); 
 						var bullet = instance_create_layer(x+lengthdir_x(10,radtodeg(arccos(dir))), y-12, "bullets", oEbulletFollow)
 						bullet.direction = point_direction(x,y,target.x,target.y); //+choose(-5,0,5);
 						bullet.image_angle = bullet.direction;

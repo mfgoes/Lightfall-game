@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sWall32x32",
-    "path": "sprites/sWall32x32/sWall32x32.yy",
+    "name": "sWall32x32_extended",
+    "path": "sprites/sWall32x32_extended/sWall32x32_extended.yy",
   },
   "solid": false,
   "visible": true,
