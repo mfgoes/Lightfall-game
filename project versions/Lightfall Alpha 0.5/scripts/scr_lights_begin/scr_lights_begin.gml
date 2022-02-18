@@ -31,8 +31,8 @@ if (event_type == ev_draw) and (event_number == 0) {
 		//draw_set_color(c_black)
 		//draw_rectangle(0,0,room_width/2,room_height,0);
 		
-		draw_set_alpha(0.5);
-		r = 120/2;
+		draw_set_alpha(1);
+		r = 230/2;
 		draw_ellipse_color(x-r,y-r,x+r,y+r,c_white,c_black,0);
 		draw_set_alpha(1); 
 		
@@ -40,7 +40,7 @@ if (event_type == ev_draw) and (event_number == 0) {
 	var numberoflinesimdrawing = ds_stack_size(iLight.wallthatblock)
 	var shadowsize = 1100
 	
-	draw_set_alpha(0.4); 
+	draw_set_alpha(0.45); 
 	for (i=0; i<numberoflinesimdrawing; i++) {
 	    // draw_shadows
 	    draw_set_colour(c_black)
@@ -67,15 +67,14 @@ if (event_type == ev_draw) and (event_number == 0) {
 	    draw_primitive_end()
 	}
 	
-	//add another layer of glow
-	draw_set_alpha(0.7);
-	r = 120/2;
+	//add another layer of light shine
+	draw_set_alpha(0.5);
 	draw_ellipse_color(x-r,y-r,x+r,y+r,c_white,c_black,0);
 	draw_set_alpha(1); 
 		
 	//
 	//set transparency 
-	draw_set_alpha(0.45) // 0.15
+	draw_set_alpha(0.6) // 0.7 //(make this editable in debug mode)
 	draw_set_colour(c_white)
 	draw_rectangle(0,0,room_width,room_height,false)
 	draw_set_alpha(1)

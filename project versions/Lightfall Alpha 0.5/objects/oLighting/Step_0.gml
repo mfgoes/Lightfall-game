@@ -26,7 +26,7 @@ with(oWall) {
 	} else
 		target = id; 
 	
-	if distance_to_point(target.x,target.y) < 120 {
+	if distance_to_point(target.x,target.y) < 200 {
 		ds_stack_push(other.wallthatblock,id)
 	}
 }

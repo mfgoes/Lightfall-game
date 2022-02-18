@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEnemyBlob_Idle",
-    "path": "sprites/sEnemyBlob_Idle/sEnemyBlob_Idle.yy",
+    "name": "sRockBug",
+    "path": "sprites/sRockBug/sRockBug.yy",
   },
   "solid": false,
   "visible": true,
@@ -11,8 +11,8 @@
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
+    "name": "oEnemyMelee",
+    "path": "objects/oEnemyMelee/oEnemyMelee.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,7 +27,6 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
@@ -39,7 +38,7 @@
     "path": "folders/Objects/Enemies/Basic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemyMelee2",
+  "name": "oRockBug",
   "tags": [],
   "resourceType": "GMObject",
 }

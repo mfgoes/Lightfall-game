@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEnemyExploder",
-    "path": "sprites/sEnemyExploder/sEnemyExploder.yy",
+    "name": "sBoom_walk_cuteeyes",
+    "path": "sprites/sBoom_walk_cuteeyes/sBoom_walk_cuteeyes.yy",
   },
   "solid": false,
   "visible": true,

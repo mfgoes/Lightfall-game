@@ -12,7 +12,7 @@
 	//Write
 	grid_wave[# 0, 0] = oEnemy_Mage; //"mage1";
 	grid_wave[# 1, 0] = oEnemyMelee;
-	grid_wave[# 2, 0] = oEnemyMelee2;
+	grid_wave[# 2, 0] = oRockBug;
 	grid_wave[# 3, 0] = oEnemy_Bat;
 	grid_wave[# 4, 0] = oEnemyExploder;
 	grid_wave[# 5, 0] = oEnemyShield;
