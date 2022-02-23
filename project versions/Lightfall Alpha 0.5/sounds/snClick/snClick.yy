@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snClick",
-  "duration": 0.370714,
+  "duration": 0.365714,
   "parent": {
     "name": "UI",
     "path": "folders/Sounds/UI.yy",

@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "statue_stomp_02.wav",
-  "duration": 0.691222,
+  "duration": 0.686222,
   "parent": {
     "name": "bigmonster",
     "path": "folders/Sounds/Enemy Sounds/bigmonster.yy",

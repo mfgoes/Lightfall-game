@@ -23,6 +23,7 @@ switch (current_state)
 		{
 			current_state = enemy_states.idle;
 			timer_set("destroy", 60);
+			
 		}
 	} break;
 	case enemy_states.idle: {

@@ -29,17 +29,22 @@
 EnemyAnimationsDefault(); 
 
 //execute different states
-switch (current_state)
-{
-	case enemy_states.idle:
-	scr_state_patrol();
-	break;
+if hp > 0 {
+	switch (current_state)
+	{
+		case enemy_states.idle:
+		scr_state_patrol();
+		break;
 
-	case enemy_states.approach:
-	scr_state_approach();
-	break;
+		case enemy_states.approach:
+		scr_state_approach();
+		break;
 
-	case enemy_states.attack:
-	scr_state_atk_melee();
-	break;
+		case enemy_states.attack:
+		scr_state_atk_melee();
+		break;
+	}
+}
+else { //stay static
+	image_xscale = 1;
 }

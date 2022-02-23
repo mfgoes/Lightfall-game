@@ -9,8 +9,8 @@
   "swfPrecision": 2.525,
   "bbox_left": 7,
   "bbox_right": 31,
-  "bbox_top": 4,
-  "bbox_bottom": 30,
+  "bbox_top": 8,
+  "bbox_bottom": 32,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBug/sRockBug.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBug/sRockBug.yy",},"LayerId":{"name":"a2fc962c-041f-4220-b74f-0cd048746bb3","path":"sprites/sRockBug/sRockBug.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBug","path":"sprites/sRockBug/sRockBug.yy",},"resourceVersion":"1.0","name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1156bb90-5e21-47fb-9cc6-4f79da470917","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1156bb90-5e21-47fb-9cc6-4f79da470917","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},"LayerId":{"name":"721f3163-12d7-43e0-bbfd-d712ad07181a","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sRockBug_Dead","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},"resourceVersion":"1.0","name":"1156bb90-5e21-47fb-9cc6-4f79da470917","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRockBug","path":"sprites/sRockBug/sRockBug.yy",},
+    "spriteId": {"name":"sRockBug_Dead","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3f76053f-f46f-4553-959a-4ecb24d378d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBug/sRockBug.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9368c1c6-dc40-4434-8b99-e64ff19445cf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1156bb90-5e21-47fb-9cc6-4f79da470917","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRockBug","path":"sprites/sRockBug/sRockBug.yy",},
+    "parent": {"name":"sRockBug_Dead","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},
     "resourceVersion": "1.3",
-    "name": "sRockBug",
+    "name": "sRockBug_Dead",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2fc962c-041f-4220-b74f-0cd048746bb3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"721f3163-12d7-43e0-bbfd-d712ad07181a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Graphics and Sprites/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sRockBug",
+  "name": "sRockBug_Dead",
   "tags": [],
   "resourceType": "GMSprite",
 }

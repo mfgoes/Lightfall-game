@@ -10,7 +10,7 @@ event_inherited();
 walk_spd = 1;
 approach_spd = 1.2;
 wander_range = 80; //maximum patrol area
-reload_spd = 55; 
+reload_spd = 65; 
 
 atk_anim_x = 0 //; //lerp between two points
 atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 

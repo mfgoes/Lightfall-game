@@ -54,11 +54,11 @@ function scr_state_approach(){
 //Attack the player (close ranged) 
 function scr_state_atk_melee(){
 if timer_get("attack_reload") <=0 { 
-	var reload_spd_r = reload_spd + irandom(15); 
+	var reload_spd_r = reload_spd; //+ irandom(15); 
 	timer_set("attack_reload",reload_spd_r);
 	timer_set("anim_prep",reload_spd-5);
 	timer_set("anim_retract",0); //reset retract animation
-	atk_anim_x = 5; //start animated
+	atk_anim_x = 5; //start animated (reset this at the end)
 			
 	with(oPlayer) {
 		hp-=other.damage;

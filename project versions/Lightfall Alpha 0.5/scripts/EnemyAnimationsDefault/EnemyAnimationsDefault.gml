@@ -5,10 +5,10 @@ if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {
 		//attack animation	
 	}
 	if current_state = enemy_states.approach {
-		image_xscale = sign(x - target.x);	
+		if hp > 0 image_xscale = sign(x - target.x); else image_xscale = 1;	
 	}
 	if current_state = enemy_states.idle {
-		image_xscale = -sign(hsp);	
+		if hp > 0 image_xscale = -sign(hsp);	
 	}
 	
 	//attack animation code

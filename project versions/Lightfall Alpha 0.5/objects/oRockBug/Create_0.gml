@@ -8,7 +8,7 @@ event_inherited();
 spriteIdle =	sRockBug;
 spriteWalk =	sRockBug;
 spriteJump =	sRockBug;
-spriteDie  =	sRockBug;
+spriteDie  =	sRockBug_Dead;
 spriteAttack =	sRockBug;
 spriteMelee  =	sRockBug;
 mask_index	 =	sRockBug;
