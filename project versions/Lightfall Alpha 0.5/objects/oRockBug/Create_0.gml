@@ -13,3 +13,7 @@ spriteAttack =	sRockBug;
 spriteMelee  =	sRockBug;
 mask_index	 =	sRockBug;
 sprite_offset_cleanup();
+
+//shakes enemy when dead
+shake_x = 0; 
+shake_dir = 1; 

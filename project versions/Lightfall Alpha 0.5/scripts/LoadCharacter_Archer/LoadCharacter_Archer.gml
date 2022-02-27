@@ -15,7 +15,7 @@ roll_cooldown_full = 40;
 function LoadAssets_Archer(){
 	spriteIdle    =	sProtagIdle;
 	spriteWalk    =	sProtagWalk;
-	spriteRoll    =	sArcherRoll;
+	spriteRoll    =	sProtagRoll;
 	spriteJump    =	sProtagJump;
 	spriteDie     =	sArcherDie;
 	spriteAim     =	sProtagAim;

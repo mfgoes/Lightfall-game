@@ -1,4 +1,4 @@
-/// @description state changes (Dec 2021)
+/// @description genearlised multi-enemy state changes (Dec 2021)
 
 //if (live_call()) return live_result; 
 #region gravity + basic + timers

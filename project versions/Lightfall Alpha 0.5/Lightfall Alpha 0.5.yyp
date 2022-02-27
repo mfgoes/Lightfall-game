@@ -132,6 +132,7 @@
     {"id":{"name":"oControl_EnemyTester","path":"objects/oControl_EnemyTester/oControl_EnemyTester.yy",},"order":3,},
     {"id":{"name":"ScreenShake","path":"scripts/ScreenShake/ScreenShake.yy",},"order":1,},
     {"id":{"name":"sPortalGlow","path":"sprites/sPortalGlow/sPortalGlow.yy",},"order":5,},
+    {"id":{"name":"sProtagRoll","path":"sprites/sProtagRoll/sProtagRoll.yy",},"order":6,},
     {"id":{"name":"GMLScripts","path":"scripts/GMLScripts/GMLScripts.yy",},"order":7,},
     {"id":{"name":"sHitbox_Generic","path":"sprites/sHitbox_Generic/sHitbox_Generic.yy",},"order":2,},
     {"id":{"name":"sHillSand2","path":"sprites/sHillSand2/sHillSand2.yy",},"order":4,},
