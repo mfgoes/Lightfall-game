@@ -19,9 +19,10 @@ gui_margin = 24;
 
 menu_x_target = gui_width/2;
 menu_speed = 15; //lower = faster
-menu_font = fSign;
+menu_font = f_title_sans;
 menu_committed = -1;
 menu_control = true; //can control menu
+m = 0; //??
 
 menu_title = "Menu";
 menu[0] ="Continue";
@@ -32,7 +33,7 @@ menu[4] = "Back to Main Menu";
 menu[5] = "Quit";
 
 menu_index = array_length(menu);
-menu_item_height = font_get_size(fMenu)*2; //rename to line height later
+menu_item_height = font_get_size(f_title_sans)*2; //rename to line height later
 menu_y =  (RES_H + 120) *2; 
 
 

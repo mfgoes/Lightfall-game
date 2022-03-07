@@ -20,12 +20,11 @@
 	
 	//draw title
 	draw_set_color(col_font);
-	draw_set_font(f_title_sans);
+	draw_set_font(menu_font);
 	draw_set_halign(fa_center);
 	draw_text(x_mid, margin_y_win+45, menu_title);
 
 	//draw links
-	draw_set_font(fMenu);
 	for (var i = 0; i < menu_index; i++) 
 	{
 		var txt = menu[i];

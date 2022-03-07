@@ -1,40 +1,17 @@
-/// @description GUI/VARS/Menu Setup
+/// @description setup buttons
+event_inherited();
 
+if (live_call()) return live_result; 
 
-//Resize window & applicatiom surface
-//window_set_size(RES_W * RES_SCALE, RES_H * RES_SCALE); 
-//surface_resize(application_surface, RES_W * RES_SCALE, RES_H * RES_SCALE);
+array_delete(menu, 0,10); //cleanup
+menu_title = "Controls";
+menu[0] = "Move: WADS";
+menu[1] = "Left mouse: Primary";
+menu[2] = "Right mouse: Secondary"; //move this to far bottom
+menu[3] = "F: Roll";
+menu[4] = "Q: Special";
+menu[5] = "Space: Jump";
 
-//center window
-text_res_scale = 1; //how much to scale the pixel art
-title_res_scale = .7;
-
-var display_width  = display_get_width();
-var display_height = display_get_height();
-var window_width = RES_W * text_res_scale;
-var window_height = RES_H * text_res_scale;
-//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
-
- 
-gui_width = display_get_gui_width();
-gui_height = display_get_gui_height();
-gui_margin = 24;
-
-menu_x = gui_width/2;
-menu_y = gui_height/2 + 70;
-menu_x_target = gui_width/2;
-menu_speed = 15; //lower = faster
-menu_font = fSign;
-menu_item_height = font_get_size(menu_font);
-menu_committed = -1;
-menu_control = true;
-
-gui_mult = 1.5;
-
-menu[0] = "Back";
-
-menu_index = array_length_1d(menu);
-
-menu_top = menu_y - ((menu_item_height * 1.5) * 7);
-menu_move = menu_index - 1;
-//cursor_sprite = sCrosshairs;
+menu[6] = "back"; //highlight this in the future (draw event)
+menu_index = array_length(menu);
+menu_move = 6;

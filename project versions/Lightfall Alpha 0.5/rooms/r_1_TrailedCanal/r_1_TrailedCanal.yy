@@ -55,9 +55,7 @@
             {"properties":[],"isDnd":false,"objectId":{"name":"oControl_EnemyTester","path":"objects/oControl_EnemyTester/oControl_EnemyTester.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":912.0,"y":320.0,"resourceVersion":"1.0","name":"inst_4BA6AC55","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"obj_gmlive","path":"objects/obj_gmlive/obj_gmlive.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":736.0,"y":304.0,"resourceVersion":"1.0","name":"inst_37CDB66A","tags":[],"resourceType":"GMRInstance",},
           ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
-        {"instances":[
-            {"properties":[],"isDnd":false,"objectId":{"name":"oRockBug","path":"objects/oRockBug/oRockBug.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1131.0,"y":338.0,"resourceVersion":"1.0","name":"inst_7D8FBDF7","tags":[],"resourceType":"GMRInstance",},
-          ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
+        {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
         {"instances":[
             {"properties":[],"isDnd":false,"objectId":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1424.0,"y":480.0,"resourceVersion":"1.0","name":"inst_29D88C46","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":512.0,"resourceVersion":"1.0","name":"inst_1AF05DBB","tags":[],"resourceType":"GMRInstance",},
@@ -744,7 +742,6 @@
     {"name":"inst_7FDA2B94","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"inst_136E4D17","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"inst_129979BA","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
-    {"name":"inst_7D8FBDF7","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
     {"name":"iLight","path":"rooms/r_1_TrailedCanal/r_1_TrailedCanal.yy",},
   ],
   "inheritCreationOrder": false,

@@ -8,7 +8,7 @@ menu_title = "Sound Settings";
 menu[0] = "Volume";
 menu[1] = "back";
 menu_index = array_length(menu);
-m = 0;
+
 
 //create buttons. Move this according to menu position (when needed)
 //note: coordinates are incorrectly mapped atm due to GUI scaling. 

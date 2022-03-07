@@ -8,10 +8,9 @@ enum enemy_states {
 }
 current_state = enemy_states.idle;
 
-if instance_exists(oGame) {
-	global.wavetotal++;
-}
-else exit; 
+
+//add to waves if spawned (through spawn object)
+
 
 #region animation 
 	//define sprites (load flazas arrays and enums in the future (phase 3)
