@@ -29,4 +29,4 @@ spriteDie  =	sBoom_explode2;
 spriteAttack =	sBoomslime_atk;
 spriteMelee  =	sBoom_walk_cuteeyes;
 mask_index	 =	sBoom_walk_cuteeyes;
-sprite_offset_cleanup();
+//sprite_offset_cleanup();

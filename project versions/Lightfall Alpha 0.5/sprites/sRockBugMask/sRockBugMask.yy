@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 7,
-  "bbox_right": 31,
-  "bbox_top": 4,
+  "bbox_left": 8,
+  "bbox_right": 30,
+  "bbox_top": 6,
   "bbox_bottom": 30,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBug/sRockBug.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBug/sRockBug.yy",},"LayerId":{"name":"a2fc962c-041f-4220-b74f-0cd048746bb3","path":"sprites/sRockBug/sRockBug.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBug","path":"sprites/sRockBug/sRockBug.yy",},"resourceVersion":"1.0","name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"LayerId":{"name":"a2fc962c-041f-4220-b74f-0cd048746bb3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},"resourceVersion":"1.0","name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRockBug","path":"sprites/sRockBug/sRockBug.yy",},
+    "spriteId": {"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3f76053f-f46f-4553-959a-4ecb24d378d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBug/sRockBug.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9805219a-02c1-4794-918d-dc2e53f67db7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -55,12 +55,12 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 20,
-    "yorigin": 31,
+    "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRockBug","path":"sprites/sRockBug/sRockBug.yy",},
+    "parent": {"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},
     "resourceVersion": "1.3",
-    "name": "sRockBug",
+    "name": "sRockBugMask",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Graphics and Sprites/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sRockBug",
+  "name": "sRockBugMask",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -1,53 +1,95 @@
 
 // Patrol the vicinity and jump over walls when required. 
 function scr_state_patrol(){
+	timer_init("jump_duration");
+	//TILE_SIZE = 16px; 
+	var dir = patrol_dir; 
 	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
-	if  dist_start > wander_range {
-		patrol_dir*=-1; //this currently glitches sometimes
-		x+=patrol_dir*4;
-	}
-	//check tiles down
-	var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWall,0,0)); //check 2 tiles down
-	var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWall,0,0)); //check existing tile
-	if !((check_tile1) or (check_tile2)) {
-		patrol_dir*= -1;
-	}
-	if place_meeting(x + hsp, y, oWall)  {
-		//check if you can jump up a tile first
-		if !collision_point(x + patrol_dir,y-TILE_SIZE-1, oWall,0,0) {  //check tiles up
-			y-=TILE_SIZE; //"Jump" up (improve later)
-			hsp = walk_spd*patrol_dir;
+	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWall,0,0));
+	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*3, oWall,0,0));
+	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWall,0,0)); //if 1 pixel above is free
+	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE*3, oWall,0,0));	
+
+	if (grounded) {
+		//check above
+		if !(tile_above) && (tile_ahead) {
+			if timer_get("jump_duration") <= 0 
+				timer_set("jump_duration",15);
 		}
-		if collision_point(x + patrol_dir,y+TILE_SIZE, oWall,0,0) {  //check tiles down
-			hsp = walk_spd*patrol_dir;
+		
+		//check below
+		else if !(tile_below) {
+			patrol_dir*= -1;
 		}
-		x+=patrol_dir*4;
+		
+		//check ahead
+		else if (tile_ahead) {
+			patrol_dir*= -1;
+		}	
 	}
-	hsp = walk_spd * patrol_dir;
-	x+= hsp;
+		
+	//move
+	if (grounded) && !(tile_ahead) {
+		hsp = walk_spd * patrol_dir;
+		x+= hsp;
+	}
+	//jump if possible
+	if timer_get("jump_duration") > 0 {
+		if !(space_above) { //check if jump is still required, otherwise lerp jump.
+			timer_set("jump_duration",0);
+			y-=4;
+			exit;
+		}
+		else 
+			y-=5;	 
+	}
 }
+	
+	
 	
 //Approach the player
 function scr_state_approach(){
+	timer_init("jump_duration");
+	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
 	var dir = sign(target.x - x); 
-	if !place_meeting(x + dir*approach_spd, y,oWall) {
-		hsp = dir*approach_spd; }
-	else {
-		hsp = 0;}
-		
-	if place_meeting(x + dir*approach_spd, y, oWall)  {
-		if !collision_point(x + dir,y-TILE_SIZE-1, oWall,0,0) {  //check if 2 tiles up is free
-			y-=TILE_SIZE; //"Jump" up (improve later)
-			hsp = dir*approach_spd;
-			
-			//x+=hsp;
-		}		
-	}		
+	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWall,0,0));
+	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*5, oWall,0,0));
+	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWall,0,0)); //if 1 pixel above is free
+	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE*3, oWall,0,0));	
+	
 	if (grounded) {
-		x += hsp; //grounded check prevents clipping
+		//check above	//don't check below
+		if !(tile_above) && (tile_ahead) {
+			if timer_get("jump_duration") <= 0 
+				timer_set("jump_duration",25); //max jump height
+		}
+
+		//check ahead
+		if (tile_ahead) {
+			hsp = 0;
+			//revert to patrol
+		}
+		else 
+			hsp = dir*approach_spd; //set facing direction
+	}
+		
+	//MOVE
+	if (grounded) && !(tile_ahead) {	
+		if round(x) != round(target.x) 
+			x += hsp;
 		//reset patrol position
 		patrol_xstart = x; 
 		patrol_ystart = y;  
+	}
+	//jump if possible
+	if timer_get("jump_duration") > 0 {
+		if !(space_above) { //check if jump is still required, otherwise lerp jump.
+			timer_set("jump_duration",0);
+			y-=4;
+			exit;
+		}
+		else 
+			y-=5;	 
 	}
 }
 	
