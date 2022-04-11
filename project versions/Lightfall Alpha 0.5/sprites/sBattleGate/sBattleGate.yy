@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBattleGate","path":"sprites/sBattleGate/sBattleGate.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBattleGate",
     "tags": [],
     "resourceType": "GMSequence",

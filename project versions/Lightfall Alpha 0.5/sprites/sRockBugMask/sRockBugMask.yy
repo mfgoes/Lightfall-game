@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sRockBugMask",
     "tags": [],
     "resourceType": "GMSequence",

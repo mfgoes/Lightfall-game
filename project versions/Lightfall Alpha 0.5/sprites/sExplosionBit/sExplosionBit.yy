@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sExplosionBit","path":"sprites/sExplosionBit/sExplosionBit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sExplosionBit",
     "tags": [],
     "resourceType": "GMSequence",

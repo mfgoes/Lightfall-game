@@ -1,6 +1,4 @@
 /// @description Insert description here
-//gm live 
-if (live_call()) return live_result; 
 if timer_get("animation_length") > 1
 draw_sprite(sHitSpark,img_index, x+lengthdir_x(attack_size,dir_static),y+lengthdir_y(attack_size,dir_static)); //img_index
 

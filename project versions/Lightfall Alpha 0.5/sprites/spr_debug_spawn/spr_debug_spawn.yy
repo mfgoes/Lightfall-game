@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_debug_spawn","path":"sprites/spr_debug_spawn/spr_debug_spawn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_debug_spawn",
     "tags": [],
     "resourceType": "GMSequence",

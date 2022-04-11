@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProtagJump","path":"sprites/sProtagJump/sProtagJump.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProtagJump",
     "tags": [],
     "resourceType": "GMSequence",

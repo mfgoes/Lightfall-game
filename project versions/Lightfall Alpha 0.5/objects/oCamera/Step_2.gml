@@ -25,16 +25,50 @@ if global.game_paused
 			y = round(yTo);
 		}
 	}
-	x = clamp(x,view_w_half+buff,room_width-view_w_half - buff); //maintain room boundaries buff = extra space for screenshake
-	y = clamp(y,view_h_half+buff,room_height-view_h_half - buff);
-
+	//x = clamp(x,view_w_half+buff,room_width-view_w_half - buff); //maintain room boundaries buff = extra space for screenshake
+	//y = clamp(y,view_h_half+buff,room_height-view_h_half - buff);
+	
 	x += (xTo - x) / cam_speed // / 4; //cam_speed;
 	y += (yTo - y) / cam_speed*0.6 // / 2; //cam_speed; 
+	
+	//clamp to zones when applicable (no zones in area)
+	
+	#region determine collision with zone
+	//if place_meeting(follow.x,follow.y,oCamZone) active_zone = true; else active_zone = false; //this should be decided by oCamZone
+	if collision_rectangle(x1,y1,x2,y2,follow,0,0) {
+		active_zone = true;
+	}
+	else active_zone = false;
+	
+	
+	#endregion
+	
+	
+	
+	var mh = 100;  //padding for cameras pushes player inwards.
+	var mv = 60;   //mh = margin horizontal, mv = margin vertical
+	
+	if active_zone = true && x1 != 0 { //if zone is properly set
+		if lerp_q < 1 lerp_q += 0.02; //in future only trigger this after X time
+		x_new = clamp(x,x1+mh,x2-mh);
+		y_new = clamp(y,y1+mv,y2-mv);
+		y = lerp(y,y_new,lerp_q);
+		x = lerp(x,x_new,lerp_q);
+		
+		
+	} else {
+		x_new = round(follow.x); 
+		y_new = round(follow.y);	 
+		lerp_q = 0.3;
+		x = lerp(x,x_new,lerp_q);
+		y = lerp(y,y_new,lerp_q);
+		
+	}
 
 	//new zoom code utilizing weapon zoom
 	zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.4); 
-
-	var newzoom =clamp(zoom + start_zoom,0.05,0.4);
+	
+	var newzoom =clamp(zoom + start_zoom,0.1,0.2);
 	var view_w = lerp(camera_get_view_width(cam),iw*newzoom,zoom_speed); //zoom_speed = 0.25;
 	var view_h = lerp(camera_get_view_height(cam),ih*newzoom,zoom_speed); //lerp from old view height to display height
 
@@ -47,22 +81,9 @@ if global.game_paused
 	surface_resize(application_surface,iw,ih);
 	camera_set_view_pos(cam,x-view_w/2,y-view_h/2); //set new position to include screenshake and zoom position
 
-	//position
-	var targetX = follow.x - (camW)/2;
-	var targetY = follow.y - (camH)/2;
-	targetX = clamp(targetX, 0, room_width - (camW + camDist));
-	targetY = clamp(targetY, 0, room_height - (camH + camDist*RES_RATIO));
+
+	
 
 #endregion
 
-//smart snap camera to special objects (ie signs and portals
-if instance_exists(oCamFollow) {
-	follow = oCamFollow;
-	cam_speed = 20;
-}
-else {
-	if instance_exists(oPlayer) && !instance_exists(oText) follow = oPlayer;
-	cam_speed = lerp(cam_speed,4,0.1); //smooth speed change
-	//if (instance_exists(oText)) follow = oText; 
-}
 

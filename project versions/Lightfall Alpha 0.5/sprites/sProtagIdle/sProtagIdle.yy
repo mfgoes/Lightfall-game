@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProtagIdle","path":"sprites/sProtagIdle/sProtagIdle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProtagIdle",
     "tags": [],
     "resourceType": "GMSequence",

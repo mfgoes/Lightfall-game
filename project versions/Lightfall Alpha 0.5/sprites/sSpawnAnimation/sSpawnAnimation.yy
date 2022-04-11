@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSpawnAnimation","path":"sprites/sSpawnAnimation/sSpawnAnimation.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sSpawnAnimation",
     "tags": [],
     "resourceType": "GMSequence",

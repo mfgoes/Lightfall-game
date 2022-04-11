@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyBlob_Move","path":"sprites/sEnemyBlob_Move/sEnemyBlob_Move.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyBlob_Move",
     "tags": [],
     "resourceType": "GMSequence",

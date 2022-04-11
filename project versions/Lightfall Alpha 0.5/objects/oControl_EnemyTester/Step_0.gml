@@ -4,7 +4,6 @@ if global.game_paused
 	exit;
 }
 
-if (live_call()) return live_result; 
 
 spawn = grid_wave[# grid_x, grid_y];
 var grid_x_max = ds_grid_width(grid_wave);

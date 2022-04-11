@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHitbox_Generic","path":"sprites/sHitbox_Generic/sHitbox_Generic.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sHitbox_Generic",
     "tags": [],
     "resourceType": "GMSequence",

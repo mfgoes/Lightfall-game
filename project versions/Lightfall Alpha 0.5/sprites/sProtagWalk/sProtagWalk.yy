@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProtagWalk","path":"sprites/sProtagWalk/sProtagWalk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProtagWalk",
     "tags": [],
     "resourceType": "GMSequence",

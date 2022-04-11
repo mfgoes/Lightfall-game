@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyBlob_Atk","path":"sprites/sEnemyBlob_Atk/sEnemyBlob_Atk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyBlob_Atk",
     "tags": [],
     "resourceType": "GMSequence",

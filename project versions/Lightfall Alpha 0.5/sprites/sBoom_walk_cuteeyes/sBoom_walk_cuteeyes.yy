@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBoom_walk_cuteeyes","path":"sprites/sBoom_walk_cuteeyes/sBoom_walk_cuteeyes.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBoom_walk_cuteeyes",
     "tags": [],
     "resourceType": "GMSequence",

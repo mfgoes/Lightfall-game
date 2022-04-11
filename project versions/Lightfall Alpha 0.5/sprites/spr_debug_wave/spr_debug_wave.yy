@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_debug_wave","path":"sprites/spr_debug_wave/spr_debug_wave.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_debug_wave",
     "tags": [],
     "resourceType": "GMSequence",

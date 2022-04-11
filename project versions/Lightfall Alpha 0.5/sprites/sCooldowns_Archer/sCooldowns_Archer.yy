@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sCooldowns_Archer",
     "tags": [],
     "resourceType": "GMSequence",

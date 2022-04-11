@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPortal_base","path":"sprites/sPortal_base/sPortal_base.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPortal_base",
     "tags": [],
     "resourceType": "GMSequence",

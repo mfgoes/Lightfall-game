@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sJumpPad","path":"sprites/sJumpPad/sJumpPad.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sJumpPad",
     "tags": [],
     "resourceType": "GMSequence",

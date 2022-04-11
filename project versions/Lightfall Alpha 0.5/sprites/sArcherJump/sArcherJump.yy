@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sArcherJump","path":"sprites/sArcherJump/sArcherJump.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sArcherJump",
     "tags": [],
     "resourceType": "GMSequence",

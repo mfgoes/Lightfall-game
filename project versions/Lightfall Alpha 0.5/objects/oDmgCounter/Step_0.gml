@@ -1,6 +1,4 @@
 /// @description Insert description here
-if (live_call()) return live_result; 
-
 timer_init("text_time");
 timer_init("text_yshift");
 timer_init("text_color_change");

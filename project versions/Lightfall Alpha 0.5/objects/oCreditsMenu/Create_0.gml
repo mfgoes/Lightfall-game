@@ -1,7 +1,6 @@
 /// @description setup buttons
 event_inherited();
 
-if (live_call()) return live_result; 
 
 array_delete(menu, 0,10); //cleanup
 menu_title = "Credits";

@@ -1,6 +1,4 @@
 event_inherited(); 
-if (live_call()) return live_result; 
-
 display_set_gui_size(RES_W*resolution, RES_H*resolution);
 
 var col = col_font; 

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProjectileSpark","path":"sprites/sProjectileSpark/sProjectileSpark.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProjectileSpark",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyBlob_Idle","path":"sprites/sEnemyBlob_Idle/sEnemyBlob_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyBlob_Idle",
     "tags": [],
     "resourceType": "GMSequence",

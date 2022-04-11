@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sImpactBulletEffect","path":"sprites/sImpactBulletEffect/sImpactBulletEffect.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sImpactBulletEffect",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlatformGoThrough","path":"sprites/sPlatformGoThrough/sPlatformGoThrough.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPlatformGoThrough",
     "tags": [],
     "resourceType": "GMSequence",

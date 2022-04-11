@@ -1,6 +1,7 @@
 // Create event for every character. These are the default values. 
 function LoadCharacter_Basics(){
 	walkspd = 2; current_walkspd = 0;
+	can_move = true; //disable to remove control
 	grv = 0.33; //gravity
 	hsp = 0;
 	vsp = 0;

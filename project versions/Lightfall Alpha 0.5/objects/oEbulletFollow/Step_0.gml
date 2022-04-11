@@ -1,6 +1,5 @@
 event_inherited();
 
-if (live_call()) return live_result;
 
 timer_init("follow_player");
 timer_init("poof_trail");

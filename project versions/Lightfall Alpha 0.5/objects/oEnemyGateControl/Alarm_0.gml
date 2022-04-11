@@ -18,3 +18,5 @@ if instance_number(object_index) > 1 {
 		alarm[1] = 10;
 	}
 }
+
+

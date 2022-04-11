@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBoss_healthbar","path":"sprites/sBoss_healthbar/sBoss_healthbar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBoss_healthbar",
     "tags": [],
     "resourceType": "GMSequence",

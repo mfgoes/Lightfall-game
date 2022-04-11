@@ -25,12 +25,13 @@ grounded =(place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
 		decelerate = current_walkspd * sign(hsp);
 	} else decelerate = 0; 
 	
-	hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
+	
+	if can_move = true hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
 
 #endregion
 
 #region platforms
-if (place_meeting(x,y+1,oParPlatform) && key_down) {
+if (place_meeting(x,y+1,oParPlatform) && key_down && can_move) {
     y++;
 }
 #endregion
@@ -55,7 +56,7 @@ if (place_meeting(x,y+1,oParPlatform) && key_down) {
 		jump_pad_jump = false;
 	}
 
-	if (key_jump) && (jumps > 0) {
+	if (key_jump) && (jumps > 0) && (can_move) {
 		vsp = -jump_speed;
 		if jumps <=1 { //double jump sound
 			var jumpsound = choose(snJump1,snJump2,snJump3);

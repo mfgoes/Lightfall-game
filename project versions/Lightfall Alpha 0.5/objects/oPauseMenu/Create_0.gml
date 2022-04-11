@@ -1,7 +1,6 @@
 /// @description parent menu
 
 resolution = 2; //replaces text scale
-if (live_call()) return live_result; 
 
 //mouse position tracking
 myPrevious = 0;

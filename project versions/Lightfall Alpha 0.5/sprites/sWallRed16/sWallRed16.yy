@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sWallRed16","path":"sprites/sWallRed16/sWallRed16.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sWallRed16",
     "tags": [],
     "resourceType": "GMSequence",

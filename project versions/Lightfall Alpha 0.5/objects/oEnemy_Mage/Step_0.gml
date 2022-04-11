@@ -1,8 +1,6 @@
  /// @description States
 event_inherited(); //inherit HP code
 
-if (live_call()) return live_result;
-
 if !instance_exists(target) {
 	hsp = 0; 
 	exit;

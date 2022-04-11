@@ -1,0 +1,27 @@
+draw_self();
+var opacity = 0.2;
+
+if global.debugmode = true {
+	draw_set_font(fSign);
+	//draw_text(x+10,y+20,"active: " + string(active));	
+	//draw_text(x+10,y+40,"width: " + string( bbox_right + 1 - bbox_left )); 	
+	
+	if distance_to_object(oPlayer) < 50 {
+		//draw_text(oPlayer.x,y+100,"active: " + string(active));	
+		draw_set_halign(fa_top); draw_set_color(c_white);
+		draw_text(oPlayer.x,y+120,"flagged: " + string(flagged));	
+		draw_text(oPlayer.x,y+140,"enter room: " + string(enter_room));	
+	}
+	draw_set_alpha(opacity);
+	draw_set_color(col);
+	draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,0);
+	
+	if active = true {
+		opacity = 0.5;	
+		col = c_red;
+	} else {
+		opacity = 0.2; 
+		col = c_yellow;
+	}
+}
+draw_set_alpha(1);

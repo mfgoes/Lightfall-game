@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sWall64x64","path":"sprites/sWall64x64/sWall64x64.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sWall64x64",
     "tags": [],
     "resourceType": "GMSequence",

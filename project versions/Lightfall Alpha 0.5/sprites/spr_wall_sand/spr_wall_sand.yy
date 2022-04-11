@@ -119,7 +119,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_wall_sand","path":"sprites/spr_wall_sand/spr_wall_sand.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_wall_sand",
     "tags": [],
     "resourceType": "GMSequence",

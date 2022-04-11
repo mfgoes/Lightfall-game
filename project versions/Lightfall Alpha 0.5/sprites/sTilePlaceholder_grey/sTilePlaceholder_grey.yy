@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTilePlaceholder_grey","path":"sprites/sTilePlaceholder_grey/sTilePlaceholder_grey.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTilePlaceholder_grey",
     "tags": [],
     "resourceType": "GMSequence",

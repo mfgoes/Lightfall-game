@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPropCactus","path":"sprites/sPropCactus/sPropCactus.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPropCactus",
     "tags": [],
     "resourceType": "GMSequence",

@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sSandDecorGrass",
     "tags": [],
     "resourceType": "GMSequence",

@@ -1,8 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function draw_UI_elements(){
-	//gm live 
-	if (live_call()) return live_result; 
 
 	var margin_right = RES_W-96;
 	var margin_left = 30;
@@ -95,13 +93,25 @@ function draw_debug_info(){
 	var margin_bottom =  RES_H -35;
 	var UIscale = 0.75; //set this to customizable variable later
 	
-	if global.debugmode = true {
+	if global.debugmode = true && instance_exists(oCamera){
 		//draw_text(10,4,"Lightfall Demo - Press R to restart");
 		//show_debug_overlay(true);
 		draw_set_halign(fa_right);
 		draw_set_color(c_black);
-		draw_text(RES_W-10,24,"enemies remaining: " + string(global.wavetotal - global.killsthiswave) + "/" + string(global.wavetotal));
+		draw_text(RES_W-10,4,"active zone: " + string(oCamera.active_zone));
+		
+		//clamp regions
+		//draw_text(RES_W-80,4,"x1: " + string(oCamera.x1)); 
+		draw_text(RES_W-80,4,"lerp_q: " + string(oCamera.lerp_q)); 
+		
+		draw_text(RES_W-10,24,"x1,x2,y1,y2: "
+		+ string(oCamera.x1) + "," 
+		+ string(oCamera.x2) + ","
+		+ string(oCamera.y1) + ","
+		+ string(oCamera.y2)
+		); 
 		draw_text(RES_W-12,40,"fps: " + string(fps_reader));
+		
 	}
 	else {
 		//show_debug_overlay(true);
@@ -112,8 +122,6 @@ function draw_debug_info(){
 }
 	
 function show_region_title(){
-		//gm live 
-		//if (live_call()) return live_result; 
 		
 		var text_bgr = make_colour_rgb(22, 25, 27);
 		var text_res_scale = 1.5;

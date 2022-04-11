@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sWeaponBow_Placeholder","path":"sprites/sWeaponBow_Placeholder/sWeaponBow_Placeholder.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sWeaponBow_Placeholder",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBgr_SandCol","path":"sprites/sBgr_SandCol/sBgr_SandCol.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBgr_SandCol",
     "tags": [],
     "resourceType": "GMSequence",

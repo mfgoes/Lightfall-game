@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sArcherIdle","path":"sprites/sArcherIdle/sArcherIdle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sArcherIdle",
     "tags": [],
     "resourceType": "GMSequence",

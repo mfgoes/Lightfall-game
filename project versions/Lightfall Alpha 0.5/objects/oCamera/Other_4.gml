@@ -69,7 +69,7 @@ weapon_zoom = 0; //zoom level affected by weapon
 	shake_length = 0;
 	shake_magnitude = 6;
 	shake_remain = 2;
-	buff = 0; //??? room clipping / boundaries for camera
+	buff = 32; //??? room clipping / boundaries for camera
 #endregion
 
 //draw parallax

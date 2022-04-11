@@ -1,6 +1,4 @@
 /// @description Control Menu
-if (live_call()) return live_result; 
-
 //Keyboard Controls
 if (menu_control) 
 {

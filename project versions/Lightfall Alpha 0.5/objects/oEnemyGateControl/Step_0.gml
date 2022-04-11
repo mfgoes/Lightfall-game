@@ -9,7 +9,7 @@ if global.wavetotal != 0 && gate_left.gate_active = true {
 	if global.wavetotal - global.killsthiswave <= 0 {
 		gate_active = false;
 		gate_left.gate_active = false;
-		gate_right.gate_active = false;
+		gate_right.gate_active = false;		
 		global.wavetotal = 0;
 		global.killsthiswave = 0;
 		
@@ -26,3 +26,12 @@ if  global.wavetotal - global.killsthiswave < 0 {
 	global.wavetotal = 0;
 	global.killsthiswave = 0;
 }
+
+#region reconfigure gate neighbours (move this elsewhere later)
+	if gate_active = false {
+		gate_right.other_gate = gate_left.id; 
+		gate_left.other_gate = gate_right.id; 
+		gate_left.move_dir = 1;
+		gate_right.move_dir = -1;
+	}
+#endregion

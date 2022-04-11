@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sWall32x32_extended","path":"sprites/sWall32x32_extended/sWall32x32_extended.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sWall32x32_extended",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyBlob_Hurt","path":"sprites/sEnemyBlob_Hurt/sEnemyBlob_Hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyBlob_Hurt",
     "tags": [],
     "resourceType": "GMSequence",

@@ -1,6 +1,4 @@
 /// @description draw boss healthbar 
-//(move to other object later)
-if (live_call()) return live_result;
 
 draw_self();
 var hp_color = make_colour_rgb(184,102,98); 

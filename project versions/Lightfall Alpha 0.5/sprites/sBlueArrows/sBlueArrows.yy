@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBlueArrows","path":"sprites/sBlueArrows/sBlueArrows.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBlueArrows",
     "tags": [],
     "resourceType": "GMSequence",

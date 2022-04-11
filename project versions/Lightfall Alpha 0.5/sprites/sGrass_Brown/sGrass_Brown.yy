@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sGrass_Brown","path":"sprites/sGrass_Brown/sGrass_Brown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sGrass_Brown",
     "tags": [],
     "resourceType": "GMSequence",

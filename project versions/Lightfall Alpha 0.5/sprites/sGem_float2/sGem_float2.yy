@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sGem_float2","path":"sprites/sGem_float2/sGem_float2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sGem_float2",
     "tags": [],
     "resourceType": "GMSequence",

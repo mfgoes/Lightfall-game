@@ -9,7 +9,6 @@ if keyboard_check_released(ord("R")) {
 	SlideTransition(TRANS_MODE.RESTART);
 }
 
-if (live_call()) return live_result; 
 
 //display volume as it changes
 menu[0] = "Volume: " + string(round(global.sound_volume*100)); //easy lerp this

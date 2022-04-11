@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sAlertEnemy","path":"sprites/sAlertEnemy/sAlertEnemy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sAlertEnemy",
     "tags": [],
     "resourceType": "GMSequence",

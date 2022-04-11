@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProtagRoll","path":"sprites/sProtagRoll/sProtagRoll.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProtagRoll",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyBullet","path":"sprites/sEnemyBullet/sEnemyBullet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyBullet",
     "tags": [],
     "resourceType": "GMSequence",

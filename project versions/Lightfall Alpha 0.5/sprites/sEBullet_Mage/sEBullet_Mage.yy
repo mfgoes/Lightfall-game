@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEBullet_Mage","path":"sprites/sEBullet_Mage/sEBullet_Mage.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEBullet_Mage",
     "tags": [],
     "resourceType": "GMSequence",

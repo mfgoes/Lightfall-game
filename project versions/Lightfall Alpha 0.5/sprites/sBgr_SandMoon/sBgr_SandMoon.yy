@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBgr_SandMoon","path":"sprites/sBgr_SandMoon/sBgr_SandMoon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBgr_SandMoon",
     "tags": [],
     "resourceType": "GMSequence",

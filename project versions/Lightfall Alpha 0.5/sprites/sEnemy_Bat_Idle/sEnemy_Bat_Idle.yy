@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemy_Bat_Idle","path":"sprites/sEnemy_Bat_Idle/sEnemy_Bat_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemy_Bat_Idle",
     "tags": [],
     "resourceType": "GMSequence",

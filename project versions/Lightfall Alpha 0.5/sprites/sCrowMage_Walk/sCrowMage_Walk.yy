@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sCrowMage_Walk","path":"sprites/sCrowMage_Walk/sCrowMage_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sCrowMage_Walk",
     "tags": [],
     "resourceType": "GMSequence",

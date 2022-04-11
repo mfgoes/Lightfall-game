@@ -1,7 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-//gm live 
-if (live_call()) return live_result; 
 
 draw_self();
 if gun_flare > 0 {

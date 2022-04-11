@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sCrowMage_Attack","path":"sprites/sCrowMage_Attack/sCrowMage_Attack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sCrowMage_Attack",
     "tags": [],
     "resourceType": "GMSequence",

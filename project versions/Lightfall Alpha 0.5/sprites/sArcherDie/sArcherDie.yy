@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sArcherDie","path":"sprites/sArcherDie/sArcherDie.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sArcherDie",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBoom_explode2","path":"sprites/sBoom_explode2/sBoom_explode2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBoom_explode2",
     "tags": [],
     "resourceType": "GMSequence",

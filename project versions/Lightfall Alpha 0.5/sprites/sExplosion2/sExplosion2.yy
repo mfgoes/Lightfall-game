@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sExplosion2","path":"sprites/sExplosion2/sExplosion2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sExplosion2",
     "tags": [],
     "resourceType": "GMSequence",

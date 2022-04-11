@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDummyWalk","path":"sprites/sDummyWalk/sDummyWalk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sDummyWalk",
     "tags": [],
     "resourceType": "GMSequence",

@@ -1,5 +1,5 @@
 /// @description init projectile variables
-if (live_call()) return live_result; 
+
 follow = oPlayer;
 x_shift = 5//-10 = left
 spd = 10;

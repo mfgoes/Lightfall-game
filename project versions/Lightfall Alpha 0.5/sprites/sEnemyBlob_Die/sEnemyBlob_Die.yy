@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyBlob_Die","path":"sprites/sEnemyBlob_Die/sEnemyBlob_Die.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyBlob_Die",
     "tags": [],
     "resourceType": "GMSequence",

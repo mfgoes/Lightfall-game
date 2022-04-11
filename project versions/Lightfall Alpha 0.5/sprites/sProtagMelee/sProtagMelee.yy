@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProtagMelee","path":"sprites/sProtagMelee/sProtagMelee.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProtagMelee",
     "tags": [],
     "resourceType": "GMSequence",

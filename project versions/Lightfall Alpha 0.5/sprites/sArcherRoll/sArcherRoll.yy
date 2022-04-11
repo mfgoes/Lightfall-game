@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sArcherRoll","path":"sprites/sArcherRoll/sArcherRoll.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sArcherRoll",
     "tags": [],
     "resourceType": "GMSequence",

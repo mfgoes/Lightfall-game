@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemy_Bat_Die","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemy_Bat_Die",
     "tags": [],
     "resourceType": "GMSequence",

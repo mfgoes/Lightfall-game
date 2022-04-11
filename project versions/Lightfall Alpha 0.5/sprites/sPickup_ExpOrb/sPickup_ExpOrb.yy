@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPickup_ExpOrb","path":"sprites/sPickup_ExpOrb/sPickup_ExpOrb.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPickup_ExpOrb",
     "tags": [],
     "resourceType": "GMSequence",

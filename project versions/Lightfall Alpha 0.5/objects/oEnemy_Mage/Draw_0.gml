@@ -2,8 +2,6 @@
 // You can write your code in this editor
 event_inherited();
 
-if (live_call()) return live_result;
-
 if hp<hp_max { 
 	//draw healthbar
 	var percentagehp = (hp / hp_max)*20; // 0/0 = -5 1/2 = 5;  2/2 = 10; (multiplied by 10?)

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sCrowMage_Idle","path":"sprites/sCrowMage_Idle/sCrowMage_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sCrowMage_Idle",
     "tags": [],
     "resourceType": "GMSequence",

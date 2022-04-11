@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMissleBullet","path":"sprites/sMissleBullet/sMissleBullet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sMissleBullet",
     "tags": [],
     "resourceType": "GMSequence",

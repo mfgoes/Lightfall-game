@@ -5,7 +5,6 @@ if global.game_paused
 	exit;
 }
 
-if (live_call()) return live_result; 
 timer_init("attack_length");
 timer_init("animation_length"); 
 

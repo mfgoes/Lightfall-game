@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyExploder","path":"sprites/sEnemyExploder/sEnemyExploder.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyExploder",
     "tags": [],
     "resourceType": "GMSequence",

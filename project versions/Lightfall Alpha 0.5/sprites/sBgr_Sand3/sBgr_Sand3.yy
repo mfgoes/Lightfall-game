@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBgr_Sand3","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBgr_Sand3",
     "tags": [],
     "resourceType": "GMSequence",

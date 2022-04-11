@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTileSand","path":"sprites/sTileSand/sTileSand.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTileSand",
     "tags": [],
     "resourceType": "GMSequence",

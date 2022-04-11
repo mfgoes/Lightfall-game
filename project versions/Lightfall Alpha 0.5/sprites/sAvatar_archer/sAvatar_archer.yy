@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sAvatar_archer","path":"sprites/sAvatar_archer/sAvatar_archer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sAvatar_archer",
     "tags": [],
     "resourceType": "GMSequence",

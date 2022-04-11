@@ -11,7 +11,7 @@
 	n_pos1 = 0; n_pos2 = 0; //neighbour gates (checks for incorrect duplicates)
 	shared_gate = false; 
 	shared_left = false; shared_right = false; //gate flags
-	alarm[0] = 5; //gate checker
+	alarm[0] = 10; //gate checker AFTER BattleGate alarm. (move this to one object later somehow). 
 
 #endregion
 
@@ -21,7 +21,7 @@
 	grid_wave = ds_grid_create(3,4);
 	grid_x = irandom(2); //choose from list of 3 (make this dynamic later)
 	grid_y = 0; //spawn 0, 1, 2, etc (use max_height for now. make this more dynamic later)
-	grid_y_max = 4; //check this dynamically later
+	grid_y_max = 2; //check this dynamically later
 	spawn = grid_wave[# grid_x, grid_y];
 	ds_grid_clear(grid_wave,0);
 #endregion

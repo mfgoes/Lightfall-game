@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sRockBug_Dead","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sRockBug_Dead",
     "tags": [],
     "resourceType": "GMSequence",

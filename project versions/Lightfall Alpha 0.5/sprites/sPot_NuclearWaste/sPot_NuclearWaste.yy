@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPot_NuclearWaste","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPot_NuclearWaste",
     "tags": [],
     "resourceType": "GMSequence",

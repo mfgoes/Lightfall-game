@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sGrass_Brown_Random","path":"sprites/sGrass_Brown_Random/sGrass_Brown_Random.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sGrass_Brown_Random",
     "tags": [],
     "resourceType": "GMSequence",

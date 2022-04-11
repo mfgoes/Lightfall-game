@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_light_test","path":"sprites/spr_light_test/spr_light_test.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_light_test",
     "tags": [],
     "resourceType": "GMSequence",

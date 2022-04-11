@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHillSand2","path":"sprites/sHillSand2/sHillSand2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sHillSand2",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBgr_Brown_Sky","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBgr_Brown_Sky",
     "tags": [],
     "resourceType": "GMSequence",

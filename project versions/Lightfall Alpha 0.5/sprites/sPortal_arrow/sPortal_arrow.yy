@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPortal_arrow","path":"sprites/sPortal_arrow/sPortal_arrow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPortal_arrow",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sLaserbeam","path":"sprites/sLaserbeam/sLaserbeam.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sLaserbeam",
     "tags": [],
     "resourceType": "GMSequence",

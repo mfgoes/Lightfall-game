@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProtagAim","path":"sprites/sProtagAim/sProtagAim.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sProtagAim",
     "tags": [],
     "resourceType": "GMSequence",

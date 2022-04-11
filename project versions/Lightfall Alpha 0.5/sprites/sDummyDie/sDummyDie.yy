@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDummyDie","path":"sprites/sDummyDie/sDummyDie.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sDummyDie",
     "tags": [],
     "resourceType": "GMSequence",

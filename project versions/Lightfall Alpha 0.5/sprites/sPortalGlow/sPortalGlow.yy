@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPortalGlow","path":"sprites/sPortalGlow/sPortalGlow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPortalGlow",
     "tags": [],
     "resourceType": "GMSequence",
