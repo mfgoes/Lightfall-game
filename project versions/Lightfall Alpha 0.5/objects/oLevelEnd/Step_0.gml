@@ -2,12 +2,12 @@
 //gm live 
 //if (live_call()) return live_result; 
 
-//activated
-if random(1) < 0.05
-part_particles_create(global.partSystem, x+random_range(-12,12), y-5, global.ptBasic, 0.2);	
+#region particles
+	if random(1) < 0.05
+	part_particles_create(global.partSystem, x+random_range(-12,12), y-5, global.ptBasic, 0.2);	
+#endregion
 
-
-//touch player
+//touch player, summon boss or teleport
 if place_meeting(x,y-1,oPlayer)
 {
 	//go to next level

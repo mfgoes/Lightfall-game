@@ -4,7 +4,7 @@ active = false;
 col = c_yellow;
 enter_room = false; //turn on briefly when entering new room. This disables walking and forces player to move.
 flagged = false; //flagged means player has already been here
-
+fade = 0; //transparency of darkness
 
 //var xpos = (bbox_right-bbox_left)/2;
 //var ypos = (bbox_bottom-bbox_top)/2;

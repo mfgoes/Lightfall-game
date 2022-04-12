@@ -45,8 +45,8 @@ if global.game_paused
 	
 	
 	
-	var mh = 100;  //padding for cameras pushes player inwards.
-	var mv = 60;   //mh = margin horizontal, mv = margin vertical
+	var mh = 140;  //padding for cameras pushes player inwards.
+	var mv = 100;   //mh = margin horizontal, mv = margin vertical
 	
 	if active_zone = true && x1 != 0 { //if zone is properly set
 		if lerp_q < 1 lerp_q += 0.02; //in future only trigger this after X time
