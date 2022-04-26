@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEnemyBoss",
-    "path": "sprites/sEnemyBoss/sEnemyBoss.yy",
+    "name": "sRockBossIdle",
+    "path": "sprites/sRockBossIdle/sRockBossIdle.yy",
   },
   "solid": false,
   "visible": true,

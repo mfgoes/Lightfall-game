@@ -1,38 +1,32 @@
+/// @desc create enemy weapon
+//gm live 
+//if (live_call()) return live_result;
+
 event_inherited();
-motion_speed = 1;
-dir = 0; 
+
+//general adjustments
+
+
+walk_spd = 1;
+approach_spd = 1.2;
+wander_range = 80; //maximum patrol area
+reload_spd = 65; 
+
+atk_anim_x = 0 //; //lerp between two points
+atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 
+
 out_of_range = false; 
-sight_range = 220; //when to detect player
-atk_range = TILE_SIZE*10; //closest distance for attacks
-wander_range = 50; 
+sight_range = 80 + round(random(5)); //when to detect player
+atk_range = 5; //closest distance for attacks
 damage = 0.1;
-reload_spd = 100; 
-preferred_range = 100; 
+hp = 3;
 
-afraid_of_heights = true;
-alerted = false; //if player has already been sighted by this unit.
-walk_spd = .5;
-hsp = walk_spd;
-jump_speed = 5;
-
-xprev = x;
-yprev = y;
-atk_anim_x = 0;
-target = oPlayer;
-
-/*enum enemy_states { 
-  idle,
-  patrol,
-  approach,
-  attack
-}*/
-current_state = enemy_states.patrol;
-
-//extras
-hp = 10; 
-hp_max = hp;
-position_random = random_range(-3,3);
-stunned = 5; //prevents enemy from walking
-
-image_speed = 0;
-image_index = 0;
+//unique visuals
+spriteIdle =	sRockBossIdle;
+spriteWalk =	sRockBossWalk;
+spriteJump =	sRockBossIdle;
+spriteDie  =	sRockBossIdle;
+spriteAttack =	sRockBossIdle;
+spriteMelee  =	sRockBossIdle;
+mask_index	 =	spriteIdle;
+//sprite_offset_cleanup();

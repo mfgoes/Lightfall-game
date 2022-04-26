@@ -1,6 +1,5 @@
 /// @description draw boss healthbar 
 
-draw_self();
 var hp_color = make_colour_rgb(184,102,98); 
 var e_height = sprite_get_height(sBoss_healthbar); 
 var width_half = sprite_get_width(sBoss_healthbar)/2; 

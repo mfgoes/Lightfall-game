@@ -1,60 +1,65 @@
-/// @description state changes (Dec 2021)
+/// @description genearlised multi-enemy state changes (Dec 2021)
 
 //if (live_call()) return live_result; 
 #region gravity + basic + timers
 	if global.game_paused
 	{
-	exit;
+		exit;
 	}
 	event_inherited(); //inherits gravity code and pause code
 	timer_init("attack_reload"); 
 	timer_init("anim_prep"); 
 	timer_init("anim_retract"); 
-	timer_init("blink_timer"); 
+	timer_init("reset_patrol"); //go back to patrolling if player is out of sight
+	timer_init("forget_player"); //forget seeing player after X time and go back to patrolling
 	
-	var atk_timer = timer_get("attack_reload");
+	#region state changing happens here
 	
-	#region state changing
-	//state changing (can be a function) 
-	if distance_to_object(target) < sight_range {
-		current_state = enemy_states.approach;	
-		alerted = true;
-	}
-	if distance_to_object(target) < atk_range {
-		current_state = enemy_states.attack;	
-	} else
-	if distance_to_object(target) > sight_range && alerted = false {
-		current_state = enemy_states.idle;	
-	} else {
-		current_state = enemy_states.approach; //if you attack the boss it no longer becomes idle
-	}
-	
-	//blink
-	{
-		//blink if out of bounds (teleport close to player)
-		if distance_to_object(target) > atk_range {
-			scr_enemy_blink(); //maybe set arguments about blink speed and position later //jan 2022	
+	//change state if player is out of bounds
+	if collision_line(x,y-5,target.x,target.y-5,oWall,0,0) && collision_line(x,y-TILE_SIZE,target.x,target.y-TILE_SIZE,oWall,0,0) {
+		if timer_get("forget_player") <= 0 {
+			//current_state = enemy_states.idle;
+			timer_set("reset_patrol",60);
 		}
 	}
-	
+	else {
+			//state changing (make this a function later) 
+			if timer_get("reset_patrol") <= 0 && distance_to_object(target) < sight_range {
+				current_state = enemy_states.approach;	
+				timer_set("forget_player",60);
+			}
+			if distance_to_object(target) < atk_range {
+				current_state = enemy_states.attack;	
+			} else
+			if distance_to_object(target) > sight_range {
+				//current_state = enemy_states.idle;	//keep in approach state for test
+			}
+	}	
 	#endregion
+	
+	
 #endregion
 
 //basic animations
 EnemyAnimationsDefault(); 
 
 //execute different states
-switch (current_state)
-{
-	case enemy_states.idle:
-	scr_state_patrol();
-	break;
+if hp > 0 {
+	switch (current_state)
+	{
+		case enemy_states.idle: //state = 0
+		scr_state_patrol();
+		break;
 
-	case enemy_states.approach:
-	scr_state_approach();
-	break;
+		case enemy_states.approach: //state = 2
+		scr_state_approach();
+		break;
 
-	case enemy_states.attack:
-	scr_state_atk_shoot(); //change to shooting
-	break;
+		case enemy_states.attack: //state = 3
+		scr_state_atk_melee();
+		break;
+	}
+}
+else { //stay static
+	image_xscale = 1;
 }
