@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Reusable enemy scripts",
-    "path": "folders/Scripts/Reusable enemy scripts.yy",
+    "name": "Enemy scripts",
+    "path": "folders/Scripts/Enemy scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "EnemyAnimationsDefault",

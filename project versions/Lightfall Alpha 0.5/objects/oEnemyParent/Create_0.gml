@@ -23,6 +23,7 @@ current_state = enemy_states.idle;
 	attack_anim_end = 0;
 	mask_index =	sprite_index;
 	image_alpha = 0.1; //fade in
+	atk_anim_x = 0 // for melee attacks
 #endregion
 
 #region general stats

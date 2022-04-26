@@ -7,7 +7,6 @@ var middle_x = (bbox_left + bbox_right) / 2;
 if instance_exists(oPlayer) {
 	if collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,oPlayer,0,0) {
 		active = true; //variable for debugging	
-		
 		oCamera.x1 = bbox_left;
 		oCamera.x2 = bbox_right;
 		oCamera.y1 = bbox_top;

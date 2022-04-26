@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "DataSets(Arrays)",
-    "path": "folders/Scripts/Player related/DataSets(Arrays).yy",
+    "name": "old (remove later)",
+    "path": "folders/Scripts/Playable Characters/old (remove later).yy",
   },
   "resourceVersion": "1.0",
   "name": "Load_CharacterData",

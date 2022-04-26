@@ -1,3 +1,7 @@
+/*NOTES:
+This is currently too abstract + confusing. Simplify this in the future (Apr 2022). 
+*/
+
 ///@description Load_CharacterData(character);
 ///@param character = argument0;
 function Load_CharacterData(argument0){
@@ -66,3 +70,4 @@ function Load_PlayerStartData(argument0){
 	];
 }
 	
+

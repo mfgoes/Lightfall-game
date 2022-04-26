@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "placeholder boss",
-    "path": "folders/Graphics and Sprites/Enemies/placeholder boss.yy",
+    "name": "rockboss graphics",
+    "path": "folders/Objects/Enemies/Bosses/rockboss graphics.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyBossSword",

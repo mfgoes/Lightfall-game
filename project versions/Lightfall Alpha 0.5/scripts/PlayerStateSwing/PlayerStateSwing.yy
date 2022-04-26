@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player related",
-    "path": "folders/Scripts/Player related.yy",
+    "name": "old (remove later)",
+    "path": "folders/Scripts/Playable Characters/old (remove later).yy",
   },
   "resourceVersion": "1.0",
   "name": "PlayerStateSwing",

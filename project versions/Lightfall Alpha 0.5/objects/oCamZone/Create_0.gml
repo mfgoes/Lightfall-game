@@ -6,6 +6,10 @@ enter_room = false; //turn on briefly when entering new room. This disables walk
 flagged = false; //flagged means player has already been here
 fade = 0; //transparency of darkness
 
+#region create gradients on edges
+	g1 = instance_create_depth(bbox_left+30,y,depth,oGradientLevel32); g1.image_xscale = -1;
+	g2 = instance_create_depth(bbox_right-30,y,depth,oGradientLevel32);
+#endregion
 //var xpos = (bbox_right-bbox_left)/2;
 //var ypos = (bbox_bottom-bbox_top)/2;
 //localtarget = instance_create_depth(x+xpos,y+ypos,depth,oCamZoneFocal);	

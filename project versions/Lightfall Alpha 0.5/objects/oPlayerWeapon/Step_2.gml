@@ -10,7 +10,7 @@ if global.game_paused
 	//cooldown abilities
 	timer_init("primary_cooldown");	
 	timer_init("secondary_cooldown"); 
-	timer_init("special_cooldown");
+	timer_init("special_cooldown"); //For spread attack
 	timer_init("attack_recover"); //Animation duration while attacking. Players can't walk while attack recovers. 
 	//other
 	timer_init("weapon_display");	
@@ -32,13 +32,14 @@ else {
 
 #endregion
 
-///COOLDOWNS (move to script per cooldown execution
-#region
+#region cooldown abilities
 	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {		
-		//primary attack
+		//primary attack (LMB)
 		Ability_Primary_Archer(); 	
-		//Ability_SMG();
 		
-		//secondary attack
+		//secondary attack (RMB)
 		Ability_Secondary_Archer(); 
+		
+		//spread attack (Q)
+		Ability_Spread_Archer();
 	}

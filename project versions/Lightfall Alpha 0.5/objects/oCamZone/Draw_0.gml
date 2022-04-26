@@ -1,4 +1,10 @@
 //draw_self();
+
+#region darkness for gradients
+	g1.image_alpha = active/2; 
+	g2.image_alpha = active/2;
+#endregion
+
 #region darkness
 	if active = true fade = 1;
 	else if fade > 0 && active = false fade -=0.1;
