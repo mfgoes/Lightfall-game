@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "char_impact1.ogg",
-  "duration": 0.293163,
+  "duration": 0.288163,
   "parent": {
     "name": "Player sounds",
     "path": "folders/Sounds/Player sounds.yy",

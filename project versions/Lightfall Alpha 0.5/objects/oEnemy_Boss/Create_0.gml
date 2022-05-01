@@ -19,7 +19,7 @@ out_of_range = false;
 sight_range = 80 + round(random(5)); //when to detect player
 atk_range = 5; //closest distance for attacks
 damage = 0.1;
-hp = 3;
+hp = 40; hp_max = hp; 
 
 //unique visuals
 spriteIdle =	sRockBossIdle;

@@ -32,8 +32,14 @@ function LoadWeapon_Archer(){
 	weapon_accuracy = 2;
 	
 	/// COOLDOWNS
+	var sec = room_speed; //60
 	primary_cooldown	= 40;
-	secondary_cooldown  = 35;
-	third_cooldown		= 50;
+	secondary_cooldown  = 30;
+	third_cooldown		= sec*5;
+	
+	// power of each ability here
+	//
+	//
+	//
 	
 }

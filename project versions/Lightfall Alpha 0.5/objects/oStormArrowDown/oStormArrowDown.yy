@@ -1,10 +1,19 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sBlueArrows",
+    "path": "sprites/sBlueArrows/sBlueArrows.yy",
+  },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sArrowInWall",
+    "path": "sprites/sArrowInWall/sArrowInWall.yy",
+  },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oBullet_Parent",
+    "path": "objects/oBullet_Parent/oBullet_Parent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -19,7 +28,8 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
@@ -29,7 +39,7 @@
     "path": "folders/Objects/Weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oAttack_StormArrows",
+  "name": "oStormArrowDown",
   "tags": [],
   "resourceType": "GMObject",
 }

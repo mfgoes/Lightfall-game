@@ -12,6 +12,9 @@ spriteDie  =	sRockBug_Dead;
 spriteAttack =	sRockBug;
 spriteMelee  =	sRockBug;
 mask_index	 =	sRockBug;
+
+hp = 10; hp_max = hp; 
+
 //sprite_offset_cleanup();
 
 //shakes enemy when dead

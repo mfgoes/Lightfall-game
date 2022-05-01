@@ -106,5 +106,16 @@ function Ability_Spread_Archer() {
 	if (oPlayer.key_special) && timer_get("special_cooldown") = -1 {
 		timer_set("special_cooldown",third_cooldown);
 		instance_create_depth(x,y,depth,oAttack_StormArrows);
+		
+		//sound
+		sound_shot = huntress_R_rain_loop_01; 
+		audio_sound_gain(sound_shot,0.3,0); 
+		audio_play_sound(sound_shot,2,0);
+		
+		sound2 = mage_m1_cast_fire_v2_01; 
+		audio_sound_gain(sound2,0.1,0); 
+		audio_play_sound(sound2,1,0);
+		
+		
 	}
 } 	

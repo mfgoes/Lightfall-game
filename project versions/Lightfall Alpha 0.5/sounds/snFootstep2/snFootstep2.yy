@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snFootstep2",
-  "duration": 0.089172,
+  "duration": 0.084172,
   "parent": {
     "name": "Player sounds",
     "path": "folders/Sounds/Player sounds.yy",

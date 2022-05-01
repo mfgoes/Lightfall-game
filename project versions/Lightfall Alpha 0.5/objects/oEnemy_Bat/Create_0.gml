@@ -23,7 +23,7 @@ yprev = y;
 current_state = enemy_states.idle;
 
 //extras
-hp = 3;
+hp = 6;
 is_hit = 0; //allows projectiles to hit multiple objects at once
 position_random = random_range(-3,3);
 recoil = 0; 

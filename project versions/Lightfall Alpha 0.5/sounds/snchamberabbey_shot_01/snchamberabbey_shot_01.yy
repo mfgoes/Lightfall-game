@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snchamberabbey_shot_01.wav",
-  "duration": 1.317,
+  "duration": 1.312,
   "parent": {
     "name": "special",
     "path": "folders/Sounds/weapons/special.yy",
