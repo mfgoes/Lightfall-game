@@ -32,5 +32,15 @@ if global.debugmode = 1 {
 	if collision_line(x,y-5,target.x,target.y-5,oWall,0,0) draw_set_color(c_red) else draw_set_color(c_white);
 	draw_line(x,y-5,target.x,target.y-5);
 }
-draw_set_alpha(1);
-draw_set_color(c_white);
+
+
+//flash when hit
+if (flash > 0) 
+{
+	flash --;
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	shader_set(shWhite);
+	draw_self();
+	shader_reset();
+} 

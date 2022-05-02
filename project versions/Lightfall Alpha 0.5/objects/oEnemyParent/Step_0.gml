@@ -34,9 +34,18 @@ if current_state = enemy_states.idle && hp > 0 {
 	if hsp = 0 sprite_index = spriteIdle;
 	else sprite_index = spriteWalk;
 	image_speed = 1;
+
 }
 
 if hp <= 0 {
 	sprite_index = spriteDie;	
 	hsp = 0; //prevents flipping
 }
+
+if (flash > 0) 
+	{
+		flash --;
+		shader_set(shWhite);
+		draw_sprite(sprite_index,image_index,x,y);
+		shader_reset();
+	} 

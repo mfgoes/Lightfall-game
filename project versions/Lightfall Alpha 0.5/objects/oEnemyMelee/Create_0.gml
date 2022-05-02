@@ -5,8 +5,6 @@
 event_inherited();
 
 //general adjustments
-
-
 walk_spd = 1;
 approach_spd = 1.2;
 wander_range = 80; //maximum patrol area
