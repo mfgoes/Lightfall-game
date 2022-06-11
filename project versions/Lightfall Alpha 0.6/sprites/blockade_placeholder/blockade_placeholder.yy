@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 15,
   "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 16,
-  "height": 16,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"53d2a3cc-9efc-407b-b975-0f03cf8cb65d","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"53d2a3cc-9efc-407b-b975-0f03cf8cb65d","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},"LayerId":{"name":"f59885b1-1d80-481d-a133-9ff6ee3aab86","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBgr_Brown_Sky","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},"resourceVersion":"1.0","name":"53d2a3cc-9efc-407b-b975-0f03cf8cb65d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"62d6265b-6be7-4724-a2a4-4468745c60ad","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"62d6265b-6be7-4724-a2a4-4468745c60ad","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},"LayerId":{"name":"ede414c7-e11e-435f-9af4-bd4b0b62cd36","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"blockade_placeholder","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},"resourceVersion":"1.0","name":"62d6265b-6be7-4724-a2a4-4468745c60ad","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sBgr_Brown_Sky","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},
+    "spriteId": {"name":"blockade_placeholder","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9a5412af-fb76-47d2-8ac8-2c10d8b95459","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53d2a3cc-9efc-407b-b975-0f03cf8cb65d","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9a611668-0fda-4a3f-afda-29bce2ca1b00","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"62d6265b-6be7-4724-a2a4-4468745c60ad","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sBgr_Brown_Sky","path":"sprites/sBgr_Brown_Sky/sBgr_Brown_Sky.yy",},
+    "parent": {"name":"blockade_placeholder","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},
     "resourceVersion": "1.4",
-    "name": "sBgr_Brown_Sky",
+    "name": "blockade_placeholder",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f59885b1-1d80-481d-a133-9ff6ee3aab86","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ede414c7-e11e-435f-9af4-bd4b0b62cd36","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "PARALLAX-SAND",
-    "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL/PARALLAX-SAND.yy",
+    "name": "Interactables",
+    "path": "folders/Graphics and Sprites/Interactables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sBgr_Brown_Sky",
+  "name": "blockade_placeholder",
   "tags": [],
   "resourceType": "GMSprite",
 }
