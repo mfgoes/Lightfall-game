@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "PARALLAX-SAND",
-    "path": "folders/Graphics and Sprites/Bgrs and decor/SAND-LEVEL/PARALLAX-SAND.yy",
+    "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL/PARALLAX-SAND.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBgr_Sand3",

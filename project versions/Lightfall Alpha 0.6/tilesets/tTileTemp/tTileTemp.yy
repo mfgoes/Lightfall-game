@@ -180,7 +180,7 @@
   },
   "parent": {
     "name": "GENERIC-LEVEL",
-    "path": "folders/Graphics and Sprites/Bgrs and decor/GENERIC-LEVEL.yy",
+    "path": "folders/Graphics and Sprites/TILES/GENERIC-LEVEL.yy",
   },
   "resourceVersion": "1.0",
   "name": "tTileTemp",

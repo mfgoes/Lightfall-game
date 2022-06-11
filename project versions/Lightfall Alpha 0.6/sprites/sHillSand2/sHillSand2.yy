@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "SAND-LEVEL",
-    "path": "folders/Graphics and Sprites/Bgrs and decor/SAND-LEVEL.yy",
+    "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL.yy",
   },
   "resourceVersion": "1.0",
   "name": "sHillSand2",
