@@ -4,12 +4,15 @@ enum enemy_states {
   idle,
   patrol,
   approach,
-  attack
+  attack,
+  lunge //new. used for melee enemy 
 }
 current_state = enemy_states.idle;
 
-
-//add to waves if spawned (through spawn object)
+//generate spawn visual
+instance_create_depth(x,y,depth,oSpawnAnimation);
+alarm[0] = 50;
+y = -1000;
 
 
 #region animation 
@@ -29,8 +32,7 @@ current_state = enemy_states.idle;
 #region general stats
 	hp = 4; hp_max = hp;
 	flash = 0;
-	vsp = 0;
-	//grv = 0.3;
+	vsp = 0; //gravity is declared in VerticalCollision() because it's basically global.
 	walk_spd = 1;
 	can_blink = true; //can blink if required. 
 	approach_spd = 1.2;

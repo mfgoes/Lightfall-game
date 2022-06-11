@@ -3,17 +3,17 @@ killtextscale = 1;
 fps_reader = 0;
 alarm[0] = 20; //read fps every few steps, not every step. 
 
-#region draw cooldowns
-	primary_cooldown	= 20;
+#region draw cooldowns (set by weapon object)
+	primary_cooldown	= oPlayerWeapon.primary_cooldown;
 	primary_cooldown_max = primary_cooldown; 
 
-	secondary_cooldown  = 6;
+	secondary_cooldown  = oPlayerWeapon.secondary_cooldown;
 	secondary_cooldown_max = secondary_cooldown;
 
-	third_cooldown		= 20; 
+	third_cooldown		= oPlayerWeapon.third_cooldown; 
 	third_cooldown_max = third_cooldown;
 
-	roll_cooldown		= oPlayer.roll_cooldown_full; 
+	roll_cooldown		= oPlayerWeapon.roll_cooldown;
 	roll_cooldown_max = roll_cooldown;
 	#endregion
 

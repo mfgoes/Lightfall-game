@@ -11,7 +11,15 @@ wander_range = 80; //maximum patrol area
 reload_spd = 65; 
 
 atk_anim_x = 0 //; //lerp between two points
-atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 
+
+
+
+//REPLACE THIS SHITTY SYSTEM WITH STATES. 
+//atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 
+current_state = enemy_states.approach;
+
+
+
 
 
 out_of_range = false; 
@@ -20,24 +28,30 @@ atk_range = 5; //closest distance for attacks
 damage = 0.1;
 hp = 7;
 
+
+//NEW FROM CODER
 last_faced=-1
 atk_check=true
 anim_x_length=7
 atk_timer=0
 dir_atk=0
 h=0 // horizontal speed
-v=0 // vertical speed
-leap_timer=0
-leap_goal=100
-leap_str=3 // height of the leap
-leap_horizontal_str=6 // length of the leap
-leap_min_dis=400
-h_leap=0
-v_leap=0
-atk_delay_timer=0
-atk_delay_goal=30
+v=0 // vertical speed. this is absolutely retarded, 
 
-grv=0.15
+
+//new code added by WanSou (05 2022)
+leap_timer = 0;
+leap_goal = 0; //75;
+leap_str = 4; // height of the leap
+leap_horizontal_str = 7 // 
+leap_ver_str = -4.5 // 
+leap_min_dis = 400;
+h_leap = 0; h_leap_goal = 0; //goal = speed it wants to be
+v_leap = 0;
+
+atk_delay_timer = 0;
+atk_delay_goal = 30;
+grv=0.15 //this needs to go. use 
 
 
 //unique visuals

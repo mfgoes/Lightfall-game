@@ -1,9 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-var spawned_enemy = instance_create_depth(x,y,depth,spawn_type); //set spawn height later
-spawned_enemy.pre_spawned = false;
-
+/// @desc destroyaudio_sound_gain(a,0.2,0);
+var a = snSpawnGeneric;
+audio_sound_gain(a,0.3,0);
+audio_sound_pitch(a,choose(0.9,0.95,1));
+audio_play_sound(a,0,0);
 instance_destroy();
-audio_sound_gain(snSpawnGeneric,0.3,0);
-audio_play_sound(snSpawnGeneric,0,0)
+

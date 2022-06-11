@@ -1,6 +1,3 @@
-/// @description create enemy after animation;
-spawn_type = oEnemy_Mage;
-image_speed = 1;
-boss_enemy = false; //if this is true, make spawn more dramatic
+/// @description create enemy after animation;image_speed = 0.6;
 
-//global.wavetotal++; //increase total enemy amount
+

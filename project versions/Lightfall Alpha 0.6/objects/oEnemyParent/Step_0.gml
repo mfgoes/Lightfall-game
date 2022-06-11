@@ -15,7 +15,7 @@ if instance_exists(oPlayer) target = oPlayer; else {
 
 //gravity
 VerticalCollision(); 
-grounded = (place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
+grounded = (place_meeting(x,y+1,class_wall) or place_meeting(x,y+1,oParPlatform)); //was oWall
 
 //destroy if outside room + fallen
 if y > room_height {

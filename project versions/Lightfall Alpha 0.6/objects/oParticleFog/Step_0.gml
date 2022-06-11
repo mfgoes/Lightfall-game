@@ -12,7 +12,7 @@ var cam_y = camera_get_view_y(view_camera[0]);
 //zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.4); 
 
 
-var amount = 0; if random(oCamera.zoom) >= 0.025 && random(1) < 0.2 amount = 1;
+var amount = 0; if random(1) < 0.12 amount = 1;
 
 	
 //Create smoke particle

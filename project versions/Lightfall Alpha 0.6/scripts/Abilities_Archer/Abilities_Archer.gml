@@ -8,7 +8,6 @@ function Ability_Primary_Archer() {
 	
 	var key_attack_pressed		= oPlayer.key_primary;
 	var key_attack_released		= oPlayer.key_attack_released;
-	var cooldown = 25;
 	
 	if (key_attack_pressed) &&  timer_get("primary_cooldown") = -1 {		
 		if (!place_meeting(x,y+1,oWall)) && (!place_meeting(x,y+1,oParPlatform)) oPlayer.air_shot = true;
@@ -33,8 +32,8 @@ function Ability_Primary_Archer() {
 			
 	if (key_attack_released) && timer_get("primary_cooldown") = -1  //for bow weapons
 	{
-		timer_set("primary_cooldown",cooldown);
-		oUIElements.primary_cooldown  = cooldown; //for UI
+		timer_set("primary_cooldown",primary_cooldown);
+		oUIElements.primary_cooldown  = 0; //for UI purposes
 		audio_sound_gain(snBlaster,0.35,0);
 		audio_sound_pitch(snBlaster,choose(0.9,0.93,1));
 		audio_play_sound(snBlaster,2,0);
@@ -44,9 +43,9 @@ function Ability_Primary_Archer() {
 			direction = other.image_angle;
 					
 			//variable damage
-			if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.8 {damage = 4; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
-			else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.45 {damage = 3;}
-			else damage = 2;
+			if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.8 {damage = 6; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
+			else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.45 {damage = 4;}
+			else damage = 3;
 					
 			image_angle = direction;
 			x = x - lengthdir_x(0,other.image_angle);
@@ -105,6 +104,8 @@ function Ability_Secondary_Archer() {
 function Ability_Spread_Archer() { 
 	if (oPlayer.key_special) && timer_get("special_cooldown") = -1 {
 		timer_set("special_cooldown",third_cooldown);
+		oUIElements.third_cooldown  = 0; //for UI
+		
 		instance_create_depth(x,y,depth,oAttack_StormArrows);
 		
 		//sound
