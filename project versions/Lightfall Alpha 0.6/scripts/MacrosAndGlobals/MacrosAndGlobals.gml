@@ -30,6 +30,9 @@ function MacrosAndGlobals(){
 	#macro TILE_SIZE 16 
 #endregion
 
+//Enable GMLive (live reloading)
+#macro LIVE_UPDATE 1
+
 #region particle system (move this elsewhere later)
 	//create particle system
 	global.partSystem = part_system_create();

@@ -52,6 +52,7 @@ function scr_state_approach(){
 	timer_init("jump_duration");
 	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
 	var dir = sign(target.x - x); 
+	var dist_target = abs(target.x-x); 
 	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWall,0,0));
 	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*5, oWall,0,0));
 	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWall,0,0)); //if 1 pixel above is free
@@ -74,7 +75,7 @@ function scr_state_approach(){
 	}
 		
 	//MOVE
-	if (grounded) && !(tile_ahead) {	
+	if (grounded) && !(tile_ahead) && (dist_target>20) {	
 		if round(x) != round(target.x) 
 			x += hsp;
 		//reset patrol position
@@ -114,6 +115,58 @@ if timer_get("attack_reload") <=0 {
 	}
 }
 }
+
+//frog leap (no damage)
+function scr_enemy_leap() {
+	//REWORKED LEAP CODE
+	timer_init("leap_timer");
+	var dir = sign(target.x - x); if dir = 0 {dir = 1;}
+	var dist_target = abs(target.x-x); 
+			
+	if timer_get("leap_timer") <= 0 { //set this somewhere later 
+		 			
+		h_leap_goal = leap_horizontal_str * dir; //h_leap is the goal, not the actual leap
+		if hsp != 0 last_faced = dir; 
+		v_leap = leap_ver_str; 
+				
+		//vertical leap
+		if dist_target >20 && dist_target < 200 {
+			//curve leap
+			var acc = 1;
+			if h_leap_goal = 0 {
+				acc = 1.2;
+			} 
+			else acc = 0.8 //in the future, can make this based on player distance too
+			h_leap = lerp(h_leap,h_leap_goal,acc);
+			if (grounded) {vsp += v_leap;}
+			timer_set("leap_timer",90);
+		}
+		
+	} 
+	else if timer_get("leap_timer") < 30 { //cutoff point 
+			h_leap_goal = 0; 
+	}
+			
+	//horizontal leap 
+	if !place_meeting(x+h_leap,y,class_wall){ 
+		var acc = 0.04; if vsp > 0 && grounded acc = 1; //if landed, don't slide 
+		h_leap=lerp(h_leap,0,acc); 
+		x+=h_leap
+	}	
+	
+	timer_init("lunge_timer");
+	if timer_get("lunge_timer") <= 0 && (place_meeting(x+dir*8,y,target)) && (grounded) && h_leap = 0 {
+		timer_set("lunge_timer",50);
+		current_state = enemy_states.lunge;
+		dir_atk=dir;
+	}	
+}
+
+
+function scr_enemy_lunge(){
+	
+}
+
 
 //Attack the player (close ranged) 
 function scr_state_atk_shoot(){
@@ -159,7 +212,7 @@ function scr_state_atk_shoot(){
 		
 }
 
-function scr_enemy_blink() {
+function scr_enemy_blink() { //blink means teleporting towards the player
 
 	if timer_get("blink_timer") <= 0 {
 		var dir = sign(target.x - x); 

@@ -1,6 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function draw_UI_elements(){
+	
+	if(live_call()) return live_result;
 
 	var margin_right = RES_W-96;
 	var margin_left = 30;
@@ -15,57 +17,105 @@ function draw_UI_elements(){
 
 	if (room != rMenu) && (instance_exists(oPlayer))
 	{
-		//draw player healthbar
-		var hp = oPlayer.hp; var hp_max = oPlayer.hp_max; var healthUImax = 100; 
-		var healthUI = (hp/hp_max) * healthUImax - 1;
-		draw_set_color(col_bgr);
-		draw_rectangle(margin_left,margin_bottom,margin_left+healthUImax,margin_bottom+8,0);
-		draw_set_color(col_hp);
-		draw_rectangle(margin_left+1,margin_bottom+1,margin_left+healthUI,margin_bottom+7,0);
+		#region health and mana bars
+			//draw player healthbar
+			var hp = oPlayer.hp; var hp_max = oPlayer.hp_max; var healthUImax = 100; 
+			var healthUI = (hp/hp_max) * healthUImax - 1;
+			draw_set_color(col_bgr);
+			draw_rectangle(margin_left,margin_bottom,margin_left+healthUImax,margin_bottom+8,0);
+			draw_set_color(col_hp);
+			draw_rectangle(margin_left+1,margin_bottom+1,margin_left+healthUI,margin_bottom+7,0);
 	
-		//draw exp bar
-		var expMax = 100;
-		var expUI = global.exp_points * expMax;
-		draw_set_color(col_bgr);
-		draw_rectangle(margin_left,margin_bottom+10,margin_left+expMax,margin_bottom+13,0);
-		draw_set_color(col_bgr2);
-		draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax,margin_bottom+12,0);
-		draw_set_color(col_exp);
-		draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax*0.5,margin_bottom+12,0); //make this adjusta
+			//draw exp bar
+			var expMax = 100;
+			var expUI = global.exp_points * expMax;
+			draw_set_color(col_bgr);
+			draw_rectangle(margin_left,margin_bottom+10,margin_left+expMax,margin_bottom+13,0);
+			draw_set_color(col_bgr2);
+			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax,margin_bottom+12,0);
+			draw_set_color(col_exp);
+			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax*0.5,margin_bottom+12,0); //make this adjusta
 		
-		//draw profile
-		draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);
+			//draw profile
+			draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);
+		#endregion
 		
-		//draw cooldowns
-		draw_set_alpha(1); draw_set_color(c_white);
-		var w = sprite_get_width(sCooldown_Archer2) + 2;
-		draw_sprite_ext(sCooldown_Archer2,0,margin_left,margin_bottom+15,1,1,0,c_white,1);
-		draw_sprite_ext(sCooldown_Archer2,1,margin_left+w*1,margin_bottom+15,1,1,0,c_white,1);
-		draw_sprite_ext(sCooldown_Archer2,2,margin_left+w*2,margin_bottom+15,1,1,0,c_white,1);
-		
-		/*
-		//cooldown numbers
-		draw_set_font(fSign);
-		draw_set_halign(fa_center);
-		draw_text(margin_left+5,margin_bottom+w,primary_cooldown); 
-		draw_text(margin_left+w+5,margin_bottom+w,roll_cooldown); 
-		//draw_text(margin_left+w*2,margin_bottom+w,roll_cooldown); 
-		*/
+		#region cooldowns
+			//temporary variables
+			draw_set_alpha(1); draw_set_color(c_white);
+			var w = sprite_get_width(sCooldown_Archer2);
+			var w5 = sprite_get_width(sCooldown_Archer2)+5; //sprite width + 5; (add some spacing
+			var m5 = 5; //margin 5
+			var p10 = 10; var pt5 = -4; var p15 = 20;
+			var bar_max = 16; //size of load bar
+			var time_c = 0.1 //time divider (for visual)
+			//cooldown numbers
+			draw_set_font(fSign);
+			draw_set_halign(fa_center);
+			
+			//PRIMARY 
+			var bar = (primary_cooldown/primary_cooldown_max)*bar_max
+			draw_sprite_ext(sCooldown_Archer2,0,margin_left,margin_bottom+15,1,1,0,c_white,1);
+			if round((primary_cooldown_max - primary_cooldown)*time_c) != 0 {
+				draw_set_alpha(0.6);
+				draw_rectangle_color(margin_left,p15+bar_max, margin_left+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
+				draw_rectangle_color(margin_left,p15+bar_max, margin_left+w-2,p15,c_black,c_black,c_black,c_black,0);
+				draw_set_alpha(1);
+				draw_text(margin_left+p10,w5+pt5,round((primary_cooldown_max - primary_cooldown)*time_c));
+			}
+			
+			//SECONDARY
+			var bar = (secondary_cooldown/secondary_cooldown_max)*bar_max
+			draw_sprite_ext(sCooldown_Archer2,2,margin_left+w5*1,margin_bottom+15,1,1,0,c_gray,1);
+			if round((secondary_cooldown_max - secondary_cooldown)*time_c) > 0 {
+				draw_set_alpha(0.6);
+				draw_rectangle_color(margin_left+w5,p15+bar_max, margin_left+w5+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
+				draw_rectangle_color(margin_left+w5,p15+bar_max, margin_left+w5+w-2,p15,c_black,c_black,c_black,c_black,0);
+				draw_set_alpha(1);
+				draw_text(margin_left+w5+p10,w5+pt5,round((secondary_cooldown_max - secondary_cooldown)*time_c));
+			}
+			
+			
+			//THIRD
+			var bar = (third_cooldown/third_cooldown_max)*bar_max
+			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*2,margin_bottom+15,1,1,0,c_gray,1);
+			if third_cooldown_max - third_cooldown != 0 {
+				draw_set_alpha(0.5);
+				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
+				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15,c_black,c_black,c_black,c_black,0);
+				draw_set_alpha(1);
+				draw_text(margin_left+w5*2+p10,w5+pt5,round((third_cooldown_max - third_cooldown)*time_c)); 
+			}
+			
+			//FOURTH
+			var bar = (roll_cooldown/roll_cooldown_max)*bar_max;
+			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*3,margin_bottom+15,1,1,0,c_gray,1);
+			if roll_cooldown_max - roll_cooldown != 0 {
+				draw_set_alpha(0.5);
+				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15,c_black,c_black,c_black,c_black,0);
+				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
+				draw_set_alpha(1);
+				draw_text(margin_left+w5*3+p10,w5+pt5,round((roll_cooldown_max - roll_cooldown)*time_c));
+			}
+			
+		#endregion
 	
-		//draw tooltips (labels)
-		/*
-		draw_text(margin_right-13,margin_bottom+14,"LMB"); 
-		draw_text(margin_right+17,margin_bottom+14,"RMB"); 
-		draw_text(margin_right+47,margin_bottom+14,"F"); 
 		
-		draw_set_halign(fa_left);
-		//draw EXP + Kill counter
-		if  (global.kills > 0) {
-			//killtextscale = lerp(killtextscale,2,0.5);
-			draw_text_transformed(RES_W-10,15,string(global.kills) + " kills",killtextscale,killtextscale,0);
-		}
-		draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
-		*/
+		#region draw accessibility icons (control shortcuts)
+			/*
+			draw_text(margin_right-13,margin_bottom+14,"LMB"); 
+			draw_text(margin_right+17,margin_bottom+14,"RMB"); 
+			draw_text(margin_right+47,margin_bottom+14,"F"); 
+		
+			draw_set_halign(fa_left);
+			//draw EXP + Kill counter
+			if  (global.kills > 0) {
+				//killtextscale = lerp(killtextscale,2,0.5);
+				draw_text_transformed(RES_W-10,15,string(global.kills) + " kills",killtextscale,killtextscale,0);
+			}
+			draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
+			*/
+		#endregion
 	
 	}
 	#region draw cursor
@@ -91,26 +141,24 @@ function draw_cursor_custom(){
 function draw_debug_info(){
 	var margin_right = RES_W-96;
 	var margin_bottom =  RES_H -35;
-	var UIscale = 0.75; //set this to customizable variable later
+	var UIscale = 0.5; //set this to customizable variable later
+	draw_set_font(fSign); 
+	draw_set_color(c_white); 
 	
 	if global.debugmode = true && instance_exists(oCamera){
-		//draw_text(10,4,"Lightfall Demo - Press R to restart");
-		//show_debug_overlay(true);
+		
+		
 		draw_set_halign(fa_right);
-		draw_set_color(c_black);
-		draw_text(RES_W-10,4,"active zone: " + string(oCamera.active_zone));
-		
-		//clamp regions
-		//draw_text(RES_W-80,4,"x1: " + string(oCamera.x1)); 
-		draw_text(RES_W-80,4,"lerp_q: " + string(oCamera.lerp_q)); 
-		
-		draw_text(RES_W-10,24,"x1,x2,y1,y2: "
-		+ string(oCamera.x1) + "," 
-		+ string(oCamera.x2) + ","
-		+ string(oCamera.y1) + ","
-		+ string(oCamera.y2)
-		); 
 		draw_text(RES_W-12,40,"fps: " + string(fps_reader));
+		draw_set_halign(fa_left);
+		draw_text(10,40,"objects in room:" + string(instance_count));
+		//draw_text(RES_W-10,24,"x1,x2,y1,y2: "
+		//+ string(oCamera.x1) + "," 
+		//+ string(oCamera.x2) + ","
+		//+ string(oCamera.y1) + ","
+		//+ string(oCamera.y2)
+		//); 
+		
 		
 	}
 	else {

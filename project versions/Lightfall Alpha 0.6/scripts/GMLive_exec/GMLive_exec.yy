@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Enemy scripts",
-    "path": "folders/Scripts/Enemy scripts.yy",
+    "name": "Runtime",
+    "path": "folders/Extensions/GMLive/Internal/Runtime.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ObjectCollisionsBasic",
+  "name": "GMLive_exec",
   "tags": [],
   "resourceType": "GMScript",
 }

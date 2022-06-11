@@ -16,12 +16,13 @@ if vsp > 12 vsp = 12;
 
 /// @function			sprite_offset_cleanup(); 
 /// @description		sets all enemy off to bottom center
+
 function sprite_offset_cleanup(){
-sprite_index = spriteIdle; 
-sprite_set_offset(spriteIdle,sprite_width/2,sprite_height);
-sprite_set_offset(spriteWalk,sprite_width/2,sprite_height);
-sprite_set_offset(spriteJump,sprite_width/2,sprite_height);
-sprite_set_offset(spriteDie,sprite_width/2,sprite_height);
-sprite_set_offset(spriteAttack,sprite_width/2,sprite_height);
-sprite_set_offset(spriteMelee,sprite_width/2,sprite_height);
+	sprite_index = spriteIdle; 
+	sprite_set_offset(spriteIdle,sprite_width/2,sprite_height);
+	sprite_set_offset(spriteWalk,sprite_width/2,sprite_height);
+	sprite_set_offset(spriteJump,sprite_width/2,sprite_height);
+	sprite_set_offset(spriteDie,sprite_width/2,sprite_height);
+	sprite_set_offset(spriteAttack,sprite_width/2,sprite_height);
+	sprite_set_offset(spriteMelee,sprite_width/2,sprite_height);
 }

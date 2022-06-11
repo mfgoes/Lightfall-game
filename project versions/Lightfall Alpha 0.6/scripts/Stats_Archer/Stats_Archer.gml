@@ -34,8 +34,9 @@ function LoadWeapon_Archer(){
 	/// COOLDOWNS
 	var sec = room_speed; //60
 	primary_cooldown	= 40;
-	secondary_cooldown  = 30;
-	third_cooldown		= sec*5;
+	secondary_cooldown  = 50;
+	third_cooldown		= 45;
+	roll_cooldown		= 40;
 	
 	// power of each ability here
 	//
