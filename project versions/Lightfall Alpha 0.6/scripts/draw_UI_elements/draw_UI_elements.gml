@@ -66,7 +66,7 @@ function draw_UI_elements(){
 			
 			//SECONDARY
 			var bar = (secondary_cooldown/secondary_cooldown_max)*bar_max
-			draw_sprite_ext(sCooldown_Archer2,2,margin_left+w5*1,margin_bottom+15,1,1,0,c_gray,1);
+			draw_sprite_ext(sCooldown_Archer2,3,margin_left+w5*1,margin_bottom+15,1,1,0,c_white,1);
 			if round((secondary_cooldown_max - secondary_cooldown)*time_c) > 0 {
 				draw_set_alpha(0.6);
 				draw_rectangle_color(margin_left+w5,p15+bar_max, margin_left+w5+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
@@ -78,7 +78,7 @@ function draw_UI_elements(){
 			
 			//THIRD
 			var bar = (third_cooldown/third_cooldown_max)*bar_max
-			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*2,margin_bottom+15,1,1,0,c_gray,1);
+			draw_sprite_ext(sCooldown_Archer2,2,margin_left+w5*2,margin_bottom+15,1,1,0,c_white,1);
 			if third_cooldown_max - third_cooldown != 0 {
 				draw_set_alpha(0.5);
 				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
@@ -89,7 +89,7 @@ function draw_UI_elements(){
 			
 			//FOURTH
 			var bar = (roll_cooldown/roll_cooldown_max)*bar_max;
-			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*3,margin_bottom+15,1,1,0,c_gray,1);
+			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*3,margin_bottom+15,1,1,0,c_white,1);
 			if roll_cooldown_max - roll_cooldown != 0 {
 				draw_set_alpha(0.5);
 				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15,c_black,c_black,c_black,c_black,0);
@@ -149,11 +149,13 @@ function draw_debug_info(){
 		
 		
 		draw_set_halign(fa_right);
-		draw_text(RES_W-12,40,"fps: " + string(fps_reader));
+		draw_text(RES_W-12,40,"Rfps: " + string(fps_reader));
+		draw_text(RES_W-12,60,"Gamefps: " + string(fps));
 		draw_set_halign(fa_left);
-		draw_text(10,40,"objects in room:" + string(instance_count));
+		draw_text(10,40,"facing: " + string(oPlayer.facing_direction));
+		draw_text(10,50,"dir_prev: " + string(oPlayer.dir_prev));
 		//draw_text(RES_W-10,24,"x1,x2,y1,y2: "
-		//+ string(oCamera.x1) + "," 
+		//+ string(oCamera.x1) + "," dir_prev
 		//+ string(oCamera.x2) + ","
 		//+ string(oCamera.y1) + ","
 		//+ string(oCamera.y2)

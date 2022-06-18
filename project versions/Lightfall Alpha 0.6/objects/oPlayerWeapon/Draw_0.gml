@@ -2,10 +2,10 @@
 #region setup + draw sprite
 	Load_CharacterData(oPlayer.current_weapon);	
 	//set facing direction
-	if !(image_angle <= 90 or image_angle >= 270)
-	flip_weapon = -1; else flip_weapon = 1; 
+	//if !(image_angle <= 90 or image_angle >= 270)
+	//flip_weapon = -1; else flip_weapon = 1; 
 	//draw sprite
-	draw_sprite_ext(sprite_index,image_index,x,y,1,flip_weapon,image_angle,c_white,image_alpha);
+	//draw_sprite_ext(sprite_index,image_index,x,y,1,flip_weapon,image_angle,c_white,image_alpha);
 #endregion
 
 #region weapon visibility

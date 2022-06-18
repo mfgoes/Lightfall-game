@@ -6,8 +6,10 @@ Cleaned up in 2022.4.
 
 function Ability_Primary_Archer() {
 	
+	if(live_call()) return live_result;
+	
 	var key_attack_pressed		= oPlayer.key_primary;
-	var key_attack_released		= oPlayer.key_attack_released;
+	var key_primary_released		= oPlayer.key_primary_released;
 	
 	if (key_attack_pressed) &&  timer_get("primary_cooldown") = -1 {		
 		if (!place_meeting(x,y+1,oWall)) && (!place_meeting(x,y+1,oParPlatform)) oPlayer.air_shot = true;
@@ -30,7 +32,7 @@ function Ability_Primary_Archer() {
 		oPlayer.air_shot = false;
 	}
 			
-	if (key_attack_released) && timer_get("primary_cooldown") = -1  //for bow weapons
+	if (key_primary_released) && timer_get("primary_cooldown") = -1  //for bow weapons
 	{
 		timer_set("primary_cooldown",primary_cooldown);
 		oUIElements.primary_cooldown  = 0; //for UI purposes
@@ -40,8 +42,9 @@ function Ability_Primary_Archer() {
 				
 		//create projectile
 		with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = other.image_angle;
-					
+			//direction = other.image_angle;
+			if oPlayer.facing_direction = 180 direction = 178; else direction = 2; //adjust this to counter gravity
+			
 			//variable damage
 			if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.8 {damage = 6; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
 			else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.45 {damage = 4;}
@@ -62,12 +65,17 @@ function Ability_Primary_Archer() {
 }
 
 function Ability_Secondary_Archer() {
+	
+	if(live_call()) return live_result;
 	var key_secondary = oPlayer.key_secondary;
 	timer_init("triple_shot");
 	
 	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
 			timer_set("secondary_cooldown",secondary_cooldown); 
 			oUIElements.secondary_cooldown  = 0; //for UI
+			
+			//fix shooting direction temporarily
+			if oPlayer.facing_direction = 180 oPlayer.dir_prev = 178; else oPlayer.dir_prev = 2; //remove dir_perv later?
 			
 			shots_total = 3; //shoot 3 bullets after each other
 			timer_set("triple_shot",5);
@@ -82,8 +90,10 @@ function Ability_Secondary_Archer() {
 		
 		if shots_total > 0 && timer_get("triple_shot") <=0 {
 			timer_set("triple_shot",5);
+			
 			with (instance_create_layer(x,y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = other.image_angle+random_range(-2,2); 
+			
+			direction = oPlayer.dir_prev; 
 			spd = 7;
 					
 			image_angle = direction;

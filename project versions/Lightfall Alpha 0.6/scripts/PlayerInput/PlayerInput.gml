@@ -20,14 +20,17 @@ function PlayerInput(){
 		
 		//Abilities - These are dependant on the selected character
 		if alarm[0] == -1 
-		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1);		//Ranged attack
-		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr);	//Melee attack
-		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3);		//AOE attack
+		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1)			|| keyboard_check(ord("J"));	
+		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr)		|| keyboard_check(ord("K"));	
+		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3)			|| keyboard_check(ord("L"));	
 		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);		//Evade
 		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);	//Grappling hook (unlock later)
 		
+		//decide facing direction (move later if required)
+		if (key_left) facing_direction = 180; if (key_right) facing_direction = 0; 
+		
 		//Special
-		if alarm[0] == -1 key_attack_released =  (mouse_check_button_released(mb_left)) || (gamepad_button_check_released(0,gp_shoulderrb));
+		if alarm[0] == -1 key_primary_released =  (mouse_check_button_released(mb_left)) || (gamepad_button_check_released(0,gp_shoulderrb)) || keyboard_check_released(ord("J"));
 		
 		//Gamepad sepecific controls
 		if (key_left) || (key_right) || (key_jump)

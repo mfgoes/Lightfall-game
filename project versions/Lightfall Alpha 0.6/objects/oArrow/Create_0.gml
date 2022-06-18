@@ -1,6 +1,6 @@
 /// @description init projectile variables
 super_arrow = false;
-grv = 0.03; // was 0.02 gravity
+grv = 0.003; // was 0.02 gravity
 vsp = 0;
 wiggle = 1;
 active = true;
