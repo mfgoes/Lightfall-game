@@ -13,11 +13,4 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 
 #endregion
 
-//flash when hit
-if (flash > 0) 
-{
-	flash --;
-	shader_set(shWhite);
-	draw_self();
-	shader_reset();
-} 
+effect_flash();

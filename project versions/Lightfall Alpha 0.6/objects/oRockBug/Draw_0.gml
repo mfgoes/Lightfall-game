@@ -33,14 +33,4 @@ if global.debugmode = 1 {
 	draw_line(x,y-5,target.x,target.y-5);
 }
 
-
-//flash when hit
-if (flash > 0) 
-{
-	flash --;
-	draw_set_alpha(1);
-	draw_set_color(c_white);
-	shader_set(shWhite);
-	draw_self();
-	shader_reset();
-} 
+effect_flash();

@@ -4,13 +4,7 @@ event_inherited();
 image_blend = c_orange;
 if timer_get("charge_timer") > 0 image_blend = c_red;
 draw_self();
-if (flash > 0) 
-{
-	flash --;
-	shader_set(shWhite);
-	draw_self();
-	shader_reset();
-} 
+effect_flash();
 
 if global.debugmode = true {
 //check nearest other enemy
