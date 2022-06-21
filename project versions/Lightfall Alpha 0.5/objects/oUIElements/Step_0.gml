@@ -1,6 +1,0 @@
-/// @description reset cooldowns
-//optimize per click later
-if primary_cooldown > 0 primary_cooldown --;
-if secondary_cooldown < secondary_cooldown_max secondary_cooldown ++;
-if third_cooldown < third_cooldown_max third_cooldown ++;
-if roll_cooldown < roll_cooldown_max roll_cooldown ++;
