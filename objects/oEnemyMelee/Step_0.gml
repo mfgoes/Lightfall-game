@@ -74,3 +74,4 @@ if instance_exists(target) {
 }
 //show_debug_message(string(x) + " " + string(atk_anim_x) + " " + string(sprite_index))
 atk_delay_timer--;
+#endregion
