@@ -1,6 +1,5 @@
  //general gravity
-if global.game_paused
-{
+if global.game_paused {
 	exit;
 }
 
