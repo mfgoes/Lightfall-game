@@ -31,7 +31,7 @@ grounded =(place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
 #endregion
 
 #region platforms
-if (place_meeting(x,y+1,oParPlatform) && key_down && can_move) {
+if (place_meeting(x,y+1,oParPlatform) && key_down && can_move && !place_meeting(x,y+1,oWall)) {
     y++;
 }
 #endregion

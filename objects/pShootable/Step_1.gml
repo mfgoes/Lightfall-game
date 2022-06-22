@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.game_paused
-{
+if global.game_paused {
 	exit;
 }
 
-if (hp <= 0) instance_destroy();
+if (hp <= 0)
+	instance_destroy();

@@ -148,7 +148,7 @@ function scr_enemy_leap() {
 	}
 			
 	//horizontal leap 
-	if !place_meeting(x+h_leap,y,class_wall){ 
+	if !place_meeting(x + h_leap, y, class_wall) && !place_meeting(x + h_leap, y, oBlockade) { 
 		var acc = 0.04; if vsp > 0 && grounded acc = 1; //if landed, don't slide 
 		h_leap=lerp(h_leap,0,acc); 
 		x+=h_leap
