@@ -9,6 +9,12 @@ if global.game_paused {
 VerticalCollision(); 
 grounded = (place_meeting(x,y+1,class_wall) or place_meeting(x,y+1,oParPlatform));
 
+//This exists in the parent step event
+//but event_inherited is never called 
+//by this object
+if y > room_height
+	hp = 0;
+
 
 if instance_exists(target) {
 	
