@@ -1,5 +1,4 @@
-if global.game_paused
-{
+if global.game_paused {
 	exit;
 }
 
@@ -13,7 +12,7 @@ switch (current_state)
 		// patrol
 		
 		if ((grounded) && ( ((!place_meeting(x + hsp, y + 1,oWall) && afraid_of_heights))
-								or place_meeting(x+hsp,y, oWall) ))
+								or place_meeting(x + hsp, y, oWall) ))
 		{
 			hsp = -hsp;
 		}

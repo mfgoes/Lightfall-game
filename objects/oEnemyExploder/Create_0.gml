@@ -16,12 +16,6 @@ yprev = y;
 walkspd = 1;
 hsp = walkspd;
 
-/*enum enemy_states { 
-  idle,
-  patrol,
-  approach,
-  attack
-}*/
 current_state = enemy_states.patrol;
 
 //extras
