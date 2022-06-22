@@ -8,7 +8,7 @@ function scr_state_patrol(){
 	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWall,0,0));
 	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*3, oWall,0,0));
 	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWall,0,0)); //if 1 pixel above is free
-	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE*3, oWall,0,0));	
+	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE, oWall,0,0));	
 
 	if (grounded) {
 		//check above
