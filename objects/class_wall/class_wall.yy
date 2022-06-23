@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Classes",
-    "path": "folders/Objects/Essentials/Level Misc/Classes.yy",
+    "name": "UNUSED OBJECTS-DELETE LATER",
+    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER.yy",
   },
   "resourceVersion": "1.0",
   "name": "class_wall",

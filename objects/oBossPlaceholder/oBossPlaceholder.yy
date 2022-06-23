@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Bosses",
-    "path": "folders/Objects/Enemies/Bosses.yy",
+    "name": "UNUSED OBJECTS-DELETE LATER",
+    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBossPlaceholder",

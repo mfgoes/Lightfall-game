@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactive Objects",
-    "path": "folders/Objects/Interactive Objects.yy",
+    "name": "NEEDS SERIOUS REFACTORING",
+    "path": "folders/Objects/NEEDS SERIOUS REFACTORING.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPot_NuclearExp",

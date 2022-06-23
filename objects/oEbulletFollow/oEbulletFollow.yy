@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Projectiles_Enemy",
-    "path": "folders/Objects/Enemies/Projectiles_Enemy.yy",
+    "path": "folders/Objects/Essentials/Projectiles_Enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEbulletFollow",

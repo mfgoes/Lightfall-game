@@ -5,7 +5,6 @@
   },
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": {
     "name": "sWall32x32_extended",
     "path": "sprites/sWall32x32_extended/sWall32x32_extended.yy",
@@ -34,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Objects/Walls.yy",
+    "name": "NEEDS SERIOUS REFACTORING",
+    "path": "folders/Objects/NEEDS SERIOUS REFACTORING.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_wall_sand",

@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Basic",
-    "path": "folders/Objects/Enemies/Basic.yy",
+    "name": "UNUSED OBJECTS-DELETE LATER",
+    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemyCorpse",

@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Aesthetic",
-    "path": "folders/Objects/Interactive Objects/Aesthetic.yy",
+    "name": "NEEDS SERIOUS REFACTORING",
+    "path": "folders/Objects/NEEDS SERIOUS REFACTORING.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPropCactus",
