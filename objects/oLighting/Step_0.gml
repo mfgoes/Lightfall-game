@@ -4,7 +4,7 @@
 
 
 /// find walls to cast shadows  
-with(oWall) {
+with(oWallParent) {
 
     /*
     but doing some if statments you can 

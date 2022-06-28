@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UI",
-    "path": "folders/Graphics and Sprites/UI.yy",
+    "name": "UI Elements",
+    "path": "folders/Graphics and Sprites/UI Elements.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTrigger",

@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Graphics and Sprites/Enemies.yy",
+    "name": "Enemy Effects",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Enemy Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSpawnAnimation",

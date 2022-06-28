@@ -122,7 +122,7 @@
   },
   "parent": {
     "name": "char_protag green",
-    "path": "folders/Graphics and Sprites/Player/char_protag green.yy",
+    "path": "folders/Graphics and Sprites/Player Characters/char_protag green.yy",
   },
   "resourceVersion": "1.0",
   "name": "sProtagWalk",

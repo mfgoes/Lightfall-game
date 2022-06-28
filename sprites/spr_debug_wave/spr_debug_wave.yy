@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Meta",
-    "path": "folders/Graphics and Sprites/UI/Meta.yy",
+    "path": "folders/Graphics and Sprites/UI Elements/Meta.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_debug_wave",

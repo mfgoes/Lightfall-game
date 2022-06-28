@@ -5,10 +5,10 @@ function scr_state_patrol(){
 	//TILE_SIZE = 16px; 
 	var dir = patrol_dir; 
 	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
-	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWall,0,0));
-	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*3, oWall,0,0));
-	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWall,0,0)); //if 1 pixel above is free
-	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE, oWall,0,0));	
+	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWallParent,0,0));
+	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*3, oWallParent,0,0));
+	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWallParent,0,0)); //if 1 pixel above is free
+	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE, oWallParent,0,0));	
 
 	if (grounded) {
 		//check above
@@ -53,10 +53,10 @@ function scr_state_approach(){
 	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
 	var dir = sign(target.x - x); 
 	var dist_target = abs(target.x-x); 
-	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWall,0,0));
-	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*5, oWall,0,0));
-	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWall,0,0)); //if 1 pixel above is free
-	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE*3, oWall,0,0));	
+	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWallParent,0,0));
+	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*5, oWallParent,0,0));
+	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWallParent,0,0)); //if 1 pixel above is free
+	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE*3, oWallParent,0,0));	
 	
 	if (grounded) {
 		//check above	//don't check below
@@ -148,7 +148,7 @@ function scr_enemy_leap() {
 	}
 			
 	//horizontal leap 
-	if !place_meeting(x + h_leap, y, class_wall) && !place_meeting(x + h_leap, y, oBlockade) { 
+	if !place_meeting(x + h_leap, y, oWallParent) && !place_meeting(x + h_leap, y, oBlockade) { 
 		var acc = 0.04; if vsp > 0 && grounded acc = 1; //if landed, don't slide 
 		h_leap=lerp(h_leap,0,acc); 
 		x+=h_leap
@@ -189,13 +189,13 @@ function scr_state_atk_shoot(){
 	//also allow movement
 	if distance_to_object(target) > preferred_range {
 		var dir = sign(target.x - x); 
-		if !place_meeting(x + dir*approach_spd, y,oWall) {
+		if !place_meeting(x + dir*approach_spd, y,oWallParent) {
 			hsp = dir*approach_spd; }
 		else {
 			hsp = 0;}
 		
-		if place_meeting(x + dir*approach_spd, y, oWall)  {
-			if !collision_point(x + dir,y-TILE_SIZE-1, oWall,0,0) {  //check if 2 tiles up is free
+		if place_meeting(x + dir*approach_spd, y, oWallParent)  {
+			if !collision_point(x + dir,y-TILE_SIZE-1, oWallParent,0,0) {  //check if 2 tiles up is free
 				y-=TILE_SIZE; //"Jump" up (improve later)
 				hsp = dir*approach_spd;
 			
@@ -225,7 +225,7 @@ function scr_enemy_blink() { //blink means teleporting towards the player
 		var bbox_width_half = sprite_get_width(mask_index)/2;
 		var bbox_height = sprite_get_height(mask_index);
 		
-		if (dist_new < dist_old) && !collision_rectangle(x_new-bbox_width_half,y_new-bbox_height,x_new+bbox_width_half,y_new,oWall,0,0) { // !place_meeting(x_new,y_new,oWall) &&
+		if (dist_new < dist_old) && !collision_rectangle(x_new-bbox_width_half,y_new-bbox_height,x_new+bbox_width_half,y_new,oWallParent,0,0) { // !place_meeting(x_new,y_new,oWallParent) &&
 			x = x_new;
 			y = y_new;
 			timer_set("blink_timer",60);

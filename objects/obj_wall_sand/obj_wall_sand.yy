@@ -11,8 +11,8 @@
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "class_wall",
-    "path": "objects/class_wall/class_wall.yy",
+    "name": "oWallParent",
+    "path": "objects/oWallParent/oWallParent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -33,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NEEDS SERIOUS REFACTORING",
-    "path": "folders/Objects/NEEDS SERIOUS REFACTORING.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_wall_sand",

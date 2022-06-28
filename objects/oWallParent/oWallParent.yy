@@ -28,7 +28,7 @@
     "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "oWallParent",
   "tags": [],
   "resourceType": "GMObject",
 }

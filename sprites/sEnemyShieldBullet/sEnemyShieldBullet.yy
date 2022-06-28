@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "placeholder shield",
-    "path": "folders/Graphics and Sprites/Enemies/placeholder shield.yy",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/PLACEHOLDERS/placeholder shield.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyShieldBullet",

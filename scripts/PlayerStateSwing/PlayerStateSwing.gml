@@ -4,7 +4,7 @@ function PlayerStateSwing(){
 	var _ropeAngleAcceleration = -0.25 * dcos(ropeAngle); //store how quickly player is accelerating
 			_ropeAngleAcceleration += (key_right - key_left) * 0.08; //manual rope acceleration
 		
-			if (place_meeting(x,y+1, oWall)) {key_down = 0};	//only allow shorter rope if on ground.
+			if (place_meeting(x,y+1, oWallParent)) {key_down = 0};	//only allow shorter rope if on ground.
 			ropeLength += (key_down - key_up) * 2; 
 			ropeLength = clamp (ropeLength, 0, 120);
 			

@@ -7,7 +7,7 @@ if global.game_paused {
 }
 //gravity
 VerticalCollision(); 
-grounded = (place_meeting(x,y+1,class_wall) or place_meeting(x,y+1,oParPlatform));
+grounded = (place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent));
 
 //This exists in the parent step event
 //but event_inherited is never called 

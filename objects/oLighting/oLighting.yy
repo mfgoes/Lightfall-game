@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Lighting system",
-    "path": "folders/Objects/Lighting system.yy",
+    "name": "Lighting System",
+    "path": "folders/Objects/Lighting System.yy",
   },
   "resourceVersion": "1.0",
   "name": "oLighting",

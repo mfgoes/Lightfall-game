@@ -5,7 +5,6 @@
   },
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -54,8 +53,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Basic",
-    "path": "folders/Objects/Enemies/Basic.yy",
+    "name": "Essentials",
+    "path": "folders/Objects/Essentials.yy",
   },
   "resourceVersion": "1.0",
   "name": "pShootable",

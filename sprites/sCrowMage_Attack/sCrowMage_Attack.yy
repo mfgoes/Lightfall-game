@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "crow mage",
-    "path": "folders/Graphics and Sprites/Enemies/crow mage.yy",
+    "name": "Crow Mage",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Crow Mage.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCrowMage_Attack",

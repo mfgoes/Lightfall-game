@@ -5,7 +5,7 @@ function VerticalCollision(){
 	 
 var grv = 0.3;
 vsp = vsp + grv;
-if (place_meeting(x,y+vsp, oWall)) or (place_meeting(x,y+vsp, oWallEnemies)) or (place_meeting(x,y+vsp,oParPlatform))
+if (place_meeting(x,y+vsp, oWallParent)) or (place_meeting(x,y+vsp,oPlatformParent))
 {
 	vsp = 0;	
 }

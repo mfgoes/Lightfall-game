@@ -16,7 +16,7 @@ else {
 
 //gravity
 VerticalCollision(); 
-grounded = (place_meeting(x,y+1,class_wall) or place_meeting(x,y+1,oParPlatform)); //was oWall
+grounded = (place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent)); //was oWallParent
 
 //destroy if outside room + fallen
 if y > room_height {

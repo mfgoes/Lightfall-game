@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Graphics and Sprites/Enemies.yy",
+    "name": "Rock Bug",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Rock Bug.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRockBug_Dead",

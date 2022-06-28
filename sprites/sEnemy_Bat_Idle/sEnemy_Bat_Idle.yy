@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "placeholder bat",
-    "path": "folders/Graphics and Sprites/Enemies/placeholder bat.yy",
+    "name": "Bat",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Bat.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemy_Bat_Idle",

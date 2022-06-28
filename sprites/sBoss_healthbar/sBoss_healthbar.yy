@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Bosses",
-    "path": "folders/Objects/Enemies/Bosses.yy",
+    "name": "Boss Enemies",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Boss Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBoss_healthbar",

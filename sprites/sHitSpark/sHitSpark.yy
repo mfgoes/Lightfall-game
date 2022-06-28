@@ -85,8 +85,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Visual Effects",
-    "path": "folders/Graphics and Sprites/Visual Effects.yy",
+    "name": "Visual Effects General",
+    "path": "folders/Graphics and Sprites/Visual Effects General.yy",
   },
   "resourceVersion": "1.0",
   "name": "sHitSpark",

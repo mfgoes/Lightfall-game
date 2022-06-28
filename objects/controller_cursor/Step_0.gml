@@ -18,7 +18,7 @@ with(myChecker)
 	y = gridCell_yPos(_y,other.cellSize);
 
 	//Check for wall at x,y, of cell_checker.
-	var _wall = instance_place(x,y,class_wall);
+	var _wall = instance_place(x,y,oWallParent);
 
 	//On mouse click. If no wall is at x,y of cell_checker, create one. Else, destroy it.
 	if other.mouseLeft

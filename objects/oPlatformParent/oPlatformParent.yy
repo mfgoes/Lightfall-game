@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sButton",
-    "path": "sprites/sButton/sButton.yy",
+    "name": "sPlatformGoThrough",
+    "path": "sprites/sPlatformGoThrough/sPlatformGoThrough.yy",
   },
   "solid": false,
   "visible": false,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UNUSED OBJECTS-DELETE LATER",
-    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWallEnemies",
+  "name": "oPlatformParent",
   "tags": [],
   "resourceType": "GMObject",
 }

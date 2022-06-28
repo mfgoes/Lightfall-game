@@ -17,11 +17,6 @@ atk_anim_x = 0 //; //lerp between two points
 //REPLACE THIS SHITTY SYSTEM WITH STATES. 
 //atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 
 current_state = enemy_states.approach;
-
-
-
-
-
 out_of_range = false; 
 sight_range = 80 + round(random(5)); //when to detect player
 atk_range = 5; //closest distance for attacks

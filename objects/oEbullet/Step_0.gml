@@ -36,9 +36,9 @@ if (place_meeting(x,y,oPlayer))
 
 if collision_wall
 {
-	if (place_meeting(x,y,oWall)) && (image_index !=0) 
+	if (place_meeting(x,y,oWallParent)) && (image_index !=0) 
 	{
-		while (place_meeting(x,y,oWall)) 
+		while (place_meeting(x,y,oWallParent)) 
 		{
 			x-= lengthdir_x(1,direction);	//move back in direction
 			y-= lengthdir_y(1,direction);

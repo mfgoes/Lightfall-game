@@ -16,7 +16,7 @@
 	#region state changing happens here
 	
 	//change state if player is out of bounds
-	if collision_line(x,y-5,target.x,target.y-5,oWall,0,0) && collision_line(x,y-TILE_SIZE,target.x,target.y-TILE_SIZE,oWall,0,0) {
+	if collision_line(x,y-5,target.x,target.y-5,oWallParent,0,0) && collision_line(x,y-TILE_SIZE,target.x,target.y-TILE_SIZE,oWallParent,0,0) {
 		if timer_get("forget_player") <= 0 {
 			//current_state = enemy_states.idle;
 			timer_set("reset_patrol",60);

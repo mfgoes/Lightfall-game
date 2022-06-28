@@ -90,7 +90,7 @@
   "nineSlice": null,
   "parent": {
     "name": "char_huntress",
-    "path": "folders/Graphics and Sprites/Player/other/char_huntress.yy",
+    "path": "folders/Graphics and Sprites/Player Characters/other/char_huntress.yy",
   },
   "resourceVersion": "1.0",
   "name": "sArcherWalk",

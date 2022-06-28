@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "placeholder exploder",
-    "path": "folders/Graphics and Sprites/Enemies/placeholder exploder.yy",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/PLACEHOLDERS/placeholder exploder.yy",
   },
   "resourceVersion": "1.0",
   "name": "sExplosion",

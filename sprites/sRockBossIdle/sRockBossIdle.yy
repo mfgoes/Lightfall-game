@@ -85,8 +85,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "rockboss graphics",
-    "path": "folders/Objects/Enemies/Bosses/rockboss graphics.yy",
+    "name": "Boss Enemies",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Boss Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRockBossIdle",

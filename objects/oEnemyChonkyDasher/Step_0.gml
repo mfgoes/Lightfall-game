@@ -32,7 +32,7 @@ if distance_to_object(dd) > 0 _colliding = 0; //if closest enemy is far away, ig
 
 //walking code 
 if current_state = enemy_states.approach && stunned = 0 {  
-	if (!place_meeting(x + hsp, y,oWall)) { // && distance_to_object(target) < sight_range && distance_to_object(target) > 1
+	if (!place_meeting(x + hsp, y,oWallParent)) { // && distance_to_object(target) < sight_range && distance_to_object(target) > 1
        //move left
 	   if _pos_target < 0 {
 		  x+=hsp //- _diff_x;
@@ -49,9 +49,9 @@ if current_state = enemy_states.approach && stunned = 0 {
 //enemy stun code.	only recoil after a short pause (for emphasis)
 if stunned > 0 {
 	stunned--; //starts at 20
-	if stunned > 10 && stunned < 13 && !place_meeting(x,y-vsp,oWall) vsp = -1;
+	if stunned > 10 && stunned < 13 && !place_meeting(x,y-vsp,oWallParent) vsp = -1;
 	var stunrecoil = sign(target.x - x)*4; 
-	if stunned > 10 && stunned < 13 && !place_meeting(x-stunrecoil,y,oWall) x-=stunrecoil;
+	if stunned > 10 && stunned < 13 && !place_meeting(x-stunrecoil,y,oWallParent) x-=stunrecoil;
 	var dir = sign(target.x - x); 
 	if stunned = 15 x+=lengthdir_x(5,dir)
 }		
@@ -62,7 +62,7 @@ switch (current_state)
 {
 	case enemy_states.idle: {
 		var check_ahead = 2*sign(hsp)
-		if (!place_meeting(x+check_ahead,y+1,oWall) && (afraid_of_heights)) or place_meeting(x+hsp,y-1,oWall) {
+		if (!place_meeting(x+check_ahead,y+1,oWallParent) && (afraid_of_heights)) or place_meeting(x+hsp,y-1,oWallParent) {
 			hsp = -(hsp);
 		}
 		x += hsp;
@@ -72,7 +72,7 @@ switch (current_state)
 		
 		//change to approach state
 		if instance_exists(oPlayer) && target_in_sight { //only switch if player exists
-			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0) && timer_get("notice_player") <= 0 {
+			if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWallParent,0,0) && timer_get("notice_player") <= 0 {
 				current_state = enemy_states.approach; 
 				timer_set("notice_player",40); //small pause before approaching player
 				//visual alert (updated)
@@ -94,7 +94,7 @@ switch (current_state)
 	
 	case enemy_states.approach: {
 	//pause before attack
-	if timer_get("notice_player") > 0 or !place_meeting(x,y+1,oWall) { //this might cause problems later
+	if timer_get("notice_player") > 0 or !place_meeting(x,y+1,oWallParent) { //this might cause problems later
 		hsp = 0; 
 		image_speed = 0
 	}
@@ -102,12 +102,12 @@ switch (current_state)
 	{
 		//Use algorithm to follow player (placeholder code)
 		var dir = sign(target.x - x); 
-		if !place_meeting(x + dir*walkspd, y,oWall)
+		if !place_meeting(x + dir*walkspd, y,oWallParent)
 			hsp = dir*walkspd; //dir*walkspd;
 		else
 			hsp = 0;
 		//revert to idle state
-		if distance_to_object(target) >= sight_range or collision_line(x,y,target.x,target.y-20,oWall,0,0) {
+		if distance_to_object(target) >= sight_range or collision_line(x,y,target.x,target.y-20,oWallParent,0,0) {
 			var dir = sign(target.x - x); 
 			hsp = round(dir*walkspd);
 			current_state = enemy_states.idle;
@@ -165,8 +165,8 @@ switch (current_state)
 	}
 	
 	//stop charge 
-	if timer_get("charge_timer") = 0 or place_meeting(x+hsp,y,oWall) {
-		if place_meeting(x+hsp,y,oWall) {
+	if timer_get("charge_timer") = 0 or place_meeting(x+hsp,y,oWallParent) {
+		if place_meeting(x+hsp,y,oWallParent) {
 			audio_sound_gain(snHitSplashy,0.3,0); audio_play_sound(snHitSplashy,4,0);
 			timer_set("start_bullrush",30+round(10)); 
 		}
@@ -174,7 +174,7 @@ switch (current_state)
 		timer_set("charge_timer",0);
 	}
 	//move
-	if (!place_meeting(x + hsp, y,oWall)) x+=hsp; 
+	if (!place_meeting(x + hsp, y,oWallParent)) x+=hsp; 
 	
 	//revert state
 	if timer_get("ignore_player") <= 0 {
@@ -243,7 +243,7 @@ switch (current_state)
 	}
 	
 	//jump animation
-	/*if (!place_meeting(x,y+1,oWall)) 
+	/*if (!place_meeting(x,y+1,oWallParent)) 
 	{
 		grounded = false;
 		if (sign(vsp) > 0) image_index = 1; else image_index = 0;

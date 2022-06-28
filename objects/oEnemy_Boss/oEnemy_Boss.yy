@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bosses",
-    "path": "folders/Objects/Enemies/Bosses.yy",
+    "path": "folders/Objects/Enemies Related/Bosses.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemy_Boss",

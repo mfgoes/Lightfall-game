@@ -6,8 +6,8 @@ x_pos1 = gate_left.x;
 x_pos2 = gate_right.x;
 
 //make sure enemies aren't created in walls
-if place_meeting(x,y,oWall) {
-	if !place_meeting(x,y-32,oWall) y-=32;
+if place_meeting(x,y,oWallParent) {
+	if !place_meeting(x,y-32,oWallParent) y-=32;
 }
 
 

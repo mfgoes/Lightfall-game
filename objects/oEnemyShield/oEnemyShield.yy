@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Basic",
-    "path": "folders/Objects/Enemies/Basic.yy",
+    "name": "Enemies_Basic",
+    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemyShield",

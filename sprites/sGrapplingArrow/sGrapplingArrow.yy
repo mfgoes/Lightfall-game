@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Graphics and Sprites/Weapons.yy",
+    "name": "Bullets",
+    "path": "folders/Graphics and Sprites/Weapons/Bullets.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGrapplingArrow",

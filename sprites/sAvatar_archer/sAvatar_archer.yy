@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "avatars",
-    "path": "folders/Graphics and Sprites/UI/avatars.yy",
+    "path": "folders/Graphics and Sprites/UI Elements/avatars.yy",
   },
   "resourceVersion": "1.0",
   "name": "sAvatar_archer",

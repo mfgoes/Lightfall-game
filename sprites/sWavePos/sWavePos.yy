@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Wave_System",
-    "path": "folders/Objects/Wave_System.yy",
+    "path": "folders/Objects/Enemies Related/Wave_System.yy",
   },
   "resourceVersion": "1.0",
   "name": "sWavePos",

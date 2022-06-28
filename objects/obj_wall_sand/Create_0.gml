@@ -1,11 +1,11 @@
-/// @description Insert description here
+/// @description has sand visual
 // You can write your code in this editor
 
-// Inherit the parent event
+// Inherit the auto tiling (fix later)
 event_inherited();
 
 //draw static grass on top
-if !place_meeting(x,y-1,class_wall) && random(1) < 0.4 {
+if !place_meeting(x,y-1,object_index) && random(1) < 0.4 {
 	draw_grass = true;	
 } else
 draw_grass = false;

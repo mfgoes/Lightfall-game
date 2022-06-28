@@ -30,7 +30,7 @@ if timer_get("arrow_fade") = 0 {
 
 
 //collision wall
-if (place_meeting(x,y,oWall)) && active = true 
+if (place_meeting(x,y,oWallParent)) && active = true 
 	{		
 		if timer_get("arrow_fade") <0 {timer_set("arrow_fade",60);}
 		spd = 0; layer_add_instance("Tiles_1",id); depth+=1; vsp = 0;
@@ -44,7 +44,7 @@ if (place_meeting(x,y,oWall)) && active = true
 		else instance_destroy(); 		 		
 	
 	#region play sound when hitting wall
-	if (place_meeting(x,y,oWall)) && !audio_is_playing(snFootstep4)  {
+	if (place_meeting(x,y,oWallParent)) && !audio_is_playing(snFootstep4)  {
 		audio_sound_gain(snFootstep4,0.4,0);
 		audio_play_sound(snFootstep4,0,0);	
 	} 
@@ -90,8 +90,8 @@ if (place_meeting(x,y,pShootable)) && active = true
 			hitfrom = other.direction;
 			gunkickx = lengthdir_x(3,other.image_angle);
 			gunkicky = lengthdir_y(3,other.image_angle);
-			if !place_meeting(x+gunkickx,y,oWall) x+=gunkickx; gunkickx = 0;
-			if !place_meeting(x,y+gunkicky,oWall) y+=gunkicky; gunkicky = 0;
+			if !place_meeting(x+gunkickx,y,oWallParent) x+=gunkickx; gunkickx = 0;
+			if !place_meeting(x,y+gunkicky,oWallParent) y+=gunkicky; gunkicky = 0;
 		}
 		
 	}

@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "char_placeholder",
-    "path": "folders/Graphics and Sprites/Player/other/char_placeholder.yy",
+    "path": "folders/Graphics and Sprites/Player Characters/other/char_placeholder.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerIdle",

@@ -2,7 +2,7 @@
 function PlayerStateFree(){
 	
 //define solid ground
-grounded =(place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
+grounded =(place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent));
 
 #region walking
 	//Slow down while aiming weapon
@@ -31,7 +31,7 @@ grounded =(place_meeting(x,y+1,oWall) or place_meeting(x,y+1,oParPlatform));
 #endregion
 
 #region platforms
-if (place_meeting(x,y+1,oParPlatform) && key_down && can_move && !place_meeting(x,y+1,oWall)) {
+if (place_meeting(x,y+1,oPlatformParent) && key_down && can_move && !place_meeting(x,y+1,oWallParent)) {
     y++;
 }
 #endregion
@@ -78,7 +78,7 @@ if (place_meeting(x,y+1,oParPlatform) && key_down && can_move && !place_meeting(
 		vsp = max(vsp, -jump_speed/4);	
 	}
 
-	if !place_meeting(x,y+1,oWall) && coyote_time = 0 {
+	if !place_meeting(x,y+1,oWallParent) && coyote_time = 0 {
 		if jumps = jumps_max jumps -=1; 	
 	}
 

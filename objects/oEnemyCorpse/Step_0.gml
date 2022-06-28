@@ -9,9 +9,9 @@ if (done = 0)
 	vsp = vsp + grv; 
 
 	//Horizontal collision
-	if (place_meeting(x+hsp,y, oWall))
+	if (place_meeting(x+hsp,y, oWallParent))
 	{
-		while (!place_meeting(x+sign(hsp),y,oWall))
+		while (!place_meeting(x+sign(hsp),y,oWallParent))
 		{
 			x = x + sign(hsp); 
 		}
@@ -22,7 +22,7 @@ if (done = 0)
 
 
 	//Vertical collision
-	if (place_meeting(x,y+vsp, oWall))
+	if (place_meeting(x,y+vsp, oWallParent))
 	{
 		
 		if (vsp > 0) 
@@ -31,7 +31,7 @@ if (done = 0)
 				image_index = 1;
 			hsp = 0;
 		}
-		while (!place_meeting(x,y+sign(vsp),oWall))
+		while (!place_meeting(x,y+sign(vsp),oWallParent))
 		{
 			y = y + sign(vsp); 
 		}

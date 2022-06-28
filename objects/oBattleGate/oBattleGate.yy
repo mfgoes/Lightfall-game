@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "BattleGate Obj",
-    "path": "folders/Objects/Essentials/BattleGate Obj.yy",
+    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER/BattleGate Obj.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBattleGate",

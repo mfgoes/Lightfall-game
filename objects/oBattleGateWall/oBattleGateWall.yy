@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oWall",
-    "path": "objects/oWall/oWall.yy",
+    "name": "oWallParent",
+    "path": "objects/oWallParent/oWallParent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "BattleGate Obj",
-    "path": "folders/Objects/Essentials/BattleGate Obj.yy",
+    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER/BattleGate Obj.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBattleGateWall",

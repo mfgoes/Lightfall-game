@@ -14,8 +14,8 @@ if global.debugmode = 1 {
 	draw_circle(x,y,sight_range,1);
 	draw_circle(x,y,atk_range,1);
 	var free_tile = false;
-	var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWall,0,0)); //check 2 tiles down
-	var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWall,0,0)); //check existing tile
+	var check_tile2 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE*2, oWallParent,0,0)); //check 2 tiles down
+	var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWallParent,0,0)); //check existing tile
 	
 	if (check_tile1) or (check_tile2) free_tile = true;
 	draw_rectangle(x+(TILE_SIZE*2)*patrol_dir,y,x,y+TILE_SIZE*2,1);	
@@ -29,7 +29,7 @@ if global.debugmode = 1 {
 	draw_set_color(c_white);
 	
 	//draw collision line with player to obstacles
-	if collision_line(x,y-5,target.x,target.y-5,oWall,0,0) draw_set_color(c_red) else draw_set_color(c_white);
+	if collision_line(x,y-5,target.x,target.y-5,oWallParent,0,0) draw_set_color(c_red) else draw_set_color(c_white);
 	draw_line(x,y-5,target.x,target.y-5);
 }
 

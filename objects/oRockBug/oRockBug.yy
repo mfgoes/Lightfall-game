@@ -33,8 +33,8 @@
     {"propertyId":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"objectId":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Basic",
-    "path": "folders/Objects/Enemies/Basic.yy",
+    "name": "Enemies_Basic",
+    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
   },
   "resourceVersion": "1.0",
   "name": "oRockBug",

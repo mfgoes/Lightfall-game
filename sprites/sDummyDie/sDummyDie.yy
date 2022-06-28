@@ -94,7 +94,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Dummy Monster",
-    "path": "folders/Graphics and Sprites/Enemies/Dummy Monster.yy",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Dummy Monster.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDummyDie",

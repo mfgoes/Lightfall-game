@@ -93,7 +93,7 @@ dash_v=lerp(dash_v,0,dash_decay)
 knockback_h=lerp(knockback_h,0,knockback_decay)
 knockback_v=lerp(knockback_v,0,knockback_decay)
 
-if !place_meeting(x+h+dash_h+knockback_h,y,class_wall) {
+if !place_meeting(x+h+dash_h+knockback_h,y,oWallParent) {
 	x+=h+dash_h+knockback_h
 }else {
 	knockback_h=(h+dash_h)*-0.75
@@ -101,7 +101,7 @@ if !place_meeting(x+h+dash_h+knockback_h,y,class_wall) {
 	dash_h=0
 }
 
-if !place_meeting(x,y+v+dash_v+knockback_v,class_wall) {
+if !place_meeting(x,y+v+dash_v+knockback_v,oWallParent) {
 	y+=v+dash_v+knockback_v
 }else {
 	knockback_v=(v+dash_v)*-0.75	

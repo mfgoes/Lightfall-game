@@ -29,7 +29,7 @@ image_xscale = sign(target.x-x);
 	y+= y_new_main + y_new;
 	
 	//double check for walls
-	if collision_line(x,y,target.x,target.y,oWall,0,0) or place_meeting(x+sign(x_new)*5,y,oWall) {
+	if collision_line(x,y,target.x,target.y,oWallParent,0,0) or place_meeting(x+sign(x_new)*5,y,oWallParent) {
 			if target.y < y y-=1;
 	}
 

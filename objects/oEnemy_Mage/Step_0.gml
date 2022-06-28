@@ -17,8 +17,8 @@ switch (current_state)
 {
 	case enemy_states.patrol: {
 		//patrol
-		var wall_infront = place_meeting(x+hsp,y,oWall) or place_meeting(x+hsp,y,oParPlatform);
-		var cliff_ahead = (!place_meeting(x+hsp*8,y+1,oWall) && !place_meeting(x+hsp*8,y+1,oParPlatform));
+		var wall_infront = place_meeting(x+hsp,y,oWallParent) or place_meeting(x+hsp,y,oPlatformParent);
+		var cliff_ahead = (!place_meeting(x+hsp*8,y+1,oWallParent) && !place_meeting(x+hsp*8,y+1,oPlatformParent));
 		
 		if (wall_infront) or (cliff_ahead && afraid_of_heights) {hsp = -hsp} //else hsp = 0; //turn around if facing wall
 		x += hsp;
@@ -48,7 +48,7 @@ switch (current_state)
 			}
 			else
 			{
-				if !place_meeting(x + dir*walkspd*2, y,oWall) hsp = dir*walkspd*2;
+				if !place_meeting(x + dir*walkspd*2, y,oWallParent) hsp = dir*walkspd*2;
 				else hsp = 0;
 				if dir != 0 image_xscale = dir;
 			}

@@ -5,7 +5,6 @@
   },
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -34,8 +33,8 @@
     {"propertyId":{"name":"hp","path":"objects/pShootable/pShootable.yy",},"objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Basic",
-    "path": "folders/Objects/Enemies/Basic.yy",
+    "name": "Enemies_Basic",
+    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemy_Bat_Modified",

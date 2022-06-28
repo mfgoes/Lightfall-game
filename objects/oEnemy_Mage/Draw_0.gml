@@ -22,6 +22,6 @@ draw_circle(x,y,sight_range,1);
 draw_set_color(c_yellow);
 draw_circle(x,y,atk_range+20,1);
 draw_text(x,y-30,hsp); 
-draw_text(x,y-50,"cliff " + string((!place_meeting(x+hsp*2,y+1,oWall) && !place_meeting(x+hsp*2,y+1,oParPlatform)))); 
+draw_text(x,y-50,"cliff " + string((!place_meeting(x+hsp*2,y+1,oWallParent) && !place_meeting(x+hsp*2,y+1,oPlatformParent)))); 
 draw_set_color(c_white);
 }

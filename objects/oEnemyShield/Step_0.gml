@@ -15,8 +15,8 @@ switch (current_state)
 {
 	case enemy_states.patrol: {
 		// patrol
-		if ((grounded) && ( ((!place_meeting(x + hsp, y + 1,oWall) && afraid_of_heights))
-								or place_meeting(x+hsp,y, oWall) ))
+		if ((grounded) && ( ((!place_meeting(x + hsp, y + 1,oWallParent) && afraid_of_heights))
+								or place_meeting(x+hsp,y, oWallParent) ))
 		{
 			hsp = -hsp;
 		}
@@ -27,7 +27,7 @@ switch (current_state)
 		{
 			//change to approach state
 			if (distance_to_object(target) < sight_range && (sign(target.x - x)) == sign(hsp)) { //only switch if player exists
-				if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWall,0,0) && timer_get("notice_player") <= 0 {
+				if target.bbox_bottom + 20 >= bbox_bottom-5 && !collision_line(x,y,target.x,target.y-20,oWallParent,0,0) && timer_get("notice_player") <= 0 {
 					current_state = enemy_states.approach;
 					dir = sign(target.x - x);
 					timer_set("notice_player",40); //small pause before approaching player
@@ -65,7 +65,7 @@ switch (current_state)
 				}
 				else
 				{
-					if !place_meeting(x + dir*walkspd*2, y,oWall) hsp = dir*walkspd*2;
+					if !place_meeting(x + dir*walkspd*2, y,oWallParent) hsp = dir*walkspd*2;
 					else hsp = 0;
 					if dir != 0 image_xscale = dir;
 				}

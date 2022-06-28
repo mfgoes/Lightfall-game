@@ -86,7 +86,7 @@
   "nineSlice": null,
   "parent": {
     "name": "placeholder blob",
-    "path": "folders/Graphics and Sprites/Enemies/placeholder blob.yy",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/PLACEHOLDERS/placeholder blob.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyBlob_Atk",

@@ -12,7 +12,7 @@ function Ability_Primary_Archer() {
 	var key_primary_released		= oPlayer.key_primary_released;
 	
 	if (key_attack_pressed) &&  timer_get("primary_cooldown") = -1 {		
-		if (!place_meeting(x,y+1,oWall)) && (!place_meeting(x,y+1,oParPlatform)) oPlayer.air_shot = true;
+		if (!place_meeting(x,y+1,oWallParent)) && (!place_meeting(x,y+1,oPlatformParent)) oPlayer.air_shot = true;
 
 		//charging sound
 		if weapon_charge = 0 {

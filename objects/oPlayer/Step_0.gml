@@ -15,7 +15,7 @@ PlayerCollision_Gates();
 
 timer_init("produce_afterimages");
 //Create after images
-if air_shot = true && !place_meeting(x,y+1,oWall) {
+if air_shot = true && !place_meeting(x,y+1,oWallParent) {
 	if timer_get("produce_afterimages") <= 0 {
 		timer_set("produce_afterimages",15);
 		dd = instance_create_depth(x,y,depth,oPlayer_Afterimage);
