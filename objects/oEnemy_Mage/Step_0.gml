@@ -1,17 +1,13 @@
  /// @description States
 event_inherited(); //inherit HP code
 
+/*
 if !instance_exists(target) {
 	hsp = 0; 
 	exit;
-}
+}*/
 
-timer_init("notice_player"); //when to notice player
-timer_init("ignore_player"); //when to ignore player
-timer_init("turn_around");
-timer_init("attack_player");
-
-
+//timers moved to parent object
 
 switch (current_state)
 {
@@ -70,7 +66,7 @@ switch (current_state)
 		}
 	} break;
 	case enemy_states.attack: {
-	//keep some distance from player
+	//attack style is unique to mage enemy
 			var _dir = sign(target.x - x);	
 			if dir != _dir timer_set("turn_around", 20);
 			dir = _dir;
@@ -96,7 +92,8 @@ switch (current_state)
 	} break;
 }
 
-#region animations (turn to script later)
+
+#region animations (refactor later)
 	if current_state = enemy_states.attack {
 			if attack_anim_end = 0 {
 			if sprite_index != spriteAttack {
@@ -112,7 +109,7 @@ switch (current_state)
 		
 	if current_state != enemy_states.attack {
 		if sprite_index = spriteAttack {sprite_index = spriteIdle; image_index = 0;}
-		if hsp !=0 && x!=xprevious sprite_index = sCrowMage_Walk; else sprite_index = sCrowMage_Idle; 
+		if hsp !=0 && x!=xprevious sprite_index = spriteWalk; else sprite_index = spriteIdle; 
 		if hsp != 0 image_xscale = sign(hsp) else {if target.x != x image_xscale = sign(target.x - x); else image_xscale = 1;}
 		
 		image_speed = 0.8;

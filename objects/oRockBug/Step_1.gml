@@ -1,4 +1,4 @@
-/// @description Overwrite 'death' effects 
+/// @description explode on death
 //Since this enemy has a special trigger upon death, it overwrites the original code. 
 
 //init timers
