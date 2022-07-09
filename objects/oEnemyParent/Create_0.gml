@@ -48,6 +48,7 @@ y = -1000;
 	patrol_ystart = ystart;
 	grounded = false;
 	stunned = 5; //prevents enemy from walking (start with 5 to create a tiny break) 
+	target = 0; if instance_exists(oPlayer) target = oPlayer;
 
 /* Unnecessary since this is done every single step event
 	if instance_exists(oPlayer)

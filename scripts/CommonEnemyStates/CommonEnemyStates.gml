@@ -242,3 +242,77 @@ function scr_enemy_blink() { //blink means teleporting towards the player
 		}
 	}
 }
+
+//More enemy attacks
+function scr_enemy_attack_bullrun() {
+	#region do damage upon collision
+		var dir = sign(target.x - x);
+		if place_meeting(x,y,oPlayer) && timer_get("do_dmg") <= 0 && timer_get("charge_timer") > 0 { //only do damage through charge
+			timer_set("do_dmg",50);
+			with(oPlayer) {
+				flash = 3;
+				gunkickx = sign(other.x - x)*10; //from pos enemy to pos player
+				y-=10;
+				audio_sound_gain(snHitEnemy,0.1,0);
+				if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+				ScreenShake(1,2);
+				hp-=other.damage;
+				if hp < 1 KillPlayer();
+			
+				}
+			}
+	#endregion
+		
+	//setup boost
+	if timer_get("start_bullrush") <= 0 {
+		audio_sound_gain(snDash,0.2,0);
+		audio_play_sound(snDash,10,0);
+		bullrush_dir = sign(target.x - x); //set a trajectory
+		timer_set("start_bullrush",105); //time before you can charge again)
+		timer_set("charge_timer",80); //how long the charge can be (unless hitting a wall)
+		if timer_get("do_dmg") < 30 timer_set("do_dmg",0);
+	}
+
+	//charge to player if in sight
+	if (target.bbox_bottom + 20 >= bbox_bottom) && timer_get("charge_timer") > 0 {
+		hsp = round(bullrush_dir*walk_spd*2);
+		//effects
+		if random(1) < 0.5 with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
+			vsp = -0.1; image_alpha = 0.3+random(0.3);
+			image_speed = 0.5;
+			hsp = random_range(-1,1)
+			image_xscale = choose (1,-1);
+			image_yscale = choose (1,-1);
+		}
+	}
+	
+	//stop charge 
+	if timer_get("charge_timer") = 0 or place_meeting(x+hsp,y,oWallParent) {
+		if place_meeting(x+hsp,y,oWallParent) {
+			audio_sound_gain(snHitSplashy,0.3,0); audio_play_sound(snHitSplashy,4,0);
+			timer_set("start_bullrush",30+round(10)); 
+		}
+		hsp = 0; 
+		timer_set("charge_timer",0);
+	}
+	//move
+	if (!place_meeting(x + hsp, y,oWallParent)) x+=hsp; 
+	
+	//revert state
+	if timer_get("ignore_player") <= 0 {
+		if !(target.bbox_bottom + 20 >= bbox_bottom) {
+			var dir = sign(target.x - x); 
+			hsp = dir*walk_spd;
+			current_state = enemy_states.idle;
+		} 
+		else
+			timer_set("ignore_player",80);
+	}
+	
+	//change to approach if done charging. (Avoid running off cliffs later)
+	if distance_to_object(oPlayer) > atk_range && timer_get("charge_timer") <= 0 {
+		current_state = enemy_states.approach;
+		attack_anim_end = 0;
+		bullrush_dir = 0;
+	}	
+}
