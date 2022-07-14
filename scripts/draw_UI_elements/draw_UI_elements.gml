@@ -12,8 +12,8 @@ function draw_UI_elements(){
 	//temp colors (fix these later
 	var col_bgr = make_colour_rgb(22, 25, 27); //hp bgr; 
 	var col_bgr2 = make_colour_rgb(55, 51, 52); //hp bgr
-	var col_hp = make_colour_rgb(226, 178, 126); //hp fgr
-	var col_exp = make_colour_rgb(178, 139, 120); //hp fgr
+	var col_hp = make_colour_rgb(201, 53, 59); //hp fgr
+	var col_exp = make_colour_rgb(66, 191, 255); //hp fgr
 
 	if (room != rMenu) && (instance_exists(oPlayer))
 	{
@@ -34,7 +34,7 @@ function draw_UI_elements(){
 			draw_set_color(col_bgr2);
 			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax,margin_bottom+12,0);
 			draw_set_color(col_exp);
-			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax*0.5,margin_bottom+12,0); //make this adjusta
+			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax*0.5,margin_bottom+12,0); //make this adjustable
 		
 			//draw profile
 			draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);

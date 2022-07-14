@@ -18,7 +18,7 @@ room_cleared=false
 current_wave=0
 current_wave_check=-1
 waves = ds_list_create()
-switch(room) {
+if disabled = false switch(room) {
 	case(rLevel1):
 		ds_list_add(waves,
 			choose(

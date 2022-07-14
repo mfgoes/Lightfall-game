@@ -2,8 +2,6 @@
 global.killsthisroom = 0;
 global.exp_points_thisroom = 0;
 
-//delete duplicate of self
-
 //generate objects / randomizer codes. Move this to a single script later
 if room != rMenu {
 	//UI
@@ -20,4 +18,5 @@ if room != rMenu {
 	if !instance_exists(oTransition) {
 		instance_create_depth(0,0,depth,oTransition);
 	}		
+	
 }

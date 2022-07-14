@@ -124,7 +124,7 @@ switch (current_state)
 	break;
 	
 	case enemy_states.attack: {
-		scr_enemy_attack_bullrun();
+		attack_behaviour();
 	} break;
 	
 }

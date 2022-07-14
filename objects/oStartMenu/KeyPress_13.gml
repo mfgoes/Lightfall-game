@@ -3,7 +3,7 @@ switch (menu_index) {
 		
 	case 0: //new game
 		show_debug_message("PRESS: NEW GAME");
-		SlideTransition(TRANS_MODE.GOTO,r_1_TrailedCanal); 
+		SlideTransition(TRANS_MODE.GOTO,rLevel1); 
 		break;
 		
 	case 1: //load game

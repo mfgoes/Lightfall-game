@@ -21,7 +21,6 @@ attack_anim_end = 0;
 
 
 // scripts per monster 
-// eventually set this per enemy
-idle_behaviour = 0;
-approach_behaviour = 0;
-attack_behaviour = scr_enemy_attack_bullrun(); 
+idle_behaviour = scr_state_patrol;
+approach_behaviour = scr_state_approach;
+attack_behaviour = scr_enemy_attack_bullrun;  
