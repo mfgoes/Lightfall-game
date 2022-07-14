@@ -14,11 +14,14 @@ if keyboard_check_released(key_restart)
 if keyboard_check_released(key_fullscreen) && (keyboard_check(vk_control)) {
 	window_set_fullscreen(!window_get_fullscreen()); }
 
-if keyboard_check_released(key_pause_menu)
+if keyboard_check_released(key_pause_menu) && room != rMenu
 {
 	if !(global.game_paused)
 	{
-		pause_menu = instance_create_layer(0, 0, "Player", oPauseMenu);
+		if layer_exists("Player")
+			pause_menu = instance_create_layer(0, 0, "Player", oPauseMenu); //check if layer exists first
+		else
+			pause_menu = instance_create_depth(0, 0, depth-5, oPauseMenu);
 		/*with all
 		{
 			image_speed_previous = image_speed;
