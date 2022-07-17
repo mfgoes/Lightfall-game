@@ -10,7 +10,6 @@ if room != rMenu {
 //health, cooldowns, etc
 draw_UI_elements(); 
 
-
 //debug only
 draw_debug_info();
 

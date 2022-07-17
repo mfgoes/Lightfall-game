@@ -42,3 +42,6 @@ menu_move = menu_index - 1;
 line_height = 40; //line height. divide the screen by this number. 
 menu_y_top = 90; //this is a fixed top position. 
 menu_y_bot = menu_y_top + (line_height*6)/2; //dynamic 
+
+//minimum time before you can press another button
+alarm[0] = 10;

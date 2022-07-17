@@ -1,6 +1,6 @@
 /// @description Control Menu
 //Keyboard Controls
-if (menu_control) 
+if (menu_control)  && alarm[0] <= 0 
 {
 	//restart game
 	if keyboard_check_released(ord("R"))
@@ -37,10 +37,12 @@ if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
 }
 
 //menu_committed = menu_move;
-if (menu_committed != -1) //&& (menu_x > gui_width+150) 
+if (menu_committed != -1)
 {
+	
 	switch (menu_committed)
 	{
+		
 		case 0: //continue
 			instance_destroy();
 			/*with all
@@ -52,21 +54,21 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150)
 			break
 		case 1: //sound settings
 			instance_destroy();
-			with oGame pause_menu = instance_create_layer(0, 0, "Player", oSettingsMenu);
+			with oGame pause_menu = instance_create_depth(0, 0, depth, oSettingsMenu);
 			break;
 		case 2: //controls
 			instance_destroy();
-			with oGame pause_menu = instance_create_layer(0, 0, "Player", oControlsMenu);
-			break
+			with oGame pause_menu = instance_create_depth(0, 0, depth, oControlsMenu);
+			break;
 		case 3: //credits
 			instance_destroy();
-			with oGame pause_menu = instance_create_layer(0, 0, "Player", oCreditsMenu);
-			break
+			with oGame pause_menu = instance_create_depth(0, 0, depth, oCreditsMenu);
+			break;
 		case 4: //start screen
 			instance_destroy(oGame);
 			instance_destroy(oCamera);
 			display_set_gui_size(RES_W, RES_H);
-			room_goto(rMenu);
+			room_goto(rMenuTest);
 		break;
 		case 5: //quit game
 			game_end(); break;

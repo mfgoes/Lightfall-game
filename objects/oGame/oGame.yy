@@ -4,7 +4,12 @@
     "path": "sprites/spr_debug_comp/spr_debug_comp.yy",
   },
   "solid": false,
+<<<<<<< Updated upstream
   "visible": true,
+=======
+  "visible": false,
+  "managed": true,
+>>>>>>> Stashed changes
   "spriteMaskId": null,
   "persistent": true,
   "parentObjectId": null,

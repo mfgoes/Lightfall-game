@@ -118,14 +118,6 @@ function draw_UI_elements(){
 		#endregion
 	
 	}
-	#region draw cursor
-		var cursor_scale = 0.75;
-		var current_weapon = 1;
-		var mx = (window_mouse_get_x()/window_get_width()) * display_get_gui_width();
-		var my = (window_mouse_get_y()/window_get_height()) * display_get_gui_height();
-		if instance_exists(oPlayer) current_weapon = oPlayer.current_weapon; //select image_index
-		draw_sprite_ext(sCrosshairs,current_weapon,mx,my,cursor_scale,cursor_scale,0,c_white,1);
-	#endregion
 
 }
 
@@ -135,7 +127,7 @@ function draw_cursor_custom(){
 		var mx = (window_mouse_get_x()/window_get_width()) * display_get_gui_width();
 		var my = (window_mouse_get_y()/window_get_height()) * display_get_gui_height();
 		if instance_exists(oPlayer) current_weapon = oPlayer.current_weapon; //select image_index
-		draw_sprite_ext(sCrosshairs,current_weapon,mx,my,cursor_scale,cursor_scale,0,c_white,1);
+		if os_browser == browser_not_a_browser draw_sprite_ext(sCrosshairs,current_weapon,mx,my,cursor_scale,cursor_scale,0,c_white,1);
 }
 	
 function draw_debug_info(){
@@ -235,6 +227,7 @@ function draw_boss_UI(){
 
 //UI SOUNDS 2022.1
 function audio_ui_click() {
-	audio_sound_gain(snd_button1,global.sound_volume,0);
-	audio_play_sound(snd_button1,1,0);	
+	//audio_sound_gain(snd_button1,global.sound_volume,0);
+	audio_sound_gain(snd_button1,0.2,0);
+	audio_play_sound(snd_button1,2,0);	
 }

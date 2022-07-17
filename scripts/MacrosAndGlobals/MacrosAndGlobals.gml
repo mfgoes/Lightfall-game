@@ -3,20 +3,28 @@
 function MacrosAndGlobals(){
 
 #region globals
-	global.hasgun = true;
-	global.kills = 0;
-	global.killsthiswave = 0;
-	global.wavetotal = 0;
-	global.killsthisroom = 0;
+	 //configurations (web, PC, etc)
+	if (os_browser == browser_not_a_browser) global.config_HTML = 0;
+	else global.config_HTML = 1;
+	global.gamepad_on = 0; //gamepad
+	
+	//settings
 	global.skipmenu = 0; 
-	global.exp_points = 0;
-	global.exp_points_thisroom = 0;
 	global.debugmode = false; 
 	global.game_paused = false;
 	global.pause_bg = noone;
 	global.sound_volume = 1;
 	global.effects = true; //toggle for performance
-	global.gamepad_on = false; //gamepad
+	
+	//player stuff
+	global.hasgun = true;
+	global.kills = 0;
+	global.killsthiswave = 0;
+	global.wavetotal = 0;
+	global.killsthisroom = 0;
+	global.exp_points = 0;
+	global.exp_points_thisroom = 0;
+	
 	audio_master_gain(global.sound_volume);
 #endregion
 
