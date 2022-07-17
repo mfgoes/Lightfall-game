@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "sWall32x32_extended",
     "path": "sprites/sWall32x32_extended/sWall32x32_extended.yy",

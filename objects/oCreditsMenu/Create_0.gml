@@ -1,6 +1,7 @@
 /// @description setup buttons
 event_inherited();
 
+//alarm[0] = 20;
 
 array_delete(menu, 0,10); //cleanup
 menu_title = "Credits";
