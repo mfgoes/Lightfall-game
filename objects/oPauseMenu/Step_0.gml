@@ -68,10 +68,12 @@ if (menu_committed != -1)
 			instance_destroy(oGame);
 			instance_destroy(oCamera);
 			display_set_gui_size(RES_W, RES_H);
-			room_goto(rMenuTest);
+			room_goto(rMenu);
 		break;
-		case 5: //quit game
-			game_end(); break;
+		case 5: //quit game (only when not in browser)
+			if os_browser == browser_not_a_browser {
+				game_end(); break;
+			}
 		
 	}
 }

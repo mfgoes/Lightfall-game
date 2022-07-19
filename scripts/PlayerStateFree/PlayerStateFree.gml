@@ -65,7 +65,7 @@ if (place_meeting(x,y+1,oPlatformParent) && key_down && can_move && !place_meeti
 		}
 		jumps -=1;
 		repeat(3) {
-				with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
+				with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
 					vsp = -0.1; 
 					hsp = random_range(-2,2)
 					image_xscale = choose (1,-1);
@@ -130,7 +130,7 @@ if canrope = 1 {
 			audio_sound_gain(snJump1,0.1,0);
 			audio_play_sound(snJump1,4,false);
 			repeat(3) {
-				with(instance_create_layer(x,bbox_bottom,"Player",oDust)) {
+				with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
 					vsp = 0.1; image_alpha = 0.5;
 					hsp = random_range(-1,1); 
 					image_xscale = choose (1,-1);

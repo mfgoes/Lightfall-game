@@ -13,8 +13,13 @@ global.exp_points_thisroom = 0;
 	if !instance_exists(oUIElements)
 	instance_create_depth(x,y,depth,oUIElements);
 	
+	//camera
 	dd = instance_create_depth(0,0,depth,oCamera);
 	if instance_exists(oPlayer) dd.follow = oPlayer;
+	
+	//Biome generator
+	if !instance_exists(oLevelGenerator)
+	instance_create_depth(x,y,depth,oLevelGenerator);	
 	
 	/*
 	if instance_exists(oPlayer) {
@@ -25,9 +30,7 @@ global.exp_points_thisroom = 0;
 		//camera
 		dd = instance_create_depth(0,0,depth,oCamera);
 		dd.follow = oPlayer;
-		//Biome generator
-		if !instance_exists(oLevelGenerator)
-		instance_create_depth(x,y,depth,oLevelGenerator);	
+		
 	}
 	*/
 	

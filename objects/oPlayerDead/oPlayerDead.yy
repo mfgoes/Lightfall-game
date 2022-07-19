@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayerDie",
-    "path": "sprites/sPlayerDie/sPlayerDie.yy",
+    "name": "sProtagRoll",
+    "path": "sprites/sProtagRoll/sProtagRoll.yy",
   },
   "solid": false,
   "visible": true,

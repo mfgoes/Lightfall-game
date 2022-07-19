@@ -15,7 +15,7 @@ function LoadAssets_Archer(){
 	spriteWalk    =	sProtagWalk;
 	spriteRoll    =	sProtagRoll;
 	spriteJump    =	sProtagJump;
-	spriteDie     =	sArcherDie;
+	spriteDie     =	sProtagRoll; //update: make new sprite
 	spriteAim     =	sProtagAim;
 	spriteMelee   =	sProtagMelee;
 	spriteSpecial =	sProtagMelee; 
