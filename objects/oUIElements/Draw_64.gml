@@ -10,6 +10,10 @@ if room != rMenu {
 //health, cooldowns, etc
 draw_UI_elements(); 
 
+//draw cursor 
+display_set_gui_size(RES_W, RES_H); //text is twice the resolution
+draw_cursor_custom(); 
+
 
 //debug only
 draw_debug_info();

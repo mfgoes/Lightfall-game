@@ -13,6 +13,9 @@ global.exp_points_thisroom = 0;
 	if !instance_exists(oUIElements)
 	instance_create_depth(x,y,depth,oUIElements);
 	
+	dd = instance_create_depth(0,0,depth,oCamera);
+	if instance_exists(oPlayer) dd.follow = oPlayer;
+	
 	/*
 	if instance_exists(oPlayer) {
 		

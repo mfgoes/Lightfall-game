@@ -57,7 +57,7 @@ if global.debugmode = true {
 }*/
 #endregion
 
-//draw cursor 
+//redraw cursor on top of menu
 display_set_gui_size(RES_W, RES_H); //text is twice the resolution
 draw_cursor_custom(); 
 

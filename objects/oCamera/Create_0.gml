@@ -49,8 +49,7 @@ x_new = 0; y_new = 0; //reset this to follow position (ie oPlayer)
 
 //reincluded code
 if instance_exists(oPlayer) follow = oPlayer;
-else if instance_exists(oMenu) follow = oMenu;
-else follow = self;
+else follow = id;
 
 
 camera_set_view_target(cam,follow);
@@ -91,7 +90,7 @@ alarm[0] = 30; //replace with timer later
 
 //draw parallax
 //set variable for this in settings
-if !instance_exists(oParallaxBgr) {
+if !instance_exists(oParallaxBgr) && layer_exists("parallax_bgr") {
 	instance_create_layer(0,0,"parallax_bgr",oParallaxBgr);
 }
 
