@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "DARK GRASS TILES",
-    "path": "folders/Graphics and Sprites/TILES/DARK GRASS TILES.yy",
+    "path": "folders/DARK GRASS TILES.yy",
   },
   "resourceVersion": "1.0",
   "name": "Tileset_Add_on___Modified",

@@ -137,23 +137,16 @@ function draw_debug_info(){
 	draw_set_font(fSign); 
 	draw_set_color(c_white); 
 	
-	if global.debugmode = true && instance_exists(oCamera){
-		
-		
+	if global.debugmode = true { //&& instance_exists(oCamera)
 		draw_set_halign(fa_right);
 		draw_text(RES_W-12,40,"Rfps: " + string(fps_reader));
 		draw_text(RES_W-12,60,"Gamefps: " + string(fps));
 		draw_set_halign(fa_left);
-		draw_text(10,40,"facing: " + string(oPlayer.facing_direction));
-		draw_text(10,50,"dir_prev: " + string(oPlayer.dir_prev));
-		//draw_text(RES_W-10,24,"x1,x2,y1,y2: "
-		//+ string(oCamera.x1) + "," dir_prev
-		//+ string(oCamera.x2) + ","
-		//+ string(oCamera.y1) + ","
-		//+ string(oCamera.y2)
-		//); 
 		
-		
+		if instance_exists(oPlayer) {
+			draw_text(10,40,"facing: " + string(oPlayer.facing_direction));
+			draw_text(10,50,"dir_prev: " + string(oPlayer.dir_prev));
+		}		
 	}
 	else {
 		//show_debug_overlay(true);

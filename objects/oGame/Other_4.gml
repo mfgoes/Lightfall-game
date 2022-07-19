@@ -8,6 +8,12 @@ global.exp_points_thisroom = 0;
 		instance_create_depth(0,0,depth,oTransition);
 	}	
 	
+	
+	//make when player is in room
+	if !instance_exists(oUIElements)
+	instance_create_depth(x,y,depth,oUIElements);
+	
+	/*
 	if instance_exists(oPlayer) {
 		
 		if !instance_exists(oUIElements)
@@ -20,4 +26,5 @@ global.exp_points_thisroom = 0;
 		if !instance_exists(oLevelGenerator)
 		instance_create_depth(x,y,depth,oLevelGenerator);	
 	}
+	*/
 	
