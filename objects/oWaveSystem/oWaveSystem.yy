@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_debug_wave",
+    "path": "sprites/spr_debug_wave/spr_debug_wave.yy",
+  },
   "solid": false,
   "visible": false,
   "managed": true,

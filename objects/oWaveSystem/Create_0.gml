@@ -19,6 +19,15 @@ current_wave=0
 current_wave_check=-1
 waves = ds_list_create()
 if disabled = false switch(room) {
+	case(rTestHTML2):
+		ds_list_add(waves,
+			wave_create([1,oEnemyMelee])
+			//,
+			//wave_create([2,oEnemyMelee]),
+			//wave_create([0,oEnemyMelee],[1,oEnemy_Bat_Modified],[2,oEnemy_Bat_Modified])
+		)
+	break;
+	
 	case(rLevel1):
 		ds_list_add(waves,
 			choose(
@@ -32,7 +41,7 @@ if disabled = false switch(room) {
 	break;
 	case(rLevel2):
 		ds_list_add(waves,
-			wave_create([1,oEnemy_Mage]),
+			wave_create([2,oEnemyMelee],[1,oEnemy_Bat_Modified],[2,oEnemy_Bat_Modified]),
 			wave_create([0,oRockBug],[1,oRockBug]),
 			wave_create([2,oEnemyMelee])
 		)

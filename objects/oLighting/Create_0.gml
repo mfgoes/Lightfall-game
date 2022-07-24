@@ -1,5 +1,12 @@
+
+//lighting on HTML builds needs scale fixes. 
+//if (global.HTML_config) instance_destroy(); 
+
 wallthatblock = ds_stack_create() // we keep a list of all walls in this
 light_layer = layer_get_id("Lights"); //double check for a layer later. 
+
+
+//must be called iLight for some reason?
 
 surfaceblur = surface_create(room_width, room_height); // surface drawing the POV light map
 surfacewhatyoucansee = surface_create(room_width, room_height); // the mask of what the player can see

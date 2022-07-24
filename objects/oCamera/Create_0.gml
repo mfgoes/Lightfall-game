@@ -88,9 +88,3 @@ alarm[0] = 30; //replace with timer later
 	buff = 32; //??? room clipping / boundaries for camera
 #endregion
 
-//draw parallax
-//set variable for this in settings
-if !instance_exists(oParallaxBgr) && layer_exists("parallax_bgr") {
-	instance_create_layer(0,0,"parallax_bgr",oParallaxBgr);
-}
-

@@ -3,6 +3,7 @@
 //GMLive
 //if (live_call()) return live_result; 
 
+
 //bgrs
 var background1 = sBgr_Sand1;
 var background2 = sBgr_Sand2;

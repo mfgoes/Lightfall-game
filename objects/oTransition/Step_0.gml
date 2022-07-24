@@ -40,8 +40,9 @@ if(mode !=TRANS_MODE.OFF)
 			}
 			case TRANS_MODE.RESTART:
 			{
-				
-				//game_restart();
+				show_debug_message("PRESS: Restart Game");
+				if os_browser = browser_not_a_browser game_restart(); else
+				SlideTransition(TRANS_MODE.GOTO,rMenu); 
 				break;	
 			}
 		}

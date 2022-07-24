@@ -13,7 +13,7 @@ spriteAttack =	sRockBug;
 spriteMelee  =	sRockBug;
 mask_index	 =	sRockBug;
 
-hp = 10; hp_max = hp; 
+hp = 5; hp_max = hp; 
 
 //sprite_offset_cleanup();
 

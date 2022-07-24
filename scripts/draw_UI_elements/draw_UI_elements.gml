@@ -146,14 +146,19 @@ function draw_debug_info(){
 		if instance_exists(oPlayer) {
 			draw_text(10,40,"facing: " + string(oPlayer.facing_direction));
 			draw_text(10,50,"dir_prev: " + string(oPlayer.dir_prev));
-		}		
+		}	
+		
+		draw_set_halign(fa_left);
+		draw_text(16,100,"press 2 to try next room");
+		if keyboard_check_pressed(ord("2")) {
+			SlideTransition(TRANS_MODE.NEXT)
+		}
 	}
 	else {
 		//show_debug_overlay(true);
 	}
-	//draw_set_halign(fa_left);
-	//draw_set_font(fSign);
-	//draw_text(10,20,string(instance_number(oEnemyGateControl )) + " spawners in room");
+	
+
 }
 	
 function show_region_title(){
