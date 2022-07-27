@@ -12,7 +12,7 @@ col_bgr = make_color_rgb(25,22,23);
 resolution = 2;
 button_h = 30; //button vertical spacing
 menu_x = RES_W * RES_SCALE-button_h;
-menu_y = RES_H * RES_SCALE-120;
+menu_y = RES_H * RES_SCALE-140;
 
 //buttons
 button[0] ="New Game";

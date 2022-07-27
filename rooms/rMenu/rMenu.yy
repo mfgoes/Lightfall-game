@@ -16,17 +16,18 @@
     {"tilesetId":null,"x":0,"y":0,"tiles":{"SerialiseWidth":0,"SerialiseHeight":0,"TileSerialiseData":[
 ],},"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Tiles_1","tags":[],"resourceType":"GMRTileLayer",},
     {"assets":[
-        {"spriteId":{"name":"title_card_duskvalley","path":"sprites/title_card_duskvalley/title_card_duskvalley.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":50.5,"y":70.0,"resourceVersion":"1.0","name":"graphic_2CB72D74","tags":[],"resourceType":"GMRSpriteGraphic",},
+        {"spriteId":{"name":"title_card_duskvalley","path":"sprites/title_card_duskvalley/title_card_duskvalley.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":50.5,"y":45.0,"resourceVersion":"1.0","name":"graphic_2CB72D74","tags":[],"resourceType":"GMRSpriteGraphic",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Title_Assets","tags":[],"resourceType":"GMRAssetLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oStartMenu","path":"objects/oStartMenu/oStartMenu.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":160.0,"resourceVersion":"1.0","name":"inst_2B89F3D7","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oGame","path":"objects/oGame/oGame.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":156.0,"y":159.0,"resourceVersion":"1.0","name":"inst_79EA3DF1","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
-    {"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_effect_windblown_particles","properties":[
+    {"visible":false,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_effect_windblown_particles","properties":[
         {"type":2,"name":"param_sprite","value":"sParticleSnow",},
-        {"type":0,"name":"param_num_particles","value":"31",},
-        {"type":0,"name":"param_particle_spawn_time","value":"218",},
+        {"type":0,"name":"param_num_particles","value":"60",},
+        {"type":0,"name":"param_particle_spawn_time","value":"100",},
         {"type":0,"name":"param_particle_spawn_all_at_start","value":"1",},
-        {"type":0,"name":"param_warmup_frames","value":"30",},
+        {"type":0,"name":"param_warmup_frames","value":"0",},
         {"type":0,"name":"param_particle_mass_min","value":"0.005",},
         {"type":0,"name":"param_particle_mass_max","value":"0.01",},
         {"type":0,"name":"param_particle_start_sprite_scale","value":"1",},
@@ -79,7 +80,7 @@
         {"type":0,"name":"param_trail_min_segment_length","value":"20",},
         {"type":0,"name":"param_trail_src_blend","value":"5",},
         {"type":0,"name":"param_trail_dest_blend","value":"6",},
-        {"type":0,"name":"param_num_blowers","value":"2.25",},
+        {"type":0,"name":"param_num_blowers","value":"3",},
         {"type":0,"name":"param_blower_size_min","value":"0.2",},
         {"type":0,"name":"param_blower_size_max","value":"0.6",},
         {"type":0,"name":"param_blower_speed_min","value":"0.2",},
@@ -158,6 +159,7 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_2B89F3D7","path":"rooms/rMenu/rMenu.yy",},
+    {"name":"inst_79EA3DF1","path":"rooms/rMenu/rMenu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

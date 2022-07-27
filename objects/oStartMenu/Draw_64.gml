@@ -24,9 +24,10 @@ repeat(buttons) {
 
 
 //version
-draw_set_halign(fa_center);
+draw_set_halign(fa_left);
 draw_set_color(col_active);
-draw_text(RES_W,RES_H*resolution-30,"v0.2 Game Demo");
+var pl_m = 32; //padding left
+draw_text(pl_m,RES_H*resolution-32,"v0.2 Alpha");
 
 display_set_gui_size(RES_W, RES_H); //reset
 draw_cursor_custom(); 
