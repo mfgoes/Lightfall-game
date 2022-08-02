@@ -18,7 +18,7 @@ gui_margin = 24;
 
 menu_x_target = gui_width/2;
 menu_speed = 15; //lower = faster
-menu_font = f_title_sans;
+font_pixel = f_title_sans;
 menu_committed = -1;
 menu_control = true; //can control menu
 m = 0; //??

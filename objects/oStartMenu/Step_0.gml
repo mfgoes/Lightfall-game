@@ -15,12 +15,12 @@ last_selected = menu_index;
 /// @description Confirm button
 if (key_confirm) {
 	switch (menu_index) {
-		case 0: //new game
+		case 1: //new game
 			show_debug_message("PRESS: NEW GAME");
 			SlideTransition(TRANS_MODE.GOTO,rLevel1); 
 			break;
 		
-		case 1: //load game
+		case 0: //load game
 			show_debug_message("PRESS: NEW GAME");
 			if (!file_exists(SAVEFILE)) {
 					SlideTransition(TRANS_MODE.NEXT);	

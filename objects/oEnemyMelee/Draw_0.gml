@@ -13,7 +13,7 @@ if (flash > 0)
 } 
 if image_alpha <1 image_alpha+=0.025;
 
-draw_set_font(fSign);
+draw_set_font(f_smooth);
 draw_text(x,y-30,timer_get("leap_timer"));
 draw_set_color(c_blue);
 draw_text(x,y-40,"h: " + string(h_leap));

@@ -51,7 +51,7 @@ display_set_gui_size(RES_W, RES_H); //text is twice the resolution
 
 //debug 
 if global.debugmode = true {
-	draw_set_font(fSign);
+	draw_set_font(f_smooth);
 	if BL_hover = true {
 		draw_text(100,100,"BL Hover"); 	
 	}

@@ -24,7 +24,7 @@
 #region debug
 	/*var opacity = 0.2;
 	if global.debugmode = true {
-		draw_set_font(fSign);
+		draw_set_font(f_smooth);
 		//draw_text(x+10,y+20,"active: " + string(active));	
 		//draw_text(x+10,y+40,"width: " + string( bbox_right + 1 - bbox_left )); 	
 	

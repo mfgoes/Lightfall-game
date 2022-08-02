@@ -21,7 +21,7 @@ draw_text(10,100,alarm[0]);
 	
 	//draw title
 	draw_set_color(col_font);
-	draw_set_font(menu_font);
+	draw_set_font(font_pixel);
 	draw_set_halign(fa_center);
 	draw_text(x_mid, margin_y_win+45, menu_title);
 

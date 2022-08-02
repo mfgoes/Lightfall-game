@@ -50,7 +50,7 @@ function draw_UI_elements(){
 			var bar_max = 16; //size of load bar
 			var time_c = 0.1 //time divider (for visual)
 			//cooldown numbers
-			draw_set_font(fSign);
+			draw_set_font(f_smooth);
 			draw_set_halign(fa_center);
 			
 			//PRIMARY 
@@ -134,7 +134,7 @@ function draw_debug_info(){
 	var margin_right = RES_W-96;
 	var margin_bottom =  RES_H -35;
 	var UIscale = 0.5; //set this to customizable variable later
-	draw_set_font(fSign); 
+	draw_set_font(f_smooth); 
 	draw_set_color(c_white); 
 	
 	if global.debugmode = true { //&& instance_exists(oCamera)
@@ -198,7 +198,7 @@ function draw_objective_UI(){
 		var text_res_scale = 1;
 		display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
 		draw_set_halign(fa_right);
-		draw_set_font(fSign);
+		draw_set_font(f_smooth);
 		draw_set_color(text_bgr);
 	
 		var text = "Find the Portal" 
