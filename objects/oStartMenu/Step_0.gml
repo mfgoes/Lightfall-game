@@ -21,18 +21,26 @@ if (key_confirm) {
 			break;
 		
 		case 0: //load game
-			show_debug_message("PRESS: NEW GAME");
-			if (!file_exists(SAVEFILE)) {
-					SlideTransition(TRANS_MODE.NEXT);	
+			
+			if global.HTML_config = 1 {
+				show_debug_message("PRESS: NEW GAME");
+				SlideTransition(TRANS_MODE.GOTO,rLevel1); 
 			}
 			else {
-					var file = file_text_open_read(SAVEFILE);
-					var target = file_text_read_real(file);
-					global.kills = file_text_read_real(file);
-					global.hasgun = file_text_read_real(file);
-					global.exp_points = file_text_read_real(file);
-					file_text_close(file);
-					SlideTransition(TRANS_MODE.GOTO,target);
+				
+				show_debug_message("PRESS: NEW GAME");
+				if (!file_exists(SAVEFILE)) {
+						SlideTransition(TRANS_MODE.NEXT);	
+				} //make it impossible to save on the main room, otherwise it loops. 
+				else {
+						var file = file_text_open_read(SAVEFILE);
+						var target = file_text_read_real(file);
+						global.kills = file_text_read_real(file);
+						global.hasgun = file_text_read_real(file);
+						global.exp_points = file_text_read_real(file);
+						file_text_close(file);
+						SlideTransition(TRANS_MODE.GOTO,target);
+				}
 			}
 			break;
 		

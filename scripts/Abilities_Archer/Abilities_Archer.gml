@@ -95,6 +95,7 @@ function Ability_Secondary_Archer() {
 			
 			direction = oPlayer.dir_prev; 
 			spd = 7;
+			damage = 3; //default = 1;
 					
 			image_angle = direction;
 			x = x - lengthdir_x(0,other.image_angle);

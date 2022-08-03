@@ -10,6 +10,9 @@ y2 = 0;
 active_zone = false; //turn on when in zone
 cam_speed = 4; //higher is slower
 zoom_speed = 0.8;
+zoom_min = 0.1; zoom_max = 0.7; //how far you can zoom
+
+
 start_zoom = 0.05; //zoom level at start of level
 zoom = 0.2; //zoom level adjusted through scroll
 weapon_zoom = 0; //zoom level affected by weapon
@@ -32,16 +35,19 @@ x_new = 0; y_new = 0; //reset this to follow position (ie oPlayer)
 	surface_resize(application_surface, RES_W * RES_SCALE, RES_H * RES_SCALE);
 	display_set_gui_size(RES_W, RES_H);
 
-	//center window
-	var display_width  = display_get_width();
-	var display_height = display_get_height();
+	//center window. NOTE: DOES NOT WORK WELL WITH HTML AS IT MEASURES BROWSER WINDOWS. 
+	if global.HTML_config = 0 {
+		 iw  = display_get_width();
+		 ih = display_get_height(); 
+	} else {
+		 iw = 960;
+		 ih = 540; //beware of scaling
+	}
+	
 	var window_width = RES_W * RES_SCALE;
 	var window_height = RES_H * RES_SCALE;
 	//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2); //BRING THIS BACK LATER
 
-	//"ideal width" -> Remove this later
-	iw = display_width;
-	ih = display_height;
 	//Mouse previous
 	mouse_x_previous = device_mouse_x_to_gui(0);
 	mouse_y_previous = device_mouse_y_to_gui(0);

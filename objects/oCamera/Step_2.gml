@@ -30,13 +30,32 @@ if global.game_paused
 		x += (xTo - x) / cam_speed // / 4; //cam_speed;
 		y += (yTo - y) / cam_speed*0.6 // / 2; //cam_speed; 
 	
+		
+		
 	
 		//new zoom code utilizing weapon zoom
-		zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,0.4); 
+		zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,2.4); 
 	
-		var newzoom =clamp(zoom + start_zoom,0.1,0.2);
+		var newzoom =clamp(zoom + start_zoom,zoom_min,zoom_max); //make this adjustable.
+		
+		//get camera width (doesn't work on HTML)
+		
+		
 		var view_w = lerp(camera_get_view_width(cam),iw*newzoom,zoom_speed); //zoom_speed = 0.25;
 		var view_h = lerp(camera_get_view_height(cam),ih*newzoom,zoom_speed); //lerp from old view height to display height
+		
+		//go towards ideal zoom (for both HTML and desktop) -> This is a quick fix. Make this more dynamic in the future. 
+		if view_h < 216 { //zoom out
+			view_h = lerp(camera_get_view_height(cam),216, 0.1);
+		}
+		if view_w < 384 { //zoom out
+			view_w = lerp(camera_get_view_width(cam),384, 0.1);
+		}
+		
+		
+		
+		//var view_w = lerp(camera_get_view_width(cam),iw*newzoom,zoom_speed); //zoom_speed = 0.25;
+		//var view_h = lerp(camera_get_view_height(cam),ih*newzoom,zoom_speed); //lerp from old view height to display height
 
 		//Screenshake
 		x += random_range(-shake_remain,shake_remain);

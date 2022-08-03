@@ -131,10 +131,7 @@ function draw_cursor_custom(){
 }
 	
 function draw_debug_info(){
-	var margin_right = RES_W-96;
-	var margin_bottom =  RES_H -35;
-	var UIscale = 0.5; //set this to customizable variable later
-	draw_set_font(f_smooth); 
+	draw_set_font(fSign); 
 	draw_set_color(c_white); 
 	
 	if global.debugmode = true { //&& instance_exists(oCamera)
@@ -143,16 +140,9 @@ function draw_debug_info(){
 		draw_text(RES_W-12,60,"Gamefps: " + string(fps));
 		draw_set_halign(fa_left);
 		
-		if instance_exists(oPlayer) {
-			draw_text(10,40,"facing: " + string(oPlayer.facing_direction));
-			draw_text(10,50,"dir_prev: " + string(oPlayer.dir_prev));
-		}	
+		draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
+		draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));
 		
-		draw_set_halign(fa_left);
-		draw_text(16,100,"press 2 to try next room");
-		if keyboard_check_pressed(ord("2")) {
-			SlideTransition(TRANS_MODE.NEXT)
-		}
 	}
 	else {
 		//show_debug_overlay(true);

@@ -1,5 +1,5 @@
 /// @description fullscreen code
-if keyboard_check_pressed(vk_f1) || keyboard_check_pressed(ord("0"))
+if (keyboard_check_pressed(vk_f1) || keyboard_check_pressed(ord("0"))) && global.HTML_config = 0
    {
    if window_get_fullscreen()
       {
