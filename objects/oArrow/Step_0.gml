@@ -1,6 +1,26 @@
 /// @description Parent + custom code
 event_inherited();
 
+if(live_call()) return live_result;
+
+//destroy after a certain distance
+if abs(x-xstart) > distance_max {
+	//poof
+	repeat(7) with (instance_create_layer(x,y,"Bullets",oDust)) {
+			vsp = -1.5; if random(1) < 0.2 vsp = 1; image_alpha = 0.6+random(0.3);
+			hsp = random_range(-1,1);
+			image_index = irandom(image_number);
+			image_xscale = choose (1.5,-1.5);
+			image_yscale = choose (1.5,-1.5);
+	}
+	instance_create_depth(x+lengthdir_x(6,direction),y,depth,oBulletImpactEffect);
+	ScreenShake(1,3);
+	instance_destroy();
+	
+}
+
+
+
 if spd > 0 { //check if in wall
 	//gravity + movement
 	if vsp < 20 vsp+=grv;

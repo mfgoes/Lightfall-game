@@ -4,7 +4,7 @@
 Cleaned up in 2022.4. 
 */
 
-function Ability_Primary_Archer() {
+function Ability_Primary_Archer() { //POWER SHOT
 	
 	if(live_call()) return live_result;
 	
@@ -64,7 +64,7 @@ function Ability_Primary_Archer() {
 	}	
 }
 
-function Ability_Secondary_Archer() {
+function Ability_Secondary_Archer() { //TRIPLE SHOT
 	
 	if(live_call()) return live_result;
 	var key_secondary = oPlayer.key_secondary;

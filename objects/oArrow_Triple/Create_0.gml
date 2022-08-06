@@ -9,6 +9,7 @@ spd = 17;
 gun_flare = 2;
 grv = 0.004; // was 0.02 gravity
 vsp = 0;
+distance_max = 230; //pixels
 explode = false
 angle_randomize = 0;
 angle_prev = 0;

@@ -5,7 +5,6 @@
 	gunkickx = 3;
 	gunkicky = 0;
 	weapon_recoil = 0;
-	flip_weapon = 0;	
 	weapon_active = 0; 
 #endregion
 
