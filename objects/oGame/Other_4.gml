@@ -17,7 +17,7 @@ global.exp_points_thisroom = 0;
 	dd = instance_create_depth(0,0,depth,oCamera);
 	if instance_exists(oPlayer) dd.follow = oPlayer;
 	
-	//Biome generator (needs to be created after camera)
+	//Biome generator (needs to be created after camera). Includes audio stuff for now
 	if !instance_exists(oLevelGenerator)
 	instance_create_depth(x,y,depth,oLevelGenerator);	
 	

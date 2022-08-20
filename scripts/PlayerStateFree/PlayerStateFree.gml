@@ -153,17 +153,29 @@ if canrope = 1 {
 
 #endregion
 
-#region sound effects (move this somewhere else later)
-	//footsteps
-	/*
-	if sprite_index = spriteWalk && (image_index = 1 or image_index = 4){ 
-		repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
-		{vsp = random_range(-0.2,0.2) image_alpha = random_range(0.1,0.27);}
-	
-		//play footstep sound
+//Play walk sounds
+PlayerWalkSounds();
+}
+
+
+function PlayerWalkSounds() {
+	//FUTURE IMPROVEMENTS: Change walk sounds depending on surface
+	#region 
+		//footsteps 2.0
+		if (key_left or key_right) && (grounded) {
+		timer_init("walk_sound");
+		
+		if timer_get("walk_sound") <= 0 {
+			timer_set("walk_sound",30);	
+		}
+		
 		var footstepsound = choose(snFootstep2,snFootstep3,snFootstep4); //,snFootstep2,snFootstep3,snFootstep4
-		audio_sound_gain(footstepsound,0.5,0);
-		if !audio_is_playing(footstepsound) audio_play_sound(footstepsound,10,0);
-		}	*/
-#endregion
+		if timer_get("walk_sound") = 1 && !audio_is_playing(footstepsound) {
+			audio_sound_gain(footstepsound,0.7*global.sound_volume,0);
+			audio_play_sound(footstepsound,1,0);
+			repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
+			{vsp = random_range(-0.5,0.3) image_alpha = choose(0.5,0.8,0.9);}
+		}
+		}
+	#endregion
 }

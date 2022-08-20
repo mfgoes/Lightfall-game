@@ -14,6 +14,8 @@ zoom_min = 0.1; zoom_max = 0.7; //how far you can zoom
 
 
 start_zoom = 0.05; //zoom level at start of level
+if global.HTML_config = 0 {start_zoom = -0.3}
+
 zoom = 0.2; //zoom level adjusted through scroll
 weapon_zoom = 0; //zoom level affected by weapon
 

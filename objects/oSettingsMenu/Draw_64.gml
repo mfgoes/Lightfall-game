@@ -38,7 +38,7 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),  device_mouse_y_to_gui(0),
 //draw arrows
 var yy = menu_y_top * resolution + (line_height*0); //verify yy check
 draw_set_halign(fa_center);
-draw_set_font(fMenu);
+draw_set_font(f_title_sans);
 draw_set_color(col);
 draw_set_alpha(1);
 
@@ -51,7 +51,7 @@ display_set_gui_size(RES_W, RES_H); //text is twice the resolution
 
 //debug 
 if global.debugmode = true {
-	draw_set_font(f_smooth);
+	draw_set_font(fSign);
 	if BL_hover = true {
 		draw_text(100,100,"BL Hover"); 	
 	}

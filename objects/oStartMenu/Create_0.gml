@@ -1,9 +1,13 @@
-/// @description GUI/VARS/Menu Setup
+ /// @description GUI/VARS/Menu Setup
 global.has_control = false; //replace menu pauses with a global one
 
 //init transition object (required for changing rooms)
 instance_create_depth(0,0,depth,oTransition);
 
+//skip menu if toggle is on
+if (skip_menu) {
+	SlideTransition(TRANS_MODE.GOTO,rLevel1); 
+}
 
 //init UI colors
 col_regular = make_color_rgb(204,205,189); //basic, white

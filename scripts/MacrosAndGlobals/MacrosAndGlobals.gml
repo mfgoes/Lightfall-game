@@ -3,13 +3,16 @@
 function MacrosAndGlobals(){
 
 #region globals
-	//config
+	//config different game modes (ie skip menu, god mode, debugmode, etc)
 	if (os_browser == browser_not_a_browser) global.HTML_config = 0; else global.HTML_config = 1;
+	//:TEST_NOMENU true
+	
 	//settings
 	global.debugmode = false; 
 	global.game_paused = false;
 	global.pause_bg = noone;
 	global.sound_volume = 1;
+	global.music_volume = 0.5;
 	global.effects = true; //toggle for performance
 	global.gamepad_on = false; //gamepad
 	
@@ -23,7 +26,7 @@ function MacrosAndGlobals(){
 	global.exp_points = 0;
 	global.exp_points_thisroom = 0;
 	
-	audio_master_gain(global.sound_volume);
+	audio_master_gain(global.sound_volume); //remove this later, better to split use 2 audio channels: Music and sound effects (and voice acting later)
 #endregion
 
 #region set up resolution macros MOVE THIS TO FUNCTION LATER

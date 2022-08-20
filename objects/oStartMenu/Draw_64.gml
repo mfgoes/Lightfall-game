@@ -42,6 +42,8 @@ button_h = 50; //line height
 
 #region info box
 
+	if(live_call()) return live_result;
+
 	box_width = 280; //px
 	draw_set_alpha(0.5);
 	draw_set_color(c_black);
@@ -50,10 +52,10 @@ button_h = 50; //line height
 	//text
 	draw_set_halign(fa_left);
 	draw_set_color(col_yellow);
-	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y-16,"Dev updates - AUG 2022");
+	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y-16,"Dev updates - 8 Aug 2022");
 	draw_set_color(col_regular);
 	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y+24,
-	">Gameplay improvements & \n new UI for the menu \n >New enemy designs \n >New visuals");
+	">added max distance for \n attacks. \n >tweaked enemy health \n more combat changes \n coming soon! \n ~Mischa");
 	
 
 #endregion

@@ -157,7 +157,7 @@ function show_region_title(){
 		var text_res_scale = 1.5;
 		display_set_gui_size(RES_W*text_res_scale, RES_H*text_res_scale);
 		draw_set_halign(fa_center);
-		draw_set_font(fMenu);
+		draw_set_font(fSign);
 		timer_init("fade_in");	
 		timer_init("fade_out");
 		
