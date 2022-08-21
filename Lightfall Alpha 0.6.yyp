@@ -341,7 +341,7 @@
   "configs": {
     "name": "Default",
     "children": [
-      {"name":"TEST_NOMENUS","children":[],},
+      {"name":"GAME_NOMENUS","children":[],},
       {"name":"TestConfig","children":[],},
     ],
   },

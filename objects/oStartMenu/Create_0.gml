@@ -5,7 +5,7 @@ global.has_control = false; //replace menu pauses with a global one
 instance_create_depth(0,0,depth,oTransition);
 
 //skip menu if toggle is on
-if (skip_menu) {
+if (DEV_MODE) { //skip menu if in devleoper mode
 	SlideTransition(TRANS_MODE.GOTO,rLevel1); 
 }
 

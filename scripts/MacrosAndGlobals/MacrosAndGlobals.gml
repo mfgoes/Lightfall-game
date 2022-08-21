@@ -5,7 +5,6 @@ function MacrosAndGlobals(){
 #region globals
 	//config different game modes (ie skip menu, god mode, debugmode, etc)
 	if (os_browser == browser_not_a_browser) global.HTML_config = 0; else global.HTML_config = 1;
-	//:TEST_NOMENU true
 	
 	//settings
 	global.debugmode = false; 
@@ -15,14 +14,13 @@ function MacrosAndGlobals(){
 	global.music_volume = 0.5;
 	global.effects = true; //toggle for performance
 	global.gamepad_on = false; //gamepad
-	
 	//player
 	global.hasgun = true;
 	global.kills = 0;
 	global.killsthiswave = 0;
 	global.wavetotal = 0;
 	global.killsthisroom = 0;
-	global.skipmenu = 0; 
+	
 	global.exp_points = 0;
 	global.exp_points_thisroom = 0;
 	
@@ -37,6 +35,12 @@ function MacrosAndGlobals(){
 	#macro RES_RATIO RES_H/RES_W
 	#macro CAM_SMOOTH 0.1
 	#macro TILE_SIZE 16 
+	
+	//setup game environments (ie different devices or testing envirnoment)
+	#macro DEV_MODE false
+	#macro GAME_NOMENUS:DEV_MODE true
+	//global.skip_menu = DEV_MODE;
+	
 #endregion
 
 //Enable GMLive (live reloading)
