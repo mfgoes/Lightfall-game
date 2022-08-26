@@ -6,7 +6,7 @@ instance_create_depth(0,0,depth,oTransition);
 
 //skip menu if toggle is on
 if (DEV_MODE) { //skip menu if in devleoper mode
-	SlideTransition(TRANS_MODE.GOTO,rLevel1); 
+	room_goto_next();
 }
 
 //init UI colors

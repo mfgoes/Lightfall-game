@@ -5,7 +5,7 @@ if global.game_paused
 
 
 if instance_exists(oPlayer) {
-	if (point_in_circle(oPlayer.x,oPlayer.y,x,y,32)) && (!instance_exists(oText))
+	if distance_to_object(oPlayer) < TILE_SIZE && (!instance_exists(oText))
 	{
 		nearby = true;
 		if (keyboard_check_pressed(ord("W")))
@@ -23,3 +23,7 @@ if instance_exists(oPlayer) {
 		}
 	} else nearby = false; 
 }
+
+//hover effect
+direction+=0.1;
+hover += cos(direction)/2;

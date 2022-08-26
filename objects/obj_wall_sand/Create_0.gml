@@ -10,3 +10,5 @@ if !place_meeting(x,y-1,object_index) && random(1) < 0.4 {
 } else
 draw_grass = false;
 img_grass = round(random(sprite_get_number(sSandDecorGrass)));
+
+image_speed = 0;

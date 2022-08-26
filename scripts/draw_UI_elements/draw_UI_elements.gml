@@ -142,6 +142,8 @@ function draw_debug_info(){
 		
 		draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
 		draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));
+		draw_text(4,40,"zoom: " + string(oCamera.zoom));
+		draw_text(4,70,"zoom_start: " + string(oCamera.start_zoom));
 		
 	}
 	else {

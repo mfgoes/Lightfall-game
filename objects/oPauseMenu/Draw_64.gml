@@ -47,14 +47,11 @@ draw_text(10,100,alarm[0]);
 #endregion
 
 #region draw margins and debug
-/*
+
 if global.debugmode = true {
-	display_set_gui_size(RES_W, RES_H);
-	draw_set_color(c_aqua); draw_set_alpha(0.3);
-	draw_rectangle(0,0,RES_W,menu_y_top,0);
-	draw_rectangle(0,RES_H,RES_W,menu_y_bot,0);
-	draw_text(40,40,menu_index);
-}*/
+	draw_set_halign(fa_left);
+	draw_text(10,RES_H-32,"arrows to switch rooms");
+}
 #endregion
 
 //redraw cursor on top of menu

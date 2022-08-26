@@ -80,3 +80,16 @@ if (menu_committed != -1)
 
 ///GUI items ease in
 //menu_x +=(menu_x_target - menu_x) / menu_speed;
+
+#region debug room switching
+	if global.debugmode = true {
+		if keyboard_check_released(vk_left) {
+			room_goto_previous();	
+			instance_destroy();
+		}
+		if keyboard_check_released(vk_right) {
+			room_goto_next();
+			instance_destroy();
+		}
+	}
+#endregion

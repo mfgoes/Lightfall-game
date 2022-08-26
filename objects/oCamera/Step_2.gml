@@ -3,11 +3,8 @@ if global.game_paused
 	exit;
 }
 
-#region camera essentials (clean up later)
-	//timers start camera position
-	timer_init("zoom_out");
-	if timer_get("zoom_out") =-1 {timer_set("zoom_out",10)}
-	if start_zoom > 0 && alarm[0] = -1 {start_zoom-=0.001;} //start_zoom = -0.1; lerp this later (for smooth zoom out)
+	
+if start_zoom > 0 start_zoom -= 0.0004; else start_zoom = 0;
 
 	//Upate camera destination
 	if follow != id //only move camera if there's an object to follow
@@ -34,25 +31,27 @@ if global.game_paused
 		
 	
 		//new zoom code utilizing weapon zoom
-		zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.05,0.05,2.4); 
-	
-		var newzoom =clamp(zoom + start_zoom,zoom_min,zoom_max); //make this adjustable.
+		zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.025,zoom_min,zoom_max); 
+		if zoom < zoom_min zoom = zoom_min;
+		if zoom > zoom_max zoom = zoom_max;
+		var newzoom = zoom - start_zoom; //clamp(zoom + start_zoom,zoom_min,zoom_max); //make this adjustable.	
 		
-		//get camera width (doesn't work on HTML)
-		
-		
+		//this enables proper zoom
 		var view_w = lerp(camera_get_view_width(cam),iw*newzoom,zoom_speed); //zoom_speed = 0.25;
 		var view_h = lerp(camera_get_view_height(cam),ih*newzoom,zoom_speed); //lerp from old view height to display height
 		
 		//go towards ideal zoom (for both HTML and desktop) -> This is a quick fix. Make this more dynamic in the future. 
+		/*
 		if view_h < 216 { //zoom out
 			view_h = lerp(camera_get_view_height(cam),216, 0.1);
 		}
 		if view_w < 384 { //zoom out
 			view_w = lerp(camera_get_view_width(cam),384, 0.1);
-		}
+		}*/
 		
-		
+		//this fixes the camera (no zoom effects)
+		//var view_w = camera_get_view_width(cam);
+		//var view_h = camera_get_view_height(cam);
 		
 		//var view_w = lerp(camera_get_view_width(cam),iw*newzoom,zoom_speed); //zoom_speed = 0.25;
 		//var view_h = lerp(camera_get_view_height(cam),ih*newzoom,zoom_speed); //lerp from old view height to display height

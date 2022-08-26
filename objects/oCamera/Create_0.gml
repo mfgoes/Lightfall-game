@@ -10,13 +10,13 @@ y2 = 0;
 active_zone = false; //turn on when in zone
 cam_speed = 4; //higher is slower
 zoom_speed = 0.8;
-zoom_min = 0.1; zoom_max = 0.7; //how far you can zoom
+zoom_min = 0.05; zoom_max = 0.25; //how far you can zoom
 
 
-start_zoom = 0.05; //zoom level at start of level
-if global.HTML_config = 0 {start_zoom = -0.3}
+start_zoom = 0.02; //zoom level at start of level
+//if global.HTML_config = 0 {start_zoom = 0.3}
 
-zoom = 0.2; //zoom level adjusted through scroll
+zoom = 0.18; //zoom level adjusted through scroll
 weapon_zoom = 0; //zoom level affected by weapon
 
 
