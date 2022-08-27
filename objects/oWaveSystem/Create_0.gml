@@ -1,8 +1,8 @@
 function enemy_wave() constructor {
     // struct members
-    positions = array_create(argument_count);
-    enemies = array_create(argument_count);
-    count = argument_count;
+    positions = array_create(argument_count); //choose from spawn points
+    enemies = array_create(argument_count);   //choose from object types
+    count = argument_count;					  //how many arguments = how many spawns per wave
     
     // set array values
     for (var i = 0; i < argument_count; i++) {
@@ -41,9 +41,10 @@ if disabled = false switch(room) {
 	break;
 	case(rLevel2):
 		ds_list_add(waves,
-			wave_create([2,oEnemyMelee],[1,oEnemy_Bat_Modified],[2,oEnemy_Bat_Modified]),
-			wave_create([0,oRockBug],[1,oRockBug]),
-			wave_create([2,oEnemyMelee])
+			wave_create([2,oEnemy_Bat_Modified],[1,oEnemy_Bat_Modified],[2,oEnemy_Bat_Modified]),
+			wave_create([0,oRockBug],[1,oEnemyMelee]),
+			wave_create([2,oEnemyMelee]),
+			wave_create([0,oEnemy_Mage],[1,oEnemy_Mage],[2,oEnemyMelee])
 		)
 	break;
 	case(rLevel3):

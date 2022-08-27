@@ -5,9 +5,9 @@ if (live_call()) return live_result;
 
 
 //bgrs
-var background1 = sBgr_Sand1;
-var background2 = sBgr_Sand2;
-var background3 = bgr_sand_night;
+var background1 = bgr_sand_night;
+var background2 = bgr_sand_night;
+var background3 = bgr_hills;
 var backgroundsky = bgr_dark_stars;
 
 //init vars
@@ -32,7 +32,7 @@ var x_width = sprite_get_width(background3);
 
 
 //make y position responsive to zoom level (improve this later)
-var y_margin = 200; if oCamera.zoom >= 0.5 y_margin = 150;
+var y_margin = 100; if oCamera.zoom >= 0.5 y_margin = 150;
 
 //backgrounds for level 1 and 2
 if room = rLevel1 or room = rLevel2 {
