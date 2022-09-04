@@ -19,23 +19,15 @@ current_wave=0
 current_wave_check=-1
 waves = ds_list_create()
 if disabled = false switch(room) {
-	case(rTestHTML2):
+		
+	case(rLevel1):
 		ds_list_add(waves,
-			wave_create([1,oEnemyMelee])
-			,
-			wave_create([2,oEnemyMelee]),
-			wave_create([0,oEnemyMelee],[1,oEnemy_Mage],[2,oEnemy_Boss])
+			wave_create([2,oEnemyChonkyDasher],[1,oEnemyMelee]),
+			wave_create([3,oRockBug],[1,oEnemyMelee]),
+			wave_create([2,oEnemyMelee])
 		)
 	break;
 	
-	case(rLevel1):
-		ds_list_add(waves,
-			wave_create([2,oEnemyChonkyDasher],[1,oEnemy_Mage],[2,oEnemyChonkyDasher]),
-			wave_create([0,oRockBug],[1,oEnemyMelee]),
-			wave_create([2,oEnemyMelee]),
-			wave_create([0,oEnemy_Mage],[1,oEnemy_Mage],[2,oEnemyMelee])
-		)
-	break;
 	case(rLevel2):
 		ds_list_add(waves,
 			wave_create([2,oEnemy_Bat_Modified],[1,oEnemy_Bat_Modified],[2,oEnemy_Bat_Modified]),
@@ -44,9 +36,19 @@ if disabled = false switch(room) {
 			wave_create([0,oEnemy_Mage],[1,oEnemy_Mage],[2,oEnemyMelee])
 		)
 	break;
+	
 	case(rLevel3):
 		ds_list_add(waves,
 			wave_create([0,oEnemy_Boss]),
+		)
+	break;
+	
+	case(rTestHTML2):
+		ds_list_add(waves,
+			wave_create([1,oEnemyMelee])
+			,
+			wave_create([2,oEnemyMelee]),
+			wave_create([0,oEnemyMelee],[1,oEnemy_Mage],[2,oEnemy_Boss])
 		)
 	break;
 }

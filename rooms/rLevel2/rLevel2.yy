@@ -112,7 +112,10 @@
               ],"isDnd":false,"objectId":{"name":"oTransitionTrigger","path":"objects/oTransitionTrigger/oTransitionTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":4.5625,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":592.0,"y":224.0,"resourceVersion":"1.0","name":"inst_70C195C2_1","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"oBlockade","path":"objects/oBlockade/oBlockade.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":224.0,"resourceVersion":"1.0","name":"inst_72708588","tags":[],"resourceType":"GMRInstance",},
           ],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"TransitionTriggers","tags":[],"resourceType":"GMRInstanceLayer",},
-        {"instances":[],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Bullets","tags":[],"resourceType":"GMRInstanceLayer",},
+        {"instances":[
+            {"properties":[],"isDnd":false,"objectId":{"name":"oBarrel_Mana","path":"objects/oBarrel_Mana/oBarrel_Mana.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":320.0,"resourceVersion":"1.0","name":"inst_32B19F2B","tags":[],"resourceType":"GMRInstance",},
+            {"properties":[],"isDnd":false,"objectId":{"name":"oBarrel_Mana","path":"objects/oBarrel_Mana/oBarrel_Mana.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":320.0,"resourceVersion":"1.0","name":"inst_13D9B8D9","tags":[],"resourceType":"GMRInstance",},
+          ],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Bullets","tags":[],"resourceType":"GMRInstanceLayer",},
         {"instances":[
             {"properties":[
                 {"propertyId":{"name":"wave_pos_id","path":"objects/oWavePos/oWavePos.yy",},"objectId":{"name":"oWavePos","path":"objects/oWavePos/oWavePos.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
@@ -235,6 +238,8 @@
     {"name":"inst_38CE71AD","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_1FAE7CF0","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_12E0A9F5","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_32B19F2B","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_13D9B8D9","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

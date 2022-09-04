@@ -1,5 +1,6 @@
 /// @desc create enemy weapon
 event_inherited();
+sprite_offset_cleanup();
 
 //unique stats
 hp = 5;
@@ -11,13 +12,16 @@ walk_spd = 1;
 hsp = 1;
 bullrush_dir = 0; 
 
-//animations
-spriteIdle =	sEnemyBlob_Idle;
-spriteWalk =	sEnemyBlob_Move;
-spriteHurt =	sEnemyBlob_Hurt;
-spriteDie  =	sEnemyBlob_Die;
-spriteAttack  =	sEnemyBlob_Atk;
-attack_anim_end = 0; 
+//unique visuals
+spriteIdle =	sBoom_walk_cuteeyes;
+spriteWalk =	sBoom_walk_cuteeyes;
+spriteJump =	sBoom_walk_cuteeyes;
+spriteDie  =	sBoom_explode2;
+spriteAttack =	sBoomslime_atk;
+spriteMelee  =	sBoom_walk_cuteeyes;
+mask_index	 =	sBoom_walk_cuteeyes;
+//sprite_offset_cleanup();
+
 
 
 // scripts per monster 

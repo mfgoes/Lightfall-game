@@ -231,7 +231,7 @@ function scr_enemy_blink() { //blink means teleporting towards the player
 			timer_set("blink_timer",60);
 		
 			//feedback
-			audio_sound_gain(Futuristic_Sounds__23_,0.3,0);
+			audio_sound_gain(Futuristic_Sounds__23_,0.6,0);
 			audio_play_sound(Futuristic_Sounds__23_,5,0);
 			repeat(3) with(instance_create_layer(x,bbox_bottom,"Bullets",oDust)) { //dust particles
 				vsp = -0.1; image_alpha = 0.3+random(0.3);
@@ -266,7 +266,9 @@ function scr_enemy_attack_bullrun() {
 	//setup boost
 	if timer_get("start_bullrush") <= 0 {
 		audio_sound_gain(snDash,0.2,0);
-		audio_play_sound(snDash,10,0);
+		if !audio_is_paused(snDash)
+			audio_play_sound(snDash,10,0);
+			
 		bullrush_dir = sign(target.x - x); //set a trajectory
 		timer_set("start_bullrush",105); //time before you can charge again)
 		timer_set("charge_timer",80); //how long the charge can be (unless hitting a wall)

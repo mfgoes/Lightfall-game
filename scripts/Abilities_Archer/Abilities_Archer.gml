@@ -63,18 +63,21 @@ function Ability_Primary_Archer() { //POWER SHOT
 	}	
 }
 
-function Ability_Secondary_Archer() { //TRIPLE SHOT
+function Ability_Secondary_Archer() { //TRIPLE SHOT. Consumes Mana too
 	
 	if(live_call()) return live_result;
 	var key_secondary = oPlayer.key_secondary;
 	timer_init("triple_shot");
 	
-	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
+	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 && oPlayer.mana >= 1 {
 			timer_set("secondary_cooldown",secondary_cooldown); 
 			oUIElements.secondary_cooldown  = 0; //for UI
+			oPlayer.mana -=2;	//consume 1 mana. //Update 4 sep 2022
 			
 			//fix shooting direction temporarily
-			if oPlayer.facing_direction = 180 oPlayer.dir_prev = 178; else oPlayer.dir_prev = 2; //remove dir_perv later?
+			direction = oPlayerWeapon.shoot_direction;		
+			oPlayer.dir_prev = oPlayerWeapon.shoot_direction;	
+			//if oPlayer.facing_direction = 180 oPlayer.dir_prev = 178; else oPlayer.dir_prev = 2; //remove dir_perv later?
 			
 			shots_total = 3; //shoot 3 bullets after each other
 			timer_set("triple_shot",5);

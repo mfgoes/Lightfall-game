@@ -84,7 +84,7 @@ if (place_meeting(x,y+1,oPlatformParent) && key_down && can_move && !place_meeti
 
 	if coyote_time > 0 coyote_time -=1; //this variable is for coyote jump
 
-	if hsp < 0 facing_direction = 180 else if hsp > 0 facing_direction = 0;
+	//if hsp < 0 facing_direction = 180 else if hsp > 0 facing_direction = 0; //NOTE: this was causing gun kickback to cause issues
 #endregion 
 
 #region grappling hook

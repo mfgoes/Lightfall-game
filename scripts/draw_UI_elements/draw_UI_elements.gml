@@ -13,7 +13,7 @@ function draw_UI_elements(){
 	var col_bgr = make_colour_rgb(22, 25, 27); //hp bgr; 
 	var col_bgr2 = make_colour_rgb(55, 51, 52); //hp bgr
 	var col_hp = make_colour_rgb(201, 53, 59); //hp fgr
-	var col_exp = make_colour_rgb(66, 191, 255); //hp fgr
+	var col_mana = make_colour_rgb(66, 191, 255); //hp fgr
 
 	if (room != rMenu) && (instance_exists(oPlayer))
 	{
@@ -26,24 +26,24 @@ function draw_UI_elements(){
 			draw_set_color(col_hp);
 			draw_rectangle(margin_left+1,margin_bottom+1,margin_left+healthUI,margin_bottom+7,0);
 	
-			//draw exp bar
-			var expMax = 100;
-			var expUI = global.exp_points * expMax;
-			draw_set_color(col_bgr);
-			draw_rectangle(margin_left,margin_bottom+10,margin_left+expMax,margin_bottom+13,0);
-			draw_set_color(col_bgr2);
-			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax,margin_bottom+12,0);
-			draw_set_color(col_exp);
-			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax*0.5,margin_bottom+12,0); //make this adjustable
-			
-			//draw mana bar / stats
-			draw_set_font(fSign);
-			draw_set_color(c_white); 
-			draw_set_halign(fa_left);
-			draw_text(20,40,"mana: " + string(oPlayer.mana) + "/" + string(oPlayer.mana_max));
-		
 			//draw profile
 			draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);
+	
+			//draw mana bar
+			
+			//draw_set_font(fSign);
+			//draw_set_color(c_white); 
+			//draw_set_halign(fa_left);
+			//draw_text(20,40,"mana: " + string(oPlayer.mana) + "/" + string(oPlayer.mana_max));
+			
+			var mana_max = oPlayer.mana_max;
+			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax - 1;
+			draw_set_color(col_bgr);
+			draw_rectangle(margin_left,margin_bottom+10,margin_left+healthUImax,margin_bottom+13,0);
+			draw_set_color(col_mana);
+			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+manaUI,margin_bottom+12,0); //make this adjustable
+			//to do: lerp this for a smooth increase/decrease
+			
 		#endregion
 		
 		#region cooldowns
@@ -52,6 +52,7 @@ function draw_UI_elements(){
 			var w = sprite_get_width(sCooldown_Archer2);
 			var w5 = sprite_get_width(sCooldown_Archer2)+5; //sprite width + 5; (add some spacing
 			var m5 = 5; //margin 5
+			var margin_bottom =  8;
 			var p10 = 10; var pt5 = -4; var p15 = 20;
 			var bar_max = 16; //size of load bar
 			var time_c = 0.1 //time divider (for visual)

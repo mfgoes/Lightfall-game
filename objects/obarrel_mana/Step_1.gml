@@ -22,9 +22,7 @@ if !instance_exists(mywall) && screen_shake = 0 {
 	screen_shake = 1;
 	ScreenShake(1,5);
 
-
-
-	repeat(ceil(random_range(1,2)))		//create dust effect
+	repeat(ceil(random_range(2,3)))		//create dust effect
 	{
 		//dust particles
 		with(instance_create_layer(x,bbox_bottom,"Bullets",oDust))

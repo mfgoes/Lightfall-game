@@ -14,7 +14,7 @@ vsp *= 0.9;
 //move to player
 timer_init("move_to_player");	
 if timer_get("move_to_player") = -1 && speed = 0 {
-	timer_set("move_to_player",50);
+	timer_set("move_to_player",choose(35,40,50));
 }
 
 if !instance_exists(oPlayer) instance_destroy(); 

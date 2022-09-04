@@ -52,10 +52,13 @@ button_h = 50; //line height
 	//text
 	draw_set_halign(fa_left);
 	draw_set_color(col_yellow);
-	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y-16,"Dev updates - 21 Aug 2022");
+	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y-16,"Dev updates - 2 Sep 2022");
 	draw_set_color(col_regular);
+	draw_set_font(f_compact_sans);
 	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y+24,
-	"-added music\n -2 new levels\n -more game juice");
+	"- Fixed major aiming bug \n(direction changed when hit)\n - Added enemy variety\n - Added aim assist \n - 500+ views on YouTube!" 
+	);
+	draw_set_font(fSign);
 	
 
 #endregion
