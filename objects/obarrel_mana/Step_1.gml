@@ -24,14 +24,14 @@ if !instance_exists(mywall) && screen_shake = 0 {
 
 
 
-	repeat(ceil(random_range(2,3)))		//create dust effect
+	repeat(ceil(random_range(1,2)))		//create dust effect
 	{
 		//dust particles
 		with(instance_create_layer(x,bbox_bottom,"Bullets",oDust))
 		{vsp = -0.1; image_alpha = 0.3+random(0.3);
 		hsp = random_range(-1,1)}
 		//create exp
-		with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oPickup_ExpOrb)) //create exp orb
+		with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oOrb_Mana)) //create exp orb
 		{hsp = random_range(-3,3)}
 	}
 }

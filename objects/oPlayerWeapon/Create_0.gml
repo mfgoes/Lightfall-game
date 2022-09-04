@@ -6,6 +6,8 @@
 	gunkicky = 0;
 	weapon_recoil = 0;
 	weapon_active = 0; 
+	shoot_direction = 0;
+	assist_dist = 200;
 #endregion
 
 LoadWeapon_Archer();

@@ -32,6 +32,7 @@ if (key_confirm) {
 				if (!file_exists(SAVEFILE)) {
 						SlideTransition(TRANS_MODE.NEXT);	
 				} //make it impossible to save on the main room, otherwise it loops. 
+				//TO DO: make sure last save isn't on main menu (otherwise this loops badly)
 				else {
 						var file = file_text_open_read(SAVEFILE);
 						var target = file_text_read_real(file);

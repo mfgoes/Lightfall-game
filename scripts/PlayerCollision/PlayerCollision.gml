@@ -45,3 +45,11 @@ function PlayerCollision(){
 	y = y + vsp;
 	
 }
+
+function PlayerCollision_Gates() {
+	if !instance_exists(oBlockade) && instance_exists(oTransitionTrigger) {
+		if place_meeting(x,y,oTransitionTrigger) {
+			SlideTransition(TRANS_MODE.NEXT);		
+		}
+	}	
+}

@@ -7,7 +7,7 @@
 	
 #endregion
 
-#region image angle 
+#region angle weapon
 		
 	//change angle (regular)	
 	if oPlayer.key_primary or oPlayer.key_secondary or oPlayer.key_primary_released {

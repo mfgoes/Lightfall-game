@@ -14,14 +14,14 @@ vsp *= 0.9;
 //move to player
 timer_init("move_to_player");	
 if timer_get("move_to_player") = -1 && speed = 0 {
-	timer_set("move_to_player",20);
+	timer_set("move_to_player",50);
 }
 
 if !instance_exists(oPlayer) instance_destroy(); 
 else
 {
 if timer_get("move_to_player") = 0 {
-	speed = 3+round(random(2));
+	speed = 3 + round(random(2));
 }
 direction = point_direction(x,y,oPlayer.x,oPlayer.y);
 speed+=0.01;
@@ -37,15 +37,16 @@ if place_meeting(x,y,oPlayer) {
 			vsp = 0;
 		}
 		instance_destroy();
-		if start_color = c_white {
+		if start_color = c_white {	//if MANA orb instead of health orb
+			audio_sound_gain(snEquip,0.1,0);
+			audio_sound_pitch(snEquip,random_range(0.8,1));
+			audio_play_sound(snEquip,0,0);
+			if oPlayer.mana < oPlayer.mana_max oPlayer.mana +=1;
+			
+		} else {	//if HP orb
 			audio_sound_gain(snHeal,0.1,0);
-			audio_sound_pitch(snHeal,random_range(0.8,1));
 			audio_play_sound(snHeal,0,0);
 			if oPlayer.hp < oPlayer.hp_max oPlayer.hp++;
-		} else {
-			audio_sound_gain(snEquip,0.1,0);
-			audio_play_sound(snEquip,0,0);
-			global.exp_points +=1; 
 			}
 		
 }

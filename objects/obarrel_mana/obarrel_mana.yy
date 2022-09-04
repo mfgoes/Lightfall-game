@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBattleGate",
-    "path": "sprites/sBattleGate/sBattleGate.yy",
+    "name": "sPot_NuclearWaste",
+    "path": "sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,19 +22,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "BattleGate Obj",
-    "path": "folders/Objects/UNUSED OBJECTS-DELETE LATER/BattleGate Obj.yy",
+    "name": "Interactive Objects",
+    "path": "folders/Objects/Interactive Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBattleGate",
+  "name": "oBarrel_Mana",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -55,7 +55,7 @@ button_h = 50; //line height
 	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y-16,"Dev updates - 21 Aug 2022");
 	draw_set_color(col_regular);
 	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y+24,
-	">added music and sound effects \n ~Mischa");
+	"-added music\n -2 new levels\n -more game juice");
 	
 
 #endregion

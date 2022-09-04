@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 //choose if HP or EXP orb
-if random(1) < 0.3 start_color = c_green; else start_color = c_white;
+start_color = c_white; 
 
 hsp = random_range(-2,2);
 vsp = random_range(-1,-3);

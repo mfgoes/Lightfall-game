@@ -42,8 +42,7 @@ function Ability_Primary_Archer() { //POWER SHOT
 				
 		//create projectile
 		with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			//direction = other.image_angle;
-			if oPlayer.facing_direction = 180 direction = 178; else direction = 2; //adjust this to counter gravity
+			direction = oPlayerWeapon.shoot_direction;			
 			
 			//variable damage
 			if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.8 {damage = 6; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
@@ -113,9 +112,10 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT
 /// @function       Ability_Spread_Archer();
 /// @desc			Calls a storm of arrows to rain down around the player
 function Ability_Spread_Archer() { 
-	if (oPlayer.key_special) && timer_get("special_cooldown") = -1 {
+	if (oPlayer.key_special) && timer_get("special_cooldown") = -1 && oPlayer.mana >= 4 { //consumes 5 mana
 		timer_set("special_cooldown",third_cooldown);
 		oUIElements.third_cooldown  = 0; //for UI
+		oPlayer.mana -=5; 
 		
 		instance_create_depth(x,y,depth,oAttack_StormArrows);
 		

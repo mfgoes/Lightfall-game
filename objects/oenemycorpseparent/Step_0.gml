@@ -53,7 +53,7 @@ if flash = 0 {
 			image_yscale = choose (2,-2);
 		}
 		//create exp
-		with (instance_create_layer(x+random_range(-4,4),bbox_top+2-random(4),"Bullets",oPickup_ExpOrb)) //create exp orb
+		with (instance_create_layer(x+random_range(-4,4),bbox_top+2-random(4),"Bullets",oOrb_Mana)) //create exp orb
 		{hsp = random_range(-3,3)}
 	}
 	instance_destroy();

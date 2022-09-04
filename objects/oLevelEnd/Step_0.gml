@@ -29,10 +29,6 @@ if place_meeting(x,y-1,oPlayer)
 		summon.boss_enemy = true;
 		summon.ScreenShake(2,6);
 	}
-	if instance_exists(oBattleGate) {
-		if (global.wavetotal - global.killsthiswave = 0) { //change to global variable later
-		if !instance_exists(oCamFollow) dd = instance_create_depth(x,y-sprite_height*0.9,depth,oCamFollow);}
-	}
 }
 else 
 if instance_exists(oCamFollow) with(oCamFollow) instance_destroy(); 

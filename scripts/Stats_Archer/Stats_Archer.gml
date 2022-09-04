@@ -1,12 +1,12 @@
 ///General settings for archer character (2022.4)
 
 function LoadCharacter_Archer(){
-//basics
+//load variables specific to this character
 //walkspd = 2; current_walkspd = 0; //use default values
-hp_max  = 8;
+hp_max  = 10;
 hp = hp_max;
-roll_cooldown = 0; 
-roll_cooldown_full = 40;
+mana_max = 20;
+mana = 5;
 }
 
 // Loads visuals

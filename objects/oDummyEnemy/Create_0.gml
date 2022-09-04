@@ -6,7 +6,7 @@ event_inherited();
 
 
 //extras
-hp = 2;
+hp = 8;
 hp_max = hp; 
 
 stunned = 5; //prevents enemy from walking 
@@ -17,3 +17,5 @@ spriteJump =	sDummyIdle;
 spriteDie  =	sDummyDie;
 spriteAttack  =	sDummyIdle;
 spriteMelee  =	sDummyIdle;
+
+sprite_offset_cleanup();

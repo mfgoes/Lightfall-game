@@ -35,6 +35,12 @@ function draw_UI_elements(){
 			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax,margin_bottom+12,0);
 			draw_set_color(col_exp);
 			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+expMax*0.5,margin_bottom+12,0); //make this adjustable
+			
+			//draw mana bar / stats
+			draw_set_font(fSign);
+			draw_set_color(c_white); 
+			draw_set_halign(fa_left);
+			draw_text(20,40,"mana: " + string(oPlayer.mana) + "/" + string(oPlayer.mana_max));
 		
 			//draw profile
 			draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);
@@ -143,7 +149,11 @@ function draw_debug_info(){
 		draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
 		draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));
 		draw_text(4,40,"zoom: " + string(oCamera.zoom));
-		draw_text(4,70,"zoom_start: " + string(oCamera.start_zoom));
+		//draw_text(4,70,"zoom_start: " + string(oCamera.start_zoom));
+		
+		//arrow stuff
+		if instance_exists(oArrow) draw_text(0,100,"arrow dir " + string(oArrow.direction)); 
+		
 		
 	}
 	else {
@@ -198,13 +208,6 @@ function draw_objective_UI(){
 		else if oLevelEnd.boss_summon = true {text = "Defeat the Guardian";}
 		else {text = "Find the Portal";}
 		draw_text(RES_W*text_res_scale-10,5,text);
-	}
-	
-	//battle gates objectives
-	if instance_exists(oBattleGate) && global.wavetotal - global.killsthiswave > 0 {
-		//draw_set_halign(fa_center);
-		//draw_set_color(text_bgr);
-		//draw_text(RES_W/2,20,"Enemies left: " + string(global.wavetotal - global.killsthiswave > 0));
 	}
 
 }

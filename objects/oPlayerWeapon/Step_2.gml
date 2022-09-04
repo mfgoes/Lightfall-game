@@ -33,7 +33,21 @@ else {
 #endregion
 
 #region cooldown abilities
-	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {		
+	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {	
+		//auto aim at closest object
+		var closest = instance_nearest(x,y,pShootable);
+		if distance_to_object(closest) < assist_dist && closest != noone {
+			if sign(closest.x - x) = sign(cos(oPlayer.facing_direction)) && abs(closest.y - y) < 100 &&
+			!collision_line(x,y-12,closest.x,closest.y-12,oWallParent,0,0) {
+				shoot_direction = point_direction(x,y,closest.x,closest.y-12);
+			}
+		else 
+			shoot_direction = oPlayer.facing_direction;			
+		}
+		else 
+			shoot_direction = oPlayer.facing_direction;	
+		
+			
 		//primary attack (LMB)
 		Ability_Primary_Archer(); 	
 		

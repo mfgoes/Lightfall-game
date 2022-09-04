@@ -15,6 +15,8 @@ if (hp <= 0)
 		image_yscale = other.size;
 	}
 	
+	oLevelEnd.boss_defeated = true; //set a small timer to load portal
+	
 	repeat(3)	//create dust effect
 	{
 		//dust particles
@@ -25,7 +27,7 @@ if (hp <= 0)
 			image_yscale = choose (2,-2);
 		}
 		//create exp
-		with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oPickup_ExpOrb)) //create exp orb
+		with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oOrb_Mana)) //create exp orb
 		{hsp = random_range(-3,3)}
 	}
 	audio_play_sound(statue_stomp_02,2,0);

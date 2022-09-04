@@ -9,7 +9,7 @@ if (hp <= 0) {
 			image_yscale = choose (2,-2);
 		}
 		//create exp
-		/*with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oPickup_ExpOrb)) //create exp orb
+		/*with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oOrb_Mana)) //create exp orb
 		//pick up orbs should 'drop' on the floor for a bit before going to the player. Currently they're a bit distracting. 
 		{
 			hsp = random_range(-3,3);

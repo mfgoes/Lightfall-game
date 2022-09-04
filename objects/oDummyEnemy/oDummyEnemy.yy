@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEnemyExploder",
-    "path": "sprites/sEnemyExploder/sEnemyExploder.yy",
+    "name": "sDummyIdle",
+    "path": "sprites/sDummyIdle/sDummyIdle.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies_Basic",
-    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
+    "name": "Enemies Related",
+    "path": "folders/Objects/Enemies Related.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDummyEnemy",
