@@ -1140,7 +1140,7 @@
   },
   "parent": {
     "name": "DARK GRASS TILES",
-    "path": "folders/DARK GRASS TILES.yy",
+    "path": "folders/Graphics and Sprites/TILES/DARK GRASS TILES.yy",
   },
   "resourceVersion": "1.0",
   "name": "TDarkGrassTiles",
