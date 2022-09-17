@@ -47,13 +47,16 @@ else {
 		else 
 			shoot_direction = oPlayer.facing_direction;	
 		
+		if global.debugmode = true {oPlayer.mana = oPlayer.mana_max;}  
 			
 		//primary attack (LMB)
 		Ability_Primary_Archer(); 	
 		
-		//secondary attack (RMB)
+		//secondary attack (RMB)	//To do: move key check here later
 		Ability_Secondary_Archer(); 
 		
 		//spread attack (Q)
-		Ability_Spread_Archer();
+		if (oPlayer.key_special)
+			//Ability_Special_ArrowRain(); //aggressive special
+			Ability_Special_Shockwave(); //freezing shockwave special
 	}

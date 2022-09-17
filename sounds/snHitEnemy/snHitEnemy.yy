@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snHitEnemy.wav",
-  "duration": 0.126723,
+  "duration": 0.121723,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

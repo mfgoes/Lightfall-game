@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function draw_UI_elements(){
 	
 	if(live_call()) return live_result;
@@ -37,7 +36,7 @@ function draw_UI_elements(){
 			//draw_text(20,40,"mana: " + string(oPlayer.mana) + "/" + string(oPlayer.mana_max));
 			
 			var mana_max = oPlayer.mana_max;
-			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax - 1;
+			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax;
 			draw_set_color(col_bgr);
 			draw_rectangle(margin_left,margin_bottom+10,margin_left+healthUImax,margin_bottom+13,0);
 			draw_set_color(col_mana);

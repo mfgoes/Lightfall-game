@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "lux_shot_05.wav",
-  "duration": 0.655667,
+  "duration": 0.650667,
   "parent": {
     "name": "scifi-weapons",
     "path": "folders/Sounds/weapons/scifi-weapons.yy",

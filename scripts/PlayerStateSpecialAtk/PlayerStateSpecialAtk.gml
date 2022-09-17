@@ -1,7 +1,7 @@
 // Each unique ability could have its own script (to simlify coding). Consider reusability in the future. 
 function PlayerStateSpecialAtk(){
 	timer_init("generate attack")
-	sprite_index = spriteMelee; 
+	//sprite_index = spriteMelee; 
 	image_speed = 1;
 	//hsp = 0;
 	var slowwalk = 0.5; 

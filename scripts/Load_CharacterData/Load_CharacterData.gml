@@ -25,7 +25,7 @@ function Load_CharacterData(argument0){
 	
 	switch (argument0) {
 		case 0: //archer character (main)
-			char_sprites = [sProtagIdle, sProtagWalk, sProtagRoll, sProtagJump, sProtagRoll,sArcherMask, sProtagAim, sProtagMelee];
+			char_sprites = [sProtagIdle, sProtagWalk, sProtagRoll, sProtagJump, sProtagRoll,sArcherMask, sProtagAim];
 			character_weapons = [sWeaponBow_Placeholder,sGun, 0,12,5,2,oArrow, oAtk_Laser, oArrow_Triple] 
 			call_ability = [PlayerStateFree,			//None
 							PlayerStateFree,			//Bow
@@ -34,7 +34,7 @@ function Load_CharacterData(argument0){
 							];
 			break;
 		case 1:
-			char_sprites = [sProtagIdle, sProtagWalk, sProtagRoll, sProtagJump, sProtagRoll,sArcherMask, sProtagAim, sProtagMelee];
+			char_sprites = [sProtagIdle, sProtagWalk, sProtagRoll, sProtagJump, sProtagRoll,sArcherMask, sProtagAim];
 			character_weapons = [sGun,1,10,5,2,oBullet_Parent, oBullet_Parent, oBullet_Parent];
 			call_ability = [PlayerStateFree,			//None
 							PlayerStateFree,			//Bow
@@ -43,7 +43,7 @@ function Load_CharacterData(argument0){
 							];
 			break;
 		case 2: //placeholder player
-			char_sprites = [sProtagIdle, sProtagWalk, sProtagRoll, sProtagJump, sProtagRoll,sArcherMask, sProtagAim, sProtagMelee];
+			char_sprites = [sProtagIdle, sProtagWalk, sProtagRoll, sProtagJump, sProtagRoll,sArcherMask, sProtagAim];
 			character_weapons = [sGun,1,10,3,2,oBullet_Parent, oBullet_Parent, oBullet_Parent];
 			call_ability = [PlayerStateFree,			//None
 							PlayerStateFree,			//Bow

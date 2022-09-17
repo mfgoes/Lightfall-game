@@ -17,8 +17,8 @@ function LoadAssets_Archer(){
 	spriteJump    =	sProtagJump;
 	spriteDie     =	sProtagRoll; //update: make new sprite
 	spriteAim     =	sProtagAim;
-	spriteMelee   =	sProtagMelee;
-	spriteSpecial =	sProtagMelee; 
+	spriteMelee   =	sProtagIdle;
+	spriteSpecial =	sProtag_shockwave_playeronly; 
 	mask_index    =	sProtagIdle; 	
 }
 
@@ -35,7 +35,7 @@ function LoadWeapon_Archer(){
 	var sec = room_speed; //60
 	primary_cooldown	= 40;
 	secondary_cooldown  = 50;
-	third_cooldown		= 45;
+	third_cooldown		= 60;
 	roll_cooldown		= 40;
 	
 	// power of each ability here

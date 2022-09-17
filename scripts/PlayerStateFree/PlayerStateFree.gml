@@ -115,39 +115,44 @@ if canrope = 1 {
 #endregion
 
 #region animations
-	//is jumping
-	if (!grounded) //CHECK IF ON SURFACE
-	{
-		sprite_index = spriteJump;
-		image_speed = 0;
-		if (sign(vsp) > 0) image_index = 1; else image_index = 0;
+	//check if using special ability, prioritize this
+	if using_ability = 1 {
+		sprite_index = spriteSpecial
 	}
-	else 
-	//is walk or idle or 'start jumping'
+	else
 	{
-		if sprite_index == spriteJump && image_index = 1 {
-			audio_sound_pitch(snJump1,choose(0.8,1.0,1.2));
-			audio_sound_gain(snJump1,0.1,0);
-			audio_play_sound(snJump1,4,false);
-			repeat(3) {
-				with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
-					vsp = 0.1; image_alpha = 0.5;
-					hsp = random_range(-1,1); 
-					image_xscale = choose (1,-1);
-					image_yscale = choose (1,-1);
-				}}	
-			}
-		if (hsp == 0) && !(key_left or key_right) && using_ability = 0 //Idle animation
+		if (!grounded) //CHECK IF ON SURFACE
 		{
-			if sprite_index != spriteIdle image_index = 0; //reset index. 
-			sprite_index = spriteIdle; image_speed = 0.6;
+			sprite_index = spriteJump;
+			image_speed = 0;
+			if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 		}
-		else //walk animation
+		else //is walk or idle or 'start jumping'
 		{
-			if sprite_index != spriteWalk {
-				image_index = 0; //reset index. 
+			if sprite_index == spriteJump && image_index = 1 {
+				audio_sound_pitch(snJump1,choose(0.8,1.0,1.2));
+				audio_sound_gain(snJump1,0.1,0);
+				audio_play_sound(snJump1,4,false);
+				repeat(3) {
+					with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
+						vsp = 0.1; image_alpha = 0.5;
+						hsp = random_range(-1,1); 
+						image_xscale = choose (1,-1);
+						image_yscale = choose (1,-1);
+					}}	
+				}
+			if (hsp == 0) && !(key_left or key_right) && using_ability = 0 //Idle animation
+			{
+				if sprite_index != spriteIdle image_index = 0; //reset index. 
+				sprite_index = spriteIdle; image_speed = 0.6;
 			}
-			sprite_index = spriteWalk; image_speed = 1*slowwalk;			
+			else //walk animation
+			{
+				if sprite_index != spriteWalk {
+					image_index = 0; //reset index. 
+				}
+				sprite_index = spriteWalk; image_speed = 1*slowwalk;			
+			}
 		}
 	}
 

@@ -73,7 +73,8 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Consumes Mana too
 			timer_set("secondary_cooldown",secondary_cooldown); 
 			oUIElements.secondary_cooldown  = 0; //for UI
 			oPlayer.mana -=2;	//consume 1 mana. //Update 4 sep 2022
-			
+			 if oPlayer.mana < 0 oPlayer.mana = 0;
+			 
 			//fix shooting direction temporarily
 			direction = oPlayerWeapon.shoot_direction;		
 			oPlayer.dir_prev = oPlayerWeapon.shoot_direction;	
@@ -112,13 +113,16 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Consumes Mana too
 		} else weapon_active = 0;
 } 	
 
+
+function Ability_Special_ArrowRain() { //not for MVP
 /// @function       Ability_Spread_Archer();
 /// @desc			Calls a storm of arrows to rain down around the player
-function Ability_Spread_Archer() { 
-	if (oPlayer.key_special) && timer_get("special_cooldown") = -1 && oPlayer.mana >= 4 { //consumes 5 mana
+	if timer_get("special_cooldown") = -1 && oPlayer.mana >= 4 { //consumes 5 mana
 		timer_set("special_cooldown",third_cooldown);
 		oUIElements.third_cooldown  = 0; //for UI
-		oPlayer.mana -=5; 
+		
+		oPlayer.mana -=5;  
+		if oPlayer.mana < 0 oPlayer.mana = 0;
 		
 		instance_create_depth(x,y,depth,oAttack_StormArrows);
 		
@@ -134,3 +138,59 @@ function Ability_Spread_Archer() {
 		
 	}
 } 	
+
+function PlayerStateMeleeAtk(){	//not for MVP
+	timer_init("generate attack")
+	sprite_index = spriteMelee; 
+	image_speed = 1;
+	//hsp = 0;
+	var slowwalk = 0; 
+	var move = key_right - key_left;
+	hsp = (move * slowwalk) + gunkickx;
+	vsp = (vsp + grv);
+	using_ability = 1;
+	//create projectile
+	if image_index = 1
+	{
+		audio_sound_gain(snDartGun2,0.1,0);
+			audio_sound_pitch(snDartGun2,choose(0.95,1));
+			audio_play_sound(snDartGun2,2,0);
+			
+			
+		with (instance_create_layer(x,y,"Bullets",oAtk_Laser)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+			direction = oPlayerWeapon.image_angle; //oPlayer.facing_direction;
+			x_shift = 5;
+			image_angle = direction; follow = oPlayer;
+			//x_shift = oPlayerWeapon.flip_weapon * 10;
+		}
+	if timer_get("generate attack") = -1 {
+		//gunkickx = lengthdir_x(-2,oPlayerWeapon.image_angle-180);
+		timer_set("generate attack",3);
+		}
+	}
+	else gunkickx = 0;
+}
+
+function Ability_Special_Shockwave() {
+	if timer_get("special_cooldown") = -1 && oPlayer.mana >= 4 {
+		timer_set("special_cooldown",third_cooldown);
+		oUIElements.third_cooldown  = 0; //for UI purposes
+		
+		oPlayer.mana -=5;  
+		if oPlayer.mana < 0 oPlayer.mana = 0;
+	
+		instance_create_depth(x,y,depth,oAttack_Shockwave);
+	
+		//change player animation (figure out how best to do this later)
+		//oPlayer.spriteSpecial = sProtag_shockwave_playeronly; //set special sprite when "choosing" this special ability later on. 
+		with(oPlayer) {
+			sprite_index = spriteSpecial;
+			image_speed = 1;
+			using_ability = 1; //leave this on until ability is over.
+		}
+	
+	}
+}
+
+
+
