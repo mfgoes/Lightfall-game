@@ -5,7 +5,7 @@ if global.game_paused {
 	image_speed = 0;
 	exit;
 }
-else {
+else if freeze = 0 {
 	//determine target
 	target = instance_exists(oPlayer) ? oPlayer : -1
 	if target!=-1 {

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snJump2.ogg",
-  "duration": 0.44788,
+  "duration": 0.44288,
   "parent": {
     "name": "jump",
     "path": "folders/Sounds/Player sounds/jump.yy",

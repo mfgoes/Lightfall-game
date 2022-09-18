@@ -27,22 +27,29 @@ if y > room_height {
 }
 
 #region animation flags 
-	if hp <= 0 {
-		sprite_index = spriteDie;	
-		hsp = 0; //prevents flipping
+
+	if freeze > 0 {
+		image_speed = 0;
+		freeze--;
 	}
-	else if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {
-		sprite_index = spriteAttack;
-	}
-	else if current_state = enemy_states.approach {
-		sprite_index = spriteWalk;
-		image_speed = 1;
-	}
-	else if current_state = enemy_states.idle && hp > 0 {
-		if hsp = 0
-			sprite_index = spriteIdle;
-		else
+	else {
+		if hp <= 0 {
+			sprite_index = spriteDie;	
+			hsp = 0; //prevents flipping
+		}
+		else if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {
+			sprite_index = spriteAttack;
+		}
+		else if current_state = enemy_states.approach {
 			sprite_index = spriteWalk;
-		image_speed = 1;
+			image_speed = 1;
+		}
+		else if current_state = enemy_states.idle && hp > 0 {
+			if hsp = 0
+				sprite_index = spriteIdle;
+			else
+				sprite_index = spriteWalk;
+			image_speed = 1;
+		}
 	}
 #endregion

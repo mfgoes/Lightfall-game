@@ -1,6 +1,8 @@
 /// @description Insert description here
 event_inherited();
 
+draw_text(x,y-30,freeze);
+
 if hp<hp_max { 
 	//draw healthbar
 	var percentagehp = (hp / hp_max)*20; // 0/0 = -5 1/2 = 5;  2/2 = 10; (multiplied by 10?)

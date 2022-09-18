@@ -26,7 +26,9 @@ grounded =(place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformPare
 	} else decelerate = 0; 
 	
 	
-	if can_move = true hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
+	if can_move = true {
+		hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
+	}
 
 #endregion
 
@@ -176,7 +178,7 @@ function PlayerWalkSounds() {
 		
 		var footstepsound = choose(snFootstep2,snFootstep3,snFootstep4); //,snFootstep2,snFootstep3,snFootstep4
 		if timer_get("walk_sound") = 1 && !audio_is_playing(footstepsound) {
-			audio_sound_gain(footstepsound,0.7*global.sound_volume,0);
+			audio_sound_gain(footstepsound,1*global.sound_volume,0);
 			audio_play_sound(footstepsound,1,0);
 			repeat(random_range(2,3)) with (instance_create_layer(x,bbox_bottom,"Bullets",oDust)) 
 			{vsp = random_range(-0.5,0.3) image_alpha = choose(0.5,0.8,0.9);}

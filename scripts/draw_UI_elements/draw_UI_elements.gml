@@ -33,7 +33,6 @@ function draw_UI_elements(){
 			//draw_set_font(fSign);
 			//draw_set_color(c_white); 
 			//draw_set_halign(fa_left);
-			//draw_text(20,40,"mana: " + string(oPlayer.mana) + "/" + string(oPlayer.mana_max));
 			
 			var mana_max = oPlayer.mana_max;
 			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax;

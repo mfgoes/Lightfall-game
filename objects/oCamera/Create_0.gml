@@ -97,6 +97,7 @@ alarm[0] = 30; //replace with timer later
 	shake_length = 0;
 	shake_magnitude = 6;
 	shake_remain = 2;
+	zoomshake_remain = 2;
 	buff = 32; //??? room clipping / boundaries for camera
 #endregion
 

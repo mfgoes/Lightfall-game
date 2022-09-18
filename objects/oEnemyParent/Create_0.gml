@@ -33,6 +33,7 @@ y = -1000;
 	hp = 4;
 	hp_max = hp;
 	flash = 0;
+	freeze = 0; //new attribute. This temporarily freezes the enemy. 
 	vsp = 0; //gravity is declared in VerticalCollision() because it's basically global.
 	walk_spd = 1;
 	can_blink = true; //can blink if required. 

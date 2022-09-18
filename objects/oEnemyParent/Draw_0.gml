@@ -2,7 +2,11 @@
 //draw sprite
 if image_alpha < 1
 	image_alpha += 0.025;
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
+
+//freeze visual (color)
+if freeze > 0 image_blend = c_blue; else image_blend = c_white;
+
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,image_blend,1);
 
 //flash when hit
 effect_flash();

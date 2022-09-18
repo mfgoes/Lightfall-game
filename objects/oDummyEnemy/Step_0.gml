@@ -4,18 +4,7 @@ event_inherited();
 
 if (hp <= 0) 
 {
-	with (instance_create_layer(x,y,"Enemies",oEnemyCorpse))
-	{
-		direction = other.hitfrom;	
-		hsp = lengthdir_x(1,direction);
-		vsp = lengthdir_y(1,direction);
-		if (sign(hsp) !=0)
-		sprite_index = other.spriteDie;
-		image_xscale = sign(hsp) *other.size;
-		image_yscale = other.size;
-	}
-	
-	oLevelEnd.boss_defeated = true; //set a small timer to load portal
+	instance_destroy();
 	
 	repeat(3)	//create dust effect
 	{

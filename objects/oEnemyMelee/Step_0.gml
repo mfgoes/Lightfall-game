@@ -16,7 +16,7 @@ if y > room_height
 	hp = 0;
 
 
-if instance_exists(target) {
+if instance_exists(target) && freeze = 0 {
 	
 	//declare some reusable variables
 	var dis_from_target=point_distance(x,y,target.x,y)

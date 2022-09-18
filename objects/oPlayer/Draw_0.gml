@@ -14,3 +14,6 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 #endregion
 
 effect_flash();
+
+
+draw_text(x-40,y,can_move);
