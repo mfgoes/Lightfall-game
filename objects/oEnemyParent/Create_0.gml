@@ -5,9 +5,14 @@ enum enemy_states {
   patrol,
   approach,
   attack,
+  powerattack,
   lunge //new. used for melee enemy 
 }
 current_state = enemy_states.idle;
+
+//create hitbox
+hitbox_w = 24;
+hitbox_h = 24;
 
 //generate spawn visual
 instance_create_depth(x,y,depth,oSpawnAnimation);

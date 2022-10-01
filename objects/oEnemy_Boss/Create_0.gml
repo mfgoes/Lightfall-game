@@ -21,9 +21,11 @@ atk_anim_x = 0 //; //lerp between two points
 atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 
 
 out_of_range = false; 
-sight_range = 80 + round(random(5)); //when to detect player
-atk_range = 5; //closest distance for attacks
+sight_range = 110 + round(random(5)); //when to detect player
+atk_range = 45; //alternate between 5 and 45 (long and short) //closest distance for attacks
 damage = 0.1;
+atk_type = 1; //shoot stuff. if it's 2, do spike attack. 
+
 hp = 40; hp_max = hp; 
 
 //unique visuals
@@ -35,6 +37,10 @@ spriteAttack =	sRockBossIdle;
 spriteMelee  =	sRockBossIdle;
 mask_index	 =	spriteIdle;
 //sprite_offset_cleanup();
+
+//create hitbox
+hitbox_w = 24;
+hitbox_h = 40;
 
 
 //depth failsafe

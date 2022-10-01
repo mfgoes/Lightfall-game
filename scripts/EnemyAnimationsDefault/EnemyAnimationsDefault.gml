@@ -15,11 +15,7 @@ function EnemyAnimationsDefault() {
 				sprite_index = spriteAttack;
 				
 			}
-			else if current_state = enemy_states.approach && hsp = 0 {
-				sprite_index = spriteWalk;
-				image_speed = 1;
-			}
-			else if current_state = enemy_states.idle && hp > 0 {
+			else if current_state = enemy_states.approach or current_state = enemy_states.idle {
 				if hsp = 0
 					sprite_index = spriteIdle;
 				else

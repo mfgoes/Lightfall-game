@@ -52,7 +52,7 @@ function scr_state_approach(){
 	timer_init("jump_duration");
 	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
 	var dir = sign(target.x - x); 
-	var dist_target = abs(target.x-x); 
+	//var dist_target = abs(target.x-x); 
 	var tile_ahead = (collision_point(x + dir*TILE_SIZE/2,y-5, oWallParent,0,0));
 	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*5, oWallParent,0,0));
 	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWallParent,0,0)); //if 1 pixel above is free
@@ -75,12 +75,14 @@ function scr_state_approach(){
 	}
 		
 	//MOVE
-	if (grounded) && !(tile_ahead) && (dist_target>20) {	
+	if (grounded) && !(tile_ahead) && distance_to_object(target) >= atk_range {	
 		if round(x) != round(target.x) 
 			x += hsp;
 		//reset patrol position
 		patrol_xstart = x; 
 		patrol_ystart = y;  
+	} else {
+		hsp = 0;
 	}
 	//jump if possible
 	if timer_get("jump_duration") > 0 {
@@ -102,16 +104,21 @@ if timer_get("attack_reload") <=0 {
 	timer_set("anim_prep",reload_spd-5);
 	timer_set("anim_retract",0); //reset retract animation
 	atk_anim_x = 5; //start animated (reset this at the end)
-	hsp = 0;		
-	with(oPlayer) {
-		hp-=other.damage;
-		flash = 3;
-		gunkickx -= sign(other.x - x)*2; //from pos enemy to pos player
-		ScreenShake(3,2);
-		if hp < 1 KillPlayer();
-		//play sound
-		audio_sound_gain(snHitEnemy,0.2,0);
-		if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+	if distance_to_object(target) < atk_range hsp = 0;	
+	
+	//make sure player is within hitbox before executing damage
+	//draw_rectangle(x-sign(x - target.x)*hitbox_w,y,x,y-hitbox_h,0);
+	if collision_rectangle(x-sign(x-target.x)*hitbox_w,y,x,y-hitbox_h,target,0,0) {
+		with(oPlayer) {
+			hp-=other.damage;
+			flash = 3;
+			gunkickx -= sign(other.x - x)*2; //from pos enemy to pos player
+			ScreenShake(3,2);
+			if hp < 1 KillPlayer();
+			//play sound
+			audio_sound_gain(snHitEnemy,0.2,0);
+			if !audio_is_playing(snHitEnemy) audio_play_sound(snHitEnemy,10,0);
+		}
 	}
 }
 }
@@ -170,8 +177,7 @@ function scr_enemy_lunge(){
 
 //Attack the player (close ranged) 
 function scr_state_atk_shoot(){
-	
-		//shooting
+	//shooting
 	if timer_get("attack_reload") <=0 { 
 		var dir = sign(target.x - x); 
 		var reload_spd_r = reload_spd + irandom(15); 
@@ -183,7 +189,7 @@ function scr_state_atk_shoot(){
 		bullet.image_angle = bullet.direction;
 		bullet.sprite_index = sEBullet_Mage;
 		bullet.spd = 4; 
-		bullet.damage = 0;
+		bullet.damage = 3;
 	}
 	
 	//also allow movement
@@ -210,6 +216,25 @@ function scr_state_atk_shoot(){
 		}
 	} else hsp = 0;
 		
+}
+
+function scr_state_atk_throwrocks() {
+	//shooting
+	if timer_get("range_attack") <=0 { 
+		var dir = sign(target.x - x); 
+		timer_set("range_attack",120);
+		//create bullet
+		var bullet = instance_create_layer(x+lengthdir_x(10,radtodeg(arccos(dir))), y-12, "bullets", oEbulletFollow)
+		bullet.direction = point_direction(x,y-20,target.x,target.y)+choose(-2,0,2);
+		bullet.image_angle = bullet.direction;
+		bullet.sprite_index = sEBullet_Mage;
+		bullet.spd = 4; 
+		bullet.damage = 3;
+	}
+}
+
+function scr_state_atk_spikes() {
+	//do spike attack
 }
 
 function scr_enemy_blink() { //blink means teleporting towards the player

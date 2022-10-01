@@ -24,16 +24,13 @@ if disabled = false switch(room) {
 		ds_list_add(waves,
 			wave_create([2,oEnemyChonkyDasher],[1,oEnemyMelee]),
 			wave_create([3,oRockBug],[1,oEnemyMelee]),
-			wave_create([2,oEnemyMelee])
 		)
 	break;
 	
 	case(rLevel2):
 		ds_list_add(waves,
-			wave_create([2,oEnemy_Bat_Modified],[1,oEnemy_Bat_Modified],[2,oEnemy_Bat_Modified]),
-			wave_create([0,oRockBug],[1,oEnemyMelee]),
-			wave_create([2,oEnemyMelee]),
-			wave_create([0,oEnemy_Mage],[1,oEnemy_Mage],[2,oEnemyMelee])
+			wave_create([2,oEnemy_Bat_Modified],[1,oEnemy_Mage],[2,oEnemy_Bat_Modified]),
+			wave_create([0,oEnemy_Mage],[1,oEnemyMelee]),
 		)
 	break;
 	

@@ -12,3 +12,4 @@ var percentagehp = (hp / hp_max)*(width_half*2)-x_off*2;
 
 draw_set_color(hp_color);
 draw_rectangle(bar_half+x_off,RES_H-13,bar_half+x_off+percentagehp-2,RES_H-9,0);
+
