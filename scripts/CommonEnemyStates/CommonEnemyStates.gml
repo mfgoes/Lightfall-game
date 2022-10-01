@@ -102,7 +102,7 @@ if timer_get("attack_reload") <=0 {
 	timer_set("anim_prep",reload_spd-5);
 	timer_set("anim_retract",0); //reset retract animation
 	atk_anim_x = 5; //start animated (reset this at the end)
-			
+	hsp = 0;		
 	with(oPlayer) {
 		hp-=other.damage;
 		flash = 3;

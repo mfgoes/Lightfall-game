@@ -12,10 +12,12 @@
 	timer_init("anim_retract"); 
 	timer_init("reset_patrol"); //go back to patrolling if player is out of sight
 	timer_init("forget_player"); //forget seeing player after X time and go back to patrolling
-	
+	timer_init("attack_player");
 	#region state changing happens here
 	
 	//change state if player is out of bounds
+	if !instance_exists(oPlayer) target = id; //failsafe if player isn't there
+	
 	if collision_line(x,y-5,target.x,target.y-5,oWallParent,0,0) && collision_line(x,y-TILE_SIZE,target.x,target.y-TILE_SIZE,oWallParent,0,0) {
 		if timer_get("forget_player") <= 0 {
 			//current_state = enemy_states.idle;
@@ -28,7 +30,7 @@
 				current_state = enemy_states.approach;	
 				timer_set("forget_player",60);
 			}
-			if distance_to_object(target) < atk_range {
+			if distance_to_object(target) < atk_range {	//double chekc hitbox here
 				current_state = enemy_states.attack;	
 			} else
 			if distance_to_object(target) > sight_range {

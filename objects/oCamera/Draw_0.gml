@@ -17,8 +17,5 @@ if (global.debugmode) {
 	draw_set_color(c_yellow);
 	draw_set_alpha(0.5);
 	draw_rectangle(x-view_w/2,y-view_h/2,x+view_w/2,y+view_h/2,1);
-
-	draw_circle(x,y,10,1);
-	draw_circle(x+view_w,y+view_h,100,1)
 	draw_set_alpha(1);
 }

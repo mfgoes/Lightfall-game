@@ -25,3 +25,12 @@ effect_flash();
 		draw_set_color(c_white);
 	}
 #endregion
+
+
+//debug / draw hitbox
+if (global.debugmode) {
+	draw_set_color(c_blue);
+	draw_set_alpha(0.3);
+	draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_top,0);
+	draw_set_alpha(1);
+}

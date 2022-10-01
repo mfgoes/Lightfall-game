@@ -4,9 +4,14 @@
 
 event_inherited();
 
+//boss specific things
+
+ZoomShake(4,30);
+//load cutscene here
+//move camera to boss briefly
+
+
 //general adjustments
-
-
 walk_spd = 1;
 approach_spd = 1.2;
 wander_range = 80; //maximum patrol area
@@ -30,3 +35,8 @@ spriteAttack =	sRockBossIdle;
 spriteMelee  =	sRockBossIdle;
 mask_index	 =	spriteIdle;
 //sprite_offset_cleanup();
+
+
+//depth failsafe
+if instance_exists(oPlayer) && oPlayer.depth < depth 
+	depth = oPlayer.depth+5;
