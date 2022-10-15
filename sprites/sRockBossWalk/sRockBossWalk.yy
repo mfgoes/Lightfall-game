@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sRockBossWalk",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,69 +27,31 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4980df09-1cf8-4306-b387-7d6fb0d4bef3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4980df09-1cf8-4306-b387-7d6fb0d4bef3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"4980df09-1cf8-4306-b387-7d6fb0d4bef3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b02fd001-30e3-4277-a40e-b582978367e3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b02fd001-30e3-4277-a40e-b582978367e3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"b02fd001-30e3-4277-a40e-b582978367e3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7cff4bbc-943b-4892-a621-b07fc6a57952","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7cff4bbc-943b-4892-a621-b07fc6a57952","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"7cff4bbc-943b-4892-a621-b07fc6a57952","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"21c6a01c-e274-4cec-b32b-3ec3fcdafe35","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"21c6a01c-e274-4cec-b32b-3ec3fcdafe35","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"21c6a01c-e274-4cec-b32b-3ec3fcdafe35","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b5a3b1fe-1974-4ab4-9c37-ab748cf74b63","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b5a3b1fe-1974-4ab4-9c37-ab748cf74b63","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"b5a3b1fe-1974-4ab4-9c37-ab748cf74b63","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7ccd05ee-abd2-403b-afed-f292927885a3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7ccd05ee-abd2-403b-afed-f292927885a3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"7ccd05ee-abd2-403b-afed-f292927885a3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84fa43ae-1ac1-4cc8-8300-50b5d07b16ae","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84fa43ae-1ac1-4cc8-8300-50b5d07b16ae","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"84fa43ae-1ac1-4cc8-8300-50b5d07b16ae","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"306beffb-53cb-4be4-889b-860986f7f4b0","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"306beffb-53cb-4be4-889b-860986f7f4b0","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"306beffb-53cb-4be4-889b-860986f7f4b0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"549beb3f-03f1-4597-ad82-afe8e08f477a","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"549beb3f-03f1-4597-ad82-afe8e08f477a","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"549beb3f-03f1-4597-ad82-afe8e08f477a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"630e5b65-0bc9-467a-847a-3abb5b8ec7c6","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"630e5b65-0bc9-467a-847a-3abb5b8ec7c6","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"630e5b65-0bc9-467a-847a-3abb5b8ec7c6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"32ab3460-7131-42b9-86ee-13f114c7f784","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"32ab3460-7131-42b9-86ee-13f114c7f784","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"32ab3460-7131-42b9-86ee-13f114c7f784","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"231ae798-6cdc-4c51-b274-6fd8edee7201","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"231ae798-6cdc-4c51-b274-6fd8edee7201","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"231ae798-6cdc-4c51-b274-6fd8edee7201","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"19f5fbfe-051e-4af2-a51d-4a0861224945","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19f5fbfe-051e-4af2-a51d-4a0861224945","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"19f5fbfe-051e-4af2-a51d-4a0861224945","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"953075ac-fab6-400e-a050-abb64ad01f27","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"953075ac-fab6-400e-a050-abb64ad01f27","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"953075ac-fab6-400e-a050-abb64ad01f27","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"26dc05d7-464f-468a-a6f6-5dfedab72339","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"26dc05d7-464f-468a-a6f6-5dfedab72339","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"26dc05d7-464f-468a-a6f6-5dfedab72339","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0448e6d3-342a-41b6-9f28-5a92f1651220","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0448e6d3-342a-41b6-9f28-5a92f1651220","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"0448e6d3-342a-41b6-9f28-5a92f1651220","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"85409d17-4048-447f-9986-833d7adafe98","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85409d17-4048-447f-9986-833d7adafe98","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"85409d17-4048-447f-9986-833d7adafe98","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cc9ed82d-c196-489e-9c88-d6d580a87505","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cc9ed82d-c196-489e-9c88-d6d580a87505","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"cc9ed82d-c196-489e-9c88-d6d580a87505","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a4fbb2df-486f-4c29-bb9b-31a16c02d942","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a4fbb2df-486f-4c29-bb9b-31a16c02d942","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"a4fbb2df-486f-4c29-bb9b-31a16c02d942","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0a079031-0784-461e-ac1a-1d5d95f426a3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0a079031-0784-461e-ac1a-1d5d95f426a3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"LayerId":{"name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","name":"0a079031-0784-461e-ac1a-1d5d95f426a3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4980df09-1cf8-4306-b387-7d6fb0d4bef3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b02fd001-30e3-4277-a40e-b582978367e3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7cff4bbc-943b-4892-a621-b07fc6a57952",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"21c6a01c-e274-4cec-b32b-3ec3fcdafe35",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b5a3b1fe-1974-4ab4-9c37-ab748cf74b63",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7ccd05ee-abd2-403b-afed-f292927885a3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84fa43ae-1ac1-4cc8-8300-50b5d07b16ae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"306beffb-53cb-4be4-889b-860986f7f4b0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"549beb3f-03f1-4597-ad82-afe8e08f477a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"630e5b65-0bc9-467a-847a-3abb5b8ec7c6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"32ab3460-7131-42b9-86ee-13f114c7f784",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"231ae798-6cdc-4c51-b274-6fd8edee7201",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19f5fbfe-051e-4af2-a51d-4a0861224945",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"953075ac-fab6-400e-a050-abb64ad01f27",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26dc05d7-464f-468a-a6f6-5dfedab72339",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0448e6d3-342a-41b6-9f28-5a92f1651220",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85409d17-4048-447f-9986-833d7adafe98",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cc9ed82d-c196-489e-9c88-d6d580a87505",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4fbb2df-486f-4c29-bb9b-31a16c02d942",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a079031-0784-461e-ac1a-1d5d95f426a3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sRockBossWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -97,7 +62,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"795eb082-de3c-4995-a7ac-e8f3c758791a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4980df09-1cf8-4306-b387-7d6fb0d4bef3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9bc3f7fd-24ac-454b-9ac1-bce69e7fb51d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b02fd001-30e3-4277-a40e-b582978367e3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"21927a1e-fde0-45b9-8383-16cdb56e1dc6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cff4bbc-943b-4892-a621-b07fc6a57952","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -118,7 +83,7 @@
             {"id":"4dca39c9-27cd-4719-a2fb-e178ca3e2d4e","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cc9ed82d-c196-489e-9c88-d6d580a87505","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"225d94dd-d9c3-498f-8133-9d7040c78646","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4fbb2df-486f-4c29-bb9b-31a16c02d942","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1b8228af-d2e2-4fcf-be9a-a78c44e449a8","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0a079031-0784-461e-ac1a-1d5d95f426a3","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -134,22 +99,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRockBossWalk","path":"sprites/sRockBossWalk/sRockBossWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sRockBossWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6c8c1f93-c6d6-497e-accf-680a36a2b1f2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Boss Enemies",
     "path": "folders/Graphics and Sprites/Enemy Sprites/Boss Enemies.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sRockBossWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

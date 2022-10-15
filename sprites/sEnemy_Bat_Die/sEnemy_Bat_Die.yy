@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sEnemy_Bat_Die",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"28c69f04-a284-4e20-b3a4-b8799782b916","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"28c69f04-a284-4e20-b3a4-b8799782b916","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},"LayerId":{"name":"e6aa0811-b3ea-4699-90eb-09795412af78","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sEnemy_Bat_Die","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},"resourceVersion":"1.0","name":"28c69f04-a284-4e20-b3a4-b8799782b916","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"28c69f04-a284-4e20-b3a4-b8799782b916",},
   ],
   "sequence": {
-    "spriteId": {"name":"sEnemy_Bat_Die","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sEnemy_Bat_Die",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d027cd5d-275f-4f1a-a836-ae7c6af6e71d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28c69f04-a284-4e20-b3a4-b8799782b916","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sEnemy_Bat_Die","path":"sprites/sEnemy_Bat_Die/sEnemy_Bat_Die.yy",},
-    "resourceVersion": "1.4",
-    "name": "sEnemy_Bat_Die",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e6aa0811-b3ea-4699-90eb-09795412af78","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e6aa0811-b3ea-4699-90eb-09795412af78","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bat",
     "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Bat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sEnemy_Bat_Die",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

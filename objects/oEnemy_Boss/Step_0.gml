@@ -58,7 +58,7 @@
 	
 #endregion
 
-//basic animations
+//basic animations //TO DO: INVESTIGATE THIS
 EnemyAnimationsDefault(); 
 
 //Boss specific animations

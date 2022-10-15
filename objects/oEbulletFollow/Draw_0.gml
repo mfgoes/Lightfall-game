@@ -1,5 +1,5 @@
 /// @description Insert description here
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1);
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,image_angle,c_white,1);
 image_index+=0.3;
 
 draw_set_font(f_smooth);

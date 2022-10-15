@@ -40,7 +40,7 @@ mask_index	 =	spriteIdle;
 
 //create hitbox
 hitbox_w = 24;
-hitbox_h = 40;
+hitbox_h = 32;
 
 
 //depth failsafe

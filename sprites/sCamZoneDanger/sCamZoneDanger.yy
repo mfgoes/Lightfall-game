@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sCamZoneDanger",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b03da365-aa30-4a4f-8c0f-9d063a4f7505","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b03da365-aa30-4a4f-8c0f-9d063a4f7505","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},"LayerId":{"name":"fbd4aa99-57be-4560-b839-9519e1863ef6","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCamZoneDanger","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},"resourceVersion":"1.0","name":"b03da365-aa30-4a4f-8c0f-9d063a4f7505","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b03da365-aa30-4a4f-8c0f-9d063a4f7505",},
   ],
   "sequence": {
-    "spriteId": {"name":"sCamZoneDanger","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sCamZoneDanger",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"4cdab3f8-75f6-473c-915f-1887cbb94359","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b03da365-aa30-4a4f-8c0f-9d063a4f7505","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sCamZoneDanger","path":"sprites/sCamZoneDanger/sCamZoneDanger.yy",},
-    "resourceVersion": "1.4",
-    "name": "sCamZoneDanger",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fbd4aa99-57be-4560-b839-9519e1863ef6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fbd4aa99-57be-4560-b839-9519e1863ef6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Camera Stuff",
     "path": "folders/Objects/Essentials/Camera Stuff.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sCamZoneDanger",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

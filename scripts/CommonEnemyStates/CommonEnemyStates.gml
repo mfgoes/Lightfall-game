@@ -224,12 +224,14 @@ function scr_state_atk_throwrocks() {
 		var dir = sign(target.x - x); 
 		timer_set("range_attack",120);
 		//create bullet
-		var bullet = instance_create_layer(x+lengthdir_x(10,radtodeg(arccos(dir))), y-12, "bullets", oEbulletFollow)
-		bullet.direction = point_direction(x,y-20,target.x,target.y)+choose(-2,0,2);
-		bullet.image_angle = bullet.direction;
-		bullet.sprite_index = sEBullet_Mage;
-		bullet.spd = 4; 
-		bullet.damage = 3;
+		repeat(3) {
+			var bullet = instance_create_layer(x+lengthdir_x(10,radtodeg(arccos(dir))), y-22, "bullets", oBoss_RockProjectile)
+			bullet.dir = random(150)+20 //change after alarm
+			bullet.dir_new = dir;
+			bullet.spd = 1;
+			//alarm for changing direction
+			bullet.image_angle = bullet.direction;
+		}
 	}
 }
 

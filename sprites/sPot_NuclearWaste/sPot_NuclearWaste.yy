@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sPot_NuclearWaste",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9735bcb4-e0d7-4349-b9b1-59f267cc8f82","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9735bcb4-e0d7-4349-b9b1-59f267cc8f82","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"LayerId":{"name":"1b91e776-4ba3-427f-9de7-519b78dbedf1","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPot_NuclearWaste","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","name":"9735bcb4-e0d7-4349-b9b1-59f267cc8f82","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1a822865-b81a-4e88-9c48-70b61be5b2df","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1a822865-b81a-4e88-9c48-70b61be5b2df","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"LayerId":{"name":"1b91e776-4ba3-427f-9de7-519b78dbedf1","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPot_NuclearWaste","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","name":"1a822865-b81a-4e88-9c48-70b61be5b2df","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8c185f40-9965-4c4b-8a80-b0964070bf29","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8c185f40-9965-4c4b-8a80-b0964070bf29","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"LayerId":{"name":"1b91e776-4ba3-427f-9de7-519b78dbedf1","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPot_NuclearWaste","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","name":"8c185f40-9965-4c4b-8a80-b0964070bf29","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9735bcb4-e0d7-4349-b9b1-59f267cc8f82",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a822865-b81a-4e88-9c48-70b61be5b2df",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8c185f40-9965-4c4b-8a80-b0964070bf29",},
   ],
   "sequence": {
-    "spriteId": {"name":"sPot_NuclearWaste","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sPot_NuclearWaste",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"db087669-2d64-40bc-b39b-cbe889275f86","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9735bcb4-e0d7-4349-b9b1-59f267cc8f82","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cf886e2f-94f3-428e-b975-b139ccb2a885","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1a822865-b81a-4e88-9c48-70b61be5b2df","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ee008ae8-b1d0-44fe-b74a-7c42b6d1113c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c185f40-9965-4c4b-8a80-b0964070bf29","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sPot_NuclearWaste","path":"sprites/sPot_NuclearWaste/sPot_NuclearWaste.yy",},
-    "resourceVersion": "1.4",
-    "name": "sPot_NuclearWaste",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1b91e776-4ba3-427f-9de7-519b78dbedf1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1b91e776-4ba3-427f-9de7-519b78dbedf1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Interactables",
     "path": "folders/Graphics and Sprites/Interactables.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sPot_NuclearWaste",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

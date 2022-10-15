@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sSandDecorGrass",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"032a155a-b096-4945-a7b8-63d4b27df712","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"032a155a-b096-4945-a7b8-63d4b27df712","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"032a155a-b096-4945-a7b8-63d4b27df712","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84448e61-a7c2-4271-97d1-4c7fe15dcb4c","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84448e61-a7c2-4271-97d1-4c7fe15dcb4c","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"84448e61-a7c2-4271-97d1-4c7fe15dcb4c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"53468c8c-7d1e-4b85-9219-1a73da616464","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"53468c8c-7d1e-4b85-9219-1a73da616464","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"53468c8c-7d1e-4b85-9219-1a73da616464","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"57d6b022-6cb3-4ed2-8627-2ce400e84ade","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"57d6b022-6cb3-4ed2-8627-2ce400e84ade","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"57d6b022-6cb3-4ed2-8627-2ce400e84ade","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"949594c3-a580-4bbf-ae1a-cadf0245c7bb","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"949594c3-a580-4bbf-ae1a-cadf0245c7bb","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"949594c3-a580-4bbf-ae1a-cadf0245c7bb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"441bb06b-974c-4110-85c1-b3a1a7206a3e","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"441bb06b-974c-4110-85c1-b3a1a7206a3e","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"441bb06b-974c-4110-85c1-b3a1a7206a3e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"95feb538-7e78-46c5-81a3-9871e45d14d6","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95feb538-7e78-46c5-81a3-9871e45d14d6","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"LayerId":{"name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","name":"95feb538-7e78-46c5-81a3-9871e45d14d6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"032a155a-b096-4945-a7b8-63d4b27df712",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84448e61-a7c2-4271-97d1-4c7fe15dcb4c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"53468c8c-7d1e-4b85-9219-1a73da616464",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57d6b022-6cb3-4ed2-8627-2ce400e84ade",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"949594c3-a580-4bbf-ae1a-cadf0245c7bb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"441bb06b-974c-4110-85c1-b3a1a7206a3e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"95feb538-7e78-46c5-81a3-9871e45d14d6",},
   ],
   "sequence": {
-    "spriteId": {"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sSandDecorGrass",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d8bbcb9c-8a4e-4cd6-856d-d84c96f858b1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"032a155a-b096-4945-a7b8-63d4b27df712","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e5600297-dd35-44b4-8e23-c1c764e8ac0a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84448e61-a7c2-4271-97d1-4c7fe15dcb4c","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c84dfbfc-2ad2-4b25-be1b-9e202df09dad","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53468c8c-7d1e-4b85-9219-1a73da616464","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"f6291683-64b6-43f9-8d00-03cf011a3e3d","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"949594c3-a580-4bbf-ae1a-cadf0245c7bb","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d529d02f-dc27-46eb-b048-c52e46e4cd24","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"441bb06b-974c-4110-85c1-b3a1a7206a3e","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"612359cd-8579-4af4-b9c4-b03d5ab97b0d","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95feb538-7e78-46c5-81a3-9871e45d14d6","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},
-    "resourceVersion": "1.4",
-    "name": "sSandDecorGrass",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"09eaaa7f-fbdf-4bea-9b12-8d77c7addd94","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SAND-LEVEL",
     "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sSandDecorGrass",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

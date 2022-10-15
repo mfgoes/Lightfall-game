@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sRockBugMask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"LayerId":{"name":"a2fc962c-041f-4220-b74f-0cd048746bb3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},"resourceVersion":"1.0","name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4223c7d2-f450-438f-9f89-65bd5dd527d3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sRockBugMask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9805219a-02c1-4794-918d-dc2e53f67db7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4223c7d2-f450-438f-9f89-65bd5dd527d3","path":"sprites/sRockBugMask/sRockBugMask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},
-    "resourceVersion": "1.4",
-    "name": "sRockBugMask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2fc962c-041f-4220-b74f-0cd048746bb3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a2fc962c-041f-4220-b74f-0cd048746bb3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Rock Bug",
     "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Rock Bug.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sRockBugMask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

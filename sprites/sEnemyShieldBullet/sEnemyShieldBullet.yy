@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sEnemyShieldBullet",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bc88c44b-c42c-47e3-b7fb-19033fb0a6c4","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc88c44b-c42c-47e3-b7fb-19033fb0a6c4","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},"LayerId":{"name":"2c314031-5f17-4ca4-80cc-8de253182ba2","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sEnemyShieldBullet","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},"resourceVersion":"1.0","name":"bc88c44b-c42c-47e3-b7fb-19033fb0a6c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc88c44b-c42c-47e3-b7fb-19033fb0a6c4",},
   ],
   "sequence": {
-    "spriteId": {"name":"sEnemyShieldBullet","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sEnemyShieldBullet",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"7ace0e5f-60b5-4442-ad2f-ed3c4cd2bada","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc88c44b-c42c-47e3-b7fb-19033fb0a6c4","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sEnemyShieldBullet","path":"sprites/sEnemyShieldBullet/sEnemyShieldBullet.yy",},
-    "resourceVersion": "1.4",
-    "name": "sEnemyShieldBullet",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2c314031-5f17-4ca4-80cc-8de253182ba2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2c314031-5f17-4ca4-80cc-8de253182ba2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "placeholder shield",
     "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/PLACEHOLDERS/placeholder shield.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sEnemyShieldBullet",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

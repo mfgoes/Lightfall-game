@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_NPC_Samurai_Merchant",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a21c236f-f9e1-4b42-8fa4-0d3da0ba5423","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a21c236f-f9e1-4b42-8fa4-0d3da0ba5423","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":{"name":"9d5d0615-c395-43a6-a139-a6474f281ca5","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_NPC_Samurai_Merchant","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"a21c236f-f9e1-4b42-8fa4-0d3da0ba5423","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"22f48aea-e307-4d6d-9051-48e3a00d19b9","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"22f48aea-e307-4d6d-9051-48e3a00d19b9","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":{"name":"9d5d0615-c395-43a6-a139-a6474f281ca5","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_NPC_Samurai_Merchant","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"22f48aea-e307-4d6d-9051-48e3a00d19b9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"85471e4d-8bcc-4116-9d73-90d5d1d1591d","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85471e4d-8bcc-4116-9d73-90d5d1d1591d","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":{"name":"9d5d0615-c395-43a6-a139-a6474f281ca5","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_NPC_Samurai_Merchant","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"85471e4d-8bcc-4116-9d73-90d5d1d1591d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bc9aa5ee-0c89-4868-8340-1c38609ef89c","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc9aa5ee-0c89-4868-8340-1c38609ef89c","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"LayerId":{"name":"9d5d0615-c395-43a6-a139-a6474f281ca5","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_NPC_Samurai_Merchant","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","name":"bc9aa5ee-0c89-4868-8340-1c38609ef89c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a21c236f-f9e1-4b42-8fa4-0d3da0ba5423",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"22f48aea-e307-4d6d-9051-48e3a00d19b9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85471e4d-8bcc-4116-9d73-90d5d1d1591d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc9aa5ee-0c89-4868-8340-1c38609ef89c",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_NPC_Samurai_Merchant","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_NPC_Samurai_Merchant",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e310d3a9-5361-4a0c-9ba2-accfeaa0bbbe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a21c236f-f9e1-4b42-8fa4-0d3da0ba5423","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8a95392e-91a8-479e-9c19-9043fc3635d7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22f48aea-e307-4d6d-9051-48e3a00d19b9","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c2b0555e-5521-41c9-bed6-048d3403e6d2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85471e4d-8bcc-4116-9d73-90d5d1d1591d","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"255021ef-0cd3-4904-9f92-1b3cfa40d495","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc9aa5ee-0c89-4868-8340-1c38609ef89c","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_NPC_Samurai_Merchant","path":"sprites/s_NPC_Samurai_Merchant/s_NPC_Samurai_Merchant.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_NPC_Samurai_Merchant",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9d5d0615-c395-43a6-a139-a6474f281ca5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d5d0615-c395-43a6-a139-a6474f281ca5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Aesthetic",
     "path": "folders/Objects/Interactive Objects/Aesthetic.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_NPC_Samurai_Merchant",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

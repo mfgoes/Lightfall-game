@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sBgr_NightSky",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ca592725-4876-44ea-91fc-ffd11d124318","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca592725-4876-44ea-91fc-ffd11d124318","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},"LayerId":{"name":"0a5fbcd6-240d-4291-b18c-b8b2954493e8","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBgr_NightSky","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},"resourceVersion":"1.0","name":"ca592725-4876-44ea-91fc-ffd11d124318","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca592725-4876-44ea-91fc-ffd11d124318",},
   ],
   "sequence": {
-    "spriteId": {"name":"sBgr_NightSky","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sBgr_NightSky",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e6f0f3ec-d63e-4975-b124-5a72c88a6792","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca592725-4876-44ea-91fc-ffd11d124318","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sBgr_NightSky","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},
-    "resourceVersion": "1.4",
-    "name": "sBgr_NightSky",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0a5fbcd6-240d-4291-b18c-b8b2954493e8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0a5fbcd6-240d-4291-b18c-b8b2954493e8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "DARK GRASS TILES",
     "path": "folders/Graphics and Sprites/TILES/DARK GRASS TILES.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sBgr_NightSky",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

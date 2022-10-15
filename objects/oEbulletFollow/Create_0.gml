@@ -10,3 +10,11 @@ spd = 0;
 target = id; if instance_exists(oPlayer) target = oPlayer; 	
 x_new =  sign(target.x-x);
 y_new =  sign(target.y-y);
+
+
+//play shoot sound
+var sound = lux_shot_04;
+audio_sound_pitch(sound,choose(0.7,0.9,1));
+audio_sound_gain(sound,0.2,0);
+audio_play_sound(sound,5,0);
+audio_sound_pitch(sound,1);

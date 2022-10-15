@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sRockBossIdle",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"17498b73-f982-44f8-b3ce-4301cf9eac14","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"17498b73-f982-44f8-b3ce-4301cf9eac14","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":{"name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"17498b73-f982-44f8-b3ce-4301cf9eac14","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0450a9d9-c5f9-4dea-8c02-927e0f73fb96","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0450a9d9-c5f9-4dea-8c02-927e0f73fb96","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":{"name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"0450a9d9-c5f9-4dea-8c02-927e0f73fb96","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef5347ad-12ea-4a31-a004-a7b592d723f4","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef5347ad-12ea-4a31-a004-a7b592d723f4","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":{"name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"ef5347ad-12ea-4a31-a004-a7b592d723f4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"222a223d-3d54-455a-8ec1-9b7376b23932","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"222a223d-3d54-455a-8ec1-9b7376b23932","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":{"name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"222a223d-3d54-455a-8ec1-9b7376b23932","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7afa8446-1fdf-43df-8598-feee60b7e65f","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7afa8446-1fdf-43df-8598-feee60b7e65f","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"LayerId":{"name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","name":"7afa8446-1fdf-43df-8598-feee60b7e65f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17498b73-f982-44f8-b3ce-4301cf9eac14",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0450a9d9-c5f9-4dea-8c02-927e0f73fb96",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef5347ad-12ea-4a31-a004-a7b592d723f4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"222a223d-3d54-455a-8ec1-9b7376b23932",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7afa8446-1fdf-43df-8598-feee60b7e65f",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sRockBossIdle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -52,13 +47,13 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b6d1f6b3-6b7a-481d-8925-cafa20d8d78b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"17498b73-f982-44f8-b3ce-4301cf9eac14","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5f705ee8-e1aa-4766-b58f-81d89e566d5a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0450a9d9-c5f9-4dea-8c02-927e0f73fb96","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"70dbc0f5-59a4-4bcf-be98-fdcd78f946c1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ef5347ad-12ea-4a31-a004-a7b592d723f4","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"90bd7462-71e7-4ac2-8259-801b695f7b19","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"222a223d-3d54-455a-8ec1-9b7376b23932","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5d71bd80-22bf-43d2-b3f6-59bcac86280a","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7afa8446-1fdf-43df-8598-feee60b7e65f","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,22 +69,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRockBossIdle","path":"sprites/sRockBossIdle/sRockBossIdle.yy",},
-    "resourceVersion": "1.4",
-    "name": "sRockBossIdle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"69fedd83-7663-40f1-9d85-bfcd90974ecf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Boss Enemies",
     "path": "folders/Graphics and Sprites/Enemy Sprites/Boss Enemies.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sRockBossIdle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

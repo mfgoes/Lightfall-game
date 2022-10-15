@@ -16,12 +16,14 @@
 		sound2 = 1;
 	}
 	
-	if timer_get("can_move") = 0 {
-		if instance_exists(oPlayer) oPlayer.can_move = true;	//can't move while attacking
-	} else {
-		oPlayer.hsp = 0; //stop player from moving
-		oPlayer.vsp = 0;
-	}
+	if instance_exists(oPlayer) {
+		if timer_get("can_move") = 0 {
+			 oPlayer.can_move = true;	//can't move while attacking
+		} else {
+			oPlayer.hsp = 0; //stop player from moving
+			oPlayer.vsp = 0;
+		}
+	} else exit;
 	
 	ScreenShake(2,20);
 	ZoomShake(5,20);

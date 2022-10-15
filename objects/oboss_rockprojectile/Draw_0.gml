@@ -1,8 +1,11 @@
 /// @description Insert description here
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1);
-image_index+=0.3;
+// You can write your code in this editor
 
-draw_set_font(f_smooth);
-//draw_text(x,y-40,"new:"+ string(dir_new));
-//draw_text(x,y-20,"old:"+ string(direction));
-//draw_text(x,y-60,"angle:"+ string(dir_ang));
+// Inherit the parent event
+event_inherited();
+
+if (global.debugmode) {
+	draw_text(x,y-10,dir);
+}
+
+image_angle = dir;

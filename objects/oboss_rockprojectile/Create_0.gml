@@ -1,12 +1,13 @@
-/// @description Insert description here
-// You can write your code in this editor
+damage = 1; //does 1 damage
+//explodes = false;
+//splash = false; 
+alarm[0] = 170; //destroy
+alarm[1] = 40 + round(random(30)); //change direction
 
-// Inherit the parent event
-event_inherited();
-alarm[0] = 150; //destroy
-dir = direction; //we will split this up into x and y vectors later. 
-spd = 0; 
+alarm[2] = 20; //generate after images
 
-target = id; if instance_exists(oPlayer) target = oPlayer; 	
-x_new =  sign(target.x-x);
-y_new =  sign(target.y-y);
+collision_wall = true;
+
+dir = 0; 
+dir_new = dir; //for changing directions
+spd = 0;

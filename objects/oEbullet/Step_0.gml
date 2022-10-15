@@ -4,6 +4,10 @@ if global.game_paused
 	exit;
 }
 
+if !instance_exists(oPlayer) {
+	instance_destroy();		//quick fix	
+}
+
 //x+= lengthdir_x(spd,dir);
 //y+= lengthdir_y(spd,dir);
 
@@ -15,8 +19,11 @@ if (place_meeting(x,y,oPlayer))
 		hp-=other.damage;
 		flash = 3;
 		hitfrom = other.direction;
-		//gunkickx = cos(degtorad(other.direction))*1;
-		//ScreenShake(3,20);
+		gunkickx = cos(degtorad(other.direction))*1;
+		gunkicky = -2;
+		ScreenShake(1,5);
+		audio_sound_gain(snHitEnemy,0.4,0);
+		audio_play_sound(snHitEnemy,0,0);
 		
 		if hp < 1 KillPlayer();
 	}

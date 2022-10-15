@@ -1,43 +1,89 @@
-event_inherited();
-
-
-timer_init("follow_player");
-timer_init("poof_trail");
-timer_init("poof_trail_close");
-
-var pivot1 = 0.3; 
-var pivot = 2; //in pixels
-var x_new_main =  sign(target.x-x);
-var y_new_main =  sign(target.y-y) * pivot1; 
-
-//change animation 
-image_xscale = sign(target.x-x); 
-
-
-#region projectile follows player
-	if timer_get("follow_player") <= 0 {
-		timer_set("follow_player",20);
-	}
-	if timer_get("follow_player") = 1 && instance_exists(oPlayer) {
-		//determine new directions
-		if abs(target.x-x) > 10 x_new = sign(target.x-x)*pivot1;  //check if worth changing direction, then change direction
-		y_new = sign(target.y-y)*0.75;
-		
-		}
-	
-	x+= x_new_main + x_new;
-	y+= y_new_main + y_new;
-	
-	//double check for walls
-	if collision_line(x,y,target.x,target.y,oWallParent,0,0) or place_meeting(x+sign(x_new)*5,y,oWallParent) {
-			if target.y < y y-=1;
-	}
-
-		
-#endregion
-
-//particle effects
-if timer_get("poof_trail") <= 1 {
-	dd = instance_create_depth(x,y,depth+1,oDust); dd.hsp = 0; dd.vsp = 0; dd.image_alpha = 1; dd.image_speed = 0.4;
-	timer_set("poof_trail",8+choose(1,4));
+/// @description Insert description here
+if global.game_paused
+{
+	exit;
 }
+
+if !instance_exists(oPlayer) {
+	instance_destroy();		//quick fix	
+}
+
+//lerp direction so it's smooth
+if dir != dir_new && alarm[1] <=0 {
+	dir = lerp(dir,dir_new,0.8);
+}
+
+x+= lengthdir_x(spd,dir);
+y+= lengthdir_y(spd,dir);
+
+//hit player
+if (place_meeting(x,y,oPlayer)) 
+{
+	with(instance_place(x,y,oPlayer))
+	{
+		hp-=other.damage;
+		flash = 3;
+		hitfrom = other.direction;
+		gunkickx = cos(degtorad(other.direction))*1;
+		gunkicky = -2;
+		ScreenShake(1,5);
+		audio_sound_gain(snHitEnemy,0.4,0);
+		audio_play_sound(snHitEnemy,0,0);
+		
+		if hp < 1 KillPlayer();
+	}
+	
+	repeat(3)
+	{
+		//dust particles
+		with(instance_create_layer(x+lengthdir_x(24,dir),y,"Bullets",oDust)) {
+			vsp = -0.1; image_alpha = 0.5+random(0.3);
+			hsp = random_range(-1,1);
+			image_xscale = choose (2,-2);
+			image_yscale = choose (2,-2);
+		}
+	}
+	instance_create_depth(x,y,depth,oBulletImpactEffect);
+	 
+	instance_destroy(); 
+}
+
+
+if collision_wall
+{
+	if (place_meeting(x,y,oWallParent))
+	{
+		
+		instance_create_depth(x,y,depth,oBulletImpactEffect);
+		ee = instance_create_depth(x+lengthdir_x(24,dir),y+lengthdir_y(20,dir),depth,oBulletAfterImagePar);
+		ee.sprite_index = sprite_index;
+		ee.image_index = image_index;
+		
+		while (place_meeting(x,y,oWallParent)) 
+		{
+			x-= lengthdir_x(1,direction);	//move back in direction
+			y-= lengthdir_y(1,direction);
+		}
+		#region effects
+			repeat(3)
+			{
+				instance_create_depth(x,y,depth,oBulletImpactEffect);
+				//dust particles
+				with(instance_create_layer(x,y,"Bullets",oDust)) {
+					vsp = -0.1; image_alpha = 0.5+random(0.3);
+					hsp = random_range(-1,1);
+					image_xscale = choose (2,-2);
+					image_yscale = choose (2,-2);
+				}
+			}
+			
+			
+			
+	
+		#endregion
+		instance_destroy(); 		
+		
+	}
+}
+
+

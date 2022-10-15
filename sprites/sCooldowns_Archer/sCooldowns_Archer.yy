@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sCooldowns_Archer",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7c86291c-7952-483b-90f0-433c5ca2840c","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7c86291c-7952-483b-90f0-433c5ca2840c","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":{"name":"11bed18d-17d0-4a74-b5de-ad50f4eb027b","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"7c86291c-7952-483b-90f0-433c5ca2840c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e12b62c4-fdd3-4c7d-8839-c4d5b4e8ced9","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e12b62c4-fdd3-4c7d-8839-c4d5b4e8ced9","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":{"name":"11bed18d-17d0-4a74-b5de-ad50f4eb027b","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"e12b62c4-fdd3-4c7d-8839-c4d5b4e8ced9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6fa3e64d-57e7-4b7c-b1fc-71627d2516a7","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6fa3e64d-57e7-4b7c-b1fc-71627d2516a7","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":{"name":"11bed18d-17d0-4a74-b5de-ad50f4eb027b","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"6fa3e64d-57e7-4b7c-b1fc-71627d2516a7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"10ebc6cf-6dcf-445b-8400-d2a8effd35a3","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"10ebc6cf-6dcf-445b-8400-d2a8effd35a3","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"LayerId":{"name":"11bed18d-17d0-4a74-b5de-ad50f4eb027b","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","name":"10ebc6cf-6dcf-445b-8400-d2a8effd35a3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c86291c-7952-483b-90f0-433c5ca2840c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e12b62c4-fdd3-4c7d-8839-c4d5b4e8ced9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6fa3e64d-57e7-4b7c-b1fc-71627d2516a7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10ebc6cf-6dcf-445b-8400-d2a8effd35a3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sCooldowns_Archer",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"11218aba-59ce-49f4-90b4-1d6bcedf7db1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c86291c-7952-483b-90f0-433c5ca2840c","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"64ff8d08-9443-45c7-899f-0966e67294a8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e12b62c4-fdd3-4c7d-8839-c4d5b4e8ced9","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"17c503e7-5a9b-4ca2-b1f4-231207a912cf","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6fa3e64d-57e7-4b7c-b1fc-71627d2516a7","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c85f2bb5-d050-42ff-a0e6-817e48feb85e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"10ebc6cf-6dcf-445b-8400-d2a8effd35a3","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sCooldowns_Archer","path":"sprites/sCooldowns_Archer/sCooldowns_Archer.yy",},
-    "resourceVersion": "1.4",
-    "name": "sCooldowns_Archer",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"11bed18d-17d0-4a74-b5de-ad50f4eb027b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"11bed18d-17d0-4a74-b5de-ad50f4eb027b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UI Elements",
     "path": "folders/Graphics and Sprites/UI Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sCooldowns_Archer",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

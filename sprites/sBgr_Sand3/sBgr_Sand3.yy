@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sBgr_Sand3",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3bc541fe-d42a-404f-a872-117fcdec16ac","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3bc541fe-d42a-404f-a872-117fcdec16ac","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"LayerId":{"name":"f79daba7-6881-4860-a41d-70edc0c88804","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBgr_Sand3","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"resourceVersion":"1.0","name":"3bc541fe-d42a-404f-a872-117fcdec16ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3bc541fe-d42a-404f-a872-117fcdec16ac",},
   ],
   "sequence": {
-    "spriteId": {"name":"sBgr_Sand3","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sBgr_Sand3",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"ea9081d5-495f-40f4-be9c-eb5c41579f0b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3bc541fe-d42a-404f-a872-117fcdec16ac","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 160,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sBgr_Sand3","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},
-    "resourceVersion": "1.4",
-    "name": "sBgr_Sand3",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f79daba7-6881-4860-a41d-70edc0c88804","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f79daba7-6881-4860-a41d-70edc0c88804","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "PARALLAX-SAND",
     "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL/PARALLAX-SAND.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sBgr_Sand3",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

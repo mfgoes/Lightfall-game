@@ -1,10 +1,12 @@
 event_inherited();
 
+if !instance_exists(oPlayer) {
+	target = id;
+}
 
 timer_init("follow_player");
 timer_init("poof_trail");
 timer_init("poof_trail_close");
-
 var pivot1 = 0.3; 
 var pivot = 2; //in pixels
 var x_new_main =  sign(target.x-x);

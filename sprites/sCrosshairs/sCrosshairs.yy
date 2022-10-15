@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sCrosshairs",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b906e7a1-9c4e-4712-ad42-d7e9b48a5f0d","path":"sprites/sCrosshairs/sCrosshairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b906e7a1-9c4e-4712-ad42-d7e9b48a5f0d","path":"sprites/sCrosshairs/sCrosshairs.yy",},"LayerId":{"name":"1e8a6208-1aeb-4c58-95a3-7c906d60f7b5","path":"sprites/sCrosshairs/sCrosshairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCrosshairs","path":"sprites/sCrosshairs/sCrosshairs.yy",},"resourceVersion":"1.0","name":"b906e7a1-9c4e-4712-ad42-d7e9b48a5f0d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"73a3a6c5-b108-44fc-b354-dd8570368b3f","path":"sprites/sCrosshairs/sCrosshairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"73a3a6c5-b108-44fc-b354-dd8570368b3f","path":"sprites/sCrosshairs/sCrosshairs.yy",},"LayerId":{"name":"1e8a6208-1aeb-4c58-95a3-7c906d60f7b5","path":"sprites/sCrosshairs/sCrosshairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCrosshairs","path":"sprites/sCrosshairs/sCrosshairs.yy",},"resourceVersion":"1.0","name":"73a3a6c5-b108-44fc-b354-dd8570368b3f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b906e7a1-9c4e-4712-ad42-d7e9b48a5f0d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"73a3a6c5-b108-44fc-b354-dd8570368b3f",},
   ],
   "sequence": {
-    "spriteId": {"name":"sCrosshairs","path":"sprites/sCrosshairs/sCrosshairs.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sCrosshairs",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"06a32c53-33b0-4d84-b343-432197d29e01","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b906e7a1-9c4e-4712-ad42-d7e9b48a5f0d","path":"sprites/sCrosshairs/sCrosshairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"18a2b99b-1953-4026-b09e-3fea5e5c467c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"73a3a6c5-b108-44fc-b354-dd8570368b3f","path":"sprites/sCrosshairs/sCrosshairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sCrosshairs","path":"sprites/sCrosshairs/sCrosshairs.yy",},
-    "resourceVersion": "1.4",
-    "name": "sCrosshairs",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1e8a6208-1aeb-4c58-95a3-7c906d60f7b5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1e8a6208-1aeb-4c58-95a3-7c906d60f7b5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UI Elements",
     "path": "folders/Graphics and Sprites/UI Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sCrosshairs",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
