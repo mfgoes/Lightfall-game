@@ -177,6 +177,7 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F5A8D04","properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"disabled","path":"objects/oWaveSystem/oWaveSystem.yy",},"objectId":{"name":"oWaveSystem","path":"objects/oWaveSystem/oWaveSystem.yy",},"value":"True",},
               ],"isDnd":false,"objectId":{"name":"oWaveSystem","path":"objects/oWaveSystem/oWaveSystem.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":112.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_70C0CD12","properties":[],"isDnd":false,"objectId":{"name":"oEnemyMelee","path":"objects/oEnemyMelee/oEnemyMelee.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":304.0,"y":176.0,},
           ],"visible":true,"depth":1100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
         {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[],"visible":true,"depth":1200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","instances":[
@@ -283,6 +284,7 @@
     {"name":"inst_2D39B5A0","path":"rooms/rLevel1/rLevel1.yy",},
     {"name":"iLight","path":"rooms/rLevel1/rLevel1.yy",},
     {"name":"inst_2F2509E4","path":"rooms/rLevel1/rLevel1.yy",},
+    {"name":"inst_70C0CD12","path":"rooms/rLevel1/rLevel1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

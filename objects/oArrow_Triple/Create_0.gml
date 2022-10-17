@@ -2,6 +2,7 @@
 wiggle = 1;
 super_arrow = false;
 active = true;
+freeze = 3;
 image_angle = direction;
 image_speed = 0;
 image_index = 1;

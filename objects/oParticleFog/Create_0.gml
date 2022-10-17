@@ -9,7 +9,10 @@ CameraHeight = camera_get_view_height(view_camera[0]);
 
 	//Blank emitter, region/space to use
 //	emitterEmber = part_emitter_create(global.partSystem);	
+//NEW (potential fix)
+//global.PS_global = part_system_create();
 
+//---
 emitter_Cloud = part_emitter_create(global.partSystem); 
 
 	

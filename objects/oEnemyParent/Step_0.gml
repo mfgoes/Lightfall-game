@@ -8,6 +8,7 @@ timer_init("notice_player"); //when to notice player
 timer_init("ignore_player"); //when to ignore player
 timer_init("turn_around");
 timer_init("attack_player");
+timer_init("freeze_anim"); 
 
 //set target
 if instance_exists(oPlayer)

@@ -48,8 +48,8 @@ function MacrosAndGlobals(){
 
 #region particle system (move this elsewhere later)
 	//create particle system
-	global.partSystem = part_system_create();
-	part_system_depth(global.partSystem, -100);
+	//global.partSystem = part_system_create();
+	//part_system_depth(global.partSystem, -100);
 	pause_menu = noone;
 #endregion
 }

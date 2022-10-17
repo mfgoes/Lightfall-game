@@ -53,8 +53,10 @@ grv=0.15 //this needs to go. use
 spriteIdle =	sBoom_walk_cuteeyes;
 spriteWalk =	sBoom_walk_cuteeyes;
 spriteJump =	sBoom_walk_cuteeyes;
-spriteDie  =	sBoom_explode2;
+spriteDie  =	sBoom_hit;
 spriteAttack =	sBoomslime_atk;
 spriteMelee  =	sBoom_walk_cuteeyes;
+spriteHit	 =  sBoom_hit;	//NEW (OCt 2022)
 mask_index	 =	sBoom_walk_cuteeyes;
+
 //sprite_offset_cleanup();

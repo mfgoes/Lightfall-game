@@ -101,7 +101,7 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "placeholder blob",
-    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/PLACEHOLDERS/placeholder blob.yy",
+    "name": "Rock slime",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies/Rock slime.yy",
   },
 }

@@ -11,7 +11,7 @@ enum enemy_states {
 current_state = enemy_states.idle;
 
 //create hitbox
-hitbox_w = 24;
+hitbox_w = 20;
 hitbox_h = 24;
 
 //generate spawn visual
@@ -28,6 +28,8 @@ y = -1000;
 	spriteDie  = sprite_index;
 	spriteAttack = sprite_index;
 	spriteMelee = sprite_index;
+	spriteHit   = sprite_index; 
+	
 	attack_anim_end = 0;
 	mask_index = sprite_index;
 	image_alpha = 0.1; //fade in
@@ -39,6 +41,7 @@ y = -1000;
 	hp_max = hp;
 	flash = 0;
 	freeze = 0; //new attribute. This temporarily freezes the enemy. 
+	flinch_anim = 0;
 	vsp = 0; //gravity is declared in VerticalCollision() because it's basically global.
 	walk_spd = 1;
 	can_blink = true; //can blink if required. 

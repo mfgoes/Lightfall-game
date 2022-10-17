@@ -73,10 +73,16 @@ if (place_meeting(x,y,pShootable)) && active = true
 			flash = 3;
 			hitfrom = other.direction;
 			
-			gunkickx = lengthdir_x(3,other.image_angle);
-			gunkicky = lengthdir_y(3,other.image_angle);
-			if !place_meeting(x+gunkickx,y,oWallParent) x+=gunkickx; gunkickx = 0;
-			if !place_meeting(x,y+gunkicky,oWallParent) y+=gunkicky; gunkicky = 0;
+			if object_get_parent(object_index) = oEnemyParent {	//check if attacking an enemy or random object
+				gunkickx = lengthdir_x(3,other.image_angle);
+				gunkicky = -3;
+				if !place_meeting(x+gunkickx,y,oWallParent) x+=gunkickx; gunkickx = 0;
+				if !place_meeting(x,y+gunkicky,oWallParent) y+=gunkicky; gunkicky = 0;
+			
+				//set a short freeze attribute + shot that enemy is hit
+				freeze = other.freeze;
+				flinch_anim = 10; 
+			}
 		}
 		
 	}

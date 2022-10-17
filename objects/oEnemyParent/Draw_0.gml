@@ -4,9 +4,9 @@ if image_alpha < 1
 	image_alpha += 0.025;
 
 //freeze visual (color)
-if freeze > 0 image_blend = c_blue; else image_blend = c_white;
+//if freeze > 0 image_blend = c_blue; else image_blend = c_white;
 
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,image_blend,1);
+draw_sprite_ext(sprite_index,image_index,x+atk_anim_x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 
 //flash when hit
 effect_flash();

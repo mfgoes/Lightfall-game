@@ -1,2 +1,1 @@
-/// @description destroy particles
-part_system_destroy(global.partSystem);
+/// @description destroy particles if they exist

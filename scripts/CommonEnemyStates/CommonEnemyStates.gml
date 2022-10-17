@@ -137,7 +137,7 @@ function scr_enemy_leap() {
 		v_leap = leap_ver_str; 
 				
 		//vertical leap
-		if dist_target >20 && dist_target < 200 {
+		if dist_target >50 && dist_target < 200 {
 			//curve leap
 			var acc = 1;
 			if h_leap_goal = 0 {
@@ -146,7 +146,7 @@ function scr_enemy_leap() {
 			else acc = 0.8 //in the future, can make this based on player distance too
 			h_leap = lerp(h_leap,h_leap_goal,acc);
 			if (grounded) {vsp += v_leap;}
-			timer_set("leap_timer",90);
+			timer_set("leap_timer",choose(100,200,240));
 		}
 		
 	} 

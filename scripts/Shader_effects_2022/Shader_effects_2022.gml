@@ -10,3 +10,17 @@ function effect_flash(){
 		shader_reset();
 	} 
 }
+
+
+function effect_flinch_anim(){ //for enemies
+	if (flinch_anim > 0) 
+	{
+		flinch_anim --;
+		sprite_index = spriteHit;
+		image_speed = 0;
+	} 
+	else {
+		sprite_index = spriteIdle;
+		image_speed = 1;
+	}
+}

@@ -2,19 +2,25 @@
 
 //if (live_call()) return live_result; 
 #region gravity + basic + timers
-if global.game_paused {
-	exit;
+	if global.game_paused {
+		exit;
+	}
+	//gravity
+	VerticalCollision(); 
+	grounded = (place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent));
+
+	//This exists in the parent step event
+	//but event_inherited is never called 
+	//by this object
+	if y > room_height
+		hp = 0;
+#endregion
+
+//hit by player
+if freeze > 0 {
+		freeze--;	
+		effect_flinch_anim(); //briefly change animation to flinch
 }
-//gravity
-VerticalCollision(); 
-grounded = (place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent));
-
-//This exists in the parent step event
-//but event_inherited is never called 
-//by this object
-if y > room_height
-	hp = 0;
-
 
 if instance_exists(target) && freeze = 0 {
 	
@@ -79,4 +85,4 @@ if instance_exists(target) && freeze = 0 {
 }
 //show_debug_message(string(x) + " " + string(atk_anim_x) + " " + string(sprite_index))
 atk_delay_timer--;
-#endregion
+

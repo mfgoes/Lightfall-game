@@ -19,8 +19,6 @@ if abs(x-xstart) > distance_max {
 	
 }
 
-
-
 if spd > 0 { //check if in wall
 	//gravity + movement
 	if vsp < 20 vsp+=grv;
@@ -48,3 +46,4 @@ if (place_meeting(x,y,pShootable)) && active = true
 {
 	ScreenShake(1,2);	
 }
+
