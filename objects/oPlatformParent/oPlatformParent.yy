@@ -1,10 +1,13 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oPlatformParent",
   "spriteId": {
     "name": "sPlatformGoThrough",
     "path": "sprites/sPlatformGoThrough/sPlatformGoThrough.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -21,15 +24,13 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Walls",
     "path": "folders/Objects/Walls.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oPlatformParent",
-  "tags": [],
-  "resourceType": "GMObject",
 }

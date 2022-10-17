@@ -2,8 +2,21 @@
 
 //debug
 //test if closest object works
+if(live_call()) return live_result;
+
 
 if (global.debugmode) {
+
+		var closest = instance_nearest(x,y,pShootable);
+		if  closest != noone 
+			var true_aim =  point_direction(x,y,closest.x,closest.y-12); else true_aim = 90; 
+			
+			
+	draw_text(x,y-40,shoot_direction);
+	draw_text(x,y-70,true_aim)
+	
+	
+	
 	var linecheck = cos(oPlayer.facing_direction)*assist_dist; 
 	var closest = instance_nearest(x,y,pShootable);
 	if closest != noone {
@@ -11,9 +24,10 @@ if (global.debugmode) {
 		if sign(closest.x - x) = sign(cos(oPlayer.facing_direction)) && abs(closest.y - y) < 100 &&
 		!collision_line(x,y-12,closest.x,closest.y-12,oWallParent,0,0)
 		{
-			draw_set_color(c_yellow);
+			//change colour to red if out of angle bound
+			if angle_in_range = true draw_set_color(c_green); else draw_set_color(c_red);
 			draw_line(x,y,closest.x,closest.y-10);
-			//draw_text(x,y-40,closest)
+			
 		}
 	}
 	

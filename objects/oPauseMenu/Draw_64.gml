@@ -9,21 +9,28 @@ draw_text(10,100,alarm[0]);
 	var x_mid = display_get_gui_width()/2;	
 #endregion
 
-#region draw window
+#region draw window and corners
 	var margin_win =  display_get_gui_width()/4;
-	var margin_y_win = display_get_gui_height()/6.5; 
-	draw_set_color(col_bgr); draw_set_alpha(0.8);
+	var margin_y_win = display_get_gui_height()/5; 
+	draw_set_color(col_bgr); draw_set_alpha(0.4);
 	draw_rectangle(margin_win, margin_y_win, display_get_gui_width() - margin_win, display_get_gui_height() - margin_y_win, false);
+	
+	//draw corners
+	draw_sprite_ext(sCorner_menu,0,margin_win,margin_y_win,resolution,resolution,0,c_white,1);
+	draw_sprite_ext(sCorner_menu,0,display_get_gui_width() - margin_win,margin_y_win,resolution,resolution,270,c_white,1);
+	draw_sprite_ext(sCorner_menu,0,margin_win,display_get_gui_height() - margin_y_win,resolution,resolution,90,c_white,1);
+	draw_sprite_ext(sCorner_menu,0,display_get_gui_width() - margin_win,display_get_gui_height() - margin_y_win,resolution,resolution,180,c_white,1);
+	
 	draw_set_alpha(1);
 #endregion
 
 #region draw text
 	
 	//draw title
-	draw_set_color(col_font);
+	draw_set_color(col_hover);
 	draw_set_font(font_pixel);
 	draw_set_halign(fa_center);
-	draw_text(x_mid, margin_y_win+45, menu_title);
+	draw_text(x_mid, margin_y_win+25, menu_title);
 
 	//draw links
 	for (var i = 0; i < menu_index; i++) 

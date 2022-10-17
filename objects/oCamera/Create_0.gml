@@ -63,7 +63,6 @@ x_new = 0; y_new = 0; //reset this to follow position (ie oPlayer)
 if instance_exists(oPlayer) follow = oPlayer;
 else follow = id;
 
-
 camera_set_view_target(cam,follow);
 
 //Starting camera position (room start)

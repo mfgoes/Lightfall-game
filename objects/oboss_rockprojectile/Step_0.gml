@@ -76,10 +76,14 @@ if collision_wall
 					image_yscale = choose (2,-2);
 				}
 			}
+		//sound and shake
+		ScreenShake(2,5);
+		var impact_sound = snDeck4rd_impact_01_001;
+		audio_sound_pitch(impact_sound,choose(1,1,0.9,0.8));
+		audio_sound_gain(impact_sound,0.3,0);
+		if !audio_is_playing(impact_sound) 
+			audio_play_sound(impact_sound,0,0);
 			
-			
-			
-	
 		#endregion
 		instance_destroy(); 		
 		

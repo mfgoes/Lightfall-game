@@ -1,7 +1,7 @@
 
 function draw_UI_elements(){
 	
-	if(live_call()) return live_result;
+	
 
 	var margin_right = RES_W-96;
 	var margin_left = 30;
@@ -51,11 +51,11 @@ function draw_UI_elements(){
 			var w5 = sprite_get_width(sCooldown_Archer2)+5; //sprite width + 5; (add some spacing
 			var m5 = 5; //margin 5
 			var margin_bottom =  8;
-			var p10 = 10; var pt5 = -4; var p15 = 20;
+			var p10 = 10; var pt5 = -4; var p15 = 23;
 			var bar_max = 16; //size of load bar
 			var time_c = 0.1 //time divider (for visual)
 			//cooldown numbers
-			draw_set_font(f_smooth);
+			draw_set_font(f_title_sans);
 			draw_set_halign(fa_center);
 			
 			//PRIMARY 
@@ -81,26 +81,26 @@ function draw_UI_elements(){
 			}
 			
 			
-			//THIRD
-			var bar = (third_cooldown/third_cooldown_max)*bar_max
-			draw_sprite_ext(sCooldown_Archer2,2,margin_left+w5*2,margin_bottom+15,1,1,0,c_white,1);
-			if third_cooldown_max - third_cooldown != 0 {
+			//THIRD (ROLL)
+			var bar = (roll_cooldown/roll_cooldown_max)*bar_max
+			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*2,margin_bottom+15,1,1,0,c_white,1);
+			if roll_cooldown_max - roll_cooldown != 0 {
 				draw_set_alpha(0.5);
 				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
 				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15,c_black,c_black,c_black,c_black,0);
 				draw_set_alpha(1);
-				draw_text(margin_left+w5*2+p10,w5+pt5,round((third_cooldown_max - third_cooldown)*time_c)); 
+				draw_text(margin_left+w5*2+p10,w5+pt5,round((roll_cooldown_max - roll_cooldown)*time_c)); 
 			}
 			
-			//FOURTH
-			var bar = (roll_cooldown/roll_cooldown_max)*bar_max;
-			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*3,margin_bottom+15,1,1,0,c_white,1);
-			if roll_cooldown_max - roll_cooldown != 0 {
+			//FOURTH (SHOCKWAVE)
+			var bar = (third_cooldown/third_cooldown_max)*bar_max;
+			draw_sprite_ext(sCooldown_Archer2,2,margin_left+w5*3,margin_bottom+15,1,1,0,c_white,1);
+			if third_cooldown_max - third_cooldown != 0 {
 				draw_set_alpha(0.5);
 				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15,c_black,c_black,c_black,c_black,0);
 				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
 				draw_set_alpha(1);
-				draw_text(margin_left+w5*3+p10,w5+pt5,round((roll_cooldown_max - roll_cooldown)*time_c));
+				draw_text(margin_left+w5*3+p10,w5+pt5,round((third_cooldown_max - third_cooldown)*time_c));
 			}
 			
 		#endregion

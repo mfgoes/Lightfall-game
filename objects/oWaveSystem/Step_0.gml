@@ -20,4 +20,11 @@ if ds_list_size(waves)<=current_wave {
 }
 
 
-
+#region debug mode (spawn test enemies)
+	if (global.debugmode) {
+		if keyboard_check_pressed(vk_enter) {
+			with(oCamera) instance_create_depth(follow.x,follow.y,follow.depth,oEnemyMelee);	
+		}
+	
+	}
+#endregion

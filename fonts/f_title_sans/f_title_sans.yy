@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMFont",
+  "resourceVersion": "1.0",
+  "name": "f_title_sans",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 1,
@@ -21,7 +24,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 3,
-  "ascender": 0,
+  "ascender": 19,
   "glyphs": {
     "32": {"x":2,"y":2,"w":4,"h":29,"character":32,"shift":4,"offset":0,},
     "33": {"x":182,"y":64,"w":2,"h":29,"character":33,"shift":4,"offset":0,},
@@ -132,8 +135,4 @@
     "name": "Fonts",
     "path": "folders/Fonts.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "f_title_sans",
-  "tags": [],
-  "resourceType": "GMFont",
 }

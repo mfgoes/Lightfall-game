@@ -69,7 +69,7 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 	var key_secondary = oPlayer.key_secondary;
 	timer_init("triple_shot");
 	
-	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 && oPlayer.mana >= 1 {
+	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
 			timer_set("secondary_cooldown",secondary_cooldown); 
 			oUIElements.secondary_cooldown  = 0; //for UI
 			//oPlayer.mana -=2;	//consume 1 mana. //Update 4 sep 2022
