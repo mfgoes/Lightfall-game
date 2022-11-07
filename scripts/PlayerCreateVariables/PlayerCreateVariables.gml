@@ -1,13 +1,11 @@
 // Create event for every character. These are the default values. 
 function LoadCharacter_Basics(){
 	//relative attributes
-	hp = 10;
-	mana = 10; mana_max = 10;
 	walkspd = 2; current_walkspd = 0;
 	jump_speed = 5;
 	speedRoll = 5.0;
 	
-	roll_cooldown = 0; 
+	roll_cooldown = 0; moveDistanceRemaining = 0;
 	roll_cooldown_full = 40;
 	distanceRoll = 170;
 	canrope = 0; //allows rope controls

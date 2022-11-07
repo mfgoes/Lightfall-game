@@ -20,17 +20,17 @@ current_wave_check=-1
 waves = ds_list_create()
 if disabled = false switch(room) {
 		
-	case(rLevel1):
+	case(rLevel1):	//1,2,3
 		ds_list_add(waves,
-			wave_create([2,oEnemyChonkyDasher],[1,oEnemyMelee]),
-			wave_create([3,oRockBug],[1,oEnemyMelee]),
+			wave_create([2,oCorruptedCrow],[1,oEnemyMelee],[3,oCorruptedCrow]),
+			wave_create([3,oRockBug],[1,oCorruptedCrow]),
 		)
 	break;
 	
 	case(rLevel2):
 		ds_list_add(waves,
 			wave_create([2,oEnemy_Bat_Modified],[1,oEnemy_Mage],[2,oEnemy_Bat_Modified]),
-			wave_create([0,oEnemy_Mage],[1,oEnemyMelee]),
+			wave_create([0,oEnemy_Mage],[1,oCorruptedCrow]),
 		)
 	break;
 	

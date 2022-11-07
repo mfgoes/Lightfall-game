@@ -36,6 +36,7 @@ if instance_exists(target) && freeze = 0 {
 		{		
 			scr_state_approach(); //basic approach code
 			scr_enemy_leap(); //leap towards player when close by
+			scr_enemy_lunge(); //melee attack (moved out of leap code in Nov 2022)
 		}
 		//animations
 		var dir = sign(target.x - x); if dir = 0 {dir = 1;}
@@ -54,22 +55,19 @@ if instance_exists(target) && freeze = 0 {
 		break;
 	
 	case enemy_states.idle: //pause before attacking again
-		{ //go back
+		{
 			if atk_check = true {
 				atk_check = false
 				if place_meeting(x+atk_anim_x*3,y,target) {
 					atk_delay_timer = atk_delay_goal;
-					with(oPlayer) {
-						hp -= other.damage;
-						flash = 3;
-						gunkickx += sign(x - other.x) * 5; //from pos enemy to pos player
-						ScreenShake(3, 2);
-						if hp < 1
-							KillPlayer();
-						//play sound
-						audio_sound_gain(snFootstep4, 0.8, 0);
-						if !audio_is_playing(snFootstep4)
-							audio_play_sound(snFootstep4, 10, 0);
+					
+					with(oPlayer) if state != PlayerStateRoll {	//check if player is NOT dodging
+						player_hurt_by_enemy(); 
+					} 
+					else { //dodge
+						//this can be a small script
+						player_dodge_success(); 
+						
 					}
 				}
 			}

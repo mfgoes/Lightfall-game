@@ -15,6 +15,9 @@ function MacrosAndGlobals(){
 	global.effects = true; //toggle for performance
 	global.gamepad_on = false; //gamepad
 	//player
+	global.player1_health = 10; global.player1_hp_max = 10;
+	global.player1_mana = 5; global.player1_mana_max = 10; 
+	
 	global.hasgun = true;
 	global.kills = 0;
 	global.killsthiswave = 0;
@@ -23,9 +26,22 @@ function MacrosAndGlobals(){
 	
 	global.exp_points = 0;
 	global.exp_points_thisroom = 0;
-	
 	audio_master_gain(global.sound_volume); //remove this later, better to split use 2 audio channels: Music and sound effects (and voice acting later)
 #endregion
+
+#region create save file at start of game, not after. 
+	if !(file_exists(SAVEFILE)) {
+		var file;
+		file = file_text_open_write(SAVEFILE);
+		file_text_write_real(file,global.player1_health);
+		file_text_write_real(file,global.player1_mana);
+		file_text_close(file);
+	} 
+#endregion
+
+
+
+
 
 #region set up resolution macros MOVE THIS TO FUNCTION LATER
 	#macro SAVEFILE "Save.sav"

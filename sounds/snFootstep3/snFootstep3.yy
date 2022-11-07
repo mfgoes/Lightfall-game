@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snFootstep3",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,11 +17,7 @@
   "soundFile": "snFootstep3",
   "duration": 0.100782,
   "parent": {
-    "name": "Player sounds",
-    "path": "folders/Sounds/Player sounds.yy",
+    "name": "Footsteps",
+    "path": "folders/Sounds/Player sounds/Footsteps.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snFootstep3",
-  "tags": [],
-  "resourceType": "GMSound",
 }

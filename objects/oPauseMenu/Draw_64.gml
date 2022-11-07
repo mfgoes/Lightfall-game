@@ -57,7 +57,7 @@ draw_text(10,100,alarm[0]);
 
 if global.debugmode = true {
 	draw_set_halign(fa_left);
-	draw_text(10,RES_H-32,"arrows to switch rooms");
+	draw_text(RES_H-32,RES_H-32,"<> to switch rooms");
 }
 #endregion
 

@@ -31,6 +31,10 @@ if (place_meeting(x,y,oPlayer))
 		audio_play_sound(snHitEnemy,0,0);
 		
 		if hp < 1 KillPlayer();
+		
+		//create blood particles
+		instance_create_depth(x,y,depth-5,oParticleBlood);
+						
 	}
 	
 	repeat(3)

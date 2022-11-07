@@ -50,7 +50,8 @@ function PlayerInput(){
 			{
 				if state = PlayerStateFree && roll_cooldown = 0 {
 					state = PlayerStateRoll;
-					audio_sound_gain(snJump1,0.2,0);
+					audio_sound_gain(snJump1,0.5,0);
+					audio_sound_pitch(snJump1,0.7);
 					audio_play_sound(snJump1,4,false);
 					roll_cooldown = roll_cooldown_full;	/// if cooldown = 0 you can roll, else no roll. 
 					oUIElements.roll_cooldown = 0;

@@ -1,10 +1,7 @@
-/// @description keybinds
+/// @description angle weapon
 #region set weapon pos + visibility
 	x = oPlayer.x - lengthdir_x(3,oPlayer.facing_direction) - lengthdir_x(weapon_recoil,image_angle);
 	y = oPlayer.y;
-	
-
-	
 #endregion
 
 #region angle weapon

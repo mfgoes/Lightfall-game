@@ -1,6 +1,9 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snAlertEnemy",
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": false,
   "bitRate": 56,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snAlertEnemy.wav",
-  "duration": 2.503111,
+  "duration": 0.621188,
   "parent": {
     "name": "Enemy Sounds",
     "path": "folders/Sounds/Enemy Sounds.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snAlertEnemy",
-  "tags": [],
-  "resourceType": "GMSound",
 }

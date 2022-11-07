@@ -1,6 +1,36 @@
-// Script assets have changed for v2.3.0 see
-// this is for basic objects / boxes. May be expanded in the future to enemies. 
-//It's a lot simpler than player collisions (keep it seperate). 
+//simple snippets for reused codes (mostly regarding the player
+
+
+//COMBAT RELATED
+function player_hurt_by_enemy() {
+	hp -= other.damage;
+	flash = 3;
+	gunkickx += sign(x - other.x) * 5; //from pos enemy to pos player
+	ScreenShake(3, 2);
+						
+	//create blood particles
+	instance_create_depth(x,y,depth-5,oParticleBlood);
+						
+	if hp < 1
+		KillPlayer();
+	//play hurt sound
+	var sound = choose(Realistic_Punch_2_1,Realistic_Punch_2_2,Realistic_Punch_2_3,Realistic_Punch_2_4);
+	audio_sound_gain(sound, 0.8, 0);
+	if !audio_is_playing(sound)
+		audio_play_sound(sound, 10, 0);	
+}
+
+function player_dodge_success() {
+if !audio_is_playing(snDashDodge)
+	audio_sound_gain(snDashDodge,0.4,1);
+	audio_play_sound(snDashDodge, 10, 0);
+	
+	//to do: make dramatic dodge particles here
+}
+
+
+//BASIC / GRAVITY / MISC	
+
 function VerticalCollision(){
 	 
 var grv = 0.3;

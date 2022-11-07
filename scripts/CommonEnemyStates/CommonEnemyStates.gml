@@ -94,6 +94,8 @@ function scr_state_approach(){
 		else 
 			y-=5;	 
 	}
+	
+	//attack code = moved to separate function 
 }
 	
 //Attack the player (close ranged) 
@@ -161,17 +163,21 @@ function scr_enemy_leap() {
 		x+=h_leap
 	}	
 	
-	timer_init("lunge_timer");
-	if timer_get("lunge_timer") <= 0 && (place_meeting(x+dir*8,y,target)) && (grounded) && h_leap = 0 {
-		timer_set("lunge_timer",50);
-		current_state = enemy_states.lunge;
-		dir_atk=dir;
-	}	
+	
 }
 
 
 function scr_enemy_lunge(){
-	
+	//ATTACK 
+	var dir = sign(target.x - x); 
+	if current_state = enemy_states.approach {
+		timer_init("lunge_timer");
+		if timer_get("lunge_timer") <= 0 && (place_meeting(x+dir*8,y,target)) && (grounded) && h_leap = 0 {
+			timer_set("lunge_timer",50);
+			current_state = enemy_states.lunge;
+			dir_atk=dir;
+		}	
+	}
 }
 
 

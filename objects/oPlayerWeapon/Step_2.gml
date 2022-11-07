@@ -66,10 +66,12 @@ else {
 			//primary attack (LMB)
 			Ability_Primary_Archer(); 	
 		
-			//secondary attack (RMB)	//To do: move key check here later
+			//secondary attack (RMB)	//To do: move key check here later so it makes more sense
 			Ability_Secondary_Archer(); 
 		
 			//spread attack (Q)
 			if (oPlayer.key_special) Ability_Special_Shockwave(); //freezing shockwave special
+			
+			//roll ability (currently in PlayerInput). //To do: move it here. 
 		#endregion
 	}

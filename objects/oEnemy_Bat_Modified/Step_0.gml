@@ -85,6 +85,10 @@ else if freeze = 0 {
 			gunkickx += sign(other.x - x)*5; //from pos enemy to pos player
 			ScreenShake(3,2);
 			if hp < 1 KillPlayer();
+			
+			//create blood particles
+			instance_create_depth(x,y,depth-5,oParticleBlood);
+						
 			//play sound
 			audio_sound_gain(snFootstep4,0.8,0);
 			if !audio_is_playing(snFootstep4) audio_play_sound(snFootstep4,10,0);

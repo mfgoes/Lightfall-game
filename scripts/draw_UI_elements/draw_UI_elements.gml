@@ -1,8 +1,6 @@
 
 function draw_UI_elements(){
 	
-	
-
 	var margin_right = RES_W-96;
 	var margin_left = 30;
 	var margin_bottom =  5;
@@ -24,6 +22,7 @@ function draw_UI_elements(){
 			draw_rectangle(margin_left,margin_bottom,margin_left+healthUImax,margin_bottom+8,0);
 			draw_set_color(col_hp);
 			draw_rectangle(margin_left+1,margin_bottom+1,margin_left+healthUI,margin_bottom+7,0);
+	
 	
 			//draw profile
 			draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);
@@ -148,10 +147,12 @@ function draw_debug_info(){
 		draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
 		draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));
 		draw_text(4,40,"zoom: " + string(oCamera.zoom));
-		//draw_text(4,70,"zoom_start: " + string(oCamera.start_zoom));
+		dd = (place_meeting(oPlayer.x,oPlayer.y + 1,oPlatformParent)) 
+		draw_text(4,70,"oPlatformParent: " + string(dd));
+		draw_text(4,80,"vsp: " + string(oPlayer.y));
 		
 		//arrow stuff
-		if instance_exists(oArrow) draw_text(0,100,"arrow dir " + string(oArrow.direction)); 
+		//if instance_exists(oArrow) draw_text(0,100,"arrow dir " + string(oArrow.direction)); 
 		
 		
 	}

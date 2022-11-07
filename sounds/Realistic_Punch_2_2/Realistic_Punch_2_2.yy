@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "Realistic_Punch_2_2",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -11,14 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "archer_blink.ogg",
-  "duration": 0.47034,
+  "soundFile": "Realistic_Punch_2_2.wav",
+  "duration": 0.75,
   "parent": {
-    "name": "Player sounds",
-    "path": "folders/Sounds/Player sounds.yy",
+    "name": "HURT",
+    "path": "folders/Sounds/Player sounds/HURT.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "archer_blink",
-  "tags": [],
-  "resourceType": "GMSound",
 }

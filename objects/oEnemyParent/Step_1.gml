@@ -1,8 +1,13 @@
 /// @description destroy self
 if (hp <= 0) {
-	repeat(3) {	//create dust effect #poof
+	
+	audio_sound_gain(snDeath,0.4,0);
+	audio_play_sound(snDeath,1,0);
+	
+	//create dust particles
+	repeat(3) {	
 		//dust particles
-		with(instance_create_layer(x,bbox_bottom,"Bullets",oDust)) {
+		with(instance_create_layer(x,bbox_bottom-6,"Bullets",oDust)) {
 			vsp = -0.1; image_alpha = 0.3+random(0.3);
 			hsp = random_range(-1,1);
 			image_xscale = choose (2,-2);
