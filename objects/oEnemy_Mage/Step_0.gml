@@ -80,7 +80,7 @@ switch (current_state)
 						bullet.direction = point_direction(x,y,target.x,target.y); //+choose(-5,0,5);
 						bullet.image_angle = bullet.direction;
 						bullet.sprite_index = sEBullet_Mage;
-						bullet.spd = 2.5; 
+						bullet.spd = 4; 
 						bullet.damage = 0;
 					}
 				}

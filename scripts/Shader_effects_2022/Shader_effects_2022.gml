@@ -13,11 +13,11 @@ function effect_flash(){
 
 
 function effect_flinch_anim(){ //for enemies
-	if (flinch_anim > 0) 
+	if (flinch_anim > 1) 
 	{
 		flinch_anim --;
 		sprite_index = spriteHit;
-		image_speed = 0;
+		//image_speed = 0;
 	} 
 	else {
 		sprite_index = spriteIdle;

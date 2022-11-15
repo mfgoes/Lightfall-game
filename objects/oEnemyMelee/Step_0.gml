@@ -9,9 +9,6 @@
 	VerticalCollision(); 
 	grounded = (place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent));
 
-	//This exists in the parent step event
-	//but event_inherited is never called 
-	//by this object
 	if y > room_height
 		hp = 0;
 #endregion
@@ -19,8 +16,11 @@
 //hit by player
 if freeze > 0 {
 		freeze--;	
-		effect_flinch_anim(); //briefly change animation to flinch
 }
+if flinch_anim > 0 {
+	effect_flinch_anim();	
+}
+
 
 if instance_exists(target) && freeze = 0 {
 	

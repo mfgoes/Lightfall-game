@@ -35,7 +35,7 @@ if y > room_height {
 	}
 	else {
 		if hp <= 0 {
-			sprite_index = spriteDie;	
+			//sprite_index = spriteDie;	
 			hsp = 0; //prevents flipping
 		}
 		else if current_state = enemy_states.attack && timer_get("attack_reload") > 0 {

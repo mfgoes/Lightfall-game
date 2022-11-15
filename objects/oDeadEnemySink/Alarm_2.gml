@@ -1,0 +1,2 @@
+/// @description fade
+fade = true;

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oWallParent",
   "spriteId": {
     "name": "sWall32x32_extended",
     "path": "sprites/sWall32x32_extended/sWall32x32_extended.yy",
@@ -21,15 +24,13 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Objects/Walls.yy",
+    "name": "Environment",
+    "path": "folders/Objects/Environment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oWallParent",
-  "tags": [],
-  "resourceType": "GMObject",
 }

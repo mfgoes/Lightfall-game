@@ -12,7 +12,7 @@ draw_sprite_ext(sprite_index,image_index,x+atk_anim_x,y,image_xscale,image_yscal
 effect_flash();
 
 #region Draw health bar
-	if hp<hp_max { 
+	if hp<hp_max && hp_max > 4 { //don't show bars for weak enemies 
 		var percentagehp = (hp / hp_max)*20; // 0/0 = -5 1/2 = 5;  2/2 = 10; (multiplied by 10?)
 		var bgrcolor = make_colour_rgb(27, 29, 40);
 		var red1 = make_colour_rgb(173, 46, 51);

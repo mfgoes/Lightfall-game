@@ -30,6 +30,12 @@ if (hp <= 0) {
 		with(oGame)
 			killtextscale = 1.2;
 	}
+	
+	//create dead sprite
+	dd = instance_create_depth(x,y+5,depth,oDeadEnemySink);
+	dd.sprite_index = spriteDie;
+	dd.image_xscale = image_xscale;
+	
 	instance_destroy();
 }
 

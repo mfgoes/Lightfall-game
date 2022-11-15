@@ -71,7 +71,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "Icons",
+    "path": "folders/Objects/Menu/Icons.yy",
   },
 }

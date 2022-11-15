@@ -100,6 +100,6 @@
   },
   "parent": {
     "name": "char_protag green",
-    "path": "folders/Objects/Player Objects/char_protag green.yy",
+    "path": "folders/Objects/Player Related/char_protag green.yy",
   },
 }

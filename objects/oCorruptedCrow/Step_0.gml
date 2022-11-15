@@ -19,8 +19,8 @@
 //hit by player
 if freeze > 0 {
 		freeze--;	
-		effect_flinch_anim(); //briefly change animation to flinch
 }
+
 
 if instance_exists(target) && freeze = 0 {
 	

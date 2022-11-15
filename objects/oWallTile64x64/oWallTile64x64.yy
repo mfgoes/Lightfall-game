@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oWallTile64x64",
   "spriteId": {
     "name": "sWall64x64",
     "path": "sprites/sWall64x64/sWall64x64.yy",
@@ -28,11 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Objects/Walls.yy",
+    "name": "Environment",
+    "path": "folders/Objects/Environment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oWallTile64x64",
-  "tags": [],
-  "resourceType": "GMObject",
 }

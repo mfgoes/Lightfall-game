@@ -41,7 +41,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"hp","path":"objects/pShootable/pShootable.yy",},"objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"value":"1",},
   ],
   "parent": {
-    "name": "Enemies Related",
-    "path": "folders/Objects/Enemies Related.yy",
+    "name": "Enemies_Basic",
+    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
   },
 }
