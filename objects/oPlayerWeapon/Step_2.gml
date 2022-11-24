@@ -1,16 +1,19 @@
-/// @description Execute abilities
+/// @description abilities + mana management
 
-//gm live 
-if (live_call()) return live_result; 
+#region debugging stuff
+	//gm live 
+	if (live_call()) return live_result; 
 
-//pause
-if global.game_paused
-{
-	exit;
-}
+	//pause
+	if global.game_paused {
+		exit;
+	}
 
-//debugmode
-if global.debugmode = true {oPlayer.mana = oPlayer.mana_max;}  
+	//debugmode
+	if global.debugmode = true {
+		oPlayer.mana = oPlayer.mana_max;
+	}  
+#endregion
 
 #region init timers
 	//cooldown abilities
@@ -36,6 +39,16 @@ else {
 
 
 #endregion
+		
+#region mana recovery (constant)	
+	timer_init("mana_reload");
+
+	if oPlayer.mana < global.player1_mana_max && timer_get("mana_reload") <= 0 {
+		oPlayer.mana+=0.1;	
+		timer_set("mana_reload",30);
+		if oPlayer.mana > global.player1_mana_max oPlayer.mana = global.player1_mana_max; //failsafe if it goes over the limit
+	}
+#endregion
 
 #region cooldown abilities
 	if oPlayer.state != PlayerStateRoll && oPlayer.canrope = 0 {	
@@ -56,7 +69,9 @@ else {
 		if distance_to_object(closest) < assist_dist && closest != noone && angle_in_range = true {
 			if sign(closest.x - x) = sign(cos(oPlayer.facing_direction)) &&
 				!collision_line(x,y-12,closest.x,closest.y-12,oWallParent,0,0) {
-					shoot_direction = point_direction(x,y,closest.x,closest.y-12);
+					var mask_middle = (closest.bbox_bottom - closest.bbox_top)/2;
+					shoot_direction = point_direction(x,y,closest.x,closest.y-mask_middle); //target center of enemy
+					
 				}
 			else 
 				shoot_direction = oPlayer.facing_direction;
@@ -75,3 +90,4 @@ else {
 			//roll ability (currently in PlayerInput). //To do: move it here. 
 		#endregion
 	}
+#endregion	

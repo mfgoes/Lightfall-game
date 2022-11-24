@@ -176,7 +176,7 @@ function Ability_Special_Shockwave() {
 		timer_set("special_cooldown",third_cooldown);
 		oUIElements.third_cooldown  = 0; //for UI purposes
 		
-		oPlayer.mana -=5;  
+		oPlayer.mana -=3;  
 		if oPlayer.mana < 0 oPlayer.mana = 0;
 	
 		instance_create_depth(x,y,depth,oAttack_Shockwave);
@@ -184,7 +184,7 @@ function Ability_Special_Shockwave() {
 		//change player animation (figure out how best to do this later)
 		//oPlayer.spriteSpecial = sProtag_shockwave_playeronly; //set special sprite when "choosing" this special ability later on. 
 		with(oPlayer) {
-			sprite_index = spriteSpecial;
+			sprite_index = spriteSpecial;	
 			image_speed = 1;
 			using_ability = 1; //leave this on until ability is over.
 		}

@@ -13,4 +13,4 @@ oPlayer.vsp = 0;
 //start with loading sound
 audio_sound_gain(MULT_m1_snipe_chargeUp_01,0.3,0);
 audio_play_sound(MULT_m1_snipe_chargeUp_01,0,0)
-sound2 = 0;
+active_attack = 0;

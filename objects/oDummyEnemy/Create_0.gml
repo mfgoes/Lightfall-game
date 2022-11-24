@@ -6,7 +6,7 @@ event_inherited();
 
 
 //extras
-hp = 20;
+hp = 25;
 hp_max = hp; 
 
 stunned = 5; //prevents enemy from walking 
