@@ -84,6 +84,7 @@ if hp > 0 {
 		break;
 
 		case enemy_states.attack: //state = 3
+		//to do: create an argument to determine how often this happens
 		scr_state_atk_melee();
 		break;
 		
