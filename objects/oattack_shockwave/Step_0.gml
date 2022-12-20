@@ -35,8 +35,6 @@
 				oPlayer.vsp = 0;
 			}
 		} else exit;
-	ScreenShake(2,20);
-	ZoomShake(5,20);
 #endregion
 
 #region cause damage to all objects in circle ONCE
@@ -76,7 +74,9 @@ if (_num > 0) && active_attack = 1 //damage any shootable object in range
 	audio_sound_pitch(snd_feedback,choose(1,1.1,1.2));
 	if !audio_is_playing(snd_feedback)
 	audio_play_sound(snd_feedback,3,0);
+	ZoomShake(5,20);
 	scrFreezeScreen(40); 
+	ScreenShake(2,40);
 	
 	
 	

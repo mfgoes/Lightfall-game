@@ -11,7 +11,7 @@ function MacrosAndGlobals(){
 	global.game_paused = false;
 	global.pause_bg = noone;
 	global.sound_volume = 1;
-	global.music_volume = 0.5;
+	global.music_volume = 0;
 	global.effects = true; //toggle for performance
 	global.gamepad_on = false; //gamepad
 	//player

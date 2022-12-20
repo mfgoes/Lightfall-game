@@ -6,5 +6,5 @@ event_inherited();
 
 if hp <= 0 {	//be more dramatic here
 	if instance_exists(oLevelEnd) oLevelEnd.boss_defeated = true;
-	ScreenShake(4,50);
+	ScreenShake(4,40);
 }

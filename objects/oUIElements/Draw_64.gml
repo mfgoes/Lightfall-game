@@ -1,7 +1,7 @@
 /// @desc draw UI
 
 //draw objective (move to function later)
-if room != rMenu {
+if room != rMenu && room != rLevelSelect {
 	draw_objective_UI(); 
 }
 //draw boss UI
@@ -16,7 +16,8 @@ draw_cursor_custom();
 
 
 //debug only
-draw_debug_info();
+if instance_exists(oPlayer)
+	draw_debug_info();
 
 //level details
 //show_region_title();

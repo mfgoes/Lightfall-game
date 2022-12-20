@@ -1,5 +1,5 @@
 /// @description Draw Menu
-draw_text(10,100,alarm[0]);
+//draw_text(10,100,alarm[0]);
 
 #region define variables
 	//window 

@@ -47,7 +47,7 @@ button_h = 50; //line height
 	box_width = 280; //px
 	draw_set_alpha(0.5);
 	draw_set_color(c_black);
-	draw_rectangle(RES_W * resolution-pl_m,menu_y - pl_m,RES_W * resolution - box_width - pl_m,RES_H * resolution - pl_m,0);
+	draw_rectangle(RES_W * resolution-pl_m,menu_y - pl_m,RES_W * resolution - box_width - pl_m,RES_H * resolution - 100,0);
 	draw_set_alpha(1);
 	//text
 	draw_set_halign(fa_left);

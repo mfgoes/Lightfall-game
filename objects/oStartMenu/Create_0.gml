@@ -25,7 +25,7 @@ menu_y = RES_H * RES_SCALE-140;
 //buttons
 button[0] ="Continue";
 button[1] = "New Game";
-button[2] = "Settings";
+button[2] = "Level Select"; //add settings back later
 button[3] = "Quit";
 
 buttons = array_length(button);

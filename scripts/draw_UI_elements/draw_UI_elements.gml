@@ -216,10 +216,13 @@ function draw_boss_UI(){
 	
 }
 
-
-
 //UI SOUNDS 2022.1
-function audio_ui_click() {
-	audio_sound_gain(snd_button1,global.sound_volume,0);
-	audio_play_sound(snd_button1,1,0);	
+function audio_ui_click(sound = snd_button1) { //if no input, play default UI sound. 
+	var sound_play = sound; 
+	if sound = 0 sound_play = snd_button1; //click through, going to next page. 
+	if sound = 1 sound_play = snd_button2; //click between buttons/links	
+	if sound = 2 sound_play = snd_button_confirm_bass; //click between buttons/links	
+	
+	audio_sound_gain(sound_play,global.sound_volume*0.5,0);
+	audio_play_sound(sound_play,1,0);	
 }

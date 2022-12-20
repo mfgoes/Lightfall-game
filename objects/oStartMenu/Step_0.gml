@@ -9,14 +9,16 @@ menu_move = key_down - key_up;
 menu_index+= menu_move;
 if (menu_index < 0) menu_index = buttons-1; 
 if (menu_index > buttons - 1) menu_index = 0;
-if (menu_index != last_selected) audio_play_sound(snd_button1,2,false);
+if (menu_index != last_selected) audio_ui_click(1); 
 last_selected = menu_index;
 
 /// @description Confirm button
 if (key_confirm) {
+		
 	switch (menu_index) {
 		case 1: //new game
 			show_debug_message("PRESS: NEW GAME");
+			audio_ui_click(2); 
 			SlideTransition(TRANS_MODE.GOTO,rLevel1); 
 			break;
 		
@@ -24,6 +26,7 @@ if (key_confirm) {
 			
 			if global.HTML_config = 1 {
 				show_debug_message("PRESS: NEW GAME");
+				audio_ui_click(2); 
 				SlideTransition(TRANS_MODE.GOTO,rLevel1); 
 			}
 			else {
@@ -46,10 +49,13 @@ if (key_confirm) {
 			break;
 		
 		case 2: //options
-			show_debug_message("PRESS: OPTIONS");
+			show_debug_message("PRESS: LEVEL SELECT");
+			audio_ui_click(0); 
+			SlideTransition(TRANS_MODE.GOTO,rLevelSelect); 
 			break;		
 		case 3: //end game
 			show_debug_message("PRESS: QUIT");
+			audio_ui_click(0);
 			break;		
 	}
 }
