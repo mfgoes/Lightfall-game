@@ -1,16 +1,32 @@
 /// @description Control Menu
 
+//To do: scrap this completely and replace with parent menu code. 
+
 var key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 var key_confirm = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);
 
-menu_move = key_down - key_up;
-
-menu_index+= menu_move;
-if (menu_index < 0) menu_index = buttons-1; 
-if (menu_index > buttons - 1) menu_index = 0;
-if (menu_index != last_selected) audio_ui_click(1); 
-last_selected = menu_index;
+//mouse input
+var mouse_y_gui = (device_mouse_y_to_gui(0)); 
+if (mouse_y_gui < menu_y_bot) && (mouse_y_gui > menu_y_top) { //can also use clamp function
+	menu_move = (mouse_y_gui - menu_y_top) div (button_h/resolution);	
+	//if menu_move_current != menu_move { //make click sound
+	//	menu_move_current = menu_move;
+	//	audio_ui_click(1); 
+	//}
+	last_selected = menu_index;
+}	
+//keys input
+else { 
+	menu_move = key_down - key_up;
+	if (menu_index < 0) menu_index = buttons-1; 
+	if (menu_index > buttons - 1) menu_index = 0;
+	menu_index+= menu_move;
+	
+	if (menu_index != last_selected) audio_ui_click(1); 
+	last_selected = menu_index;
+	//to do: apply this to all menus
+}
 
 /// @description Confirm button
 if (key_confirm) {
@@ -59,19 +75,13 @@ if (key_confirm) {
 			break;		
 	}
 }
-//GUI items ease in (ADD LATER)
-
-// fullscreen code 
 /*
-if keyboard_check_pressed(vk_f1) || keyboard_check_pressed(ord("0"))
-   {
-   if window_get_fullscreen()
-      {
-      window_set_fullscreen(false);
-      }
-   else
-      {
-      window_set_fullscreen(true);
-      }
-   }
- */
+if (mouse_check_button_pressed(mb_left)) || (keyboard_check_pressed(vk_enter))
+{
+	menu_x_target = gui_width+20;
+	menu_committed = menu_move;
+	audio_ui_click(); 
+	//menu_control = false;		
+}
+*/
+

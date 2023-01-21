@@ -9,7 +9,11 @@ myPrevious = 0;
 col_font = c_white;
 col_hover = make_color_rgb(226, 178, 126);
 col_bgr = c_black;
+text_align = fa_center;
 //
+
+//coordinates of created menu
+x_pos = (display_get_gui_width()/2)*resolution;	
 
 //size 
 gui_width = display_get_gui_width();
@@ -21,6 +25,7 @@ menu_speed = 15; //lower = faster
 font_pixel = f_title_sans;
 menu_committed = -1;
 menu_control = true; //can control menu
+menu_move_current = 0; //used for click sound basically
 m = 0; //??
 
 menu_title = "Menu";

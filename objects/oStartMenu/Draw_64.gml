@@ -2,6 +2,12 @@
 
 if(live_call()) return live_result;
 
+//debug
+if global.debugmode = true {
+	draw_text(32,32,"move: " + string(menu_move));
+	draw_text(32,48,"index: " + string(menu_index));
+}
+
 
 //fix scaling issues
 var pl_m = 40; //padding left

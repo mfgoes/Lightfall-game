@@ -223,6 +223,9 @@ function audio_ui_click(sound = snd_button1) { //if no input, play default UI so
 	if sound = 1 sound_play = snd_button2; //click between buttons/links	
 	if sound = 2 sound_play = snd_button_confirm_bass; //click between buttons/links	
 	
-	audio_sound_gain(sound_play,global.sound_volume*0.5,0);
+	//determine volume
+	if sound = 1 audio_sound_gain(sound_play,0.3,0); else
+	audio_sound_gain(sound_play,global.sound_volume*0.5,0);	
+	
 	audio_play_sound(sound_play,1,0);	
 }

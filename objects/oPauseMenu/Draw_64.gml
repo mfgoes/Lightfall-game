@@ -6,7 +6,7 @@
 	display_set_gui_size(RES_W*resolution, RES_H*resolution); //text is twice the resolution
 	var x_offset = display_get_gui_width()/4;
 	var y_offset = display_get_gui_height()/5; 
-	var x_mid = display_get_gui_width()/2;	
+	//assign this in create event now. //var x_pos = display_get_gui_width()/2;	
 #endregion
 
 #region draw window and corners
@@ -29,8 +29,8 @@
 	//draw title
 	draw_set_color(col_hover);
 	draw_set_font(font_pixel);
-	draw_set_halign(fa_center);
-	draw_text(x_mid, margin_y_win+25, menu_title);
+	draw_set_halign(text_align);
+	draw_text(x_pos, margin_y_win+25, menu_title);
 
 	//draw links
 	for (var i = 0; i < menu_index; i++) 
@@ -45,9 +45,9 @@
 		{
 			var col = col_font;
 		}
-		var xx = x_mid;
+		var xx = x_pos;
 		var yy = menu_y_top * resolution + (line_height * i); //define this elsewhere;
-		draw_set_halign(fa_center);
+		draw_set_halign(text_align);
 		draw_set_color(col);
 		draw_text(xx,yy,txt);	
 	}
@@ -58,6 +58,7 @@
 if global.debugmode = true {
 	draw_set_halign(fa_left);
 	draw_text(RES_H-32,RES_H-32,"<> to switch rooms");
+	draw_text(RES_H-32,RES_H-48,menu_move); 
 }
 #endregion
 
