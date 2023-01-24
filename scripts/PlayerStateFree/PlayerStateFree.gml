@@ -41,7 +41,7 @@ if (place_meeting(x,y+1,oPlatformParent) && key_down && can_move && !place_meeti
 #region gravity + jumping
 
 	if air_shot = true && vsp > 1 { //slow down the shotvsp = 0 sprite_index = spriteJump && image_index = 1
-		if vsp < 12 vsp = (vsp + grv*slowmotion) + gunkicky else vsp = round(vsp);  //only slow-mo on the way down
+		if vsp < 12 vsp = (vsp + grv*slowmotion) else vsp = round(vsp);  //only slow-mo on the way down
 		//slow down hspeed to avoid crazy leap jumps. 
 	}
 	else {

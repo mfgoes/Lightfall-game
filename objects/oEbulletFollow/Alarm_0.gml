@@ -11,4 +11,9 @@ repeat(3)
 	}
 }
 	
+//make sound depending on the sprite image. this is the "type" of this bullet (for now)
+if sprite_index = sEBullet_Mage {
+	audio_play_sound(snElectric_Hit,0,0,global.sound_volume*0.1);
+}
+	
 instance_destroy();

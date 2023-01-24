@@ -4,7 +4,11 @@ if (live_call()) return live_result;
 
 #region showcase image thumbnail for the level
 	var thumb_x = RES_W/2; //half of screen
-	var thumb_y = 100; 
+	var y_flow = cos(direction)*3; direction+=0.03; 
+	var thumb_y = 80 + y_flow; 
+	
+	//switch to cases later: best times
+	draw_sprite(best_time_placeholder,0,thumb_x,thumb_y+sprite_get_height(thumbnail_level)+5);
 	
 	switch(menu_move) {
 		case 0: 

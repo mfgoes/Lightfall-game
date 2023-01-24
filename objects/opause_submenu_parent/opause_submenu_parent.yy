@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oPauseMenu",
-    "path": "objects/oPauseMenu/oPauseMenu.yy",
+    "name": "oMenuParent",
+    "path": "objects/oMenuParent/oMenuParent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

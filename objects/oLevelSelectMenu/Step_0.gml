@@ -1,5 +1,4 @@
 /// @description Control Menu
-if (live_call()) return live_result;
 
 #region hover over link
 	if (menu_control)  && alarm[0] <= 0 

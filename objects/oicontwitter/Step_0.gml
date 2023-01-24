@@ -2,7 +2,7 @@
 
 //click
 if mouse_check_button_released(mb_left) && position_meeting(mouse_x, mouse_y, id) {
-	url_open_ext("https://twitter.com/MischaProjects","_blank");	
+	url_open_ext("https://twitter.com/misho_dev","_blank");	
 }
 
 //hover

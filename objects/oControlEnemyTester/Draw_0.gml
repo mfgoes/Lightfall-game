@@ -10,7 +10,7 @@ if (CheckInCamera()) && global.debugmode = true //&& global.debugmode = true
 
 	//debug
 	draw_set_color(c_white);
-	draw_set_font(f_compact_sans);
+	draw_set_font(fSign);
 	//draw_set_halign(fa_center);
 	//var str = object_get_name(ds_grid_get(grid,0,0)); 
 	//draw_text(x,y-30,string(str));

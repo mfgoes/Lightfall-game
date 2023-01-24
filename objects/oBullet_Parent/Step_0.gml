@@ -80,7 +80,7 @@ if (place_meeting(x,y,pShootable)) && active = true
 				if !place_meeting(x,y+gunkicky,oWallParent) y+=gunkicky; gunkicky = 0;
 			
 				//set a short freeze attribute + shot that enemy is hit
-				freeze = other.freeze;
+				//freeze = other.freeze;
 				flinch_anim = 10; 
 			}
 		}

@@ -17,14 +17,6 @@ if timer_get("after_images") <= 0 {
 
 #endregion
 
-//enable wall collisions
-if timer_get("collision_wall") < 0 && collision_wall = false {
-	timer_set("collision_wall",100);
-}
-
-if timer_get("collision_wall") = 1 {
-	collision_wall = true;	
-}
 
 if global.game_paused
 {
@@ -48,7 +40,7 @@ if alarm[1] > 0 {
 x+= lengthdir_x(spd,dir);
 y+= lengthdir_y(spd,dir);
 
-//hit player
+//hit player IF not dodging
 if (place_meeting(x,y,oPlayer)) && alarm[1] <= 0 && oPlayer.sprite_index != oPlayer.spriteRoll //check if not rolling. Refine later. 
 {
 	with(instance_place(x,y,oPlayer))
@@ -85,39 +77,44 @@ if (place_meeting(x,y,oPlayer)) && alarm[1] <= 0 && oPlayer.sprite_index != oPla
 }
 
 
-if collision_wall = true
-{
-	if (place_meeting(x,y,oWallParent)) && alarm[1] <= 0
-	{
-		//while (place_meeting(x,y,oWallParent)) 
-		//{
-		//	x-= lengthdir_x(1,direction);	//move back in direction
-		//	y-= lengthdir_y(1,direction);
-		//}
-		#region effects
-			repeat(3)
-			{
-				instance_create_depth(x,y,depth,oBulletImpactEffect);
-				//dust particles
-				with(instance_create_layer(x-lengthdir_x(5,direction-180),y-lengthdir_y(5,direction-180),"Bullets",oDust)) {
-					vsp = -0.1; image_alpha = 0.5+random(0.3);
-					hsp = random_range(-1,1);
-					image_xscale = choose (2,-2);
-					image_yscale = choose (2,-2);
-				}
-			}
-			//sound and shake
-			ScreenShake(2,5);
-			var impact_sound = snd_bulletHit;
-			audio_sound_pitch(impact_sound,1.3);
-			audio_sound_gain(impact_sound,0.1,0);
-			if !audio_is_playing(impact_sound) 
-				audio_play_sound(impact_sound,0,0);
-			
-		#endregion
-		
-		instance_destroy(); 		
+#region relative wall collision
+	//enable wall collisions
+	if timer_get("collision_wall") < 0 && collision_wall = false {
+		timer_set("collision_wall",100);
 	}
-}
 
+	if timer_get("collision_wall") = 1 {
+		collision_wall = true;	
+	}
+
+	if collision_wall = true
+	{
+		if (place_meeting(x,y,oWallParent)) && alarm[1] <= 0
+		{
+			#region effects
+				repeat(3)
+				{
+					instance_create_depth(x,y,depth,oBulletImpactEffect);
+					//dust particles
+					with(instance_create_layer(x-lengthdir_x(5,direction-180),y-lengthdir_y(5,direction-180),"Bullets",oDust)) {
+						vsp = -0.1; image_alpha = 0.5+random(0.3);
+						hsp = random_range(-1,1);
+						image_xscale = choose (2,-2);
+						image_yscale = choose (2,-2);
+					}
+				}
+				//sound and shake
+				ScreenShake(2,5);
+				var impact_sound = snd_bulletHit;
+				audio_sound_pitch(impact_sound,1.3);
+				audio_sound_gain(impact_sound,0.1,0);
+				if !audio_is_playing(impact_sound) 
+					audio_play_sound(impact_sound,0,0);
+			
+			#endregion
+		
+			instance_destroy(); 		
+		}
+	}
+#endregion
 

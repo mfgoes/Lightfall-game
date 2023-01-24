@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy related",
-    "path": "folders/Objects/Enemies Related/Enemy related.yy",
+    "name": "misc",
+    "path": "folders/Objects/Enemies Related/misc.yy",
   },
 }

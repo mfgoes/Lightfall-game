@@ -7,3 +7,5 @@ collision_wall = true;
 
 dir = 0; 
 spd = 0;
+
+destroy_sound = statue_stomp_02; //sound it makes when destroyed

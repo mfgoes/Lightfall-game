@@ -75,13 +75,20 @@ switch (current_state)
 			if timer_get("attack_player") <=0 {
 					attack_anim_end = 0;
 					if sprite_index = spriteAttack && image_index > 3 { //create bullet on correct animation frame
-						timer_set("attack_player",90+choose(10,30,50)); 
+						timer_set("attack_player",100+choose(0,60,120)); 
 						var bullet = instance_create_layer(x+lengthdir_x(10,radtodeg(arccos(dir))), y-12, "bullets", oEbulletFollow)
 						bullet.direction = point_direction(x,y,target.x,target.y); //+choose(-5,0,5);
 						bullet.image_angle = bullet.direction;
 						bullet.sprite_index = sEBullet_Mage;
-						bullet.spd = 4; 
+						bullet.spd = 2; 
 						bullet.damage = 0;
+						
+						//play sound (move this to create code later)
+						var sound1 = choose(snElectric_1,snElectric_1,snElectric_4);
+						if !audio_is_playing(sound1) {
+							//audio_sound_pitch(sound1,choose(1.1,1.05,1));
+							audio_play_sound(sound1,0,0,global.sound_volume*0.2);
+						}
 					}
 				}
 			//revert state

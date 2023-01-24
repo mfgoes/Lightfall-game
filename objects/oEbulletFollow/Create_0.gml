@@ -4,17 +4,16 @@
 // Inherit the parent event
 event_inherited();
 alarm[0] = 150; //destroy
-dir = direction; //we will split this up into x and y vectors later. 
-spd = 0; 
+
+spd = 2;  spd_saved = spd; //this is used for the pause event
 
 target = id; if instance_exists(oPlayer) target = oPlayer; 	
 x_new =  sign(target.x-x);
 y_new =  sign(target.y-y);
+dir = direction; //we will split this up into x and y vectors later. 
+dir_new = direction; //change this with a timer
+pivot_spd = 0.03; //how fast the bullet can turn (lerp)
+image_angle = dir; 
 
-
-//play shoot sound
-var sound = snchamberabbey_shot_01;
-audio_sound_pitch(sound,choose(0.8,0.9,1));
-audio_sound_gain(sound,0.2,0);
-audio_play_sound(sound,5,0);
-audio_sound_pitch(sound,1);
+collision_wall = false //don't hit walls at the start
+destroy_sound = snElectric_Hit;

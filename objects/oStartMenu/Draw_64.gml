@@ -60,7 +60,7 @@ button_h = 50; //line height
 	draw_set_color(col_yellow);
 	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y-16,"Dev updates - 2 Sep 2022");
 	draw_set_color(col_regular);
-	draw_set_font(f_compact_sans);
+	draw_set_font(fSign);
 	draw_text(RES_W * resolution - box_width - pl_m/2,menu_y+24,
 	"- Fixed major aiming bug \n(direction changed when hit)\n - Added enemy variety\n - Added aim assist \n - 500+ views on YouTube!" 
 	);

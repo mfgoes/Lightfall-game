@@ -88,7 +88,7 @@ if (menu_committed != -1) //&& (menu_x > gui_width+150) &&
 		case 1: //back button
 			//audio_ui_click(); 
 			//instance_destroy();
-			//with oGame pause_menu = instance_create_depth(0, 0, depth, oPauseMenu);
+			//with oGame pause_menu = instance_create_depth(0, 0, depth, oMenuParent);
 			break;
 	}
 }
@@ -99,6 +99,6 @@ if alarm[0] <= 0 {
 if menu_move = 1 && mouse_check_button_pressed(mb_left) or keyboard_check_released(ord("B")) {
 		audio_ui_click(); 
 		instance_destroy();
-		with oGame pause_menu = instance_create_depth(0, 0, depth, oPauseMenu);
+		with oGame pause_menu = instance_create_depth(0, 0, depth, oMenuParent);
 	}
 }

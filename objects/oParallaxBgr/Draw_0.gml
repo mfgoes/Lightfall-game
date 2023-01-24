@@ -40,10 +40,10 @@ if room = rLevel1 or room = rLevel2 {
 	draw_sprite_ext(background3,0, xshift+xshiftcam*-0.1,yscale+y_margin,1,1,0,c_white,1);
 	draw_sprite_ext(background3,0, xshift+xshiftcam*-0.1 + x_width,yscale+y_margin,1,1,0,c_white,1);
 
-	var bgr_choose = background2; 
-	var x_width = sprite_get_width(bgr_choose);
-	draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.2,yscale+y_margin+100,1,1,0,c_white,1);
-	draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.2 + x_width,yscale+y_margin+100,1,1,0,c_white,1);
+	//var bgr_choose = background2; 
+	//var x_width = sprite_get_width(bgr_choose);
+	//draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.2,yscale+y_margin+100,1,1,0,c_white,1);
+	//draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.2 + x_width,yscale+y_margin+100,1,1,0,c_white,1);
 }
 //background for level 3
 if room = rLevel3 {
@@ -51,10 +51,10 @@ if room = rLevel3 {
 	draw_sprite_ext(background3,0, xshift+xshiftcam*-0.1,yshift+y_margin,1,1,0,c_white,1);
 	draw_sprite_ext(background3,0, xshift+xshiftcam*-0.1 + x_width,yshift+y_margin,1,1,0,c_white,1);
 	
-	var bgr_choose = background1; 
-	var x_width = sprite_get_width(bgr_choose);
-	draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.3,yshift+y_margin+80,1,1,0,c_white,1);
-	draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.3 + x_width,yshift+y_margin+80,1,1,0,c_white,1);
+	//var bgr_choose = background1; 
+	//var x_width = sprite_get_width(bgr_choose);
+	//draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.3,yshift+y_margin+80,1,1,0,c_white,1);
+	//draw_sprite_ext(bgr_choose,0, xshift+xshiftcam*-0.3 + x_width,yshift+y_margin+80,1,1,0,c_white,1);
 }
 
 //draw_sprite_tiled_ext(background3,0, xshift+xshiftcam*-0.05,yshift,xscale*bgrsize,yscale*bgrsize,c_white,1);

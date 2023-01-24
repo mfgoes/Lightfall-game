@@ -34,6 +34,10 @@ if y > room_height {
 		freeze--;
 	}
 	else {
+		
+		//fix for freeze 
+		if freeze != 0 freeze = 0;
+		
 		if hp <= 0 {
 			//sprite_index = spriteDie;	
 			hsp = 0; //prevents flipping

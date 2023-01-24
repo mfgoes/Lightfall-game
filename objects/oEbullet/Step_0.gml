@@ -12,7 +12,7 @@ if !instance_exists(oPlayer) {
 //y+= lengthdir_y(spd,dir);
 
 //hit player
-if (place_meeting(x,y,oPlayer)) 
+if (place_meeting(x,y,oPlayer)) && oPlayer.sprite_index != oPlayer.spriteRoll
 {
 	with(instance_place(x,y,oPlayer))
 	{
@@ -20,10 +20,11 @@ if (place_meeting(x,y,oPlayer))
 		flash = 3;
 		hitfrom = other.direction;
 		gunkickx = cos(degtorad(other.direction))*1;
-		gunkicky = -2;
+		if random(1) < 0.3 gunkicky = -2;
 		ScreenShake(1,5);
-		audio_sound_gain(snHitEnemy,0.4,0);
-		audio_play_sound(snHitEnemy,0,0);
+		var sound = choose(Realistic_Punch_2_1,Realistic_Punch_2_2,Realistic_Punch_2_3,Realistic_Punch_2_4);
+		if instance_exists(oGame) audio_sound_gain(sound,global.sound_volume*0.2,0);
+		if !audio_is_playing(sound) audio_play_sound(sound,0,0);
 		
 		if hp < 1 KillPlayer();
 		
@@ -40,6 +41,10 @@ if (place_meeting(x,y,oPlayer))
 			image_yscale = choose (2,-2);
 		}
 	}
+	//play sound effect 
+	if !audio_is_playing(destroy_sound) 
+		audio_play_sound(destroy_sound,2,0,global.sound_volume*0.1); 
+	
 	instance_destroy(); 
 }
 
@@ -63,6 +68,8 @@ if collision_wall
 				image_yscale = choose (2,-2);
 			}
 		}
+		
+		
 instance_destroy(); 		
 		
 	}

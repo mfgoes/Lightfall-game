@@ -4,11 +4,11 @@
 if mouse_check_button_released(mb_left) && position_meeting(mouse_x, mouse_y, id) {
 	if global.music_volume > 0 {
 		global.music_volume = 0;
-		global.audio_volume = 0;
+		global.sound_volume = 0;
 		image_index = 2;
 	} else {
 		global.music_volume = 0.5;
-		global.audio_volume = 1;
+		global.sound_volume = 1;
 		image_index = 0;
 	}			
 	audio_sound_pitch(snClick,0.9)
