@@ -17,14 +17,6 @@ if !instance_exists(oEnemyParent) {
 	current_wave++	
 }
 
-//finish the wave
-if ds_list_size(waves)<=current_wave { 
-	room_cleared=true;
-	if !instance_exists(oEnemyParent) {
-		with(oBlockade) instance_destroy();
-	}
-	//show text: level cleared!
-}
 
 
 #region debug mode (spawn test enemies)

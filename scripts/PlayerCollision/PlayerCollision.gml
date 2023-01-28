@@ -2,23 +2,19 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerCollision(){
 	//Horizontal collision
-		if (place_meeting(x+hsp,y, oWallParent))
+		if (place_meeting(x+hsp,y, oWallParent)) or (place_meeting(x+hsp,y, oBlockade))
 		{
 			//if on platform and 'stuck', move up by a pixel
 			if (place_meeting(x,y+1, oPlatformParent)) && place_meeting(x+hsp,y,oWallParent) {
 				y-=1; 
 			}
 			
-			if (!place_meeting(x+sign(hsp),y,oWallParent))
-			{
-				x = x + sign(hsp); 
-			}
+			//if (!place_meeting(x+sign(hsp),y,oWallParent))
+			//{
+			//	x = x + sign(hsp); 
+			//}
 			hsp = 0;
-			if (state == PlayerStateSwing)
-			{
-				ropeAngle = point_direction(grappleX,grappleY,x,y);
-				ropeAngleVelocity = 0; //add bounce off wall later
-			}
+			
 		}
 		x = clamp(x + hsp,sprite_width*0.25,room_width-sprite_width*0.25)
 		
@@ -71,4 +67,11 @@ function PlayerCollision_Gates() {
 			SlideTransition(TRANS_MODE.NEXT);		//go to next level
 		}
 	}	
+	
+	//portals. to do: remove top code later as it's too limiting. 
+	if instance_exists(oPortalTrigger) {
+		if place_meeting(x,y,oPortalTrigger) && oPortalTrigger.locked = false {
+			SlideTransition(TRANS_MODE.GOTO,oPortalTrigger.target_room);		//go to next level
+		}
+	}
 }

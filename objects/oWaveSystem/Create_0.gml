@@ -14,9 +14,9 @@ function enemy_wave() constructor {
 }
 
 #macro wave_create new enemy_wave // this is just to make it easier to write
-room_cleared=false
-current_wave=0
-current_wave_check=-1
+room_cleared = false
+current_wave = 0
+current_wave_check = -1
 waves = ds_list_create()
 if disabled = false switch(room) {
 		
@@ -29,10 +29,8 @@ if disabled = false switch(room) {
 	
 	case(rLevel2):
 		ds_list_add(waves,
-			wave_create([2,oEnemy_Bat_Modified],[1,oCorruptedCrow],[1,oEnemy_Bat_Modified]),
-			wave_create([3,oEnemy_Mage],[1,oCorruptedCrow]),
-			wave_create([3,oCorruptedCrow],[4,oCorruptedCrow]),
-			wave_create([2,oEnemy_Boss],[4,oEnemyMelee])
+			wave_create([2,oCorruptedCrow],[1,oCorruptedCrow],[1,oEnemy_Bat_Modified]),
+			wave_create([0,oEnemy_Mage],[0,oCorruptedCrow]),
 		)
 	break;
 	

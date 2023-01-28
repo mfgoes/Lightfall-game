@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oBlockade",
   "spriteId": {
     "name": "blockade_placeholder",
     "path": "sprites/blockade_placeholder/blockade_placeholder.yy",
@@ -8,10 +11,7 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oWallParent",
-    "path": "objects/oWallParent/oWallParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,9 +25,10 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -35,8 +36,4 @@
     "name": "Wave_System",
     "path": "folders/Objects/Enemies Related/Wave_System.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oBlockade",
-  "tags": [],
-  "resourceType": "GMObject",
 }
