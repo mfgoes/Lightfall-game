@@ -5,7 +5,7 @@ function PlayerStateFree(){
 grounded =(place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent));
 
 #region walking
-	//Slow down while aiming weapon
+	//Slow down while aiming weapon -> to do: move this to weapon code instead. 
 	var slowwalk = 0.9; 
 	if current_weapon = 0 && mouse_check_button(mb_left) = true  {
 	if (grounded = 1) slowwalk = 0.7; else slowwalk = 0.4;

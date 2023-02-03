@@ -1,25 +1,9 @@
 {
-  "spriteId": {
-    "name": "sTileSand",
-    "path": "sprites/sTileSand/sTileSand.yy",
-  },
-  "tileWidth": 16,
-  "tileHeight": 16,
-  "tilexoff": 0,
-  "tileyoff": 0,
-  "tilehsep": 0,
-  "tilevsep": 0,
-  "spriteNoExport": true,
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "out_columns": 27,
-  "tile_count": 714,
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tTileSandTemp",
   "autoTileSets": [
-    {"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"main","closed_edge":false,"tiles":[
         2,
         16,
         15,
@@ -36,8 +20,8 @@
         13,
         14,
         8,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"main","tags":[],"resourceType":"GMAutoTileSet",},
-    {"tiles":[
+      ],},
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","closed_edge":false,"tiles":[
         14,
         11,
         9,
@@ -85,10 +69,30 @@
         10,
         11,
         12,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"autotile_1","tags":[],"resourceType":"GMAutoTileSet",},
+      ],},
   ],
-  "tileAnimationFrames": [],
-  "tileAnimationSpeed": 15.0,
+  "macroPageTiles": {
+    "SerialiseHeight": 0,
+    "SerialiseWidth": 0,
+    "TileSerialiseData": [],
+  },
+  "out_columns": 27,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "SAND-LEVEL",
+    "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL.yy",
+  },
+  "spriteId": {
+    "name": "sTileSand",
+    "path": "sprites/sTileSand/sTileSand.yy",
+  },
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "tile_count": 714,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -808,17 +812,12 @@
     ],
     "SerialiseFrameCount": 1,
   },
-  "macroPageTiles": {
-    "SerialiseWidth": 0,
-    "SerialiseHeight": 0,
-    "TileSerialiseData": [],
-  },
-  "parent": {
-    "name": "SAND-LEVEL",
-    "path": "folders/Graphics and Sprites/TILES/SAND-LEVEL.yy",
-  },
-  "resourceVersion": "1.0",
-  "name": "tTileSandTemp",
-  "tags": [],
-  "resourceType": "GMTileSet",
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
+  "tileHeight": 16,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 16,
+  "tilexoff": 0,
+  "tileyoff": 0,
 }

@@ -37,5 +37,13 @@ if (hp <= 0) {
 	dd.image_xscale = image_xscale;
 	
 	instance_destroy();
+	if spawned = true global.enemies_spawned -=1; 
 }
 
+//set target
+if instance_exists(oPlayer)
+	target = oPlayer;
+else {
+	hsp = 0;
+	target = id; 
+}

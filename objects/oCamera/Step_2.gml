@@ -24,7 +24,13 @@ if start_zoom > 0 start_zoom -= 0.0004; else start_zoom = 0;
 		}
 		*/
 		xTo = follow.x; //Follow point from A (followX) to B (mouseX). Lenghtdir should be a fraction of distance of mouse to follow.x
-		yTo = follow.y
+		
+		//GMLive
+		if (live_call()) return live_result; 
+
+		//set standard view to be slightly below player, unless aiming down
+		yTo = follow.y-20; 
+		if mouse_y >= follow.y+TILE_SIZE*3 yTo = follow.y; 
 		
 		if ((follow).object_index == oPlayerDead) {
 			x = round(xTo);

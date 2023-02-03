@@ -19,6 +19,7 @@ function MacrosAndGlobals(){
 	global.player1_mana = 5; global.player1_mana_max = 10; 
 	
 	global.hasgun = true;
+	global.enemies_spawned = 0;
 	global.kills = 0;
 	global.killsthiswave = 0;
 	global.wavetotal = 0;

@@ -124,14 +124,15 @@ function draw_UI_elements(){
 	}
 
 }
-
-function draw_cursor_custom(){
-		var cursor_scale = 0.75;
-		var current_weapon = 1;
+	
+	
+	
+	
+function draw_cursor_custom(cursor_scale = 1){
+		if cursor_scale > 1 cursor_scale-=0.1; //automatically make cursor smaller
 		var mx = (window_mouse_get_x()/window_get_width()) * display_get_gui_width();
 		var my = (window_mouse_get_y()/window_get_height()) * display_get_gui_height();
-		if instance_exists(oPlayer) current_weapon = oPlayer.current_weapon; //select image_index
-		if global.HTML_config = 0 draw_sprite_ext(sCrosshairs,current_weapon,mx,my,cursor_scale,cursor_scale,0,c_white,1);
+		if global.HTML_config = 0 draw_sprite_ext(sCrosshairs,1,mx,my,cursor_scale,cursor_scale,0,c_white,1);
 }
 	
 function draw_debug_info(){
@@ -148,7 +149,7 @@ function draw_debug_info(){
 		draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));
 		draw_text(4,40,"zoom: " + string(oCamera.zoom));
 		dd = (place_meeting(oPlayer.x,oPlayer.y + 1,oPlatformParent)) 
-		draw_text(4,70,"oPlatformParent: " + string(dd));
+		draw_text(4,70,"spawned enemies: " + string(global.enemies_spawned));
 		draw_text(4,80,"vsp: " + string(oPlayer.y));
 		
 		//arrow stuff

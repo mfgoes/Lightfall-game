@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "CheckInCamera",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Misc",
     "path": "folders/Scripts/Misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "CheckInCamera",
-  "tags": [],
-  "resourceType": "GMScript",
 }

@@ -10,10 +10,12 @@ if room != rMenu && room != rLevelSelect {
 //health, cooldowns, etc
 draw_UI_elements(); 
 
-//draw cursor 
-display_set_gui_size(RES_W, RES_H); //text is twice the resolution
-draw_cursor_custom(); 
+//draw cursor dynamically
 
+if !instance_exists(oMenuParent) {
+	display_set_gui_size(RES_W, RES_H); //text is twice the resolution
+	draw_cursor_custom(cursor_scale); 
+}
 
 //debug only
 if instance_exists(oPlayer)

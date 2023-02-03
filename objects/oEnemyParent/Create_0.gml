@@ -58,6 +58,7 @@ y = -1000;
 	grounded = false;
 	stunned = 5; //prevents enemy from walking (start with 5 to create a tiny break) 
 	target = 0; if instance_exists(oPlayer) target = oPlayer;
+	spawned = false; //this indicates whether oWaveSystem should count this as spawned object. 
 
 /* Unnecessary since this is done every single step event
 	if instance_exists(oPlayer)

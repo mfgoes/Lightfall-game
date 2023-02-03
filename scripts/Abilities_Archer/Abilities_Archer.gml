@@ -11,7 +11,8 @@ function Ability_Primary_Archer() { //POWER SHOT
 	var key_attack_pressed		= oPlayer.key_primary;
 	var key_primary_released		= oPlayer.key_primary_released;
 	
-	if (key_attack_pressed) &&  timer_get("primary_cooldown") = -1 {		
+	if (key_attack_pressed) &&  timer_get("primary_cooldown") = -1 {	
+		
 		if (!place_meeting(x,y+1,oWallParent)) && (!place_meeting(x,y+1,oPlatformParent)) oPlayer.air_shot = true;
 
 		//charging sound
@@ -34,6 +35,15 @@ function Ability_Primary_Archer() { //POWER SHOT
 			
 	if (key_primary_released) && timer_get("primary_cooldown") = -1  //for bow weapons
 	{
+		
+		//recoil
+		with(oPlayer) {
+			var dir = lengthdir_x(-8,oPlayerWeapon.image_angle);
+			if !place_meeting(x+dir,y-1,oWallParent) && !(oPlayer.grounded)
+				x += dir;
+			if !(oPlayer.grounded) vsp = -jump_speed;
+		}
+			
 		timer_set("primary_cooldown",primary_cooldown);
 		oUIElements.primary_cooldown  = 0; //for UI purposes
 		audio_sound_gain(snBlaster,0.35,0);
@@ -90,7 +100,6 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			
 		}
 		
-		
 		if shots_total > 0 && timer_get("triple_shot") <=0 {
 			timer_set("triple_shot",5);
 			
@@ -109,6 +118,17 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			audio_sound_gain(sound_shot,0.1,0); 
 			audio_play_sound(sound_shot,2,0);
 			}
+			if shots_total = 3 {
+			
+				//recoil
+				with(oPlayer) {
+					var dir = lengthdir_x(-8,oPlayerWeapon.image_angle);
+					if (oPlayer.grounded) dir = dir = lengthdir_x(-4,oPlayerWeapon.image_angle);
+					if !place_meeting(x+dir,y-1,oWallParent) 
+						x += dir;
+				}
+			}
+			if !(oPlayer.grounded) oPlayer.vsp = -oPlayer.jump_speed;
 			shots_total --;
 		} else weapon_active = 0;
 } 	

@@ -27,3 +27,4 @@ show_objective = false; //show if you should either kill boss or find objective
 #endregion
 
 image_alpha = 0;
+cursor_scale = 2; //change this when shooting

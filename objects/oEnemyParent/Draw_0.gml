@@ -34,10 +34,18 @@ if (global.debugmode) {
 	draw_set_alpha(0.3);
 	draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_top,0);
 	draw_set_alpha(1);
-	
+	//set target
+	if instance_exists(oPlayer)
+		target = oPlayer;
+	else {
+		hsp = 0;
+		target = id; 
+	}
+
 	//draw hit box
 	draw_set_color(c_red);
 	draw_set_alpha(0.5);
+	
 	draw_rectangle(x-sign(x - target.x)*hitbox_w,y,x,y-hitbox_h,0);
 	draw_set_alpha(1);
 }

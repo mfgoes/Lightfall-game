@@ -15,7 +15,7 @@ PlayerCollision();
 PlayerCollision_Gates(); //when walking into level gates and 'arena' gates
 
 timer_init("produce_afterimages");
-//Create after images
+//Create after images + feedback
 if air_shot = true && !place_meeting(x,y+1,oWallParent) {
 	if timer_get("produce_afterimages") <= 0 {
 		timer_set("produce_afterimages",15);

@@ -13,6 +13,8 @@ function enemy_wave() constructor {
 	pos_checks=i
 }
 
+global.enemies_spawned = 0;
+
 #macro wave_create new enemy_wave // this is just to make it easier to write
 room_cleared = false
 current_wave = 0

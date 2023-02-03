@@ -10,10 +10,16 @@
 	if oPlayer.key_primary or oPlayer.key_secondary or oPlayer.key_primary_released {
 		var mouse_angle = round(point_direction(x,y,mouse_x,mouse_y));	
 		if mouse_angle < 90 or mouse_angle > 270 {
-			image_angle = 0; 
+			if aim_360 = true 
+				image_angle = mouse_angle; 
+			else
+				image_angle = 0; 
 		}
 		else { 
-			image_angle = 180; 	
+			if aim_360 = true 
+				image_angle = mouse_angle;
+			else
+				image_angle = 180; 	
 		}
 	} //else image_angle = oPlayer.facing_direction;
 	

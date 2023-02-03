@@ -1,4 +1,4 @@
-if !instance_exists(oEnemyParent) {
+if global.enemies_spawned <= 0  { //!instance_exists(oEnemyParent)
 	if ds_list_size(waves)>current_wave { //if more waves left in list
 		current_wave_check=ds_list_find_value(waves,current_wave)
 		
@@ -9,7 +9,9 @@ if !instance_exists(oEnemyParent) {
 				//TO DO: check if player is close enough, then do this. Otherwise, check for nearest spawner to spawn at (randomized a bit)  
 				
 				if wave_pos_id==other.current_wave_check.pos[i] {	//if ID = spawner ID
-					instance_create_layer(x,y,"Enemies",other.current_wave_check.enemy[i])	
+					dd = instance_create_layer(x,y,"Enemies",other.current_wave_check.enemy[i])	
+					dd.spawned = true;
+					global.enemies_spawned +=1;
 				}
 			}
 		}

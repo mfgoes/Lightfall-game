@@ -14,4 +14,5 @@ function KillPlayer() {
 
 	global.kills -= global.killsthisroom;
 	global.exp_points -= global.exp_points_thisroom;
+	//global.enemies_spawned = 0;
 }

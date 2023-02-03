@@ -4,3 +4,9 @@ image_index = 0;
 
 locked = true;
 target_room = room_next(room); //default value: next room on list. 
+
+
+nearby = false;
+hover = 0;
+depth = layer_get_depth("Player");
+show_hint = false; //put on if player presses W or E. 

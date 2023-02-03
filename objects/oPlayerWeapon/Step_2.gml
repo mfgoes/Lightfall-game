@@ -65,7 +65,10 @@ else {
 		}
 			
 		//auto aim at closest object
-		
+		if aim_360 = true {
+			shoot_direction = image_angle;
+		}
+		else 
 		if distance_to_object(closest) < assist_dist && closest != noone && angle_in_range = true {
 			if sign(closest.x - x) = sign(cos(oPlayer.facing_direction)) &&
 				!collision_line(x,y-12,closest.x,closest.y-12,oWallParent,0,0) {
@@ -85,7 +88,7 @@ else {
 			Ability_Secondary_Archer(); 
 		
 			//spread attack (Q)
-			if (oPlayer.key_special) Ability_Special_Shockwave(); //freezing shockwave special
+			//if (oPlayer.key_special) Ability_Special_Shockwave(); //freezing shockwave special
 			
 			//roll ability (currently in PlayerInput). //To do: move it here. 
 		#endregion

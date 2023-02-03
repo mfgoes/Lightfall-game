@@ -10,13 +10,6 @@ timer_init("turn_around");
 timer_init("attack_player");
 timer_init("freeze_anim"); 
 
-//set target
-if instance_exists(oPlayer)
-	target = oPlayer;
-else {
-	hsp = 0;
-	target = id; 
-}
 
 //gravity
 VerticalCollision(); 

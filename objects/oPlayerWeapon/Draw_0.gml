@@ -38,9 +38,12 @@ if (global.debugmode) {
 	Load_CharacterData(oPlayer.current_weapon);	
 	//set facing direction
 	var facing_dir = oPlayer.facing_direction;
-	var flip_weapon = dcos(oPlayer.facing_direction); 
+	if aim_360 = true facing_dir = image_angle;
+	
+	var flip_image = sign(dcos(oPlayer.facing_direction)) * 0.9 + dcos(oPlayer.facing_direction)*0.2;
+	if flip_image = 0 flip_image = 1;
 	//draw sprite
-	draw_sprite_ext(sprite_index,image_index,x,y,1,flip_weapon,facing_dir,c_white,image_alpha);
+	draw_sprite_ext(sprite_index,image_index,x,y,1,flip_image,facing_dir,c_white,image_alpha);
 #endregion
 
 
@@ -59,7 +62,7 @@ if weapon_charge > 2
 {
 	var color_line = make_colour_rgb(53, 78, 76);
 	gpu_set_blendmode(bm_add);
-	draw_line_width_color(x,y,x+lengthdir_x(5+weapon_charge*4,facing_dir),y,15,c_black,color_line);
+	draw_line_width_color(x,y,x+lengthdir_x(5+weapon_charge*4,facing_dir),y+lengthdir_y(5+weapon_charge*4,facing_dir),15,c_black,color_line);
 	gpu_set_blendmode(bm_normal);
 	image_index = 1;
 }	
