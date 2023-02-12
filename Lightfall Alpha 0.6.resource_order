@@ -211,6 +211,7 @@
     {"name":"char_impact1","order":4,"path":"sounds/char_impact1/char_impact1.yy",},
     {"name":"sRockBug_Dead","order":1,"path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},
     {"name":"tTileBgrSand","order":7,"path":"tilesets/tTileBgrSand/tTileBgrSand.yy",},
+    {"name":"oLightSmall","order":6,"path":"objects/oLightSmall/oLightSmall.yy",},
     {"name":"snFootstep3","order":2,"path":"sounds/snFootstep3/snFootstep3.yy",},
     {"name":"sTransitionGlow","order":14,"path":"sprites/sTransitionGlow/sTransitionGlow.yy",},
     {"name":"snd_bulletHit","order":4,"path":"sounds/snd_bulletHit/snd_bulletHit.yy",},

@@ -10,3 +10,9 @@ nearby = false;
 hover = 0;
 depth = layer_get_depth("Player");
 show_hint = false; //put on if player presses W or E. 
+
+
+//generate small light
+if instance_exists(obj_Aura_Control) {
+	instance_create_depth(x,y,depth,oLightSmall); 
+}

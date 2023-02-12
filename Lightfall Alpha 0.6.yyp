@@ -282,6 +282,7 @@
     {"id":{"name":"char_impact1","path":"sounds/char_impact1/char_impact1.yy",},"order":4,},
     {"id":{"name":"sRockBug_Dead","path":"sprites/sRockBug_Dead/sRockBug_Dead.yy",},"order":1,},
     {"id":{"name":"tTileBgrSand","path":"tilesets/tTileBgrSand/tTileBgrSand.yy",},"order":7,},
+    {"id":{"name":"oLightSmall","path":"objects/oLightSmall/oLightSmall.yy",},"order":0,},
     {"id":{"name":"snFootstep3","path":"sounds/snFootstep3/snFootstep3.yy",},"order":2,},
     {"id":{"name":"sTransitionGlow","path":"sprites/sTransitionGlow/sTransitionGlow.yy",},"order":14,},
     {"id":{"name":"snd_bulletHit","path":"sounds/snd_bulletHit/snd_bulletHit.yy",},"order":4,},

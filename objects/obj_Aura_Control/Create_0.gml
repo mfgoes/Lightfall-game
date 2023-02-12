@@ -52,7 +52,8 @@
 // Aura which view to use (set to -1 if you want no views).
 
 // aura_init(0, c_aqua, true, 0, "Shadow_Tiles", 2, aura_blend_multiply); //original
-aura_init(0.3, c_white, true, camera_get_active(), "Shadow_Tiles", 1, aura_blend_multiply); 
+var color = make_color_rgb(208,199,182); 
+aura_init(0.35, color, true, camera_get_active(), "Shadow_Tiles", 1, aura_blend_multiply); 
 //get active = retrieves existing oCamera
 
 // This function creates two further variables which you can use:
