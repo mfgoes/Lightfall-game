@@ -278,8 +278,8 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_ColorOnly","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":1700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"sBgr_SandCol","path":"sprites/sBgr_SandCol/sBgr_SandCol.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "Devlog placeholder vids",
-    "path": "folders/Rooms/Devlog placeholder vids.yy",
+    "name": "Main levels",
+    "path": "folders/Rooms/Main levels.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

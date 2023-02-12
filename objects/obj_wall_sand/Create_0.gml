@@ -12,3 +12,5 @@ draw_grass = false;
 img_grass = round(random(sprite_get_number(sSandDecorGrass)));
 
 image_speed = 0;
+
+
