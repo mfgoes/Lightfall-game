@@ -8,7 +8,6 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_49B2B0B0_1_1","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_7B98A4CB","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_4E27B1AC","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_1877CC23","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_46A89927","path":"rooms/rLevel2/rLevel2.yy",},
@@ -114,7 +113,6 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_49B2B0B0_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":907.0,"y":302.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"WallsTiled","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7B98A4CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":288.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_46A89927","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oBlockade","path":"objects/oBlockade/oBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":448.0,"y":96.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_220B61BA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":176.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_26F20713_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall_sand","path":"objects/obj_wall_sand/obj_wall_sand.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":256.0,},

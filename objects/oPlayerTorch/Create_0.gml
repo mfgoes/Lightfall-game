@@ -5,8 +5,8 @@
 // and rotating them at the correct position through maths.
 
 // This light is flagged as NOT being static so it is updated every step...
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = 1.5;
+image_yscale = 1.5;
 aura_light_init(sprite_width, merge_colour(c_white, c_yellow, 0.5), 0.8, false);
 
 

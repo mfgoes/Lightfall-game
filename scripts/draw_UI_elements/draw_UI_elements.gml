@@ -135,35 +135,7 @@ function draw_cursor_custom(cursor_scale = 1){
 		if global.HTML_config = 0 draw_sprite_ext(sCrosshairs,1,mx,my,cursor_scale,cursor_scale,0,c_white,1);
 }
 	
-function draw_debug_info(){
-	draw_set_font(fSign); 
-	draw_set_color(c_white); 
-	
-	if global.debugmode = true { //&& instance_exists(oCamera)
-		draw_set_halign(fa_right);
-		draw_text(RES_W-12,40,"Rfps: " + string(fps_reader));
-		draw_text(RES_W-12,60,"Gamefps: " + string(fps));
-		draw_set_halign(fa_left);
-		
-		draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
-		draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));
-		draw_text(4,40,"zoom: " + string(oCamera.zoom));
-		dd = (place_meeting(oPlayer.x,oPlayer.y + 1,oPlatformParent)) 
-		draw_text(4,70,"aura cam: " + string(obj_Aura_Control.aura_view));
-		draw_text(4,80,"zoom cam: " + string(oCamera.cam));
-		
-		//arrow stuff
-		//if instance_exists(oArrow) draw_text(0,100,"arrow dir " + string(oArrow.direction)); 
-		
-		
-	}
-	else {
-		//show_debug_overlay(true);
-	}
-	
 
-}
-	
 function show_region_title(){
 		
 		var text_bgr = make_colour_rgb(22, 25, 27);

@@ -122,6 +122,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Aura","folderPath":"folders/Tile Sets/Aura.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"DuskValley Lights","folderPath":"folders/Objects/Aura/DuskValley Lights.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"LevelEssentials","folderPath":"folders/Scripts/LevelEssentials.yy","order":0,},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gmlive.html","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -336,6 +337,7 @@
     {"id":{"name":"sEnemyBoss","path":"sprites/sEnemyBoss/sEnemyBoss.yy",},"order":3,},
     {"id":{"name":"snElectric_Hit","path":"sounds/snElectric_Hit/snElectric_Hit.yy",},"order":1,},
     {"id":{"name":"lux_shot_03","path":"sounds/lux_shot_03/lux_shot_03.yy",},"order":1,},
+    {"id":{"name":"draw_Debug_UI","path":"scripts/draw_Debug_UI/draw_Debug_UI.yy",},"order":0,},
     {"id":{"name":"GMLive_exec","path":"scripts/GMLive_exec/GMLive_exec.yy",},"order":1,},
     {"id":{"name":"rLevelSelect","path":"rooms/rLevelSelect/rLevelSelect.yy",},"order":1,},
     {"id":{"name":"obj_Aura_ShadowCaster_Rotate","path":"objects/obj_Aura_ShadowCaster_Rotate/obj_Aura_ShadowCaster_Rotate.yy",},"order":0,},
@@ -354,6 +356,7 @@
     {"id":{"name":"f_smooth","path":"fonts/f_smooth/f_smooth.yy",},"order":0,},
     {"id":{"name":"sRockBugMask","path":"sprites/sRockBugMask/sRockBugMask.yy",},"order":2,},
     {"id":{"name":"sBlueArrows","path":"sprites/sBlueArrows/sBlueArrows.yy",},"order":2,},
+    {"id":{"name":"GameMasterControls","path":"scripts/GameMasterControls/GameMasterControls.yy",},"order":0,},
     {"id":{"name":"oMenuParent","path":"objects/oMenuParent/oMenuParent.yy",},"order":0,},
     {"id":{"name":"sPortal_base","path":"sprites/sPortal_base/sPortal_base.yy",},"order":3,},
     {"id":{"name":"Tileset_Add_on___Modified","path":"sprites/Tileset_Add_on___Modified/Tileset_Add_on___Modified.yy",},"order":1,},

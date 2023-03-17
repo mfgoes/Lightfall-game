@@ -1,5 +1,7 @@
 /// @desc draw UI
-
+//GMLive
+if (live_call()) return live_result; 
+		
 //draw objective (move to function later)
 if room != rMenu && room != rLevelSelect {
 	draw_objective_UI(); 
@@ -18,8 +20,9 @@ if !instance_exists(oMenuParent) {
 }
 
 //debug only
-if instance_exists(oPlayer)
+if instance_exists(oPlayer) {
 	draw_debug_info();
+}
 
 //level details
 //show_region_title();

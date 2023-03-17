@@ -2,10 +2,12 @@
 
 if instance_exists(oPlayer) {
 	x = oPlayer.x;
-	y = oPlayer.y; 
+	y = oPlayer.y; 	
+	
+	if obj_Aura_Control.modeID = 2 or obj_Aura_Control.modeID = 3 y = -1000;  //hide this
 }
 
-var ang = point_direction(x, y, mouse_x, mouse_y);
+var ang = oPlayer.facing_direction; //lerp
 var dif = angle_difference(ang, image_angle);
 image_angle  =ang;  //+= median(-5, dif, 5);
 

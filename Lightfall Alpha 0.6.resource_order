@@ -93,6 +93,7 @@
     {"name":"Tile Sets","order":18,"path":"folders/Tile Sets.yy",},
     {"name":"Aura","order":1,"path":"folders/Tile Sets/Aura.yy",},
     {"name":"DuskValley Lights","order":9,"path":"folders/Objects/Aura/DuskValley Lights.yy",},
+    {"name":"LevelEssentials","order":5,"path":"folders/Scripts/LevelEssentials.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oIconTwitter","order":2,"path":"objects/oIconTwitter/oIconTwitter.yy",},
@@ -261,6 +262,7 @@
     {"name":"sEnemyBoss","order":3,"path":"sprites/sEnemyBoss/sEnemyBoss.yy",},
     {"name":"snElectric_Hit","order":1,"path":"sounds/snElectric_Hit/snElectric_Hit.yy",},
     {"name":"lux_shot_03","order":1,"path":"sounds/lux_shot_03/lux_shot_03.yy",},
+    {"name":"draw_Debug_UI","order":13,"path":"scripts/draw_Debug_UI/draw_Debug_UI.yy",},
     {"name":"GMLive_exec","order":1,"path":"scripts/GMLive_exec/GMLive_exec.yy",},
     {"name":"rLevelSelect","order":1,"path":"rooms/rLevelSelect/rLevelSelect.yy",},
     {"name":"obj_Aura_ShadowCaster_Rotate","order":5,"path":"objects/obj_Aura_ShadowCaster_Rotate/obj_Aura_ShadowCaster_Rotate.yy",},
