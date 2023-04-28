@@ -37,7 +37,7 @@ if (place_meeting(x,y,pShootable)) && active = true
 	
 	#region play sound
 		//script to run specific sound? 
-		if (place_meeting(x,y,oDummyEnemy)) {
+		if (place_meeting(x,y,oEnemyDummy)) {
 			audio_sound_pitch(statue_stomp_01,choose(1.3,1.4)); //higher sound = less intense sounding
 			audio_sound_gain(statue_stomp_01,0.4,0);
 			audio_play_sound(statue_stomp_01,0,0);	
@@ -57,7 +57,7 @@ if (place_meeting(x,y,pShootable)) && active = true
 	{
 		instance_create_depth(x,y,depth,oBulletImpactEffect);
 		var collision = true;
-		if object_index == oEnemyShield
+		if object_index == oEnemyShieldBearer
 		{
 			collision = false;
 			var _dir = image_xscale == 1 ? -1 : 1;

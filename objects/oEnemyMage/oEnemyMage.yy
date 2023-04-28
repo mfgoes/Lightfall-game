@@ -1,16 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oEnemyShield",
+  "name": "oEnemyMage",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies_Basic",
-    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies Related/Enemies.yy",
   },
   "parentObjectId": {
     "name": "oEnemyParent",
@@ -19,8 +19,8 @@
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
-  "physicsFriction": 0.2,
-  "physicsGroup": 1,
+  "physicsFriction": 0.0,
+  "physicsGroup": 0,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
   "physicsObject": false,
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sEnemyShield",
-    "path": "sprites/sEnemyShield/sEnemyShield.yy",
+    "name": "sCrowMage_Idle",
+    "path": "sprites/sCrowMage_Idle/sCrowMage_Idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

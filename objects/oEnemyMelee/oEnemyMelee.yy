@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies_Basic",
-    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies Related/Enemies.yy",
   },
   "parentObjectId": {
     "name": "oEnemyParent",

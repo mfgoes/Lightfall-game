@@ -13,7 +13,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Projectiles_Enemy",
-    "path": "folders/Objects/Projectiles_Enemy.yy",
+    "path": "folders/Objects/Enemies Related/Projectiles_Enemy.yy",
   },
   "parentObjectId": {
     "name": "oEbullet",

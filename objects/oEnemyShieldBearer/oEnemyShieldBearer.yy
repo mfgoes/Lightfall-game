@@ -1,19 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oEnemy_Boss",
+  "name": "oEnemyShieldBearer",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bosses",
-    "path": "folders/Objects/Enemies Related/Bosses.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies Related/Enemies.yy",
   },
   "parentObjectId": {
     "name": "oEnemyParent",
@@ -35,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sRockBossIdle",
-    "path": "sprites/sRockBossIdle/sRockBossIdle.yy",
+    "name": "sEnemyShield",
+    "path": "sprites/sEnemyShield/sEnemyShield.yy",
   },
   "spriteMaskId": null,
   "visible": true,

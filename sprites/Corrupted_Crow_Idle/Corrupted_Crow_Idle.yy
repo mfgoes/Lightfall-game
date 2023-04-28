@@ -31,8 +31,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "CrowNinja",
-    "path": "folders/Objects/Enemies Related/Enemies_Basic/CrowNinja.yy",
+    "name": "Basic Enemies",
+    "path": "folders/Graphics and Sprites/Enemy Sprites/Basic Enemies.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

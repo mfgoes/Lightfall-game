@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Wave_System",
-    "path": "folders/Objects/Enemies Related/Wave_System.yy",
+    "name": "WaveSystem",
+    "path": "folders/Objects/Enemies Related/WaveSystem.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "misc",
-    "path": "folders/Objects/Enemies Related/misc.yy",
+    "name": "Visuals",
+    "path": "folders/Objects/Enemies Related/Visuals.yy",
   },
   "parentObjectId": null,
   "persistent": false,

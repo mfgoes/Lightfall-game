@@ -27,8 +27,8 @@
 #endregion
 
 #endregion write enemies for first level
-	grid_wave[# 0, 0] = oEnemy_Mage; //"mage1";
-	grid_wave[# 0, 1] = oEnemy_Mage; //"mage2";
+	grid_wave[# 0, 0] = oEnemyMage; //"mage1";
+	grid_wave[# 0, 1] = oEnemyMage; //"mage2";
 	grid_wave[# 0, 2] = oEnemyExploder; //"mage3 SUPER";
 	grid_wave[# 0, 3] = oEnemy_Bat; //"mage3 SUPER";
 
@@ -37,8 +37,8 @@
 	grid_wave[# 1, 2] = oEnemyMelee;
 	grid_wave[# 1, 3] = oEnemyMelee;
 
-	grid_wave[# 2, 0] = oRockBug;
-	grid_wave[# 2, 1] = oRockBug;
+	grid_wave[# 2, 0] = oEnemyRockBug;
+	grid_wave[# 2, 1] = oEnemyRockBug;
 	grid_wave[# 2, 2] = oEnemyMelee;
 	grid_wave[# 2, 3] = oEnemyMelee;
 #endregion

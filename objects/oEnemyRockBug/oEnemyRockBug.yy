@@ -1,21 +1,23 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oEnemyChonkyDasher",
+  "name": "oEnemyRockBug",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"propertyId":null,"value":"True",},
+  ],
   "parent": {
-    "name": "Enemies_Basic",
-    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies Related/Enemies.yy",
   },
   "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
+    "name": "oEnemyMelee",
+    "path": "objects/oEnemyMelee/oEnemyMelee.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,12 +35,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sEnemyBlob_Idle",
-    "path": "sprites/sEnemyBlob_Idle/sEnemyBlob_Idle.yy",
+    "name": "sRockBug",
+    "path": "sprites/sRockBug/sRockBug.yy",
   },
-  "spriteMaskId": {
-    "name": "sBlobMask",
-    "path": "sprites/sBlobMask/sBlobMask.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

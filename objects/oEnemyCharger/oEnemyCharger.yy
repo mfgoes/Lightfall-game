@@ -1,19 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oEnemy_Bat_Modified",
+  "name": "oEnemyCharger",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"propertyId":{"name":"hp","path":"objects/pShootable/pShootable.yy",},"value":"1",},
-  ],
+  "overriddenProperties": [],
   "parent": {
-    "name": "Enemies_Basic",
-    "path": "folders/Objects/Enemies Related/Enemies_Basic.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies Related/Enemies.yy",
   },
   "parentObjectId": {
     "name": "oEnemyParent",
@@ -35,9 +33,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sEnemy_Bat_Idle",
-    "path": "sprites/sEnemy_Bat_Idle/sEnemy_Bat_Idle.yy",
+    "name": "sEnemyBlob_Idle",
+    "path": "sprites/sEnemyBlob_Idle/sEnemyBlob_Idle.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sBlobMask",
+    "path": "sprites/sBlobMask/sBlobMask.yy",
+  },
   "visible": true,
 }

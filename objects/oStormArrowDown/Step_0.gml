@@ -73,7 +73,7 @@ if (place_meeting(x,y,pShootable)) && active = true
 	{
 		//instance_create_depth(x,y,depth,oBulletImpactEffect);
 		var collision = true;
-		if object_index == oEnemyShield
+		if object_index == oEnemyShieldBearer
 		{
 			collision = false;
 			var _dir = image_xscale == 1 ? -1 : 1;
