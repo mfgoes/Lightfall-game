@@ -4,17 +4,17 @@ fps_reader = 0;
 alarm[0] = 20; //read fps every few steps, not every step. 
 
 #region draw cooldowns (set by weapon object)
-if instance_exists(oPlayerWeapon) {
-	primary_cooldown	= oPlayerWeapon.primary_cooldown;
+if instance_exists(oPlayerBow) {
+	primary_cooldown	= oPlayerBow.primary_cooldown;
 	primary_cooldown_max = primary_cooldown; 
 
-	secondary_cooldown  = oPlayerWeapon.secondary_cooldown;
+	secondary_cooldown  = oPlayerBow.secondary_cooldown;
 	secondary_cooldown_max = secondary_cooldown;
 
-	third_cooldown		= oPlayerWeapon.third_cooldown; 
+	third_cooldown		= oPlayerBow.third_cooldown; 
 	third_cooldown_max = third_cooldown;
 
-	roll_cooldown		= oPlayerWeapon.roll_cooldown;
+	roll_cooldown		= oPlayerBow.roll_cooldown;
 	roll_cooldown_max = roll_cooldown;
 }
 	#endregion

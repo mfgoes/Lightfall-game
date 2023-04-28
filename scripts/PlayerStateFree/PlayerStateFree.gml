@@ -145,15 +145,17 @@ if canrope = 1 {
 				}
 			if (hsp == 0) && !(key_left or key_right) && using_ability = 0 //Idle animation
 			{
-				if sprite_index != spriteIdle image_index = 0; //reset index. 
+				if sprite_index != spriteIdle && sprite_index != spriteIdleArmed image_index = 0; //reset index. 
 				sprite_index = spriteIdle; image_speed = 0.6;
+				if oPlayerBow.image_alpha = 1 sprite_index = spriteIdleArmed;
 			}
 			else //walk animation
 			{
-				if sprite_index != spriteWalk {
+				if sprite_index != spriteWalk && sprite_index != spriteWalkArmed{
 					image_index = 0; //reset index. 
 				}
-				sprite_index = spriteWalk; image_speed = 1*slowwalk;			
+				sprite_index = spriteWalk; image_speed = 1*slowwalk;	
+				if oPlayerBow.image_alpha = 1 sprite_index = spriteWalkArmed;
 			}
 		}
 	}

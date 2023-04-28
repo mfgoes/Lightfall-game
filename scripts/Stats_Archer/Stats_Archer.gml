@@ -14,13 +14,16 @@ function LoadAssets_Archer(){
 	spriteDie     =	sProtagRoll; //update: make new sprite
 	spriteAim     =	sProtagAim;
 	spriteMelee   =	sProtagIdle;
+	
+	spriteWalkArmed = sProtagWalkArmed;
+	spriteIdleArmed = sProtagIdleArmed;
 	spriteSpecial =	sProtag_shockwave_playeronly; 
 	mask_index    =	sProtagIdle; 	
 }
 
 // Load weapon (seperate to its own script later)
 function LoadWeapon_Archer(){
-	sprite_index = sWeaponBow_Placeholder;
+	sprite_index = sBow_Slimmer;
 	weapon_charge = 0; 
 	weapon_charge_max = 5;
 	shots_total = 0; //for triple shot

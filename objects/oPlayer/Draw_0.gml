@@ -15,10 +15,3 @@ if (state == PlayerStateSwing) draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 
 //debug visual
 
-//gm live 
-/*
-if global.debugmode = true {
-	var can_dodge = 0; if state = PlayerStateRoll can_dodge = 1;
-	draw_text(x,y-20,"dodge:" + string(can_dodge));	
-}
-*/

@@ -17,3 +17,6 @@
 
 LoadWeapon_Archer();
  
+// Animation
+isShooting = false;
+animationEnd = false;

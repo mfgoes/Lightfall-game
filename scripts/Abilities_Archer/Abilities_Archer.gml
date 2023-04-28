@@ -38,7 +38,7 @@ function Ability_Primary_Archer() { //POWER SHOT
 		
 		//recoil
 		with(oPlayer) {
-			var dir = lengthdir_x(-8,oPlayerWeapon.image_angle);
+			var dir = lengthdir_x(-8,oPlayerBow.image_angle);
 			if !place_meeting(x+dir,y-1,oWallParent) && !(oPlayer.grounded)
 				x += dir;
 			if !(oPlayer.grounded) vsp = -jump_speed;
@@ -52,11 +52,11 @@ function Ability_Primary_Archer() { //POWER SHOT
 				
 		//create projectile
 		with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = oPlayerWeapon.shoot_direction;			
+			direction = oPlayerBow.shoot_direction;			
 			
 			//variable damage
-			if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.8 {damage = 6; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
-			else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max*0.45 {damage = 4;}
+			if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max*0.8 {damage = 6; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
+			else if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max*0.45 {damage = 4;}
 			else damage = 3;
 					
 			image_angle = direction;
@@ -86,8 +86,8 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			if oPlayer.mana < 0 oPlayer.mana = 0;
 			 
 			//fix shooting direction temporarily
-			direction = oPlayerWeapon.shoot_direction;		
-			oPlayer.dir_prev = oPlayerWeapon.shoot_direction;	
+			direction = oPlayerBow.shoot_direction;		
+			oPlayer.dir_prev = oPlayerBow.shoot_direction;	
 			//if oPlayer.facing_direction = 180 oPlayer.dir_prev = 178; else oPlayer.dir_prev = 2; //remove dir_perv later?
 			
 			shots_total = 3; //shoot 3 bullets after each other
@@ -122,8 +122,8 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			
 				//recoil
 				with(oPlayer) {
-					var dir = lengthdir_x(-8,oPlayerWeapon.image_angle);
-					if (oPlayer.grounded) dir = dir = lengthdir_x(-4,oPlayerWeapon.image_angle);
+					var dir = lengthdir_x(-8,oPlayerBow.image_angle);
+					if (oPlayer.grounded) dir = dir = lengthdir_x(-4,oPlayerBow.image_angle);
 					if !place_meeting(x+dir,y-1,oWallParent) 
 						x += dir;
 				}
@@ -178,13 +178,13 @@ function PlayerStateMeleeAtk(){	//not for MVP
 			
 			
 		with (instance_create_layer(x,y,"Bullets",oAtk_Laser)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = oPlayerWeapon.image_angle; //oPlayer.facing_direction;
+			direction = oPlayerBow.image_angle; //oPlayer.facing_direction;
 			x_shift = 5;
 			image_angle = direction; follow = oPlayer;
-			//x_shift = oPlayerWeapon.flip_weapon * 10;
+			//x_shift = oPlayerBow.flip_weapon * 10;
 		}
 	if timer_get("generate attack") = -1 {
-		//gunkickx = lengthdir_x(-2,oPlayerWeapon.image_angle-180);
+		//gunkickx = lengthdir_x(-2,oPlayerBow.image_angle-180);
 		timer_set("generate attack",3);
 		}
 	}

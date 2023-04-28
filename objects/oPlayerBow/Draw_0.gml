@@ -64,6 +64,5 @@ if weapon_charge > 2
 	gpu_set_blendmode(bm_add);
 	draw_line_width_color(x,y,x+lengthdir_x(5+weapon_charge*4,facing_dir),y+lengthdir_y(5+weapon_charge*4,facing_dir),15,c_black,color_line);
 	gpu_set_blendmode(bm_normal);
-	image_index = 1;
 }	
 #endregion

@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "char_protag green",
-    "path": "folders/Objects/Player Related/char_protag green.yy",
+    "name": "sprites-player",
+    "path": "folders/Objects/Player Related/sprites-player.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

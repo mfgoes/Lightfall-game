@@ -11,7 +11,7 @@ image_yscale = 0.2;
 image_alpha = 0.3;
 //animation
 img_index = 0; 
-dir_static = oPlayerWeapon.image_angle; 
+dir_static = oPlayerBow.image_angle; 
 
 //dust effect
 with(instance_create_layer(x+lengthdir_x(attack_size,dir_static),y+lengthdir_y(attack_size,dir_static),"Bullets",oDust))

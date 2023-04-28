@@ -12,14 +12,14 @@ function PlayerStateSpecialAtk(){
 	//create projectile
 	/*if image_index = 1
 	{
-		with (instance_create_layer(oPlayerWeapon.x,oPlayerWeapon.y,"Bullets",oAtk_Special)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = oPlayerWeapon.image_angle;
+		with (instance_create_layer(oPlayerBow.x,oPlayerBow.y,"Bullets",oAtk_Special)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+			direction = oPlayerBow.image_angle;
 			x_shift = 10;
 			image_angle = direction; follow = oPlayer;
-			//x_shift = oPlayerWeapon.flip_weapon * 10;
+			//x_shift = oPlayerBow.flip_weapon * 10;
 		}
 	if timer_get("generate attack") = -1 {
-		gunkickx = lengthdir_x(-2,oPlayerWeapon.image_angle-180);
+		gunkickx = lengthdir_x(-2,oPlayerBow.image_angle-180);
 		timer_set("generate attack",3);
 		}
 	}
