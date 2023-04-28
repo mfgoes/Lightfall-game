@@ -10,6 +10,4 @@ xscale = camera_get_view_width(cam)/display_get_width();
 yscale = camera_get_view_height(cam)/display_get_height();
 }
 
-//draw the backgrounds (changeable) 
-bgr_sky = bgr_dark_stars; //main bgr
-bgr_parallax2 = bgr_hills; //first layer of aprallax 
+//depth = layer_get_depth(layer_get_id("parallax_bgr")); 

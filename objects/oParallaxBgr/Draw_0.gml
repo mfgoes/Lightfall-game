@@ -3,19 +3,17 @@
 //GMLive
 if (live_call()) return live_result; 
 
+var bgr_sky = bgr_dark_stars; 
+var bg_hills = bgr_hills; 
+
 var view_cam = view_camera[0]; 
 //to do: remove magic numbers once I figure out how it works. 
-var r_num = RES_W; 
-var par_h = RES_H+30; //parallax 1 height (2nd layer) 
-if bgr_parallax2 = bgr_hills par_h = RES_H; 
-
-
-
+var r_num = sprite_get_height(bg_hills)*5; //this might change something??
 var vx1 = camera_get_view_x(oCamera.cam) + (camera_get_view_width(view_cam)/display_get_width());
 var vx = camera_get_view_x(oCamera.cam) + ((r_num*camera_get_view_width(view_cam)*1.333)/display_get_width());
 var vx2 =  camera_get_view_x(oCamera.cam) - (r_num*camera_get_view_width(view_cam)/display_get_width());
 var vy = camera_get_view_y(oCamera.cam) - (300*camera_get_view_height(view_cam)/display_get_height()); 
-var vy2 = camera_get_view_y(oCamera.cam) + (par_h*5.5*camera_get_view_height(view_cam)/display_get_height());
+var vy2 = camera_get_view_y(oCamera.cam) + (400*camera_get_view_height(view_cam)/display_get_height());
 
 //scale based on zoom level (has bugs)
 var res = 6;
@@ -24,12 +22,10 @@ var yscale =  res*(camera_get_view_height(view_camera[0])/display_get_height());
 
 var xshiftcam = xscale*oCamera.x * 0.1;
 
-//draw main background
-draw_sprite_ext(bgr_sky,0, vx1,vy,xscale,yscale,0,c_white,1); 
 
-//draw x2 for parallax (first layer) 
-draw_sprite_ext(bgr_parallax2,0, vx2 - xshiftcam,vy2,xscale,yscale,0,c_white,1); 
-draw_sprite_ext(bgr_parallax2,0, vx  - xshiftcam,vy2,xscale,yscale,0,c_white,1); 
+draw_sprite_ext(bgr_sky,0, vx1,vy,xscale,yscale,0,c_white,1); 
+draw_sprite_ext(bg_hills,0, vx2 - xshiftcam,vy2,xscale,yscale,0,c_white,1); 
+draw_sprite_ext(bg_hills,0, vx  - xshiftcam,vy2,xscale,yscale,0,c_white,1); 
 
 
 /*

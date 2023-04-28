@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8c0fee79-10e5-4b41-988d-59924f0b7e6d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 6,
+  "origin": 0,
   "parent": {
     "name": "DARK GRASS TILES",
     "path": "folders/Graphics and Sprites/TILES/DARK GRASS TILES.yy",
@@ -60,7 +60,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 0,
-    "yorigin": 222,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

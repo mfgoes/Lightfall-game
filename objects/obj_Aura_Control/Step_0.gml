@@ -21,9 +21,33 @@ if (global.debugmode) {
 		modeID = 1; 
 	}
 	
-	//move this to script from oGame. 
-	
-	switch_light_presets_custom(); 
+	switch(modeID) {
+		case 1: {
+			modename = "night mode"
+			ambient_alpha = 0.2;
+			col = make_color_rgb(208,199,182);
+		
+		}
+		break;
+		case 2: {
+			modename = "sunset mode"
+			ambient_alpha = 0.9;
+			col = make_color_rgb(224,163,157);;
+		}
+		break;
+		case 3: {
+			modename = "daytime mode"
+			ambient_alpha = 1;
+			col = c_white;
+		}
+		break; 
+		case 4: {
+			modename = "shiny caves mode"	
+			ambient_alpha = 0.6;
+			col = make_color_rgb(107,105,191);
+		}
+		break;
+	}
 
 	///	The SETTER functions in this script are:
 	///	
