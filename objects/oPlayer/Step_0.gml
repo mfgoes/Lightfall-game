@@ -23,3 +23,9 @@ if air_shot = true && !place_meeting(x,y+1,oWallParent) {
 		dd.sprite_index = sprite_index; dd.image_index = image_index; dd.image_xscale = dcos(facing_direction);
 	}	
 }
+
+
+if keyboard_check_pressed(vk_down) {
+	dd = instance_create_depth(x,y,depth,oToastUI); 
+	dd.str = "Big Boss Name" 
+}

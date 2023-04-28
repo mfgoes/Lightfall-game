@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Essentials",
-    "path": "folders/Objects/Essentials.yy",
+    "name": "UI Stuff",
+    "path": "folders/Objects/UI Stuff.yy",
   },
   "parentObjectId": null,
   "persistent": false,

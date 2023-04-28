@@ -15,3 +15,6 @@ no_more_enemies = true; //set to false when enemies are detected
 //set music depending on rooms
 current_track = Beyond_the_Lows___The_Whole_Other;
 musicscripts();
+
+//setup font stuff (move later)
+font = 

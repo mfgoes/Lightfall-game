@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "path": "folders/Objects/UI Stuff/Menu.yy",
   },
   "parentObjectId": {
     "name": "oPause_SubMenu_Parent",

@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Controller",
-    "path": "folders/Objects/Essentials/Level Misc/Controller.yy",
+    "name": "UI Stuff",
+    "path": "folders/Objects/UI Stuff.yy",
   },
   "parentObjectId": null,
   "persistent": false,

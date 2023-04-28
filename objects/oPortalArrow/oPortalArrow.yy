@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Level Misc",
-    "path": "folders/Objects/Essentials/Level Misc.yy",
+    "name": "UI Stuff",
+    "path": "folders/Objects/UI Stuff.yy",
   },
   "parentObjectId": null,
   "persistent": false,

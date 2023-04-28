@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "UI Stuff",
+    "path": "folders/Objects/UI Stuff.yy",
   },
   "parentObjectId": null,
   "persistent": false,
