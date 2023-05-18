@@ -9,6 +9,9 @@
   "bitDepth": 0,
   "bitRate": 32,
   "compression": 0,
+  "ConfigValues": {
+    "GAME_NOMENUS": {"audioGroupId":"{\"name\":\"audiogroup_default\",\"path\":\"audiogroups/audiogroup_default\"}",},
+  },
   "conversionMode": 0,
   "duration": 1.212444,
   "parent": {

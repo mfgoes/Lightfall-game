@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Icons",
-    "path": "folders/Objects/UI Stuff/Menu/Icons.yy",
+    "path": "folders/Objects/Menu/Icons.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -9,6 +9,9 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
+  "ConfigValues": {
+    "GAME_NOMENUS": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
+  },
   "DynamicTexturePage": false,
   "edgeFiltering": false,
   "For3D": false,
@@ -30,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "level select",
-    "path": "folders/Objects/UI Stuff/Menu/level select.yy",
+    "path": "folders/Objects/Menu/level select.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

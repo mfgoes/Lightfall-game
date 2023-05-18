@@ -22,6 +22,9 @@
         10,
       ],},
   ],
+  "ConfigValues": {
+    "GAME_NOMENUS": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
+  },
   "macroPageTiles": {
     "SerialiseHeight": 0,
     "SerialiseWidth": 0,

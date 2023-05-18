@@ -9,6 +9,9 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
+  "ConfigValues": {
+    "GAME_NOMENUS": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
+  },
   "DynamicTexturePage": false,
   "edgeFiltering": false,
   "For3D": false,
@@ -29,7 +32,7 @@
   "origin": 0,
   "parent": {
     "name": "Icons",
-    "path": "folders/Objects/UI Stuff/Menu/Icons.yy",
+    "path": "folders/Objects/Menu/Icons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -9,6 +9,9 @@
   "bboxMode": 2,
   "collisionKind": 1,
   "collisionTolerance": 0,
+  "ConfigValues": {
+    "GAME_NOMENUS": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
+  },
   "DynamicTexturePage": false,
   "edgeFiltering": false,
   "For3D": false,
@@ -26,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Bosses",
-    "path": "folders/Objects/Enemies Related/Enemies/Bosses.yy",
+    "path": "folders/Objects/Enemies Related/Bosses.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

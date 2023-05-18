@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "level select",
-    "path": "folders/Objects/UI Stuff/Menu/level select.yy",
+    "path": "folders/Objects/Menu/level select.yy",
   },
   "parentObjectId": {
     "name": "oPause_SubMenu_Parent",

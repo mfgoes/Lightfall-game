@@ -35,7 +35,6 @@ buttons = array_length(button);
 menu_committed = 0; 
 font_pixel = f_title_sans;
 font_pixel_small = fSign;
-font_smooth = f_smooth;
 
 menu_index = 0;
 last_selected = 0;

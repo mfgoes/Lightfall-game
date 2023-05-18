@@ -2,7 +2,12 @@
 
 if instance_exists(oWaveSystem) {
 	if ds_list_size(oWaveSystem.waves)<oWaveSystem.current_wave && !instance_exists(oEnemyParent){ 
-		//show text: level cleared!
+		if other.locked = true {
+			var _x = oCamera.x; var _y = oCamera.y; 
+			dd = instance_create_depth(_x,_y-40,0,oToastUI); 
+			dd.str = "Level complete!" 
+			dd.toast_type = variant.h2; 
+		}
 		other.image_index = 1;
 		other.locked = false; 
 		}

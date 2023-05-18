@@ -156,7 +156,7 @@
             {"name":"param_dragcoeff","type":0,"value":"1",},
             {"name":"param_grav_accel","type":0,"value":"100",},
             {"name":"param_debug_grid","type":0,"value":"0",},
-          ],"userdefinedDepth":false,"visible":false,},
+          ],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"TransitionTriggers","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_70C195C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oTransitionTrigger","path":"objects/oTransitionTrigger/oTransitionTrigger.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oTransitionTrigger","path":"objects/oTransitionTrigger/oTransitionTrigger.yy",},"propertyId":{"name":"goto_room","path":"objects/oTransitionTrigger/oTransitionTrigger.yy",},"value":"rLevel2",},
