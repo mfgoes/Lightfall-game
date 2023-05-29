@@ -9,17 +9,17 @@ function Ability_Primary_Archer() { //POWER SHOT
 	if(live_call()) return live_result;
 	
 	var key_attack_pressed		= oPlayer.key_primary;
-	var key_primary_released		= oPlayer.key_primary_released;
+	var key_primary_released	= oPlayer.key_primary_released;
 	
-	if (key_attack_pressed) &&  timer_get("primary_cooldown") = -1 {	
+	if (key_attack_pressed) && timer_get("primary_cooldown") = -1 {	
 		
 		if (!place_meeting(x,y+1,oWallParent)) && (!place_meeting(x,y+1,oPlatformParent)) oPlayer.air_shot = true;
 
 		//charging sound
-		if weapon_charge = 0 {
+		if weapon_charge = 0  && oPlayer.ammo_heavy > 0 {
 			audio_sound_gain(snPrepareBow,0.1,0);
-			audio_play_sound(snPrepareBow,0,0);}
-				
+			audio_play_sound(snPrepareBow,0,0);
+			} 	
 		timer_set("weapon_display",120); 
 		if (weapon_charge < weapon_charge_max) 
 			weapon_charge+=0.25;
@@ -33,7 +33,7 @@ function Ability_Primary_Archer() { //POWER SHOT
 		oPlayer.air_shot = false;
 	}
 			
-	if (key_primary_released) && timer_get("primary_cooldown") = -1  //for bow weapons
+	if (key_primary_released) && timer_get("primary_cooldown") = -1  && oPlayer.ammo_heavy > 0 //for bow weapons
 	{
 		
 		//recoil
@@ -42,6 +42,7 @@ function Ability_Primary_Archer() { //POWER SHOT
 			if !place_meeting(x+dir,y-1,oWallParent) && !(oPlayer.grounded)
 				x += dir;
 			if !(oPlayer.grounded) vsp = -jump_speed;
+			ammo_heavy -=1;
 		}
 			
 		timer_set("primary_cooldown",primary_cooldown);
@@ -70,7 +71,11 @@ function Ability_Primary_Archer() { //POWER SHOT
 		gunkicky = lengthdir_y(-2,other.image_angle-180);
 		weapon_recoil = 3;
 		ScreenShake(2,1);
-	}	
+	}	else if oPlayer.ammo_heavy = 0 {
+			if (key_primary_released) 
+				audio_play_sound(snd_button2,0,0);	
+			oPlayerBow.weapon_charge = 0; 
+	}
 }
 
 function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consumes mana
@@ -79,7 +84,7 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 	var key_secondary = oPlayer.key_secondary;
 	timer_init("triple_shot");
 	
-	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 {
+	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 && oPlayer.ammo_basic > 0 {
 			timer_set("secondary_cooldown",secondary_cooldown); 
 			oUIElements.secondary_cooldown  = 0; //for UI
 			//oPlayer.mana -=2;	//consume 1 mana. //Update 4 sep 2022
@@ -98,25 +103,29 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			timer_set("weapon_display",120); 
 			ScreenShake(2,1);
 			
+		} else { //play "no ammo" sound
+			if (oPlayer.key_secondary_released)
+				audio_play_sound(snd_button2,0,0);	
 		}
 		
-		if shots_total > 0 && timer_get("triple_shot") <=0 {
+		if shots_total > 0 && timer_get("triple_shot") <=0 && oPlayer.ammo_basic > 0 {
 			timer_set("triple_shot",5);
 			
 			with (instance_create_layer(x,y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			
-			direction = oPlayer.dir_prev; 
-			spd = 7;
-			damage = 3; //default = 1;
+				oPlayer.ammo_basic-=1; 
+				direction = oPlayer.dir_prev; 
+				spd = 7;
+				damage = 3; //default = 1;
 					
-			image_angle = direction;
-			x = x - lengthdir_x(0,other.image_angle);
-			y = y - lengthdir_y(0,other.image_angle);
+				image_angle = direction;
+				x = x - lengthdir_x(0,other.image_angle);
+				y = y - lengthdir_y(0,other.image_angle);
 	
-			//sound
-			sound_shot = snBlaster; 
-			audio_sound_gain(sound_shot,0.1,0); 
-			audio_play_sound(sound_shot,2,0);
+				//sound
+				sound_shot = snBlaster; 
+				audio_sound_gain(sound_shot,0.1,0); 
+				audio_play_sound(sound_shot,2,0);
 			}
 			if shots_total = 3 {
 			
@@ -131,6 +140,7 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			if !(oPlayer.grounded) oPlayer.vsp = -oPlayer.jump_speed;
 			shots_total --;
 		} else weapon_active = 0;
+			//play "empty bullets sound" when shooting instead
 } 	
 
 

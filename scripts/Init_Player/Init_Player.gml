@@ -1,6 +1,9 @@
 // Create event for every character. These are the default values. 
-function LoadCharacter_Basics(){
+function init_variables_player(){
 	//relative attributes
+	hp = global.player1_health; hp_max = global.player1_stamina_max;
+	mana = 10; mana_max = mana; 
+	
 	walkspd = 2; current_walkspd = 0;
 	jump_speed = 5;
 	speedRoll = 5.0;
@@ -23,6 +26,10 @@ function LoadCharacter_Basics(){
 	jumps_max = 2;
 	air_shot = false; //allows char to temporarily hover in the air
 	slowmotion = 0.4; //delete later. 
+	
+	//ammo
+	ammo_basic = 4; 
+	ammo_heavy = 2; //the strong bow attack	
 	
 	
 	facing_direction = 0; //the last walked in direction

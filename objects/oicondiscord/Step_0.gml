@@ -2,7 +2,7 @@
 
 //click
 if mouse_check_button_released(mb_left) && position_meeting(mouse_x, mouse_y, id) {
-	url_open_ext("https://discord.gg/PyY5gKaDsS","_blank");	
+	url_open_ext("https://www.guilded.gg/i/2OO4wKW2","_blank");	
 }
 
 //hover

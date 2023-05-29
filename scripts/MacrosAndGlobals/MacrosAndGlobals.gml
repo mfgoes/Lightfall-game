@@ -15,8 +15,8 @@ function MacrosAndGlobals(){
 	global.effects = true; //toggle for performance
 	global.gamepad_on = false; //gamepad
 	//player
-	global.player1_health = 10; global.player1_hp_max = 10;
-	global.player1_mana = 5; global.player1_mana_max = 10; 
+	global.player1_health = 10; global.player1_stamina_max = 10;
+	//global.player1_stamina = 5; global.player1_stamina_max = 10; 
 	
 	global.hasgun = true;
 	global.enemies_spawned = 0;
@@ -35,7 +35,7 @@ function MacrosAndGlobals(){
 		var file;
 		file = file_text_open_write(SAVEFILE);
 		file_text_write_real(file,global.player1_health);
-		file_text_write_real(file,global.player1_mana);
+		file_text_write_real(file,global.player1_stamina);
 		file_text_close(file);
 	} 
 #endregion

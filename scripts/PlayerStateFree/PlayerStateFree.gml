@@ -59,21 +59,27 @@ if (place_meeting(x,y+1,oPlatformParent) && key_down && can_move && !place_meeti
 	}
 
 	if (key_jump) && (jumps > 0) && (can_move) {
-		vsp = -jump_speed;
-		if jumps <=1 { //double jump sound
+		
+		//if double jumping
+		if jumps <=1 && mana > 1 { //double jump sound
 			var jumpsound = choose(snJump1,snJump2,snJump3);
 			audio_sound_gain(jumpsound,0.15,0);
 			audio_play_sound(jumpsound,0,0); 
+			vsp = -jump_speed;
+			mana -= 1; 
 		}
-		jumps -=1;
-		repeat(3) {
-				with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
-					vsp = -0.1; 
-					hsp = random_range(-2,2)
-					image_xscale = choose (1,-1);
-					image_yscale = choose (1,-1);
-				}	
-		}			
+		else if jumps > 1 { //regular jump
+			vsp = -jump_speed;
+			jumps -=1;
+			repeat(3) {
+					with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
+						vsp = -0.1; 
+						hsp = random_range(-2,2)
+						image_xscale = choose (1,-1);
+						image_yscale = choose (1,-1);
+					}	
+			}	
+		}
 	}
 	//variable jump (also check if jumping from trampoline)
 	if (vsp < 0) && (!key_jump_held) && jump_pad_jump = false {

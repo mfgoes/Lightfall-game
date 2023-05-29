@@ -22,6 +22,7 @@ function PlayerInput(){
 		if alarm[0] == -1 
 		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1)			|| keyboard_check(ord("J"));	
 		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr)		|| keyboard_check(ord("K"));	
+		key_secondary_released =  mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_shoulderr) || keyboard_check_pressed(ord("K"));	
 		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3)			|| keyboard_check(ord("L"));	
 		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);		//Evade
 		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);	//Grappling hook (unlock later)
@@ -48,8 +49,9 @@ function PlayerInput(){
 		//roll ability 	
 		if (key_roll)  //enter roll state
 			{
-				if state = PlayerStateFree && roll_cooldown = 0 {
+				if state = PlayerStateFree && roll_cooldown = 0 &&  oPlayer.mana >= 3 { 
 					state = PlayerStateRoll;
+					oPlayer.mana -= 2;
 					audio_sound_gain(snJump1,0.5,0);
 					audio_sound_pitch(snJump1,0.7);
 					audio_play_sound(snJump1,4,false);

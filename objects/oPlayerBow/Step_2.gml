@@ -43,10 +43,10 @@ else {
 #region mana recovery (constant)	
 	timer_init("mana_reload");
 
-	if oPlayer.mana < global.player1_mana_max && timer_get("mana_reload") <= 0 {
+	if oPlayer.mana < global.player1_stamina_max && timer_get("mana_reload") <= 0 {
 		oPlayer.mana+=0.1;	
 		timer_set("mana_reload",30);
-		if oPlayer.mana > global.player1_mana_max oPlayer.mana = global.player1_mana_max; //failsafe if it goes over the limit
+		if oPlayer.mana > global.player1_stamina_max oPlayer.mana = global.player1_stamina_max; //failsafe if it goes over the limit
 	}
 #endregion
 

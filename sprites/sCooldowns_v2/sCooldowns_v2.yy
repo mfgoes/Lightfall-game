@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sCooldown_Archer2",
+  "name": "sCooldowns_v2",
   "bbox_bottom": 16,
   "bbox_left": 0,
   "bbox_right": 19,
@@ -38,7 +38,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sCooldown_Archer2",
+    "name": "sCooldowns_v2",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -60,10 +60,10 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc7a8235-4532-410e-b0a7-0be021794447","path":"sprites/sCooldown_Archer2/sCooldown_Archer2.yy",},},},"Disabled":false,"id":"61c675c3-4fa6-4367-8b6a-2a922f567717","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"00581d52-cdb5-4ab0-9453-158549760a11","path":"sprites/sCooldown_Archer2/sCooldown_Archer2.yy",},},},"Disabled":false,"id":"45468b0d-a93b-4865-af38-622c60ac007a","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fd8348b6-d548-465e-9fdc-c3fd02512fa7","path":"sprites/sCooldown_Archer2/sCooldown_Archer2.yy",},},},"Disabled":false,"id":"5f0658d1-d011-4852-97a0-82c34de67eb9","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6147fae6-0c9d-4fbe-9c61-d7647d1b53e4","path":"sprites/sCooldown_Archer2/sCooldown_Archer2.yy",},},},"Disabled":false,"id":"cad5f120-0ac8-4df7-8e84-dd71047d50b2","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc7a8235-4532-410e-b0a7-0be021794447","path":"sprites/sCooldowns_v2/sCooldowns_v2.yy",},},},"Disabled":false,"id":"920ceb39-b6fb-4118-a35b-919d13b674f0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"00581d52-cdb5-4ab0-9453-158549760a11","path":"sprites/sCooldowns_v2/sCooldowns_v2.yy",},},},"Disabled":false,"id":"8000a59d-4c82-4f19-a393-9622e0a4635e","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fd8348b6-d548-465e-9fdc-c3fd02512fa7","path":"sprites/sCooldowns_v2/sCooldowns_v2.yy",},},},"Disabled":false,"id":"5fbfcb3a-d8d6-40b5-9fc9-a3f075db0386","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6147fae6-0c9d-4fbe-9c61-d7647d1b53e4","path":"sprites/sCooldowns_v2/sCooldowns_v2.yy",},},},"Disabled":false,"id":"6ed377da-a39b-48aa-96dd-f0f28037a146","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

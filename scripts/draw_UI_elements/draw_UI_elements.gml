@@ -1,16 +1,28 @@
 
 function draw_UI_elements(){
 	
+	if (live_call()) return live_result;
+	
+	draw_set_font(fSign);
+	
+	//UI variables (new)
+	var UI_top = 10;
+	var UI_left = 10;
+	var UI_bot = window_get_height()/2-30; //for elements at the bottom
+	var bar_size = 13; // sprite_get_height(sCooldowns_v3); //size of load bar
+	var time_c = 0.1 //time divider (for visual)
+	
+	//UI variables (old)
 	var margin_right = RES_W-96;
-	var margin_left = 30;
+	var margin_left = 10;
 	var margin_bottom =  5;
 	var UIscale = 0.75; //set this to customizable variable later
 
 	//temp colors (fix these later
-	var col_bgr = make_colour_rgb(22, 25, 27); //hp bgr; 
-	var col_bgr2 = make_colour_rgb(55, 51, 52); //hp bgr
-	var col_hp = make_colour_rgb(201, 53, 59); //hp fgr
-	var col_mana = make_colour_rgb(66, 191, 255); //hp fgr
+	var col_bgr_bar = c_black; //make_colour_rgb(55, 51, 52); //hp bgr
+	var col_hp = make_colour_rgb(139, 66, 96); //hp fgr
+	var col_mana = make_colour_rgb(156, 158, 180); //hp fgr
+	var col_text = make_colour_rgb(243, 255, 237); //hp fgr
 
 	if (room != rMenu) && (instance_exists(oPlayer))
 	{
@@ -18,109 +30,62 @@ function draw_UI_elements(){
 			//draw player healthbar
 			var hp = oPlayer.hp; var hp_max = oPlayer.hp_max; var healthUImax = 100; 
 			var healthUI = (hp/hp_max) * healthUImax - 1;
-			draw_set_color(col_bgr);
-			draw_rectangle(margin_left,margin_bottom,margin_left+healthUImax,margin_bottom+8,0);
+			var bar_h = 5; 
+			draw_set_color(col_bgr_bar);
+			draw_rectangle(UI_left,UI_top,UI_left+healthUImax,UI_top+bar_h,0);
 			draw_set_color(col_hp);
-			draw_rectangle(margin_left+1,margin_bottom+1,margin_left+healthUI,margin_bottom+7,0);
-	
-	
-			//draw profile
-			draw_sprite_ext(sAvatar_archer,0,margin_left-18,margin_bottom,0.5,0.5,0,c_white,1);
+			draw_rectangle(UI_left+1,UI_top+1,UI_left+healthUI,UI_top+bar_h-1,0);
 	
 			//draw mana bar
-			
-			//draw_set_font(fSign);
-			//draw_set_color(c_white); 
-			//draw_set_halign(fa_left);
-			
 			var mana_max = oPlayer.mana_max;
-			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax;
-			draw_set_color(col_bgr);
-			draw_rectangle(margin_left,margin_bottom+10,margin_left+healthUImax,margin_bottom+13,0);
+			var pos_y = 7; var bar_h = 2; 
+			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax-1;
+			draw_set_color(col_bgr_bar);
+			draw_rectangle(UI_left,UI_top+pos_y,UI_left+healthUImax,UI_top+pos_y+bar_h,0);
 			draw_set_color(col_mana);
-			draw_rectangle(margin_left+1,margin_bottom+11,margin_left+manaUI,margin_bottom+12,0); //make this adjustable
-			//to do: lerp this for a smooth increase/decrease
-			
+			draw_rectangle(UI_left+1,UI_top+pos_y+1,UI_left+manaUI,UI_top+pos_y+bar_h-1,0); //make this adjustable			
 		#endregion
 		
 		#region cooldowns
-			//temporary variables
-			draw_set_alpha(1); draw_set_color(c_white);
-			var w = sprite_get_width(sCooldown_Archer2);
-			var w5 = sprite_get_width(sCooldown_Archer2)+5; //sprite width + 5; (add some spacing
-			var m5 = 5; //margin 5
-			var margin_bottom =  8;
-			var p10 = 10; var pt5 = -4; var p15 = 23;
-			var bar_max = 16; //size of load bar
-			var time_c = 0.1 //time divider (for visual)
-			//cooldown numbers
-			draw_set_font(f_title_sans);
-			draw_set_halign(fa_center);
-			
+			draw_set_alpha(1); draw_set_color(c_white);	
 			//PRIMARY 
-			var bar = (primary_cooldown/primary_cooldown_max)*bar_max
-			draw_sprite_ext(sCooldown_Archer2,0,margin_left,margin_bottom+15,1,1,0,c_white,1);
+			var pos_y = 11; //relative to this cooldown
+			var pos_x_text = 2; var pos_x = 14; 
+			var bar = (primary_cooldown/primary_cooldown_max)*bar_size
+			draw_sprite_ext(sCooldowns_v3,0,UI_left+pos_x,UI_top+pos_y,1,1,0,c_white,1);
+			draw_set_alpha(1); 
+			draw_rectangle_color(UI_left+pos_x_text-2,UI_top+pos_y+2,UI_left+pos_x_text+9,UI_top+pos_y+12,c_black,c_black,c_black,c_black,0);
+			draw_set_alpha(1); 
+			draw_set_color(col_text); 
+			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_heavy); 
+			
 			if round((primary_cooldown_max - primary_cooldown)*time_c) != 0 {
-				draw_set_alpha(0.6);
-				draw_rectangle_color(margin_left,p15+bar_max, margin_left+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
-				draw_rectangle_color(margin_left,p15+bar_max, margin_left+w-2,p15,c_black,c_black,c_black,c_black,0);
+				draw_set_alpha(0.3);
+				draw_rectangle_color(UI_left+pos_x,UI_top+bar_size+pos_y, UI_left+pos_x+bar_size,UI_top+bar+pos_y,c_black,c_black,c_black,c_black,0);
 				draw_set_alpha(1);
-				draw_text(margin_left+p10,w5+pt5,round((primary_cooldown_max - primary_cooldown)*time_c));
+				//draw_text(margin_left+p10,w5+pt5,round((primary_cooldown_max - primary_cooldown)*time_c));
 			}
 			
 			//SECONDARY
-			var bar = (secondary_cooldown/secondary_cooldown_max)*bar_max
-			draw_sprite_ext(sCooldown_Archer2,3,margin_left+w5*1,margin_bottom+15,1,1,0,c_white,1);
+			var pos_x = 50; var pos_x_text = 38; 
+			//var pos_y = 32; //relative to this cooldown
+			var bar = (secondary_cooldown/secondary_cooldown_max)*bar_size
+			draw_sprite_ext(sCooldowns_v3,1,UI_left+pos_x,UI_top+pos_y,1,1,0,c_white,1);
+			draw_set_alpha(1); 
+			draw_rectangle_color(UI_left+pos_x_text-2,UI_top+pos_y+2,UI_left+pos_x_text+9,UI_top+pos_y+12,c_black,c_black,c_black,c_black,0);
+			draw_set_alpha(1); 
+			draw_set_color(col_text);
+			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_basic); 
+			
 			if round((secondary_cooldown_max - secondary_cooldown)*time_c) > 0 {
-				draw_set_alpha(0.6);
-				draw_rectangle_color(margin_left+w5,p15+bar_max, margin_left+w5+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
-				draw_rectangle_color(margin_left+w5,p15+bar_max, margin_left+w5+w-2,p15,c_black,c_black,c_black,c_black,0);
+				draw_set_alpha(0.3);
+				draw_rectangle_color(UI_left+pos_x,UI_top+bar_size+pos_y, UI_left+pos_x+bar_size,UI_top+bar+pos_y,c_black,c_black,c_black,c_black,0);
 				draw_set_alpha(1);
-				draw_text(margin_left+w5+p10,w5+pt5,round((secondary_cooldown_max - secondary_cooldown)*time_c));
 			}
 			
-			
-			//THIRD (ROLL)
-			var bar = (roll_cooldown/roll_cooldown_max)*bar_max
-			draw_sprite_ext(sCooldown_Archer2,1,margin_left+w5*2,margin_bottom+15,1,1,0,c_white,1);
-			if roll_cooldown_max - roll_cooldown != 0 {
-				draw_set_alpha(0.5);
-				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
-				draw_rectangle_color(margin_left+w5*2,p15+bar_max, margin_left+w5*2+w-2,p15,c_black,c_black,c_black,c_black,0);
-				draw_set_alpha(1);
-				draw_text(margin_left+w5*2+p10,w5+pt5,round((roll_cooldown_max - roll_cooldown)*time_c)); 
-			}
-			
-			//FOURTH (SHOCKWAVE)
-			var bar = (third_cooldown/third_cooldown_max)*bar_max;
-			draw_sprite_ext(sCooldown_Archer2,2,margin_left+w5*3,margin_bottom+15,1,1,0,c_white,1);
-			if third_cooldown_max - third_cooldown != 0 {
-				draw_set_alpha(0.5);
-				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15,c_black,c_black,c_black,c_black,0);
-				draw_rectangle_color(margin_left+w5*3,p15+bar_max, margin_left+w5*3+w-2,p15+bar,c_black,c_black,c_black,c_black,0);
-				draw_set_alpha(1);
-				draw_text(margin_left+w5*3+p10,w5+pt5,round((third_cooldown_max - third_cooldown)*time_c));
-			}
 			
 		#endregion
-	
 		
-		#region draw accessibility icons (control shortcuts)
-			/*
-			draw_text(margin_right-13,margin_bottom+14,"LMB"); 
-			draw_text(margin_right+17,margin_bottom+14,"RMB"); 
-			draw_text(margin_right+47,margin_bottom+14,"F"); 
-		
-			draw_set_halign(fa_left);
-			//draw EXP + Kill counter
-			if  (global.kills > 0) {
-				//killtextscale = lerp(killtextscale,2,0.5);
-				draw_text_transformed(RES_W-10,15,string(global.kills) + " kills",killtextscale,killtextscale,0);
-			}
-			draw_text_transformed(RES_W-10,4,string(global.exp_points) + " exp",killtextscale,killtextscale,0);
-			*/
-		#endregion
-	
 	}
 
 }
