@@ -5,77 +5,97 @@ Cleaned up in 2022.4.
 */
 
 function Ability_Primary_Archer() { //POWER SHOT
-	
-	if(live_call()) return live_result;
-	
+	//if(live_call()) return live_result;
 	var key_attack_pressed		= oPlayer.key_primary;
 	var key_primary_released	= oPlayer.key_primary_released;
 	
-	if (key_attack_pressed) && timer_get("primary_cooldown") = -1 {	
-		
-		if (!place_meeting(x,y+1,oWallParent)) && (!place_meeting(x,y+1,oPlatformParent)) oPlayer.air_shot = true;
+	 // Charge Strength + VFX
+	if (key_attack_pressed && timer_get("primary_cooldown") = -1) {
+        if (!place_meeting(x, y+1, oWallParent) && !place_meeting(x, y+1, oPlatformParent))
+            oPlayer.air_shot = true;
+        
+        if (weapon_charge = 0 && oPlayer.ammo_heavy > 0) {
+            audio_sound_gain(snPrepareBow, 0.1, 0);
+            audio_play_sound(snPrepareBow, 0, 0);
+        }
+        
+        timer_set("weapon_display", 120); 
+        
+        if (weapon_charge < weapon_charge_max)
+            weapon_charge += 0.25;
+		//Create dust effect
+        else if (timer_get("poof_trail") <= 1) {
+           var dd = instance_create_depth(x + lengthdir_x(10, image_angle) + random_range(-2, 2),
+                                           y + lengthdir_y(10, image_angle) + random_range(-3, 3),
+                                           depth - 1, oDust);
+           with (dd) {
+			    hsp = 0;
+			    vsp = 0;
+			    col_start = choose(c_white, c_orange); // Randomize the color choice
+			    image_alpha = 0.8;
+			}
+            timer_set("poof_trail", 10);
+        }
+    }
+    else {
+        oPlayer.air_shot = false;
+    }
 
-		//charging sound
-		if weapon_charge = 0  && oPlayer.ammo_heavy > 0 {
-			audio_sound_gain(snPrepareBow,0.1,0);
-			audio_play_sound(snPrepareBow,0,0);
-			} 	
-		timer_set("weapon_display",120); 
-		if (weapon_charge < weapon_charge_max) 
-			weapon_charge+=0.25;
-		else if timer_get("poof_trail") <= 1 {
-			dd = instance_create_depth(x+lengthdir_x(10,image_angle)+random_range(-2,2),y+lengthdir_y(10,image_angle)+random_range(-3,3),depth-1,oDust); 
-			dd.hsp = 0; dd.vsp = 0; if random(1)<0.4 dd.col_start = c_orange; dd.image_alpha = 0.8; 
-			timer_set("poof_trail",10);
-		}
-	}
-	else {	
-		oPlayer.air_shot = false;
-	}
-			
-	if (key_primary_released) && timer_get("primary_cooldown") = -1  && oPlayer.ammo_heavy > 0 //for bow weapons
-	{
+	
+	#region Primary Fire Logic
+		if (key_primary_released) && timer_get("primary_cooldown") = -1  && oPlayer.ammo_heavy > 0 {
+	    // Recoil
+	    with(oPlayer) {
+	        var dir = lengthdir_x(-8, oPlayerBow.image_angle);
+	        if !place_meeting(x+dir, y-1, oWallParent) && !(oPlayer.grounded)
+	            x += dir;
+	        if !(oPlayer.grounded) 
+				vsp = -jump_speed;
+	        ammo_heavy -= 1;
+	    }
+    
+	    timer_set("primary_cooldown", primary_cooldown);
+	    oUIElements.primary_cooldown = 0; //for UI purposes
+	    audio_sound_gain(snBlaster, 0.35, 0);
+	    audio_sound_pitch(snBlaster, choose(0.9, 0.93, 1));
+	    audio_play_sound(snBlaster, 2, 0);
+    
+	    // Create projectile
+	    var _dist = 10; 
+	    var _x = x + lengthdir_x(_dist, image_angle);
+	    var _y = y + lengthdir_y(_dist, image_angle);
 		
-		//recoil
-		with(oPlayer) {
-			var dir = lengthdir_x(-8,oPlayerBow.image_angle);
-			if !place_meeting(x+dir,y-1,oWallParent) && !(oPlayer.grounded)
-				x += dir;
-			if !(oPlayer.grounded) vsp = -jump_speed;
-			ammo_heavy -=1;
+	    with (instance_create_layer(_x, _y, "Bullets", oArrow)) { //with (instance_create_layer(x, y, "Bullets", oBullet)) {
+	        direction = oPlayerBow.shoot_direction;
+        
+	        // Variable damage
+	        if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max * 0.8 {
+	            damage = 6;
+	            super_arrow = true;
+	            audio_sound_pitch(snDartGun2, 1);
+	        }
+	        else if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max * 0.45 {
+	            damage = 4;
+	        }
+	        else {
+	            damage = 3;
+	        }
 		}
-			
-		timer_set("primary_cooldown",primary_cooldown);
-		oUIElements.primary_cooldown  = 0; //for UI purposes
-		audio_sound_gain(snBlaster,0.35,0);
-		audio_sound_pitch(snBlaster,choose(0.9,0.93,1));
-		audio_play_sound(snBlaster,2,0);
-				
-		//create projectile
-		with (instance_create_layer(x,y,"Bullets",oArrow)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = oPlayerBow.shoot_direction;			
-			
-			//variable damage
-			if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max*0.8 {damage = 6; super_arrow = true; audio_sound_pitch(snDartGun2,1);}
-			else if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max*0.45 {damage = 4;}
-			else damage = 3;
-					
-			image_angle = direction;
-			x = x - lengthdir_x(0,other.image_angle);
-			y = y - lengthdir_y(0,other.image_angle);
-		}			
-		//reset weapon
-		weapon_charge = 0; 
-		//gun kickback
-		gunkickx = lengthdir_x(-2,other.image_angle-180);
-		gunkicky = lengthdir_y(-2,other.image_angle-180);
-		weapon_recoil = 3;
-		ScreenShake(2,1);
-	}	else if oPlayer.ammo_basic = 0 {
-			if (key_primary_released) 
-				audio_play_sound(snd_button2,0,0);	
-			oPlayerBow.weapon_charge = 0; 
-	}
+		
+		// Reset weapon
+		weapon_charge = 0;
+        gunkickx = lengthdir_x(-2, other.image_angle - 180);
+	    gunkicky = lengthdir_y(-2, other.image_angle - 180);
+	    weapon_recoil = 3;
+	    ScreenShake(2, 1);
+		}   
+		else if oPlayer.ammo_heavy = 0 {
+		    if (key_primary_released) {
+		        audio_play_sound(snd_button2, 0, 0);	
+		    }
+		    oPlayerBow.weapon_charge = 0; 
+		}
+	#endregion
 }
 
 function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consumes mana
@@ -111,7 +131,10 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 		if shots_total > 0 && timer_get("triple_shot") <=0 && oPlayer.ammo_basic > 0 {
 			timer_set("triple_shot",5);
 			
-			with (instance_create_layer(x,y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
+			var _dist = 10; 
+		    var _x = x + lengthdir_x(_dist, image_angle);
+		    var _y = y + lengthdir_y(_dist, image_angle);
+			with (instance_create_layer(_x,_y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			
 				oPlayer.ammo_basic-=1; 
 				direction = oPlayer.dir_prev; 
@@ -119,9 +142,6 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 				damage = 3; //default = 1;
 					
 				image_angle = direction;
-				x = x - lengthdir_x(0,other.image_angle);
-				y = y - lengthdir_y(0,other.image_angle);
-	
 				//sound
 				sound_shot = snBlaster; 
 				audio_sound_gain(sound_shot,0.1,0); 

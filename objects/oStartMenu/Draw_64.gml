@@ -1,6 +1,6 @@
 /// @description Draw Menu
 
-if(live_call()) return live_result;
+
 
 //debug
 if global.debugmode = true {

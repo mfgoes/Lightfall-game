@@ -14,23 +14,51 @@ if instance_exists(oWaveSystem) {
 }
 
 
-//show arrow
 if instance_exists(oPlayer) {
-	if distance_to_object(oPlayer) < 100 && (!instance_exists(oText))
+	if(live_call()) return live_result;
+
+	
+	// Press E to enter portal
+	with (oPlayer) {
+        var portalTimer = "portal_open_timer";
+        // If player is colliding with an unlocked portal and holding down E
+        if (place_meeting(x, y, oPortalTrigger) && oPortalTrigger.locked = false && keyboard_check(ord("E"))) {
+            // Start or continue the timer
+			if (timer_get(portalTimer) = -1) {
+                timer_set(portalTimer, 60); // 2-second timer (assuming 60 FPS)
+            } else {
+                timer_init(portalTimer);
+            }
+            
+            // Check if the timer has reached 0
+            if (timer_end(portalTimer)) {
+                SlideTransition(TRANS_MODE.GOTO, oPortalTrigger.target_room); // Go to the next level
+            }
+        } else {
+            // Reset the timer if E key is released or conditions are not met
+            timer_set(portalTimer, -1);
+        }
+	}
+
+
+	//show arrow
+	if distance_to_object(oPlayer) < 40
 	{
 		nearby = true;
-		
-		if (keyboard_check_pressed(ord("W"))) or (keyboard_check_pressed(ord("S"))) {
-		show_hint = true; 	
-		}
 	} else {
 		nearby = false; 
-		show_hint = false; 
 	}
 	
 	//hover effect
-	direction+=0.05;
-	hover += cos(direction)/3;
-
-	
+	direction+=0.03;
+	hover += cos(direction)/5;	
 }
+
+
+if keyboard_check(ord("E")) && (nearby) {
+			timer_counter +=1; 
+}
+else {
+	timer_counter = 0;
+}
+if timer_counter > 60 timer_counter = 60; 

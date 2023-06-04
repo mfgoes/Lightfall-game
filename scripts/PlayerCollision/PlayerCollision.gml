@@ -67,11 +67,4 @@ function PlayerCollision_Gates() {
 			SlideTransition(TRANS_MODE.NEXT);		//go to next level
 		}
 	}	
-	
-	//portals. to do: remove top code later as it's too limiting. 
-	if instance_exists(oPortalTrigger) {
-		if place_meeting(x,y,oPortalTrigger) && oPortalTrigger.locked = false {
-			SlideTransition(TRANS_MODE.GOTO,oPortalTrigger.target_room);		//go to next level
-		}
-	}
 }
