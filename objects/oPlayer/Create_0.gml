@@ -1,6 +1,10 @@
 /// @description Load character data
 init_variables_player();
 
+ammo_basic = 41; //quick shots
+ammo_heavy = 20; //the strong bow attack	
+
+
 //load archer character (make this changeable in the future)
 LoadAssets_Archer();
 

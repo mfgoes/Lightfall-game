@@ -48,7 +48,7 @@ function draw_UI_elements(){
 		
 		#region cooldowns
 			draw_set_alpha(1); draw_set_color(c_white);	
-			//PRIMARY 
+			//basic ammo
 			var pos_y = 11; //relative to this cooldown
 			var pos_x_text = 2; var pos_x = 14; 
 			var bar = (primary_cooldown/primary_cooldown_max)*bar_size
@@ -57,7 +57,7 @@ function draw_UI_elements(){
 			draw_rectangle_color(UI_left+pos_x_text-2,UI_top+pos_y+2,UI_left+pos_x_text+9,UI_top+pos_y+12,c_black,c_black,c_black,c_black,0);
 			draw_set_alpha(1); 
 			draw_set_color(col_text); 
-			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_heavy); 
+			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_basic); 
 			
 			if round((primary_cooldown_max - primary_cooldown)*time_c) != 0 {
 				draw_set_alpha(0.3);
@@ -66,7 +66,7 @@ function draw_UI_elements(){
 				//draw_text(margin_left+p10,w5+pt5,round((primary_cooldown_max - primary_cooldown)*time_c));
 			}
 			
-			//SECONDARY
+			//heavy ammo
 			var pos_x = 50; var pos_x_text = 38; 
 			//var pos_y = 32; //relative to this cooldown
 			var bar = (secondary_cooldown/secondary_cooldown_max)*bar_size
@@ -75,7 +75,7 @@ function draw_UI_elements(){
 			draw_rectangle_color(UI_left+pos_x_text-2,UI_top+pos_y+2,UI_left+pos_x_text+9,UI_top+pos_y+12,c_black,c_black,c_black,c_black,0);
 			draw_set_alpha(1); 
 			draw_set_color(col_text);
-			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_basic); 
+			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_heavy); 
 			
 			if round((secondary_cooldown_max - secondary_cooldown)*time_c) > 0 {
 				draw_set_alpha(0.3);

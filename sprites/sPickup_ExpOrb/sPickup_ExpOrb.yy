@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Interactables",
-    "path": "folders/Graphics and Sprites/Interactables.yy",
+    "name": "Pickups",
+    "path": "folders/Graphics and Sprites/Pickups.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

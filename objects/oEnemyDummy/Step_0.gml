@@ -15,9 +15,11 @@ if (hp <= 0)
 			image_xscale = choose (2,-2);
 			image_yscale = choose (2,-2);
 		}
-		//create exp
-		with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oOrb_Mana)) //create exp orb
-		{hsp = random_range(-3,3)}
+		//create ammo drop
+		with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oPickupParent))
+		{
+		
+		}
 	}
 	audio_play_sound(statue_stomp_02,2,0);
 	instance_destroy();

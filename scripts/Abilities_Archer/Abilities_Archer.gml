@@ -71,7 +71,7 @@ function Ability_Primary_Archer() { //POWER SHOT
 		gunkicky = lengthdir_y(-2,other.image_angle-180);
 		weapon_recoil = 3;
 		ScreenShake(2,1);
-	}	else if oPlayer.ammo_heavy = 0 {
+	}	else if oPlayer.ammo_basic = 0 {
 			if (key_primary_released) 
 				audio_play_sound(snd_button2,0,0);	
 			oPlayerBow.weapon_charge = 0; 
