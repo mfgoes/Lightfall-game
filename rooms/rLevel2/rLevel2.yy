@@ -91,6 +91,8 @@
     {"name":"inst_C7FDD53","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_42B24DDB","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_6A5E7762","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_2527FB2B","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_3457E338","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -202,7 +204,10 @@
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":959.0,"y":272.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bullets","depth":900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":1000,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":1000,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2527FB2B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEnemyCrow","path":"objects/oEnemyCrow/oEnemyCrow.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":272.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3457E338","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEnemyDummy","path":"objects/oEnemyDummy/oEnemyDummy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":736.0,"y":320.0,},
+          ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Zones","depth":1100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"Ground_Decor","depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[

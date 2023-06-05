@@ -13,6 +13,7 @@ if (hp <= 0) {
 			image_xscale = choose (2,-2);
 			image_yscale = choose (2,-2);
 		}
+		
 		//create exp
 		/*with (instance_create_layer(x+random_range(-4,4),bbox_top+1-random(4),"Bullets",oOrb_Mana)) //create exp orb
 		//pick up orbs should 'drop' on the floor for a bit before going to the player. Currently they're a bit distracting. 
@@ -35,7 +36,6 @@ if (hp <= 0) {
 	dd = instance_create_depth(x,y+5,depth,oDeadEnemySink);
 	dd.sprite_index = spriteDie;
 	dd.image_xscale = image_xscale;
-	
 	instance_destroy();
 	if spawned = true global.enemies_spawned -=1; 
 }

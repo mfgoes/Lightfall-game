@@ -409,6 +409,7 @@
     {"name":"oGrassTall","order":2,"path":"objects/oGrassTall/oGrassTall.yy",},
     {"name":"spr_wall_sand","order":3,"path":"sprites/spr_wall_sand/spr_wall_sand.yy",},
     {"name":"oEnemyMage","order":1,"path":"objects/oEnemyMage/oEnemyMage.yy",},
+    {"name":"DroppingItems","order":3,"path":"scripts/DroppingItems/DroppingItems.yy",},
     {"name":"sPixel","order":7,"path":"sprites/sPixel/sPixel.yy",},
     {"name":"GMLive_parser","order":4,"path":"scripts/GMLive_parser/GMLive_parser.yy",},
     {"name":"oEnemyMelee","order":3,"path":"objects/oEnemyMelee/oEnemyMelee.yy",},
