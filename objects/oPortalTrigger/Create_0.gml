@@ -3,7 +3,8 @@ image_speed = 0;
 image_index = 0;
 
 locked = true;
-target_room = room_next(room); //default value: next room on list.        
+open_timer = 50; //how long to open the door
+auto_open = false; //if true, don't require pressing open
 
 nearby = false;
 hover = 0;

@@ -22,7 +22,7 @@ if locked = false {
     draw_rectangle(textX-2, textY-5, textX + textWidth, textY + 20, false);
 	
 	 // Calculate the fill width of the bar based on the timer
-    var fillWidth = textWidth * (timer_counter / 60);
+    var fillWidth = textWidth * (timer_counter / open_timer);
 	 // Draw the bar
     draw_set_color(col_bar);
     if timer_counter > 0 

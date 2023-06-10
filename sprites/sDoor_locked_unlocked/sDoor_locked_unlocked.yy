@@ -29,8 +29,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Interactive Objects",
-    "path": "folders/Objects/Interactive Objects.yy",
+    "name": "Doors and portals",
+    "path": "folders/Graphics and Sprites/Doors and portals.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

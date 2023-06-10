@@ -6,12 +6,17 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"propertyId":{"name":"auto_open","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"value":"True",},
+  ],
   "parent": {
     "name": "Interactive Objects",
     "path": "folders/Objects/Interactive Objects.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oPortalTrigger",
+    "path": "objects/oPortalTrigger/oPortalTrigger.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,12 +30,7 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"goto_room","filters":[
-        "GMRoom",
-      ],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":5,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"active","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
-  ],
+  "properties": [],
   "solid": false,
   "spriteId": {
     "name": "sTransitionGlow",

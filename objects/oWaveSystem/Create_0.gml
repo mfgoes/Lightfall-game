@@ -41,13 +41,4 @@ if disabled = false switch(room) {
 			wave_create([0,oGoliathBoss]),
 		)
 	break;
-	
-	case(rTestHTML2):
-		ds_list_add(waves,
-			wave_create([1,oEnemyMelee])
-			,
-			wave_create([2,oEnemyMelee]),
-			wave_create([0,oEnemyMelee],[1,oEnemyMage],[2,oGoliathBoss])
-		)
-	break;
 }

@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Interactables",
-    "path": "folders/Graphics and Sprites/Interactables.yy",
+    "name": "Doors and portals",
+    "path": "folders/Graphics and Sprites/Doors and portals.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

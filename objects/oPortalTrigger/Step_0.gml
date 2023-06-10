@@ -11,34 +11,42 @@ if instance_exists(oWaveSystem) {
 		other.image_index = 1;
 		other.locked = false; 
 		}
-}
+} else
+locked = false; //else always leave open
 
 
 if instance_exists(oPlayer) {
 	if(live_call()) return live_result;
 
 	
-	// Press E to enter portal
+	// Handle player interaction with portals/doors
 	with (oPlayer) {
-        var portalTimer = "portal_open_timer";
-        // If player is colliding with an unlocked portal and holding down E
-        if (place_meeting(x, y, oPortalTrigger) && oPortalTrigger.locked = false && keyboard_check(ord("E"))) {
-            // Start or continue the timer
-			if (timer_get(portalTimer) = -1) {
-                timer_set(portalTimer, 60); // 2-second timer (assuming 60 FPS)
-            } else {
-                timer_init(portalTimer);
-            }
-            
-            // Check if the timer has reached 0
-            if (timer_end(portalTimer)) {
-                SlideTransition(TRANS_MODE.GOTO, oPortalTrigger.target_room); // Go to the next level
-            }
-        } else {
-            // Reset the timer if E key is released or conditions are not met
-            timer_set(portalTimer, -1);
-        }
+	    var portalTimer = "portal_open_timer";
+
+	    // Check if the portal is set to auto-open and player is colliding with an unlocked portal
+	    if (place_meeting(x, y, oPortalTrigger) && !oPortalTrigger.locked && oPortalTrigger.auto_open) {
+	        SlideTransition(TRANS_MODE.GOTO, other.goto_room); // Go to the next level
+	    }
+
+	    // Check if the player is colliding with an unlocked portal and holding down the E key
+	    if (place_meeting(x, y, oPortalTrigger) && !oPortalTrigger.locked && keyboard_check(ord("E"))) {
+	        // Start or continue the timer
+	        if (timer_get(portalTimer) == -1) {
+	            timer_set(portalTimer, other.open_timer); // Set the timer duration
+	        } else {
+	            timer_init(portalTimer);
+	        }
+        
+	        // Check if the timer has reached 0
+	        if (timer_end(portalTimer)) {
+	            SlideTransition(TRANS_MODE.GOTO, other.goto_room); // Go to the next level
+	        }
+	    } else {
+	        // Reset the timer if E key is released or conditions are not met
+	        timer_set(portalTimer, -1);
+	    }
 	}
+
 
 
 	//show arrow
@@ -50,8 +58,8 @@ if instance_exists(oPlayer) {
 	}
 	
 	//hover effect
-	direction+=0.03;
-	hover += cos(direction)/5;	
+	//direction+=0.03;
+	//hover += cos(direction)/5;	
 }
 
 
@@ -61,4 +69,4 @@ if keyboard_check(ord("E")) && (nearby) {
 else {
 	timer_counter = 0;
 }
-if timer_counter > 60 timer_counter = 60; 
+if timer_counter > open_timer timer_counter = open_timer; 
