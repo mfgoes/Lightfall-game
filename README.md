@@ -1,6 +1,6 @@
 # Dusk Valley
 
-Welcome to the repository of Dusk Valley, an action platformer game with rogue-like elements and cooldown abilities. Set on a sci-fi planet interconnected by ancient portals, you'll find yourself fighting a range of enemies, engaging in boss fights, and even getting a glimpse of the game's lore through some simple NPC dialogues.
+Welcome to the repository of Dusk Valley, an action platformer game with rogue-like elements and cooldown abilities. Set on a sci-fi planet interconnected by ancient portals, you'll find yourself fighting a range of enemies, engaging in boss fights, and even getting a glimpse of the game's lore through some simple NPC dialogues. test
 
 ## About the game
 This game is still in its early stages, but our vision for Dusk Valley is to create an hour's worth of thrilling gameplay. We're looking forward to adding more features that will not only enhance the player experience but also make the game world feel more immersive and lively.
