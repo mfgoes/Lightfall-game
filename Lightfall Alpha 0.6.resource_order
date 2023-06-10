@@ -392,6 +392,7 @@
     {"name":"best_time_placeholder","order":10,"path":"sprites/best_time_placeholder/best_time_placeholder.yy",},
     {"name":"snHitEnemy","order":12,"path":"sounds/snHitEnemy/snHitEnemy.yy",},
     {"name":"oPlatformParent","order":3,"path":"objects/oPlatformParent/oPlatformParent.yy",},
+    {"name":"TileSet7","order":7,"path":"tilesets/TileSet7/TileSet7.yy",},
     {"name":"Aura_Lights_GetSet","order":4,"path":"scripts/Aura_Lights_GetSet/Aura_Lights_GetSet.yy",},
     {"name":"Aura_Engine_GetSet","order":1,"path":"scripts/Aura_Engine_GetSet/Aura_Engine_GetSet.yy",},
     {"name":"oEnemyGateControl","order":4,"path":"objects/oEnemyGateControl/oEnemyGateControl.yy",},

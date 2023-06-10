@@ -54,13 +54,18 @@
 // aura_init(0, c_aqua, true, 0, "Shadow_Tiles", 2, aura_blend_multiply); //original
 
 //turn this into a fancy array later
-modeID = 1;
+modeID = 2;
 modename = "night mode" 
 ambient_alpha = 0.8; //smaller = darker
 
 col_nightmode = make_color_rgb(208,199,182);
 col = col_nightmode  //greyish 
 aura_init(0.8, col, true, camera_get_active(), "Shadow_Tiles", 1, aura_blend_multiply); 
+
+
+//update at the start too
+alarm[0] = 5; 
+
 //get active = retrieves existing oCamera
 
 // This function creates two further variables which you can use:

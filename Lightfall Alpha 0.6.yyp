@@ -503,6 +503,7 @@
     {"id":{"name":"snHitEnemy","path":"sounds/snHitEnemy/snHitEnemy.yy",},"order":12,},
     {"id":{"name":"sBgr_Sand3","path":"sprites/sBgr_Sand3/sBgr_Sand3.yy",},"order":0,},
     {"id":{"name":"oPlatformParent","path":"objects/oPlatformParent/oPlatformParent.yy",},"order":3,},
+    {"id":{"name":"TileSet7","path":"tilesets/TileSet7/TileSet7.yy",},"order":0,},
     {"id":{"name":"Aura_Lights_GetSet","path":"scripts/Aura_Lights_GetSet/Aura_Lights_GetSet.yy",},"order":0,},
     {"id":{"name":"Aura_Engine_GetSet","path":"scripts/Aura_Engine_GetSet/Aura_Engine_GetSet.yy",},"order":0,},
     {"id":{"name":"oEnemyGateControl","path":"objects/oEnemyGateControl/oEnemyGateControl.yy",},"order":4,},
