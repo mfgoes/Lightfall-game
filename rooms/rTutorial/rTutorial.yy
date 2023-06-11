@@ -9,9 +9,6 @@
   "instanceCreationOrder": [
     {"name":"inst_49B2B0B0_1_1_2","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_4E27B1AC_1","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_1877CC23_1","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_42B24DDB_1","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_6A5E7762_1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_E36A9F4","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_5F5B0C56","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_3D3773","path":"rooms/rTutorial/rTutorial.yy",},
@@ -64,17 +61,21 @@
     {"name":"inst_534EC102","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_40C5B57A","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_78B8AAED","path":"rooms/rTutorial/rTutorial.yy",},
+    {"name":"inst_1877CC23_1","path":"rooms/rTutorial/rTutorial.yy",},
+    {"name":"inst_42B24DDB_1","path":"rooms/rTutorial/rTutorial.yy",},
+    {"name":"inst_6A5E7762_1","path":"rooms/rTutorial/rTutorial.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"Folder_1","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Lighting_Aura","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1877CC23_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPlayerLightBulb","path":"objects/oPlayerLightBulb/oPlayerLightBulb.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1344.0,"y":128.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E27B1AC_1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Aura_Control","path":"objects/obj_Aura_Control/obj_Aura_Control.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":53.0,"y":0.0,},
+          ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Shadow_Casters","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1877CC23_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPlayerLightBulb","path":"objects/oPlayerLightBulb/oPlayerLightBulb.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":-128.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_42B24DDB_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oTorch","path":"objects/oTorch/oTorch.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":320.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6A5E7762_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oTorch","path":"objects/oTorch/oTorch.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":736.0,"y":320.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Shadow_Casters","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":32,"SerialiseWidth":75,"TileCompressedData":[
 -6,0,-44,2,-15,-2147483648,-16,0,-44,2,-15,-2147483648,-16,0,-44,2,-15,-2147483648,-17,0,-43,2,-15,-2147483648,-17,0,-43,2,-15,-2147483648,-17,0,-43,2,-15,-2147483648,-17,0,-43,2,-15,-2147483648,-17,0,-43,2,-15,-2147483648,-17,0,-28,2,-25,0,-5,-2147483648,-17,0,-28,2,-25,0,-4,-2147483648,-18,0,-28,2,-7,0,1,2,-6,0,1,
 2,-10,0,-4,-2147483648,-18,0,-29,2,-11,0,-3,2,-2,0,-3,-2147483648,-5,0,-3,-2147483648,-20,0,-27,2,-7,0,5,2,0,0,2,0,-3,2,-2,0,-3,-2147483648,-3,0,-3,-2147483648,-22,0,-26,2,-8,0,-5,2,-11,0,1,-2147483648,-35,0,-15,2,-65,0,-10,2,-69,0,-8,2,-1062,0,-4,75,-68,0,-13,75,
@@ -103,7 +104,9 @@
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oSign","path":"objects/oSign/oSign.yy",},"propertyId":{"name":"text","path":"objects/oSign/oSign.yy",},"value":"\"Use space to jump over things\"",},
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oSign","path":"objects/oSign/oSign.yy",},"propertyId":{"name":"automatic_sign","path":"objects/oSign/oSign.yy",},"value":"True",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":236.0,"y":320.0,},
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_40C5B57A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":304.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_40C5B57A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"properties":[
+                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"propertyId":{"name":"goto_room","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"value":"rLevel1",},
+              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":304.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_78B8AAED","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oSign","path":"objects/oSign/oSign.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oSign","path":"objects/oSign/oSign.yy",},"propertyId":{"name":"automatic_sign","path":"objects/oSign/oSign.yy",},"value":"True",},
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oSign","path":"objects/oSign/oSign.yy",},"propertyId":{"name":"text","path":"objects/oSign/oSign.yy",},"value":"\"Good luck!\"",},

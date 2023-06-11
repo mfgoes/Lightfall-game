@@ -14,7 +14,8 @@ switch(modeID) {
 	case 2: {
 		modename = "sunset mode"
 		ambient_alpha = 0.9;
-		col = make_color_rgb(224,163,157);;
+		//col = make_color_rgb(224,163,157);
+		col = make_color_rgb(244,215,212);
 	}
 	break;
 	case 3: {
@@ -34,9 +35,13 @@ switch(modeID) {
 //update colors (check if it's not equal to the previous modenID first
 //aura_set_alpha(ambient_alpha); //lerp this
 //aura_set_colour(col); 
+
+//for testing lighting
+var key_left = vk_pageup;
+var key_right = vk_pagedown; 
 	
 if (global.debugmode) {
-	if keyboard_check_released(vk_left)
+	if keyboard_check_released(key_left)
 	{
 		if modeID > 1 {
 		modeID--;
@@ -45,7 +50,7 @@ if (global.debugmode) {
 		modeID = 4; 
 	}
 
-	if keyboard_check_released(vk_right)
+	if keyboard_check_released(key_right)
 	{
 		if modeID < 4 {
 		modeID++; 

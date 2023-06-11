@@ -10,7 +10,7 @@ switch(modeID) {
 	case 2: {
 		modename = "sunset mode"
 		ambient_alpha = 0.9;
-		col = make_color_rgb(224,163,157);;
+		col = make_color_rgb(244,215,212);
 	}
 	break;
 	case 3: {

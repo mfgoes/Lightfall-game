@@ -11,7 +11,8 @@ function GameMasterControls(){
 		global.debugmode = !(global.debugmode); 
 
 	if keyboard_check_released(key_restart)
-		SlideTransition(TRANS_MODE.RESTART);
+		//SlideTransition(TRANS_MODE.RESTART);
+		room_restart(); 
 	
 	if keyboard_check_released(key_fullscreen) && (keyboard_check(vk_control)) {
 		window_set_fullscreen(!window_get_fullscreen()); }
@@ -72,12 +73,23 @@ function GameLevelClear(){
 	
 function GameDebugTests() {
 	if global.debugmode = true {
-
-	//toggle between lighting
-	
-	//draw in separate function
-	
-	//spawning test enemies
-
+		//toggle between game speed (ie to test combat)
+		var target_fps = 60; //or 30
+		var tog_fps = keyboard_check_pressed(ord("P"))
+		
+		if (tog_fps){
+			if target_fps = 60			
+				target_fps = 30; 
+			else 
+				target_fps = 60; 
+			game_set_speed(target_fps, gamespeed_fps);
+			
+			dd = instance_create_depth(oPlayer.x,oPlayer.y-30,0,oToastUI);
+			dd.str = "FPS changed: " + string(target_fps); 
+		}
+		//TO ADD LATER
+			//toggle between lighting
+			//draw in separate function
+			//spawning test enemies	
 	}
 }

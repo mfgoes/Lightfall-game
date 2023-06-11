@@ -56,7 +56,6 @@ if (live_call()) return live_result;
 #endregion
 
 
-
 #region select link
 	if (menu_committed != -1)
 	{
