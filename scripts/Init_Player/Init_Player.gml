@@ -26,6 +26,7 @@ function init_variables_player(){
 	jumps_max = 2;
 	air_shot = false; //allows char to temporarily hover in the air
 	slowmotion = 0.4; //delete later. 
+	combo_counter = 0;  //goes up with short range attacks
 	
 	//ammo
 	ammo_basic = 4; 

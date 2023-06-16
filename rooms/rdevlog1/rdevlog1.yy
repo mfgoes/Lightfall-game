@@ -8,7 +8,6 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_49B2B0B0_1_1_1_1","path":"rooms/rDevlog1/rDevlog1.yy",},
-    {"name":"inst_445718C6_1_1_1","path":"rooms/rDevlog1/rDevlog1.yy",},
     {"name":"inst_26F20713_1_1_1","path":"rooms/rDevlog1/rDevlog1.yy",},
     {"name":"inst_7F048A13_1_1_1","path":"rooms/rDevlog1/rDevlog1.yy",},
     {"name":"inst_1AEDAEA1_1_1_1","path":"rooms/rDevlog1/rDevlog1.yy",},
@@ -244,9 +243,7 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_73602B01","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEnemyMage","path":"objects/oEnemyMage/oEnemyMage.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":288.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6559BC4F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oNPC_Merchant","path":"objects/oNPC_Merchant/oNPC_Merchant.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":288.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"TransitionTriggers","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_445718C6_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oTransitionTrigger","path":"objects/oTransitionTrigger/oTransitionTrigger.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":6.0,"x":0.0,"y":208.0,},
-          ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"TransitionTriggers","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bullets","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":900,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_69E0E489_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oWavePos","path":"objects/oWavePos/oWavePos.yy",},"properties":[

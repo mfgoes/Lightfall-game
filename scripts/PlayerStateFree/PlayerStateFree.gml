@@ -125,7 +125,8 @@ if canrope = 1 {
 #region animations
 	//check if using special ability, prioritize this
 	if using_ability = 1 {
-		sprite_index = spriteSpecial
+		//sprite_index = spriteSpecial
+		//let player animation continue (ie slash attack, etc)
 	}
 	else
 	{

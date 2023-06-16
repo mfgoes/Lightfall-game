@@ -10,7 +10,7 @@ menu[0] ="Level 1";
 menu[1] = "Level 2";
 menu[2] = "Level 3";
 menu[3] = "Level 4";
-menu[4] = "Level 5";
+menu[4] = "World 2 - 1";
 menu[5] = "Back";	
 menu_index = array_length(menu);
 

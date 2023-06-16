@@ -13,7 +13,7 @@ function LoadAssets_Archer(){
 	spriteJump    =	sProtagJump;
 	spriteDie     =	sProtagRoll; //update: make new sprite
 	spriteAim     =	sProtagAim;
-	spriteMelee   =	sProtagIdle;
+	spriteMelee   =	sPlayerStab; //updated through the sword attack function
 	
 	spriteWalkArmed = sProtagWalkArmed;
 	spriteIdleArmed = sProtagIdleArmed;

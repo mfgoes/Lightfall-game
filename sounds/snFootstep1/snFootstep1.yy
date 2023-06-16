@@ -13,7 +13,7 @@
     "GAME_NOMENUS": {"audioGroupId":"{\"name\":\"audiogroup_default\",\"path\":\"audiogroups/audiogroup_default\"}",},
   },
   "conversionMode": 0,
-  "duration": 0.08627,
+  "duration": 0.08127,
   "parent": {
     "name": "Footsteps",
     "path": "folders/Sounds/Player sounds/Footsteps.yy",

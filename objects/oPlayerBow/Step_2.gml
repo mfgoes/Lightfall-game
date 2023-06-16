@@ -15,7 +15,7 @@
 	}  
 #endregion
 
-#region init timers
+#region init timers. to do: rework this
 	//cooldown abilities
 	timer_init("primary_cooldown");	
 	timer_init("secondary_cooldown"); 
@@ -23,6 +23,7 @@
 	timer_init("attack_recover"); //Animation duration while attacking. Players can't walk while attack recovers. 
 	timer_init("weapon_display");	
 	timer_init("poof_trail");
+	timer_init("combo_cooldown");
 #endregion
 
 #region gun recoil
@@ -81,12 +82,24 @@ else {
 			} else shoot_direction = oPlayer.facing_direction;
 		
 		#region attacks / cooldowns
+	
+			
 			//primary attack (LMB)
 			Ability_Primary_Archer(); 	
 		
-			//secondary attack (RMB)	//To do: move key check here later so it makes more sense
-			Ability_Secondary_Archer(); 
-		
+			//secondary attack (RMB)
+			//Ability_Secondary_Archer(); 
+			
+			if (oPlayer.key_secondary) && timer_get("secondary_cooldown") <= 0 {
+				Ability_Sword_Attack(); //change this into a slot later
+				timer_set("secondary_cooldown",20); 
+				timer_set("combo_cooldown",50); 
+				combo_counter +=1; 
+			}
+			if timer_get("combo_cooldown") <= 0 {
+				combo_counter = 0; 	
+			}
+				
 			//spread attack (Q)
 			//if (oPlayer.key_special) Ability_Special_Shockwave(); //freezing shockwave special
 			

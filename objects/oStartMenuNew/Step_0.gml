@@ -65,7 +65,7 @@ if (live_call()) return live_result;
 		
 			case 0: //lvl 1
 				show_debug_message("New game");
-				SlideTransition(TRANS_MODE.GOTO,rLevel1);
+				SlideTransition(TRANS_MODE.GOTO,rTutorial);
 				break;
 			case 1: //lvl 2
 				show_debug_message("Load game");

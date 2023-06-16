@@ -13,6 +13,8 @@
 	angle_in_range = true; //check if auto aim is allowed
 	shoot_direction = 0;
 	assist_dist = 200;
+	click_dir = 0; 
+	combo_counter = 0; 
 #endregion
 
 LoadWeapon_Archer();

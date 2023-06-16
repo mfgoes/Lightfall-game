@@ -15,8 +15,9 @@ function MacrosAndGlobals(){
 	global.effects = true; //toggle for performance
 	global.gamepad_on = false; //gamepad
 	//player
-	global.player1_health = 10; global.player1_stamina_max = 10;
-	//global.player1_stamina = 5; global.player1_stamina_max = 10; 
+	global.player1_health = 10; 
+	global.player1_stamina = 5;
+	global.player1_stamina_max = 10; 
 	
 	global.hasgun = true;
 	global.enemies_spawned = 0;

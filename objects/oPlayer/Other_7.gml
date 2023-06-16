@@ -5,3 +5,8 @@ if sprite_index = spriteSpecial { //ie if shockwave animation
 	using_ability = 0;
 }
 
+if sprite_index = spriteMelee {
+	sprite_index = spriteIdle; 	
+	image_speed = 1; 
+	using_ability = 0; //reset animations
+}

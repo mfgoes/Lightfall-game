@@ -100,7 +100,6 @@ function Ability_Primary_Archer() { //POWER SHOT
 
 function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consumes mana
 	
-	if(live_call()) return live_result;
 	var key_secondary = oPlayer.key_secondary;
 	timer_init("triple_shot");
 	
@@ -163,7 +162,6 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			//play "empty bullets sound" when shooting instead
 } 	
 
-
 function Ability_Special_ArrowRain() { //not for MVP
 /// @function       Ability_Spread_Archer();
 /// @desc			Calls a storm of arrows to rain down around the player
@@ -189,6 +187,52 @@ function Ability_Special_ArrowRain() { //not for MVP
 	}
 } 	
 
+function Ability_Sword_Attack() {
+	if(live_call()) return live_result;
+	
+	//in this function you can manage combos and refine each attack.
+	var dist = sign(device_mouse_x_to_gui(0) - oPlayer.x)*10; 
+	//audio
+	var pitch = random_range(0.8, 1.2);
+	var gain = 0.2;
+	var snd = snFootstep3;
+	
+	dd = instance_create_depth(oPlayer.x + dist, y, depth, oAttack_Sword);	
+	dd.image_yscale = 0.7;
+	dd.image_xscale = click_dir*0.7;
+	if combo_counter % 3 == 2 dd.image_xscale = click_dir*0.8;
+	
+	//change player animation
+	with(oPlayer)
+	{
+		var dir = lengthdir_x(2,facing_direction);
+	    spriteMelee = sPlayerSlash; 
+	    if (oPlayerBow.combo_counter % 3 == 2)
+	    {
+	        spriteMelee = sPlayerStab;
+			dir = lengthdir_x(8,facing_direction);
+			 gain = 0.6;
+			 pitch = 1;
+			 
+	    }
+    
+	    sprite_index = spriteMelee;
+	    image_index = 0;
+	    image_speed = 1; 
+	    using_ability = 1;
+		
+		//recoil
+		
+		if !place_meeting(x+dir,y-1,oWallParent) 
+			x += dir;
+	}
+	
+	//play attack sound
+	audio_play_sound(snFootstep3, pitch, false, gain);
+	
+}
+
+///Move melee attack to new one later
 function PlayerStateMeleeAtk(){	//not for MVP
 	timer_init("generate attack")
 	sprite_index = spriteMelee; 

@@ -2,7 +2,7 @@
 
 //debug
 //test if closest object works
-if(live_call()) return live_result;
+//if(live_call()) return live_result;
 
 
 if (global.debugmode) {
@@ -13,7 +13,8 @@ if (global.debugmode) {
 			
 			
 	draw_text(x,y-40,shoot_direction);
-	draw_text(x,y-70,true_aim)
+	
+	draw_text(x,y-70,combo_counter);
 	
 	
 	
@@ -49,7 +50,7 @@ if (global.debugmode) {
 
 
 #region weapon visibility
-	if timer_get("weapon_display") <= 0 { // show/hide weapon
+	if timer_get("weapon_display") <= 0 or oPlayer.using_ability = true { // show/hide weapon
 	image_alpha = 0;
 	}
 	else 

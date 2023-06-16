@@ -60,22 +60,22 @@
 				break;
 			case 1: //lvl 2
 				show_debug_message("Level 2 selected");
-				//SlideTransition(TRANS_MODE.GOTO,rLevel1);
+				SlideTransition(TRANS_MODE.GOTO,rLevel2);
 				menu_committed = -1;
 				break;
 			case 2: //lvl 3
 				show_debug_message("Level 3 selected");
-				//SlideTransition(TRANS_MODE.GOTO,rLevel1);
+				SlideTransition(TRANS_MODE.GOTO,rLevel3);
 				menu_committed = -1;
 				break;
 			case 3: //lvl 4
 				show_debug_message("Level 4 selected");
-				//SlideTransition(TRANS_MODE.GOTO,rLevel1);
+				SlideTransition(TRANS_MODE.GOTO,rLevel4);
 				menu_committed = -1;
 				break;
 			case 4: //lvl 5
 				show_debug_message("Level 5 selected");
-				//SlideTransition(TRANS_MODE.GOTO,rLevel1);
+				SlideTransition(TRANS_MODE.GOTO,rDevlog1);
 				menu_committed = -1;
 				break;
 			case 5: //BACK to previous menu

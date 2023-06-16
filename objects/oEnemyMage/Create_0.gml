@@ -13,7 +13,7 @@ out_of_range = false;
 sight_range = 180 + irandom(10); //when to detect player
 atk_range = 160; //closest distance for attacks
 wander_range = 50; 
-damage = 1;
+damage = 2;
 afraid_of_heights = true;
 alerted = 0; //if player has already been sighted by this unit.
 

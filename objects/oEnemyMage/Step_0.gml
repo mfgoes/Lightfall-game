@@ -81,7 +81,7 @@ switch (current_state)
 						bullet.image_angle = bullet.direction;
 						bullet.sprite_index = sEBullet_Mage;
 						bullet.spd = 2; 
-						bullet.damage = 0;
+						bullet.damage = damage;
 						
 						//play sound (move this to create code later)
 						var sound1 = choose(snElectric_1,snElectric_1,snElectric_4);

@@ -39,6 +39,7 @@ if instance_exists(oPlayer) {
         
 	        // Check if the timer has reached 0
 	        if (timer_end(portalTimer)) {
+				oPlayer.hp = hp_max; //restore all HP . to do: make it animate
 	            SlideTransition(TRANS_MODE.GOTO, other.goto_room); // Go to the next level
 	        }
 	    } else {
