@@ -8,10 +8,12 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"propertyId":{"name":"hp","path":"objects/pShootable/pShootable.yy",},"value":"2",},
+  ],
   "parent": {
-    "name": "Future Content",
-    "path": "folders/Objects/Future Content.yy",
+    "name": "Interactive Objects",
+    "path": "folders/Objects/Interactive Objects.yy",
   },
   "parentObjectId": {
     "name": "pShootable",

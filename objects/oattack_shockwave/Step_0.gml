@@ -77,9 +77,6 @@ if (_num > 0) && active_attack = 1 //damage any shootable object in range
 	ZoomShake(5,20);
 	scrFreezeScreen(40); 
 	ScreenShake(2,40);
-	
-	
-	
 #endregion
 active_attack = 2; //end attack
 } 

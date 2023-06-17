@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 //gm live 
 //if (live_call()) return live_result;
 if global.game_paused
@@ -12,9 +11,14 @@ vsp = vsp + grv;
 //Vertical collision
 VerticalCollision();
 
+//Destroy the object
 if !instance_exists(mywall) && screen_shake = 0 {
 	audio_sound_gain(snFootstep1,0.5,0);
 	audio_play_sound(snFootstep1,10,false);
+
+	//drops
+	DropAmmoOrHealth(0.5,1,1); 
+
 
 	with(mywall) instance_destroy();
 	flash = 4;

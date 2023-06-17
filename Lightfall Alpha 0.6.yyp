@@ -124,6 +124,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Pickups","folderPath":"folders/Graphics and Sprites/Pickups.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Region 1 - Dusk Woods","folderPath":"folders/Rooms/Main levels/Region 1 - Dusk Woods.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Doors and portals","folderPath":"folders/Graphics and Sprites/Doors and portals.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Items","folderPath":"folders/Scripts/Items.yy","order":0,},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gmlive.html","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -149,6 +150,7 @@
     {"id":{"name":"Aura_Shadow_Casters","path":"scripts/Aura_Shadow_Casters/Aura_Shadow_Casters.yy",},"order":0,},
     {"id":{"name":"cell_checker","path":"objects/cell_checker/cell_checker.yy",},"order":0,},
     {"id":{"name":"bgr_sand_night","path":"sprites/bgr_sand_night/bgr_sand_night.yy",},"order":2,},
+    {"id":{"name":"DistributePickupsOnGround","path":"scripts/DistributePickupsOnGround/DistributePickupsOnGround.yy",},"order":0,},
     {"id":{"name":"snDartGun2","path":"sounds/snDartGun2/snDartGun2.yy",},"order":3,},
     {"id":{"name":"snJump3","path":"sounds/snJump3/snJump3.yy",},"order":2,},
     {"id":{"name":"oPlayerTorch","path":"objects/oPlayerTorch/oPlayerTorch.yy",},"order":0,},

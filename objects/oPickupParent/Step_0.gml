@@ -10,21 +10,23 @@ hsp *= 0.6;
 x+=hsp;
 VerticalCollision(); 
 
-// Adjust pickup position to avoid overlapping with nearby pickups
-var offsetX = 25; // Adjust this value to set the desired horizontal offset
+DistributePickupsOnGround(32, 5);
 
-// Check for nearby pickups
-with (oPickupParent) {
-    if (!adjusted && abs(x - other.x) < offsetX)  {
-        // Move the pickup to the left or right based on the position of the nearby pickup
-        if (x < other.x) {
-            x -= 5;
-        } else {
-            x += 5;
-        }
-        adjusted = true; // Set flag to indicate adjustment has been made
-    }
-}
+//// Adjust pickup position to avoid overlapping with nearby pickups
+//var offsetX = 25; // Adjust this value to set the desired horizontal offset
+
+//// Check for nearby pickups
+//with (oPickupParent) {
+//    if (!adjusted && abs(x - other.x) < offsetX)  {
+//        // Move the pickup to the left or right based on the position of the nearby pickup
+//        if (x < other.x) {
+//            x -= 5;
+//        } else {
+//            x += 5;
+//        }
+//        adjusted = true; // Set flag to indicate adjustment has been made
+//    }
+//}
 
 
 //pickup
@@ -32,15 +34,15 @@ if place_meeting(x,y,oPlayer) {
 
 	switch (pickup_type) {
 		case 0: { //light ammo
-			oPlayer.ammo_basic +=5; 
+			oPlayer.ammo_basic +=3; 
 		}
 		break;
 		case 1: { //heavy ammo. ignore this for first prototype.
-			oPlayer.ammo_heavy +=5; 
+			oPlayer.ammo_heavy +=2; 
 		}
 		break;
 		case 2: { //hp small
-			oPlayer.hp +=5; 
+			oPlayer.hp +=2; 
 			if oPlayer.hp > oPlayer.hp_max oPlayer.hp = oPlayer.hp_max; 
 		}
 		break;

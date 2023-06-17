@@ -194,7 +194,7 @@ function Ability_Sword_Attack() {
 	var dist = sign(device_mouse_x_to_gui(0) - oPlayer.x)*10; 
 	//audio
 	var pitch = random_range(0.8, 1.2);
-	var gain = 0.2;
+	var gain = 0.5;
 	var snd = snFootstep3;
 	
 	dd = instance_create_depth(oPlayer.x + dist, y, depth, oAttack_Sword);	
@@ -211,7 +211,7 @@ function Ability_Sword_Attack() {
 	    {
 	        spriteMelee = sPlayerStab;
 			dir = lengthdir_x(8,facing_direction);
-			 gain = 0.6;
+			 gain = 0.85;
 			 pitch = 1;
 			 
 	    }
