@@ -40,8 +40,13 @@ if start_zoom > 0 start_zoom -= 0.0004; else start_zoom = 0;
 		x += (xTo - x) / cam_speed // / 4; //cam_speed;
 		y += (yTo - y) / cam_speed*0.6 // / 2; //cam_speed; 
 	
-		//new zoom code utilizing weapon zoom
-		zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.025,zoom_min,zoom_max); 
+		//allow manual zooming only in debug mode 
+		if (global.debugmode) {
+			zoom = clamp(zoom + (mouse_wheel_down() - mouse_wheel_up())*0.025,zoom_min,zoom_max); 
+		}
+		//to do: add zooming based on items + weapons + special activities
+		
+		//restrict zoom amount
 		if zoom < zoom_min zoom = zoom_min;
 		if zoom > zoom_max zoom = zoom_max;
 		var newzoom = zoom - start_zoom; //clamp(zoom + start_zoom,zoom_min,zoom_max); //make this adjustable.	
