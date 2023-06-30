@@ -58,19 +58,17 @@ if (place_meeting(x,y+1,oPlatformParent) && key_down && can_move && !place_meeti
 		jump_pad_jump = false;
 	}
 
-	if (key_jump) && (jumps > 0) && (can_move) {
+	if (key_jump) && (jumps > 0) && (can_move) { //rename to jumps left
 		
 		//if double jumping
-		if jumps <=1 && mana > 1 { //double jump sound
+		if jumps > 0 && mana > 1 { //double jump sound
 			var jumpsound = choose(snJump1,snJump2,snJump3);
 			audio_sound_gain(jumpsound,0.15,0);
 			audio_play_sound(jumpsound,0,0); 
 			vsp = -jump_speed;
 			mana -= 1; 
-		}
-		else if jumps > 1 { //regular jump
-			vsp = -jump_speed;
-			jumps -=1;
+			jumps -= 1; 
+			
 			repeat(3) {
 					with(instance_create_depth(x,bbox_bottom,depth-5,oDust)) {
 						vsp = -0.1; 

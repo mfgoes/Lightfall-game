@@ -12,7 +12,7 @@ if (global.debugmode) {
 			var true_aim =  point_direction(x,y,closest.x,closest.y-12); else true_aim = 90; 
 			
 			
-	draw_text(x,y-40,shoot_direction);
+	draw_text(x,y-40,oPlayer.jumps);
 	
 	draw_text(x,y-70,combo_counter);
 	

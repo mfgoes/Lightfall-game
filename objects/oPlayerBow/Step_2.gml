@@ -45,7 +45,7 @@ else {
 	timer_init("mana_reload");
 
 	if oPlayer.mana < global.player1_stamina_max && timer_get("mana_reload") <= 0 {
-		oPlayer.mana+=0.1;	
+		oPlayer.mana+=0.25;	
 		timer_set("mana_reload",30);
 		if oPlayer.mana > global.player1_stamina_max oPlayer.mana = global.player1_stamina_max; //failsafe if it goes over the limit
 	}
