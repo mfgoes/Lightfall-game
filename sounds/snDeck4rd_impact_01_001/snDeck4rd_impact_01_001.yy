@@ -15,8 +15,8 @@
   "conversionMode": 0,
   "duration": 1.212444,
   "parent": {
-    "name": "special",
-    "path": "folders/Sounds/weapons/special.yy",
+    "name": "special abilities",
+    "path": "folders/Sounds/weapons/special abilities.yy",
   },
   "preload": false,
   "sampleRate": 5512,

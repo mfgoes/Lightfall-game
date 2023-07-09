@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.523764,
   "parent": {
-    "name": "weapons",
-    "path": "folders/Sounds/weapons.yy",
+    "name": "sci-fishit",
+    "path": "folders/Sounds/weapons/sci-fishit.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -205,12 +205,12 @@ function Ability_Sword_Attack() {
 	//change player animation
 	with(oPlayer)
 	{
-		var dir = lengthdir_x(2,facing_direction);
+		var dir = lengthdir_x(4,facing_direction);
 	    spriteMelee = sPlayerSlash; 
 	    if (oPlayerBow.combo_counter % 3 == 2)
 	    {
 	        spriteMelee = sPlayerStab;
-			dir = lengthdir_x(8,facing_direction);
+			dir = lengthdir_x(12,facing_direction);
 			 gain = 0.85;
 			 pitch = 1;
 			 
@@ -222,17 +222,14 @@ function Ability_Sword_Attack() {
 	    using_ability = 1;
 		
 		//recoil
-		
 		if !place_meeting(x+dir,y-1,oWallParent) 
 			x += dir;
+			
 	}
-	
-	//play attack sound
-	audio_play_sound(snFootstep3, pitch, false, gain);
 	
 }
 
-///Move melee attack to new one later
+///This is the old one
 function PlayerStateMeleeAtk(){	//not for MVP
 	timer_init("generate attack")
 	sprite_index = spriteMelee; 

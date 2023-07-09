@@ -3,7 +3,7 @@ image_speed = 0;
 image_index = 0;
 
 locked = true;
-open_timer = 50; //how long to open the door
+open_timer = 30; //how long to open the door
 auto_open = false; //if true, don't require pressing open
 
 nearby = false;

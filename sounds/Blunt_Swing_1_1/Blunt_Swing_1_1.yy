@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "MULT_m1_snipe_chargeUp_01",
+  "name": "Blunt_Swing_1_1",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.931927,
+  "duration": 1.150295,
   "parent": {
-    "name": "special abilities",
-    "path": "folders/Sounds/weapons/special abilities.yy",
+    "name": "melee",
+    "path": "folders/Sounds/weapons/melee.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "MULT_m1_snipe_chargeUp_01.ogg",
+  "soundFile": "Blunt_Swing_1_1.wav",
   "type": 0,
   "volume": 1.0,
 }
