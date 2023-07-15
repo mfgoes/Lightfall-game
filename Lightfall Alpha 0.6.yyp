@@ -466,6 +466,7 @@
     {"id":{"name":"GMLive_new","path":"scripts/GMLive_new/GMLive_new.yy",},"order":2,},
     {"id":{"name":"oControlsMenu","path":"objects/oControlsMenu/oControlsMenu.yy",},"order":8,},
     {"id":{"name":"blockade_placeholder","path":"sprites/blockade_placeholder/blockade_placeholder.yy",},"order":15,},
+    {"id":{"name":"EnemyAudioStuff","path":"scripts/EnemyAudioStuff/EnemyAudioStuff.yy",},"order":0,},
     {"id":{"name":"oGradientLevel32","path":"objects/oGradientLevel32/oGradientLevel32.yy",},"order":6,},
     {"id":{"name":"statue_stomp_02","path":"sounds/statue_stomp_02/statue_stomp_02.yy",},"order":0,},
     {"id":{"name":"spr_debug_spawn","path":"sprites/spr_debug_spawn/spr_debug_spawn.yy",},"order":7,},

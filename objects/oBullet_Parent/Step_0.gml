@@ -32,30 +32,13 @@ if (place_meeting(x,y,oWallParent)) && (image_index !=0) && active = true
 
 //collision targets
 var _hsp = lengthdir_x(spd,direction);
-if (place_meeting(x,y,pShootable)) && active = true
-	{
-	
-	#region play sound
-		//script to run specific sound? 
-		if (place_meeting(x,y,oEnemyDummy)) {
-			audio_sound_pitch(statue_stomp_01,choose(1.3,1.4)); //higher sound = less intense sounding
-			audio_sound_gain(statue_stomp_01,0.4,0);
-			audio_play_sound(statue_stomp_01,0,0);	
-		} 
-		else 
-		{
-			audio_sound_gain(snd_bulletHit,0.2,0);
-			audio_sound_pitch(snd_bulletHit,choose(1,1.1,1.18));
-			audio_play_sound(snd_bulletHit,3,0);
-		}
-	#endregion
-	
-	//freeze frame
-	scrFreezeScreen(40); 
-	
+//var target = place_meeting(x,y,pShootable))
+
+if (place_meeting(x,y,pShootable)) && (active)
+	{	
 	with(instance_place(x,y,pShootable))
 	{
-		instance_create_depth(x,y,depth,oBulletImpactEffect);
+		instance_create_depth(other.x,other.y,depth,oBulletImpactEffect);
 		var collision = true;
 		if object_index == oEnemyShieldBearer
 		{
@@ -67,11 +50,23 @@ if (place_meeting(x,y,pShootable)) && active = true
 			}
 		}
 			
-		if collision
+		if collision && hitID != other.id
 		{
 			hp-=other.damage;
 			flash = 3;
+			//freeze frame
+			scrFreezeScreen(40); 
+			
+			//sound
+			play_bullet_impact(); 
+			
+			//hit counter
+			instance_create_depth(other.x,other.y,depth,oBulletImpactEffect);
+			dd = instance_create_depth(other.x,other.y,depth-10,oDmgCounter);
+			dd.value = other.damage;
+		
 			hitfrom = other.direction;
+			hitID = other.id; //avoids being hit by the same object if not destroyed yet. Reset hitID to zero after X frames.
 			
 			if object_get_parent(object_index) = oEnemyParent {	//check if attacking an enemy or random object
 				gunkickx = lengthdir_x(3,other.image_angle);
@@ -86,11 +81,12 @@ if (place_meeting(x,y,pShootable)) && active = true
 		}
 		
 	}
-	//create visual + dmg counter
-	instance_create_depth(x,y,depth,oBulletImpactEffect);
-	dd = instance_create_depth(x,y,depth-10,oDmgCounter);
-	dd.value = damage;
-	instance_destroy();
+	
+	//destroy self
+	if break_on_hit = true {
+		instance_destroy();	
+	}
+	else exit; 
 }
 
 

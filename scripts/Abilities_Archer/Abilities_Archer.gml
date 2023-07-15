@@ -79,6 +79,8 @@ function Ability_Primary_Archer() { //POWER SHOT
 	        }
 	        else {
 	            damage = 3;
+				break_on_hit = true; //shooting a weak arrow means it breaks instantly.
+				
 	        }
 		}
 		
@@ -191,7 +193,7 @@ function Ability_Sword_Attack() {
 	if(live_call()) return live_result;
 	
 	//in this function you can manage combos and refine each attack.
-	var dist = sign(device_mouse_x_to_gui(0) - oPlayer.x)*10; 
+	var dist = click_dir*14; 
 	//audio
 	var pitch = random_range(0.8, 1.2);
 	var gain = 0.5;
@@ -210,7 +212,7 @@ function Ability_Sword_Attack() {
 	    if (oPlayerBow.combo_counter % 3 == 2)
 	    {
 	        spriteMelee = sPlayerStab;
-			dir = lengthdir_x(12,facing_direction);
+			dir = lengthdir_x(5,facing_direction);
 			 gain = 0.85;
 			 pitch = 1;
 			 
@@ -221,10 +223,11 @@ function Ability_Sword_Attack() {
 	    image_speed = 1; 
 	    using_ability = 1;
 		
-		//recoil
+		//recoil 2.0 (smooth)
 		if !place_meeting(x+dir,y-1,oWallParent) 
 			x += dir;
-			
+			current_walkspd = 2
+			hsp = 2 * sign(dir); 
 	}
 	
 }

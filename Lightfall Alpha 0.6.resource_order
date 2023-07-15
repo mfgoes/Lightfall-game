@@ -368,6 +368,7 @@
     {"name":"GMLive_new","order":2,"path":"scripts/GMLive_new/GMLive_new.yy",},
     {"name":"oControlsMenu","order":8,"path":"objects/oControlsMenu/oControlsMenu.yy",},
     {"name":"blockade_placeholder","order":4,"path":"sprites/blockade_placeholder/blockade_placeholder.yy",},
+    {"name":"EnemyAudioStuff","order":5,"path":"scripts/EnemyAudioStuff/EnemyAudioStuff.yy",},
     {"name":"oGradientLevel32","order":6,"path":"objects/oGradientLevel32/oGradientLevel32.yy",},
     {"name":"spr_debug_spawn","order":7,"path":"sprites/spr_debug_spawn/spr_debug_spawn.yy",},
     {"name":"obj_Aura_Control","order":5,"path":"objects/obj_Aura_Control/obj_Aura_Control.yy",},

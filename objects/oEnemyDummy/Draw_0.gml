@@ -14,3 +14,5 @@ if hp<hp_max {
 	draw_rectangle(x-10,y-22,x+percentagehp-10,y-20,0);
 	draw_set_color(c_white);
 }
+
+//draw_text(x,y-20,hitID); 

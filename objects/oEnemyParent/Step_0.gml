@@ -11,9 +11,23 @@ timer_init("attack_player");
 timer_init("freeze_anim"); 
 
 
-//gravity
-VerticalCollision(); 
+//movement
+VerticalCollision();  //gravity
 grounded = (place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformParent)); //was oWallParent
+
+//knockback
+if !place_meeting(x+gunkickx,y+gunkicky,oWallParent) && gunkickx != 0 {
+	x+=gunkickx;
+	y-=gunkicky; 
+	gunkickx *= 0.8; //decelerate (potentailly do this after a timer
+	gunkicky *= 0.6; //decelerate y faster;
+	
+	if abs(gunkickx) < 1 {
+		gunkickx = 0; gunkicky = 0;
+	}
+	
+}
+
 
 //destroy if outside room + fallen
 if y > room_height {

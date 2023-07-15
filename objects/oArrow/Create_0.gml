@@ -1,6 +1,9 @@
 /// @description init projectile variables
 if(live_call()) return live_result;
 
+event_inherited(); 
+
+break_on_hit = false;
 
 super_arrow = false;
 grv = 0.003; // was 0.02 gravity

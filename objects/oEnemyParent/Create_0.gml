@@ -14,6 +14,10 @@ current_state = enemy_states.idle;
 hitbox_w = 20;
 hitbox_h = 24;
 
+//advanced hitting system
+hitID = 0; 
+is_hit = 0; 
+
 //generate spawn visual
 instance_create_depth(x,y,depth,oSpawnAnimation);
 alarm[0] = 50;
@@ -70,6 +74,7 @@ y = -1000;
 	//attacking variables
 	sight_range = 80 + round(random_range(5,10)); //when to detect player
 	gunkickx = 0;
+	gunkicky = 0;
 	atk_range = 35; //closest distance for attacks
 	wander_range = 50; 
 	damage = 1;

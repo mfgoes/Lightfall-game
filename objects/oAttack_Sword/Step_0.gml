@@ -12,11 +12,12 @@ if (_num > 0) && active_attack = 1 && instance_exists(oPlayer) //damage any shoo
 		flash = 3;
 		freeze = 30;
 		hitfrom = other.direction;
-		gunkickx = 5*sign(oPlayer.facing_direction);
-		if !place_meeting(x+gunkickx,y-4,oWallParent) {
+		var dir = sign(other.x - oPlayer.x); 
+		gunkickx = choose(3,4,6) * dir; //to do: later you can increase the kickback
+		gunkicky = choose(0,2); //chance to punch upwards
+		if !place_meeting(x+gunkickx,y-4,oWallParent) &&  !place_meeting(x+gunkickx,y-4,oBlockade) {
 			y-=2;
-			x+=gunkickx; 
-			gunkickx = 0;
+			x+=gunkickx;  //initial gunkick
 		}
 		
 		//create visual + dmg counter
@@ -28,7 +29,7 @@ if (_num > 0) && active_attack = 1 && instance_exists(oPlayer) //damage any shoo
 	active_attack = 2; //end attack
 } 
 else 
-	exit;
+exit;
 
 
 
