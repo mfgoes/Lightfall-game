@@ -21,9 +21,12 @@ if (_num > 0) && active_attack = 1 && instance_exists(oPlayer) //damage any shoo
 		}
 		
 		//create visual + dmg counter
-		instance_create_depth(x,y,depth,oBulletImpactEffect);
-		dd = instance_create_depth(x,y,depth-10,oDmgCounter);
+		var y_pos = y-20+choose(0,2,4);
+		instance_create_depth(x,y_pos,depth,oBulletImpactEffect);
+		dd = instance_create_depth(x,y_pos,depth-10,oDmgCounter);
 		dd.value = other.damage;
+		if other.damage > 4 dd.col_text = c_yellow;
+		if other.object_index = oBarrel_Mana dd.counter_type = 1; //don't make it bloody if it's an item. to do: make it for all boxes.
 	}
 	ds_list_destroy(_list);
 	active_attack = 2; //end attack

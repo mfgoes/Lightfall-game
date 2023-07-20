@@ -38,7 +38,7 @@ timer_init("poof_trail_close");
 	var y_new_main = lengthdir_y(spd,dir + random_range(-15,15));  //spd * sign(target.y-y) * pivot_spd; 
 	
 	//double check for walls to avoid them on edges
-	if collision_line(x,y,target.x,target.y+10,oWallParent,0,0) && distance_to_object(target) < TILE_SIZE*2 {
+	if collision_line(x,y,target.x,target.y+10,oWallParent,0,0) && distance_to_object(target) < TILE_SIZE {
 			//x+= x_new_main; // + x_new;
 			if place_meeting(x+x_new_main,y,oWallParent) x+=0;
 			y+= y_new_main; // + y_new;

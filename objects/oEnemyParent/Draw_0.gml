@@ -11,12 +11,6 @@ draw_sprite_ext(sprite_index,image_index,x+atk_anim_x,y,image_xscale,image_yscal
 //flash when hit
 effect_flash();
 
-#region Draw health bar //disabled since we just show numbers instead. 
-
-	draw_text(x,y-30,gunkickx);
-	
-#endregion
-
 
 //debug
 if (global.debugmode) {

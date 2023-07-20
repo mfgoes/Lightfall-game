@@ -191,47 +191,50 @@ function Ability_Special_ArrowRain() { //not for MVP
 
 function Ability_Sword_Attack() {
 	if(live_call()) return live_result;
+	if oPlayer.mana > 0 {
+		//in this function you can manage combos and refine each attack.
+		var dist = click_dir*14; 
+		//audio
+		var pitch = random_range(0.8, 1.2);
+		var gain = 0.5;
+		var snd = snFootstep3;
 	
-	//in this function you can manage combos and refine each attack.
-	var dist = click_dir*14; 
-	//audio
-	var pitch = random_range(0.8, 1.2);
-	var gain = 0.5;
-	var snd = snFootstep3;
-	
-	dd = instance_create_depth(oPlayer.x + dist, y, depth, oAttack_Sword);	
-	dd.image_yscale = 0.7;
-	dd.image_xscale = click_dir*0.7;
-	if combo_counter % 3 == 2 dd.image_xscale = click_dir*0.8;
-	
-	//change player animation
-	with(oPlayer)
-	{
-		var dir = lengthdir_x(4,facing_direction);
-	    spriteMelee = sPlayerSlash; 
-	    if (oPlayerBow.combo_counter % 3 == 2)
-	    {
-	        spriteMelee = sPlayerStab;
-			dir = lengthdir_x(5,facing_direction);
-			 gain = 0.85;
-			 pitch = 1;
-			 
-	    }
-    
-	    sprite_index = spriteMelee;
-	    image_index = 0;
-	    image_speed = 1; 
-	    using_ability = 1;
+		dd = instance_create_depth(oPlayer.x + dist, y, depth, oAttack_Sword);	
+		dd.image_yscale = 0.7;
+		dd.image_xscale = click_dir*0.7;
+		dd.damage = choose(3,4,4,5); //to do: allow upgrades of this in the future
 		
-		//recoil 2.0 (smooth)
-		if !place_meeting(x+dir,y-1,oWallParent) 
-			x += dir;
-			current_walkspd = 2
-			hsp = 2 * sign(dir); 
-	}
+		if combo_counter % 3 == 2 dd.image_xscale = click_dir*0.8;
 	
+		//change player animation
+		with(oPlayer)
+		{
+			mana -=1; 
+			var dir = lengthdir_x(4,facing_direction);
+		    spriteMelee = sPlayerSlash; 
+		    if (oPlayerBow.combo_counter % 3 == 2)
+		    {
+		        spriteMelee = sPlayerStab;
+				dir = lengthdir_x(5,facing_direction);
+				 gain = 0.85;
+				 pitch = 1;
+			 
+		    }
+    
+		    sprite_index = spriteMelee;
+		    image_index = 0;
+		    image_speed = 1; 
+		    using_ability = 1;
+		
+			//recoil 2.0 (smooth)
+			if !place_meeting(x+dir,y-1,oWallParent) 
+				x += dir;
+				current_walkspd = 2
+				hsp = 2 * sign(dir); 
+		}
+	
+	}
 }
-
 ///This is the old one
 function PlayerStateMeleeAtk(){	//not for MVP
 	timer_init("generate attack")
