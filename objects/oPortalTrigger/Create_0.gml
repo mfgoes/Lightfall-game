@@ -16,3 +16,6 @@ timer_counter = 0;
 if instance_exists(obj_Aura_Control) {
 	instance_create_depth(x,y,depth,oLightSmall); 
 }
+
+//effects
+glow_timer = 0; 

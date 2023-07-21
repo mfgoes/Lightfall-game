@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "sPortal_base",
-    "path": "sprites/sPortal_base/sPortal_base.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

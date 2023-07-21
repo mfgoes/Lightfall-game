@@ -48,6 +48,8 @@ if (global.debugmode) {
 		}
 		else
 		modeID = 4; 
+		aura_set_alpha(ambient_alpha); //lerp this
+		aura_set_colour(col); 
 	}
 
 	if keyboard_check_released(key_right)
@@ -57,6 +59,8 @@ if (global.debugmode) {
 		}
 		else 
 		modeID = 1; 
+		aura_set_alpha(ambient_alpha); //lerp this
+		aura_set_colour(col); 
 	}
 
 	///	The SETTER functions in this script are:
@@ -69,10 +73,10 @@ if (global.debugmode) {
 	///		aura_set_blendtype(blendtype)
 	///		SET based on presets
 
-	if keyboard_check_released(vk_anykey) {
-		aura_set_alpha(ambient_alpha); //lerp this
-		aura_set_colour(col); 
-	}
+	//if keyboard_check_released(vk_anykey) {
+	//	aura_set_alpha(ambient_alpha); //lerp this
+	//	aura_set_colour(col); 
+	//}
 }
 
 

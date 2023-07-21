@@ -1,4 +1,4 @@
-if global.enemies_spawned <= 0  { //!instance_exists(oEnemyParent)
+if global.enemies_spawned <= 0 && disabled = false && current_wave <= ds_list_size(waves) { //!instance_exists(oEnemyParent)
 	if ds_list_size(waves)>current_wave { //if more waves left in list
 		current_wave_check=ds_list_find_value(waves,current_wave)
 		

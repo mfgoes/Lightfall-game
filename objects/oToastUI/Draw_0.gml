@@ -14,5 +14,8 @@ if toast_type = variant.h1 {
 	RES =  global.RES_TEXT*3; 
 	draw_set_font(oGame.font_poster); 
 }
-
 draw_text_transformed(_x,_y,str,RES,RES,0);
+
+draw_set_halign(fa_center);
+draw_set_color(c_black);
+draw_set_font(fSign);

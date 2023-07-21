@@ -32,7 +32,7 @@ function draw_debug_info(){
 		//fps check and editor
 		draw_set_halign(fa_right);
 		draw_text(_x2,_y2+lh,"Rfps: " + string(fps_reader));
-		draw_text(_x2,_y2+lh*2,"Gfps: " + string(fps) + "\n P to change");
+		draw_text(_x2,_y2+lh*2,"Cfps: " + string(oGame.current_fps) + "\n P to change");
 		
 		//draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
 		//draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));

@@ -3,6 +3,7 @@
 
 MacrosAndGlobals();
 
+current_fps = 60; // Start with the default value (60 FPS)
 //setup font stuff (move later)
 font_setup(); 
 
