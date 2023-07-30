@@ -25,7 +25,3 @@ if air_shot = true && !place_meeting(x,y+1,oWallParent) {
 }
 
 
-if keyboard_check_pressed(vk_down) {
-	dd = instance_create_depth(x,y,depth,oToastUI); 
-	dd.str = "Big Boss Name" 
-}

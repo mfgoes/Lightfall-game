@@ -79,28 +79,50 @@ function ThemeSwitcher() {
 				sprite_index = spr_tile_template;   
 				init_autotile()
 		   }
+			if instance_exists(obj_Aura_Control) {
+				obj_Aura_Control.modeID = 3; 
+			}
             break;
         case "sand":
             // Apply the sand theme here
 			 with (oAutoTile32) {
 				sprite_index = tile_sand_red_32; 
 				init_autotile()
-		   }
-            break;
+			}
+			if instance_exists(obj_Aura_Control) {
+				obj_Aura_Control.modeID = 3; 
+			}
+		   break;
         case "darkforest":
             // Apply the darkforest theme here
-			 with (oAutoTile32) {
+			with (oAutoTile32) {
 				sprite_index = tile_forest_red_32;   
 				init_autotile()
-		   }
+			}
+			if instance_exists(obj_Aura_Control) {
+				obj_Aura_Control.modeID = 1; 
+			}
             break;
         case "snow":
             // Apply the snow theme here
-			 with (oAutoTile32) {
+			with (oAutoTile32) {
 				sprite_index = tile_snow_red_32;   
 				init_autotile()
 		   }
-            break;
+			if instance_exists(obj_Aura_Control) {
+				obj_Aura_Control.modeID = 4; 
+			}
+			break;
+		case "morningforest":
+            // Apply the sand theme here
+			 with (oAutoTile32) {
+				sprite_index = tile_forest_red_32; 
+				init_autotile()
+			}
+			if instance_exists(obj_Aura_Control) {
+				obj_Aura_Control.modeID = 2; 
+			}
+		   break;
 	}
 }
 
@@ -128,4 +150,77 @@ function initializeLevelGenerator() {
 	//Wind effect
 	grass_global_dir = 0;
 	grass_dir = 1; //right, then left
+}
+	
+	
+///@desc draws the backgrounds of the levels
+function draw_background_theme() {
+	
+	if (live_call()) return live_result; 
+	
+	//enable theme switching
+	 with(oLevelGenerator) {
+		other.currentThemeName = themeNames[CurrentTheme];
+	}
+	
+	#region essential variables
+		//to do: remove magic numbers once I figure out how it works. 
+		var bgr_sky = bgr_testing;	//furthest in the back
+		var bg_hills = -1;		//second furthest
+		var bg_hillsfront = -1;	//third furthest	 	
+		
+		var view_cam = view_camera[0]; 
+		var r_num = sprite_get_height(bg_hills)*5; //this might change something??
+		var vx1 = camera_get_view_x(oCamera.cam) + (camera_get_view_width(view_cam)/display_get_width());
+		
+		var vx = camera_get_view_x(oCamera.cam) + ((r_num*camera_get_view_width(view_cam)*1.333)/display_get_width());
+		var vx2 =  camera_get_view_x(oCamera.cam) + ((1900*camera_get_view_width(view_cam)*1.333)/display_get_width()); //(r_num*camera_get_view_width(view_cam)/display_get_width());
+		
+		var vy = camera_get_view_y(oCamera.cam) - (140*camera_get_view_height(view_cam)/display_get_height()); 
+		var vy2 = camera_get_view_y(oCamera.cam) + (400*camera_get_view_height(view_cam)/display_get_height());
+
+		//scale based on zoom level (has bugs)
+		var res = 6;
+		var xscale = res*(camera_get_view_width(view_camera[0])/display_get_width());
+		var yscale =  res*(camera_get_view_height(view_camera[0])/display_get_height());
+		var xshiftcam = xscale*oCamera.x * 0.1;
+	#endregion
+
+	switch(currentThemeName) {
+	    case "sand": {
+			var bgr_sky = bgr_sunnydessert;	//furthest in the back
+			var bg_hills = bgr_hills;		//second furthest
+			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
+		}
+	        break;
+	    case "darkforest": {
+			var bgr_sky = bgr_dark_stars;	//furthest in the back
+			var bg_hills = bgr_hills;		//second furthest
+			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
+		}
+	        break;
+	    case "snow": {
+			var bgr_sky = bgr_snow;	//furthest in the back
+			var bg_hills = bgr_hills;		//second furthest
+			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
+		}
+	        break;
+		case "morningforest": {
+			var bgr_sky = bgr_dark_stars;	//furthest in the back
+			var bg_hills = bgr_hills;		//second furthest
+			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
+		}
+	        break;
+		default: {
+			var bgr_sky = bgr_testing;	//furthest in the back
+			var bg_hills = -1;		//second furthest
+			var bg_hillsfront = -1;	//third furthest	 	 
+		}
+	}
+	draw_sprite_ext(bgr_sky,0, vx1,vy,xscale,yscale,0,c_white,1); 
+	if bg_hills != -1 {
+		draw_sprite_ext(bg_hills,0, vx  - xshiftcam,vy2,xscale,yscale,0,c_white,1); //left side
+		draw_sprite_ext(bg_hills,0, vx2 - xshiftcam,vy2,xscale,yscale,0,c_white,1); //right side
+		
+	}
 }

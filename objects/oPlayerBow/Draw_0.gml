@@ -10,14 +10,6 @@ if (global.debugmode) {
 		var closest = instance_nearest(x,y,pShootable);
 		if  closest != noone 
 			var true_aim =  point_direction(x,y,closest.x,closest.y-12); else true_aim = 90; 
-			
-			
-	draw_text(x,y-40,oPlayer.jumps);
-	
-	draw_text(x,y-70,combo_counter);
-	
-	
-	
 	var linecheck = cos(oPlayer.facing_direction)*assist_dist; 
 	var closest = instance_nearest(x,y,pShootable);
 	if closest != noone {

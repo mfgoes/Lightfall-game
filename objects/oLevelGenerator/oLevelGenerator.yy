@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Essentials",
-    "path": "folders/Objects/Essentials.yy",
+    "name": "Level Generation",
+    "path": "folders/Objects/Essentials/Level Generation.yy",
   },
   "parentObjectId": null,
   "persistent": false,

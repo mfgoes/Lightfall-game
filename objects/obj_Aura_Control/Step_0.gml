@@ -6,28 +6,27 @@ if (live_call()) return live_result;
 switch(modeID) {
 	case 1: {
 		modename = "night mode"
-		ambient_alpha = 0.2;
+		ambient_alpha_new = 0.4;
 		col = make_color_rgb(208,199,182);
-		
 	}
 	break;
 	case 2: {
 		modename = "sunset mode"
-		ambient_alpha = 0.9;
+		ambient_alpha_new = 0.9;
 		//col = make_color_rgb(224,163,157);
 		col = make_color_rgb(244,215,212);
 	}
 	break;
 	case 3: {
 		modename = "daytime mode"
-		ambient_alpha = 1;
+		ambient_alpha_new = 1;
 		col = c_white;
 	}
 	break; 
 	case 4: {
-		modename = "shiny caves mode"	
-		ambient_alpha = 0.6;
-		col = make_color_rgb(107,105,191);
+		modename = "snow"	
+		ambient_alpha_new = 0.9;
+		col = make_color_rgb(239,239,246);
 	}
 	break;
 }
@@ -36,47 +35,16 @@ switch(modeID) {
 //aura_set_alpha(ambient_alpha); //lerp this
 //aura_set_colour(col); 
 
-//for testing lighting
-var key_left = vk_pageup;
-var key_right = vk_pagedown; 
-	
+//Toggle between lighting
+//UPDATE 30 JUL: The switch is now handles in the theme switcher instead of here.
+var key_toggle = vk_up or vk_down;
 if (global.debugmode) {
-	if keyboard_check_released(key_left)
-	{
-		if modeID > 1 {
-		modeID--;
-		}
-		else
-		modeID = 4; 
+	ambient_alpha = lerp(ambient_alpha,ambient_alpha_new,0.03);
+	aura_set_alpha(ambient_alpha); //lerp this
+
+	if keyboard_check_released(key_toggle) {
 		aura_set_alpha(ambient_alpha); //lerp this
-		aura_set_colour(col); 
+		aura_set_colour(col); 	
 	}
-
-	if keyboard_check_released(key_right)
-	{
-		if modeID < 4 {
-		modeID++; 
-		}
-		else 
-		modeID = 1; 
-		aura_set_alpha(ambient_alpha); //lerp this
-		aura_set_colour(col); 
-	}
-
-	///	The SETTER functions in this script are:
-	///	
-	///		aura_set_colour(colour)
-	///		aura_set_alpha(alpha)
-	///		aura_set_soft(soft)
-	///		aura_set_aa(aa_level)
-	///		aura_set_view(view)
-	///		aura_set_blendtype(blendtype)
-	///		SET based on presets
-
-	//if keyboard_check_released(vk_anykey) {
-	//	aura_set_alpha(ambient_alpha); //lerp this
-	//	aura_set_colour(col); 
-	//}
-}
-
+}	
 

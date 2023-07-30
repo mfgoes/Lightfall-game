@@ -24,9 +24,10 @@ function draw_debug_info(){
 		//lighting stuff
 		if instance_exists(obj_Aura_Control) {
 			draw_set_halign(fa_left);
-			draw_text(_x,_y,"Lighting: " + string(obj_Aura_Control.modename) + " - +"); 
-			//draw_text(_x,_y + lh*2,"Aura col: " + string(obj_Aura_Control.col)); 
-			//draw_text(_x,_y + lh*3,"Aura alpha: " + string(obj_Aura_Control.ambient_alpha)); 
+			with (oLevelGenerator) var currentThemeName = oLevelGenerator.themeNames[CurrentTheme];
+			draw_text(_x,_y,string(currentThemeName) + " - +"); 
+			draw_text(_x,_y + lh*2,"Aura col: " + string(obj_Aura_Control.col)); 
+			draw_text(_x,_y + lh*3,"Aura alpha: " + string(obj_Aura_Control.ambient_alpha)); 
 		}
 		
 		//fps check and editor

@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Utility",
-    "path": "folders/Objects/Essentials/Level Misc/Utility.yy",
+    "path": "folders/Objects/Essentials/Level Generation/Utility.yy",
   },
   "parentObjectId": null,
   "persistent": false,

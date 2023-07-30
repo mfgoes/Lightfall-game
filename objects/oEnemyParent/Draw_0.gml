@@ -13,6 +13,7 @@ effect_flash();
 
 
 //debug
+/*
 if (global.debugmode) {
 	//draw collision box 
 	draw_set_color(c_blue);
@@ -34,3 +35,4 @@ if (global.debugmode) {
 	draw_rectangle(x-sign(x - target.x)*hitbox_w,y,x,y-hitbox_h,0);
 	draw_set_alpha(1);
 }
+*/

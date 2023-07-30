@@ -55,8 +55,11 @@
 
 //turn this into a fancy array later
 modeID = 2;
+modeID_prev = modeID; //makes toggling more efficient
+
 modename = "night mode" 
 ambient_alpha = 0.8; //smaller = darker
+ambient_alpha_new = ambient_alpha; 
 
 col_nightmode = make_color_rgb(208,199,182);
 col = col_nightmode  //greyish 

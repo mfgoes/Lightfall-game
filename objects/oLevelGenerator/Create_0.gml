@@ -9,7 +9,8 @@ themeNames = [
     "placeholder",
     "sand",
     "darkforest",
-    "snow"
+    "snow",
+	"morningforest"
 ];
 
 ThemeSwitcher(); 

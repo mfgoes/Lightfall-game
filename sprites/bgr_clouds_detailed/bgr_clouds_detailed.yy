@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "DARK GRASS TILES",
-    "path": "folders/Graphics and Sprites/TILES/DARK GRASS TILES.yy",
+    "name": "Backgrounds",
+    "path": "folders/Graphics and Sprites/TILES/Backgrounds.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
