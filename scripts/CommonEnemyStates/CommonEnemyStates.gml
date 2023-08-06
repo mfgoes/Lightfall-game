@@ -173,9 +173,11 @@ function scr_enemy_lunge(){
 	if current_state = enemy_states.approach {
 		timer_init("lunge_timer");
 		if timer_get("lunge_timer") <= 0 && (place_meeting(x+dir*8,y,target)) && (grounded) && h_leap = 0 {
-			timer_set("lunge_timer",50);
+			timer_set("lunge_timer",40);
 			current_state = enemy_states.lunge;
 			dir_atk=dir;
+			sprite_index = spriteAttack;
+			attack_anim_end = 0; 
 		}	
 	}
 }

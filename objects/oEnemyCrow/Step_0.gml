@@ -84,3 +84,11 @@ if instance_exists(target) && freeze = 0 {
 //show_debug_message(string(x) + " " + string(atk_anim_x) + " " + string(sprite_index))
 atk_delay_timer--;
 
+// Create a new tilemap layer
+//if (live_call()) return live_result;
+
+#region animations (refactor later)
+	if attack_anim_end = 1 && sprite_index = spriteAttack {
+			sprite_index = spriteIdle; 
+	}
+#endregion
