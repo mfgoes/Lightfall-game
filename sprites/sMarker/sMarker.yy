@@ -26,7 +26,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"209875af-ee28-4767-aece-3bc1d3d935f4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 4,
   "parent": {
     "name": "UI Elements",
     "path": "folders/Graphics and Sprites/UI Elements.yy",
@@ -63,7 +63,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 8,
-    "yorigin": 4,
+    "yorigin": 8,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

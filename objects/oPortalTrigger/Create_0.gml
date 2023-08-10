@@ -19,3 +19,8 @@ if instance_exists(obj_Aura_Control) {
 
 //effects
 glow_timer = 0; 
+prevTextX = x; // Store the starting x position
+prevTextY = y; // Store the starting y position
+lerpFactor = 0; // Initialize lerp factor
+transitionSpeed = 0.05; // Speed of the transition (adjust as needed)
+previousNearby = nearby;  // Or false if you want to default to a specific state

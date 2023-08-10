@@ -85,8 +85,9 @@ function GameDebugTests() {
             
             game_set_speed(current_fps, gamespeed_fps); // Set the game speed
             
-            var dd = instance_create_depth(oPlayer.x, oPlayer.y - 30, 0, oToastUI);
+            var dd = instance_create_depth(oPlayer.x, oPlayer.y - 35, 0, oToastUI);
             dd.str = "FPS changed: " + string(current_fps); 
+			dd.toast_type = variant.h2;
         }
     }
 }

@@ -11,6 +11,14 @@ if locked = false {
 	}
 	
 draw_self();
-if nearby draw_sprite_ext(sMarker,0,x,y-30+hover,1,1,0,c_white,1);
 
+if (nearby)
+	
+
+if (nearby) {
+	if (locked)
+		draw_sprite_ext(sIcon_locked,0,x,y-30+hover,1,1,0,c_white,1); 
+	else
+		draw_sprite_ext(sMarker,0,x,y-30+hover,1,1,0,c_white,1);
+}
 

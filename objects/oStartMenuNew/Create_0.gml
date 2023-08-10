@@ -5,7 +5,7 @@ if (live_call()) return live_result;
 
 //skip menu if toggle is on
 if (DEV_MODE) { //skip menu if in devleoper mode
-	room_goto(rGeneratorTest); //can also just send user to a Dev test room. 
+	room_goto(rTutorial); //can also just send user to a Dev test room. 
 }
 
 

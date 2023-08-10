@@ -2,6 +2,7 @@
 // You can write your code in this editor
 var RES = 1; 
 draw_set_color(c_white);
+draw_set_halign(fa_center);
 
 if toast_type = variant.normal or toast_type = variant.damage {
 	RES =  global.RES_TEXT;
