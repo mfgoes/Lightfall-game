@@ -1,96 +1,124 @@
 
 function draw_UI_elements(){
-	
-	if (live_call()) return live_result;
-	
 	draw_set_font(fSign);
+	if (room != rMenu) && (instance_exists(oPlayer)) {
+		draw_health_and_mana();
+		draw_objective_UI(); 
+		if (instance_exists(oPlayerWeapon))
+			draw_weapon_UI();
+	}
+}
+
+function draw_health_and_mana() {
 	
-	//UI variables (new)
+	if (live_call()) return live_result; 
+	//UI variables
+	var hp = oPlayer.hp; var hp_max = oPlayer.hp_max; 
+	var healthUImax = 120; 
+	var res = 2; 
 	var UI_top = 10;
-	var UI_left = 10;
-	var UI_bot = window_get_height()/2-30; //for elements at the bottom
+	var UI_left = display_get_gui_width()/2-healthUImax/2; //dependent on the width of the health bar 
+	var UI_bot = display_get_gui_height()*res/2-30; //for elements at the bottom
 	var bar_size = 13; // sprite_get_height(sCooldowns_v3); //size of load bar
 	var time_c = 0.1 //time divider (for visual)
-	
-	//UI variables (old)
 	var margin_right = RES_W-96;
 	var margin_left = 10;
 	var margin_bottom =  5;
 	var UIscale = 0.75; //set this to customizable variable later
-
+	
 	//temp colors (fix these later
 	var col_bgr_bar = c_black; //make_colour_rgb(55, 51, 52); //hp bgr
 	var col_hp = make_colour_rgb(139, 66, 96); //hp fgr
 	var col_mana = make_colour_rgb(156, 158, 180); //hp fgr
 	var col_text = make_colour_rgb(243, 255, 237); //hp fgr
-
-	if (room != rMenu) && (instance_exists(oPlayer))
-	{
-		#region health and mana bars
-			//draw player healthbar
-			var hp = oPlayer.hp; var hp_max = oPlayer.hp_max; var healthUImax = 100; 
-			var healthUI = (hp/hp_max) * healthUImax - 1;
-			var bar_h = 5; 
-			draw_set_color(col_bgr_bar);
-			draw_rectangle(UI_left,UI_top,UI_left+healthUImax,UI_top+bar_h,0);
-			draw_set_color(col_hp);
-			draw_rectangle(UI_left+1,UI_top+1,UI_left+healthUI,UI_top+bar_h-1,0);
 	
-			//draw mana bar
-			var mana_max = oPlayer.mana_max;
-			var pos_y = 7; var bar_h = 2; 
-			var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax-1;
-			draw_set_color(col_bgr_bar);
-			draw_rectangle(UI_left,UI_top+pos_y,UI_left+healthUImax,UI_top+pos_y+bar_h,0);
-			draw_set_color(col_mana);
-			draw_rectangle(UI_left+1,UI_top+pos_y+1,UI_left+manaUI,UI_top+pos_y+bar_h-1,0); //make this adjustable			
-		#endregion
+	
+	#region health and mana bars
+		//draw player healthbar
 		
-		#region cooldowns
-			draw_set_alpha(1); draw_set_color(c_white);	
-			//basic ammo
-			var pos_y = 11; //relative to this cooldown
-			var pos_x_text = 2; var pos_x = 14; 
-			var bar = (primary_cooldown/primary_cooldown_max)*bar_size
-			draw_sprite_ext(sCooldowns_v3,0,UI_left+pos_x,UI_top+pos_y,1,1,0,c_white,1);
-			draw_set_alpha(1); 
-			draw_rectangle_color(UI_left+pos_x_text-2,UI_top+pos_y+2,UI_left+pos_x_text+9,UI_top+pos_y+12,c_black,c_black,c_black,c_black,0);
-			draw_set_alpha(1); 
-			draw_set_color(col_text); 
-			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_basic); 
-			
-			if round((primary_cooldown_max - primary_cooldown)*time_c) != 0 {
-				draw_set_alpha(0.3);
-				draw_rectangle_color(UI_left+pos_x,UI_top+bar_size+pos_y, UI_left+pos_x+bar_size,UI_top+bar+pos_y,c_black,c_black,c_black,c_black,0);
-				draw_set_alpha(1);
-				//draw_text(margin_left+p10,w5+pt5,round((primary_cooldown_max - primary_cooldown)*time_c));
-			}
-			
-			//heavy ammo
-			var pos_x = 50; var pos_x_text = 38; 
-			//var pos_y = 32; //relative to this cooldown
-			var bar = (secondary_cooldown/secondary_cooldown_max)*bar_size
-			draw_sprite_ext(sCooldowns_v3,1,UI_left+pos_x,UI_top+pos_y,1,1,0,c_white,1);
-			draw_set_alpha(1); 
-			draw_rectangle_color(UI_left+pos_x_text-2,UI_top+pos_y+2,UI_left+pos_x_text+9,UI_top+pos_y+12,c_black,c_black,c_black,c_black,0);
-			draw_set_alpha(1); 
-			draw_set_color(col_text);
-			draw_text(UI_left+pos_x_text,UI_top+pos_y,oPlayer.ammo_heavy); 
-			
-			if round((secondary_cooldown_max - secondary_cooldown)*time_c) > 0 {
-				draw_set_alpha(0.3);
-				draw_rectangle_color(UI_left+pos_x,UI_top+bar_size+pos_y, UI_left+pos_x+bar_size,UI_top+bar+pos_y,c_black,c_black,c_black,c_black,0);
-				draw_set_alpha(1);
-			}
-			
-			
-		#endregion
-		
-	}
+		var healthUI = (hp/hp_max) * healthUImax - 1;
+		var bar_h = 5; 
+		draw_set_color(col_bgr_bar);
+		draw_rectangle(UI_left,UI_bot,UI_left+healthUImax,UI_bot+bar_h,0);
+		draw_set_color(col_hp);
+		draw_rectangle(UI_left+1,UI_bot+1,UI_left+healthUI,UI_bot+bar_h-1,0);
+	
+		//draw mana bar
+		var mana_max = oPlayer.mana_max;
+		var pos_y = 7; var bar_h = 2; 
+		var manaUI = (oPlayer.mana/oPlayer.mana_max) * healthUImax-1;
+		draw_set_color(col_bgr_bar);
+		draw_rectangle(UI_left,UI_bot+pos_y,UI_left+healthUImax,UI_bot+pos_y+bar_h,0);
+		draw_set_color(col_mana);
+		draw_rectangle(UI_left+1,UI_bot+pos_y+1,UI_left+manaUI,UI_bot+pos_y+bar_h-1,0); //make this adjustable			
+	#endregion		
 
 }
 	
 	
+function draw_weapon_UI() {
+	
+	if (live_call()) return live_result; 
+	
+	//UI variables
+	var UI_top = 10;
+	var UI_left = 10;
+	var res = 2; 
+	var UI_bot = display_get_gui_height()*res/2-20; //for elements at the bottom
+	var bar_size = 13; // sprite_get_height(sCooldowns_v3); //size of load bar
+	var time_c = 0.1 //time divider (for visual)
+	var col_text = make_colour_rgb(243, 255, 237); //hp fgr
+	//UI variables (old)
+	var margin_right = RES_W-96;
+	var margin_left = 10;
+	var margin_bottom =  0;
+	var UIscale = 0.75; //set this to customizable variable later
+	
+	draw_set_alpha(1); draw_set_color(c_white);	
+	
+	//draw weapon icons
+	if instance_exists(oPlayerWeapon) { //(is_struct(oPlayerWeapon.current_weapon))
+		var weapon_struct = global.weapon_list[oPlayerWeapon.current_weapon];
+		var weapon_name = weapon_struct.weapon_name;
+		var mb = 18; 
+		draw_sprite(weapon_icons_2023,weapon_struct.icon_image,UI_left,UI_bot-mb*2); //primary 
+		draw_sprite(weapon_icons_2023,2,UI_left,UI_bot-mb*4); //secondary
+	}
+	
+	//draw coins 
+	var pos_x_text = 27;
+	draw_sprite(icon_currency,0,UI_left+5,UI_bot); //primary 
+	draw_set_alpha(0.3); 
+	draw_rectangle_color(UI_left+pos_x_text-2,UI_bot+2,UI_left+pos_x_text+10,UI_bot+12,c_black,c_black,c_black,c_black,0);
+	draw_set_alpha(1); 
+	draw_set_color(col_text);
+	
+	draw_text(UI_left+pos_x_text,UI_bot+pos_y,"0"); 
+	
+	//ammo count
+	var res = 2; 
+	var UI_top = 10;
+	var UI_left = display_get_gui_width()/2; //dependent on the width of the health bar 
+	var UI_bot = display_get_gui_height()*res/2-30; //for elements at the bottom
+	
+	//basic ammo
+	var pos_y = 11; //relative to this cooldown
+	var pos_x_text = 5; var pos_x = -15; 
+	var bar = (reload_time/reload_time_max)*bar_size
+	draw_sprite_ext(sCooldowns_v3,0,UI_left+pos_x,UI_bot+pos_y,1,1,0,c_white,1);
+	draw_set_alpha(0.3); 
+	draw_rectangle_color(UI_left+pos_x_text-2,UI_bot+pos_y+2,UI_left+pos_x_text+9,UI_bot+pos_y+12,c_black,c_black,c_black,c_black,0);
+	draw_set_alpha(1); 
+	draw_set_color(col_text); 
+	draw_text(UI_left+pos_x_text,UI_bot+pos_y,oPlayerWeapon.ammo_basic); 
+			
+	if round((reload_time_max - reload_time)*time_c) != 0 {
+		draw_set_alpha(0.3);
+		draw_rectangle_color(UI_left+pos_x,UI_bot+bar_size+pos_y, UI_left+pos_x+bar_size,UI_bot+bar+pos_y,c_black,c_black,c_black,c_black,0);
+		draw_set_alpha(1);
+	}	
+	
+}	
 	
 	
 function draw_cursor_custom(cursor_scale = 1){

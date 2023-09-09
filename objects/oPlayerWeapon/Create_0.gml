@@ -1,4 +1,10 @@
-///@desc load a specific weapon file
+///@desc oPlayerWeapon create event
+//This object should deal with all things relating to player weapons / upgrades
+
+
+init_weapon_variables(); 
+
+
 #region essentials
 	image_speed = 0;
 	image_alpha = 0;
@@ -15,9 +21,10 @@
 	assist_dist = 200;
 	click_dir = 0; 
 	combo_counter = 0; 
-#endregion
 
-LoadWeapon_Archer();
+	
+#endregion
+//LoadWeapon_Archer();
  
 // Animation
 isShooting = false;

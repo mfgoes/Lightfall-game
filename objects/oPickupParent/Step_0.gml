@@ -12,38 +12,27 @@ VerticalCollision();
 
 DistributePickupsOnGround(32, 5);
 
-//// Adjust pickup position to avoid overlapping with nearby pickups
-//var offsetX = 25; // Adjust this value to set the desired horizontal offset
-
-//// Check for nearby pickups
-//with (oPickupParent) {
-//    if (!adjusted && abs(x - other.x) < offsetX)  {
-//        // Move the pickup to the left or right based on the position of the nearby pickup
-//        if (x < other.x) {
-//            x -= 5;
-//        } else {
-//            x += 5;
-//        }
-//        adjusted = true; // Set flag to indicate adjustment has been made
-//    }
-//}
-
 
 //pickup
 if place_meeting(x,y,oPlayer) {
 
+	var ammo_total = 0; 
+	
 	switch (pickup_type) {
 		case 0: { //light ammo
-			oPlayer.ammo_basic +=3; 
+			oPlayerWeapon.ammo_basic +=3; 
+			ammo_total = 3; 
 		}
 		break;
 		case 1: { //heavy ammo. ignore this for first prototype.
-			oPlayer.ammo_heavy +=2; 
+			oPlayerWeapon.ammo_heavy +=2; 
+			ammo_total = 2; 
 		}
 		break;
 		case 2: { //hp small
 			oPlayer.hp +=2; 
 			if oPlayer.hp > oPlayer.hp_max oPlayer.hp = oPlayer.hp_max; 
+			ammo_total = 2; 
 		}
 		break;
 	}
@@ -56,7 +45,7 @@ if place_meeting(x,y,oPlayer) {
 		var _x = x; 
 		var _y = oPlayer.y-20; 
 		dd = instance_create_depth(_x,_y-40,0,oToastUI); 
-		dd.str = "+5" 
+		dd.str = "+" + string(ammo_total);  
 		dd.toast_type = variant.upgrade; 
 	#endregion
 }

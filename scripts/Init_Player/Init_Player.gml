@@ -3,15 +3,16 @@ function init_variables_player(){
 	//relative attributes
 	hp = global.player1_health; hp_max = global.player1_stamina_max;
 	mana = 10; mana_max = mana; 
-	
+	gunkickx = 0;
+	gunkicky = 0; 
 	walkspd = 2; current_walkspd = 0;
 	jump_speed = 5;
-	speedRoll = 5.0;
-	
+	speedRoll = 5.0;	
 	roll_cooldown = 0; moveDistanceRemaining = 0;
 	roll_cooldown_full = 40;
 	distanceRoll = 170;
 	canrope = 0; //allows rope controls
+	flash = 0; 
 	
 	//universal attributes
 	move_transition=false
@@ -27,12 +28,7 @@ function init_variables_player(){
 	air_shot = false; //allows char to temporarily hover in the air
 	slowmotion = 0.4; //delete later. 
 	combo_counter = 0;  //goes up with short range attacks
-	
-	//ammo
-	ammo_basic = 4; 
-	ammo_heavy = 2; //the strong bow attack	
-	
-	
+
 	facing_direction = 0; //the last walked in direction
 	dir_prev = 0; //used for shooting while walking
 	jump_pad_jump = false;
@@ -45,15 +41,7 @@ function init_variables_player(){
 	ropeAngleVelocity = 0; //decide to carry momentum with this later
 	ropeAngle = point_direction(grappleX,grappleY, x,y);
 	ropeLength = point_distance(grappleX,grappleY,x,y);
-	
-	
-	//delete later*
-	using_ability = 0;
-	current_weapon = 0; //0 = bow, 1 = regular
-	gunkickx = 2;
-	gunkicky = 0;
-	flash = 0; 
-	
+
 	//simplify cooldown script calling
 	enum cooldown_ability { 
 		  none = 0,

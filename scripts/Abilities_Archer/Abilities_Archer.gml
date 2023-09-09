@@ -10,11 +10,11 @@ function Ability_Primary_Archer() { //POWER SHOT
 	var key_primary_released	= oPlayer.key_primary_released;
 	
 	 // Charge Strength + VFX
-	if (key_attack_pressed && timer_get("primary_cooldown") = -1) {
+	if (key_attack_pressed && timer_get("reload_time") = -1) {
         if (!place_meeting(x, y+1, oWallParent) && !place_meeting(x, y+1, oPlatformParent))
             oPlayer.air_shot = true;
         
-        if (weapon_charge = 0 && oPlayer.ammo_heavy > 0) {
+        if (weapon_charge = 0 && ammo_heavy > 0) {
             audio_sound_gain(snPrepareBow, 0.1, 0);
             audio_play_sound(snPrepareBow, 0, 0);
         }
@@ -43,19 +43,18 @@ function Ability_Primary_Archer() { //POWER SHOT
 
 	
 	#region Primary Fire Logic
-		if (key_primary_released) && timer_get("primary_cooldown") = -1  && oPlayer.ammo_heavy > 0 {
+		if (key_primary_released) && timer_get("reload_time") = -1  && ammo_heavy > 0 {
 	    // Recoil
 	    with(oPlayer) {
-	        var dir = lengthdir_x(-8, oPlayerBow.image_angle);
+	        var dir = lengthdir_x(-8, oPlayerWeapon.image_angle);
 	        if !place_meeting(x+dir, y-1, oWallParent) && !(oPlayer.grounded)
 	            x += dir;
 	        if !(oPlayer.grounded) 
 				vsp = -jump_speed;
-	        ammo_heavy -= 1;
 	    }
-    
-	    timer_set("primary_cooldown", primary_cooldown);
-	    oUIElements.primary_cooldown = 0; //for UI purposes
+		ammo_heavy -= 1;    
+	    timer_set("reload_time", reload_time);
+	    oUIElements.reload_time = 0; //for UI purposes
 	    audio_sound_gain(snBlaster, 0.35, 0);
 	    audio_sound_pitch(snBlaster, choose(0.9, 0.93, 1));
 	    audio_play_sound(snBlaster, 2, 0);
@@ -66,15 +65,15 @@ function Ability_Primary_Archer() { //POWER SHOT
 	    var _y = y + lengthdir_y(_dist, image_angle);
 		
 	    with (instance_create_layer(_x, _y, "Bullets", oArrow)) { //with (instance_create_layer(x, y, "Bullets", oBullet)) {
-	        direction = oPlayerBow.shoot_direction;
+	        direction = oPlayerWeapon.shoot_direction;
         
 	        // Variable damage
-	        if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max * 0.8 {
+	        if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.8 {
 	            damage = 6;
 	            super_arrow = true;
 	            audio_sound_pitch(snDartGun2, 1);
 	        }
-	        else if oPlayerBow.weapon_charge >= oPlayerBow.weapon_charge_max * 0.45 {
+	        else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.45 {
 	            damage = 4;
 	        }
 	        else {
@@ -91,11 +90,11 @@ function Ability_Primary_Archer() { //POWER SHOT
 	    weapon_recoil = 3;
 	    ScreenShake(2, 1);
 		}   
-		else if oPlayer.ammo_heavy = 0 {
+		else if ammo_heavy = 0 {
 		    if (key_primary_released) {
 		        audio_play_sound(snd_button2, 0, 0);	
 		    }
-		    oPlayerBow.weapon_charge = 0; 
+		    oPlayerWeapon.weapon_charge = 0; 
 		}
 	#endregion
 }
@@ -105,16 +104,15 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 	var key_secondary = oPlayer.key_secondary;
 	timer_init("triple_shot");
 	
-	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 && oPlayer.ammo_basic > 0 {
+	if (key_secondary = true) && timer_get("secondary_cooldown") = -1 && ammo_basic > 0 {
 			timer_set("secondary_cooldown",secondary_cooldown); 
 			oUIElements.secondary_cooldown  = 0; //for UI
 			//oPlayer.mana -=2;	//consume 1 mana. //Update 4 sep 2022
 			if oPlayer.mana < 0 oPlayer.mana = 0;
 			 
 			//fix shooting direction temporarily
-			direction = oPlayerBow.shoot_direction;		
-			oPlayer.dir_prev = oPlayerBow.shoot_direction;	
-			//if oPlayer.facing_direction = 180 oPlayer.dir_prev = 178; else oPlayer.dir_prev = 2; //remove dir_perv later?
+			direction = oPlayerWeapon.shoot_direction;		
+			oPlayer.dir_prev = oPlayerWeapon.shoot_direction;	
 			
 			shots_total = 3; //shoot 3 bullets after each other
 			timer_set("triple_shot",5);
@@ -129,7 +127,7 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 				audio_play_sound(snd_button2,0,0);	
 		}
 		
-		if shots_total > 0 && timer_get("triple_shot") <=0 && oPlayer.ammo_basic > 0 {
+		if shots_total > 0 && timer_get("triple_shot") <=0 && oPlayerWeapon.ammo_basic > 0 {
 			timer_set("triple_shot",5);
 			
 			var _dist = 10; 
@@ -137,7 +135,7 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 		    var _y = y + lengthdir_y(_dist, image_angle);
 			with (instance_create_layer(_x,_y,"Bullets",oArrow_Triple)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
 			
-				oPlayer.ammo_basic-=1; 
+				ammo_basic-=1; 
 				direction = oPlayer.dir_prev; 
 				spd = 7;
 				damage = 3; //default = 1;
@@ -152,8 +150,8 @@ function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consu
 			
 				//recoil
 				with(oPlayer) {
-					var dir = lengthdir_x(-8,oPlayerBow.image_angle);
-					if (oPlayer.grounded) dir = dir = lengthdir_x(-4,oPlayerBow.image_angle);
+					var dir = lengthdir_x(-8,oPlayerWeapon.image_angle);
+					if (oPlayer.grounded) dir = dir = lengthdir_x(-4,oPlayerWeapon.image_angle);
 					if !place_meeting(x+dir,y-1,oWallParent) 
 						x += dir;
 				}
@@ -212,7 +210,7 @@ function Ability_Sword_Attack() {
 			mana -=1; 
 			var dir = lengthdir_x(4,facing_direction);
 		    spriteMelee = sPlayerSlash; 
-		    if (oPlayerBow.combo_counter % 3 == 2)
+		    if (oPlayerWeapon.combo_counter % 3 == 2)
 		    {
 		        spriteMelee = sPlayerStab;
 				dir = lengthdir_x(5,facing_direction);
@@ -224,7 +222,7 @@ function Ability_Sword_Attack() {
 		    sprite_index = spriteMelee;
 		    image_index = 0;
 		    image_speed = 1; 
-		    using_ability = 1;
+		    oPlayerWeapon.using_ability = 1;
 		
 			//recoil 2.0 (smooth)
 			if !place_meeting(x+dir,y-1,oWallParent) 
@@ -245,7 +243,7 @@ function PlayerStateMeleeAtk(){	//not for MVP
 	var move = key_right - key_left;
 	hsp = (move * slowwalk) + gunkickx;
 	vsp = (vsp + grv);
-	using_ability = 1;
+	oPlayerWeapon.using_ability = 1;
 	//create projectile
 	if image_index = 1
 	{
@@ -255,13 +253,13 @@ function PlayerStateMeleeAtk(){	//not for MVP
 			
 			
 		with (instance_create_layer(x,y,"Bullets",oAtk_Laser)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = oPlayerBow.image_angle; //oPlayer.facing_direction;
+			direction = oPlayerWeapon.image_angle; //oPlayer.facing_direction;
 			x_shift = 5;
 			image_angle = direction; follow = oPlayer;
-			//x_shift = oPlayerBow.flip_weapon * 10;
+			//x_shift = oPlayerWeapon.flip_weapon * 10;
 		}
 	if timer_get("generate attack") = -1 {
-		//gunkickx = lengthdir_x(-2,oPlayerBow.image_angle-180);
+		//gunkickx = lengthdir_x(-2,oPlayerWeapon.image_angle-180);
 		timer_set("generate attack",3);
 		}
 	}
@@ -283,7 +281,7 @@ function Ability_Special_Shockwave() {
 		with(oPlayer) {
 			sprite_index = spriteSpecial;	
 			image_speed = 1;
-			using_ability = 1; //leave this on until ability is over.
+			oPlayerWeapon.using_ability = 1; //leave this on until ability is over.
 		}
 	
 	}

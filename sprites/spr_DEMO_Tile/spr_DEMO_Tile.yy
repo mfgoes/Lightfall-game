@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "DEMO",
-    "path": "folders/Sprites/Aura/DEMO.yy",
+    "path": "folders/Graphics and Sprites/Aura/DEMO.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

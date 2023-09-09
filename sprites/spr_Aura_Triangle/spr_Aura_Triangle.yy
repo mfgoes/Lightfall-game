@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "Occluders",
-    "path": "folders/Sprites/Aura/Occluders.yy",
+    "path": "folders/Graphics and Sprites/Aura/Occluders.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

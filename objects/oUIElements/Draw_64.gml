@@ -2,17 +2,11 @@
 //GMLive
 if (live_call()) return live_result; 
 		
-//draw objective (move to function later)
-if room != rMenu && room != rLevelSelect {
-	draw_objective_UI(); 
-}
 //draw boss UI
 //draw_boss_UI(); 
 
 //health, cooldowns, etc
-draw_UI_elements(); 
-
-//draw cursor dynamically
+draw_UI_elements();
 
 if !instance_exists(oMenuParent) {
 	display_set_gui_size(RES_W, RES_H); //text is twice the resolution

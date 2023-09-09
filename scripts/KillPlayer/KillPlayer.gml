@@ -1,6 +1,6 @@
 /// @description changes the animation for player. 
 function KillPlayer() {
-	if instance_exists(oPlayerBow) with (oPlayerBow) instance_destroy();
+	if instance_exists(oPlayerWeapon) with (oPlayerWeapon) instance_destroy();
 	dd = instance_change(oPlayerDead,true);
 	/*with (dd) {
 		Load_CharacterData(0); //was: oPlayer.current_character

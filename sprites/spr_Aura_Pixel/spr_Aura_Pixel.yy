@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "Engine",
-    "path": "folders/Sprites/Aura/Engine.yy",
+    "path": "folders/Graphics and Sprites/Aura/Engine.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

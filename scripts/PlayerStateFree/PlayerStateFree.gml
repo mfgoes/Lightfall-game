@@ -7,7 +7,7 @@ grounded =(place_meeting(x,y+1,oWallParent) or place_meeting(x,y+1,oPlatformPare
 #region walking
 	//Slow down while aiming weapon -> to do: move this to weapon code instead. 
 	var slowwalk = 0.9; 
-	if current_weapon = 0 && mouse_check_button(mb_left) = true  {
+	if mouse_check_button(mb_left) = true  {
 	if (grounded = 1) slowwalk = 0.7; else slowwalk = 0.4;
 	} 
 	else
@@ -122,7 +122,7 @@ if canrope = 1 {
 
 #region animations
 	//check if using special ability, prioritize this
-	if using_ability = 1 {
+	if oPlayerWeapon.using_ability = 1 {
 		//sprite_index = spriteSpecial
 		//let player animation continue (ie slash attack, etc)
 	}
@@ -148,11 +148,11 @@ if canrope = 1 {
 						image_yscale = choose (1,-1);
 					}}	
 				}
-			if (hsp == 0) && !(key_left or key_right) && using_ability = 0 //Idle animation
+			if (hsp == 0) && !(key_left or key_right) && oPlayerWeapon.using_ability = 0 //Idle animation
 			{
 				if sprite_index != spriteIdle && sprite_index != spriteIdleArmed image_index = 0; //reset index. 
 				sprite_index = spriteIdle; image_speed = 0.6;
-				if oPlayerBow.image_alpha = 1 sprite_index = spriteIdleArmed;
+				if oPlayerWeapon.image_alpha = 1 sprite_index = spriteIdleArmed;
 			}
 			else //walk animation
 			{
@@ -160,7 +160,7 @@ if canrope = 1 {
 					image_index = 0; //reset index. 
 				}
 				sprite_index = spriteWalk; image_speed = 1*slowwalk;	
-				if oPlayerBow.image_alpha = 1 sprite_index = spriteWalkArmed;
+				if oPlayerWeapon.image_alpha = 1 sprite_index = spriteWalkArmed;
 			}
 		}
 	}
