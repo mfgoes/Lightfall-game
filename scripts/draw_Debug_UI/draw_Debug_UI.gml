@@ -15,9 +15,9 @@ function draw_debug_info(){
 	
 	if global.debugmode = true { //&& instance_exists(oCamera)
 		
-		var _x = 12; //margin left
-		var _x2 = RES_W-12; 
-		var _y = 50; //margin top 1
+		var _x = 8; //margin left
+		var _x2 = RES_W-4; 
+		var _y = -10; //margin top 1
 		var _y2 = RES_H - 60; 
 		var lh = 10; //line_Height; 
 				
@@ -25,15 +25,19 @@ function draw_debug_info(){
 		if instance_exists(obj_Aura_Control) {
 			draw_set_halign(fa_left);
 			with (oLevelGenerator) var currentThemeName = oLevelGenerator.themeNames[CurrentTheme];
-			draw_text(_x,_y,string(currentThemeName) + " - +"); 
-			draw_text(_x,_y + lh*2,"Aura col: " + string(obj_Aura_Control.col)); 
-			draw_text(_x,_y + lh*3,"Aura alpha: " + string(obj_Aura_Control.ambient_alpha)); 
+			draw_text(_x,_y + lh,"Theme: " + string(currentThemeName) + " - +"); 
+			draw_set_alpha(0.5); 
+			draw_text(_x,_y + lh*2,"Col: " + string(obj_Aura_Control.col) + ", A: " + string(obj_Aura_Control.ambient_alpha)); 
+			//draw_text(_x,_y + lh*3,"Aura alpha: " + ); 
+			draw_set_alpha(1);
 		}
 		
 		//fps check and editor
 		draw_set_halign(fa_right);
-		draw_text(_x2,_y2+lh,"Rfps: " + string(fps_reader));
-		draw_text(_x2,_y2+lh*2,"Cfps: " + string(oGame.current_fps) + "\n P to change");
+		draw_set_alpha(0.5); 
+		draw_text(_x2,_y2+lh*3,"Rfps: " + string(fps_reader));
+		draw_text(_x2,_y2+lh*4,"" + string(oGame.current_fps) + "P for slowmode");
+		draw_set_alpha(1); 
 		
 		//draw_text(4,60,"camW: " + string(camera_get_view_width(oCamera.cam)));
 		//draw_text(4,50,"camH: " + string(camera_get_view_height(oCamera.cam)));

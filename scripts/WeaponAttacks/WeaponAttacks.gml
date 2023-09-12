@@ -2,9 +2,11 @@
 
 /*
 Cleaned up in 2022.4. 
+Updated again 2023.10
 */
 
-function Ability_Primary_Archer() { //POWER SHOT
+
+function primaryBowAttack() { //POWER SHOT
 	//if(live_call()) return live_result;
 	var key_attack_pressed		= oPlayer.key_primary;
 	var key_primary_released	= oPlayer.key_primary_released;

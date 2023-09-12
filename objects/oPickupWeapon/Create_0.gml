@@ -1,6 +1,9 @@
 /// @description Insert description here
 
 current_weapon  = 1; 
+startAmmo = 0; 
+
+alarm[0] = 5;
 
 nearby = false; //check if player nearby
 flash = 4;

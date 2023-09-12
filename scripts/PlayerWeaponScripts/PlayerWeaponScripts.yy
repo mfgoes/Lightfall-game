@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Abilities_Archer",
+  "name": "PlayerWeaponScripts",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Archer",
-    "path": "folders/Scripts/Playable Characters/Archer.yy",
+    "name": "Player Related",
+    "path": "folders/Scripts/Player Related.yy",
   },
 }
