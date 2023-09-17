@@ -23,15 +23,11 @@ if keyboard_check(ord("E")) && (nearby) {
 		var weapon_name = weapon_struct.weapon_name;
 		show_debug_message("picked up a " + (string(weapon_name) + "!"));
 		
-		//show weapon name
-		//dd = instance_create_depth(x,y-50,depth,oToastUI);
-		//dd.str = "picked up a " + (string(weapon_name) + "!");
-		//dd.toast_type = variant.upgrade;
-		
 		//show ammo of this weapon
 		dd = instance_create_depth(x,y-45,depth,oToastUI);
 		dd.str = "+" + string(other.startAmmo); 
 		dd.toast_type = variant.upgrade;
+		ammo_basic = other.startAmmo;
 	}
 	
 	//if available, switch weapons (do this later)

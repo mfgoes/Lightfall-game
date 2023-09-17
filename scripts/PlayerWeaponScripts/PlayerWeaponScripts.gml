@@ -28,7 +28,7 @@ if oPlayer.state != PlayerStateRoll {
 		
 		
 		// Handle primary attack (LMB)
-		primaryBowAttack(); 	//only do this if a bow. 
+		primaryWeaponAttack(); 	//only do this if a bow. 
 		
 		// Handle secondary attack
 		secondaryMeleeAttack(); 

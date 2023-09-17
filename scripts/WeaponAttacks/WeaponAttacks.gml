@@ -4,48 +4,107 @@
 Cleaned up in 2022.4. 
 Updated again 2023.10
 */
+function primaryWeaponAttack() {
+    // Fetch weapon structure based on the current_weapon
+    var weapon_struct = global.weapon_list[current_weapon];
+    
+    // Ensure that we have a valid weapon structure
+    if (!is_struct(weapon_struct)) {
+        show_debug_message("Error: Weapon struct not found for current_weapon value: " + string(current_weapon));
+        return; // Exit the function to avoid further errors
+    }
+
+    // Ensure the weapon structure has the required properties
+    if (!variable_struct_exists(weapon_struct, "damage") || 
+        !variable_struct_exists(weapon_struct, "reload_time")) {
+        show_debug_message("Error: Damage or reload_time property not found in weapon struct for current_weapon value: " + string(current_weapon));
+        return; // Exit the function to avoid further errors
+    }
+
+    // Variables derived from weapon_struct for convenience
+    var weapon_damage = weapon_struct.damage;
+    var weapon_reload_time = weapon_struct.reload_time;
+
+    // Check if the player is trying to shoot
+    if (oPlayer.key_primary) {
+        // Create projectile
+        var _dist = 10; 
+        var _x = x + lengthdir_x(_dist, image_angle);
+        var _y = y + lengthdir_y(_dist, image_angle);
+    
+        switch (current_weapon) {
+            case 0: //just do melee attack if no weapons
+				
+			break;
+			
+			case 1: // Bow
+                // Handle bow charging and shooting mechanics
+                ShootBowCharge(); 
+                break;
+            default: // Fast gun, Heavy gun, Explosive gun, etc.
+                // Shoot if there's ammo and if reload time has passed
+                if (ammo_basic > 0 && timer_get("reload_time") <= 0) {
+                    with (instance_create_layer(_x, _y, "Bullets", oArrow)) {
+                        direction = oPlayerWeapon.shoot_direction;
+                        damage = weapon_damage;
+                    }
+                    ammo_basic -= 1;
+                    timer_set("reload_time", weapon_reload_time);
+                    oUIElements.reload_time = 0; // Update UI
+                }
+                break;
+        }
+        
+        // General post-shooting logic, if applicable
+        // ...
+    }
+	 // release to shoot bow
+    ShootBowRelease(); 
+}
 
 
-function primaryBowAttack() { //POWER SHOT
-	//if(live_call()) return live_result;
-	var key_attack_pressed		= oPlayer.key_primary;
+
+
+
+function ShootBowCharge() {
+		    if (!place_meeting(x, y+1, oWallParent) && !place_meeting(x, y+1, oPlatformParent))
+		        oPlayer.air_shot = true;
+        
+		    if (weapon_charge = 0 && ammo_basic > 0) {
+		        audio_sound_gain(snPrepareBow, 0.1, 0);
+		        audio_play_sound(snPrepareBow, 0, 0);
+		    }
+        
+		    timer_set("weapon_display", 120); 
+        
+		    if (weapon_charge < weapon_charge_max)
+		        weapon_charge += 0.25;
+			//Create dust effect
+		    else if (timer_get("poof_trail") <= 1) {
+		        var dd = instance_create_depth(x + lengthdir_x(10, image_angle) + random_range(-2, 2),
+		                                        y + lengthdir_y(10, image_angle) + random_range(-3, 3),
+		                                        depth - 1, oDust);
+		        with (dd) {
+					hsp = 0;
+					vsp = 0;
+					col_start = choose(c_white, c_orange); // Randomize the color choice
+					image_alpha = 0.8;
+				}
+		        timer_set("poof_trail", 10);
+		    }
+		
+		else {
+		    oPlayer.air_shot = false;
+		}
+}
+
+function ShootBowRelease() {
+	
+	if current_weapon = 1 { //bow
+	#region Primary Fire Logic
 	var key_primary_released	= oPlayer.key_primary_released;
 	
-	 // Charge Strength + VFX
-	if (key_attack_pressed && timer_get("reload_time") = -1) {
-        if (!place_meeting(x, y+1, oWallParent) && !place_meeting(x, y+1, oPlatformParent))
-            oPlayer.air_shot = true;
-        
-        if (weapon_charge = 0 && ammo_heavy > 0) {
-            audio_sound_gain(snPrepareBow, 0.1, 0);
-            audio_play_sound(snPrepareBow, 0, 0);
-        }
-        
-        timer_set("weapon_display", 120); 
-        
-        if (weapon_charge < weapon_charge_max)
-            weapon_charge += 0.25;
-		//Create dust effect
-        else if (timer_get("poof_trail") <= 1) {
-           var dd = instance_create_depth(x + lengthdir_x(10, image_angle) + random_range(-2, 2),
-                                           y + lengthdir_y(10, image_angle) + random_range(-3, 3),
-                                           depth - 1, oDust);
-           with (dd) {
-			    hsp = 0;
-			    vsp = 0;
-			    col_start = choose(c_white, c_orange); // Randomize the color choice
-			    image_alpha = 0.8;
-			}
-            timer_set("poof_trail", 10);
-        }
-    }
-    else {
-        oPlayer.air_shot = false;
-    }
-
-	
-	#region Primary Fire Logic
-		if (key_primary_released) && timer_get("reload_time") = -1  && ammo_heavy > 0 {
+		if (key_primary_released) && timer_get("reload_time") = -1  && ammo_basic > 0 {
 	    // Recoil
 	    with(oPlayer) {
 	        var dir = lengthdir_x(-8, oPlayerWeapon.image_angle);
@@ -54,7 +113,7 @@ function primaryBowAttack() { //POWER SHOT
 	        if !(oPlayer.grounded) 
 				vsp = -jump_speed;
 	    }
-		ammo_heavy -= 1;    
+		ammo_basic -= 1;    
 	    timer_set("reload_time", reload_time);
 	    oUIElements.reload_time = 0; //for UI purposes
 	    audio_sound_gain(snBlaster, 0.35, 0);
@@ -99,7 +158,10 @@ function primaryBowAttack() { //POWER SHOT
 		    oPlayerWeapon.weapon_charge = 0; 
 		}
 	#endregion
+	}
 }
+
+
 
 function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consumes mana
 	

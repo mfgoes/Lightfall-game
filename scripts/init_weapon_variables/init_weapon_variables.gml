@@ -16,19 +16,24 @@ function init_weapon_variables(){
 	weapon_accuracy = 2;
 	
 	//basic speed of each weapon
-	reload_time			= 40; //main weapon
-	secondary_cooldown  = 50; //melee weapon
+	reload_time			= 40; //default ranged
+	secondary_cooldown  = 50; //default melee
 	third_cooldown		= 30; 
 	roll_cooldown		= 40;
 	
-	// Weapons
-	none = new Weapon("No weapon", sBow_Slimmer, ammo_basic, 0, 0, 0, 0,5);
-    bow = new Weapon("Bow", sBow_Slimmer, ammo_basic, 30, 2, 0, 1, 4);
-    fast_gun = new Weapon("Fast Gun", sGun, ammo_basic, 30, 3, 0, 2, 6);
-    heavy_gun = new Weapon("Heavy Gun", sGun, ammo_heavy, 30, 4, 1, 3, 20);
-    explosive_gun = new Weapon("Explosive Gun", sGun, ammo_explosive, 30, 5, 2, 3, 15);
-    bazooka = new Weapon("Bazooka", sGun, ammo_explosive, 30, 8, 4, 3, 3);
-	
+	// No weapon - no damage and immediate reload.
+	none = new Weapon("No weapon", sBow_Slimmer, ammo_basic, 0, 0, 0, 0, 5, 0);
+	// Bow - moderate damage, moderate reload time.
+	bow = new Weapon("Bow", sBow_Slimmer, ammo_basic, 12, 25, 2, 0, 1, 4);
+	// Fast Gun - lower damage per shot, but quick reload time.
+	fast_gun = new Weapon("Fast Gun", sGun, ammo_basic, 5, 15, 3, 0, 2, 6);
+	// Heavy Gun - high damage, longer reload time.
+	heavy_gun = new Weapon("Heavy Gun", sGun, ammo_heavy, 20, 40, 4, 1, 3, 20);
+	// Explosive Gun - very high damage due to explosions, longer reload time.
+	explosive_gun = new Weapon("Explosive Gun", sGun, ammo_explosive, 25, 45, 5, 2, 3, 15);
+	// Bazooka - extreme damage, very long reload time.
+	bazooka = new Weapon("Bazooka", sGun, ammo_explosive, 30, 60, 8, 4, 3, 3);
+
 	global.weapon_list = [none, bow, fast_gun, heavy_gun, explosive_gun, bazooka];
 	
 	// Current Weapon (This can be a reference to one of the weapon structs)
@@ -40,15 +45,16 @@ function init_weapon_variables(){
 
 }
 
-function Weapon(_name, _sprite_index, _ammoType, _reload_time, _kickbackX, _kickbackY,_icon_image,_start_ammo) constructor {
+function Weapon(_name, _sprite_index, _ammoType, _damage, _reload_time, _kickbackX, _kickbackY, _icon_image, _start_ammo) constructor {
     weapon_name = _name;
     sprite = _sprite_index;
-	icon_image = _icon_image; 
+    icon_image = _icon_image; 
     ammoType = _ammoType;
+    damage = _damage;
     kickbackX = _kickbackX;
     kickbackY = _kickbackY;
-	reload_time = _reload_time; 
-	startAmmo = _start_ammo; 
+    reload_time = _reload_time; 
+    startAmmo = _start_ammo; 
 }
 
 function draw_weapon() {

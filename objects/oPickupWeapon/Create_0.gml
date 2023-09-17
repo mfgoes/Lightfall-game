@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 current_weapon  = 1; 
-startAmmo = 0; 
+startAmmo = -1; //first spawn 
 
 alarm[0] = 5;
 
