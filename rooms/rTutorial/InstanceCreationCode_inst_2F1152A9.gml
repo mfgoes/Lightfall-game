@@ -1,0 +1,1 @@
+current_weapon  = 5; 

@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactive Objects",
-    "path": "folders/Objects/Interactive Objects.yy",
+    "name": "Player Related",
+    "path": "folders/Objects/Player Related.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sGunPickup",
-    "path": "sprites/sGunPickup/sGunPickup.yy",
+    "name": "sCrate",
+    "path": "sprites/sCrate/sCrate.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -1,5 +1,5 @@
 /// @desc weapon & charge animations
-draw_weapon(); //based on current_weapon
+draw_weapon_sprite(); //based on current_weapon
 
 if (global.debugmode) {
     

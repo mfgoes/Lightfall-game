@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sCrate",
-    "path": "sprites/sCrate/sCrate.yy",
+    "name": "sCrateUnimportant",
+    "path": "sprites/sCrateUnimportant/sCrateUnimportant.yy",
   },
   "spriteMaskId": null,
   "visible": true,

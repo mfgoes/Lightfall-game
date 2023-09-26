@@ -14,13 +14,6 @@ function primaryWeaponAttack() {
         return; // Exit the function to avoid further errors
     }
 
-    // Ensure the weapon structure has the required properties
-    if (!variable_struct_exists(weapon_struct, "damage") || 
-        !variable_struct_exists(weapon_struct, "reload_time")) {
-        show_debug_message("Error: Damage or reload_time property not found in weapon struct for current_weapon value: " + string(current_weapon));
-        return; // Exit the function to avoid further errors
-    }
-
     // Variables derived from weapon_struct for convenience
     var weapon_damage = weapon_struct.damage;
     var weapon_reload_time = weapon_struct.reload_time;
@@ -47,12 +40,24 @@ function primaryWeaponAttack() {
                     with (instance_create_layer(_x, _y, "Bullets", oArrow)) {
                         direction = oPlayerWeapon.shoot_direction;
                         damage = weapon_damage;
+						
+						//to do: play sound file depending on gun type later
+						var pitch = 1; 
+					    if damage <= 5 pitch = 1.2;
+						if damage > 20 pitch = 0.8;
+						audio_sound_pitch(snBlaster, pitch);
+						audio_sound_gain(snBlaster, 0.35, 0);
+						if damage > 20 audio_sound_gain(snBlaster, 0.5, 0);
+					    audio_play_sound(snBlaster, 2, 0);
                     }
                     ammo_basic -= 1;
                     timer_set("reload_time", weapon_reload_time);
                     oUIElements.reload_time = 0; // Update UI
                 }
-                break;
+                
+				
+				
+				break;
         }
         
         // General post-shooting logic, if applicable

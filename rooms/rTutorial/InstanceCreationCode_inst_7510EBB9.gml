@@ -1,1 +1,1 @@
-current_weapon  = 0; 
+current_weapon  = 4; 

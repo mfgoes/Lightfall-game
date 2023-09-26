@@ -1,14 +1,27 @@
-// Draw the sprite
-draw_self();
-if (live_call()) return live_result; 
-
-if nearby draw_sprite_ext(sMarker,0,x,y-40,1,1,0,c_white,1);
+/// @description Insert description here
+	if nearby {
+		draw_sprite_ext(sMarker,0,x,y-40,1,1,0,c_white,1);	
+		//image_index = 2;
+	}
+    draw_sprite_pos(sprite_index, image_index,
+        bbox_left + xVar,
+        bbox_top + yVar, 
+        bbox_right + xVar,
+        bbox_top + yVar, 
+        bbox_right,
+        bbox_bottom + 1,
+        bbox_left,
+        bbox_bottom + 1,
+        1);
+		
 
 // Fetch the weapon struct
 var weapon_struct = global.weapon_list[current_weapon];
-
-//setup text clors
 var col_text = make_color_rgb(202,210,210);
+
+//change pickup graphic
+//draw_sprite_ext(weapon_struct.sprite,0,x,y,1,1,20,c_white,1);
+
 
 // Check if the fetched weapon is a struct and contains weapon_name
 if (is_struct(weapon_struct) && variable_struct_exists(weapon_struct, "weapon_name")) {
@@ -16,7 +29,7 @@ if (is_struct(weapon_struct) && variable_struct_exists(weapon_struct, "weapon_na
     var sprite = weapon_struct.sprite;
     var border = 2;	
 	var text_x = x; // Center of the sprite
-    var text_y = y - sprite_height / 2 - 10; // Above the sprite
+    var text_y = y - sprite_height / 2 - 20; // Above the sprite
 	
 	// Calculate the dimensions for the box
     var border = 2;

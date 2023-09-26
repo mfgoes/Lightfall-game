@@ -7,6 +7,5 @@ if sprite_index = spriteSpecial { //ie if shockwave animation
 
 if sprite_index = spriteMelee {
 	sprite_index = spriteIdle; 	
-	image_speed = 1; 
 	using_ability = 0; //reset animations
 }

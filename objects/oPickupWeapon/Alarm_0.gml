@@ -1,7 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description Initialize the startAmmo for the pickup based on global weapon data
 if (instance_exists(oPlayerWeapon)) && startAmmo = -1 {
-	var weapon_struct = global.weapon_list[current_weapon];
-	startAmmo = weapon_struct.startAmmo;
+    var weapon_struct = global.weapon_list[current_weapon]; // Retrieve the weapon data for the current weapon from the global list   
+    startAmmo = weapon_struct.startAmmo; // Update the startAmmo using the retrieved weapon data
 }

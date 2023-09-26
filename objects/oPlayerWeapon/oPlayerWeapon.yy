@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBow_Slimmer",
-    "path": "sprites/sBow_Slimmer/sBow_Slimmer.yy",
+    "name": "sGunExplosive",
+    "path": "sprites/sGunExplosive/sGunExplosive.yy",
   },
   "spriteMaskId": null,
   "visible": true,
