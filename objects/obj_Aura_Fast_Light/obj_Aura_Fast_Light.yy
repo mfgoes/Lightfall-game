@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Lights",
-    "path": "folders/Objects/Aura/Lights.yy",
+    "path": "folders/Objects/Environment/Aura/Lights.yy",
   },
   "parentObjectId": {
     "name": "obj_Aura_Light_Parent_Fast",

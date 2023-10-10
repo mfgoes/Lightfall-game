@@ -1,11 +1,9 @@
-/// @description Insert description here
-if sprite_index = spriteSpecial { //ie if shockwave animation
-	image_speed = 1;
-	state = PlayerStateFree;
-	using_ability = 0;
-}
-
+/// @description Reset to idle animation
 if sprite_index = spriteMelee {
-	sprite_index = spriteIdle; 	
-	using_ability = 0; //reset animations
+	sprite_index = spriteIdle; 
+	image_index = 0; // Reset image_index to 0 to start idle animation from the beginning
+	oPlayerWeapon.using_ability = 0; 
 }
+	
+
+oPlayerWeapon.using_ability = 0; 

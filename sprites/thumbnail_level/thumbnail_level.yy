@@ -33,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "level select",
-    "path": "folders/Objects/Menu/level select.yy",
+    "path": "folders/Objects/UI Stuff/Menu/level select.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

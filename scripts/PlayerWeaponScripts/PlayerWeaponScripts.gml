@@ -23,15 +23,12 @@ oPlayer.hascontrol = (timer_get("attack_recover") > 0) ? 0 : 1;
 manageManaRecovery();
 
 if oPlayer.state != PlayerStateRoll {	
-	
 	calculateAim(); 
+	// Handle primary attack (LMB)
+	primaryWeaponAttack();  
 		
-		
-		// Handle primary attack (LMB)
-		primaryWeaponAttack(); 	//only do this if a bow. 
-		
-		// Handle secondary attack
-		secondaryMeleeAttack(); 
+	// Handle secondary attack
+	secondaryMeleeAttack(); 
 	}
 }
 
@@ -133,8 +130,6 @@ function updateBowAnimation() {
 	}
 }
 
-
-
 /// @desc secondary attack (short range)
 function secondaryMeleeAttack() {
 	if oPlayer.key_secondary && timer_get("secondary_cooldown") <= 0 {
@@ -142,6 +137,8 @@ function secondaryMeleeAttack() {
 			timer_set("secondary_cooldown", 20); 
 			timer_set("combo_cooldown", 50); 
 			combo_counter += 1; 
+			oPlayerWeapon.using_ability +=1; //this is a flag for the animation end
+
 		}
 
 		// Reset combo counter if cooldown expires
@@ -149,6 +146,42 @@ function secondaryMeleeAttack() {
 			combo_counter = 0; 	
 	}
 }
+
+
+function Ability_Sword_Attack() {
+	if(live_call()) return live_result;
+	if oPlayer.mana > 0 with(oPlayer) { //assume this move uses mana instead of ammo
+		//in this function you can manage combos and refine each attack.
+		mana -= 1;
+        var dir = lengthdir_x(4, facing_direction);
+		var gain = 0.85;
+        var pitch = 1;
+		var click_dir = 1; //to do: fix this later
+		var dist = 15; //fix
+			
+        spriteMelee = sPlayerSlash;
+        if (oPlayerWeapon.combo_counter % 3 == 2) {
+            spriteMelee = sPlayerStab;
+            dir = lengthdir_x(5, facing_direction);
+            gain = 0.85;
+            pitch = 1;
+        }
+	
+		dd = instance_create_depth(oPlayer.x + dist, y, depth, oAttack_Sword);	
+		dd.image_yscale = 0.7;
+		dd.image_xscale = click_dir*0.7;
+		dd.damage = choose(3,4,4,5); //to do: allow upgrades of this in the future
+		
+		if combo_counter % 3 == 2 dd.image_xscale = click_dir*0.8;	
+		 // Apply recoil
+        if (!place_meeting(x + dir, y - 1, oWallParent)) {
+            x += dir;
+            current_walkspd = 2;
+            hsp = 2 * sign(dir);
+        }	
+	}
+}
+
 
 
 /// @desc auto recover stamina over time

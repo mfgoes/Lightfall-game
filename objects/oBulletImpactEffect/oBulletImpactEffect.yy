@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Visual Effects",
-    "path": "folders/Objects/Visual Effects.yy",
+    "path": "folders/Objects/Environment/Visual Effects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

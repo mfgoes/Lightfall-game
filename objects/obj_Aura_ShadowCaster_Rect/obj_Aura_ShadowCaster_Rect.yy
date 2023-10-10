@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shadows",
-    "path": "folders/Objects/Aura/Shadows.yy",
+    "path": "folders/Objects/Environment/Aura/Shadows.yy",
   },
   "parentObjectId": {
     "name": "obj_Aura_ShadowCaster_Parent",

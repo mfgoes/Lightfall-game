@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "PlayerStateFree",
+  "name": "PlayerAnimations",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

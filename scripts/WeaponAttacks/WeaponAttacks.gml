@@ -109,7 +109,7 @@ function ShootBowRelease() {
 	#region Primary Fire Logic
 	var key_primary_released	= oPlayer.key_primary_released;
 	
-		if (key_primary_released) && timer_get("reload_time") = -1  && ammo_basic > 0 {
+		if (key_primary_released) && timer_get("reload_time") = -1 { //  && ammo_basic > 0
 	    // Recoil
 	    with(oPlayer) {
 	        var dir = lengthdir_x(-8, oPlayerWeapon.image_angle);
@@ -118,8 +118,10 @@ function ShootBowRelease() {
 	        if !(oPlayer.grounded) 
 				vsp = -jump_speed;
 	    }
-		ammo_basic -= 1;    
-	    timer_set("reload_time", reload_time);
+		//ammo_basic -= 1;    //update 2023: bow doesn't consume ammo but mana. 
+		oPlayer.mana -=1; if oPlayer.mana <= 0 oPlayer.mana = 0; 
+	    
+		timer_set("reload_time", reload_time);
 	    oUIElements.reload_time = 0; //for UI purposes
 	    audio_sound_gain(snBlaster, 0.35, 0);
 	    audio_sound_pitch(snBlaster, choose(0.9, 0.93, 1));
@@ -256,84 +258,6 @@ function Ability_Special_ArrowRain() { //not for MVP
 	}
 } 	
 
-function Ability_Sword_Attack() {
-	if(live_call()) return live_result;
-	if oPlayer.mana > 0 {
-		//in this function you can manage combos and refine each attack.
-		var dist = click_dir*14; 
-		//audio
-		var pitch = random_range(0.8, 1.2);
-		var gain = 0.5;
-		var snd = snFootstep3;
-	
-		dd = instance_create_depth(oPlayer.x + dist, y, depth, oAttack_Sword);	
-		dd.image_yscale = 0.7;
-		dd.image_xscale = click_dir*0.7;
-		dd.damage = choose(3,4,4,5); //to do: allow upgrades of this in the future
-		
-		if combo_counter % 3 == 2 dd.image_xscale = click_dir*0.8;
-	
-		//change player animation
-		with(oPlayer)
-		{
-			mana -=1; 
-			var dir = lengthdir_x(4,facing_direction);
-		    spriteMelee = sPlayerSlash; 
-		    if (oPlayerWeapon.combo_counter % 3 == 2)
-		    {
-		        spriteMelee = sPlayerStab;
-				dir = lengthdir_x(5,facing_direction);
-				 gain = 0.85;
-				 pitch = 1;
-			 
-		    }
-    
-		    sprite_index = spriteMelee;
-		    image_index = 0;
-		    image_speed = 1; 
-		    oPlayerWeapon.using_ability = 1;
-		
-			//recoil 2.0 (smooth)
-			if !place_meeting(x+dir,y-1,oWallParent) 
-				x += dir;
-				current_walkspd = 2
-				hsp = 2 * sign(dir); 
-		}
-	
-	}
-}
-///This is the old one
-function PlayerStateMeleeAtk(){	//not for MVP
-	timer_init("generate attack")
-	sprite_index = spriteMelee; 
-	image_speed = 1;
-	//hsp = 0;
-	var slowwalk = 0; 
-	var move = key_right - key_left;
-	hsp = (move * slowwalk) + gunkickx;
-	vsp = (vsp + grv);
-	oPlayerWeapon.using_ability = 1;
-	//create projectile
-	if image_index = 1
-	{
-		audio_sound_gain(snDartGun2,0.1,0);
-			audio_sound_pitch(snDartGun2,choose(0.95,1));
-			audio_play_sound(snDartGun2,2,0);
-			
-			
-		with (instance_create_layer(x,y,"Bullets",oAtk_Laser)) { //with (instance_create_layer(x,y,"Bullets",oBullet)) {
-			direction = oPlayerWeapon.image_angle; //oPlayer.facing_direction;
-			x_shift = 5;
-			image_angle = direction; follow = oPlayer;
-			//x_shift = oPlayerWeapon.flip_weapon * 10;
-		}
-	if timer_get("generate attack") = -1 {
-		//gunkickx = lengthdir_x(-2,oPlayerWeapon.image_angle-180);
-		timer_set("generate attack",3);
-		}
-	}
-	else gunkickx = 0;
-}
 
 function Ability_Special_Shockwave() {
 	if timer_get("special_cooldown") = -1 && oPlayer.mana >= 4 {

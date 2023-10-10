@@ -8,7 +8,7 @@ LoadAssets_Archer();
 
 //load input controls
 PlayerInput(); 
-state = PlayerStateFree;
+state = PlayerStepMovement ;
 
 
 //GENERATE OTHER OBJECTS RELATED TO PLAYER

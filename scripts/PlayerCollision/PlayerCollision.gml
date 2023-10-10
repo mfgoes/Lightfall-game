@@ -39,11 +39,6 @@ function PlayerCollision(){
 			y = y + sign(vsp); 
 		}
 		vsp = 0;
-		if (state == PlayerStateSwing)
-		{
-			ropeAngle = point_direction(grappleX,grappleY,x,y);
-			ropeAngleVelocity = 0; 
-		}
 	}
 	
 	//check for platforms

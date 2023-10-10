@@ -49,7 +49,7 @@ function PlayerInput(){
 		//roll ability 	
 		if (key_roll)  //enter roll state
 			{
-				if state = PlayerStateFree && roll_cooldown = 0 &&  oPlayer.mana >= 3 { 
+				if state = PlayerStepMovement  && roll_cooldown = 0 &&  oPlayer.mana >= 3 { 
 					state = PlayerStateRoll;
 					oPlayer.mana -= 2;
 					audio_sound_gain(snJump1,0.5,0);

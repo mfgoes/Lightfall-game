@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shadows",
-    "path": "folders/Objects/Aura/Shadows.yy",
+    "path": "folders/Objects/Environment/Aura/Shadows.yy",
   },
   "parentObjectId": null,
   "persistent": false,

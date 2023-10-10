@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "path": "folders/Objects/UI Stuff/Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

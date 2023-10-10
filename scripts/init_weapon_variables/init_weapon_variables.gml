@@ -26,7 +26,7 @@ function init_weapon_variables(){
     ammo_heavy = 3; //the strong bow attack
     ammo_explosive = 2; //explosive shots
 	weapon_recoil = 0;
-	weapon_active = 0; 	
+	weapon_active = 0; //if the weapon is visible
 	weapon_charge = 0; //for things like bows
 	weapon_charge_max = 5;
 	weapon_accuracy = 2;
@@ -53,7 +53,7 @@ function init_weapon_variables(){
 	global.weapon_list = [none, bow, fast_gun, heavy_gun, explosive_gun, bazooka];
 	
 	// Current Weapon (This can be a reference to one of the weapon structs)
-    current_weapon = 0; //0 = none, 1 = regular	we
+    current_weapon = 1; //0 = none, 1 = regular	we
 	using_ability = 0;
 	
 	//find a way to remove these later

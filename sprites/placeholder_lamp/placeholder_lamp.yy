@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "DuskValley Lights",
-    "path": "folders/Objects/Aura/DuskValley Lights.yy",
+    "path": "folders/Objects/Environment/Aura/DuskValley Lights.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

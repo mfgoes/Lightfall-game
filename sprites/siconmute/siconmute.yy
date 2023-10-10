@@ -28,7 +28,7 @@
   "origin": 0,
   "parent": {
     "name": "Icons",
-    "path": "folders/Objects/Menu/Icons.yy",
+    "path": "folders/Objects/UI Stuff/Menu/Icons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

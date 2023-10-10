@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "DuskValley Lights",
-    "path": "folders/Objects/Aura/DuskValley Lights.yy",
+    "path": "folders/Objects/Environment/Aura/DuskValley Lights.yy",
   },
   "parentObjectId": null,
   "persistent": false,
