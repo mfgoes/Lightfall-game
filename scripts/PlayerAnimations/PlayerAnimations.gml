@@ -50,7 +50,7 @@ function PlayerStepAnimations() {
 
     // Check if rolling
     if (state == PlayerStateRoll) {
-        PlayerAnimationRoll();
+        PlayerAnimationRoll(); 
     }
 	
 	if instance_exists(oPlayerWeapon) {
@@ -66,9 +66,14 @@ function PlayerAnimationMelee() {
     // Change player animation
     with (oPlayer) {
         spriteMelee = sPlayerSlash;
-        sprite_index = spriteMelee;
-        image_speed = 1;
+        if (oPlayerWeapon.combo_counter % 3 == 2) {
+            spriteMelee = sPlayerStab;
+        }
+		sprite_index = spriteMelee;
+        image_speed = 0.8;
     }
+	
+	oPlayerWeapon.image_alpha = 0; 
 }
 
 

@@ -20,6 +20,14 @@ function primaryWeaponAttack() {
 
     // Check if the player is trying to shoot
     if (oPlayer.key_primary) {
+		
+		//showcase the weapon again
+		with(oPlayerWeapon) {
+			image_alpha = 1;
+			alarm[0] = 50; //hide weapon
+		}
+		
+		
         // Create projectile
         var _dist = 10; 
         var _x = x + lengthdir_x(_dist, image_angle);
@@ -66,7 +74,6 @@ function primaryWeaponAttack() {
 	 // release to shoot bow
     ShootBowRelease(); 
 }
-
 
 
 

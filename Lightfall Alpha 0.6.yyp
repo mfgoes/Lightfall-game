@@ -68,7 +68,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Icons","folderPath":"folders/Objects/UI Stuff/Menu/Icons.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"level select","folderPath":"folders/Objects/UI Stuff/Menu/level select.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Related","folderPath":"folders/Objects/Player Related.yy","order":1,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites-player","folderPath":"folders/Objects/Player Related/sprites-player.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites-player","folderPath":"folders/Graphics and Sprites/sprites-player.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Projectiles_Enemy","folderPath":"folders/Objects/Enemies Related/Projectiles_Enemy.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Visual Effects","folderPath":"folders/Objects/Environment/Visual Effects.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Weapons","folderPath":"folders/Objects/Weapons.yy","order":5,},

@@ -5,5 +5,3 @@ if sprite_index = spriteMelee {
 	oPlayerWeapon.using_ability = 0; 
 }
 	
-
-oPlayerWeapon.using_ability = 0; 

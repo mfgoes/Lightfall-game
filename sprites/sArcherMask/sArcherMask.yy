@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "sprites-player",
-    "path": "folders/Objects/Player Related/sprites-player.yy",
+    "path": "folders/Graphics and Sprites/sprites-player.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

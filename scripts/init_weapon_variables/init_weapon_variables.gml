@@ -88,8 +88,9 @@ function draw_weapon_sprite() {
 	//	image_alpha = 0;
 	//}
 	//else 
-	if current_weapon != 0 
-		image_alpha = 1;
+	if using_ability = 1 or alarm[0] = 0 or current_weapon = 0 //alarm to hide weapons again (i prefer this look)
+		image_alpha = 0; 
+
 
 	//bow charging effect
 	if weapon_charge > 2 && current_weapon = 2
