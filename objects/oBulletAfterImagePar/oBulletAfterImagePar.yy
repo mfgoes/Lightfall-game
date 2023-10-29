@@ -31,5 +31,9 @@
   "solid": false,
   "spriteId": null,
   "spriteMaskId": null,
+  "tags": [
+    "enemy_helper",
+    "boss",
+  ],
   "visible": true,
 }

@@ -37,5 +37,9 @@
     "path": "sprites/sCrowMage_Idle/sCrowMage_Idle.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

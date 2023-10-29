@@ -37,5 +37,9 @@
     "path": "sprites/Corrupted_Crow_Idle/Corrupted_Crow_Idle.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

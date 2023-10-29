@@ -14,8 +14,8 @@ if instance_exists(oPlayerWeapon) {
 	third_cooldown		= oPlayerWeapon.third_cooldown; 
 	third_cooldown_max = third_cooldown;
 
-	roll_cooldown		= oPlayerWeapon.roll_cooldown;
-	roll_cooldown_max = roll_cooldown;
+	roll_cooldown		= oPlayer.roll_cooldown;
+	roll_cooldown_full = roll_cooldown;
 }
 	#endregion
 

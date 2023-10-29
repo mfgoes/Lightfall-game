@@ -39,5 +39,10 @@
     "path": "sprites/sRockBossIdle/sRockBossIdle.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+    "boss",
+  ],
   "visible": true,
 }

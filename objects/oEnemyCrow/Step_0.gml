@@ -56,6 +56,8 @@ if instance_exists(target) && freeze = 0 {
 	
 	case enemy_states.idle: //pause before attacking again
 		{
+			enemy_dodge_player(); //dodges player if they are too close
+			
 			if atk_check = true {
 				atk_check = false
 				if place_meeting(x+atk_anim_x*3,y,target) {

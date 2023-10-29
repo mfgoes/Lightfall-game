@@ -39,5 +39,9 @@
     "path": "sprites/sEnemyBullet/sEnemyBullet.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy_helper",
+    "boss",
+  ],
   "visible": true,
 }

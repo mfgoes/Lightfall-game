@@ -39,5 +39,9 @@
     "path": "sprites/sEnemy_Bat_Idle/sEnemy_Bat_Idle.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

@@ -40,5 +40,9 @@
     "path": "sprites/sRockBug/sRockBug.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

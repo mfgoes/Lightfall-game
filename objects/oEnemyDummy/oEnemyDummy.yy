@@ -38,5 +38,9 @@
     "path": "sprites/sDummyIdle/sDummyIdle.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

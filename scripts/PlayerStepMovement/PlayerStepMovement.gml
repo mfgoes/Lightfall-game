@@ -7,11 +7,11 @@ function PlayerStepMovement(){
 	var slowwalk = (mouse_check_button(mb_left) && grounded) ? 0.7 : 1;
 	var move = key_right - key_left;
 	var decelerate = 0; 
-	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.15 decelerate = 0; } 
+	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.25 decelerate = 0; } 
 	
 	//decelerate
 	if move = 0 { //create fall momentum by decreasing decelleration.
-		if current_walkspd > 0 {current_walkspd -=0.15;} else current_walkspd = 0; 
+		if current_walkspd > 0 {current_walkspd -=0.2;} else current_walkspd = 0; 
 		decelerate = current_walkspd * sign(hsp);
 	} else decelerate = 0; 
 	

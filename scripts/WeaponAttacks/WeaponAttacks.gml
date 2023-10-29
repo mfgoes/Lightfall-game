@@ -41,7 +41,35 @@ function primaryWeaponAttack() {
 			case 1: // Bow
                 // Handle bow charging and shooting mechanics
                 ShootBowCharge(); 
+				
                 break;
+				
+			case 2: // Fast gun (short distance)
+			if (ammo_basic > 0 && timer_get("reload_time") <= 0) {
+                    with (instance_create_layer(_x, _y, "Bullets", oArrow)) {
+                        direction = oPlayerWeapon.shoot_direction + random_range(-10,10);
+						randomize(); 
+						distance_max = 50;  
+                        damage = weapon_damage;
+						
+						//to do: play sound file depending on gun type later
+						var pitch = 1; 
+					    if damage <= 5 pitch = 1.2;
+						if damage > 20 pitch = 0.8;
+						angle_randomize = choose(-15,-5,0,5,15);
+						audio_sound_pitch(snBlaster, pitch);
+						audio_sound_gain(snBlaster, 0.35, 0);
+						if damage > 20 audio_sound_gain(snBlaster, 0.5, 0);
+					    audio_play_sound(snBlaster, 2, 0);
+                    }
+                    ammo_basic -= 1;
+                    timer_set("reload_time", weapon_reload_time);
+                    oUIElements.reload_time = 0; // Update UI
+                }
+			break; 
+			
+				
+				
             default: // Fast gun, Heavy gun, Explosive gun, etc.
                 // Shoot if there's ammo and if reload time has passed
                 if (ammo_basic > 0 && timer_get("reload_time") <= 0) {
@@ -141,6 +169,7 @@ function ShootBowRelease() {
 		
 	    with (instance_create_layer(_x, _y, "Bullets", oArrow)) { //with (instance_create_layer(x, y, "Bullets", oBullet)) {
 	        direction = oPlayerWeapon.shoot_direction;
+			
         
 	        // Variable damage
 	        if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.8 {

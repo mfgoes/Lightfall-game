@@ -51,7 +51,7 @@ function PlayerInput(){
 			{
 				if state = PlayerStepMovement  && roll_cooldown = 0 &&  oPlayer.mana >= 3 { 
 					state = PlayerStateRoll;
-					oPlayer.mana -= 2;
+					//oPlayer.mana -= 2;
 					audio_sound_gain(snJump1,0.5,0);
 					audio_sound_pitch(snJump1,0.7);
 					audio_play_sound(snJump1,4,false);

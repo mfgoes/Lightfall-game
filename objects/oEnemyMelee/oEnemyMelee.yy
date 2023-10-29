@@ -37,5 +37,9 @@
     "path": "sprites/sBoom_walk_cuteeyes/sBoom_walk_cuteeyes.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

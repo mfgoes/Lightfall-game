@@ -6,11 +6,11 @@
 event_inherited();
 target=oPlayer
 //general adjustments
-walk_spd = choose(1.4,1.6);
+walk_spd = choose(1.2,1.4);
 approach_spd = 1.5 + random(0.3);
 wander_range = 80; //maximum patrol area
 reload_spd = 65; 
-
+detect_range = 30; //if player is within this range, there's a chance the enemy will 'hop back' to avoid melee attacks. 
 atk_anim_x = 0 //; //lerp between two points
 
 
@@ -21,8 +21,8 @@ current_state = enemy_states.approach;
 out_of_range = false; 
 sight_range = 80 + round(random(5)); //when to detect player
 atk_range = 5; //closest distance for attacks
-damage = 1;
-hp = 3;	hp_max = hp;
+damage = 0; //1;
+hp = 20;	hp_max = hp;
 
 
 //NEW FROM CODER

@@ -8,4 +8,7 @@
     "name": "Player Related",
     "path": "folders/Scripts/Player Related.yy",
   },
+  "tags": [
+    "weapon",
+  ],
 }

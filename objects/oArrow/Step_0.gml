@@ -4,7 +4,7 @@ event_inherited();
 if(live_call()) return live_result;
 
 //destroy after a certain distance
-if abs(x-xstart) > distance_max {
+if abs(x-xstart) > distance_max or abs(y-ystart) > distance_max {
 	//poof
 	repeat(7) with (instance_create_layer(x,y,"Bullets",oDust)) {
 			vsp = -1.5; if random(1) < 0.2 vsp = 1; image_alpha = 0.6+random(0.3);

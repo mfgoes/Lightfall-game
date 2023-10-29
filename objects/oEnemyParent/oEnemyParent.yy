@@ -44,5 +44,9 @@
     "path": "sprites/sEnemyExploder/sEnemyExploder.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

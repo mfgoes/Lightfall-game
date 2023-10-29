@@ -180,7 +180,7 @@ function Ability_Sword_Attack() {
 		 // Apply recoil
         if (!place_meeting(x + dir, y - 1, oWallParent)) {
             x += dir;
-            current_walkspd = 2;
+            //current_walkspd = 2;
             hsp = 2 * sign(dir);
         }	
 	}

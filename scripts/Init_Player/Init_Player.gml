@@ -5,11 +5,14 @@ function init_variables_player(){
 	mana = 10; mana_max = mana; 
 	gunkickx = 0;
 	gunkicky = 0; 
-	walkspd = 2; current_walkspd = 0;
+	walkspd = 3; current_walkspd = 0;
 	jump_speed = 5;
 	speedRoll = 5.0;	
-	roll_cooldown = 0; moveDistanceRemaining = 0;
-	roll_cooldown_full = 40;
+	moveDistanceRemaining = 0;
+	roll_cooldown = 80;
+	roll_cooldown_full = roll_cooldown;
+	
+
 	distanceRoll = 170;
 	canrope = 0; //allows rope controls
 	flash = 0; 

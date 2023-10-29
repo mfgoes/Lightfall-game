@@ -40,5 +40,9 @@
     "name": "sBlobMask",
     "path": "sprites/sBlobMask/sBlobMask.yy",
   },
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

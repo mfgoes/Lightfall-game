@@ -45,7 +45,17 @@ function scr_state_patrol(){
 	}
 }
 	
+//Dodge player sometimes 
+function enemy_dodge_player() {
+	timer_init("reset_dodge_ability");
 	
+	var dodge_dir = sign(target.x - x); 
+	var timer = 50;
+	
+	if timer_get("reset_dodge_ability") <= 0 {
+		timer_set("reset_dodge_ability",timer);
+	}
+}
 	
 //Approach the player
 function scr_state_approach(){

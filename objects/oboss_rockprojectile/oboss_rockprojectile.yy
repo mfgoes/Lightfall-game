@@ -39,5 +39,9 @@
     "path": "sprites/proj_spike_boss/proj_spike_boss.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy_helper",
+    "boss",
+  ],
   "visible": true,
 }

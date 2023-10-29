@@ -3,7 +3,7 @@ if(live_call()) return live_result;
 
 event_inherited(); 
 
-break_on_hit = false;
+break_on_hit = true;
 
 super_arrow = false;
 grv = 0.003; // was 0.02 gravity

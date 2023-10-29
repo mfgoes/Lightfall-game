@@ -29,7 +29,10 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"current_weapon","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":7.0,"rangeMin":0.0,"value":"2","varType":1,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"ammo_basic","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":200.0,"rangeMin":0.0,"value":"50","varType":1,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "sGunExplosive",

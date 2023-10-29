@@ -36,5 +36,9 @@
     "path": "sprites/sEnemyShield/sEnemyShield.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+    "entity",
+  ],
   "visible": true,
 }

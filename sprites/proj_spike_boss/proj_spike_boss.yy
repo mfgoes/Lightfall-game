@@ -67,6 +67,10 @@
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
+  "tags": [
+    "enemy_helper",
+    "boss",
+  ],
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

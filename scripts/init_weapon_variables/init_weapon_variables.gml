@@ -22,7 +22,7 @@ function init_weapon_variables(){
 	image_alpha = 0;
 	
 	// Ammo Types
-    ammo_basic = 0; //quick shots
+    ammo_basic = 50; //quick shots
     ammo_heavy = 3; //the strong bow attack
     ammo_explosive = 2; //explosive shots
 	weapon_recoil = 0;
@@ -35,7 +35,7 @@ function init_weapon_variables(){
 	reload_time			= 40; //default ranged
 	secondary_cooldown  = 50; //default melee
 	third_cooldown		= 30; 
-	roll_cooldown		= 40;
+	//roll_cooldown		= 80; //roll is setup in the player event. In case there's no weapon (ie market area). To do; setup here anyway for consistency. 
 	
 	// No weapon - no damage and immediate reload.
 	none = new Weapon("No weapon", sBow_Slimmer, ammo_basic, 0, 0, 0, 0, 5, 0);
@@ -53,7 +53,7 @@ function init_weapon_variables(){
 	global.weapon_list = [none, bow, fast_gun, heavy_gun, explosive_gun, bazooka];
 	
 	// Current Weapon (This can be a reference to one of the weapon structs)
-    current_weapon = 1; //0 = none, 1 = regular	we
+    current_weapon = 2; //0 = none, 1 = bow. 2 = fast gun
 	using_ability = 0;
 	
 	//find a way to remove these later
