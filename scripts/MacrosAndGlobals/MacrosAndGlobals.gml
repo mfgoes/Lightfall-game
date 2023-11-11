@@ -18,11 +18,12 @@ function MacrosAndGlobals(){
 	global.player1_health = 10; 
 	global.player1_stamina = 5;
 	global.player1_stamina_max = 10; 
-	
 	global.hasgun = true;
 	global.enemies_spawned = 0;
 	global.kills = 0;
 	global.killsthiswave = 0;
+	global.frames_played = 0; //starts recording at the start of a run
+	global.time_played = "00:00:00"; //mins, seconds, centiseconds
 	global.wavetotal = 0;
 	global.killsthisroom = 0;
 	

@@ -66,6 +66,7 @@ if global.debugmode = true {
 	draw_rectangle(RES_W-50,menu_y_top*2-5,RES_W+50,menu_y_bot*2,0);
 	draw_set_alpha(1);
 	draw_text(RES_H-32,RES_H-48,"selected: " + string(menu_move)); 
+	draw_text(RES_H-32,RES_H-28,"clicked: " + string(menu_committed)); 
 }
 #endregion
 

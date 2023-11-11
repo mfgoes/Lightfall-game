@@ -8,8 +8,8 @@ image_index = 0;
 image_speed = 0.4;
 sprite_index = spriteDie;
 
-alarm[0] = 30;
-ScreenShake(3,40);
+alarm[0] = 20;
+ScreenShake(1,20);
 audio_play_sound(Realistic_Punch_2_1,10,false);
 //game_set_speed(40,gamespeed_fps); //this is way too dangerous for now
 

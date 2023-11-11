@@ -11,8 +11,8 @@ effect_flash();
 
 if (global.debugmode) {
 	var sprite_name = sprite_get_name(sprite_index); // Get the name of the current sprite
-	var debug_text = "Sprite: " + string(sprite_name) + "\nImage Speed: " + string(image_speed);
-	var debug_2 = oPlayerWeapon.combo_counter; 
+	var debug_text = "Sprite: " + string(sprite_name) + " Image Speed: " + string(image_speed);
+	var debug_2 = "X to die" 
 	draw_text(x, y - 40, debug_text);
 	draw_text(x, y - 50, debug_2);
 }

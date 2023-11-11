@@ -15,3 +15,6 @@ PlayerCollision();
 PlayerCollision_Gates(); //when walking into level gates and 'arena' gates
 
 PlayerStepAnimations(); 
+
+//For testing player death
+PlayerDieDebug(); 

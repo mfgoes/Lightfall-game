@@ -1,4 +1,5 @@
 /// @description Reset gamespeed + Room
-//game_set_speed(60,gamespeed_fps);
-SlideTransition(TRANS_MODE.GOTO,room); //restarts the room
-//SlideTransition(TRANS_MODE.RESTART);
+//SlideTransition(TRANS_MODE.GOTO,room); //restarts the room
+
+//Create death menu
+instance_create_depth(0,0,depth,oGameOverMenu); 

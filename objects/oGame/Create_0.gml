@@ -4,6 +4,10 @@
 MacrosAndGlobals();
 
 current_fps = 60; // Start with the default value (60 FPS)
+level_number = 0;
+level_name = ""; 
+time_started = 0; //for speedrunners, etc.
+
 //setup font stuff (move later)
 font_setup(); 
 
