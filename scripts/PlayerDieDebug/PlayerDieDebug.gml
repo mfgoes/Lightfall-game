@@ -6,9 +6,5 @@ function PlayerDieDebug(){
 		with(oPlayer) 
 			hp = 0; 
 			KillPlayer();
-	
-		//create UI object
-	
-		//retrieve important variables	
 	}
 }

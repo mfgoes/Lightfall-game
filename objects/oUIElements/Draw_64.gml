@@ -8,6 +8,7 @@ if (live_call()) return live_result;
 //health, cooldowns, etc
 draw_UI_elements();
 
+//hide cursor in the menu (so that it can be redrawn I guess? idk what this does.)
 if !instance_exists(oMenuParent) {
 	display_set_gui_size(RES_W, RES_H); //text is twice the resolution
 	draw_cursor_custom(cursor_scale); 

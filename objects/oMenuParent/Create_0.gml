@@ -7,9 +7,10 @@ depth = 10000; //place below transition effect
 myPrevious = 0;
 
 //colors
-col_font =  make_color_rgb(204, 205, 189);;
-col_hover = make_color_rgb(226, 178, 126);
-col_bgr = make_color_rgb(24, 24, 33); //c_black;
+col_font =  make_color_rgb(204, 205, 189); //white
+col_muted = make_color_rgb(156, 158, 180); //grayish white
+col_hover = make_color_rgb(233, 224, 170); //banana yellow
+col_bgr = make_color_rgb(24, 24, 33); // midnight blue
 text_align = fa_center;
 //
 

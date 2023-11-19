@@ -1,20 +1,19 @@
-/// @description changes the animation for player. 
+/// @desc changes the animation for player. 
 function KillPlayer() {
 	if instance_exists(oPlayerWeapon) with (oPlayerWeapon) instance_destroy();
-	dd = instance_change(oPlayerDead,true);
-	/*with (dd) {
-		Load_CharacterData(0); //was: oPlayer.current_character
-	}*/
+	instance_change(oPlayerDead,true);
 	
-	//fly in direction after getting killed
+	//animation + movement
 	direction = point_direction(other.x,other.y,x,y); 
-	hsp = lengthdir_x(1,direction);
+	var flip_image = sign(dcos(facing_direction));
+	image_xscale = flip_image;
+	hsp = lengthdir_x(2,facing_direction);
 	vsp =lengthdir_y(1,90);
-	if (sign(hsp) !=0) image_xscale = sign(hsp);
+	
+	//extra effects
+	instance_create_depth(x,y,depth-5,oDust);
 
+	//reset level kills
 	global.kills -= global.killsthisroom;
 	global.exp_points -= global.exp_points_thisroom;
-	//global.enemies_spawned = 0;
-	
-	//create menu after dying
 }

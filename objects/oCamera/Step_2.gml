@@ -28,9 +28,9 @@ if start_zoom > 0 start_zoom -= 0.0004; else start_zoom = 0;
 		//GMLive
 		if (live_call()) return live_result; 
 
-		//set standard view to be slightly below player, unless aiming down
+		//set standard view to be slightly below player, unless aiming down. //CHANGES ANGLE BASED ON MOUSE POSITION
 		yTo = follow.y-20; 
-		if mouse_y >= follow.y+TILE_SIZE*3 yTo = follow.y; 
+		if mouse_y >= follow.y+TILE_SIZE*3 && !instance_exists(oPause_SubMenu_Parent) yTo = follow.y; 
 		
 		if ((follow).object_index == oPlayerDead) {
 			x = round(xTo);

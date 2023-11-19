@@ -35,16 +35,21 @@ var mouse_y_gui = (device_mouse_y_to_gui(0));
 if (mouse_y_gui < menu_y_bot) && (mouse_y_gui > menu_y_top) {
     // Checks if mouse y position lines up
     menu_move = (mouse_y_gui - menu_y_top) div (line_height / resolution);    
+} else {
+	menu_move = -1;
 }
 
 // Confirm button
 if (keyboard_check_released(vk_enter) || (menu_committed != -1)) {
     switch (menu_committed) {
         case 0: // Restart room
-            SlideTransition(TRANS_MODE.RESTART);
+           SlideTransition(TRANS_MODE.GOTO, room);
+			show_debug_message("PRESS: RESTART");
+			
             break;        
         case 1: // Back to start menu
             SlideTransition(TRANS_MODE.GOTO, rMenu);
+			show_debug_message("PRESS: MENU");
             break;
     }
 }

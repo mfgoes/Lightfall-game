@@ -1,22 +1,27 @@
 /// @dssc Player Movement Logic
-function PlayerStepMovement(){ 	
+function PlayerStepMovement(){
+	
+	//local constants
+	var acceleration = 0.2; 
+	var deceleration = 0; 
+	
 	// Define solid ground
 	grounded = (place_meeting(x, y + 1, oWallParent) || place_meeting(x, y + 1, oPlatformParent));
 
 	//accelerate
 	var slowwalk = (mouse_check_button(mb_left) && grounded) ? 0.7 : 1;
 	var move = key_right - key_left;
-	var decelerate = 0; 
-	if move != 0 && current_walkspd < walkspd {current_walkspd +=0.25 decelerate = 0; } 
+	
+	if move != 0 && current_walkspd < walkspd {current_walkspd += acceleration deceleration = 0; } 
 	
 	//decelerate
 	if move = 0 { //create fall momentum by decreasing decelleration.
-		if current_walkspd > 0 {current_walkspd -=0.2;} else current_walkspd = 0; 
-		decelerate = current_walkspd * sign(hsp);
-	} else decelerate = 0; 
+		if current_walkspd > 0 {current_walkspd -=acceleration;} else current_walkspd = 0; 
+		deceleration = current_walkspd * sign(hsp);
+	} else deceleration = 0; 
 	
 	if can_move = true {
-		hsp = (move * current_walkspd * slowwalk) + (gunkickx) + decelerate; 
+		hsp = (move * current_walkspd * slowwalk) + (gunkickx) + deceleration; 
 	}
 	
 	HandlePlatforming();  //for going up and down platforms

@@ -28,7 +28,10 @@ if (menu_control && alarm[0] <= 0) {
     var mouse_y_gui = device_mouse_y_to_gui(0);    
     if (mouse_y_gui < menu_y_bot) && (mouse_y_gui > menu_y_top) {
         menu_move = (mouse_y_gui - menu_y_top) div (line_height / resolution);
-    } 
+    }  else {
+	menu_move = -1;
+	}
+	
 
     // Confirm button
    if (keyboard_check_released(vk_enter) or (menu_committed != -1)) {

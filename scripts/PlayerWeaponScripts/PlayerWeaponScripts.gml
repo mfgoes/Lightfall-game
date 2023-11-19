@@ -58,6 +58,8 @@ function updateWeaponPositionAndAngle() {
         oPlayer.facing_direction = image_angle;
     }
 	
+	//camera angle shift is handles in camera object.
+	
 	//used for weapon stretch animation and non-mouse attacks
 	click_dir = sign(mouse_x - oPlayer.x); 
 	if click_dir = 0 click_dir = 1; 

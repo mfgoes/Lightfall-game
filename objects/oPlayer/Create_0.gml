@@ -1,8 +1,6 @@
 /// @description Load character data
 init_variables_player();
 
-
-
 //load archer character (make this changeable in the future)
 LoadAssets_Archer();
 
