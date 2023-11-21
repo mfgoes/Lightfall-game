@@ -32,7 +32,6 @@ if (menu_control && alarm[0] <= 0) {
 	menu_move = -1;
 	}
 	
-
     // Confirm button
    if (keyboard_check_released(vk_enter) or (menu_committed != -1)) {
         switch (menu_committed) {

@@ -3,6 +3,7 @@ function KillPlayer() {
 	if instance_exists(oPlayerWeapon) with (oPlayerWeapon) instance_destroy();
 	instance_change(oPlayerDead,true);
 	
+	
 	//animation + movement
 	direction = point_direction(other.x,other.y,x,y); 
 	var flip_image = sign(dcos(facing_direction));

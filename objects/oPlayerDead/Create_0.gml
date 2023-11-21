@@ -17,5 +17,5 @@ audio_play_sound(hurt_sound,2,0,0.3,false);
 //game_set_speed(40,gamespeed_fps); //this is way too dangerous for now
 
 if instance_exists(oCamera) {
-	with(oCamera) follow = other.id;
+	//with(oCamera) follow = other.id;
 }

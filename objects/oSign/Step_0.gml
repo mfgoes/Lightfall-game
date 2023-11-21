@@ -17,10 +17,9 @@ if instance_exists(oPlayer) {
 			}
 			activated = true; 
 	
-			with (oCamera)
-			{
-				follow = other.id;	
-			}
+			//to do: reactivate this later
+			if oPlayer.hp > 0 
+				oCamera.follow = id; 
 		}
 	} else nearby = false; 
 }

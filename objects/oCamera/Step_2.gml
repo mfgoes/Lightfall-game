@@ -2,14 +2,25 @@ if global.game_paused
 {
 	exit;
 }
-
+//GMLive
+if (live_call()) return live_result; 
+	
+if (!instance_exists(follow)) {
+    // Handle the case where follow is not a valid instance
+    // You might want to set follow to a default object or handle it differently based on your logic
+    follow = id; // Set follow to the current instance as a fallback
+}
 	
 if start_zoom > 0 start_zoom -= 0.0004; else start_zoom = 0;
-
 	//Upate camera destination
 	if follow != id //only move camera if there's an object to follow
 	{
-		/* //remove mouse following. to do: improve aim following later
+		//if ((follow).object_index == oPlayerDead) {
+		//	x = round(xTo);
+		//	y = round(yTo);
+		//}
+		
+		//remove mouse following. to do: improve aim following later
 		//while aiming, follow mouse position slightly
 		var pan_distance_weapon = 3; if zoom <= 0.10 pan_distance_weapon = 3; //move camera when aiming?
 		if (weapon_zoom !=0 && follow = oPlayer) {
@@ -18,18 +29,16 @@ if start_zoom > 0 start_zoom -= 0.0004; else start_zoom = 0;
 		xTo = follow.x+lengthdir_x(pan_distance_weapon,point_direction(follow.x,follow.y,mouse_x,mouse_y)); //Follow point from A (followX) to B (mouseX). Lenghtdir should be a fraction of distance of mouse to follow.x
 		yTo = follow.y+lengthdir_y(pan_distance_weapon,point_direction(follow.x,follow.y,mouse_x,mouse_y));
 	
-		if ((follow).object_index == oPlayerDead) {
-			x = round(xTo);
-			y = round(yTo);
-		}
-		*/
-		xTo = follow.x; //Follow point from A (followX) to B (mouseX). Lenghtdir should be a fraction of distance of mouse to follow.x
 		
-		//GMLive
-		if (live_call()) return live_result; 
+		
+		
+		
 
 		//set standard view to be slightly below player, unless aiming down. //CHANGES ANGLE BASED ON MOUSE POSITION
-		yTo = follow.y-20; 
+		//xTo = follow.x; //Follow point from A (followX) to B (mouseX). Lenghtdir should be a fraction of distance of mouse to follow.x
+		//yTo = follow.y-20; 
+		
+		
 		if mouse_y >= follow.y+TILE_SIZE*3 && !instance_exists(oPause_SubMenu_Parent) yTo = follow.y; 
 		
 		if ((follow).object_index == oPlayerDead) {
