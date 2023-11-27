@@ -332,6 +332,7 @@
     {"id":{"name":"bg_DEMO","path":"sprites/bg_DEMO/bg_DEMO.yy",},"order":0,},
     {"id":{"name":"init_autotile","path":"scripts/init_autotile/init_autotile.yy",},"order":0,},
     {"id":{"name":"oSkipMenu","path":"objects/oSkipMenu/oSkipMenu.yy",},"order":7,},
+    {"id":{"name":"sProtagLandFloor","path":"sprites/sProtagLandFloor/sProtagLandFloor.yy",},"order":0,},
     {"id":{"name":"GMLive_nodeTools","path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},"order":3,},
     {"id":{"name":"icon_currency","path":"sprites/icon_currency/icon_currency.yy",},"order":0,},
     {"id":{"name":"oLevelGenerator","path":"objects/oLevelGenerator/oLevelGenerator.yy",},"order":2,},

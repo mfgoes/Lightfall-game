@@ -4,7 +4,7 @@
   "name": "sProtagJump",
   "bbox_bottom": 29,
   "bbox_left": 19,
-  "bbox_right": 32,
+  "bbox_right": 31,
   "bbox_top": 8,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -18,7 +18,6 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"81351cdc-7246-4df1-9079-2e427110f7e7",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fbb6c507-1a18-49b4-976f-d9a525ea93e9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c482b57d-394d-4d10-b249-61d447e20293",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -48,7 +47,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 3.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -61,7 +60,6 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"81351cdc-7246-4df1-9079-2e427110f7e7","path":"sprites/sProtagJump/sProtagJump.yy",},},},"Disabled":false,"id":"4b6accb0-0246-4f5b-adaa-1ef5ee7b7865","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fbb6c507-1a18-49b4-976f-d9a525ea93e9","path":"sprites/sProtagJump/sProtagJump.yy",},},},"Disabled":false,"id":"35cd6675-5418-41ff-8d7f-30c4b9fd3813","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c482b57d-394d-4d10-b249-61d447e20293","path":"sprites/sProtagJump/sProtagJump.yy",},},},"Disabled":false,"id":"82b1faba-0cfb-4ee4-ae40-9f314fbc04c2","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

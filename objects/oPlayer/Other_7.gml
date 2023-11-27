@@ -4,4 +4,9 @@ if sprite_index = spriteMelee {
 	image_index = 0; // Reset image_index to 0 to start idle animation from the beginning
 	oPlayerWeapon.using_ability = 0; 
 }
+if sprite_index = spriteLanded {
+	sprite_index = spriteIdle; 
+	image_index = 0; // Reset image_index to 0 to start idle animation from the beginning
+}
+	
 	

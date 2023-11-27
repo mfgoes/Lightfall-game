@@ -15,4 +15,7 @@ if (global.debugmode) {
 	var debug_2 = "X to die" 
 	draw_text(x, y - 40, debug_text);
 	draw_text(x, y - 50, debug_2);
+	
+	var grounded_prev = (place_meeting(xprevious, yprevious + 1, oWallParent) || place_meeting(xprevious, yprevious + 1, oPlatformParent));
+	draw_text(x, y - 60, "g_prev: " + string(grounded_prev));
 }

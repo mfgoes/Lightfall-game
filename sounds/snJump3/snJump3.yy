@@ -13,7 +13,7 @@
     "GAME_NOMENUS": {"audioGroupId":"{\"name\":\"audiogroup_default\",\"path\":\"audiogroups/audiogroup_default\"}",},
   },
   "conversionMode": 0,
-  "duration": 0.469921,
+  "duration": 0.464921,
   "parent": {
     "name": "jump",
     "path": "folders/Sounds/Player sounds/jump.yy",

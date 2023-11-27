@@ -16,8 +16,6 @@ if instance_exists(oPlayer) {
 				length = string_length(text);
 			}
 			activated = true; 
-	
-			//to do: reactivate this later
 			if oPlayer.hp > 0 
 				oCamera.follow = id; 
 		}

@@ -5,21 +5,7 @@ function LoadCharacter_Archer(){
 
 }
 
-// Loads visuals
-function LoadAssets_Archer(){
-	spriteIdle    =	sProtagIdle;
-	spriteWalk    =	sProtagWalk;
-	spriteRoll    =	sProtagRoll;
-	spriteJump    =	sProtagJump;
-	spriteDie     =	sProtagDie;
-	spriteAim     =	sProtagAim;
-	spriteMelee   =	sPlayerStab; //updated through the sword attack function
-	
-	spriteWalkArmed = sProtagWalkArmed;
-	spriteIdleArmed = sProtagIdleArmed;
-	spriteSpecial =	sProtag_shockwave_playeronly; 
-	mask_index    =	sProtagIdle; 	
-}
+
 
 // Load weapon (seperate to its own script later)
 function LoadWeapon_Archer(){
