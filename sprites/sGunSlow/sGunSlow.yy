@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "sGunSlow",
   "bbox_bottom": 9,
-  "bbox_left": 9,
+  "bbox_left": 5,
   "bbox_right": 21,
   "bbox_top": 4,
   "bboxMode": 0,
@@ -16,14 +16,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a80e6457-1570-4aa4-b768-272f249ef156",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61127a17-4dcd-4bf6-bc9c-19318152d095",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 12,
+  "height": 18,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"19c26c64-32ad-4f23-9c03-318f00bc67fe","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9ebaf6a2-9009-4072-9703-25ff02532e5a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 9,
@@ -57,12 +57,12 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a80e6457-1570-4aa4-b768-272f249ef156","path":"sprites/sGunSlow/sGunSlow.yy",},},},"Disabled":false,"id":"3c4656a2-5f50-4fd4-b3db-cc6e394850ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"61127a17-4dcd-4bf6-bc9c-19318152d095","path":"sprites/sGunSlow/sGunSlow.yy",},},},"Disabled":false,"id":"7150821f-540f-415d-af99-b805bdc559cb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 8,
+    "xorigin": 2,
     "yorigin": 8,
   },
   "swatchColours": null,
@@ -73,5 +73,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 30,
+  "width": 25,
 }

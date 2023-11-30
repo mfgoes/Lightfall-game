@@ -24,12 +24,12 @@ function primaryWeaponAttack() {
 		//showcase the weapon again
 		with(oPlayerWeapon) {
 			image_alpha = 1;
-			alarm[0] = 50; //hide weapon
+			alarm[0] = 120; //hide weapon
 		}
 		
 		
         // Create projectile
-        var _dist = 10; 
+        var _dist = 22; 
         var _x = x + lengthdir_x(_dist, image_angle);
         var _y = y + lengthdir_y(_dist, image_angle);
     
@@ -49,7 +49,7 @@ function primaryWeaponAttack() {
                     with (instance_create_layer(_x, _y, "Bullets", oArrow)) {
                         direction = oPlayerWeapon.shoot_direction + random_range(-10,10);
 						randomize(); 
-						distance_max = 50;  
+						distance_max = 76;  
                         damage = weapon_damage;
 						
 						//to do: play sound file depending on gun type later
@@ -63,6 +63,7 @@ function primaryWeaponAttack() {
 					    audio_play_sound(snBlaster, 2, 0);
                     }
                     ammo_basic -= 1;
+					weapon_recoil = 3; //amount of visual recoil
                     timer_set("reload_time", weapon_reload_time);
                     oUIElements.reload_time = 0; // Update UI
                 }
@@ -87,6 +88,7 @@ function primaryWeaponAttack() {
 					    audio_play_sound(snBlaster, 2, 0);
                     }
                     ammo_basic -= 1;
+					weapon_recoil = 3; //amount of visual recoil
                     timer_set("reload_time", weapon_reload_time);
                     oUIElements.reload_time = 0; // Update UI
                 }

@@ -5,18 +5,23 @@ if(live_call()) return live_result;
 
 //destroy after a certain distance
 if abs(x-xstart) > distance_max or abs(y-ystart) > distance_max {
-	//poof
-	repeat(7) with (instance_create_layer(x,y,"Bullets",oDust)) {
-			vsp = -1.5; if random(1) < 0.2 vsp = 1; image_alpha = 0.6+random(0.3);
-			hsp = random_range(-1,1);
-			image_index = irandom(image_number);
-			image_xscale = choose (1.5,-1.5);
-			image_yscale = choose (1.5,-1.5);
+	repeat(3) {
+	var fx_dir = direction + random_range(-90,90); 
+	var fx_spd = 3;
+	
+	dd = instance_create_depth(x+lengthdir_x(0,direction)+random_range(-4,4),y+lengthdir_y(0,direction)+random_range(-2,2),depth,oDust);
+	dd.hsp = lengthdir_x(fx_spd, fx_dir);
+	dd.vsp = lengthdir_y(fx_spd, fx_dir);
+	dd.image_alpha = choose(0.3,0.5,0.8);
+	dd.image_xscale = 1; 
+	dd.image_yscale = 1;
 	}
-	instance_create_depth(x+lengthdir_x(6,direction),y,depth,oBulletImpactEffect);
+	
+	dd = instance_create_depth(x+lengthdir_x(6,direction),y,depth,oBulletImpactEffect);
+	dd.image_xscale = 1.5; 
+	dd.image_yscale = 1.5; 
 	ScreenShake(1,3);
 	instance_destroy();
-	
 }
 
 if spd > 0 { //check if in wall
@@ -27,11 +32,11 @@ if spd > 0 { //check if in wall
 
 	//poof 
 	if timer_get("poof_trail") <= 1 {
-		dd = instance_create_depth(x,y,depth+1,oDust); dd.hsp = 0; dd.vsp = 0; dd.image_alpha = 1; dd.image_speed = 0.2;
+		dd = instance_create_depth(x,y,depth+1,oDust); dd.hsp = 0; dd.vsp = 0; dd.image_alpha = 0.1; dd.image_speed = 1;
 		timer_set("poof_trail",4+choose(1,2));
 	}
 	if timer_get("poof_trail_close") <= 1 {
-		dd = instance_create_depth(x,y,depth+1,oDust); dd.hsp = 0; dd.vsp = 0; dd.image_alpha = 1; dd.image_speed = 2; 
+		dd = instance_create_depth(x,y,depth+1,oDust); dd.hsp = 0; dd.vsp = 0; dd.image_alpha = 0.5; dd.image_speed = 2; 
 		if super_arrow = true {dd.image_xscale = 1; dd.image_yscale = 1; dd.col_start = c_orange;}
 		timer_set("poof_trail_close",1);
 	}

@@ -81,7 +81,7 @@ function PlayerStepAnimations() {
 		            }
 		            sprite_index = spriteWalk;
 		            image_speed = 1 * slowwalk;
-		            if (oPlayerWeapon.image_alpha == 1) sprite_index = spriteWalkArmed;
+		            //if (oPlayerWeapon.image_alpha == 1) sprite_index = spriteWalkArmed;
 		            }
 
 				//do we need this?

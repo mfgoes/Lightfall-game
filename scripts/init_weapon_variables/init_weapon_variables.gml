@@ -102,5 +102,12 @@ function draw_weapon_sprite() {
 		gpu_set_blendmode(bm_normal);
 	}
 	
-	draw_sprite_ext(sprite,image_index,x,y,1,flip_image,facing_dir,c_white,image_alpha);	
+	var dist = 4; //kickback determined by button presses
+	
+	//to do: make transitioning between weapon angle a bit smoother
+	
+	var _x = x + lengthdir_x(dist,facing_dir);
+	var _y = y + lengthdir_y(dist,facing_dir);
+	
+	draw_sprite_ext(sprite,image_index,_x,_y,1,flip_image,facing_dir,c_white,image_alpha);	
 }	

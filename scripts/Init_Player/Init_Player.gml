@@ -11,8 +11,6 @@ function init_variables_player(){
 	moveDistanceRemaining = 0;
 	roll_cooldown = 80;
 	roll_cooldown_full = roll_cooldown;
-	
-
 	distanceRoll = 170;
 	canrope = 0; //allows rope controls
 	flash = 0; 

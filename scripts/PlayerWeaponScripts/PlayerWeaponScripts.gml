@@ -17,7 +17,7 @@ if global.game_paused exit;
 #endregion
 
 //weapon recoi
-weapon_recoil = max(0, weapon_recoil - 1);
+weapon_recoil = max(0, weapon_recoil - 0.4);
 oPlayer.hascontrol = (timer_get("attack_recover") > 0) ? 0 : 1;
 
 manageManaRecovery();
