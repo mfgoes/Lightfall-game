@@ -281,6 +281,7 @@
     {"id":{"name":"sProtagIdle","path":"sprites/sProtagIdle/sProtagIdle.yy",},"order":1,},
     {"id":{"name":"GMLive_vm","path":"scripts/GMLive_vm/GMLive_vm.yy",},"order":5,},
     {"id":{"name":"oIconDiscord","path":"objects/oIconDiscord/oIconDiscord.yy",},"order":3,},
+    {"id":{"name":"sWeapon_pickup_highlight_blue","path":"sprites/sWeapon_pickup_highlight_blue/sWeapon_pickup_highlight_blue.yy",},"order":0,},
     {"id":{"name":"sNPC_Barbarian","path":"sprites/sNPC_Barbarian/sNPC_Barbarian.yy",},"order":5,},
     {"id":{"name":"pickup_health","path":"sprites/pickup_health/pickup_health.yy",},"order":0,},
     {"id":{"name":"EnemyAnimationsDefault","path":"scripts/EnemyAnimationsDefault/EnemyAnimationsDefault.yy",},"order":2,},

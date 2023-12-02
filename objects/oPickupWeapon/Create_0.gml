@@ -23,3 +23,4 @@ xDist = 0;           // Distance from the player on the X-axis
 image_speed = 0;     // Sprite animation speed
 depth += 50;         // Ensure the object renders behind the player
 wobble_triggered = false;  // Flag to track if the wobble effect has started
+hover_timer = 0; 

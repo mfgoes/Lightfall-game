@@ -1,7 +1,6 @@
 /// @description Insert description here
 
-// If live_call() is true, return live_result and end script
-if (live_call()) return live_result;
+
 
 // Set font and alignment
 draw_set_font(fSign);

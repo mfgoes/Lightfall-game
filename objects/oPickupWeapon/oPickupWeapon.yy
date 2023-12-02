@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sCrate",
-    "path": "sprites/sCrate/sCrate.yy",
+    "name": "sWeapon_pickup_highlight_blue",
+    "path": "sprites/sWeapon_pickup_highlight_blue/sWeapon_pickup_highlight_blue.yy",
   },
   "spriteMaskId": null,
   "visible": true,

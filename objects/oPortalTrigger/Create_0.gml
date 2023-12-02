@@ -7,7 +7,7 @@ open_timer = 30; //how long to open the door
 auto_open = false; //if true, don't require pressing open
 
 nearby = false;
-hover = 0;
+hover = 0; //to do: delete this if not used
 depth = layer_get_depth("Player");
 show_hint = false; //put on if player presses W or E. 
 timer_counter = 0; 
