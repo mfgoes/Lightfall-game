@@ -1,7 +1,7 @@
 // Create event for every character. These are the default values. 
 function init_variables_player(){
 	//relative attributes
-	hp = global.player1_health; hp_max = global.player1_stamina_max;
+	hp = global.player1_health; hp_max = global.player1_health;
 	mana = 10; mana_max = mana; 
 	gunkickx = 0;
 	gunkicky = 0; 

@@ -184,7 +184,7 @@ function scr_enemy_lunge(){
 		timer_init("lunge_timer");
 		if timer_get("lunge_timer") <= 0 && (place_meeting(x+dir*8,y,target)) && (grounded) && h_leap = 0 {
 			timer_set("lunge_timer",40);
-			current_state = enemy_states.lunge;
+			current_state = enemy_states.lunge; //used lunge instead of attack, in case enemies can do both. 
 			dir_atk=dir;
 			sprite_index = spriteAttack;
 			attack_anim_end = 0; 

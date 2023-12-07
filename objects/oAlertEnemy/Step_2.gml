@@ -1,8 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description follow the enemy
 if instance_exists(owner)
 {
 	x = owner.x;
-	y = owner.y;
+	y = owner.y-(owner.bbox_bottom - owner.bbox_top)-5;
 }
-else instance_destroy(); 
+else exit; //static

@@ -85,8 +85,6 @@ switch (current_state)
 				}	
 				
 				if alerted = 0 {
-					audio_sound_gain(snAlertEnemy,0.2,0);
-					audio_play_sound(snAlertEnemy,10,0);
 					alerted = 1;
 				}
 			}

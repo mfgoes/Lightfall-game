@@ -13,7 +13,7 @@
     "GAME_NOMENUS": {"audioGroupId":"{\"name\":\"audiogroup_default\",\"path\":\"audiogroups/audiogroup_default\"}",},
   },
   "conversionMode": 0,
-  "duration": 0.621188,
+  "duration": 1.071973,
   "parent": {
     "name": "Enemy Sounds",
     "path": "folders/Sounds/Enemy Sounds.yy",

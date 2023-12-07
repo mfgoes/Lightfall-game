@@ -18,10 +18,10 @@ if global.debugmode = 1 {
 	var check_tile1 = (collision_point(x + patrol_dir*TILE_SIZE,y+TILE_SIZE, oWallParent,0,0)); //check existing tile
 	
 	if (check_tile1) or (check_tile2) free_tile = true;
-	draw_rectangle(x+(TILE_SIZE*2)*patrol_dir,y,x,y+TILE_SIZE*2,1);	
+	draw_rectangle(x+sight_range,y,x-sight_range,y+TILE_SIZE*2,1);	
 	draw_text(x,y-sprite_height,"state: " + string(current_state));
-	draw_text(x,y-sprite_height-20,"patrol_dir: " + string(patrol_dir));	
-	draw_text(x,y-sprite_height-30,"y: " + string(y));	
+	draw_text(x, y - sprite_height, "State: " + state_to_string(current_state));	
+	draw_text(x,y-sprite_height-30,"p: " + string(patrol_dir));	
 	
 	//draw bounding box 
 	draw_set_color(c_green) draw_set_alpha(0.4);

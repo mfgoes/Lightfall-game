@@ -1,9 +1,7 @@
 
 function handlePlayerWeapons() {
 
-//live
-if (live_call()) return live_result; 
-if global.game_paused exit;	
+
 
 #region Initialize Timers
 	timer_init("reload_time");

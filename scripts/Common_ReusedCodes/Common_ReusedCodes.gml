@@ -30,20 +30,18 @@ if !audio_is_playing(snDashDodge)
 
 
 //BASIC / GRAVITY / MISC	
+function VerticalCollision(){ 
+	var grv = 0.2;
+	vsp = vsp + grv;
+	if (place_meeting(x,y+vsp, oWallParent)) or (place_meeting(x,y+vsp,oPlatformParent))
+	{
+		vsp = 0;	
+	}
+	y = round(y + vsp);
+	if vsp > 10 vsp = 10;
+}
 
-function VerticalCollision(){
-	 
-var grv = 0.3;
-vsp = vsp + grv;
-if (place_meeting(x,y+vsp, oWallParent)) or (place_meeting(x,y+vsp,oPlatformParent))
-{
-	vsp = 0;	
-}
-y = round(y + vsp);
-if vsp > 12 vsp = 12;
-}
 //reusable vertical collisions (for enemies)
-
 /// @function			sprite_offset_cleanup(); 
 /// @description		sets all enemy off to bottom center
 

@@ -13,10 +13,12 @@ spriteAttack =	sRockBug;
 spriteMelee  =	sRockBug;
 mask_index	 =	sRockBug;
 
-hp = 5; hp_max = hp; 
-
-//sprite_offset_cleanup();
+//differentiate this monster here
+hp = 10; hp_max = hp; 
+sight_range = 90
+ current_state = enemy_states.patrol;
 
 //shakes enemy when dead
 shake_x = 0; 
 shake_dir = 1; 
+timer_set("player_sight", -1); // Initialize the timer
