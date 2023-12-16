@@ -40,37 +40,11 @@ function scr_enemy_throw_rocks() {
 			var ang_adjust = -50 * sign(image_xscale); //adjust angle depending on player position
 			dd = instance_create_depth(x,y,depth,oRockProjectileGrav);	
 			dd.dir = point_direction(x,y,target.x,target.y) + ang_adjust;
-			dd.spd = 8;
+			dd.spd = 7;
+			dd.damage = damage; //inherit damage from monster
 		}	
 	}
 }
-
-/// scr_enemy_patrol()
-function scr_enemy_patrol() {
-    // Define a buffer zone to prevent rapid direction changes
-    var buffer_zone = 5; // Adjust this value as needed
-
-    // Check if at the edges of the patrol range, including buffer zone
-    if ((x <= xstart - wander_range + buffer_zone && patrol_dir == -1) ||
-        (x >= xstart + wander_range - buffer_zone && patrol_dir == 1)) {
-        patrol_dir *= -1; // Reverse direction
-    }
-
-    // Move in the patrol direction
-    x += patrol_dir * walk_spd; // Assume walk_spd is defined elsewhere
-
-    // Adjust image_xscale based on patrol direction for facing direction
-    if (patrol_dir != 0) image_xscale = -patrol_dir;
-
-    // Check if player is within sight range
-    if (point_distance(x, y, target.x, target.y) < sight_range) {
-        alerted = 1; // Set alerted to 1
-		dd = instance_create_depth(x,y-(bbox_bottom - bbox_top)-5,depth-5,oAlertEnemy); //create an image indicator
-		dd.owner = id; 
-        current_state = enemy_states.approach; // Switch to approach state
-    }
-}
-
 
 function state_to_string(state) {
     switch(state) {
@@ -82,7 +56,6 @@ function state_to_string(state) {
     }
 }
 
-/// scr_revert_to_patrol()
 function scr_revert_to_patrol() {
     var timer_name = "player_sight";
     // Debug information

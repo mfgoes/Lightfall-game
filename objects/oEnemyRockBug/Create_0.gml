@@ -15,8 +15,10 @@ mask_index	 =	sRockBug;
 
 //differentiate this monster here
 hp = 10; hp_max = hp; 
-sight_range = 90
- current_state = enemy_states.patrol;
+sight_range = 80;
+current_state = enemy_states.patrol;
+damage = 1;
+walk_spd = 2;
 
 //shakes enemy when dead
 shake_x = 0; 

@@ -50,7 +50,11 @@ hitfrom = 0;
 walk_spd = 1;
 hsp = walk_spd;
 vsp = 0;
+current_spd = 0; // Initialize current speed
 approach_spd = 1.2;
+wall_close_ahead = false; //for decelerating. 
+decelerate_dist = TILE_SIZE;
+
 reload_spd = 55;		
 	
 //patrolling

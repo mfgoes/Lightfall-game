@@ -19,9 +19,10 @@ if global.debugmode = 1 {
 	
 	if (check_tile1) or (check_tile2) free_tile = true;
 	draw_rectangle(x+sight_range,y,x-sight_range,y+TILE_SIZE*2,1);	
-	draw_text(x,y-sprite_height,"state: " + string(current_state));
-	draw_text(x, y - sprite_height, "State: " + state_to_string(current_state));	
-	draw_text(x,y-sprite_height-30,"p: " + string(patrol_dir));	
+	draw_text(x, y - sprite_height, "state: " + state_to_string(current_state));	
+	
+	draw_text(x,y-sprite_height-20,"current_spd: " + string(current_spd));	
+	draw_text(x,y-sprite_height-40,"wall_close_ahead: " + string(wall_close_ahead));	
 	
 	//draw bounding box 
 	draw_set_color(c_green) draw_set_alpha(0.4);
