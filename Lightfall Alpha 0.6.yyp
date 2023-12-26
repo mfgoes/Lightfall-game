@@ -468,6 +468,7 @@
     {"id":{"name":"Load_AbilityData","path":"scripts/Load_AbilityData/Load_AbilityData.yy",},"order":3,},
     {"id":{"name":"oWallParent","path":"objects/oWallParent/oWallParent.yy",},"order":0,},
     {"id":{"name":"sSandDecorGrass","path":"sprites/sSandDecorGrass/sSandDecorGrass.yy",},"order":1,},
+    {"id":{"name":"oRockInactive","path":"objects/oRockInactive/oRockInactive.yy",},"order":0,},
     {"id":{"name":"spr_Aura_Rotating_Block","path":"sprites/spr_Aura_Rotating_Block/spr_Aura_Rotating_Block.yy",},"order":0,},
     {"id":{"name":"oBarrel_Mana","path":"objects/oBarrel_Mana/oBarrel_Mana.yy",},"order":0,},
     {"id":{"name":"sBlobMask","path":"sprites/sBlobMask/sBlobMask.yy",},"order":5,},

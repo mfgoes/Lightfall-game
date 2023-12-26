@@ -36,7 +36,7 @@ function scr_state_patrol(){
 	//jump if possible
 	if timer_get("jump_duration") > 0 {
 		if !(space_above) { //check if jump is still required, otherwise lerp jump.
-			timer_set("jump_duration",0);
+			timer_set("jump_duration",50);
 			y-=4;
 			exit;
 		}
@@ -59,6 +59,8 @@ function enemy_dodge_player() {
 	
 //Approach the player
 function scr_state_approach(){
+	if (live_call()) return live_result; 
+	
 	timer_init("jump_duration");
 	var dist_start = round(distance_to_point(patrol_xstart,patrol_ystart));
 	var dir = sign(target.x - x); 
@@ -67,7 +69,7 @@ function scr_state_approach(){
 	var tile_above = (collision_point(x + dir*TILE_SIZE/2,y-TILE_SIZE*5, oWallParent,0,0));
 	var space_above = (collision_point(x + dir*TILE_SIZE/2,y-1, oWallParent,0,0)); //if 1 pixel above is free
 	var tile_below = (collision_point(x + dir*TILE_SIZE/2,y+TILE_SIZE*3, oWallParent,0,0));	
-	
+	var can_approach = (maintain_distance = true && distance_to_object(target) > 50 or maintain_distance = false); 
 	if (grounded) {
 		//check above	//don't check below
 		if !(tile_above) && (tile_ahead) {
@@ -80,13 +82,15 @@ function scr_state_approach(){
 			hsp = 0;
 			//revert to patrol
 		}
-		else 
-			hsp = lerp(hsp,dir*approach_spd,0.1); //set facing direction
+		else {
+			hsp = lerp(hsp,sign(dir)*approach_spd,0.1); //set facing direction
+				
+		}
 	}
 		
 	//MOVE
 	if (grounded) && !(tile_ahead) && distance_to_object(target) >= atk_range {	
-		if round(x) != round(target.x) 
+		if round(x) != round(target.x) && can_approach
 			x += hsp;
 		//reset patrol position
 		patrol_xstart = x; 
@@ -94,11 +98,11 @@ function scr_state_approach(){
 	} else {
 		hsp = 0;
 	}
-	//jump if possible
+	//jump to get closer to player
 	if timer_get("jump_duration") > 0 {
 		if !(space_above) { //check if jump is still required, otherwise lerp jump.
 			timer_set("jump_duration",0);
-			y-=4;
+			y-=4; //to do: lerp to make it more like a jump. make the code more logical
 			exit;
 		}
 		else 
@@ -146,7 +150,7 @@ function scr_enemy_leap() {
 		 			
 		h_leap_goal = leap_horizontal_str * dir; //h_leap is the goal, not the actual leap
 		if hsp != 0 last_faced = dir; 
-		v_leap = leap_ver_str; 
+		v_leap = leap_amount; //strength of leap
 				
 		//vertical leap
 		if dist_target >50 && dist_target < 200 {
@@ -157,7 +161,9 @@ function scr_enemy_leap() {
 			} 
 			else acc = 0.8 //in the future, can make this based on player distance too
 			h_leap = lerp(h_leap,h_leap_goal,acc);
-			if (grounded) {vsp += v_leap;}
+			if (grounded) {
+				vsp += v_leap;
+			}
 			timer_set("leap_timer",choose(100,200,240));
 		}
 		
@@ -169,12 +175,61 @@ function scr_enemy_leap() {
 	//horizontal leap 
 	if !place_meeting(x + h_leap, y, oWallParent) && !place_meeting(x + h_leap, y, oBlockade) { 
 		var acc = 0.04; if vsp > 0 && grounded acc = 1; //if landed, don't slide 
-		h_leap=lerp(h_leap,0,acc); 
+		h_leap = lerp(h_leap,0,acc); 
 		x+=h_leap
 	}	
 	
 	
 }
+
+//updated leap test (2023)
+function scr_enemy_leap_v2() {
+	timer_init("leap_timer"); //how often to leap
+    timer_init("leap_duration"); //how long to leap (longer = higher jump)
+    
+	var dir = sign(target.x - x); if dir = 0 { dir = 1; }
+    var dist_target = abs(target.x - x);
+
+	//leap if timer is 0, and if on ground
+    if (timer_get("leap_timer") <= 0 && dist_target > 20) && grounded {
+		//make jump dependent on distance + obstacles
+		var duration = 8; 
+		
+		var tile_above = (collision_point(x + dir*TILE_SIZE,y-TILE_SIZE*3, oWallParent,0,0));
+		if tile_above or dist_target > TILE_SIZE*3
+			duration = 12; 
+        timer_set("leap_duration", duration); // Duration of the leap
+		timer_set("leap_timer", choose(80,100)); //when to leap again
+    }
+
+    // Apply horizontal leap movement if leap is ongoing
+    if (timer_get("leap_duration") > 0) && distance_to_object(target) < 40 {
+		v_leap = lerp(vsp,3.5,0.4);
+		h_leap = lerp(sign(hsp),4,0.6); 
+        vsp -= v_leap
+    }
+	
+	//horizontally move towards player when leaping in the air
+	var leap_margin = 50; 
+	var leap_x_goal = leap_margin*dir + target.x; //slightly next to player
+	//var can_approach = (maintain_distance = true && distance_to_object(target) < 50 or maintain_distance = false); 
+	
+	if !grounded && place_free(x + h_leap*dir,y) && distance_to_object(target) > leap_margin {
+		x += h_leap*dir; //don't move x in multiple areas
+	}
+		
+	// Check for the end of the leap
+    if (timer_end("leap_duration")) {
+		v_leap = 0; 
+		//keep moving horizontally
+    }
+	
+	//throw rock when in the air, at an angle
+	//if !grounded && !place_meeting(x,y+TILE_SIZE,oWallParent) {
+	//	scr_enemy_throw_rocks();
+	//}
+}
+
 
 
 function scr_enemy_lunge(){
@@ -236,7 +291,7 @@ function scr_state_atk_shoot(){
 		
 }
 
-function scr_state_atk_throwrocks() {
+function scr_boss_atk_throwrocks() { //boss enemy
 	//shooting
 	if timer_get("range_attack") <=0 { 
 		var dir = sign(target.x - x); 

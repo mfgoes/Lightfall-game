@@ -1,7 +1,9 @@
 /// @description Insert description here
 if global.game_paused exit;	
-//live
-if (live_call()) return live_result; 
+
+//gravity
+LowGravityItems(); 
+
 // projectile direction
 if collision_wall = true && place_meeting(x,round(y+12),oWallParent) {
 	spd = lerp(spd,0,0.2); 
@@ -26,7 +28,14 @@ if falling = true {
 	//dir = lerp(dir,90,0.01); 
 }
 
-
+//become inactive when static
+if spd <= 0.2 {
+	instance_change(oRockInactive,1);
+} else {
+	image_angle += 1;  //spin animation
+}
+if image_xscale < 1 image_xscale += 0.05; 
+image_yscale = image_xscale; 
 
 
 
@@ -75,6 +84,3 @@ if (place_meeting(x,y,oPlayer)) && oPlayer.sprite_index != oPlayer.spriteRoll
 	instance_destroy(); 
 }
 
-
-//gravity
-VerticalCollision(); 

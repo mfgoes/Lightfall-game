@@ -13,5 +13,8 @@ alarm[0] = 140; //destroy self
 
 //visuals
 image_speed = 0;
+image_xscale = 0.7;
+image_yscale = image_xscale;
+
 image_angle = choose(0,90,180,270); 
 falling = false; //true if going downwards

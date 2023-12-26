@@ -91,7 +91,7 @@ if hp > 0 {
 		case enemy_states.powerattack: //state = 4
 			//randomize switching these. spike = rare, less rare when HP is less than X. 
 			//if HP = less than X, make atk_type = 3
-			if atk_type = 1 scr_state_atk_throwrocks();				
+			if atk_type = 1 scr_boss_atk_throwrocks();				
 			if atk_type = 2 scr_state_atk_spikes();
 		break;
 	}

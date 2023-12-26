@@ -41,6 +41,18 @@ function VerticalCollision(){
 	if vsp > 10 vsp = 10;
 }
 
+//BASIC LOW GRAVITY (IE PROJECTILES) 
+function LowGravityItems(){ 
+	var grv = 0.14;
+	vsp = vsp + grv;
+	if (place_meeting(x,y+vsp, oWallParent)) or (place_meeting(x,y+vsp,oPlatformParent))
+	{
+		vsp = 0;	
+	}
+	y = round(y + vsp);
+	if vsp > 10 vsp = 10;
+}
+
 //reusable vertical collisions (for enemies)
 /// @function			sprite_offset_cleanup(); 
 /// @description		sets all enemy off to bottom center

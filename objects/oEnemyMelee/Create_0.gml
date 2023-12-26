@@ -38,8 +38,8 @@ v=0 // vertical speed. this is absolutely retarded,
 leap_timer = 0;
 leap_goal = 0; //75;
 leap_str = 4; // height of the leap
-leap_horizontal_str = 7 // 
-leap_ver_str = -4.5 // 
+leap_horizontal_str = 7; // 
+leap_amount = -4.5 //should be moved i think
 leap_min_dis = 400;
 h_leap = 0; h_leap_goal = 0; //goal = speed it wants to be
 v_leap = 0;

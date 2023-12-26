@@ -28,8 +28,8 @@ if !instance_exists(oPlayer) {
 }
 
 #region visual stuff
-if dir != dir_new && alarm[1] <=0 {
-	dir = lerp(dir,dir_new,0.8);
+if dir != dir_facing && alarm[1] <=0 {
+	dir = lerp(dir,dir_facing,0.8);
 }
 
 if alarm[1] > 0 {

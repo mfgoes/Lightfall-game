@@ -8,6 +8,6 @@ alarm[2] = 10; //generate after images
 collision_wall = false //if false, ignore walls (making it easier to hit the player)
 
 dir = 0; 
-dir_new = dir; //for changing directions
+dir_facing = dir; //for changing directions
 spd = 0;
 image_angle = choose(0,90,180,270);

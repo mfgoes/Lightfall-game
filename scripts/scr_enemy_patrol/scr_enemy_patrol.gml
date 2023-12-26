@@ -3,6 +3,13 @@
 function scr_enemy_patrol() {
     // GMLive Code for Automatic Reloading
     if (live_call()) return live_result;
+	
+	var isOutsidePatrolArea = return_to_patrol_area();
+	 // Skip the rest of the patrol logic if outside patrol area
+    if (isOutsidePatrolArea) {
+        return;
+    }
+ 
 
     // Handle collision detection
     handle_collision_detection();
@@ -16,6 +23,7 @@ function scr_enemy_patrol() {
     // Check if player is within sight range
     check_player_detection();
 }
+
 function handle_collision_detection() {
     // Constants
     var max_spd = walk_spd;
@@ -34,11 +42,9 @@ function handle_collision_detection() {
     var ledge_reachable = place_meeting(x + patrol_dir * TILE_SIZE, y + TILE_SIZE, oWallParent);
 
     // Decide to change direction if a wall is close ahead or the ledge is not reachable
-    if (wall_detected || !ledge_reachable || 
-        (x <= xstart - wander_range + buffer_zone && patrol_dir == -1) ||
-        (x >= xstart + wander_range - buffer_zone && patrol_dir == 1)) {
-        change_direction();
-    }
+    if (wall_detected || !ledge_reachable) {
+    change_direction();
+	}
 }
 function control_speed() {
     // GMLive Code for Automatic Reloading
@@ -77,13 +83,44 @@ function move_patrol() {
     if (patrol_dir != 0) image_xscale = -patrol_dir;
 }
 
+function return_to_patrol_area() {
+    // Check if outside patrol range
+    if (x < xstart - wander_range || x > xstart + wander_range) {
+        // Determine the target position within the patrol range
+        var targetX = clamp(x, xstart - wander_range, xstart + wander_range);
+
+        // Calculate the direction towards the target position
+        var direction_to_target = sign(targetX - x);
+
+        // Update patrol_dir based on the direction to the target
+        patrol_dir = direction_to_target;
+
+        // Move towards the target position using walk_spd
+        if !place_meeting(x+4*patrol_dir,y,oWallParent) 
+			x += patrol_dir * walk_spd;
+		else {
+			 current_state = enemy_states.approach; 
+		}
+
+        // Update image_xscale for sprite orientation
+        if (patrol_dir != 0) {
+            image_xscale = -patrol_dir;
+        }
+
+        // Return true if still outside patrol area, false otherwise
+        return (x < xstart - wander_range || x > xstart + wander_range);
+    }
+    return false;
+}
+
+
 function change_direction() {
     patrol_dir *= -1; // Reverse direction
     current_spd = 0; // Reset speed for direction change
 }
 
 function check_player_detection() {
-    if (point_distance(x, y, target.x, target.y) < sight_range) {
+    if (point_distance(x, y, target.x, target.y) < sight_range) && current_state != enemy_states.approach {
         alerted = 1; // Set alerted to 1
         create_alert_indicator(); // Create an image indicator
         current_state = enemy_states.approach; // Switch to approach state

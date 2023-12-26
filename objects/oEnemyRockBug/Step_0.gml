@@ -5,10 +5,12 @@ enemy_gravity_and_freeze();
 
 var can_move = (instance_exists(target) && instance_exists(oPlayer) && freeze = 0)
 
-if (can_move) {
-	
-	timer_init("player_sight");
+//live
+if (live_call()) return live_result; 
+
+if (can_move) {	
 	//declare some reusable variables
+	timer_init("player_sight");
 	var dis_from_target=point_distance(x,y,target.x,y)
 	var dis_min=25; 
 	var plr_dir = sign(target.x-x); if plr_dir = 0 plr_dir=1; //if x = same as player, force direction to right 
@@ -19,9 +21,9 @@ if (can_move) {
 		case enemy_states.approach: //player is spotted and you commence the attack. 
 			{		
 				scr_state_approach(); //basic approach code
-				scr_enemy_leap(); //leap towards player when close by
+				scr_enemy_leap_v2(); //leap towards player when close by
 				//scr_enemy_lunge(); //melee attack (moved out of leap code in Nov 2022)
-				scr_enemy_throw_rocks(); //throws rocks routinely 
+				scr_enemy_throw_rocks(); //throws rocks at player (only when in air from jump)
 				scr_revert_to_patrol(); 
 			}
 			//animations

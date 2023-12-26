@@ -8,7 +8,7 @@ draw_sprite_ext(sprite_index, image_index, x, y, flip_image, 1, image_angle, c_w
 effect_flash();
 
 // Debug visual
-
+/*
 if (global.debugmode) {
 	var sprite_name = sprite_get_name(sprite_index); // Get the name of the current sprite
 	var debug_text = "Sprite: " + string(sprite_name) + " Image Speed: " + string(image_speed);
@@ -19,3 +19,4 @@ if (global.debugmode) {
 	var grounded_prev = (place_meeting(xprevious, yprevious + 1, oWallParent) || place_meeting(xprevious, yprevious + 1, oPlatformParent));
 	draw_text(x, y - 60, "g_prev: " + string(grounded_prev));
 }
+*/

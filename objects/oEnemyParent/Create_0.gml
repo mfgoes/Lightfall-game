@@ -28,7 +28,8 @@ enum enemy_states {
 	approach,
 	attack,
 	powerattack,
-	lunge //new. used for melee enemy 
+	lunge,
+	return_to_patrol, //returns to patrol area
 }
 current_state = enemy_states.idle;
 
@@ -55,16 +56,18 @@ approach_spd = 1.2;
 wall_close_ahead = false; //for decelerating. 
 decelerate_dist = TILE_SIZE;
 
+
 reload_spd = 55;		
 	
 //patrolling
-sight_range = 80 + round(random_range(5,10)); //when to detect player
-atk_range = 35; //closest distance for attacks
+sight_range = 90 + round(random_range(5,10)); //when to detect player
+atk_range = 55; //closest distance for attacks
 patrol_dir = choose(1, -1); //which direction to walk into
 patrol_xstart = xstart;
 patrol_ystart = ystart;
 wander_range = 50; 
 alerted = 0; //if player has already been sighted by this unit.
+maintain_distance = false; //if true, don't approach too much
 
 //misc 
 grounded = false;
