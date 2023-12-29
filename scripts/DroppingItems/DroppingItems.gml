@@ -16,8 +16,8 @@ function DropAmmo(dropRate, dropAmount)
     }
 }
 
-/// @param dropRate The drop rate or chance of an ammo drop occurring.
-///                Specify a lower value to increase the chance of a drop.
+/// @param dropRate The drop rate or chance of a drop occurring.
+///                Range of chance between 0 (0%) and 1 (100%)
 /// @param dropAmount The number of ammo drops to create.
 ///                   Specify an integer greater than or equal to 1. ie if Rate is 5, it's 1 in 5. 
 ///                   If not specified, defaults to 1.

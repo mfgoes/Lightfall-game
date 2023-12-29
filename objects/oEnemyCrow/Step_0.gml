@@ -35,7 +35,7 @@ if instance_exists(target) && freeze = 0 {
 	case enemy_states.approach: //not sure why he rewrote this code
 		{		
 			scr_state_approach(); //basic approach code
-			//scr_enemy_leap(); //leap towards player when close by
+			//scr_enemy_leap_random(); //leap towards player when close by
 			scr_enemy_lunge(); //melee attack (moved out of leap code in Nov 2022)
 		}
 		//animations

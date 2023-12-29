@@ -13,6 +13,13 @@ effect_flash();
 
 
 //debug
+if (global.debugmode) {
+	draw_set_color(c_red);
+	draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_top,1);	
+	draw_set_color(c_white);
+}
+
+//debug old
 /*
 if (global.debugmode) {
 	//draw collision box 

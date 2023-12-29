@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oEnemyMelee",
+  "name": "oEnemyMaggotBig",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -13,14 +13,14 @@
     "path": "folders/Objects/Enemies2.yy",
   },
   "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
+    "name": "oEnemyMelee",
+    "path": "objects/oEnemyMelee/oEnemyMelee.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
-  "physicsFriction": 0.0,
-  "physicsGroup": 0,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
   "physicsObject": false,
@@ -32,13 +32,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBoom_walk_cuteeyes",
-    "path": "sprites/sBoom_walk_cuteeyes/sBoom_walk_cuteeyes.yy",
+    "name": "Maggot_big",
+    "path": "sprites/Maggot_big/Maggot_big.yy",
   },
   "spriteMaskId": null,
-  "tags": [
-    "enemy",
-    "entity",
-  ],
   "visible": true,
 }

@@ -2,7 +2,8 @@
 //gm live 
 //if (live_call()) return live_result;
 
-event_inherited();
+scr_initialize_enemy(); 
+
 target=oPlayer
 //general adjustments
 walk_spd = 1;

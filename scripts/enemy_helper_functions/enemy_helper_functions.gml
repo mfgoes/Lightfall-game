@@ -69,7 +69,7 @@ function scr_enemy_throw_rocks() {
             var dd = instance_create_depth(x, y-20, depth, oRockProjectileGrav);
             dd.dir = ang_to_target + random_range(-10,10);
             dd.spd = 6;
-            dd.damage = 0; // inherit damage from monster
+            dd.damage = 1; // inherit damage from monster
         }   
     }
 }

@@ -140,7 +140,7 @@ if timer_get("attack_reload") <=0 {
 }
 
 //frog leap (no damage)
-function scr_enemy_leap() {
+function scr_enemy_leap_random() {
 	//REWORKED LEAP CODE
 	timer_init("leap_timer");
 	var dir = sign(target.x - x); if dir = 0 {dir = 1;}
@@ -183,7 +183,7 @@ function scr_enemy_leap() {
 }
 
 //updated leap test (2023)
-function scr_enemy_leap_v2() {
+function scr_enemy_leap_if_close() {
 	timer_init("leap_timer"); //how often to leap
     timer_init("leap_duration"); //how long to leap (longer = higher jump)
     
