@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Tileset_Add_on___Modified",
+  "name": "TileGrassRedSOURCE",
   "bbox_bottom": 367,
   "bbox_left": 0,
   "bbox_right": 372,
@@ -9,21 +9,18 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
-  "ConfigValues": {
-    "GAME_NOMENUS": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
-  },
   "DynamicTexturePage": false,
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"efd42594-ae4d-46a2-94a8-aa889ba81061",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84059da2-bc9a-4a76-803f-de4f8575c0d0",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 384,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"17868be2-dda6-41e6-8e88-62dc4c659614","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e6c3b6a1-faec-45b4-8f66-737e616fe832","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -35,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Tileset_Add_on___Modified",
+    "name": "TileGrassRedSOURCE",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -57,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"efd42594-ae4d-46a2-94a8-aa889ba81061","path":"sprites/Tileset_Add_on___Modified/Tileset_Add_on___Modified.yy",},},},"Disabled":false,"id":"81e96fd1-9a73-4008-a643-37b302d8a870","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"84059da2-bc9a-4a76-803f-de4f8575c0d0","path":"sprites/TileGrassRedSOURCE/TileGrassRedSOURCE.yy",},},},"Disabled":false,"id":"83110093-e4a3-45e7-8575-062c53ca4b06","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

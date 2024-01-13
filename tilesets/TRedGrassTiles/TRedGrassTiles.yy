@@ -1,7 +1,7 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "TDarkGrassTiles",
+  "name": "TRedGrassTiles",
   "autoTileSets": [
     {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"47 grass","closed_edge":false,"tiles":[
         75,
@@ -322,8 +322,8 @@
     "path": "folders/Graphics and Sprites/TILES/DARK GRASS TILES.yy",
   },
   "spriteId": {
-    "name": "TileGrassGreenSOURCE",
-    "path": "sprites/TileGrassGreenSOURCE/TileGrassGreenSOURCE.yy",
+    "name": "TileGrassRedSOURCE",
+    "path": "sprites/TileGrassRedSOURCE/TileGrassRedSOURCE.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

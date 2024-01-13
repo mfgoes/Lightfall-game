@@ -37,6 +37,7 @@ if instance_exists(target) && freeze = 0 {
 			scr_state_approach(); //basic approach code
 			scr_enemy_leap_random(); //leap towards player at random times
 			scr_enemy_lunge(); //melee attack (moved out of leap code in Nov 2022)
+			scr_revert_to_patrol(); 
 		}
 		//animations
 		var dir = sign(target.x - x); if dir = 0 {dir = 1;}
@@ -77,6 +78,11 @@ if instance_exists(target) && freeze = 0 {
 				atk_anim_x = 0;
 				current_state = enemy_states.approach;
 			}
+		}
+		break;
+	case enemy_states.patrol:
+		{
+			scr_enemy_patrol();	
 		}
 		break;
 	}	

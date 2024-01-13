@@ -7,7 +7,7 @@ scr_initialize_enemy();
 target=oPlayer
 //general adjustments
 walk_spd = 1;
-approach_spd = 1.2;
+approach_spd = choose(2,3,3.2);
 wander_range = 80; //maximum patrol area
 reload_spd = 65; 
 
@@ -17,7 +17,7 @@ atk_anim_x = 0 //; //lerp between two points
 
 //REPLACE THIS SHITTY SYSTEM WITH STATES. 
 //atk_anim_p = 1; //phase 1 = lunge, phase 2 = go back (add phase 0 = charge) 
-current_state = enemy_states.approach;
+current_state = enemy_states.patrol;
 out_of_range = false; 
 sight_range = 80 + round(random(5)); //when to detect player
 atk_range = 5; //closest distance for attacks
