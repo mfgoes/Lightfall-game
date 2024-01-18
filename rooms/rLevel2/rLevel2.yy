@@ -92,6 +92,7 @@
     {"name":"inst_46A89927","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_220B61BA","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_45284D22","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_3C2ECE55","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -116,6 +117,9 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_220B61BA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"propertyId":{"name":"goto_room","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"value":"rLevel3",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1094.0,"y":303.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3C2ECE55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"properties":[
+                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"propertyId":{"name":"CurrentTheme","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"value":"1",},
+              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":160.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"WallsTiled","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_26F20713_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oAutoTile32","path":"objects/oAutoTile32/oAutoTile32.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":256.0,},

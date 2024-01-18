@@ -19,7 +19,7 @@ switch(modeID) {
 	break;
 	case 3: {
 		modename = "daytime mode"
-		ambient_alpha_new = 1;
+		ambient_alpha_new = 0.94;
 		col = c_white;
 	}
 	break; 
