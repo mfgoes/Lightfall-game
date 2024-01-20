@@ -1,6 +1,6 @@
 /// @description switch between color modes
 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //switch between lighting modes
 switch(modeID) {
@@ -24,9 +24,9 @@ switch(modeID) {
 	}
 	break; 
 	case 4: {
-		modename = "snow"	
-		ambient_alpha_new = 0.9;
-		col = make_color_rgb(239,239,246);
+		modename = "pretty dark"	
+		ambient_alpha_new = 1;
+		col = c_white; //make_color_rgb(239,239,246);
 	}
 	break;
 }

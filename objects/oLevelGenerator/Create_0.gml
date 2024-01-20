@@ -1,7 +1,10 @@
 //@desc generate particles/effects per room
 
 //Tilesets
-if instance_exists(oLevelThemeSetter) CurrentTheme = oLevelThemeSetter.CurrentTheme; 
+if instance_exists(oLevelThemeSetter) {
+	CurrentTheme = oLevelThemeSetter.CurrentTheme; 
+	//obj_Aura_Control.modeID = CurrentTheme;
+}
 else
 CurrentTheme = 0;
 

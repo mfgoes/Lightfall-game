@@ -80,7 +80,7 @@ function ThemeSwitcher() {
 				init_autotile()
 		   }
 			if instance_exists(obj_Aura_Control) {
-				obj_Aura_Control.modeID = 3; 
+				obj_Aura_Control.modeID = 3; //cave light
 			}
             break;
         case "sand":
@@ -90,7 +90,7 @@ function ThemeSwitcher() {
 				init_autotile()
 			}
 			if instance_exists(obj_Aura_Control) {
-				obj_Aura_Control.modeID = 3; 
+				obj_Aura_Control.modeID = 3; //somewhat light 
 			}
 		   break;
         case "darkforest":
@@ -100,7 +100,7 @@ function ThemeSwitcher() {
 				init_autotile()
 			}
 			if instance_exists(obj_Aura_Control) {
-				obj_Aura_Control.modeID = 1; 
+				obj_Aura_Control.modeID = 1; //dark
 			}
             break;
         case "snow":
@@ -110,7 +110,7 @@ function ThemeSwitcher() {
 				init_autotile()
 		   }
 			if instance_exists(obj_Aura_Control) {
-				obj_Aura_Control.modeID = 4; 
+				obj_Aura_Control.modeID = 4; //very light 
 			}
 			break;
 		case "morningforest":
@@ -120,7 +120,7 @@ function ThemeSwitcher() {
 				init_autotile()
 			}
 			if instance_exists(obj_Aura_Control) {
-				obj_Aura_Control.modeID = 2; 
+				obj_Aura_Control.modeID = 3; //very light 
 			}
 		   break;
 	}
@@ -156,7 +156,7 @@ function initializeLevelGenerator() {
 ///@desc draws the backgrounds of the levels
 function draw_background_theme() {
 	
-	if (live_call()) return live_result; 
+	//if (live_call()) return live_result; 
 	
 	//enable theme switching
 	 with(oLevelGenerator) {
@@ -206,7 +206,7 @@ function draw_background_theme() {
 		}
 	        break;
 		case "morningforest": {
-			var bgr_sky = bgr_dark_stars;	//furthest in the back
+			var bgr_sky = bgr_forest;	//furthest in the back
 			var bg_hills = bgr_hills;		//second furthest
 			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
 		}

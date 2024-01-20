@@ -5,7 +5,7 @@ var ram_x;
 var spaceAvailable; 
 
 //live
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 // Loop to create 3 baby maggots
 for (var i = 0; i < spawn_amount; i++) {

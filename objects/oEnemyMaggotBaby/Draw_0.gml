@@ -1,6 +1,6 @@
 //@desc draw sprite
 // Maggot's Draw Event
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 
 // Save the current blend mode

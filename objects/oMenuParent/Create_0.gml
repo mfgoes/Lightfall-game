@@ -28,7 +28,7 @@ margin_y_win = (gui_height/5);
 
 menu_x_target = gui_width/2;
 menu_speed = 15; //lower = faster
-font_pixel = f_title_sans;
+font_pixel = font_m5x7; //f_title_sans;
 font_header = font_m5x7;
 menu_committed = -1;
 menu_control = true; //can control menu

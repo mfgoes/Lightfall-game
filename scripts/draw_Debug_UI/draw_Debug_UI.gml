@@ -8,7 +8,7 @@ function draw_Debug_UI(){
 
 		
 function draw_debug_info(){
-	if (live_call()) return live_result; 
+	//if (live_call()) return live_result; 
 	
 	draw_set_font(fSign); 
 	draw_set_color(c_white); 

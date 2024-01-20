@@ -1,8 +1,36 @@
 if (live_call()) return live_result;
 
+// Define colors + font
+var col_bgr = make_color_rgb(22, 25, 27);
+var col_hover = make_color_rgb(220, 215, 156);
+var col_text = make_color_rgb(255, 250, 196);
+var font_pixel = font_m5x7;
+var resolution = 2; 
+
+// Positioning
+var str = "Thanks for playing the demo.\nFollow me on Twitter for updates! -Mischa";
+var textX = (display_get_gui_width()*resolution) / 2;
+var textY = (display_get_gui_height()*resolution) / 2;
+
+//hide if menu exists
+if !instance_exists(oMenuParent) {
+	display_set_gui_size(RES_W*resolution, RES_H*resolution); //text is twice the resolution
+	draw_set_color(col_bgr);
+	draw_rectangle(textX-120*resolution,textY-90*resolution,textX+120*resolution,textY-40*resolution,0);
+
+	//Draw text
+	draw_set_halign(fa_center);
+	draw_set_color(col_text);
+	draw_set_font(font_pixel);
+	draw_text(textX, textY - 80*resolution, str);
+}
+
+display_set_gui_size(RES_W, RES_H); //text is twice the resolution
+
+/*
 // Define text
 var social = "@misho_dev";
-var str = "Thanks for playing the demo.\nFollow me on Twitter for updates! -Mischa";
+
 
 // Define colors
 var col_bgr = make_color_rgb(22, 25, 27);
@@ -20,7 +48,7 @@ var textX = (display_get_gui_width() - textWidth) / 2;
 var textY = (display_get_gui_height() - textHeight) / 2;
 
 // Calculate the mainMessageX position
-var mainMessageX = (display_get_gui_width() - string_width(str)) / 2;
+var mainMessageX = (display_get_gui_width()); 
 
 // Check if mouse is hovering over the text
 if (guiMouseX >= textX && guiMouseX <= textX + textWidth && guiMouseY >= textY && guiMouseY <= textY + textHeight) {
@@ -35,11 +63,15 @@ if (guiMouseX >= textX && guiMouseX <= textX + textWidth && guiMouseY >= textY &
     draw_set_color(col_text);
 }
 
+
 // Draw the background rectangle
 var padding = 10; // Adjust as needed
 draw_set_color(col_bgr);
 draw_set_alpha(0.8); 
-draw_rectangle(mainMessageX - padding, textY - 50 - padding, mainMessageX + string_width(str) + padding, textY + textHeight + padding, false);
+//draw_rectangle(mainMessageX - padding, textY - 50 - padding, mainMessageX + string_width(str) + padding, textY + textHeight + padding, false);
+
+draw_rectangle(20,0,100,100,0);
+
 draw_set_alpha(1); 
 
 // Draw the main message
@@ -59,3 +91,4 @@ if (guiMouseX >= textX && guiMouseX <= textX + textWidth && guiMouseY >= textY &
     draw_set_color(col_text);
     draw_text(textX, textY, social);
 }
+*/
