@@ -160,6 +160,7 @@
     {"id":{"name":"obj_Aura_Torch_Light","path":"objects/obj_Aura_Torch_Light/obj_Aura_Torch_Light.yy",},"order":0,},
     {"id":{"name":"Aura_Shadow_Casters","path":"scripts/Aura_Shadow_Casters/Aura_Shadow_Casters.yy",},"order":0,},
     {"id":{"name":"cell_checker","path":"objects/cell_checker/cell_checker.yy",},"order":0,},
+    {"id":{"name":"drawTextOutline","path":"scripts/drawTextOutline/drawTextOutline.yy",},"order":0,},
     {"id":{"name":"bgr_sand_night","path":"sprites/bgr_sand_night/bgr_sand_night.yy",},"order":2,},
     {"id":{"name":"DistributePickupsOnGround","path":"scripts/DistributePickupsOnGround/DistributePickupsOnGround.yy",},"order":0,},
     {"id":{"name":"snDartGun2","path":"sounds/snDartGun2/snDartGun2.yy",},"order":3,},

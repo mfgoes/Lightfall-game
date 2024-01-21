@@ -111,6 +111,7 @@
     {"name":"sBgr_NightSky","order":5,"path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},
     {"name":"obj_Aura_Torch_Light","order":3,"path":"objects/obj_Aura_Torch_Light/obj_Aura_Torch_Light.yy",},
     {"name":"Aura_Shadow_Casters","order":5,"path":"scripts/Aura_Shadow_Casters/Aura_Shadow_Casters.yy",},
+    {"name":"drawTextOutline","order":3,"path":"scripts/drawTextOutline/drawTextOutline.yy",},
     {"name":"bgr_sand_night","order":2,"path":"sprites/bgr_sand_night/bgr_sand_night.yy",},
     {"name":"snDartGun2","order":3,"path":"sounds/snDartGun2/snDartGun2.yy",},
     {"name":"snJump3","order":2,"path":"sounds/snJump3/snJump3.yy",},

@@ -28,7 +28,7 @@ function draw_health_and_mana() {
 	
 	//temp colors (fix these later
 	var col_bgr_bar = c_black; //make_colour_rgb(55, 51, 52); //hp bgr
-	var col_hp = make_colour_rgb(139, 66, 96); //hp fgr
+	var col_hp = make_colour_rgb(68, 155, 108); //hp fgr
 	var col_mana = make_colour_rgb(156, 158, 180); //hp fgr
 	var col_text = make_colour_rgb(243, 255, 237); //hp fgr
 	
