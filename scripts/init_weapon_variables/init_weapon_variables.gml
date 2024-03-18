@@ -33,7 +33,7 @@ function init_weapon_variables(){
 	
 	//basic speed of each weapon
 	reload_time			= 40; //default ranged
-	secondary_cooldown  = 50; //default melee
+	secondary_cooldown  = 90; //default melee
 	third_cooldown		= 30; 
 	//roll_cooldown		= 80; //roll is setup in the player event. In case there's no weapon (ie market area). To do; setup here anyway for consistency. 
 	
@@ -54,6 +54,7 @@ function init_weapon_variables(){
 	
 	// Current Weapon (This can be a reference to one of the weapon structs)
     current_weapon = 2; //0 = none, 1 = bow. 2 = fast gun
+	if room = rTutorial current_weapon = 0;
 	using_ability = 0;
 	
 	//find a way to remove these later
@@ -90,6 +91,12 @@ function draw_weapon_sprite() {
 	//else 
 	if using_ability = 1 or alarm[0] = 0 or current_weapon = 0 //alarm to hide weapons again (i prefer this look)
 		image_alpha = 0; 
+	if oPlayer.key_secondary {
+		image_alpha = 1; 	
+		var sprite = sBow_Slimmer; 
+	}
+		
+	//if secondary ability, set to 1. 
 
 
 	//bow charging effect

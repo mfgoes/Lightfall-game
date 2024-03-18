@@ -28,7 +28,9 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"current_weapon","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":5.0,"rangeMin":0.0,"value":"1","varType":1,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "sWeapon_pickup_highlight_blue",

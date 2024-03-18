@@ -15,8 +15,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Aura",
-    "path": "folders/Tile Sets/Aura.yy",
+    "name": "TILES",
+    "path": "folders/Graphics and Sprites/TILES.yy",
   },
   "spriteId": {
     "name": "spr_DEMO_Tile",

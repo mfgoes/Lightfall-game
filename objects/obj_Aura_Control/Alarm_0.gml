@@ -25,6 +25,12 @@ switch(modeID) {
 		col = make_color_rgb(107,105,191);
 	}
 	break;
+	case 5: {
+		modename = "dark forest 5AM"	
+		ambient_alpha = 0.6;
+		col = make_color_rgb(121,131,175);
+	}
+	break;
 }
 aura_set_alpha(ambient_alpha); //lerp this
 aura_set_colour(col); 

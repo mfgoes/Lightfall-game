@@ -103,6 +103,17 @@ function ThemeSwitcher() {
 				obj_Aura_Control.modeID = 1; //dark
 			}
             break;
+		case "darkforest5AM": //slightly lighter color
+            // Apply the darkforest theme here
+			with (oAutoTile32) {
+				sprite_index = tile_forest_red_32;   
+				init_autotile()
+			}
+			if instance_exists(obj_Aura_Control) {
+				obj_Aura_Control.modeID = 5; // a bit dark
+			}
+            break;
+			
         case "snow":
             // Apply the snow theme here
 			with (oAutoTile32) {
@@ -207,6 +218,12 @@ function draw_background_theme() {
 	        break;
 		case "morningforest": {
 			var bgr_sky = bgr_forest;	//furthest in the back
+			var bg_hills = bgr_hills;		//second furthest
+			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
+		}
+	        break;
+		case "darkforest5AM": {
+			var bgr_sky = bgr_dark_stars;	//furthest in the back
 			var bg_hills = bgr_hills;		//second furthest
 			var bg_hillsfront = bgr_hills;	//third furthest	 	 	
 		}

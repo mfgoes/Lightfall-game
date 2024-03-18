@@ -10,19 +10,35 @@ VerticalCollision();  // Handle vertical collisions
 
 // Player Proximity & Interaction
 nearby = (distance_to_object(oPlayer) < TILE_SIZE && !instance_exists(oText));
-if keyboard_check(ord("E")) && nearby 
+if keyboard_check_pressed(ord("E")) && nearby && alarm[0] <= 0
 {
-    with (oPlayerWeapon) 
+     // Play sounds & destroy
+    audio_play_sound(snd_button2, 2, 0, 0.5);
+    audio_play_sound(sn_EquipMagical, 3, 0, 0.24,0,choose(0.9,0.96,1));
+    instance_destroy();
+	
+	//create a new pickup if player is holding a weapon
+	var new_weapon = oPlayerWeapon.current_weapon;	
+	if new_weapon != 0 {
+		inst = instance_create_depth(x,y-10,depth-1,oPickupWeapon);
+		inst.current_weapon = new_weapon;	
+		inst._start_ammo = oPlayerWeapon.ammo_basic; 
+
+	}
+	
+	with (oPlayerWeapon) 
     {
         current_weapon = other.current_weapon; 
         var weapon_struct = global.weapon_list[oPlayerWeapon.current_weapon];
         show_debug_message("picked up a " + string(weapon_struct.weapon_name) + "!");
         
         // Display ammo toast
-        dd = instance_create_depth(x, y-45, depth, oToastUI);
-        dd.str = "+" + string(other.startAmmo); 
-        dd.toast_type = variant.upgrade;
-        ammo_basic = other.startAmmo;
+        if ammo_basic <= 0 {
+			dd = instance_create_depth(x, y-45, depth, oToastUI);
+	        dd.str = "+" + string(other.startAmmo); 
+	        dd.toast_type = variant.upgrade;
+	        ammo_basic = other.startAmmo;
+		}
     }
     
     // Create dust upon destruction
@@ -33,10 +49,7 @@ if keyboard_check(ord("E")) && nearby
         if random(1) < 0.4 { dd.col_start = c_yellow; }
     }
     
-    // Play sounds & destroy
-    audio_play_sound(snd_button2, 2, 0, 0.5);
-    audio_play_sound(snClick, 3, 0, 0.24);
-    instance_destroy();
+   
 }
 
 // Visual Effects

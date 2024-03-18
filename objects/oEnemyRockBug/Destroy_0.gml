@@ -1,1 +1,1 @@
-DropAmmo(4,1); 
+DropAmmoOrHealth(0.5,1,0.2)

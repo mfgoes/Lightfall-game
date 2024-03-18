@@ -20,7 +20,7 @@ if spd > 0 { //check if in wall
 
 
 //destroy after a certain distance
-if abs(x-xstart) > distance_max {
+if point_distance(x,y,xstart,ystart) > distance_max {
 	//poof
 	repeat(3) with (instance_create_layer(x,y,"Bullets",oDust)) {
 			vsp = -1.5; if random(1) < 0.2 vsp = 1; image_alpha = 0.6+random(0.3);

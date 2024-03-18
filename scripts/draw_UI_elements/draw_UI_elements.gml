@@ -61,6 +61,7 @@ function draw_weapon_UI() {
 	if (live_call()) return live_result; 
 	
 	//UI variables
+	var pos_y = 7;
 	var UI_top = 10;
 	var UI_left = 8;
 	var res = 2; 
@@ -77,12 +78,13 @@ function draw_weapon_UI() {
 	draw_set_alpha(1); draw_set_color(c_white);	
 	
 	//draw weapon icons
-	if instance_exists(oPlayerWeapon) { //(is_struct(oPlayerWeapon.current_weapon))
+	if instance_exists(oPlayerWeapon) && keyboard_check(vk_tab) { //only show when activating this menu
 		var weapon_struct = global.weapon_list[oPlayerWeapon.current_weapon];
 		var weapon_name = weapon_struct.weapon_name;
 		var mb = 18; 
-		draw_sprite(weapon_icons_2023,weapon_struct.icon_image,UI_left,UI_bot-mb*2); //primary 
-		draw_sprite(weapon_icons_2023,2,UI_left,UI_bot-mb*4); //secondary
+		draw_sprite(weapon_icons_2023,1,UI_left,UI_bot-mb*2); //secondary //weapon_struct.icon_image
+		draw_sprite(weapon_icons_2023,3,UI_left,UI_bot-mb*4); //primary
+		draw_sprite(weapon_icons_2023,2,UI_left,UI_bot-mb*6); //knife
 		
 		if (global.debugmode) draw_text(UI_left,UI_bot-15,"weapon name: " + string(weapon_struct.weapon_name));
 	}
@@ -94,6 +96,8 @@ function draw_weapon_UI() {
 	draw_rectangle_color(UI_left+pos_x_text-2,UI_bot+2,UI_left+pos_x_text+10,UI_bot+12,c_black,c_black,c_black,c_black,0);
 	draw_set_alpha(1); 
 	draw_set_color(col_text);
+	//draw coins
+	draw_text(38,UI_bot,"0"); 
 	
 	//ammo count
 	var res = 2; 
@@ -112,8 +116,7 @@ function draw_weapon_UI() {
 	draw_set_color(col_text); 
 	draw_text(UI_left+pos_x_text,UI_bot+pos_y,oPlayerWeapon.ammo_basic); 
 	
-	//draw coins
-	draw_text(38,UI_bot+pos_y,"0"); 
+	
 			
 	if round((reload_time_max - reload_time)*time_c) != 0 {
 		draw_set_alpha(0.3);

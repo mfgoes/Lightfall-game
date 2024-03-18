@@ -22,8 +22,8 @@ function PlayerInput(){
 		if alarm[0] == -1 
 		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_face1)			|| keyboard_check(ord("J"));	
 		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr)		|| keyboard_check(ord("K"));	
-		key_secondary_released =  mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_shoulderr) || keyboard_check_pressed(ord("K"));	
-		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3)			|| keyboard_check(ord("L"));	
+		key_secondary_released =  mouse_check_button_released(mb_right) || gamepad_button_check_released(0,gp_shoulderr) || keyboard_check_released(ord("L"));	
+		key_special = keyboard_check(ord("Q"))			|| gamepad_button_check(0,gp_face3)			|| keyboard_check(ord("V"));	//melee punch
 		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);		//Evade
 		key_grapple = keyboard_check(ord("G"))			|| gamepad_button_check(0,gp_shoulderl);	//Grappling hook (unlock later)
 		

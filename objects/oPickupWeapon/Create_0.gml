@@ -1,11 +1,19 @@
 /// @description Initialize pickup variables
 
+/*
+Weapon types
+0 = Bow (no longer available. to do: replace)
+1 = Fast Gun
+2 = Heavy Gun
+3 = Explosive Gun
+4 = Bazooka
+*/
+
 // Weapon-related properties
-current_weapon  = 1; 
-startAmmo = -1;       // Ammo count at first spawn 
+startAmmo = 10;       // Ammo count at first spawn 
 
 // Timers and countdowns
-alarm[0] = 5;
+alarm[0] = 10;
 
 // Movement properties
 hsp = random_range(1,-2);  // Horizontal speed
@@ -24,3 +32,5 @@ image_speed = 0;     // Sprite animation speed
 depth += 50;         // Ensure the object renders behind the player
 wobble_triggered = false;  // Flag to track if the wobble effect has started
 hover_timer = 0; 
+
+//instance_create_depth(x,y,depth+10,)

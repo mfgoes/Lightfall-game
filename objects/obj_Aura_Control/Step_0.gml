@@ -29,6 +29,12 @@ switch(modeID) {
 		col = c_white; //make_color_rgb(239,239,246);
 	}
 	break;
+	case 5: {
+		modename = "dark forest 5AM"	
+		ambient_alpha = 0.6;
+		col = make_color_rgb(121,131,175);
+	}
+	break;
 }
 
 //update colors (check if it's not equal to the previous modenID first

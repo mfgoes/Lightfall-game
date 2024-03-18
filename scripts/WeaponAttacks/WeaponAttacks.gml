@@ -46,16 +46,39 @@ function primaryWeaponAttack() {
 				
 			case 2: // Fast gun (short distance)
 			if (ammo_basic > 0 && timer_get("reload_time") <= 0) {
-                    with (instance_create_layer(_x, _y, "Bullets", oArrow)) {
+                    with (instance_create_layer(_x, _y, "Bullets", oArrow_Triple)) {
                         direction = oPlayerWeapon.shoot_direction + random_range(-10,10);
 						randomize(); 
-						distance_max = 76;  
+						distance_max = 100 + random(30);  
                         damage = weapon_damage;
 						
 						//to do: play sound file depending on gun type later
 						var pitch = 1; 
 					    if damage <= 5 pitch = 1.2;
 						if damage > 20 pitch = 0.8;
+						angle_randomize = choose(-15,-5,0,5,15);
+						audio_sound_pitch(snBlaster, pitch);
+						audio_sound_gain(snBlaster, 0.35, 0);
+						if damage > 20 audio_sound_gain(snBlaster, 0.5, 0);
+					    audio_play_sound(snBlaster, 2, 0);
+                    }
+                    ammo_basic -= 1;
+					weapon_recoil = 3; //amount of visual recoil
+                    timer_set("reload_time", weapon_reload_time);
+                    oUIElements.reload_time = 0; // Update UI
+                }
+			break; 
+			
+			case 3: // Heavy gun (mid distance, slow)
+			if (ammo_basic > 0 && timer_get("reload_time") <= 0) {
+                    with (instance_create_layer(_x, _y, "Bullets", oArrow_Triple)) {
+                        direction = oPlayerWeapon.shoot_direction + random_range(-10,10);
+						randomize(); 
+						distance_max = 100 + random(30);  
+                        damage = weapon_damage;
+						
+						//to do: play sound file depending on gun type later
+						var pitch = 0.7;
 						angle_randomize = choose(-15,-5,0,5,15);
 						audio_sound_pitch(snBlaster, pitch);
 						audio_sound_gain(snBlaster, 0.35, 0);
@@ -102,10 +125,17 @@ function primaryWeaponAttack() {
         // ...
     }
 	 // release to shoot bow
-    ShootBowRelease(); 
+    //ShootBowRelease(); 
 }
 
-
+function secondaryBowAttack() {
+	if oPlayer.key_secondary && oPlayer.mana > 3 {
+		ShootBowCharge(); 
+		oPlayer.can_move = false; 
+		oPlayer.hsp = 0; 
+	}
+	ShootBowRelease();
+}
 
 
 function ShootBowCharge() {
@@ -142,52 +172,55 @@ function ShootBowCharge() {
 
 function ShootBowRelease() {
 	
-	if current_weapon = 1 { //bow
+	 { //bow if current_weapon = 1
 	#region Primary Fire Logic
-	var key_primary_released	= oPlayer.key_primary_released;
+	var key_secondary_released	= oPlayer.key_secondary_released;
 	
-		if (key_primary_released) && timer_get("reload_time") = -1 { //  && ammo_basic > 0
-	    // Recoil
-	    with(oPlayer) {
-	        var dir = lengthdir_x(-8, oPlayerWeapon.image_angle);
-	        if !place_meeting(x+dir, y-1, oWallParent) && !(oPlayer.grounded)
-	            x += dir;
-	        if !(oPlayer.grounded) 
-				vsp = -jump_speed;
-	    }
-		//ammo_basic -= 1;    //update 2023: bow doesn't consume ammo but mana. 
-		oPlayer.mana -=1; if oPlayer.mana <= 0 oPlayer.mana = 0; 
+		if (key_secondary_released) && timer_get("secondary_cooldown") = -1 &&  oPlayer.mana >= 3 { //  && ammo_basic > 0
+			//
+			oPlayer.can_move = true;
+			
+			// Recoil
+		    with(oPlayer) {
+		        var dir = lengthdir_x(-8, oPlayerWeapon.image_angle);
+		        if !place_meeting(x+dir, y-1, oWallParent) && !(oPlayer.grounded)
+		            x += dir;
+		        if !(oPlayer.grounded) 
+					vsp = -jump_speed;
+		    }
+			//ammo_basic -= 1;    //update 2023: bow doesn't consume ammo but mana. 
+			oPlayer.mana -=3; if oPlayer.mana <= 0 oPlayer.mana = 0; 
 	    
-		timer_set("reload_time", reload_time);
-	    oUIElements.reload_time = 0; //for UI purposes
-	    audio_sound_gain(snBlaster, 0.35, 0);
-	    audio_sound_pitch(snBlaster, choose(0.9, 0.93, 1));
-	    audio_play_sound(snBlaster, 2, 0);
+			timer_set("secondary_cooldown", 50); //to do: use secondary_cooldown instead later
+		    oUIElements.reload_time = 0; //for UI purposes
+		    audio_sound_gain(snBlaster, 0.35, 0);
+		    audio_sound_pitch(snBlaster, choose(0.9, 0.93, 1));
+		    audio_play_sound(snBlaster, 2, 0);
     
-	    // Create projectile
-	    var _dist = 10; 
-	    var _x = x + lengthdir_x(_dist, image_angle);
-	    var _y = y + lengthdir_y(_dist, image_angle);
+		    // Create projectile
+		    var _dist = 10; 
+		    var _x = x + lengthdir_x(_dist, image_angle);
+		    var _y = y + lengthdir_y(_dist, image_angle);
 		
-	    with (instance_create_layer(_x, _y, "Bullets", oArrow)) { //with (instance_create_layer(x, y, "Bullets", oBullet)) {
-	        direction = oPlayerWeapon.shoot_direction;
+		    with (instance_create_layer(_x, _y, "Bullets", oArrow)) { //with (instance_create_layer(x, y, "Bullets", oBullet)) {
+		        direction = oPlayerWeapon.shoot_direction;
 			
         
-	        // Variable damage
-	        if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.8 {
-	            damage = 6;
-	            super_arrow = true;
-	            audio_sound_pitch(snDartGun2, 1);
-	        }
-	        else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.45 {
-	            damage = 4;
-	        }
-	        else {
-	            damage = 3;
-				break_on_hit = true; //shooting a weak arrow means it breaks instantly.
+		        // Variable damage
+		        if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.8 {
+		            damage = 6;
+		            super_arrow = true;
+		            audio_sound_pitch(snDartGun2, 1);
+		        }
+		        else if oPlayerWeapon.weapon_charge >= oPlayerWeapon.weapon_charge_max * 0.45 {
+		            damage = 4;
+		        }
+		        else {
+		            damage = 3;
+					break_on_hit = true; //shooting a weak arrow means it breaks instantly.
 				
-	        }
-		}
+		        }
+			}
 		
 		// Reset weapon
 		weapon_charge = 0;
@@ -197,7 +230,7 @@ function ShootBowRelease() {
 	    ScreenShake(2, 1);
 		}   
 		else if ammo_heavy = 0 {
-		    if (key_primary_released) {
+		    if (key_secondary_released) {
 		        audio_play_sound(snd_button2, 0, 0);	
 		    }
 		    oPlayerWeapon.weapon_charge = 0; 
@@ -206,6 +239,64 @@ function ShootBowRelease() {
 	}
 }
 
+
+/// @desc secondary attack (short range)
+function secondaryMeleeAttack() {
+	if oPlayer.key_special && timer_get("special_cooldown") <= 0 {
+			Ability_Sword_Attack(); // TODO: change this into a slot later
+			//ShootBowCharge(); 
+			
+			timer_set("special_cooldown", 20); 
+			timer_set("combo_cooldown", 50); 
+			combo_counter += 1; 
+			oPlayerWeapon.using_ability +=1; //this is a flag for the animation end
+
+		}
+
+		// Reset combo counter if cooldown expires
+		if timer_get("combo_cooldown") <= 0 {
+			combo_counter = 0; 	
+	}
+}
+
+
+function Ability_Sword_Attack() {
+	if(live_call()) return live_result;
+	if oPlayer.mana > 0 with(oPlayer) { //assume this move uses mana instead of ammo
+		//in this function you can manage combos and refine each attack.
+		mana -= 1;
+        var dir = lengthdir_x(4, facing_direction);
+		var gain = 0.85;
+        var pitch = 1;
+		var click_dir = sign(cos(degtorad(facing_direction))); //to do: fix this later
+		var dist = 15; //fix
+		image_index = 0; 
+        //spriteMelee = sPlayerSlash;
+		//image_speed = 0.5; 
+        if (oPlayerWeapon.combo_counter % 3 == 2) {
+            //spriteMelee = sPlayerStab;
+            dir = lengthdir_x(5, facing_direction);
+            gain = 0.85;
+            pitch = 1;
+        }
+	
+		dd = instance_create_depth(oPlayer.x + dist*click_dir, y, depth, oAttack_Sword);	
+		dd.image_yscale = 0.7;
+		dd.image_xscale = click_dir*0.7;
+		dd.damage = choose(3,4,4,5); //to do: allow upgrades of this in the future
+		
+		if combo_counter % 3 == 2 {
+			dd.image_xscale = click_dir*0.8;
+				
+		}
+		 // Apply recoil
+        if (!place_meeting(x + dir, y - 1, oWallParent)) {
+            x += dir;
+            //current_walkspd = 2;
+            hsp = 2 * sign(dir);
+        }	
+	}
+}
 
 
 function Ability_Secondary_Archer() { //TRIPLE SHOT. Edit Oct 1: no longer consumes mana

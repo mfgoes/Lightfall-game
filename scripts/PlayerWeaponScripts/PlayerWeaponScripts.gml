@@ -26,7 +26,11 @@ if oPlayer.state != PlayerStateRoll {
 	primaryWeaponAttack();  
 		
 	// Handle secondary attack
-	secondaryMeleeAttack(); 
+	secondaryMeleeAttack(); //make this ie F or middle mouse 
+	
+	// Re-add long shot here (and add gravity to the shot, and a longer cooldown)
+	secondaryBowAttack(); 
+	
 	}
 }
 
@@ -39,7 +43,7 @@ function updateWeaponPositionAndAngle() {
 
     // Handle weapon angle
     timer_init("change_angle");
-    if (oPlayer.key_primary || oPlayer.key_secondary || oPlayer.key_primary_released) {
+    if (oPlayer.key_primary || oPlayer.key_secondary) { //|| oPlayer.key_primary_released
         var mouse_angle = round(point_direction(x, y, mouse_x, mouse_y));
         if (mouse_angle < 90 || mouse_angle > 270) {
             image_angle = aim_360 ? mouse_angle : 0;
@@ -129,63 +133,6 @@ function updateBowAnimation() {
 	    }
 	}
 }
-
-/// @desc secondary attack (short range)
-function secondaryMeleeAttack() {
-	if oPlayer.key_secondary && timer_get("secondary_cooldown") <= 0 {
-			Ability_Sword_Attack(); // TODO: change this into a slot later
-			timer_set("secondary_cooldown", 20); 
-			timer_set("combo_cooldown", 50); 
-			combo_counter += 1; 
-			oPlayerWeapon.using_ability +=1; //this is a flag for the animation end
-
-		}
-
-		// Reset combo counter if cooldown expires
-		if timer_get("combo_cooldown") <= 0 {
-			combo_counter = 0; 	
-	}
-}
-
-
-function Ability_Sword_Attack() {
-	if(live_call()) return live_result;
-	if oPlayer.mana > 0 with(oPlayer) { //assume this move uses mana instead of ammo
-		//in this function you can manage combos and refine each attack.
-		mana -= 1;
-        var dir = lengthdir_x(4, facing_direction);
-		var gain = 0.85;
-        var pitch = 1;
-		var click_dir = sign(cos(degtorad(facing_direction))); //to do: fix this later
-		var dist = 15; //fix
-		image_index = 0; 
-        //spriteMelee = sPlayerSlash;
-		//image_speed = 0.5; 
-        if (oPlayerWeapon.combo_counter % 3 == 2) {
-            //spriteMelee = sPlayerStab;
-            dir = lengthdir_x(5, facing_direction);
-            gain = 0.85;
-            pitch = 1;
-        }
-	
-		dd = instance_create_depth(oPlayer.x + dist*click_dir, y, depth, oAttack_Sword);	
-		dd.image_yscale = 0.7;
-		dd.image_xscale = click_dir*0.7;
-		dd.damage = choose(3,4,4,5); //to do: allow upgrades of this in the future
-		
-		if combo_counter % 3 == 2 {
-			dd.image_xscale = click_dir*0.8;
-				
-		}
-		 // Apply recoil
-        if (!place_meeting(x + dir, y - 1, oWallParent)) {
-            x += dir;
-            //current_walkspd = 2;
-            hsp = 2 * sign(dir);
-        }	
-	}
-}
-
 
 
 /// @desc auto recover stamina over time
