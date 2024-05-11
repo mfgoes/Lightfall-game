@@ -89,7 +89,6 @@
     {"name":"inst_C7FDD53_1","path":"rooms/rLevel4/rLevel4.yy",},
     {"name":"inst_42B24DDB_2","path":"rooms/rLevel4/rLevel4.yy",},
     {"name":"inst_6A5E7762_2","path":"rooms/rLevel4/rLevel4.yy",},
-    {"name":"inst_2527FB2B_1","path":"rooms/rLevel4/rLevel4.yy",},
     {"name":"inst_46A89927_1","path":"rooms/rLevel4/rLevel4.yy",},
     {"name":"inst_220B61BA_2","path":"rooms/rLevel4/rLevel4.yy",},
     {"name":"inst_70422227","path":"rooms/rLevel4/rLevel4.yy",},
@@ -230,7 +229,7 @@
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":160.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3EF28242_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oWavePos","path":"objects/oWavePos/oWavePos.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oWavePos","path":"objects/oWavePos/oWavePos.yy",},"propertyId":{"name":"wave_pos_id","path":"objects/oWavePos/oWavePos.yy",},"value":"0",},
-              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":168.0,},
+              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":160.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3270A396_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oWavePos","path":"objects/oWavePos/oWavePos.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oWavePos","path":"objects/oWavePos/oWavePos.yy",},"propertyId":{"name":"wave_pos_id","path":"objects/oWavePos/oWavePos.yy",},"value":"1",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":592.0,"y":240.0,},
@@ -269,9 +268,7 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_53D17DCE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oAutoTile32","path":"objects/oAutoTile32/oAutoTile32.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":928.0,"y":160.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bullets","depth":900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":1000,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2527FB2B_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEnemyCrow","path":"objects/oEnemyCrow/oEnemyCrow.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":503.0,"y":271.0,},
-          ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+        {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":1000,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Zones","depth":1100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"Ground_Decor","depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
@@ -284,7 +281,7 @@
 -3,-2147483648,-54,0,-10,-2147483648,-9,0,-2,-2147483648,-55,0,-10,-2147483648,-7,0,3,265,-2147483648,-2147483648,-55,0,-10,-2147483648,-7,0,-3,27,-2,0,-5,255,-48,0,-10,-2147483648,-7,0,-3,-2147483648,-55,0,-20,-2147483648,-55,0,-20,-2147483648,-19,0,-4,123,-32,0,-20,-2147483648,-55,0,-20,-2147483648,-55,0,-20,-2147483648,-11,0,-8,-2147483648,-34,0,-43,-2147483648,-31,0,-45,
 -2147483648,-7,0,1,-2147483648,-20,0,-47,-2147483648,-7,0,-2,-2147483648,-10,0,-244,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"TDarkGrassTiles","path":"tilesets/TDarkGrassTiles/TDarkGrassTiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"parallax_bgr","depth":1500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_ColorOnly","animationFPS":30.0,"animationSpeedType":0,"colour":4289973984,"depth":1600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"sBgr_NightSky","path":"sprites/sBgr_NightSky/sBgr_NightSky.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_ColorOnly","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":1600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"bgr_dark_stars","path":"sprites/bgr_dark_stars/bgr_dark_stars.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Region 1 - Dusk Woods",

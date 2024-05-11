@@ -7,13 +7,13 @@ if mouse_check_button_released(mb_left) && position_meeting(mouse_x, mouse_y, id
 		global.sound_volume = 0;
 		image_index = 2;
 	} else {
-		global.music_volume = 0.5;
+		global.music_volume = 0.1;
 		global.sound_volume = 1;
 		image_index = 0;
 	}			
-	audio_sound_pitch(snClick,0.9)
-	audio_sound_gain(snClick,0.6,0);
-	audio_play_sound(snClick,5,0);
+	audio_sound_pitch(snClickSocial,0.9)
+	audio_sound_gain(snClickSocial,0.6,0);
+	audio_play_sound(snClickSocial,5,0);
 	
 	
 	//target Game object to assign new volume

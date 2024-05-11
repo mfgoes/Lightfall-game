@@ -6,6 +6,8 @@
 event_inherited();
 
 motion_speed = 1;
+lunge_speed = 6;
+
 dir_start = 90 //random(360); 
 dir = 0; 
 out_of_range = false; 

@@ -49,4 +49,6 @@ if disabled = false switch(room) {
 		)
 	break;
 	
+	//level 5 = boss level
+	
 }

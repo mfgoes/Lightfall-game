@@ -56,7 +56,7 @@ if (guiMouseX >= textX && guiMouseX <= textX + textWidth && guiMouseY >= textY &
     
     // If mouse is clicked while hovering, open the Twitter link
     if (mouse_check_button_pressed(mb_left)) {
-		audio_play_sound(snClick,0,0,0.5);
+		audio_play_sound(snClickSocial,0,0,0.5);
         url_open("https://twitter.com/" + string_delete(social, 1, 1)); // Removes "@" and appends the handle to the Twitter URL
     }
 } else {

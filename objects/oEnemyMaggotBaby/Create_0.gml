@@ -16,7 +16,7 @@ var b = irandom_range(25, 60);   // Lower blue component
 // Set the tint color to the randomized brown
 color_add = make_color_rgb(r, g, b);
 
-hp = choose(1,2,2,2); 
+hp = choose(1,1,1,2); 
 damage = 0.5;
 walk_spd = choose(0.5,0.6,0.8,1); 
 approach_spd = walk_spd;

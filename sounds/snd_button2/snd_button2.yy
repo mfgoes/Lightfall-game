@@ -13,7 +13,7 @@
     "GAME_NOMENUS": {"audioGroupId":"{\"name\":\"audiogroup_default\",\"path\":\"audiogroups/audiogroup_default\"}",},
   },
   "conversionMode": 0,
-  "duration": 0.5,
+  "duration": 0.525941,
   "parent": {
     "name": "UI",
     "path": "folders/Sounds/UI.yy",

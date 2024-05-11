@@ -10,7 +10,7 @@ if place_meeting(x,y,oPlayer) && alarm[0] <= 0 { //only do damage through charge
 		ScreenShake(1,2);
 		hp-=other.damage;
 		if hp < 1 KillPlayer();		
-		oSpike32.alarm[0] = 50; 
+		other.alarm[0] = 10; 
 		}
 }
 

@@ -85,7 +85,6 @@
     {"name":"inst_51950D5","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_65F180E1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_A52C1B","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_86B2781","path":"rooms/rTutorial/rTutorial.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -137,13 +136,10 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_49B2B0B0_1_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":208.0,"y":304.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2F1152A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"propertyId":{"name":"current_weapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"value":"2",},
-              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":304.0,"y":272.0,},
+              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":288.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_65F180E1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"propertyId":{"name":"CurrentTheme","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"value":"2",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":138.0,"y":248.0,},
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_86B2781","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"properties":[
-                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"propertyId":{"name":"current_weapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"value":"3",},
-              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":352.0,"y":272.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"WallsTiled","depth":900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E36A9F4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oAutoTile32","path":"objects/oAutoTile32/oAutoTile32.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":320.0,},

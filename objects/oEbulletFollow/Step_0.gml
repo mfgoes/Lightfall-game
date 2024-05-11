@@ -1,8 +1,8 @@
 event_inherited();
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 if !instance_exists(oPlayer) {
-	target = id;
+	instance_destroy();
 }
 
 if global.game_paused

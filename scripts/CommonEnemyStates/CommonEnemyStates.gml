@@ -331,8 +331,8 @@ function scr_enemy_blink() { //blink means teleporting towards the player
 			timer_set("blink_timer",60);
 		
 			//feedback
-			audio_sound_gain(Futuristic_Sounds__23_,0.6,0);
-			audio_play_sound(Futuristic_Sounds__23_,5,0);
+			audio_sound_gain(snBlinkEnemy,0.6,0);
+			audio_play_sound(snBlinkEnemy,5,0);
 			repeat(3) with(instance_create_layer(x,bbox_bottom,"Bullets",oDust)) { //dust particles
 				vsp = -0.1; image_alpha = 0.3+random(0.3);
 				hsp = random_range(-1,1);

@@ -88,7 +88,6 @@
     {"name":"inst_42B24DDB","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_6A5E7762","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_2527FB2B","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_3457E338","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_46A89927","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_220B61BA","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_45284D22","path":"rooms/rLevel2/rLevel2.yy",},
@@ -118,7 +117,7 @@
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oPortalTrigger","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"propertyId":{"name":"goto_room","path":"objects/oPortalTrigger/oPortalTrigger.yy",},"value":"rLevel3",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1094.0,"y":303.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3C2ECE55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"properties":[
-                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"propertyId":{"name":"CurrentTheme","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"value":"5",},
+                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oLevelThemeSetter","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"propertyId":{"name":"CurrentTheme","path":"objects/oLevelThemeSetter/oLevelThemeSetter.yy",},"value":"1",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":160.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"WallsTiled","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -212,7 +211,6 @@
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bullets","depth":900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":1000,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2527FB2B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEnemyCrow","path":"objects/oEnemyCrow/oEnemyCrow.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":272.0,},
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3457E338","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEnemyDummy","path":"objects/oEnemyDummy/oEnemyDummy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":736.0,"y":320.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Zones","depth":1100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},

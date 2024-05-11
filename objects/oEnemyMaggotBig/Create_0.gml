@@ -15,5 +15,5 @@ spriteMelee  =	sprite_index;
 spriteHit	 =  sprite_index;	
 mask_index	 =	sprite_index;
 
-hp = 8;
+hp = 4;
 damage = 1;

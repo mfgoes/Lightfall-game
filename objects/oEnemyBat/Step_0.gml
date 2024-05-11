@@ -53,7 +53,7 @@ else if freeze = 0 {
 			break
 		case enemy_states.attack:
 			if instance_exists(target) {
-				var dash_strength = random_range(9,12)
+				var dash_strength = random_range(lunge_speed-2,lunge_speed)
 				var _dir;
 			
 				h=0

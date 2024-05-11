@@ -31,8 +31,8 @@ if instance_exists(oPlayer) {
 	        SlideTransition(TRANS_MODE.GOTO, other.goto_room); // Go to the next level
 	    }
 		if (place_meeting(x, y, oPortalTrigger) && oPortalTrigger.locked && keyboard_check_pressed(ord("E"))) {
-			if !audio_is_playing(ScifiTech_Cancel_05)
-				audio_play_sound(ScifiTech_Cancel_05,0,0,0.3);
+			if !audio_is_playing(snClickSocial)
+				audio_play_sound(snClickSocial,0,0,0.3);
 				ScreenShake(0.6,10);
 				if !instance_exists(oToastUI) {
 					var dd = instance_create_depth(other.x, other.y - 40, 0, oToastUI);
